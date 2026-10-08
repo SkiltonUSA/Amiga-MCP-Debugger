@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import re
 from pathlib import Path
 import shutil
 import struct
@@ -46,24 +47,32 @@ def unpack_elf(data):
 
 
 def main():
+    global OUT
     p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--fractal",action="store_true",help="Build the Workbench Mandelbrot application")
     p.add_argument("--container-command",help="JSON container argv; defaults to workspace settings")
     p.add_argument("--clang",default="clang")
     p.add_argument("--ld",default=shutil.which("ld.lld") or "/opt/homebrew/opt/lld/bin/ld.lld")
-    a=p.parse_args();OUT.mkdir(parents=True,exist_ok=True)
+    a=p.parse_args()
+    if a.fractal:OUT=ROOT/".context/amiga/fractal"
+    OUT.mkdir(parents=True,exist_ok=True)
     cc=shutil.which(a.clang);ld=shutil.which(a.ld)
     if not cc or not ld:raise SystemExit("Clang ARM target and LLVM ld.lld required")
     flags=["--target=arm-none-eabi","-mcpu=cortex-a9","-marm","-mfloat-abi=soft","-ffreestanding",
            "-fno-builtin","-fPIC","-fvisibility=hidden","-fno-stack-protector","-O1","-g",
-           "-Wall","-Wextra","-Werror","-I",str(SDK),"-I",str(SDK/"zz9000")]
+           "-Wall","-Wextra","-Werror","-I",str(SDK),"-I",str(SDK/"zz9000"),
+           "-I",str(ROOT/"amiga/fractal")]
     sources=[SDK/"core.c",SDK/"protocol.h",*sorted((SDK/"zz9000").glob("*"))]
+    if a.fractal:sources+=sorted((ROOT/"amiga/fractal").glob("*"))
     identity=hashlib.sha256()
     for path in sources:identity.update(path.read_bytes())
     for tool in (cc,ld):identity.update(subprocess.check_output([tool,"--version"]))
-    identity.update(" ".join(flags[:-4]).encode())
+    identity.update(" ".join(flags[:-6]).encode()) # Exclude workspace include paths.
     build=int.from_bytes(identity.digest()[:4],"big") or 1
     objects=[]
-    for source in (SDK/"core.c",SDK/"zz9000/entry.S",SDK/"zz9000/worker.c"):
+    arm_sources=[SDK/"core.c",SDK/"zz9000/entry.S"]
+    arm_sources += [ROOT/"amiga/fractal/worker.c",ROOT/"amiga/fractal/fractal.c"] if a.fractal else [SDK/"zz9000/worker.c"]
+    for source in arm_sources:
         obj=OUT/(source.stem+".o");objects.append(obj)
         subprocess.run([cc,*flags,f"-DZZ_BUILD_ID=0x{build:08x}u","-c",source,"-o",obj],check=True)
     elf=OUT/"zzarm.elf"
@@ -87,17 +96,31 @@ def main():
     if not isinstance(command,list) or not command or not all(isinstance(x,str) and x for x in command):
         raise ValueError("Nonempty container argv required")
     prefix=[*command,"run","--rm","--platform","linux/amd64","-v",f"{ROOT}:/work","-w","/work",launcher.PIN["image"]]
-    subprocess.run([*prefix,"m68k-amigaos-gcc","-std=c99","-noixemul","-m68020","-O2","-g",
+    out_rel=OUT.relative_to(ROOT)
+    name="zzfractal" if a.fractal else "zzarm-debug"
+    extra=["-DZZ_FRACTAL","-Iamiga/fractal","amiga/fractal/window.c","amiga/fractal/fractal.c"] if a.fractal else []
+    subprocess.run([*prefix,"m68k-amigaos-gcc","-std=c99","-noixemul","-m68020","-O2","-g",*extra,
         "-Wall","-Wextra","-Werror","-Iamiga/arm_debug","-Iamiga/arm_debug/zz9000",
-        "-I.context/amiga/arm-debug/zz9000","-I.tools/amiga-devbench/amiga-bridge/include",
+        "-I"+str(out_rel),"-I.tools/amiga-devbench/amiga-bridge/include",
         "amiga/arm_debug/zz9000/launcher.c","amiga/arm_debug/relay.c","amiga/arm_debug/bridge_adapter.c",
         ".tools/amiga-devbench/amiga-bridge/client/bridge_client.c","-lamiga","-o",
-        ".context/amiga/arm-debug/zz9000/zzarm-debug"],check=True)
-    binary=OUT/"zzarm-debug"
+        str(out_rel/name)],check=True)
+    binary=OUT/name
     if binary.read_bytes()[:4]!=b"\0\0\x03\xf3":raise ValueError("Expected Amiga Hunk")
     record={"build_id":build,"source_identity_sha256":identity.hexdigest(),"image_bytes":len(image),
             "relocations":rel,"entry":entry,"arm_execution_verified":False,
             "files":{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in (elf,binary,OUT/"zz_payload.h")}}
+    if a.fractal:
+        names={1:"tile_dispatch",2:"row_complete",3:"tile_ready",4:"idle"}
+        points=[]
+        for line,text in enumerate((ROOT/"amiga/fractal/worker.c").read_text().splitlines(),1):
+            match=re.search(r"ad_enter\(&core,(\d+),",text)
+            if match:
+                point=int(match[1])
+                points.append({"id":point,"name":names[point],"file":"amiga/fractal/worker.c","line":line})
+        manifest=OUT/"fractal-points.json"
+        manifest.write_text(json.dumps({"build_id":build,"points":points},indent=2)+"\n")
+        record["files"][manifest.name]=hashlib.sha256(manifest.read_bytes()).hexdigest()
     (OUT/"build.json").write_text(json.dumps(record,indent=2)+"\n")
     print(json.dumps(record,indent=2))
 

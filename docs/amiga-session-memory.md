@@ -37,6 +37,19 @@ evidence; it is not a backup of the Amiga's disks or installed commercial games.
   218 echoes, RET1 and exit 0. Both instances are stopped; Workbench/bridge
   are healthy. Temporary launcher/scripts/logs remain in `RAM:SixiesDev`.
   Details and reproduction: `docs/amiga-arm-debugging.md`.
+- Latest 2026-10-08: **Workbench Mandelbrot demo installed** in
+  `SD032G:Dev/ZZFractal/`; launch with `Execute SD032G:Dev/ZZFractal/Start-Fractal`.
+  Client `zzfractal`, 320×240, click-to-zoom, A=ARM, C=CPU, X/Escape=cancel,
+  R=reset, Q=quit. ARM and 68060 exactly matched all 76,800 pixels at default
+  and 2× zoom. Default timings: ARM 7.523 s, CPU 15.081 s; interactive-demo
+  measurements including scheduling/drawing, not kernel benchmarks.
+  Twenty cancel/zoom cycles and ten paused launch/quit cycles passed. Shared
+  memory and cache-off contract remain unchanged. No startup/firmware changes.
+  The installed demo was opened for the user after the acceptance suite;
+  **check for `zzfractal` and close it before starting any other Core1 app**.
+  The script chooses a session ID automatically and logs to
+  `RAM:SixiesDev/fractal.log`. Source/build/tests: `docs/amiga-fractal-demo.md`;
+  evidence: `amiga/records/2026-10-08/fractal/`.
 - Dedicated private backup/development repo:
   https://github.com/SkiltonUSA/Amiga-MCP-Debugger (initial baseline `4224fd7`).
   It contains the Amiga tooling, debugger, session memory and records, without

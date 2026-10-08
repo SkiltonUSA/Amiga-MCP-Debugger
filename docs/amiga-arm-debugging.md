@@ -344,3 +344,10 @@ monitor/exception or external debug support, full register capture, ARM/Thumb
 breakpoints, instruction stepping, DWARF interpretation and a GDB adapter.
 Those capabilities are not supplied by this checkpoint SDK or the existing
 68k debugger APIs.
+
+## First instrumented application
+
+The [Workbench fractal explorer](amiga-fractal-demo.md) reuses this launcher
+with a tiled Mandelbrot worker, a 68060 comparison renderer and the existing
+nine MCP tools. Its client name is `zzfractal`; tile dispatch, row progress,
+result publication and idle checkpoints map to its generated build manifest.

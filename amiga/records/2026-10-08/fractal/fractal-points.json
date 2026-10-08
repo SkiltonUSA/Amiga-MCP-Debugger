@@ -1,0 +1,29 @@
+{
+  "build_id": 3653742807,
+  "points": [
+    {
+      "id": 4,
+      "name": "idle",
+      "file": "amiga/fractal/worker.c",
+      "line": 62
+    },
+    {
+      "id": 1,
+      "name": "tile_dispatch",
+      "file": "amiga/fractal/worker.c",
+      "line": 67
+    },
+    {
+      "id": 2,
+      "name": "row_complete",
+      "file": "amiga/fractal/worker.c",
+      "line": 71
+    },
+    {
+      "id": 3,
+      "name": "tile_ready",
+      "file": "amiga/fractal/worker.c",
+      "line": 75
+    }
+  ]
+}

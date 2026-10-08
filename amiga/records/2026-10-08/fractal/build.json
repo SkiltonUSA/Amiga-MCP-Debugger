@@ -1,0 +1,19 @@
+{
+  "build_id": 3653742807,
+  "source_identity_sha256": "d9c7b0d730a84d15e3e445464b47ef33ac9d8385c7caf2be44cf841fb29ac1ce",
+  "image_bytes": 5024,
+  "relocations": [
+    4816,
+    4820,
+    4824,
+    4828
+  ],
+  "entry": 0,
+  "arm_execution_verified": false,
+  "files": {
+    "zzarm.elf": "0bda73066d248f0bc83ccb2ac470f43a2417a07fe7d0602ba984d5318f68b385",
+    "zzfractal": "f00ab14684df76110946dbdc59819fb8d26c25599878df099850778995851b8f",
+    "zz_payload.h": "295e148dbe2ce6c87ca03dba3028d3d3835d9764c8659315f12b95febafba8fe",
+    "fractal-points.json": "b83e553c3c9aa29bdc6916debc97007176273a0a5c46b2ecb41d9bcd0b494043"
+  }
+}

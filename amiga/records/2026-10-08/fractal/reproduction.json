@@ -1,0 +1,8 @@
+{
+  "same_build_id": true,
+  "byte_identical_artifacts": {
+    "zzfractal": "f00ab14684df76110946dbdc59819fb8d26c25599878df099850778995851b8f",
+    "zz_payload.h": "295e148dbe2ce6c87ca03dba3028d3d3835d9764c8659315f12b95febafba8fe",
+    "fractal-points.json": "b83e553c3c9aa29bdc6916debc97007176273a0a5c46b2ecb41d9bcd0b494043"
+  }
+}

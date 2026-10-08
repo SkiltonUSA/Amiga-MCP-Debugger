@@ -5,8 +5,8 @@ into a reusable service, then use that service for image tools and audio
 processing. The objective is faster applications and a more responsive A4000TX
 while demanding calculations run on the ZZ9000.
 
-This is the proposed development sequence as of 8 October 2026. Only the
-debugger foundation is complete. Benefits and effort below are engineering
+This is the proposed development sequence as of 8 October 2026. The debugger
+foundation and first fractal demo are complete. Benefits and effort below are engineering
 estimates, not measured speedups or delivery dates. The project lives in
 [Amiga MCP Debugger](https://github.com/SkiltonUSA/Amiga-MCP-Debugger).
 
@@ -42,7 +42,7 @@ flowchart LR
 | Milestone | Deliverable | Expected benefit | Relative effort | Completion gate |
 | --- | --- | --- | --- | --- |
 | 0 Complete | Physical cooperative ARM debugger | Inspect and control our own ARM programs | Complete | Recorded hardware acceptance |
-| 1 Next | Workbench Mandelbrot explorer | First visible, interactive offload application | Medium | Correct images, responsive controls, reliable cancellation |
+| 1 Complete | Workbench Mandelbrot explorer | First visible, interactive offload application | Complete | Physical pixel comparisons, cancellation and ten paused shutdowns passed |
 | 2 | Faster ARM runtime and benchmark report | Make computation substantially more useful | High | Correct cache/memory behavior and measured total-time gain |
 | 3 | Reusable compute job interface | Let several applications share the development investment | Medium to high | Fractal app and a second client use the same API |
 | 4 | Image processing utility | Faster thumbnails, resizing, filters and batch conversions | Medium after 3 | Real image batches improve, including transfer and disk time |
@@ -199,6 +199,7 @@ data and fault reporting first, then investigate exception-based breakpoints,
 full registers, DWARF and instruction stepping as a separate advanced effort.
 Those features are not required to ship the fractal explorer or image tools.
 
-The next implementation slice is one deterministic tile renderer, its native
-reference tests, a bounded ARM render job and a minimal Workbench window.
-Do not begin a second application until the fractal acceptance gates pass.
+The [first fractal demo](amiga-fractal-demo.md) has passed physical acceptance.
+The next implementation milestone is the cache/memory performance work in
+stage 2, with a separate benchmark of computation, exchange and display costs.
+Image tools follow the reusable interface; they do not bypass this runtime work.

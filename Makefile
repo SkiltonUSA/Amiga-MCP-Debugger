@@ -29,3 +29,10 @@ amiga-arm-demo:
 
 test-amiga-arm:
 	.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/arm_debug -v
+
+.PHONY: amiga-fractal-build test-amiga-fractal
+amiga-fractal-build:
+	python3 scripts/build_zz9000_debug.py --fractal $(ZZ9000_BUILD_ARGS)
+
+test-amiga-fractal:
+	.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/fractal -v

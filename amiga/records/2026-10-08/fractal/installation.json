@@ -1,0 +1,39 @@
+{
+  "installed_files": {
+    "SD032G:Dev/ZZFractal/zzfractal": {
+      "bytes": 155876,
+      "md5": "b6f10081c6027a8e8e88b230ce93ea3e",
+      "sha256": "f00ab14684df76110946dbdc59819fb8d26c25599878df099850778995851b8f"
+    },
+    "SD032G:Dev/ZZFractal/Start-Fractal": {
+      "bytes": 195,
+      "md5": "024d8ef93f91e044efe817d1b11aa828",
+      "sha256": "f50248d406961cd1bca2c6a2a6b107836dc5ae8ef6e2beee2632c31b9e548b49"
+    }
+  },
+  "remote_md5_matches": true,
+  "verification": "Amiga C:MD5Sum, compared with Mac bytes",
+  "script_protection": "script and executable",
+  "launched_from_sd": true,
+  "os_startup_changed": false,
+  "installed_demo_final_state": {
+    "client": "zzfractal",
+    "running_job": false,
+    "arm_paused": false,
+    "mode": "ARM",
+    "tiles": 150,
+    "hash": "fb32f6c6",
+    "window_position": [
+      660,
+      330
+    ],
+    "bridge_healthy": true,
+    "screenshot_size": [
+      408,
+      339
+    ],
+    "keyboard_cpu_start_and_escape_cancel_verified": true,
+    "window_movement_while_paused_verified": true,
+    "source_checkpoint_map_verified": true
+  }
+}

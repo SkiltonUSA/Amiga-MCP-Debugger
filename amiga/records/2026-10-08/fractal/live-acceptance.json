@@ -1,0 +1,3118 @@
+{
+  "utc": "2026-10-08T12:11:29.052792+00:00",
+  "passed": true,
+  "calls": [
+    {
+      "tool": "amiga_ping",
+      "args": {},
+      "result": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 617371024 bytes",
+      "seconds": 0.018
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.009
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2035376437613534652052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.003
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.463
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(8)",
+      "seconds": 0.021
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 1473750350,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 224,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 109,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.48
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=19 hash=00000000 ms=725 pending=20 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=36 hash=00000000 ms=1433 pending=37 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=47 hash=00000000 ms=2041 pending=48 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.141
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=57 hash=00000000 ms=2648 pending=58 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=67 hash=00000000 ms=3255 pending=68 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=76 hash=00000000 ms=3862 pending=77 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=86 hash=00000000 ms=4571 pending=87 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.136
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=96 hash=00000000 ms=5178 pending=97 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.12
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=107 hash=00000000 ms=5786 pending=108 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.134
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=120 hash=00000000 ms=6393 pending=121 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=137 hash=00000000 ms=7000 pending=138 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=1 tiles=150 hash=fb32f6c6 ms=7523 pending=0 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "save"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=1 tiles=150 hash=fb32f6c6 ms=7523 pending=0 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.115
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cpu"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.116
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=2 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=18 hash=00000000 ms=708 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=31 hash=00000000 ms=1316 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=37 hash=00000000 ms=2024 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=46 hash=00000000 ms=2631 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=48 hash=00000000 ms=3239 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.114
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=55 hash=00000000 ms=3846 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=58 hash=00000000 ms=4453 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=64 hash=00000000 ms=5061 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=66 hash=00000000 ms=5668 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=68 hash=00000000 ms=6376 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.132
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=74 hash=00000000 ms=6984 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=76 hash=00000000 ms=7591 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=78 hash=00000000 ms=8198 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=84 hash=00000000 ms=8805 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=86 hash=00000000 ms=9514 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.136
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=88 hash=00000000 ms=10121 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=96 hash=00000000 ms=10729 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=98 hash=00000000 ms=11336 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=106 hash=00000000 ms=12044 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=108 hash=00000000 ms=12652 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.132
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=116 hash=00000000 ms=13259 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=123 hash=00000000 ms=13866 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.12
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=2 tiles=136 hash=00000000 ms=14575 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.142
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=0 gen=2 tiles=150 hash=fb32f6c6 ms=15081 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.137
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "save"
+      },
+      "result": "[ok] ok=1 mode=CPU running=0 gen=2 tiles=150 hash=fb32f6c6 ms=15081 pending=0 cancel_ms=0 renders=2 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.113
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=2 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=8 hash=00000000 ms=810 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=10 hash=00000000 ms=1417 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=16 hash=00000000 ms=2024 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.12
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=19 hash=00000000 ms=2631 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=25 hash=00000000 ms=3239 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=27 hash=00000000 ms=3846 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=30 hash=00000000 ms=4554 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.14
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=36 hash=00000000 ms=5162 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=38 hash=00000000 ms=5769 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.135
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=42 hash=00000000 ms=6477 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=45 hash=00000000 ms=7085 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=47 hash=00000000 ms=7692 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.139
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=49 hash=00000000 ms=8299 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=53 hash=00000000 ms=8907 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=55 hash=00000000 ms=9514 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=57 hash=00000000 ms=10222 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=59 hash=00000000 ms=10830 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=62 hash=00000000 ms=11437 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=65 hash=00000000 ms=12044 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=67 hash=00000000 ms=12753 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=69 hash=00000000 ms=13360 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=72 hash=00000000 ms=13967 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.21
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=74 hash=00000000 ms=14676 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=76 hash=00000000 ms=15283 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=78 hash=00000000 ms=15992 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.146
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=81 hash=00000000 ms=16599 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.135
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=83 hash=00000000 ms=17206 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=85 hash=00000000 ms=17813 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=87 hash=00000000 ms=18421 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=89 hash=00000000 ms=19129 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=93 hash=00000000 ms=19736 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.214
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=96 hash=00000000 ms=20445 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=98 hash=00000000 ms=21052 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=102 hash=00000000 ms=21761 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.154
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=105 hash=00000000 ms=22368 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=107 hash=00000000 ms=22975 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=109 hash=00000000 ms=23583 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=115 hash=00000000 ms=24291 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=117 hash=00000000 ms=24915 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=119 hash=00000000 ms=25523 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.139
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=126 hash=00000000 ms=26130 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=128 hash=00000000 ms=26737 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=135 hash=00000000 ms=27344 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=137 hash=00000000 ms=28053 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=139 hash=00000000 ms=28677 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=147 hash=00000000 ms=29284 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=149 hash=00000000 ms=29892 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=CPU running=0 gen=3 tiles=150 hash=a0004522 ms=30094 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "save"
+      },
+      "result": "[ok] ok=1 mode=CPU running=0 gen=3 tiles=150 hash=a0004522 ms=30094 pending=0 cancel_ms=0 renders=3 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "arm"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=2 hash=00000000 ms=101 pending=153 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.148
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=13 hash=00000000 ms=708 pending=164 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=24 hash=00000000 ms=1417 pending=175 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=33 hash=00000000 ms=2024 pending=184 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.14
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=42 hash=00000000 ms=2631 pending=193 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=49 hash=00000000 ms=3239 pending=200 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.14
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=56 hash=00000000 ms=3947 pending=207 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=63 hash=00000000 ms=4554 pending=214 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=70 hash=00000000 ms=5162 pending=221 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.139
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=76 hash=00000000 ms=5769 pending=227 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=83 hash=00000000 ms=6376 pending=234 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.138
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=90 hash=00000000 ms=7085 pending=241 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=97 hash=00000000 ms=7692 pending=248 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.139
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=106 hash=00000000 ms=8299 pending=257 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.137
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=116 hash=00000000 ms=9008 pending=267 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=126 hash=00000000 ms=9615 pending=277 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.138
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=136 hash=00000000 ms=10222 pending=287 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=4 tiles=146 hash=00000000 ms=10830 pending=297 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=4 tiles=150 hash=a0004522 ms=11133 pending=0 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "save"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=4 tiles=150 hash=a0004522 ms=11133 pending=0 cancel_ms=0 renders=4 cancels=0 discarded=0 depth=1 error=0",
+      "seconds": 0.242
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=5 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=0 hash=00000000 ms=0 pending=305 cancel_ms=0 renders=6 cancels=1 discarded=0 depth=1 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=7 tiles=3 hash=00000000 ms=101 pending=309 cancel_ms=0 renders=6 cancels=2 discarded=1 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=7 tiles=3 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=6 cancels=2 discarded=2 depth=1 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=8 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=7 cancels=2 discarded=2 depth=0 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=0 hash=00000000 ms=0 pending=314 cancel_ms=0 renders=8 cancels=3 discarded=2 depth=1 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=10 tiles=3 hash=00000000 ms=101 pending=318 cancel_ms=0 renders=8 cancels=4 discarded=3 depth=1 error=0",
+      "seconds": 0.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=10 tiles=3 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=8 cancels=4 discarded=4 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=9 cancels=4 discarded=4 depth=0 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=12 tiles=0 hash=00000000 ms=0 pending=323 cancel_ms=0 renders=10 cancels=5 discarded=4 depth=1 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=13 tiles=3 hash=00000000 ms=102 pending=327 cancel_ms=101 renders=10 cancels=6 discarded=5 depth=1 error=0",
+      "seconds": 0.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=13 tiles=3 hash=00000000 ms=102 pending=0 cancel_ms=0 renders=10 cancels=6 discarded=6 depth=1 error=0",
+      "seconds": 0.132
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=11 cancels=6 discarded=6 depth=0 error=0",
+      "seconds": 0.117
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=15 tiles=0 hash=00000000 ms=0 pending=332 cancel_ms=0 renders=12 cancels=7 discarded=6 depth=1 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=16 tiles=3 hash=00000000 ms=203 pending=336 cancel_ms=0 renders=12 cancels=8 discarded=7 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=16 tiles=3 hash=00000000 ms=203 pending=0 cancel_ms=0 renders=12 cancels=8 discarded=8 depth=1 error=0",
+      "seconds": 0.119
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=17 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=13 cancels=8 discarded=8 depth=0 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=18 tiles=0 hash=00000000 ms=0 pending=340 cancel_ms=0 renders=14 cancels=9 discarded=8 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=19 tiles=3 hash=00000000 ms=101 pending=344 cancel_ms=0 renders=14 cancels=10 discarded=9 depth=1 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=19 tiles=3 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=14 cancels=10 discarded=10 depth=1 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=20 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=15 cancels=10 discarded=10 depth=0 error=0",
+      "seconds": 0.117
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=21 tiles=0 hash=00000000 ms=0 pending=348 cancel_ms=0 renders=16 cancels=11 discarded=10 depth=1 error=0",
+      "seconds": 0.129
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=22 tiles=3 hash=00000000 ms=101 pending=352 cancel_ms=0 renders=16 cancels=12 discarded=11 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=22 tiles=3 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=16 cancels=12 discarded=12 depth=1 error=0",
+      "seconds": 0.119
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=23 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=17 cancels=12 discarded=12 depth=0 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=24 tiles=0 hash=00000000 ms=0 pending=356 cancel_ms=0 renders=18 cancels=13 discarded=12 depth=1 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=25 tiles=4 hash=00000000 ms=202 pending=361 cancel_ms=0 renders=18 cancels=14 discarded=13 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=25 tiles=4 hash=00000000 ms=202 pending=0 cancel_ms=0 renders=18 cancels=14 discarded=14 depth=1 error=0",
+      "seconds": 0.119
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=26 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=19 cancels=14 discarded=14 depth=0 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=27 tiles=0 hash=00000000 ms=0 pending=365 cancel_ms=0 renders=20 cancels=15 discarded=14 depth=1 error=0",
+      "seconds": 0.119
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=28 tiles=4 hash=00000000 ms=203 pending=370 cancel_ms=0 renders=20 cancels=16 discarded=15 depth=1 error=0",
+      "seconds": 0.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=28 tiles=4 hash=00000000 ms=203 pending=0 cancel_ms=0 renders=20 cancels=16 discarded=16 depth=1 error=0",
+      "seconds": 0.134
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=29 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=21 cancels=16 discarded=16 depth=0 error=0",
+      "seconds": 0.116
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=30 tiles=0 hash=00000000 ms=0 pending=375 cancel_ms=0 renders=22 cancels=17 discarded=16 depth=1 error=0",
+      "seconds": 0.136
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=31 tiles=3 hash=00000000 ms=101 pending=379 cancel_ms=0 renders=22 cancels=18 discarded=17 depth=1 error=0",
+      "seconds": 0.122
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=31 tiles=3 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=22 cancels=18 discarded=18 depth=1 error=0",
+      "seconds": 0.117
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=32 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=23 cancels=18 discarded=18 depth=0 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=0 hash=00000000 ms=0 pending=384 cancel_ms=0 renders=24 cancels=19 discarded=18 depth=1 error=0",
+      "seconds": 0.128
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=34 tiles=3 hash=00000000 ms=101 pending=388 cancel_ms=0 renders=24 cancels=20 discarded=19 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=34 tiles=3 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=24 cancels=20 discarded=20 depth=1 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=25 cancels=20 discarded=20 depth=0 error=0",
+      "seconds": 0.135
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=36 tiles=0 hash=00000000 ms=0 pending=393 cancel_ms=0 renders=26 cancels=21 discarded=20 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=37 tiles=3 hash=00000000 ms=101 pending=397 cancel_ms=101 renders=26 cancels=22 discarded=21 depth=1 error=0",
+      "seconds": 0.129
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=37 tiles=3 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=26 cancels=22 discarded=22 depth=1 error=0",
+      "seconds": 0.119
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=38 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=27 cancels=22 discarded=22 depth=0 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=39 tiles=0 hash=00000000 ms=0 pending=401 cancel_ms=0 renders=28 cancels=23 discarded=22 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=40 tiles=1 hash=00000000 ms=203 pending=403 cancel_ms=0 renders=28 cancels=24 discarded=23 depth=1 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=40 tiles=1 hash=00000000 ms=203 pending=0 cancel_ms=0 renders=28 cancels=24 discarded=24 depth=1 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=41 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=29 cancels=24 discarded=24 depth=0 error=0",
+      "seconds": 0.117
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=42 tiles=0 hash=00000000 ms=0 pending=408 cancel_ms=0 renders=30 cancels=25 discarded=24 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=43 tiles=3 hash=00000000 ms=102 pending=412 cancel_ms=0 renders=30 cancels=26 discarded=25 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=43 tiles=3 hash=00000000 ms=102 pending=0 cancel_ms=0 renders=30 cancels=26 discarded=26 depth=1 error=0",
+      "seconds": 0.12
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=44 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=31 cancels=26 discarded=26 depth=0 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=45 tiles=0 hash=00000000 ms=0 pending=417 cancel_ms=0 renders=32 cancels=27 discarded=26 depth=1 error=0",
+      "seconds": 0.129
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=46 tiles=3 hash=00000000 ms=101 pending=421 cancel_ms=0 renders=32 cancels=28 discarded=27 depth=1 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=46 tiles=3 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=32 cancels=28 discarded=28 depth=1 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=47 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=33 cancels=28 discarded=28 depth=0 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=48 tiles=0 hash=00000000 ms=0 pending=425 cancel_ms=0 renders=34 cancels=29 discarded=28 depth=1 error=0",
+      "seconds": 0.123
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=49 tiles=4 hash=00000000 ms=202 pending=430 cancel_ms=0 renders=34 cancels=30 discarded=29 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=49 tiles=4 hash=00000000 ms=202 pending=0 cancel_ms=0 renders=34 cancels=30 discarded=30 depth=1 error=0",
+      "seconds": 0.117
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=50 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=35 cancels=30 discarded=30 depth=0 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=51 tiles=0 hash=00000000 ms=0 pending=434 cancel_ms=0 renders=36 cancels=31 discarded=30 depth=1 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=52 tiles=4 hash=00000000 ms=203 pending=439 cancel_ms=0 renders=36 cancels=32 discarded=31 depth=1 error=0",
+      "seconds": 0.149
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=52 tiles=4 hash=00000000 ms=203 pending=0 cancel_ms=0 renders=36 cancels=32 discarded=32 depth=1 error=0",
+      "seconds": 0.131
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=53 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=37 cancels=32 discarded=32 depth=0 error=0",
+      "seconds": 0.125
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=54 tiles=0 hash=00000000 ms=0 pending=443 cancel_ms=0 renders=38 cancels=33 discarded=32 depth=1 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=55 tiles=4 hash=00000000 ms=202 pending=448 cancel_ms=0 renders=38 cancels=34 discarded=33 depth=1 error=0",
+      "seconds": 0.129
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=55 tiles=4 hash=00000000 ms=202 pending=0 cancel_ms=0 renders=38 cancels=34 discarded=34 depth=1 error=0",
+      "seconds": 0.119
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=56 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=39 cancels=34 discarded=34 depth=0 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=57 tiles=0 hash=00000000 ms=0 pending=452 cancel_ms=0 renders=40 cancels=35 discarded=34 depth=1 error=0",
+      "seconds": 0.121
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=58 tiles=4 hash=00000000 ms=101 pending=457 cancel_ms=102 renders=40 cancels=36 discarded=35 depth=1 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=58 tiles=4 hash=00000000 ms=101 pending=0 cancel_ms=0 renders=40 cancels=36 discarded=36 depth=1 error=0",
+      "seconds": 0.12
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=59 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=41 cancels=36 discarded=36 depth=0 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=60 tiles=0 hash=00000000 ms=0 pending=462 cancel_ms=0 renders=42 cancels=37 discarded=36 depth=1 error=0",
+      "seconds": 0.126
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=61 tiles=3 hash=00000000 ms=202 pending=466 cancel_ms=0 renders=42 cancels=38 discarded=37 depth=1 error=0",
+      "seconds": 0.129
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=61 tiles=3 hash=00000000 ms=202 pending=0 cancel_ms=0 renders=42 cancels=38 discarded=38 depth=1 error=0",
+      "seconds": 0.119
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "reset"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=62 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=43 cancels=38 discarded=38 depth=0 error=0",
+      "seconds": 0.124
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "zoom 160 120"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=63 tiles=0 hash=00000000 ms=0 pending=470 cancel_ms=0 renders=44 cancels=39 discarded=38 depth=1 error=0",
+      "seconds": 0.12
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=64 tiles=4 hash=00000000 ms=202 pending=475 cancel_ms=0 renders=44 cancels=40 discarded=39 depth=1 error=0",
+      "seconds": 0.127
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=64 tiles=4 hash=00000000 ms=202 pending=0 cancel_ms=0 renders=44 cancels=40 discarded=40 depth=1 error=0",
+      "seconds": 0.12
+    },
+    {
+      "tool": "amiga_arm_breakpoint",
+      "args": {
+        "client": "zzfractal",
+        "point": 3
+      },
+      "result": "{\n  \"session\": 1473750350,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 17112,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 8552,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [\n    3\n  ],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.062
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "arm"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=65 tiles=0 hash=00000000 ms=0 pending=0 cancel_ms=0 renders=45 cancels=40 discarded=40 depth=1 error=0",
+      "seconds": 0.117
+    },
+    {
+      "tool": "amiga_arm_status",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 1473750350,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 17146,\n  \"state\": \"paused\",\n  \"reason\": \"breakpoint\",\n  \"point\": 3,\n  \"checkpoint_hits\": 8569,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [\n    65,\n    0,\n    0,\n    128,\n    512,\n    476\n  ],\n  \"breakpoints\": [\n    3\n  ],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.47
+    },
+    {
+      "tool": "amiga_arm_read_memory",
+      "args": {
+        "client": "zzfractal",
+        "region": 0,
+        "offset": 0,
+        "size": 64
+      },
+      "result": "{\n  \"region\": 0,\n  \"offset\": 0,\n  \"size\": 64,\n  \"hex\": \"03000300030003000300030003000300030003000300030003000300030003000300030003000300030003000300030003000300030003000300030003000300\",\n  \"byte_order\": \"raw application bytes; ARM scalar data is normally little-endian\"\n}",
+      "seconds": 1.081
+    },
+    {
+      "tool": "amiga_arm_step_checkpoint",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 1473750350,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 17152,\n  \"state\": \"paused\",\n  \"reason\": \"checkpoint_step\",\n  \"point\": 4,\n  \"checkpoint_hits\": 8570,\n  \"command_ack\": 3,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [\n    3\n  ],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.065
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "cancel"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=66 tiles=1 hash=00000000 ms=2750 pending=477 cancel_ms=0 renders=45 cancels=41 discarded=40 depth=1 error=0",
+      "seconds": 0.133
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "status"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=66 tiles=1 hash=00000000 ms=2750 pending=0 cancel_ms=0 renders=45 cancels=41 discarded=41 depth=1 error=0",
+      "seconds": 0.12
+    },
+    {
+      "tool": "amiga_arm_logs",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"events\": [\n    {\n      \"sequence\": 1,\n      \"text\": \"Mandelbrot Core1 Q14; cache-off; points 1 dispatch / 2 row / 3 result / 4 idle\"\n    }\n  ],\n  \"cursor\": 1,\n  \"lost\": 0\n}",
+      "seconds": 1.567
+    },
+    {
+      "tool": "amiga_arm_detach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"detached\": true,\n  \"state\": \"running\",\n  \"instruction_stepping\": false\n}",
+      "seconds": 1.534
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 1473750350,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 17156,\n  \"state\": \"running\",\n  \"reason\": \"checkpoint_step\",\n  \"point\": 4,\n  \"checkpoint_hits\": 8571,\n  \"command_ack\": 4,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.474
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 1473750350,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 17160,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 8572,\n  \"command_ack\": 5,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.078
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=0 gen=66 tiles=1 hash=00000000 ms=2750 pending=0 cancel_ms=0 renders=45 cancels=41 discarded=41 depth=1 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(8)",
+      "seconds": 0.018
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.015
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2062383337323237342052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.006
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.462
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(9)",
+      "seconds": 0.016
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 3090621044,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 224,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 109,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.479
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 3090621044,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1200,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 596,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.116
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=33 hash=00000000 ms=1855 pending=34 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.134
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(9)",
+      "seconds": 0.038
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.012
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2034373235643239392052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.007
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.457
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(10)",
+      "seconds": 0.022
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 1193661081,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 188,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 91,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.496
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 1193661081,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1128,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 560,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.084
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=31 hash=00000000 ms=1738 pending=32 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(10)",
+      "seconds": 0.03
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.011
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2039333863313736652052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.004
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.46
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(11)",
+      "seconds": 0.016
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 2475431790,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 188,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 91,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.509
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 2475431790,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1200,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 596,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.116
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=33 hash=00000000 ms=1754 pending=34 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(11)",
+      "seconds": 0.027
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.011
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2032316662623866612052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.004
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.458
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(12)",
+      "seconds": 0.025
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 570145018,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 188,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 91,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.528
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 570145018,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1200,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 596,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.162
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=33 hash=00000000 ms=1839 pending=34 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.119
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(12)",
+      "seconds": 0.023
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.054
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2061386663613138372052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.007
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.522
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(13)",
+      "seconds": 0.016
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 2835128711,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 296,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 145,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.502
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 2835128711,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1380,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 686,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.358
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=38 hash=00000000 ms=2142 pending=39 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(13)",
+      "seconds": 0.1
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.099
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2062356439356232332052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.005
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.532
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(14)",
+      "seconds": 0.021
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 3050920739,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 260,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 127,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.622
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 3050920739,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1524,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 758,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.571
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=42 hash=00000000 ms=2446 pending=43 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.206
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.015
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2064373732646261662052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.007
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.488
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(15)",
+      "seconds": 0.014
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 3614628783,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 224,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 109,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.505
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 3614628783,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1362,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 2,\n  \"checkpoint_hits\": 677,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [\n    1,\n    224,\n    48,\n    128,\n    288,\n    38\n  ],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.357
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=37 hash=00000000 ms=2041 pending=38 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.115
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(15)",
+      "seconds": 0.099
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.094
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2038623061356338302052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.007
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.462
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(16)",
+      "seconds": 0.024
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 2332712064,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 188,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 91,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.543
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 2332712064,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1236,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 614,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.165
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=34 hash=00000000 ms=1940 pending=35 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.118
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(16)",
+      "seconds": 0.026
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.054
+    },
+    {
+      "tool": "amiga_write_file",
+      "args": {
+        "path": "RAM:SixiesDev/start-fractal",
+        "offset": 0,
+        "hex_data": "537461636b2036353533360a52414d3a5369786965734465762f7a7a6672616374616c2038363461343139612052554e203e52414d3a5369786965734465762f6672616374616c2e6c6f670a"
+      },
+      "result": "Write command sent: RAM:SixiesDev/start-fractal at offset 0, 76 bytes",
+      "seconds": 0.006
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:SixiesDev/start-fractal\n",
+        "timeout": 30
+      },
+      "result": "[OK] (no output)",
+      "seconds": 0.527
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(17)",
+      "seconds": 0.015
+    },
+    {
+      "tool": "amiga_arm_attach",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 2253013402,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 296,\n  \"state\": \"running\",\n  \"reason\": \"initial\",\n  \"point\": 4,\n  \"checkpoint_hits\": 145,\n  \"command_ack\": 0,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 0.544
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {
+        "client": "zzfractal"
+      },
+      "result": "{\n  \"session\": 2253013402,\n  \"build_id\": 3653742807,\n  \"snapshot_sequence\": 1308,\n  \"state\": \"paused\",\n  \"reason\": \"pause\",\n  \"point\": 4,\n  \"checkpoint_hits\": 650,\n  \"command_ack\": 1,\n  \"command_result\": 0,\n  \"pause_pending\": false,\n  \"values\": [],\n  \"breakpoints\": [],\n  \"region_count\": 1,\n  \"log_count\": 1,\n  \"execution\": \"arm_instrumented\",\n  \"debug_mode\": \"cooperative_checkpoints\",\n  \"instruction_stepping\": false,\n  \"fault\": null\n}",
+      "seconds": 1.13
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "zzfractal",
+        "hook": "fractal",
+        "args": "quit"
+      },
+      "result": "[ok] ok=1 mode=ARM running=1 gen=1 tiles=36 hash=00000000 ms=1940 pending=37 cancel_ms=0 renders=1 cancels=0 discarded=0 depth=0 error=0",
+      "seconds": 0.115
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (1): zzfractal(17)",
+      "seconds": 0.027
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.011
+    },
+    {
+      "tool": "amiga_ping",
+      "args": {},
+      "result": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 617374304 bytes",
+      "seconds": 0.012
+    },
+    {
+      "tool": "amiga_list_screens",
+      "args": {},
+      "result": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @8989DA0",
+      "seconds": 0.012
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "result": "Clients (0): none",
+      "seconds": 0.01
+    }
+  ],
+  "renders": [
+    {
+      "label": "ARM default",
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "1",
+      "tiles": "150",
+      "hash": "fb32f6c6",
+      "ms": "7523",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "1",
+      "cancels": "0",
+      "discarded": "0",
+      "depth": "0",
+      "error": "0",
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "68060 default",
+      "ok": "1",
+      "mode": "CPU",
+      "running": "0",
+      "gen": "2",
+      "tiles": "150",
+      "hash": "fb32f6c6",
+      "ms": "15081",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "2",
+      "cancels": "0",
+      "discarded": "0",
+      "depth": "0",
+      "error": "0",
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "68060 zoom",
+      "ok": "1",
+      "mode": "CPU",
+      "running": "0",
+      "gen": "3",
+      "tiles": "150",
+      "hash": "a0004522",
+      "ms": "30094",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "3",
+      "cancels": "0",
+      "discarded": "0",
+      "depth": "1",
+      "error": "0",
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "ARM zoom",
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "4",
+      "tiles": "150",
+      "hash": "a0004522",
+      "ms": "11133",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "4",
+      "cancels": "0",
+      "discarded": "0",
+      "depth": "1",
+      "error": "0",
+      "all_76800_pixels_match": true
+    }
+  ],
+  "cycles": [
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=57d7a54e\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\nFRACTAL mode=ARM gen=1 tiles=150 hash=fb32f6c6 elapsed_ms=7523 cx=-12288 cy=0 step=153\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|save'\n[CLIENT] process_daemon_msg type=24 data='fractal|cpu'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\nFRACTAL mode=CPU gen=2 tiles=150 hash=fb32f6c6 elapsed_ms=15081 cx=-12288 cy=0 step=153\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|save'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\nFRACTAL mode=CPU gen=3 tiles=150 hash=a0004522 elapsed_ms=30094 cx=-12288 cy=0 step=76\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|save'\n[CLIENT] process_daemon_msg type=24 data='fractal|arm'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\nFRACTAL mode=ARM gen=4 tiles=150 hash=a0004522 elapsed_ms=11133 cx=-12288 cy=0 step=76\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|save'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='fractal|reset'\n[CLIENT] process_daemon_msg type=24 data='fractal|zoom 160 120'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 57d7a54e 1 4 3 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|arm'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000004 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000004 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000004 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000005 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000005 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000005 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 57d7a54e 2 6 0 0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000006 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000006 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000006 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000007 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000007 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000007 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 57d7a54e 3 3 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000008 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000008 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000008 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|cancel'\n[CLIENT] process_daemon_msg type=24 data='fractal|status'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 c0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 120 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 180 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 1e0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 240 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 2a0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 300 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 360 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 3c0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000009 420 20'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000a 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000a 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000a c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000b 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000b 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000b c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 57d7a54e 4 7 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000c 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000c 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000c c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000d 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000d 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000d c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000e 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000e 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000e c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 57d7a54e 5 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000f 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000f 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 0000000f c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=45 cancels=41 discarded=41\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=b8372274\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W b8372274 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=4725d299\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 4725d299 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=938c176e\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 938c176e 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=21fbb8fa\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 21fbb8fa 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=a8fca187\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W a8fca187 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=b5d95b23\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W b5d95b23 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=d772dbaf\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W d772dbaf 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=8b0a5c80\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 8b0a5c80 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n",
+    "OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=864a419a\nBOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)\nMAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\nMAPPING PASS (eight nonce-derived words)\nARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|W 864a419a 1 1 0 0 0'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|S'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'\n[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'\n[CLIENT] process_daemon_msg type=24 data='fractal|quit'\nFRACTAL UI exit=0 renders=1 cancels=1 discarded=0\nEXIT epilogue=52455431 cache_echoes=0 rounds=0\nLAUNCHER exit=0; owned memory released\n"
+  ],
+  "preflight": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 617371024 bytes",
+  "cancel_cycles": [
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "7",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "6",
+      "cancels": "2",
+      "discarded": "2",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "10",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "8",
+      "cancels": "4",
+      "discarded": "4",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "13",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "102",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "10",
+      "cancels": "6",
+      "discarded": "6",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "16",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "203",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "12",
+      "cancels": "8",
+      "discarded": "8",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "19",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "14",
+      "cancels": "10",
+      "discarded": "10",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "22",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "16",
+      "cancels": "12",
+      "discarded": "12",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "25",
+      "tiles": "4",
+      "hash": "00000000",
+      "ms": "202",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "18",
+      "cancels": "14",
+      "discarded": "14",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "28",
+      "tiles": "4",
+      "hash": "00000000",
+      "ms": "203",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "20",
+      "cancels": "16",
+      "discarded": "16",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "31",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "22",
+      "cancels": "18",
+      "discarded": "18",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "34",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "24",
+      "cancels": "20",
+      "discarded": "20",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "37",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "26",
+      "cancels": "22",
+      "discarded": "22",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "40",
+      "tiles": "1",
+      "hash": "00000000",
+      "ms": "203",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "28",
+      "cancels": "24",
+      "discarded": "24",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "43",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "102",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "30",
+      "cancels": "26",
+      "discarded": "26",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "46",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "32",
+      "cancels": "28",
+      "discarded": "28",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "49",
+      "tiles": "4",
+      "hash": "00000000",
+      "ms": "202",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "34",
+      "cancels": "30",
+      "discarded": "30",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "52",
+      "tiles": "4",
+      "hash": "00000000",
+      "ms": "203",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "36",
+      "cancels": "32",
+      "discarded": "32",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "55",
+      "tiles": "4",
+      "hash": "00000000",
+      "ms": "202",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "38",
+      "cancels": "34",
+      "discarded": "34",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "58",
+      "tiles": "4",
+      "hash": "00000000",
+      "ms": "101",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "40",
+      "cancels": "36",
+      "discarded": "36",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "61",
+      "tiles": "3",
+      "hash": "00000000",
+      "ms": "202",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "42",
+      "cancels": "38",
+      "discarded": "38",
+      "depth": "1",
+      "error": "0"
+    },
+    {
+      "ok": "1",
+      "mode": "ARM",
+      "running": "0",
+      "gen": "64",
+      "tiles": "4",
+      "hash": "00000000",
+      "ms": "202",
+      "pending": "0",
+      "cancel_ms": "0",
+      "renders": "44",
+      "cancels": "40",
+      "discarded": "40",
+      "depth": "1",
+      "error": "0"
+    }
+  ],
+  "paused_cancel": {
+    "ok": "1",
+    "mode": "ARM",
+    "running": "0",
+    "gen": "66",
+    "tiles": "1",
+    "hash": "00000000",
+    "ms": "2750",
+    "pending": "0",
+    "cancel_ms": "0",
+    "renders": "45",
+    "cancels": "41",
+    "discarded": "41",
+    "depth": "1",
+    "error": "0"
+  },
+  "postflight": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 617374304 bytes",
+  "screens": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @8989DA0",
+  "clients": "Clients (0): none",
+  "arm_execution_verified": true,
+  "build": {
+    "build_id": 3653742807,
+    "source_identity_sha256": "d9c7b0d730a84d15e3e445464b47ef33ac9d8385c7caf2be44cf841fb29ac1ce",
+    "image_bytes": 5024,
+    "relocations": [
+      4816,
+      4820,
+      4824,
+      4828
+    ],
+    "entry": 0,
+    "arm_execution_verified": false,
+    "files": {
+      "zzarm.elf": "0bda73066d248f0bc83ccb2ac470f43a2417a07fe7d0602ba984d5318f68b385",
+      "zzfractal": "f00ab14684df76110946dbdc59819fb8d26c25599878df099850778995851b8f",
+      "zz_payload.h": "295e148dbe2ce6c87ca03dba3028d3d3835d9764c8659315f12b95febafba8fe",
+      "fractal-points.json": "b83e553c3c9aa29bdc6916debc97007176273a0a5c46b2ecb41d9bcd0b494043"
+    }
+  }
+}

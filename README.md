@@ -4,7 +4,7 @@ Dedicated development and backup repository for the AmigaOS/ZZ9000 cooperative d
 
 Nine MCP tools provide instrumented checkpoint debugging. Native C tests, live A4000TX 68060 relay acceptance, and **physical ZZ9000 Core1 debugging** passed. Two ARM sessions exercised all nine tools, 285 shared-memory echoes, relaunch and shutdown while paused. This is cooperative checkpoint debugging; it does not single-step instructions.
 
-The [ARM acceleration roadmap](docs/amiga-arm-roadmap.md) starts with a Workbench fractal explorer, followed by runtime optimization, a reusable compute interface and image processing tools. These application milestones are planned; measured performance will determine later priorities.
+The [ARM acceleration roadmap](docs/amiga-arm-roadmap.md) starts with a Workbench fractal explorer, followed by runtime optimization, a reusable compute interface and image processing tools. The first [fractal demo](docs/amiga-fractal-demo.md) now renders on the physical A4000TX with matching 68060 and ARM results; later milestones remain planned.
 
 ## Develop
 
@@ -16,6 +16,8 @@ make test-amiga-arm
 make test-amiga
 make amiga-arm-build
 make amiga-zz9000-build
+make test-amiga-fractal
+make amiga-fractal-build
 make amiga-arm-demo
 ```
 

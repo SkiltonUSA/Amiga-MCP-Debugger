@@ -1,0 +1,6 @@
+; ZZ9000 XX19c / XACP 1.7: close other ARM games before launching.
+Stack 65536
+If NOT EXISTS RAM:SixiesDev
+  MakeDir RAM:SixiesDev
+EndIf
+SD032G:Dev/ZZFractal/zzfractal >RAM:SixiesDev/fractal.log

@@ -21,6 +21,9 @@
 #include "layout.h"
 #include "bridge_client.h"
 #include "zz_payload.h"
+#ifdef ZZ_FRACTAL
+int ff_window(volatile uint8_t *,const struct ad_io *,int);
+#endif
 struct ExpansionBase *ExpansionBase;
 struct IntuitionBase *IntuitionBase;
 struct Library *P96Base;
@@ -109,13 +112,28 @@ done:
 int main(int argc,char **argv)
 {
     struct ConfigDev *gfx=0,*ram=0;struct MsgPort *owner=0;
-    UBYTE *mem=0;ULONG arm=0,nonce,i,tick,challenge=0,echoes=0;
-    char *end;int rc=20,connected=0,bound=0,launched=0,stopping=0;
+    UBYTE *mem=0;ULONG arm=0,nonce,i,echoes=0;
+#ifndef ZZ_FRACTAL
+    ULONG tick,challenge=0;
+#endif
+    char *end;const char *mode="RUN";int rc=20,connected=0,bound=0,launched=0,stopping=0;
+#ifdef ZZ_FRACTAL
+    if(argc==1) {
+        struct DateStamp stamp;
+        DateStamp(&stamp);
+        nonce=((ULONG)stamp.ds_Days*4320000u+(ULONG)stamp.ds_Minute*3000u+(ULONG)stamp.ds_Tick)^(ULONG)FindTask(NULL);
+        if(!nonce)nonce=1;
+    } else {
+#endif
     if(argc!=3 || (strcmp(argv[2],"MAP")&&strcmp(argv[2],"RUN"))) {
         puts("Usage: zzarm-debug <fresh-hex-session> MAP|RUN (XX19c, Core1 idle required)");return 20;
     }
     errno=0;nonce=strtoul(argv[1],&end,16);
     if(errno||!nonce||*end||end==argv[1]||argv[1][0]=='-')return 20;
+    mode=argv[2];
+#ifdef ZZ_FRACTAL
+    }
+#endif
     ExpansionBase=(struct ExpansionBase *)OpenLibrary("expansion.library",0);
     IntuitionBase=(struct IntuitionBase *)OpenLibrary("intuition.library",0);
     P96Base=OpenLibrary("Picasso96API.library",2);
@@ -137,7 +155,7 @@ int main(int argc,char **argv)
     if(arm<0x10000000 || arm+ZZ_BLOCK_SIZE>0x201f0000)goto done;
     printf("OWNED amiga=%08x arm_candidate=%08x size=%u nonce=%08x\n",(ULONG)mem,arm,(ULONG)ZZ_BLOCK_SIZE,nonce);
     if(!mapping_probe(mem,arm,nonce))goto done;
-    if(!strcmp(argv[2],"MAP")){rc=0;goto done;}
+    if(!strcmp(mode,"MAP")){rc=0;goto done;}
     if(sizeof(zz_image)>ZZ_CONTROL)goto done;
     memset(mem,0,ZZ_BLOCK_SIZE);memcpy(mem,zz_image,sizeof(zz_image));
     for(i=0;i<sizeof(zz_relocations)/sizeof(zz_relocations[0]);i++) {
@@ -156,6 +174,14 @@ int main(int argc,char **argv)
     printf("ARM ready=%08x SCTLR=%08x MIDR=%08x MPIDR=%08x\n",ad_get(mem,ZZ_DIAG),
            ad_get(mem,ZZ_DIAG+4),ad_get(mem,ZZ_DIAG+8),ad_get(mem,ZZ_DIAG+12));fflush(stdout);
     if(ad_get(mem,ZZ_DIAG)!=ZZ_READY)goto done;
+#ifdef ZZ_FRACTAL
+    if(!ab_init("zzfractal")) {
+        connected=1;
+        if(ad_bridge_bind(mem+ZZ_PAGE,&io))goto done;
+        bound=1;
+    }
+    rc=ff_window(mem,&io,connected);
+#else
     if(ab_init("zzarm-debug"))goto done;
     connected=1;
     if(ad_bridge_bind(mem+ZZ_PAGE,&io))goto done;
@@ -176,6 +202,7 @@ int main(int argc,char **argv)
         Delay(1);
     }
     rc=0;
+#endif
 done:
     if(bound)ad_bridge_unbind();
     if(connected)ab_cleanup();
