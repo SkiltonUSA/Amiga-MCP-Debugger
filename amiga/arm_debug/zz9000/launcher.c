@@ -23,9 +23,15 @@
 #include "bridge_client.h"
 #endif
 #include "zz_payload.h"
+#ifndef ZZ_APP_NAME
+#define ZZ_APP_NAME "ZZFractal"
+#define ZZ_APP_VERSION "0.1"
+#define ZZ_CLIENT_NAME "zzfractal"
+#define ZZ_MIN_STACK 32768
+#endif
 #ifdef ZZ_FRACTAL
 int ff_window(volatile uint8_t *,const struct ad_io *,int);
-const char zz_version[]="\0$VER: ZZFractal 0.1 (08.10.2026)";
+const char zz_version[]="\0$VER: " ZZ_APP_NAME " " ZZ_APP_VERSION " (08.10.2026)";
 #ifdef ZZ_RELEASE
 /* libnix's Workbench stdio target: no unwanted console window. CLI
  * redirection continues to work through its normal Input/Output handles. */
@@ -153,8 +159,8 @@ int main(int argc,char **argv)
     P96Base=OpenLibrary("Picasso96API.library",2);
     if(!ExpansionBase||!IntuitionBase||!P96Base)goto done;
 #ifdef ZZ_FRACTAL
-    failure="Start with the supplied icon, or set Shell Stack to 65536.";
-    if((ULONG)FindTask(NULL)->tc_SPUpper-(ULONG)FindTask(NULL)->tc_SPLower<32768)goto done;
+    failure="Start with the supplied icon, or set an adequate Shell stack (131072 for SDL).";
+    if((ULONG)FindTask(NULL)->tc_SPUpper-(ULONG)FindTask(NULL)->tc_SPLower<ZZ_MIN_STACK)goto done;
     failure="Requires a Zorro III ZZ9000 with its 256 MB Fast RAM enabled.";
 #endif
     gfx=FindConfigDev(NULL,0x6d6e,4);ram=FindConfigDev(NULL,0x6d6e,5);
@@ -163,7 +169,7 @@ int main(int argc,char **argv)
     if(*(volatile UWORD *)(board+0xc0)!=0x0113)goto done;
 #ifdef ZZ_RELEASE
     if(argc==0) {
-        struct EasyStruct request={sizeof(struct EasyStruct),0,(STRPTR)"ZZFractal 0.1",
+        struct EasyStruct request={sizeof(struct EasyStruct),0,(STRPTR)(ZZ_APP_NAME " " ZZ_APP_VERSION),
             (STRPTR)"Requires ZZ9000 XX19c / XACP 1.7 firmware.\nClose other ZZ9000 ARM applications before starting.",(STRPTR)"Start|Cancel"};
         if(!EasyRequestArgs(NULL,&request,NULL,NULL)){rc=0;goto done;}
     }
@@ -211,7 +217,7 @@ int main(int argc,char **argv)
     if(ad_get(mem,ZZ_DIAG)!=ZZ_READY)goto done;
 #ifdef ZZ_FRACTAL
 #ifndef ZZ_RELEASE
-    if(!ab_init("zzfractal")) {
+    if(!ab_init(ZZ_CLIENT_NAME)) {
         connected=1;
         if(ad_bridge_bind(mem+ZZ_PAGE,&io))goto done;
         bound=1;
@@ -263,9 +269,9 @@ done:
     if(owner){RemPort(owner);DeleteMsgPort(owner);}
 #ifdef ZZ_FRACTAL
     if(rc) {
-        printf("ZZFractal: %s\n",failure);
+        printf("%s: %s\n",ZZ_APP_NAME,failure);
         if(argc==0 && IntuitionBase) {
-            struct EasyStruct request={sizeof(struct EasyStruct),0,(STRPTR)"ZZFractal",(STRPTR)failure,(STRPTR)"OK"};
+            struct EasyStruct request={sizeof(struct EasyStruct),0,(STRPTR)ZZ_APP_NAME,(STRPTR)failure,(STRPTR)"OK"};
             EasyRequestArgs(NULL,&request,NULL,NULL);
         }
     }

@@ -10,6 +10,22 @@ foundation and first fractal demo are complete. Benefits and effort below are en
 estimates, not measured speedups or delivery dates. The project lives in
 [Amiga MCP Debugger](https://github.com/SkiltonUSA/Amiga-MCP-Debugger).
 
+## SDL milestone completed (2026-10-08)
+
+The interactive SDL ZZFractal preview now has zoom/pan, CPU/ARM selection,
+iteration limits, cancellation, AppIcon support and temporary 16-/32-bit RTG
+screens. Fourteen full-frame oracle comparisons and native colour samples
+passed. A reusable cooperative client in `amiga/compute/xx19c.*` supplies
+immutable tile requests, generation-safe cancellation, bounded waits and
+separate timing measurements. It currently serves one application; milestone
+3 still requires a second client and a broader workload contract.
+
+Default ARM wall time was 7.575 s versus 17.427 s on the 68060, but compute
+slices took about 2.894 s on ARM versus 2.233 s on the 68060. Unequal scheduling
+explains why wall-time alone is misleading. Next: normalize work/yield budgets,
+profile the kernel and validate optimization before considering cache changes.
+See [SDL fractal development](amiga-sdl-fractal.md).
+
 ## What we can build on
 
 Our physical Core1 debugger has passed two sessions, all nine MCP tools,

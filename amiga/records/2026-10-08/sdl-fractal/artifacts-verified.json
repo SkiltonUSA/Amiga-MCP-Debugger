@@ -1,0 +1,20 @@
+{
+  "SDL2-AmigaOS3-0.2.0-sdk.zip": {
+    "bytes": 1364021,
+    "sha256": "6bf36e27c7460fc78778f04e20a4db2a65fa6d5cfe3b229afba5978061d3a561",
+    "files": 150,
+    "manifest_verified_files": 149
+  },
+  "SDL2-AmigaOS3-0.2.0-sdk.tar.gz": {
+    "bytes": 1272295,
+    "sha256": "236f6e06a5fd23f6a529baf8d23f65e064195d064ac49b9e8f44fe95f177e309",
+    "files": 150,
+    "manifest_verified_files": 149
+  },
+  "SDLZZFractal-0.2-XX19c.zip": {
+    "bytes": 340572,
+    "sha256": "010501e29dd0096d6b3b1ac5a0181cab9c5bedd08792ca31ff8a274eee43fa00",
+    "files": 10,
+    "manifest_verified_files": 9
+  }
+}

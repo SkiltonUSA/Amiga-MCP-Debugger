@@ -1,0 +1,91 @@
+[
+  {
+    "tool": "amiga_list_screen_windows",
+    "args": {},
+    "text": "Windows on screen @8989DA0 (6):\n\n  SDL ZZFractal 0.2  pos=(100,100)  size=408x367  @8886074\n  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @8865674\n  Network log output  pos=(0,63)  size=1920x200  @8866E64\n  Roadie 1.3.9  pos=(60,60)  size=230x250  @9050624\n  (untitled)  pos=(21,713)  size=600x63  @8F9B19C\n  (untitled)  pos=(0,11)  size=1920x789  @811B52C"
+  },
+  {
+    "tool": "amiga_window_move",
+    "args": {
+      "window": "8886074",
+      "x": 680,
+      "y": 300
+    },
+    "text": "done"
+  },
+  {
+    "tool": "amiga_list_screen_windows",
+    "args": {},
+    "text": "Windows on screen @8989DA0 (6):\n\n  SDL ZZFractal 0.2  pos=(680,300)  size=408x367  @8886074\n  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @8865674\n  Network log output  pos=(0,63)  size=1920x200  @8866E64\n  Roadie 1.3.9  pos=(60,60)  size=230x250  @9050624\n  (untitled)  pos=(21,713)  size=600x63  @8F9B19C\n  (untitled)  pos=(0,11)  size=1920x789  @811B52C"
+  },
+  {
+    "tool": "amiga_screenshot",
+    "args": {
+      "window": "SDL ZZFractal 0.2"
+    },
+    "text": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_7f3on8qr.ppm (408x367, RLE, 367 rows received)"
+  },
+  {
+    "tool": "amiga_input_mouse_move",
+    "args": {
+      "dx": -2500,
+      "dy": -1200
+    },
+    "text": "Mouse moved -2500,-1200"
+  },
+  {
+    "tool": "amiga_input_mouse_move",
+    "args": {
+      "dx": 694,
+      "dy": 343
+    },
+    "text": "Mouse moved 694,343"
+  },
+  {
+    "tool": "amiga_input_click",
+    "args": {
+      "button": "left",
+      "direction": "down"
+    },
+    "text": "Button left down"
+  },
+  {
+    "tool": "amiga_input_click",
+    "args": {
+      "button": "left",
+      "direction": "up"
+    },
+    "text": "Button left up"
+  },
+  {
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "10",
+      "direction": "down"
+    },
+    "text": "Key 10 down"
+  },
+  {
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "10",
+      "direction": "up"
+    },
+    "text": "Key 10 up"
+  },
+  {
+    "tool": "amiga_list_screen_windows",
+    "args": {},
+    "text": "Windows on screen @8989DA0 (5):\n\n  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @8865674\n  Network log output  pos=(0,63)  size=1920x200  @8866E64\n  Roadie 1.3.9  pos=(60,60)  size=230x250  @9050624\n  (untitled)  pos=(21,713)  size=600x63  @8F9B19C\n  (untitled)  pos=(0,11)  size=1920x789  @811B52C"
+  },
+  {
+    "tool": "amiga_arexx_ports",
+    "args": {},
+    "text": "Public message ports (16):\n\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  ConClip.rendezvous\n  deficons"
+  },
+  {
+    "tool": "amiga_ping",
+    "args": {},
+    "text": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 610351584 bytes"
+  }
+]

@@ -1,0 +1,6 @@
+amiga_input_mouse_move Mouse moved -2500,-1200
+amiga_input_mouse_move Mouse moved 59,127
+amiga_input_click Button left down
+amiga_input_click Timeout
+amiga_input_click Timeout
+amiga_input_click Timeout

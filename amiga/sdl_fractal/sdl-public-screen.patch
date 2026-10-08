@@ -1,0 +1,59 @@
+diff --git a/src/video/amigaos3/SDL_os3window.c b/src/video/amigaos3/SDL_os3window.c
+index 047c8fb..ebf1540 100644
+--- a/src/video/amigaos3/SDL_os3window.c
++++ b/src/video/amigaos3/SDL_os3window.c
+@@ -242,9 +242,13 @@ static int OS3_OpenFullscreen(OS3_WindowData *data, int w, int h)
+ static int OS3_OpenWindowed(OS3_WindowData *data, SDL_Window *window)
+ {
+     struct Window *iwin;
++    const char *public_name = SDL_GetHint("SDL_AMIGA_PUBLIC_SCREEN");
++    struct Screen *public_screen;
+     int use_wb = 0;
+     int xpos, ypos;
+ 
++    if (public_name && !*public_name) public_name = NULL;
++    if (public_name && !CyberGfxBase) return SDL_SetError("OS3: named public screens require CyberGraphX");
+     if (!CyberGfxBase) {
+         /* AGA: always open a custom fullscreen screen.
+          * No windowed mode on AGA (no chunky WB screen to open on). */
+@@ -253,7 +257,10 @@ static int OS3_OpenWindowed(OS3_WindowData *data, SDL_Window *window)
+ 
+     /* RTG path: check if Workbench is suitable */
+     {
+-        struct Screen *wbscreen = LockPubScreen(NULL);
++        struct Screen *wbscreen = LockPubScreen((STRPTR)public_name);
++        if (!wbscreen && public_name && *public_name) {
++            return SDL_SetError("OS3: requested public screen is unavailable: %s", public_name);
++        }
+         if (wbscreen) {
+             struct BitMap *bm = wbscreen->RastPort.BitMap;
+             ULONG is_cyber = GetCyberMapAttr(bm, CYBRMATTR_ISCYBERGFX);
+@@ -270,7 +277,14 @@ static int OS3_OpenWindowed(OS3_WindowData *data, SDL_Window *window)
+         }
+     }
+ 
++    if (public_name && *public_name && !use_wb) {
++        return SDL_SetError("OS3: requested public screen is not a suitable RTG screen");
++    }
+     if (use_wb) {
++        /* Hold the named screen lock across OpenWindowTags. Do not change
++         * Workbench or the process-global default public screen. */
++        public_screen = LockPubScreen((STRPTR)public_name);
++        if (!public_screen) return SDL_SetError("OS3: public screen closed before window creation");
+         xpos = (window->x == SDL_WINDOWPOS_CENTERED ||
+                 window->x == SDL_WINDOWPOS_UNDEFINED) ? 32 : window->x;
+         ypos = (window->y == SDL_WINDOWPOS_CENTERED ||
+@@ -283,11 +297,12 @@ static int OS3_OpenWindowed(OS3_WindowData *data, SDL_Window *window)
+             WA_InnerHeight,   (ULONG)window->h,
+             WA_Flags,         (ULONG)OS3_WFLG_WINDOWED,
+             WA_IDCMP,         (ULONG)OS3_IDCMP_WINDOWED,
+-            WA_PubScreen,     (ULONG)NULL,
++            WA_PubScreen,     (ULONG)public_screen,
+             WA_GimmeZeroZero, TRUE,
+             WA_Title,         (ULONG)(window->title ? window->title : "SDL"),
+             TAG_DONE
+         );
++        UnlockPubScreen(NULL, public_screen);
+         if (!iwin) {
+             return SDL_SetError("OS3: OpenWindowTags (WB) failed");
+         }

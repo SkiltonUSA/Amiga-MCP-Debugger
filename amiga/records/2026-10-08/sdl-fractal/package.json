@@ -1,0 +1,19 @@
+{
+  "archive": "SDLZZFractal-0.2-XX19c.zip",
+  "sha256": "010501e29dd0096d6b3b1ac5a0181cab9c5bedd08792ca31ff8a274eee43fa00",
+  "bytes": 340572,
+  "executable_bytes": 1153524,
+  "build_id": 1957903987,
+  "files": {
+    "SDLZZFractal/SDLZZFractal": "10ce8c9a9b985033f5c588343b0fbad0be8c0a9652cb24c85f7d3547041e4d03",
+    "SDLZZFractal/SDLZZFractal.info": "b74284cb5dd673ecd454c9f2280daa0898d415a57aa9e640930268cf5ff1ffcc",
+    "SDLZZFractal.info": "e887a59557e7592579d80814e156f00059be587a641d548e19e60a1244fa3f61",
+    "SDLZZFractal/build-info.json": "447206ca4c8d03b8661324396bdb49c233939b3d4a7e1281e5d715770cb91151",
+    "SDLZZFractal/LICENSE": "c39cb08247e5bd01212a81638635c256c9795434eb3428d1c99af1ec0bbb644a",
+    "SDLZZFractal/ReadMe.txt": "d239cdb763d33b81350d346d8cfcd4de8f8cb3863f536fe6e2756332b71dff6f",
+    "SDLZZFractal/ThirdParty.txt": "7334e71d7ade3436cd4ca5c689290aeeece161ba4136b7773b8d7e960b2bcd19",
+    "SDLZZFractal/COPYING3": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "SDLZZFractal/COPYING.RUNTIME": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+    "SHA256SUMS.txt": "8270fed53b2e0db9777a23a6d93d19c88977abade97196f4b1563e066dc5c953"
+  }
+}

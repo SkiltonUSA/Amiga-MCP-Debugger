@@ -1,0 +1,42 @@
+{
+  "version": "0.2",
+  "application": "SDLZZFractal",
+  "standalone_release": true,
+  "build_id": 1957903987,
+  "source_identity_sha256": "74b33e73a81e5cb6170fde126aafc6ea3cb54434e2fe860bf15d22053b740073",
+  "sdl": {
+    "repository": "https://github.com/SkiltonUSA/SDL2-AmigaOS3",
+    "tag": "v0.2.0",
+    "library_sha256": "bf90c1f12536df97bfc85e838cc2fa0047fc23f37d5128dbb89bb38dddec386e"
+  },
+  "compiler_image": "docker.io/amigadev/crosstools@sha256:93ca1a47903b61873f6638881b44f9f2d6086a39f1b9b916a26faff3a8ea4d3d",
+  "arm_flags": [
+    "--target=arm-none-eabi",
+    "-mcpu=cortex-a9",
+    "-marm",
+    "-mfloat-abi=soft",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "-fno-stack-protector",
+    "-O1",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-DFF_TIMING"
+  ],
+  "arm_image_bytes": 5384,
+  "relocations": [
+    5176,
+    5180,
+    5184,
+    5188
+  ],
+  "hardware_execution_verified_by_build": false,
+  "files": {
+    "SDLZZFractal": "10ce8c9a9b985033f5c588343b0fbad0be8c0a9652cb24c85f7d3547041e4d03",
+    "zzarm.elf": "dd7fcbf0c04dfa15cb314cdd9616191786a8b54de35936a19a340aa352a8cab0",
+    "zz_payload.h": "63d2b090c66c6b7c5af8fe343557f60a168d3879b790cdae130052e20aed3a48"
+  }
+}

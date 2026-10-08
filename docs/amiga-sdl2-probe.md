@@ -144,3 +144,9 @@ acceptance remains bounded by the tests above. No Amiga deployment or system
 configuration change was needed to publish the SDK.
 
 Release verification: `amiga/records/2026-10-08/sdl-probe/sdk-release.json`.
+
+## Follow-on interactive release
+
+SDL2 SDK v0.2.0 adds named RTG public-screen selection and the standalone
+SDL ZZFractal application. See [development and physical results](amiga-sdl-fractal.md).
+The initial two-file window fix and its v0.1.0 records remain historical evidence.

@@ -1,0 +1,43 @@
+amiga_run_script [OK]
+LhA Freeware Version 2.15 68040+ 
+Copyright (c) 1991-94 by Stefan Boberg.
+Copyright (c) 1998,1999 by Jim Cooper and David Tritscher.
+Copyright (c) 2004-2011 by Sven Ottemann.
+
+364ec823dea2615b6dc3fb5e91319177  RAM:SDLZZFractalBuild/SDLZZFractal/SDLZZFractal
+0 pTesting integrity of archive 'RAM:SDLZZFractal-0.2-XX19c.lha':
+    Testing: (       0/     544)  SDLZZFractal.infoK14C     54414C     544
+27m    Testing: (       0/    1235)  SDLZZFractal/build-info.jsonK14C    123514C    1235
+27m    Testing: (       0/    3324)  SDLZZFractal/COPYING.RUNTIMEK14C    332414C    3324
+27m    Testing: (       0/   35147)  SDLZZFractal/COPYING3K14C   3514714C   35147
+27m    Testing: (       0/     850)  SDLZZFractal/LICENSEK14C     85014C     850
+27m    Testing: (       0/    3148)  SDLZZFractal/ReadMe.txtK14C    314814C    3148
+27m    Testing: (       0/ 1153524)  SDLZZFractal/SDLZZFractalK14C  13107214C  26214414C  39321614C  52428814C  65536014C  78643214C  91750414C 104857614C 115352414C 1153524
+27m    Testing: (       0/     482)  SDLZZFractal/SDLZZFractal.infoK14C     48214C     482
+27m    Testing: (       0/    1543)  SDLZZFractal/ThirdParty.txtK14C    154314C    1543
+27m    Testing: (       0/     822)  SHA256SUMS.txtK14C     82214C     822
+27m10 files tested, all files OK.K
+
+Operation successful.
+ p27m
+LhA Freeware Version 2.15 68040+ 
+Copyright (c) 1991-94 by Stefan Boberg.
+Copyright (c) 1998,1999 by Jim Cooper and David Tritscher.
+Copyright (c) 2004-2011 by Sven Ottemann.
+
+0 pExtracting from archive 'RAM:SDLZZFractal-0.2-XX19c.lha':
+ Extracting: (       0/     544)  SDLZZFractal.infoK14C     54414C     544
+27m Extracting: (       0/    1235)  SDLZZFractal/build-info.jsonK14C    123514C    1235
+27m Extracting: (       0/    3324)  SDLZZFractal/COPYING.RUNTIMEK14C    332414C    3324
+27m Extracting: (       0/   35147)  SDLZZFractal/COPYING3K14C   3514714C   35147
+27m Extracting: (       0/     850)  SDLZZFractal/LICENSEK14C     85014C     850
+27m Extracting: (       0/    3148)  SDLZZFractal/ReadMe.txtK14C    314814C    3148
+27m Extracting: (       0/ 1153524)  SDLZZFractal/SDLZZFractalK14C  13107214C  26214414C  39321614C  52428814C  65536014C  78643214C  91750414C 104857614C 115352414C 1153524
+27m Extracting: (       0/     482)  SDLZZFractal/SDLZZFractal.infoK14C     48214C     482
+27m Extracting: (       0/    1543)  SDLZZFractal/ThirdParty.txtK14C    154314C    1543
+27m Extracting: (       0/     822)  SHA256SUMS.txtK14C     82214C     822
+27m10 files extracted, all files OK.K
+
+Operation successful.
+ p27m
+364ec823dea2615b6dc3fb5e91319177  RAM:SDLFractalFresh/SDLZZFractal/SDLZZFractal

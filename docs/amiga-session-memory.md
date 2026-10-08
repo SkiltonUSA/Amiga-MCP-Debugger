@@ -5,6 +5,44 @@ the durable handoff for the development setup and installations in this branch.
 The user requested this GitHub backup. It preserves source, configuration and
 evidence; it is not a backup of the Amiga's disks or installed commercial games.
 
+## Latest SDL application (2026-10-08)
+
+**SDL ZZFractal 0.2** is installed in `SD032G:Dev/SDLZZFractal-0.2/` with
+native tool/drawer icons, stack 131072, documentation and its embedded ARM
+payload. Executable MD5 `364ec823dea2615b6dc3fb5e91319177`.
+It registers **no bridge client**: zero clients does not establish Core1 idle.
+Check for window `SDL ZZFractal 0.2`, the app task and the
+`Sixies.ARM.Debug.Owner` port. Quit with Q before starting another ARM app.
+
+The developer suite passed 14 complete oracle-frame comparisons, native
+16-/32-bit CGX readback, cancellation, hook-driven iconify/restore and RET1
+shutdown. Standalone Shell CPU/ARM hashes matched `fb32f6c6`; cancellation and
+Ctrl-C returned RET1 and released memory. Native Workbench launch, firmware
+requester, ARM render, verified window movement and Q quit also passed.
+The installed app was relaunched from Workbench and left open at (680,300),
+with its ARM image complete; bridge postflight was healthy. Re-enumerate actual
+state before the next hardware task.
+
+Default developer wall time: ARM 7.575 s, CPU 17.427 s. Compute slices were
+ARM 2.894 s estimate versus CPU 2.233 s. Unequal scheduling means this is not
+a raw processor speed ratio; MMU/caches remain off on Core1.
+
+Native double-click AppIcon restoration is still unverified. Injected icon
+mouse input stalled the bridge; it recovered without reboot. ARexx ICON OPEN
+returned OK without restoring. Developer-hook restoration passed. Avoid
+injecting Workbench icon mouse clicks; ask for a physical test when useful.
+The standalone app subsequently exited cleanly. Other moved windows were
+restored; the Roadshow details requester was already closed on recovery.
+No startup/preferences/firmware changes were made.
+
+Source and release: https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.2.0
+Framework source: `amiga/compute/`, `amiga/sdl_fractal/`; details in
+`docs/amiga-sdl-fractal.md`, records in `amiga/records/2026-10-08/sdl-fractal/`.
+The public SDK pins `libSDL2.a` SHA256
+`bf90c1f12536df97bfc85e838cc2fa0047fc23f37d5128dbb89bb38dddec386e`.
+Use sequential hardware calls; the Workbench ARexx docs are linked in the
+application development document. Temporary extraction/logs are in RAM:.
+
 ## Current working state
 
 - Target: A4000TX, TF4060, 68060 revision 5, AGA, AmigaOS 3.2.3 as identified

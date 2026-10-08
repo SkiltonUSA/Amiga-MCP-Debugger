@@ -50,14 +50,18 @@ def main():
     global OUT
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--fractal",action="store_true",help="Build the Workbench Mandelbrot application")
+    p.add_argument("--sdl",action="store_true",help="Build the interactive SDL2 frontend and timed worker (implies --fractal)")
+    p.add_argument("--sdl-source",type=Path,help="Pinned SDL2-AmigaOS3 SDK source checkout")
     p.add_argument("--release",action="store_true",help="Standalone distribution build (requires --fractal)")
     p.add_argument("--container-command",help="JSON container argv; defaults to workspace settings")
     p.add_argument("--clang",default="clang")
     p.add_argument("--ld",default=shutil.which("ld.lld") or "/opt/homebrew/opt/lld/bin/ld.lld")
     a=p.parse_args()
+    if a.sdl:a.fractal=True
     if a.release and not a.fractal:p.error("--release requires --fractal")
     if a.fractal:OUT=ROOT/".context/amiga/fractal"
     if a.release:OUT=ROOT/".context/amiga/fractal-release"
+    if a.sdl:OUT=ROOT/(".context/amiga/sdl-fractal-release" if a.release else ".context/amiga/sdl-fractal")
     OUT.mkdir(parents=True,exist_ok=True)
     cc=shutil.which(a.clang);ld=shutil.which(a.ld)
     if not cc or not ld:raise SystemExit("Clang ARM target and LLVM ld.lld required")
@@ -65,13 +69,16 @@ def main():
            "-fno-builtin","-fPIC","-fvisibility=hidden","-fno-stack-protector","-O1","-g",
            "-Wall","-Wextra","-Werror","-I",str(SDK),"-I",str(SDK/"zz9000"),
            "-I",str(ROOT/"amiga/fractal")]
+    if a.sdl:flags += ["-DFF_TIMING"]
     sources=[SDK/"core.c",SDK/"protocol.h",*sorted((SDK/"zz9000").glob("*"))]
     if a.fractal:sources+=sorted((ROOT/"amiga/fractal").glob("*"))
+    if a.sdl:sources += [*sorted((ROOT/"amiga/sdl_fractal").glob("*.c")),*sorted((ROOT/"amiga/compute").glob("*.[ch]"))]
     identity=hashlib.sha256()
     for path in sources:identity.update(path.read_bytes())
     for tool in (cc,ld):identity.update(subprocess.check_output([tool,"--version"]))
-    identity.update(" ".join(flags[:-6]).encode()) # Exclude workspace include paths.
+    identity.update(" ".join(flags[:flags.index("-I")]+(["-DFF_TIMING"] if a.sdl else [])).encode()) # Exclude workspace include paths.
     if a.release:identity.update(b"standalone-release-v1")
+    if a.sdl:identity.update(b"sdl-fractal-timing-v1")
     build=int.from_bytes(identity.digest()[:4],"big") or 1
     objects=[]
     arm_sources=[SDK/"core.c",SDK/"zz9000/entry.S"]
@@ -107,17 +114,41 @@ def main():
     if a.release:extra += ["-DZZ_RELEASE","-s"]
     bridge_sources=[] if a.release else ["amiga/arm_debug/relay.c","amiga/arm_debug/bridge_adapter.c",
         ".tools/amiga-devbench/amiga-bridge/client/bridge_client.c"]
-    subprocess.run([*prefix,"m68k-amigaos-gcc","-std=c99","-noixemul","-m68020","-O2","-g",*extra,
-        "-Wall","-Wextra","-Werror","-Iamiga/arm_debug","-Iamiga/arm_debug/zz9000",
-        "-I"+str(out_rel),"-I.tools/amiga-devbench/amiga-bridge/include",
-        "amiga/arm_debug/zz9000/launcher.c",*bridge_sources,"-lamiga","-o",
-        str(out_rel/name)],check=True)
+    sdl_record=None
+    if a.sdl:
+        if not a.sdl_source:raise ValueError("--sdl-source must identify the SDL2 0.1.0 source checkout with built library")
+        sdl=a.sdl_source.resolve();sdl_rel=sdl.relative_to(ROOT)
+        library=sdl/"libSDL2.a"
+        digest=hashlib.sha256(library.read_bytes()).hexdigest()
+        sdl_record=json.loads((ROOT/"amiga/sdl_fractal/sdl.json").read_text())
+        if digest!=sdl_record["library_sha256"]:
+            raise ValueError("SDL2 library does not match the published clean SDK")
+        name="SDLZZFractal" if a.release else "sdlzzfractal"
+        common=[*prefix,"m68k-amigaos-gcc","-std=c99","-noixemul","-m68030","-O2",
+            "-Wall","-Wextra","-Werror","-D__AMIGAOS3__","-DZZ_FRACTAL",
+            '-DZZ_APP_NAME="SDLZZFractal"','-DZZ_APP_VERSION="0.2"','-DZZ_CLIENT_NAME="sdlfractal"',
+            "-DZZ_MIN_STACK=65536","-Iamiga/arm_debug","-Iamiga/arm_debug/zz9000",
+            "-Iamiga/fractal","-Iamiga/compute","-I"+str(sdl_rel/"include"),
+            "-I"+str(out_rel),"-I.tools/amiga-devbench/amiga-bridge/include"]
+        if a.release:common += ["-DZZ_RELEASE"]
+        subprocess.run([*common,"-DIntuitionBase=ZZIntuitionBase","-c",
+            "amiga/arm_debug/zz9000/launcher.c","-o",str(out_rel/"launcher.o")],check=True)
+        subprocess.run([*common,"amiga/sdl_fractal/app.c","amiga/compute/xx19c.c","amiga/fractal/fractal.c",
+            str(out_rel/"launcher.o"),*bridge_sources,str(sdl_rel/"libSDL2.a"),"-lm","-lamiga",
+            *(["-s"] if a.release else []),"-o",str(out_rel/name)],check=True)
+    else:
+        subprocess.run([*prefix,"m68k-amigaos-gcc","-std=c99","-noixemul","-m68020","-O2","-g",*extra,
+            "-Wall","-Wextra","-Werror","-Iamiga/arm_debug","-Iamiga/arm_debug/zz9000",
+            "-I"+str(out_rel),"-I.tools/amiga-devbench/amiga-bridge/include",
+            "amiga/arm_debug/zz9000/launcher.c",*bridge_sources,"-lamiga","-o",
+            str(out_rel/name)],check=True)
     binary=OUT/name
     if binary.read_bytes()[:4]!=b"\0\0\x03\xf3":raise ValueError("Expected Amiga Hunk")
     record={"build_id":build,"source_identity_sha256":identity.hexdigest(),"image_bytes":len(image),
             "application":"ZZFractal" if a.fractal else "zzarm-debug","standalone_release":a.release,
             "relocations":rel,"entry":entry,"arm_execution_verified":False,
             "files":{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in (elf,binary,OUT/"zz_payload.h")}}
+    if a.sdl:record.update(application="SDLZZFractal",sdl=sdl_record)
     if a.fractal:
         names={1:"tile_dispatch",2:"row_complete",3:"tile_ready",4:"idle"}
         points=[]

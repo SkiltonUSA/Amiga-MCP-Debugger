@@ -1,4 +1,23 @@
 #include "wire.h"
+#ifdef FF_TIMING
+/* Read-only Zynq global timer; never start/reset a clock shared with firmware.
+ * Register map and rollover scheme: Xilinx standalone cortexa9 xtime_l.c.
+ * Host fixture returns nanosecond ticks and does not model hardware timing. */
+#ifdef FF_HOST_TEST
+#include <time.h>
+static uint64_t timer_ticks(void) { struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return (uint64_t)t.tv_sec*1000000000u+t.tv_nsec; }
+static uint32_t timer_control(void) {return 1;}
+#else
+static uint64_t timer_ticks(void)
+{
+    volatile uint32_t *t=(volatile uint32_t *)0xf8f00200u;
+    uint32_t high,low;
+    do {high=t[1];low=t[0];} while(high!=t[1]);
+    return ((uint64_t)high<<32)|low;
+}
+static uint32_t timer_control(void) {return *(volatile uint32_t *)0xf8f00208u;}
+#endif
+#endif
 #ifndef ZZ_BUILD_ID
 #error Build via build_zz9000_debug.py --fractal
 #endif
@@ -13,6 +32,9 @@ void zz_worker(volatile uint8_t *base)
 {
     uint32_t sctlr,mpidr,midr,session,seq=0,gen=0,stage=0,watch[6],row=0,result=0,i,idle_ack=0;
     uint16_t pixels[FF_PIXELS];
+#ifdef FF_TIMING
+    uint64_t busy_ticks=0;
+#endif
     struct ff_cursor cursor;struct ff_view view;
     struct ad_core core;struct ad_io io={range,range,barrier,idle,0};
 #ifdef FF_HOST_TEST
@@ -46,6 +68,9 @@ void zz_worker(volatile uint8_t *base)
             incoming=ad_get(base,FF_REQ);barrier(0);
             if(incoming && incoming!=seq) {
                 seq=incoming;gen=ad_get(base,FF_REQ+8);
+#ifdef FF_TIMING
+                busy_ticks=0;
+#endif
                 view.cx=(int32_t)ad_get(base,FF_REQ+12);view.cy=(int32_t)ad_get(base,FF_REQ+16);
                 view.step=(int32_t)ad_get(base,FF_REQ+20);view.limit=ad_get(base,FF_REQ+24);
                 watch[0]=gen;watch[1]=ad_get(base,FF_REQ+28);watch[2]=ad_get(base,FF_REQ+32);
@@ -53,6 +78,10 @@ void zz_worker(volatile uint8_t *base)
                 if(ad_get(base,FF_REQ+4)!=session||!gen||incoming!=ad_get(base,FF_REQ)||
                    !ff_valid(&view,watch[1],watch[2])) {result=FF_INVALID;stage=5;}
                 else if(ad_get(base,FF_CANCEL)!=gen) {result=FF_CANCELLED;stage=5;}
+                #ifdef FF_TIMING
+                else if(ad_get(base,FF_REQ+36)==1) {result=4;stage=5;}
+                else if(ad_get(base,FF_REQ+36)!=0) {result=FF_INVALID;stage=5;}
+#endif
                 else {ff_begin(&cursor,&view,watch[1],watch[2]);row=0;stage=1;}
             } else {
                 /* Publish idle on transition or a new debugger command.
@@ -66,7 +95,15 @@ void zz_worker(volatile uint8_t *base)
         }
         if(stage==1 && core.state==AD_RUNNING) {ad_enter(&core,1,watch,6);stage=2;}
         if(stage==2 && core.state==AD_RUNNING) {
-            if(ff_step(&cursor,pixels,64))stage=3;
+            int complete;
+#ifdef FF_TIMING
+            uint64_t before=timer_ticks();
+#endif
+            complete=ff_step(&cursor,pixels,64);
+#ifdef FF_TIMING
+            busy_ticks+=timer_ticks()-before;
+#endif
+            if(complete)stage=3;
             else if(cursor.pixel/FF_TW!=row) {
                 row=cursor.pixel/FF_TW;watch[4]=cursor.pixel;ad_enter(&core,2,watch,6);
             }
@@ -81,6 +118,17 @@ void zz_worker(volatile uint8_t *base)
             }
             ad_put(base,FF_RES+4,result);ad_put(base,FF_RES+8,gen);
             ad_put(base,FF_RES+12,watch[1]);ad_put(base,FF_RES+16,watch[2]);
+            #ifdef FF_TIMING
+            {
+                uint64_t stamp=timer_ticks();
+                ad_put(base,FF_RES+20,(uint32_t)busy_ticks);
+                ad_put(base,FF_RES+24,(uint32_t)(busy_ticks>>32));
+                ad_put(base,FF_RES+28,(uint32_t)stamp);
+                ad_put(base,FF_RES+32,(uint32_t)(stamp>>32));
+                ad_put(base,FF_RES+36,timer_control());
+                ad_put(base,FF_RES+40,0x54494d31u); /* TIM1 */
+            }
+#endif
             barrier(0);ad_put(base,FF_RES,seq);barrier(0);stage=0;
         }
     }

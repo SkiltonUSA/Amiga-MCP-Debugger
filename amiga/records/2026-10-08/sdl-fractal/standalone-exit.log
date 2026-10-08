@@ -1,0 +1,27 @@
+amiga_run_script [OK]
+Process  1: stk  4000, gv 150, pri   0 Loaded as command: TCP/IP Superserver
+Process  2: stk 16384, gv 150, pri   0 Loaded as command: Status
+Process  3: stk 32768, gv 150, pri   0 Loaded as command: SD032G:amiga-bridge/amiga-bridge
+Process  4: stk  4096, gv 150, pri   0 Loaded as command: SYS:C/TitleShadow
+Process  5: stk  4096, gv 150, pri   0 Loaded as command: MagicMenu
+Process  6: stk 32768, gv 150, pri  -5 Loaded as command: C:bridge-netwatch
+Process  7: stk  8000, gv 150, pri   1 Loaded as command: Workbench
+Process  8: stk  4000, gv 150, pri   2 Loaded as command: ToolsDaemon
+OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=8572170e
+BOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+TIMER ticks_per_second=333329491 span_us=1017232 uncertainty_us=506 control=00000001 read_only=1
+SDL_FRACTAL mode=ARM hash=fb32f6c6 elapsed_us=7591237 cpu_us=0 arm_us_est=2898445 transfer_us=96787 colour_us=38592 draw_us=707023 roundtrip_us=7340595 rate=333329491 cx=-12288 cy=0 step=153 limit=128
+SDL_INPUT button=1 x=12 y=45
+SDL_INPUT key=99
+SDL_FRACTAL mode=CPU hash=fb32f6c6 elapsed_us=17252497 cpu_us=2227926 arm_us_est=0 transfer_us=0 colour_us=38980 draw_us=1485001 roundtrip_us=0 rate=333329491 cx=-12288 cy=0 step=153 limit=128
+SDL_INPUT key=97
+SDL_INPUT key=120
+SDL_INPUT key=97
+SDL_FRACTAL mode=ARM hash=fb32f6c6 elapsed_us=7489749 cpu_us=0 arm_us_est=2901392 transfer_us=96960 colour_us=37996 draw_us=702147 roundtrip_us=7230971 rate=333329491 cx=-12288 cy=0 step=153 limit=128
+SDL_INPUT key=109
+SDL_UI exit=0 renders=4 cancels=1 discarded=1
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+LAUNCHER exit=0; owned memory released

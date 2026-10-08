@@ -12,6 +12,7 @@ struct Library *IconBase;
 static UWORD planes[2*3*32];
 static struct Image image;
 static struct DrawerData drawer;
+static LONG icon_stack=65536;
 static int make_icon(char *path,int type)
 {
     struct DiskObject *d=NewDiskObject(type);APTR old;UWORD flags,width,height;BOOL ok;
@@ -21,7 +22,7 @@ static int make_icon(char *path,int type)
     width=d->do_Gadget.Width;height=d->do_Gadget.Height;
     d->do_Gadget.GadgetRender=&image;d->do_Gadget.Flags=GFLG_GADGIMAGE|GFLG_GADGHCOMP;
     d->do_Gadget.Width=48;d->do_Gadget.Height=32;
-    d->do_CurrentX=NO_ICON_POSITION;d->do_CurrentY=NO_ICON_POSITION;d->do_StackSize=65536;
+    d->do_CurrentX=NO_ICON_POSITION;d->do_CurrentY=NO_ICON_POSITION;d->do_StackSize=icon_stack;
     ok=PutDiskObject(path,d);
     d->do_Gadget.GadgetRender=old;d->do_Gadget.Flags=flags;
     d->do_Gadget.Width=width;d->do_Gadget.Height=height;
@@ -29,14 +30,15 @@ static int make_icon(char *path,int type)
     FreeDiskObject(d);
     if(!ok)return 0;
     d=GetDiskObject(path);if(!d)return 0;
-    ok=d->do_Type==type && d->do_StackSize==65536;
+    ok=d->do_Type==type && d->do_StackSize==icon_stack;
     printf("%s.info type=%d stack=%u image=%dx%d verified=%d\n",path,type,(unsigned)d->do_StackSize,d->do_Gadget.Width,d->do_Gadget.Height,ok);
     FreeDiskObject(d);return ok;
 }
 int main(int argc,char **argv)
 {
     unsigned px,py,i,colour;char path[256];int ok;
-    if(argc!=2||strlen(argv[1])>220)return 20;
+    if(argc<2||argc>3||strlen(argv[1])>220)return 20;
+    if(argc==3){if(strlen(argv[2])>30||strchr(argv[2],'/')||strchr(argv[2],':'))return 20;icon_stack=131072;}
     for(py=0;py<32;py++)for(px=0;px<48;px++) {
         long cr=-2304+(long)px*64,ci=-1024+(long)py*64,x=0,y=0,xx,yy;
         for(i=0;i<32;i++) {
@@ -59,6 +61,6 @@ int main(int argc,char **argv)
     image.ImageData=planes;image.PlanePick=3;
     IconBase=OpenLibrary("icon.library",44);if(!IconBase)return 20;
     ok=make_icon(argv[1],WBDRAWER);
-    snprintf(path,sizeof(path),"%s/ZZFractal",argv[1]);ok=make_icon(path,WBTOOL)&&ok;
+    snprintf(path,sizeof(path),"%s/%s",argv[1],argc==3?argv[2]:"ZZFractal");ok=make_icon(path,WBTOOL)&&ok;
     CloseLibrary(IconBase);return ok?0:20;
 }

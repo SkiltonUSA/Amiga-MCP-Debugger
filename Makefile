@@ -41,3 +41,11 @@ test-amiga-fractal:
 amiga-fractal-release:
 	python3 scripts/build_zz9000_debug.py --fractal --release $(ZZ9000_BUILD_ARGS)
 	python3 scripts/package_fractal.py
+
+.PHONY: amiga-sdl-fractal-build test-amiga-sdl-fractal
+SDL2_SOURCE ?= .tools/sdl2-amigaos3
+amiga-sdl-fractal-build:
+	python3 scripts/build_zz9000_debug.py --sdl --sdl-source "$(SDL2_SOURCE)" $(ZZ9000_BUILD_ARGS)
+
+test-amiga-sdl-fractal:
+	.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/sdl_fractal -v

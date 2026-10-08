@@ -1,0 +1,24 @@
+{
+  "standalone_build_id": 1957903987,
+  "binary_sha256": "10ce8c9a9b985033f5c588343b0fbad0be8c0a9652cb24c85f7d3547041e4d03",
+  "native_archive_test_and_extraction": true,
+  "extracted_and_installed_binary_md5": "364ec823dea2615b6dc3fb5e91319177",
+  "native_lha_all_10_members_match_zip": true,
+  "shell_launch": true,
+  "default_ARM_and_CPU_hash": "fb32f6c6",
+  "cancel_count": 1,
+  "discarded_response_count": 1,
+  "clean_shell_exit": "RET1, launcher exit 0, owned memory released",
+  "native_iconification": true,
+  "native_AppIcon_restore": "not verified: synthetic Workbench icon click stalled bridge; subsequent ARexx OPEN returned OK without restoring. Developer hook restoration passed. Physical double-click remains pending.",
+  "workbench_launch_from_installed_icon": true,
+  "workbench_default_ARM_render_visible": true,
+  "window_move_position_verified": [
+    680,
+    300
+  ],
+  "workbench_Q_quit": true,
+  "owner_port_absent_after_quit": true,
+  "installed_path": "SD032G:Dev/SDLZZFractal-0.2/SDLZZFractal",
+  "recovery": "Bridge became responsive again without a reboot; standalone exited via Break C. Other test-moved windows restored; no preferences saved."
+}

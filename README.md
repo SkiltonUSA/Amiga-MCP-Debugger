@@ -15,6 +15,14 @@ audio, fullscreen and OpenRCT2 execution remain untested.
 The library source, fix and [SDK preview release](https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.1.0)
 are maintained separately in [SDL2-AmigaOS3](https://github.com/SkiltonUSA/SDL2-AmigaOS3).
 
+The follow-on [interactive SDL fractal](docs/amiga-sdl-fractal.md) adds a reusable
+cooperative tile client, distinct timing categories and true-colour screens.
+Fourteen full-frame comparisons and 16-/32-bit native readback passed. The
+standalone package is installed and passed Shell/Workbench rendering and clean
+shutdown. Native mouse double-click restoration remains unverified because of
+the bridge input limitation. Source, SDK and application packages are in the
+[public v0.2.0 preview](https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.2.0).
+
 ## Develop
 
 Install `uv`, Clang, LLVM `ld.lld` and Docker or Podman, then:

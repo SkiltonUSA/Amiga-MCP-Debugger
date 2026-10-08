@@ -1,0 +1,4441 @@
+{
+  "passed": true,
+  "build": {
+    "build_id": 3040814972,
+    "source_identity_sha256": "b53f277c6ef35744f6f34f6e686cc0ca2d4741956c1d587f7ac28777dbac1fc8",
+    "image_bytes": 5384,
+    "application": "SDLZZFractal",
+    "standalone_release": false,
+    "relocations": [
+      5176,
+      5180,
+      5184,
+      5188
+    ],
+    "entry": 0,
+    "arm_execution_verified": false,
+    "files": {
+      "zzarm.elf": "5373970a1bd824cb121a47173c674453268eac198b8c3ddd692b756c93b036a9",
+      "sdlzzfractal": "334945c24d51f6e7ef28a1ed611052c15f0c2a89307f4416ffe0a7c27b2e0e04",
+      "zz_payload.h": "4b1c4642520e9c9ef7dcca9a81f41f19cbb4f3f3abb72ea5eda1f356eb228ebe",
+      "fractal-points.json": "3ee45d0f39f7ae10e2042e1b831342254f12d36c4b3044d2c85c79be1f6ab1d7"
+    },
+    "sdl": {
+      "repository": "https://github.com/SkiltonUSA/SDL2-AmigaOS3",
+      "tag": "v0.2.0",
+      "library_sha256": "bf90c1f12536df97bfc85e838cc2fa0047fc23f37d5128dbb89bb38dddec386e"
+    }
+  },
+  "calls": [
+    {
+      "tool": "amiga_ping",
+      "args": {},
+      "text": "Amiga alive - clients: 1, chip: 2022856 bytes, fast: 609820392 bytes"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "automation on"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=2 tiles=150 hash=fb32f6c6 ms=7574 pending=0 renders=1 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=2 tiles=150 hash=fb32f6c6 ms=7574 pending=0 renders=1 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=2 tiles=150 hash=fb32f6c6 ms=7574 pending=0 renders=1 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=2 running=0 wall_us=7574926 cpu_us=0 arm_us_est=2893928 transfer_us=94422 colour_us=37654 draw_us=745144 roundtrip_us=7309631 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=2 running=0 wall_us=7574926 cpu_us=0 arm_us_est=2893928 transfer_us=94422 colour_us=37654 draw_us=745144 roundtrip_us=7309631 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=2 running=0 wall_us=7574926 cpu_us=0 arm_us_est=2893928 transfer_us=94422 colour_us=37654 draw_us=745144 roundtrip_us=7309631 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cpu"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=0 hash=00000000 ms=99 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=5 hash=00000000 ms=269 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=21 hash=00000000 ms=927 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=32 hash=00000000 ms=1567 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=37 hash=00000000 ms=2209 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=45 hash=00000000 ms=2833 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=47 hash=00000000 ms=3474 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=54 hash=00000000 ms=4148 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=56 hash=00000000 ms=4824 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=58 hash=00000000 ms=5414 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=64 hash=00000000 ms=6055 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=66 hash=00000000 ms=6729 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=68 hash=00000000 ms=7370 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=73 hash=00000000 ms=8011 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=78 hash=00000000 ms=9698 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=84 hash=00000000 ms=10339 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=86 hash=00000000 ms=10947 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=87 hash=00000000 ms=11588 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=94 hash=00000000 ms=12212 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=96 hash=00000000 ms=12853 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=98 hash=00000000 ms=13511 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=106 hash=00000000 ms=14135 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=108 hash=00000000 ms=14793 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=116 hash=00000000 ms=15451 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=121 hash=00000000 ms=16092 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=132 hash=00000000 ms=16730 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=3 tiles=148 hash=00000000 ms=17390 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=3 tiles=150 hash=fb32f6c6 ms=17426 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=3 tiles=150 hash=fb32f6c6 ms=17426 pending=0 renders=2 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=CPU gen=3 running=0 wall_us=17426967 cpu_us=2232674 arm_us_est=0 transfer_us=0 colour_us=39019 draw_us=1477559 roundtrip_us=0 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "zoom 160 120"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=0 hash=00000000 ms=100 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=1 hash=00000000 ms=134 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=7 hash=00000000 ms=775 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=9 hash=00000000 ms=1416 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=16 hash=00000000 ms=2057 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=18 hash=00000000 ms=2699 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=19 hash=00000000 ms=3356 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=26 hash=00000000 ms=3998 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=28 hash=00000000 ms=4605 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=32 hash=00000000 ms=5279 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=36 hash=00000000 ms=5988 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=38 hash=00000000 ms=6699 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=42 hash=00000000 ms=7337 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=45 hash=00000000 ms=7979 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=47 hash=00000000 ms=8619 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=48 hash=00000000 ms=9328 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=52 hash=00000000 ms=9935 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=54 hash=00000000 ms=10576 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=56 hash=00000000 ms=11218 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=57 hash=00000000 ms=11858 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=59 hash=00000000 ms=12516 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=62 hash=00000000 ms=13157 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=64 hash=00000000 ms=13832 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=66 hash=00000000 ms=14473 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=68 hash=00000000 ms=15114 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=70 hash=00000000 ms=15755 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=72 hash=00000000 ms=16463 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=74 hash=00000000 ms=17071 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=76 hash=00000000 ms=17729 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=77 hash=00000000 ms=18370 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=79 hash=00000000 ms=19079 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=82 hash=00000000 ms=19720 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=84 hash=00000000 ms=20362 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=86 hash=00000000 ms=21018 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=88 hash=00000000 ms=21694 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=91 hash=00000000 ms=22334 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=93 hash=00000000 ms=22941 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=95 hash=00000000 ms=23582 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=97 hash=00000000 ms=24223 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=99 hash=00000000 ms=24864 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=103 hash=00000000 ms=25505 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=105 hash=00000000 ms=26146 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=107 hash=00000000 ms=26787 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=109 hash=00000000 ms=27428 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=115 hash=00000000 ms=28036 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=117 hash=00000000 ms=28677 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=119 hash=00000000 ms=29318 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=125 hash=00000000 ms=29943 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=127 hash=00000000 ms=30600 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=129 hash=00000000 ms=31241 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=136 hash=00000000 ms=31899 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=138 hash=00000000 ms=32540 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=139 hash=00000000 ms=33147 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=147 hash=00000000 ms=33805 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=4 tiles=149 hash=00000000 ms=34446 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=4 tiles=150 hash=a0004522 ms=34717 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=4 tiles=150 hash=a0004522 ms=34717 pending=0 renders=3 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=CPU gen=4 running=0 wall_us=34717536 cpu_us=5164492 arm_us_est=0 transfer_us=0 colour_us=39059 draw_us=2819132 roundtrip_us=0 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=0 hash=00000000 ms=99 pending=0 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=5 hash=00000000 ms=303 pending=158 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=16 hash=00000000 ms=926 pending=169 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=25 hash=00000000 ms=1550 pending=178 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=34 hash=00000000 ms=2177 pending=187 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=43 hash=00000000 ms=2866 pending=196 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=51 hash=00000000 ms=3490 pending=204 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=58 hash=00000000 ms=4149 pending=211 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=65 hash=00000000 ms=4807 pending=218 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=72 hash=00000000 ms=5498 pending=225 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=78 hash=00000000 ms=6122 pending=231 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=85 hash=00000000 ms=6781 pending=238 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=93 hash=00000000 ms=7440 pending=246 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=99 hash=00000000 ms=8130 pending=252 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=108 hash=00000000 ms=8758 pending=261 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=118 hash=00000000 ms=9413 pending=271 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=128 hash=00000000 ms=10069 pending=281 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=138 hash=00000000 ms=10728 pending=291 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=5 tiles=149 hash=00000000 ms=11368 pending=302 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=5 tiles=150 hash=a0004522 ms=11438 pending=0 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=5 tiles=150 hash=a0004522 ms=11438 pending=0 renders=4 cancels=0 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=5 running=0 wall_us=11438340 cpu_us=0 arm_us_est=6670854 transfer_us=112065 colour_us=37472 draw_us=984831 roundtrip_us=11188845 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "pan 1 0"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=0 hash=00000000 ms=101 pending=0 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=0 hash=00000000 ms=134 pending=303 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=8 hash=00000000 ms=793 pending=311 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=17 hash=00000000 ms=1450 pending=320 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=26 hash=00000000 ms=2109 pending=329 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=34 hash=00000000 ms=2766 pending=337 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=40 hash=00000000 ms=3407 pending=343 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=47 hash=00000000 ms=4015 pending=350 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=53 hash=00000000 ms=4655 pending=356 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=60 hash=00000000 ms=5280 pending=363 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=66 hash=00000000 ms=5937 pending=369 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=71 hash=00000000 ms=6563 pending=374 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=77 hash=00000000 ms=7219 pending=380 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=84 hash=00000000 ms=7844 pending=387 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=90 hash=00000000 ms=8518 pending=393 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=97 hash=00000000 ms=9143 pending=400 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=104 hash=00000000 ms=9783 pending=407 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=109 hash=00000000 ms=10408 pending=412 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=134 hash=00000000 ms=12297 pending=437 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=143 hash=00000000 ms=12939 pending=446 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=6 tiles=149 hash=00000000 ms=13562 pending=452 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=6 tiles=150 hash=a1f72ed7 ms=13564 pending=0 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=6 tiles=150 hash=a1f72ed7 ms=13564 pending=0 renders=5 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=6 running=0 wall_us=13564827 cpu_us=0 arm_us_est=8599204 transfer_us=118693 colour_us=37645 draw_us=1154254 roundtrip_us=13314053 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "iterations 64"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=0 hash=00000000 ms=100 pending=0 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=4 hash=00000000 ms=305 pending=457 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=16 hash=00000000 ms=1028 pending=469 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=49 hash=00000000 ms=2951 pending=502 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=57 hash=00000000 ms=3559 pending=510 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=66 hash=00000000 ms=4183 pending=519 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=74 hash=00000000 ms=4807 pending=527 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=86 hash=00000000 ms=5567 pending=539 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=95 hash=00000000 ms=6191 pending=548 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=105 hash=00000000 ms=6814 pending=558 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=115 hash=00000000 ms=7439 pending=568 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=127 hash=00000000 ms=8080 pending=580 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=7 tiles=137 hash=00000000 ms=8704 pending=590 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=7 tiles=150 hash=91fd5f25 ms=9312 pending=0 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=7 tiles=150 hash=91fd5f25 ms=9312 pending=0 renders=6 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=7 running=0 wall_us=9312473 cpu_us=0 arm_us_est=4493081 transfer_us=102289 colour_us=37458 draw_us=824956 roundtrip_us=9062475 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cpu"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=0 hash=00000000 ms=99 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=1 hash=00000000 ms=150 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=6 hash=00000000 ms=757 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=9 hash=00000000 ms=1398 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=15 hash=00000000 ms=2006 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=18 hash=00000000 ms=2647 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=24 hash=00000000 ms=3254 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=27 hash=00000000 ms=3895 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=31 hash=00000000 ms=4570 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=35 hash=00000000 ms=5211 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=38 hash=00000000 ms=5852 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=42 hash=00000000 ms=6493 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=45 hash=00000000 ms=7101 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=49 hash=00000000 ms=7742 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=52 hash=00000000 ms=8382 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=55 hash=00000000 ms=8990 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=58 hash=00000000 ms=9631 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=61 hash=00000000 ms=10272 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=65 hash=00000000 ms=10897 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=68 hash=00000000 ms=11571 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=72 hash=00000000 ms=12211 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=75 hash=00000000 ms=12852 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=78 hash=00000000 ms=13494 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=82 hash=00000000 ms=14135 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=85 hash=00000000 ms=14759 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=88 hash=00000000 ms=15433 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=91 hash=00000000 ms=16078 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=94 hash=00000000 ms=16699 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=97 hash=00000000 ms=17340 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=101 hash=00000000 ms=18014 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=105 hash=00000000 ms=18657 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=108 hash=00000000 ms=19313 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=113 hash=00000000 ms=19923 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=116 hash=00000000 ms=20629 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=119 hash=00000000 ms=21270 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=125 hash=00000000 ms=21911 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=128 hash=00000000 ms=22552 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=134 hash=00000000 ms=23193 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=137 hash=00000000 ms=23817 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=144 hash=00000000 ms=24458 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=8 tiles=147 hash=00000000 ms=25116 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=8 tiles=150 hash=91fd5f25 ms=25592 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=8 tiles=150 hash=91fd5f25 ms=25592 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=CPU gen=8 running=0 wall_us=25592896 cpu_us=3478638 arm_us_est=0 transfer_us=0 colour_us=38734 draw_us=2124684 roundtrip_us=0 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "screen 16"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=8 tiles=150 hash=91fd5f25 ms=25592 pending=0 renders=7 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_list_screens",
+      "args": {},
+      "text": "Screens (2):\n\n  SDL ZZFractal temporary RTG test  640x480  8bpp  LORES  @9489F08\n  Workbench Screen  1920x800  8bpp  LORES  @8989DA0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=0 hash=00000000 ms=77 pending=0 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=6 hash=00000000 ms=355 pending=609 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=18 hash=00000000 ms=1012 pending=621 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=29 hash=00000000 ms=1638 pending=632 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=40 hash=00000000 ms=2295 pending=643 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=50 hash=00000000 ms=2952 pending=653 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=60 hash=00000000 ms=3610 pending=663 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=70 hash=00000000 ms=4267 pending=673 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=80 hash=00000000 ms=4926 pending=683 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=90 hash=00000000 ms=5583 pending=693 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=100 hash=00000000 ms=6224 pending=703 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=110 hash=00000000 ms=6833 pending=713 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=122 hash=00000000 ms=7489 pending=725 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=134 hash=00000000 ms=8147 pending=737 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=9 tiles=146 hash=00000000 ms=8772 pending=749 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=9 tiles=150 hash=91fd5f25 ms=8898 pending=0 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=9 tiles=150 hash=91fd5f25 ms=8898 pending=0 renders=8 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=9 running=0 wall_us=8898752 cpu_us=0 arm_us_est=4211436 transfer_us=101698 colour_us=37376 draw_us=546012 roundtrip_us=8691163 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cpu"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=0 hash=00000000 ms=76 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=1 hash=00000000 ms=117 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=6 hash=00000000 ms=741 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=12 hash=00000000 ms=1399 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=16 hash=00000000 ms=2057 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=22 hash=00000000 ms=2715 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=26 hash=00000000 ms=3372 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=30 hash=00000000 ms=4013 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=35 hash=00000000 ms=4621 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=39 hash=00000000 ms=5279 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=43 hash=00000000 ms=5920 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=46 hash=00000000 ms=6547 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=50 hash=00000000 ms=7202 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=53 hash=00000000 ms=7844 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=57 hash=00000000 ms=8484 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=60 hash=00000000 ms=9125 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=64 hash=00000000 ms=9783 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=67 hash=00000000 ms=10390 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=71 hash=00000000 ms=11014 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=74 hash=00000000 ms=11655 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=78 hash=00000000 ms=12280 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=81 hash=00000000 ms=12937 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=93 hash=00000000 ms=15029 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=97 hash=00000000 ms=15670 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=101 hash=00000000 ms=16362 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=105 hash=00000000 ms=17087 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=108 hash=00000000 ms=17695 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=114 hash=00000000 ms=18318 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=117 hash=00000000 ms=18976 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=124 hash=00000000 ms=19718 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=127 hash=00000000 ms=20344 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=133 hash=00000000 ms=20967 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=137 hash=00000000 ms=21608 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=10 tiles=148 hash=00000000 ms=23211 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=10 tiles=150 hash=91fd5f25 ms=23399 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=10 tiles=150 hash=91fd5f25 ms=23399 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=16 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=CPU gen=10 running=0 wall_us=23399851 cpu_us=3474686 arm_us_est=0 transfer_us=0 colour_us=39149 draw_us=1255859 roundtrip_us=0 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "pixels"
+      },
+      "text": "[ok] ok=1 samples=475 mismatches=0 max_delta=7 tolerance=8 storage=16"
+    },
+    {
+      "tool": "amiga_list_screen_windows",
+      "args": {},
+      "text": "Windows on screen @9489F08 (1):\n\n  SDL ZZFractal 0.2  pos=(100,100)  size=408x367  @921A9C4"
+    },
+    {
+      "tool": "amiga_screenshot",
+      "args": {},
+      "text": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_hc7ws8u2.ppm (640x480, RLE, 480 rows received)"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "screen 32"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=10 tiles=150 hash=91fd5f25 ms=23399 pending=0 renders=9 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_list_screens",
+      "args": {},
+      "text": "Screens (2):\n\n  SDL ZZFractal temporary RTG test  640x480  8bpp  LORES  @9489F08\n  Workbench Screen  1920x800  8bpp  LORES  @8989DA0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=0 hash=00000000 ms=100 pending=0 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=1 hash=00000000 ms=169 pending=754 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=14 hash=00000000 ms=792 pending=767 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=27 hash=00000000 ms=1401 pending=780 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=37 hash=00000000 ms=2024 pending=790 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=47 hash=00000000 ms=2648 pending=800 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=56 hash=00000000 ms=3272 pending=809 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=65 hash=00000000 ms=3931 pending=818 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=76 hash=00000000 ms=4571 pending=829 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=85 hash=00000000 ms=5195 pending=838 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=118 hash=00000000 ms=7236 pending=871 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=129 hash=00000000 ms=7878 pending=882 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=11 tiles=140 hash=00000000 ms=8502 pending=893 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=11 tiles=150 hash=91fd5f25 ms=8975 pending=0 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=11 tiles=150 hash=91fd5f25 ms=8975 pending=0 renders=10 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=11 running=0 wall_us=8975382 cpu_us=0 arm_us_est=4244613 transfer_us=100693 colour_us=37316 draw_us=803631 roundtrip_us=8725435 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cpu"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=0 hash=00000000 ms=100 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=4 hash=00000000 ms=269 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=7 hash=00000000 ms=945 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=13 hash=00000000 ms=1585 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=16 hash=00000000 ms=2193 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=19 hash=00000000 ms=2833 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=24 hash=00000000 ms=3441 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=28 hash=00000000 ms=4083 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=33 hash=00000000 ms=4690 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=36 hash=00000000 ms=5330 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=39 hash=00000000 ms=5971 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=43 hash=00000000 ms=6579 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=46 hash=00000000 ms=7220 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=49 hash=00000000 ms=7844 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=52 hash=00000000 ms=8451 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=55 hash=00000000 ms=9092 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=64 hash=00000000 ms=10846 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=68 hash=00000000 ms=11487 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=71 hash=00000000 ms=12112 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=74 hash=00000000 ms=12736 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=77 hash=00000000 ms=13360 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=80 hash=00000000 ms=14035 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=84 hash=00000000 ms=14675 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=87 hash=00000000 ms=15283 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=90 hash=00000000 ms=15925 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=93 hash=00000000 ms=16532 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=96 hash=00000000 ms=17155 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=100 hash=00000000 ms=17797 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=103 hash=00000000 ms=18404 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=107 hash=00000000 ms=19062 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=110 hash=00000000 ms=19686 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=115 hash=00000000 ms=20327 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=118 hash=00000000 ms=20934 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=123 hash=00000000 ms=21575 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=127 hash=00000000 ms=22250 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=133 hash=00000000 ms=22891 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=136 hash=00000000 ms=23498 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=139 hash=00000000 ms=24139 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=145 hash=00000000 ms=24814 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=12 tiles=148 hash=00000000 ms=25421 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=12 tiles=150 hash=91fd5f25 ms=25560 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=12 tiles=150 hash=91fd5f25 ms=25560 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=32 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=CPU gen=12 running=0 wall_us=25560247 cpu_us=3474398 arm_us_est=0 transfer_us=0 colour_us=39095 draw_us=2115702 roundtrip_us=0 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "pixels"
+      },
+      "text": "[ok] ok=1 samples=475 mismatches=0 max_delta=0 tolerance=0 storage=32"
+    },
+    {
+      "tool": "amiga_list_screen_windows",
+      "args": {},
+      "text": "Windows on screen @9489F08 (1):\n\n  SDL ZZFractal 0.2  pos=(100,100)  size=408x367  @921A9C4"
+    },
+    {
+      "tool": "amiga_screenshot",
+      "args": {},
+      "text": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_6gvgs0nq.ppm (640x480, RLE, 480 rows received)"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "screen 0"
+      },
+      "text": "[ok] ok=1 mode=CPU running=0 gen=12 tiles=150 hash=91fd5f25 ms=25560 pending=0 renders=11 cancels=0 discarded=0 cx=-6208 cy=0 step=76 limit=64 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "reset"
+      },
+      "text": "[ok] ok=1 mode=CPU running=1 gen=13 tiles=0 hash=00000000 ms=99 pending=0 renders=12 cancels=0 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=0 hash=00000000 ms=100 pending=0 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=0 hash=00000000 ms=134 pending=903 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=18 hash=00000000 ms=792 pending=921 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=34 hash=00000000 ms=1400 pending=937 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=46 hash=00000000 ms=2024 pending=949 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=57 hash=00000000 ms=2649 pending=960 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=67 hash=00000000 ms=3272 pending=970 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=76 hash=00000000 ms=3930 pending=979 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=86 hash=00000000 ms=4588 pending=989 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=97 hash=00000000 ms=5229 pending=1000 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=107 hash=00000000 ms=5854 pending=1010 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=123 hash=00000000 ms=6545 pending=1026 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=14 tiles=139 hash=00000000 ms=7186 pending=1042 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=14 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=14 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=13 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=14 running=0 wall_us=7541331 cpu_us=0 arm_us_est=2898815 transfer_us=96061 colour_us=38397 draw_us=690975 roundtrip_us=7291167 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=15 tiles=0 hash=00000000 ms=100 pending=0 renders=14 cancels=1 discarded=0 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "zoom 160 120"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=16 tiles=0 hash=00000000 ms=101 pending=1059 renders=15 cancels=2 discarded=0 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cancel"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=17 tiles=1 hash=00000000 ms=168 pending=1061 renders=15 cancels=3 discarded=1 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=17 tiles=1 hash=00000000 ms=168 pending=0 renders=15 cancels=3 discarded=2 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=18 tiles=0 hash=00000000 ms=100 pending=0 renders=16 cancels=3 discarded=2 cx=-12288 cy=0 step=76 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "zoom 160 120"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=19 tiles=0 hash=00000000 ms=100 pending=1065 renders=17 cancels=4 discarded=2 cx=-12288 cy=0 step=38 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cancel"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=20 tiles=0 hash=00000000 ms=135 pending=1066 renders=17 cancels=5 discarded=3 cx=-12288 cy=0 step=38 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=20 tiles=0 hash=00000000 ms=135 pending=0 renders=17 cancels=5 discarded=4 cx=-12288 cy=0 step=38 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=21 tiles=0 hash=00000000 ms=99 pending=0 renders=18 cancels=5 discarded=4 cx=-12288 cy=0 step=38 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "zoom 160 120"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=22 tiles=0 hash=00000000 ms=100 pending=1067 renders=19 cancels=6 discarded=4 cx=-12288 cy=0 step=19 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cancel"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=23 tiles=0 hash=00000000 ms=169 pending=1068 renders=19 cancels=7 discarded=5 cx=-12288 cy=0 step=19 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=23 tiles=0 hash=00000000 ms=169 pending=0 renders=19 cancels=7 discarded=6 cx=-12288 cy=0 step=19 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=24 tiles=0 hash=00000000 ms=114 pending=0 renders=20 cancels=7 discarded=6 cx=-12288 cy=0 step=19 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "zoom 160 120"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=25 tiles=0 hash=00000000 ms=100 pending=1070 renders=21 cancels=8 discarded=6 cx=-12288 cy=0 step=9 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cancel"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=26 tiles=0 hash=00000000 ms=133 pending=1071 renders=21 cancels=9 discarded=7 cx=-12288 cy=0 step=9 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=26 tiles=0 hash=00000000 ms=133 pending=0 renders=21 cancels=9 discarded=8 cx=-12288 cy=0 step=9 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=27 tiles=0 hash=00000000 ms=100 pending=0 renders=22 cancels=9 discarded=8 cx=-12288 cy=0 step=9 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "zoom 160 120"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=28 tiles=0 hash=00000000 ms=99 pending=1072 renders=23 cancels=10 discarded=8 cx=-12288 cy=0 step=4 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cancel"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=29 tiles=0 hash=00000000 ms=235 pending=1073 renders=23 cancels=11 discarded=9 cx=-12288 cy=0 step=4 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=29 tiles=0 hash=00000000 ms=235 pending=0 renders=23 cancels=11 discarded=10 cx=-12288 cy=0 step=4 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=30 tiles=0 hash=00000000 ms=100 pending=0 renders=24 cancels=11 discarded=10 cx=-12288 cy=0 step=4 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "zoom 160 120"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=31 tiles=0 hash=00000000 ms=101 pending=1074 renders=25 cancels=12 discarded=10 cx=-12288 cy=0 step=2 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cancel"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=32 tiles=1 hash=00000000 ms=236 pending=1076 renders=25 cancels=13 discarded=11 cx=-12288 cy=0 step=2 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=32 tiles=1 hash=00000000 ms=236 pending=0 renders=25 cancels=13 discarded=12 cx=-12288 cy=0 step=2 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "reset"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=0 hash=00000000 ms=106 pending=0 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=0 hash=00000000 ms=135 pending=1077 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=19 hash=00000000 ms=827 pending=1096 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=35 hash=00000000 ms=1450 pending=1112 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=47 hash=00000000 ms=2108 pending=1124 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=58 hash=00000000 ms=2715 pending=1135 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=69 hash=00000000 ms=3425 pending=1146 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=77 hash=00000000 ms=4082 pending=1154 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=87 hash=00000000 ms=4740 pending=1164 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=98 hash=00000000 ms=5347 pending=1175 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=110 hash=00000000 ms=5971 pending=1187 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=125 hash=00000000 ms=6596 pending=1202 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=33 tiles=140 hash=00000000 ms=7219 pending=1217 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=33 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=33 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=33 running=0 wall_us=7541364 cpu_us=0 arm_us_est=2896189 transfer_us=96186 colour_us=40113 draw_us=695182 roundtrip_us=7286242 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "iconify"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=33 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=33 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_list_screen_windows",
+      "args": {},
+      "text": "Windows on screen @8989DA0 (6):\n\n  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @8865674\n  Roadshow Connection Details  pos=(0,0)  size=1126x116  @8803F0C\n  Network log output  pos=(0,63)  size=1920x200  @8866E64\n  Roadie 1.3.9  pos=(60,60)  size=230x250  @9050624\n  (untitled)  pos=(21,713)  size=600x63  @8F9B19C\n  (untitled)  pos=(0,11)  size=1920x789  @811B52C"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "restore"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=33 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=33 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "cover"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=33 tiles=150 hash=fb32f6c6 ms=7541 pending=0 renders=26 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=0 hash=00000000 ms=103 pending=0 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=3 hash=00000000 ms=253 pending=1230 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=20 hash=00000000 ms=877 pending=1247 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=36 hash=00000000 ms=1501 pending=1263 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=48 hash=00000000 ms=2159 pending=1275 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=59 hash=00000000 ms=2800 pending=1286 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=68 hash=00000000 ms=3424 pending=1295 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=77 hash=00000000 ms=4082 pending=1304 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=87 hash=00000000 ms=4724 pending=1314 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=98 hash=00000000 ms=5330 pending=1325 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=109 hash=00000000 ms=5954 pending=1336 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=123 hash=00000000 ms=6578 pending=1350 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=34 tiles=139 hash=00000000 ms=7203 pending=1366 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=34 tiles=150 hash=fb32f6c6 ms=7591 pending=0 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "save"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=34 tiles=150 hash=fb32f6c6 ms=7591 pending=0 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "metrics"
+      },
+      "text": "[ok] ok=1 mode=ARM gen=34 running=0 wall_us=7591885 cpu_us=0 arm_us_est=2900714 transfer_us=97047 colour_us=38513 draw_us=718190 roundtrip_us=7336456 rate=333326829 calibration_span_us=1014070 uncertainty_us=485 control=00000001"
+    },
+    {
+      "tool": "amiga_screenshot",
+      "args": {},
+      "text": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_atdy3m4o.ppm (1920x800, RLE, 800 rows received)"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "uncover"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=34 tiles=150 hash=fb32f6c6 ms=7591 pending=0 renders=27 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_list_screen_windows",
+      "args": {},
+      "text": "Windows on screen @8989DA0 (7):\n\n  SDL ZZFractal 0.2  pos=(100,100)  size=408x367  @91684FC\n  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @8865674\n  Roadshow Connection Details  pos=(0,0)  size=1126x116  @8803F0C\n  Network log output  pos=(0,63)  size=1920x200  @8866E64\n  Roadie 1.3.9  pos=(60,60)  size=230x250  @9050624\n  (untitled)  pos=(21,713)  size=600x63  @8F9B19C\n  (untitled)  pos=(0,11)  size=1920x789  @811B52C"
+    },
+    {
+      "tool": "amiga_window_move",
+      "args": {
+        "window": "91684FC",
+        "x": 680,
+        "y": 300
+      },
+      "text": "done"
+    },
+    {
+      "tool": "amiga_screenshot",
+      "args": {
+        "window": "91684FC"
+      },
+      "text": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_mhrgxwai.ppm (1920x800, RLE, 800 rows received)"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "arm"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=0 hash=00000000 ms=101 pending=0 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "iconify"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=0 hash=00000000 ms=160 pending=1377 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=3 hash=00000000 ms=252 pending=1380 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=22 hash=00000000 ms=894 pending=1399 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=66 hash=00000000 ms=3088 pending=1443 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=75 hash=00000000 ms=3744 pending=1452 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=86 hash=00000000 ms=4452 pending=1463 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=97 hash=00000000 ms=5060 pending=1474 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=108 hash=00000000 ms=5701 pending=1485 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=123 hash=00000000 ms=6308 pending=1500 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=1 gen=35 tiles=141 hash=00000000 ms=6949 pending=1518 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=35 tiles=150 hash=fb32f6c6 ms=7219 pending=0 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=1 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "restore"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=35 tiles=150 hash=fb32f6c6 ms=7219 pending=0 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "status"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=35 tiles=150 hash=fb32f6c6 ms=7219 pending=0 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_call_hook",
+      "args": {
+        "client": "sdlfractal",
+        "hook": "sdlfractal",
+        "args": "quit"
+      },
+      "text": "[ok] ok=1 mode=ARM running=0 gen=35 tiles=150 hash=fb32f6c6 ms=7219 pending=0 renders=28 cancels=13 discarded=12 cx=-12288 cy=0 step=153 limit=128 hidden=0 depth=0 error=0"
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "text": "Clients (1): sdlfractal(25)"
+    },
+    {
+      "tool": "amiga_list_clients",
+      "args": {},
+      "text": "Clients (0): none"
+    },
+    {
+      "tool": "amiga_ping",
+      "args": {},
+      "text": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 613175392 bytes"
+    }
+  ],
+  "renders": [
+    {
+      "label": "Workbench ARM default",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "2",
+        "tiles": "150",
+        "hash": "fb32f6c6",
+        "ms": "7574",
+        "pending": "0",
+        "renders": "1",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-12288",
+        "cy": "0",
+        "step": "153",
+        "limit": "128",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "2",
+        "running": "0",
+        "wall_us": "7574926",
+        "cpu_us": "0",
+        "arm_us_est": "2893928",
+        "transfer_us": "94422",
+        "colour_us": "37654",
+        "draw_us": "745144",
+        "roundtrip_us": "7309631",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Workbench CPU default",
+      "state": {
+        "ok": "1",
+        "mode": "CPU",
+        "running": "0",
+        "gen": "3",
+        "tiles": "150",
+        "hash": "fb32f6c6",
+        "ms": "17426",
+        "pending": "0",
+        "renders": "2",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-12288",
+        "cy": "0",
+        "step": "153",
+        "limit": "128",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "CPU",
+        "gen": "3",
+        "running": "0",
+        "wall_us": "17426967",
+        "cpu_us": "2232674",
+        "arm_us_est": "0",
+        "transfer_us": "0",
+        "colour_us": "39019",
+        "draw_us": "1477559",
+        "roundtrip_us": "0",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Workbench CPU zoom",
+      "state": {
+        "ok": "1",
+        "mode": "CPU",
+        "running": "0",
+        "gen": "4",
+        "tiles": "150",
+        "hash": "a0004522",
+        "ms": "34717",
+        "pending": "0",
+        "renders": "3",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-12288",
+        "cy": "0",
+        "step": "76",
+        "limit": "128",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "CPU",
+        "gen": "4",
+        "running": "0",
+        "wall_us": "34717536",
+        "cpu_us": "5164492",
+        "arm_us_est": "0",
+        "transfer_us": "0",
+        "colour_us": "39059",
+        "draw_us": "2819132",
+        "roundtrip_us": "0",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Workbench ARM zoom",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "5",
+        "tiles": "150",
+        "hash": "a0004522",
+        "ms": "11438",
+        "pending": "0",
+        "renders": "4",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-12288",
+        "cy": "0",
+        "step": "76",
+        "limit": "128",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "5",
+        "running": "0",
+        "wall_us": "11438340",
+        "cpu_us": "0",
+        "arm_us_est": "6670854",
+        "transfer_us": "112065",
+        "colour_us": "37472",
+        "draw_us": "984831",
+        "roundtrip_us": "11188845",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Workbench ARM pan",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "6",
+        "tiles": "150",
+        "hash": "a1f72ed7",
+        "ms": "13564",
+        "pending": "0",
+        "renders": "5",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-6208",
+        "cy": "0",
+        "step": "76",
+        "limit": "128",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "6",
+        "running": "0",
+        "wall_us": "13564827",
+        "cpu_us": "0",
+        "arm_us_est": "8599204",
+        "transfer_us": "118693",
+        "colour_us": "37645",
+        "draw_us": "1154254",
+        "roundtrip_us": "13314053",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Workbench ARM 64 iterations",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "7",
+        "tiles": "150",
+        "hash": "91fd5f25",
+        "ms": "9312",
+        "pending": "0",
+        "renders": "6",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-6208",
+        "cy": "0",
+        "step": "76",
+        "limit": "64",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "7",
+        "running": "0",
+        "wall_us": "9312473",
+        "cpu_us": "0",
+        "arm_us_est": "4493081",
+        "transfer_us": "102289",
+        "colour_us": "37458",
+        "draw_us": "824956",
+        "roundtrip_us": "9062475",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Workbench CPU 64 iterations",
+      "state": {
+        "ok": "1",
+        "mode": "CPU",
+        "running": "0",
+        "gen": "8",
+        "tiles": "150",
+        "hash": "91fd5f25",
+        "ms": "25592",
+        "pending": "0",
+        "renders": "7",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-6208",
+        "cy": "0",
+        "step": "76",
+        "limit": "64",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "CPU",
+        "gen": "8",
+        "running": "0",
+        "wall_us": "25592896",
+        "cpu_us": "3478638",
+        "arm_us_est": "0",
+        "transfer_us": "0",
+        "colour_us": "38734",
+        "draw_us": "2124684",
+        "roundtrip_us": "0",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "16-bit screen ARM",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "9",
+        "tiles": "150",
+        "hash": "91fd5f25",
+        "ms": "8898",
+        "pending": "0",
+        "renders": "8",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-6208",
+        "cy": "0",
+        "step": "76",
+        "limit": "64",
+        "hidden": "0",
+        "depth": "16",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "9",
+        "running": "0",
+        "wall_us": "8898752",
+        "cpu_us": "0",
+        "arm_us_est": "4211436",
+        "transfer_us": "101698",
+        "colour_us": "37376",
+        "draw_us": "546012",
+        "roundtrip_us": "8691163",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "16-bit screen CPU",
+      "state": {
+        "ok": "1",
+        "mode": "CPU",
+        "running": "0",
+        "gen": "10",
+        "tiles": "150",
+        "hash": "91fd5f25",
+        "ms": "23399",
+        "pending": "0",
+        "renders": "9",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-6208",
+        "cy": "0",
+        "step": "76",
+        "limit": "64",
+        "hidden": "0",
+        "depth": "16",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "CPU",
+        "gen": "10",
+        "running": "0",
+        "wall_us": "23399851",
+        "cpu_us": "3474686",
+        "arm_us_est": "0",
+        "transfer_us": "0",
+        "colour_us": "39149",
+        "draw_us": "1255859",
+        "roundtrip_us": "0",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "32-bit screen ARM",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "11",
+        "tiles": "150",
+        "hash": "91fd5f25",
+        "ms": "8975",
+        "pending": "0",
+        "renders": "10",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-6208",
+        "cy": "0",
+        "step": "76",
+        "limit": "64",
+        "hidden": "0",
+        "depth": "32",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "11",
+        "running": "0",
+        "wall_us": "8975382",
+        "cpu_us": "0",
+        "arm_us_est": "4244613",
+        "transfer_us": "100693",
+        "colour_us": "37316",
+        "draw_us": "803631",
+        "roundtrip_us": "8725435",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "32-bit screen CPU",
+      "state": {
+        "ok": "1",
+        "mode": "CPU",
+        "running": "0",
+        "gen": "12",
+        "tiles": "150",
+        "hash": "91fd5f25",
+        "ms": "25560",
+        "pending": "0",
+        "renders": "11",
+        "cancels": "0",
+        "discarded": "0",
+        "cx": "-6208",
+        "cy": "0",
+        "step": "76",
+        "limit": "64",
+        "hidden": "0",
+        "depth": "32",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "CPU",
+        "gen": "12",
+        "running": "0",
+        "wall_us": "25560247",
+        "cpu_us": "3474398",
+        "arm_us_est": "0",
+        "transfer_us": "0",
+        "colour_us": "39095",
+        "draw_us": "2115702",
+        "roundtrip_us": "0",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Workbench restored ARM",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "14",
+        "tiles": "150",
+        "hash": "fb32f6c6",
+        "ms": "7541",
+        "pending": "0",
+        "renders": "13",
+        "cancels": "1",
+        "discarded": "0",
+        "cx": "-12288",
+        "cy": "0",
+        "step": "153",
+        "limit": "128",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "14",
+        "running": "0",
+        "wall_us": "7541331",
+        "cpu_us": "0",
+        "arm_us_est": "2898815",
+        "transfer_us": "96061",
+        "colour_us": "38397",
+        "draw_us": "690975",
+        "roundtrip_us": "7291167",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Final ARM default",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "33",
+        "tiles": "150",
+        "hash": "fb32f6c6",
+        "ms": "7541",
+        "pending": "0",
+        "renders": "26",
+        "cancels": "13",
+        "discarded": "12",
+        "cx": "-12288",
+        "cy": "0",
+        "step": "153",
+        "limit": "128",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "33",
+        "running": "0",
+        "wall_us": "7541364",
+        "cpu_us": "0",
+        "arm_us_est": "2896189",
+        "transfer_us": "96186",
+        "colour_us": "40113",
+        "draw_us": "695182",
+        "roundtrip_us": "7286242",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    },
+    {
+      "label": "Overlapped ARM render",
+      "state": {
+        "ok": "1",
+        "mode": "ARM",
+        "running": "0",
+        "gen": "34",
+        "tiles": "150",
+        "hash": "fb32f6c6",
+        "ms": "7591",
+        "pending": "0",
+        "renders": "27",
+        "cancels": "13",
+        "discarded": "12",
+        "cx": "-12288",
+        "cy": "0",
+        "step": "153",
+        "limit": "128",
+        "hidden": "0",
+        "depth": "0",
+        "error": "0"
+      },
+      "metrics": {
+        "ok": "1",
+        "mode": "ARM",
+        "gen": "34",
+        "running": "0",
+        "wall_us": "7591885",
+        "cpu_us": "0",
+        "arm_us_est": "2900714",
+        "transfer_us": "97047",
+        "colour_us": "38513",
+        "draw_us": "718190",
+        "roundtrip_us": "7336456",
+        "rate": "333326829",
+        "calibration_span_us": "1014070",
+        "uncertainty_us": "485",
+        "control": "00000001"
+      },
+      "all_76800_pixels_match": true
+    }
+  ],
+  "preflight": "Amiga alive - clients: 1, chip: 2022856 bytes, fast: 609820392 bytes",
+  "screen_16": "Screens (2):\n\n  SDL ZZFractal temporary RTG test  640x480  8bpp  LORES  @9489F08\n  Workbench Screen  1920x800  8bpp  LORES  @8989DA0",
+  "pixel_readback_16": {
+    "ok": "1",
+    "samples": "475",
+    "mismatches": "0",
+    "max_delta": "7",
+    "tolerance": "8",
+    "storage": "16"
+  },
+  "screen_windows_16": "Windows on screen @9489F08 (1):\n\n  SDL ZZFractal 0.2  pos=(100,100)  size=408x367  @921A9C4",
+  "screenshot_16": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_hc7ws8u2.ppm (640x480, RLE, 480 rows received)",
+  "screen_32": "Screens (2):\n\n  SDL ZZFractal temporary RTG test  640x480  8bpp  LORES  @9489F08\n  Workbench Screen  1920x800  8bpp  LORES  @8989DA0",
+  "pixel_readback_32": {
+    "ok": "1",
+    "samples": "475",
+    "mismatches": "0",
+    "max_delta": "0",
+    "tolerance": "0",
+    "storage": "32"
+  },
+  "screen_windows_32": "Windows on screen @9489F08 (1):\n\n  SDL ZZFractal 0.2  pos=(100,100)  size=408x367  @921A9C4",
+  "screenshot_32": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_6gvgs0nq.ppm (640x480, RLE, 480 rows received)",
+  "covered_screenshot": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_atdy3m4o.ppm (1920x800, RLE, 800 rows received)",
+  "final_screenshot": "Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_mhrgxwai.ppm (1920x800, RLE, 800 rows received)",
+  "clean_exit": true,
+  "read_retries": [
+    {
+      "path": "RAM:SixiesDev/sdl-fractal-counts.bin",
+      "offset": 43008,
+      "response": {
+        "error": "No response"
+      }
+    }
+  ],
+  "postflight": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 613175392 bytes"
+}
