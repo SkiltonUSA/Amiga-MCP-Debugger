@@ -15,7 +15,7 @@ SDK=ROOT/"amiga/arm_debug"
 OUT=ROOT/".context/amiga/arm-debug/zz9000"
 
 
-def unpack_elf(data):
+def unpack_elf(data, image_limit=0x8000):
     """Accept one bounded ARM load segment and only local RELATIVE relocations."""
     if data[:6]!=b"\x7fELF\x01\x01" or struct.unpack_from("<H",data,18)[0]!=40:
         raise ValueError("Expected ELF32 little-endian ARM")
@@ -27,7 +27,7 @@ def unpack_elf(data):
         if p[0]==1:segments.append(p)
     if len(segments)!=1:raise ValueError("Exactly one owned image segment required")
     _,off,addr,_,filesz,memsz,_,_=segments[0]
-    if addr or not 0<memsz<0x8000 or filesz>memsz or off+filesz>len(data) or entry>=memsz:
+    if addr or not 0<memsz<image_limit or filesz>memsz or off+filesz>len(data) or entry>=memsz:
         raise ValueError("Invalid image bounds")
     image=bytearray(data[off:off+filesz])+bytearray(memsz-filesz)
     rel=[]

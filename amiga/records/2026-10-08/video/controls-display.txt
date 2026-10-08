@@ -1,0 +1,16 @@
+amiga_arm_read_memory {
+  "region": 0,
+  "offset": 0,
+  "size": 64,
+  "hex": "000000125a56503186d48226000000010000000f00000140000000f000000019000000010004b00002870f30000000000000000065ef171d000000004ffa5ac3",
+  "byte_order": "raw application bytes; ARM scalar data is normally little-endian"
+}
+amiga_arm_detach {
+  "detached": true,
+  "state": "running",
+  "instruction_stepping": false
+}
+amiga_call_hook [ok] ok=1 loaded=1 playing=0 eof=0 frame=15 pending=0 retries=0 error=0 hash=529a1629
+amiga_screenshot Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_2uns7mzy.ppm (408x325, RLE, 325 rows received)
+amiga_call_hook [ok] ok=1 loaded=1 playing=0 eof=0 frame=15 pending=0 retries=0 error=0 hash=529a1629
+amiga_call_hook [ok] ok=1 loaded=1 playing=0 eof=0 frame=15 pending=0 retries=0 error=0 hash=529a1629

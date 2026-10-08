@@ -5,13 +5,58 @@ the durable handoff for the development setup and installations in this branch.
 The user requested this GitHub backup. It preserves source, configuration and
 evidence; it is not a backup of the Amiga's disks or installed commercial games.
 
+## Latest video application (2026-10-08)
+
+ZZVideo 0.1 is installed in `SD032G:Dev/ZZVideo-0.1/` with a native Workbench
+icon (stack 131072), `demo.mpg` and readme/licenses. Executable: 1,168,048 bytes,
+MD5 `770252ca2ff01ff1489ee33825afee1d`, SHA-256
+`b9736ffee80a4b47a1b7322314093e6fe61b6c302fab8dad3abe5bb59d0542b3`.
+**All video test applications and the previously open fractal have been closed.**
+Re-enumerate windows/owner port before another Core1 launch.
+
+This is the user's standalone-first decoding milestone for a minimal YouTube
+client: ARM Core1 MPEG-1 video decoding and colour conversion, 68k SDL2 UI.
+It needs no Mac or bridge for local playback. It does not yet retrieve YouTube,
+stream, play audio or decode H.264/MP4. Files must be <=4 MiB, fixed dimensions
+aligned to 16 pixels and <=320x240. Whole-file buffering and an Exec-owned 8 MiB
+ZZ9000 allocation use the same runtime mapping and safe return proof as fractal.
+Core0, firmware, drivers, startup, MMU and cache policy were unchanged.
+
+Physical acceptance: 75 developer frames and 25 installed standalone frames
+matched the native decoder hashes, all with Core1 identity, mapping PASS, RET1
+and exit0/free verified. A separate initial standalone run is retained as
+historical evidence. Single-run playback was about 6.8 fps at 160x128 and 2.1 fps
+at 320x240; these are a baseline, not realtime playback. ASL file selection,
+Workbench launch, EOF, replay, pause, S stop, Space resume, Q and quitting a
+paused ARM debugger passed. A screenshot confirms visible colour video.
+A synthetic activation click reopened ASL unexpectedly; Cancel then Q closed
+cleanly. Prefer keyboard controls on an already focused SDL window.
+
+Local tests: six video tests (ASan decoder/FFmpeg comparison, container bounds,
+heap failure, replay and stale shared-data rejection), 23 ARM tests, existing
+fractal/compute tests and 138-tool MCP smoke; ARM/68k and existing launcher /
+native-fractal builds passed. Decoder source and port changes are in
+`amiga/video/` and `scripts/video_vendor.py`; details and reviewed repositories
+(AmiTube, XACP MPEG, SDL2_sound, SDL3, mpega.library) are in
+[video development](amiga-video-client.md). Evidence:
+`amiga/records/2026-10-08/video/`. The unchanged SDL2 SDK 0.2.0 is statically linked.
+
+Bridge postflight was healthy with no video/fractal window, client or owner
+port. The temporary Mac HTTP staging server on 55932 is stopped. RAM:ZZVideo
+contains the temporary test inputs/scripts/logs and can be discarded after review.
+
+A ZIP preview is generated under `.context/amiga/video/dist/`; it has not been
+published as a GitHub release. `scripts/package_zzvideo.py` recreates it from
+the standalone build, native icons and an explicit generated demo clip.
+
 ## Latest SDL application (2026-10-08)
 
 **SDL ZZFractal 0.3** is installed in `SD032G:Dev/SDLZZFractal-0.3/`, alongside
 0.2, with native icons and stack 131072. The 1,156,000-byte executable has
 MD5 `69257b060f68f6709eb8b7b0ba1470f7` and SHA-256
 `533b2ee03a8fcc07933202766ca345b7438c9d8386521b784407a39d4b965b87`.
-It is currently left running from Workbench at (680,300) with a complete default ARM image.
+It was left running from Workbench at (680,300) with a complete default ARM image,
+and was subsequently closed for the video work recorded above.
 It registers **no bridge client**: zero clients does not establish Core1 idle.
 Check window `SDL ZZFractal 0.3`, the app task and `Sixies.ARM.Debug.Owner`;
 quit with Q before another ARM app. Re-enumerate live state on the next task.

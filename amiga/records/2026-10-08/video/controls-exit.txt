@@ -1,0 +1,5 @@
+amiga_call_hook [ok] ok=1 loaded=1 playing=1 eof=0 frame=47 pending=163 retries=1 error=0 hash=be04fe1b
+amiga_input_key Key 40 down
+amiga_input_key Key 40 up
+amiga_arm_pause Error executing tool amiga_arm_pause: Attach to this instrumented client first
+amiga_call_hook [ok] ok=1 loaded=1 playing=0 eof=0 frame=48 pending=0 retries=1 error=0 hash=5d2943e1

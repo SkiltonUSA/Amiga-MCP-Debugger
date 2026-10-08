@@ -1,0 +1,8 @@
+amiga_run_script [OK]
+836e9db3eb425b08ac6acbba4f521310  RAM:ZZVideo/zzvideo-debug
+1d4560fc60d7c9fcea6e3783412de2c8  RAM:ZZVideo/small.mpg
+54bfb06d8ee4361b59b48ba55e862855  RAM:ZZVideo/bframes.mpg
+7b07dafaab772917442c1ac0da1b2d9d  RAM:ZZVideo/ntsc.mpg
+7e29e9c63ea00207e4499465b451e777  RAM:ZZVideo/run-small
+19887c61b9ecaff126fb079302ed573f  RAM:ZZVideo/run-bframes
+f4e08eefc483d237f19776a97bf8e0c8  RAM:ZZVideo/run-ntsc

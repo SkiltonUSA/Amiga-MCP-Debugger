@@ -1,0 +1,3 @@
+amiga_run_script [OK]
+770252ca2ff01ff1489ee33825afee1d  RAM:ZZVideo/ZZVideo
+770252ca2ff01ff1489ee33825afee1d  SD032G:Dev/ZZVideo-0.1/ZZVideo

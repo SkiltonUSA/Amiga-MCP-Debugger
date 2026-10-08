@@ -43,3 +43,12 @@ Setup pins upstream [Amiga DevBench](https://github.com/geekychris/amiga_mcp) an
 Read [debugger architecture and acceptance](docs/amiga-arm-debugging.md), [hardware session memory](docs/amiga-session-memory.md), and [Amiga development setup](docs/development-amiga.md). Historical paths or Sixies names in these records retain their original context.
 
 This repository preserves project-owned source, dependency pins, build instructions and selected system evidence. Vendor components retain their own licenses and are fetched separately. No blanket license is asserted over third-party records or components.
+
+
+## Standalone ARM video preview
+
+ZZVideo 0.1 decodes MPEG-1 video on physical ZZ9000 Core1, with a minimal
+68k SDL2 interface. The installed A4000TX copy and 100 reference frame hashes
+passed. Current playback is about 6.8 fps at 160x128 and 2.1 fps at 320x240;
+this is a decoding foundation, with YouTube retrieval, streaming, audio and
+H.264 still pending. [Development and build guide](docs/amiga-video-client.md).

@@ -13,5 +13,5 @@ SECTIONS {
   .rel.dyn : { *(.rel.dyn) } :image
   .bss : { *(.bss*) *(COMMON) } :image
   /DISCARD/ : { *(.ARM.exidx*) *(.ARM.extab*) *(.comment) }
-  ASSERT(. < 0x8000, "ARM image overlaps private control block")
+  ASSERT(. < (DEFINED(ZZ_IMAGE_LIMIT) ? ZZ_IMAGE_LIMIT : 0x8000), "ARM image overlaps private control block")
 }

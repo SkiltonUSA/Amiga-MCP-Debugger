@@ -1,0 +1,4 @@
+amiga_run_script [OK]
+79f1921ddb13c59b386ca6afd5bb3d7e  RAM:ZZVideo/ZZVideo
+e88314f072780d557c33c79e76a1e35e  RAM:ZZVideo/run-release
+fc7e56222d22b4bcca7fdc52737db4c3  RAM:ZZVideo/make-video-icons

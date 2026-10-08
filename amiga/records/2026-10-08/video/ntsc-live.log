@@ -1,0 +1,37 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=8388608 nonce=86d4925e
+BOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+CLOCK estimated_hz=338045295 interval_ms=203
+INPUT path=RAM:ZZVideo/ntsc.mpg bytes=61440 hash=1643375e
+OPEN width=160 height=128 fps=30000/1001
+FRAME 1 hash=edb3c81c ticks=0:020dda09 retries=0
+FRAME 2 hash=f6c77fe5 ticks=0:00f3749e retries=0
+FRAME 3 hash=7c7625de ticks=0:00e06b68 retries=0
+FRAME 4 hash=8f3139d6 ticks=0:0117505d retries=0
+FRAME 5 hash=003b142a ticks=0:00f2f977 retries=0
+FRAME 6 hash=165b3205 ticks=0:00e24c8d retries=0
+FRAME 7 hash=bc88397e ticks=0:00fb5ed1 retries=0
+FRAME 8 hash=f62b8e57 ticks=0:00ed0466 retries=0
+FRAME 9 hash=329c95f3 ticks=0:00e70bdd retries=0
+FRAME 10 hash=3d2b5d2b ticks=0:014da4c1 retries=0
+FRAME 11 hash=15983e82 ticks=0:00ef6451 retries=0
+FRAME 12 hash=cccb5d55 ticks=0:00f02ccb retries=0
+FRAME 13 hash=37f451c4 ticks=0:0118b6f8 retries=0
+FRAME 14 hash=c8f93285 ticks=0:00ed0615 retries=0
+FRAME 15 hash=a9da76f4 ticks=0:00e65f3b retries=0
+FRAME 16 hash=4b1cc5b8 ticks=0:00f532fd retries=0
+FRAME 17 hash=d971cf4b ticks=0:00ddebe2 retries=0
+FRAME 18 hash=9f593c6b ticks=0:00e5715f retries=0
+FRAME 19 hash=9eb97dfa ticks=0:0120360f retries=0
+FRAME 20 hash=56e377c1 ticks=0:00e7a7c8 retries=0
+FRAME 21 hash=c1ff53b3 ticks=0:00e37349 retries=0
+FRAME 22 hash=5bb7255e ticks=0:0151f9d7 retries=0
+FRAME 23 hash=f8cbe6c4 ticks=0:00f5ca09 retries=0
+FRAME 24 hash=4844286c ticks=0:00f8dca8 retries=0
+FRAME 25 hash=a7556cf3 ticks=0:004bd8d1 retries=0
+EOF frames=25 elapsed_ms=3681 decode_ticks=0:18e76c60 draw_ms=585 retries=0 clock_hz=338045295
+VIDEO exit=0 frames=25
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+LAUNCHER exit=0; owned memory released

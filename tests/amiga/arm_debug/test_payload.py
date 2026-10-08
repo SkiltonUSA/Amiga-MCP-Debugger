@@ -37,3 +37,13 @@ class PayloadTests(unittest.TestCase):
         for info in (2,28,0x117):
             data=fixture();struct.pack_into("<I",data,164,info)
             with self.assertRaises(ValueError):build.unpack_elf(data)
+
+    def test_explicit_larger_image_keeps_default_and_relocation_bounds(self):
+        data=fixture();struct.pack_into("<I",data,52+20,0xa000)
+        with self.assertRaises(ValueError):build.unpack_elf(data)
+        image,rel,entry=build.unpack_elf(data,image_limit=0x10000)
+        self.assertEqual((len(image),rel,entry),(0xa000,[0],0))
+        struct.pack_into("<I",data,160,0xa000)
+        with self.assertRaises(ValueError):build.unpack_elf(data,image_limit=0x10000)
+        data=fixture();struct.pack_into("<I",data,52+20,0x10000)
+        with self.assertRaises(ValueError):build.unpack_elf(data,image_limit=0x10000)

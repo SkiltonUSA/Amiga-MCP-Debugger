@@ -289,3 +289,12 @@ nonexistent interface, duplicate watcher/start suppression, watcher stop/start,
 and automatic bridge relaunch/reconnection after a graceful Ctrl-C were tested.
 A cold boot and a complete Roadie offline/online cycle require separate
 acceptance; the live restart test does not establish either.
+
+
+## ARM video / minimal YouTube client
+
+The standalone-first MPEG-1 milestone is documented in
+[amiga-video-client.md](amiga-video-client.md). Sources: `amiga/video/`; build:
+`scripts/build_zzvideo.py`; tests: `make test-amiga-video` (requires FFmpeg).
+It reuses the proven XX19c owned allocation/launcher and fixed SDL2 SDK. Local
+playback is verified; YouTube retrieval, streaming, audio and H.264 are pending.

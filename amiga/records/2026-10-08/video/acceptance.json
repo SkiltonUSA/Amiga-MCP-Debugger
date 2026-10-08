@@ -1,0 +1,52 @@
+{
+  "physical_hardware": "A4000TX / ZZ9000 XX19c / XACP 1.7",
+  "date": "2026-10-08",
+  "runs": [
+    {
+      "run": "small",
+      "frames": 25,
+      "elapsed_ms": 3687,
+      "observed_fps": 6.780580417683754,
+      "checksum_rechecks": 1,
+      "decoded_hashes_match": true,
+      "clean_firmware_return": true,
+      "build_file": "zzvideo-debug-build.json"
+    },
+    {
+      "run": "bframes",
+      "frames": 25,
+      "elapsed_ms": 11805,
+      "observed_fps": 2.117746717492588,
+      "checksum_rechecks": 0,
+      "decoded_hashes_match": true,
+      "clean_firmware_return": true,
+      "build_file": "zzvideo-debug-build.json"
+    },
+    {
+      "run": "ntsc",
+      "frames": 25,
+      "elapsed_ms": 3681,
+      "observed_fps": 6.7916327085031245,
+      "checksum_rechecks": 0,
+      "decoded_hashes_match": true,
+      "clean_firmware_return": true,
+      "build_file": "zzvideo-debug-build.json"
+    },
+    {
+      "run": "release",
+      "frames": 25,
+      "elapsed_ms": 11844,
+      "observed_fps": 2.110773387369132,
+      "checksum_rechecks": 0,
+      "decoded_hashes_match": true,
+      "clean_firmware_return": true,
+      "build_file": "ZZVideo-build.json"
+    }
+  ],
+  "frames_verified": 100,
+  "caveat": "Single runs; frame hashes validate decoder and transport, not every displayed pixel. Screenshot confirms visible content. No audio or network streaming.",
+  "installed_executable_sha256": "b9736ffee80a4b47a1b7322314093e6fe61b6c302fab8dad3abe5bb59d0542b3",
+  "workbench": "Native icon stack131072, Start requester, ASL select demo, EOF, Cancel and Q verified; app closed afterward.",
+  "controls": "Pause stable at frame15 across screenshot; replay, S stop to frame0, Space resume, cooperative attach/pause/step/read/detach and quit while paused passed.",
+  "limits": "Synthetic activation click reopened ASL; native Cancel then Q closed cleanly. No instruction stepping, audio, streaming or direct YouTube."
+}

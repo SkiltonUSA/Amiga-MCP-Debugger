@@ -1,0 +1,30 @@
+.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/fractal -v
+test_exact_fixed_point_shortcut_preserves_limit_count (test_fractal.FractalTests.test_exact_fixed_point_shortcut_preserves_limit_count) ... ok
+test_reference_views_and_extreme_coordinates (test_fractal.FractalTests.test_reference_views_and_extreme_coordinates) ... ok
+test_reject_invalid_jobs (test_fractal.FractalTests.test_reject_invalid_jobs) ... ok
+test_row_slices_preserve_all_checkpoint_boundaries (test_fractal.FractalTests.test_row_slices_preserve_all_checkpoint_boundaries) ... ok
+test_valid_extremes_under_undefined_behavior_sanitizer (test_fractal.FractalTests.test_valid_extremes_under_undefined_behavior_sanitizer) ... ok
+test_worker_wire_cancel_while_paused_and_relaunch (test_fractal.FractalTests.test_worker_wire_cancel_while_paused_and_relaunch) ... ok
+test_zero_budget_and_finite_precision_zoom (test_fractal.FractalTests.test_zero_budget_and_finite_precision_zoom) ... ok
+test_exact_payloads_no_stale_output_and_repeatable_zip (test_package.PackageTests.test_exact_payloads_no_stale_output_and_repeatable_zip) ... ok
+test_icon_stack_and_type_required (test_package.PackageTests.test_icon_stack_and_type_required) ... ok
+test_refuses_debug_build_and_mismatched_executable (test_package.PackageTests.test_refuses_debug_build_and_mismatched_executable) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.046s
+
+OK
+.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/sdl_fractal -v
+test_bounds_and_sequence_exhaustion (test_compute.ComputeTests.test_bounds_and_sequence_exhaustion) ... ok
+test_mismatched_generation_is_fatal (test_compute.ComputeTests.test_mismatched_generation_is_fatal) ... ok
+test_old_data_and_checksum_do_not_validate_new_request (test_compute.ComputeTests.test_old_data_and_checksum_do_not_validate_new_request) ... ok
+test_persistent_corruption_fails_closed (test_compute.ComputeTests.test_persistent_corruption_fails_closed) ... ok
+test_timeout_preserves_owned_request_until_shutdown (test_compute.ComputeTests.test_timeout_preserves_owned_request_until_shutdown) ... ok
+test_timing_metadata_is_covered_by_integrity (test_compute.ComputeTests.test_timing_metadata_is_covered_by_integrity) ... ok
+test_visibility_recheck_keeps_request_owned (test_compute.ComputeTests.test_visibility_recheck_keeps_request_owned) ... ok
+test_worker_transfer_cancel_drain_and_clock (test_compute.ComputeTests.test_worker_transfer_cancel_drain_and_clock) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.704s
+
+OK

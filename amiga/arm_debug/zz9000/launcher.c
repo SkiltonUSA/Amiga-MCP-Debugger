@@ -23,13 +23,20 @@
 #include "bridge_client.h"
 #endif
 #include "zz_payload.h"
+#if defined(ZZ_FRACTAL) || defined(ZZ_VIDEO)
+#define ZZ_APPLICATION
+#endif
+#ifdef ZZ_VIDEO
+int zv_arguments(int,char **);
+#define ff_window zv_window
+#endif
 #ifndef ZZ_APP_NAME
 #define ZZ_APP_NAME "ZZFractal"
 #define ZZ_APP_VERSION "0.1"
 #define ZZ_CLIENT_NAME "zzfractal"
 #define ZZ_MIN_STACK 32768
 #endif
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
 int ff_window(volatile uint8_t *,const struct ad_io *,int);
 const char zz_version[]="\0$VER: " ZZ_APP_NAME " " ZZ_APP_VERSION " (08.10.2026)";
 #ifdef ZZ_RELEASE
@@ -127,38 +134,51 @@ int main(int argc,char **argv)
 {
     struct ConfigDev *gfx=0,*ram=0;struct MsgPort *owner=0;
     UBYTE *mem=0;ULONG arm=0,nonce,i,echoes=0;
-#ifndef ZZ_FRACTAL
+#ifndef ZZ_APPLICATION
     ULONG tick,challenge=0;
 #endif
-    char *end;const char *mode="RUN";int rc=20,connected=0,launched=0,stopping=0;
+    #ifndef ZZ_VIDEO
+    char *end;
+    #endif
+    const char *mode="RUN";int rc=20,connected=0,launched=0,stopping=0;
 #ifndef ZZ_RELEASE
     int bound=0;
 #endif
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
     const char *failure="Could not open the required system libraries.";
 #endif
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
+    #ifdef ZZ_VIDEO
+    if(zv_arguments(argc,argv))return 20;
+    {
+    #else
     if(argc<=1) {
+    #endif
         struct DateStamp stamp;
         DateStamp(&stamp);
         nonce=((ULONG)stamp.ds_Days*4320000u+(ULONG)stamp.ds_Minute*3000u+(ULONG)stamp.ds_Tick)^(ULONG)FindTask(NULL);
         if(!nonce)nonce=1;
-    } else {
+    }
+#ifndef ZZ_VIDEO
+    else {
 #endif
+#endif
+#ifndef ZZ_VIDEO
     if(argc!=3 || (strcmp(argv[2],"MAP")&&strcmp(argv[2],"RUN"))) {
         puts("Usage: zzarm-debug <fresh-hex-session> MAP|RUN (XX19c, Core1 idle required)");return 20;
     }
     errno=0;nonce=strtoul(argv[1],&end,16);
     if(errno||!nonce||*end||end==argv[1]||argv[1][0]=='-')return 20;
     mode=argv[2];
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
     }
 #endif
+    #endif /* !ZZ_VIDEO: explicit debugger CLI */
     ExpansionBase=(struct ExpansionBase *)OpenLibrary("expansion.library",0);
     IntuitionBase=(struct IntuitionBase *)OpenLibrary("intuition.library",0);
     P96Base=OpenLibrary("Picasso96API.library",2);
     if(!ExpansionBase||!IntuitionBase||!P96Base)goto done;
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
     failure="Start with the supplied icon, or set an adequate Shell stack (131072 for SDL).";
     if((ULONG)FindTask(NULL)->tc_SPUpper-(ULONG)FindTask(NULL)->tc_SPLower<ZZ_MIN_STACK)goto done;
     failure="Requires a Zorro III ZZ9000 with its 256 MB Fast RAM enabled.";
@@ -174,15 +194,15 @@ int main(int argc,char **argv)
         if(!EasyRequestArgs(NULL,&request,NULL,NULL)){rc=0;goto done;}
     }
 #endif
-#ifdef ZZ_FRACTAL
-    failure="Another ZZFractal or ARM debugger instance is already running.";
+#ifdef ZZ_APPLICATION
+    failure="Another application using the ARM owner port is already running.";
 #endif
     owner=CreateMsgPort();if(!owner)goto done;
     owner->mp_Node.ln_Name="Sixies.ARM.Debug.Owner";
     Forbid();
     if(FindPort(owner->mp_Node.ln_Name)){Permit();DeleteMsgPort(owner);owner=0;goto done;}
     AddPort(owner);Permit();
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
     failure="Not enough free ZZ9000 Fast RAM for the ARM worker.";
 #endif
     mem=reserve((ULONG)ram->cd_BoardAddr,(ULONG)ram->cd_BoardAddr+ram->cd_BoardSize);
@@ -192,7 +212,7 @@ int main(int argc,char **argv)
     arm=(ULONG)mem-(ULONG)board+0x1f0000;
     if(arm<0x10000000 || arm+ZZ_BLOCK_SIZE>0x201f0000)goto done;
     printf("OWNED amiga=%08x arm_candidate=%08x size=%u nonce=%08x\n",(ULONG)mem,arm,(ULONG)ZZ_BLOCK_SIZE,nonce);
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
     failure="The ZZ9000 memory mapping or ARM startup check failed.\nThis preview requires the tested XX19c / XACP 1.7 setup.";
 #endif
     if(!mapping_probe(mem,arm,nonce))goto done;
@@ -215,7 +235,7 @@ int main(int argc,char **argv)
     printf("ARM ready=%08x SCTLR=%08x MIDR=%08x MPIDR=%08x\n",ad_get(mem,ZZ_DIAG),
            ad_get(mem,ZZ_DIAG+4),ad_get(mem,ZZ_DIAG+8),ad_get(mem,ZZ_DIAG+12));fflush(stdout);
     if(ad_get(mem,ZZ_DIAG)!=ZZ_READY)goto done;
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
 #ifndef ZZ_RELEASE
     if(!ab_init(ZZ_CLIENT_NAME)) {
         connected=1;
@@ -223,7 +243,7 @@ int main(int argc,char **argv)
         bound=1;
     }
 #endif
-    failure="Fractal frontend or ARM transfer failed. See the CLI log for details.";
+    failure="Application frontend or ARM transfer failed. See the CLI log for details.";
     rc=ff_window(mem,&io,connected);
 #else
     if(ab_init("zzarm-debug"))goto done;
@@ -267,7 +287,7 @@ done:
     }
     if(mem)FreeMem(mem,ZZ_BLOCK_SIZE);
     if(owner){RemPort(owner);DeleteMsgPort(owner);}
-#ifdef ZZ_FRACTAL
+#ifdef ZZ_APPLICATION
     if(rc) {
         printf("%s: %s\n",ZZ_APP_NAME,failure);
         if(argc==0 && IntuitionBase) {

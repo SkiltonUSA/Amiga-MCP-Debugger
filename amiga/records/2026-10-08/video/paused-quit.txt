@@ -1,0 +1,51 @@
+amiga_arm_attach {
+  "session": 2262096243,
+  "build_id": 2399877215,
+  "snapshot_sequence": 120,
+  "state": "running",
+  "reason": "initial",
+  "point": 1,
+  "checkpoint_hits": 56,
+  "command_ack": 0,
+  "command_result": 0,
+  "pause_pending": false,
+  "values": [
+    19,
+    2,
+    15,
+    0
+  ],
+  "breakpoints": [],
+  "region_count": 2,
+  "log_count": 1,
+  "execution": "arm_instrumented",
+  "debug_mode": "cooperative_checkpoints",
+  "instruction_stepping": false,
+  "fault": null
+}
+amiga_arm_pause {
+  "session": 2262096243,
+  "build_id": 2399877215,
+  "snapshot_sequence": 142,
+  "state": "paused",
+  "reason": "pause",
+  "point": 2,
+  "checkpoint_hits": 66,
+  "command_ack": 1,
+  "command_result": 0,
+  "pause_pending": false,
+  "values": [
+    22,
+    2,
+    19,
+    1
+  ],
+  "breakpoints": [],
+  "region_count": 2,
+  "log_count": 1,
+  "execution": "arm_instrumented",
+  "debug_mode": "cooperative_checkpoints",
+  "instruction_stepping": false,
+  "fault": null
+}
+amiga_call_hook [ok] ok=1 loaded=1 playing=1 eof=0 frame=19 pending=23 retries=1 error=0 hash=e6283d7d

@@ -1,0 +1,7 @@
+amiga_call_hook [ok] ok=1 loaded=1 playing=1 eof=0 frame=93 pending=113 retries=1 error=0 hash=099c2763
+amiga_input_mouse_move Mouse moved -4000,-4000
+amiga_input_mouse_move Mouse moved 112,160
+amiga_input_click Button left down
+amiga_input_click Button left up
+amiga_input_key Key 21 down
+amiga_input_key Key 21 up

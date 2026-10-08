@@ -1,8 +1,13 @@
 #ifndef AD_ZZ_LAYOUT_H
 #define AD_ZZ_LAYOUT_H
-/* Offsets inside an Exec-owned 128 KiB allocation, NOT global DDR addresses. */
+/* Offsets inside an Exec-owned allocation, NOT global DDR addresses.
+ * Defaults preserve the 128 KiB debugger/fractal layout. */
+#ifndef ZZ_BLOCK_SIZE
 #define ZZ_BLOCK_SIZE 0x20000
+#endif
+#ifndef ZZ_CONTROL
 #define ZZ_CONTROL 0x8000
+#endif
 #define ZZ_DIAG (ZZ_CONTROL + 64)
 #define ZZ_STOP (ZZ_CONTROL + 128)
 #define ZZ_CHALLENGE (ZZ_CONTROL + 132)

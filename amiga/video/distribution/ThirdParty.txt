@@ -1,0 +1,36 @@
+ZZVideo third-party build/runtime notices
+
+The application and its embedded ARM worker were built specifically for this
+project. No ZZ9000 firmware image, Amiga ROM, Workbench, P96 driver or commercial
+game data is redistributed in this archive.
+
+The Amiga executable is linked using the libnix standard C runtime and the
+Amiga library stubs from the pinned amigadev/crosstools toolchain. It does
+not require an external ixemul.library or libnix4.library.
+
+libnix: Matthias Fleischer, Gunther Nikl, Stefan "Bebbo" Franke and contributors.
+The AmigaPorts libnix project describes this library as public domain:
+https://github.com/AmigaPorts/libnix
+Reference revision: 0a1d18a0938dce3f7a234963bcb7fa6148f6a6f3
+This is an attribution reference, not a claim that the container was built
+from that exact source revision.
+
+GCC runtime support is covered by GNU GPL version 3 with the GCC Runtime
+Library Exception, version 3.1. Copies are included as COPYING3 and
+COPYING.RUNTIME. See https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html
+
+Compiler image:
+docker.io/amigadev/crosstools@sha256:93ca1a47903b61873f6638881b44f9f2d6086a39f1b9b916a26faff3a8ea4d3d
+
+This standalone release omits AmigaBridge client code. The separate developer
+build uses that project's MIT-licensed client and retains its own notices.
+The play-button icons are original artwork; the demo is an FFmpeg test pattern.
+
+SDL2 is statically linked from this repository. The SDL and Amiga port
+zlib licence and original source notices apply; see LICENSE-SDL.txt.
+
+Video decoder: PL_MPEG, Dominic Szablewski (MIT).
+https://github.com/phoboslab/pl_mpeg
+See LICENSE-MIT.txt. Original source is pinned in amiga/video/vendor/upstream.json.
+The port fixes fixed-buffer replay, final B-sequence reference drain and
+allocation checks, and omits unused floating-point timestamps.

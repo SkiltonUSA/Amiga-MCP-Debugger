@@ -1,0 +1,5 @@
+amiga_run_script [OK]
+SD032G:Dev/ZZVideo-0.1.info type=2 stack=131072 image=48x32 verified=1
+SD032G:Dev/ZZVideo-0.1/ZZVideo.info type=3 stack=131072 image=48x32 verified=1
+79f1921ddb13c59b386ca6afd5bb3d7e  SD032G:Dev/ZZVideo-0.1/ZZVideo
+595784296095775c8e792247f0420d37  SD032G:Dev/ZZVideo-0.1/demo.mpg

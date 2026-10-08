@@ -1,0 +1,21 @@
+amiga_list_gadgets Gadgets (18):
+
+  ID=0  pos=(-17,-9)  size=18x10  type=32789  text=n/a  @915ABC4
+  ID=0  pos=(-22,0)  size=24x11  type=32837  text=n/a  @915AC3C
+  ID=0  pos=(-45,0)  size=24x11  type=32869  text=n/a  @915ACB4
+  ID=0  pos=(0,0)  size=20x11  type=32901  text=n/a  @915BAFC
+  ID=0  pos=(0,0)  size=0x10  type=32805  text=n/a  @915BB74
+  ID=0  pos=(0,0)  size=0x0  type=256  text=n/a  @916836C
+  ID=1  pos=(8,507)  size=68x14  type=257  text=n/a  @91684FC
+  ID=6  pos=(300,507)  size=68x14  type=257  text=n/a  @9168564
+  ID=5  pos=(592,507)  size=68x14  type=257  text=n/a  @916B12C
+  ID=2  pos=(884,507)  size=68x14  type=257  text=n/a  @916B194
+  ID=12  pos=(94,460)  size=852x8  type=260  text=Pattern  @9394A04
+  ID=13  pos=(94,476)  size=852x8  type=260  text=Drawer  @93A6DB4
+  ID=14  pos=(94,492)  size=852x8  type=260  text=File  @951FB6C
+  ID=15  pos=(938,15)  size=10x402  type=259  text=n/a  @917033C
+  ID=15  pos=(934,419)  size=18x18  type=257  text=n/a  @91CCD1C
+  ID=15  pos=(934,437)  size=18x18  type=257  text=n/a  @91CCDDC
+  ID=15  pos=(934,13)  size=18x442  type=256  text=n/a  @91CCC74
+  ID=16  pos=(8,13)  size=926x442  type=257  text=n/a  @91CCEE4
+amiga_screenshot Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_eqa5fzkm.ppm (960x533, RLE, 533 rows received)

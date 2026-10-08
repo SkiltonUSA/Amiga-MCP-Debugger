@@ -1,0 +1,6 @@
+{
+  "generator": "FFmpeg git-2024-06-22-0c0e7ec-avbuild",
+  "command": "ffmpeg -f lavfi -i testsrc2=size=320x240:rate=25 -frames:v 100 -c:v mpeg1video -q:v 5 -g 12 -bf 2 -an -f mpeg demo.mpg",
+  "sha256": "2d98b25c41ad6f3ff94cae2165e10dec93dc5e5d2c801f8c3aa300a95de1c228",
+  "bytes": 507904
+}
