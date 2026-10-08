@@ -125,7 +125,7 @@ changes; RAM-resident probes and logs disappear on reboot.
 ## Dedicated SDL2 source and SDK release
 
 The patched library now lives in
-[SDL2-AmigaOS3](https://github.com/SkiltonUSA/SDL2-AmigaOS3), a separate private
+[SDL2-AmigaOS3](https://github.com/SkiltonUSA/SDL2-AmigaOS3), a separate public
 repository containing a pinned upstream library-source snapshot, the exact
 patch, attribution, build wrapper, documentation and acceptance evidence.
 [Preview v0.1.0](https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.1.0)

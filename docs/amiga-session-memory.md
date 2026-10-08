@@ -75,7 +75,7 @@ evidence; it is not a backup of the Amiga's disks or installed commercial games.
   changes. The previously open standalone ZZFractal was closed for testing.
   Reproduction: `docs/amiga-sdl2-probe.md`; source: `amiga/sdl_probe/`;
   evidence: `amiga/records/2026-10-08/sdl-probe/`.
-- SDL2 now has a dedicated private source/SDK repository:
+- SDL2 now has a dedicated public source/SDK repository:
   https://github.com/SkiltonUSA/SDL2-AmigaOS3 and preview release
   https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.1.0.
   It contains the pinned upstream library source, exact two-file patch,

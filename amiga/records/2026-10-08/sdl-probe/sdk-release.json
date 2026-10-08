@@ -3,7 +3,7 @@
   "tag": "v0.1.0",
   "target_commit": "7f9b775356429027d6cc9e28688eb0fac6fe30f2",
   "is_prerelease": true,
-  "repository_private": true,
+  "repository_private": false,
   "assets": [
     {
       "name": "SDL2-AmigaOS3-0.1.0-sdk.tar.gz",
