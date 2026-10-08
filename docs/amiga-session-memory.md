@@ -85,6 +85,7 @@ Forces installations later that day.
 
 | Component | Recorded state |
 | --- | --- |
+| KickSmash32 | Installed, owner-confirmed 2026-10-08; board revision, firmware, selected ROM bank and USB connection unverified |
 | AGA | PAL Alice R2, Lisa; exact physical chip markings unverified |
 | ZZ9000 | Zorro III, Zynq XC7Z020 dual Cortex-A9, nominal 666 MHz; 1 GB onboard DDR3 per specification |
 | ZZ9000 firmware | **XX19c / XACP 1.7**, activated after power cycle, handshake and subsequent ARM application execution verified |
@@ -98,6 +99,15 @@ Forces installations later that day.
 | Freeway Triton Lite | Poseidon 4.5, supplied freewaytritonz3usb.device 1.01; three-port root hub reported |
 | AHI | ahi.device 4.180 (68060), paula.audio 4.23; ZZ9000AX driver installed |
 | MIDI | CAMD 37.14, internal serial enabled, `out.0`; intended Roland MT-32 disconnected |
+
+KickSmash32 was reported by the owner after the 2026-10-07 inventory; the
+historical HTML/PDF audit does not include that confirmation. Upstream reference:
+https://github.com/cdhooper/kicksmash32. It replaces the Kickstart ROMs and
+supports in-system programming with `smash`, host programming over USB-C with
+`hostsmash` (including macOS), up to eight flash banks, and optional host file
+access through `smashfs`/`smashftp`. These are upstream capabilities, not verified
+services on this machine. No KickSmash firmware, ROM bank or utility setup has
+been inspected or changed in response to this hardware note.
 
 AHI saved units 0-3 select Paula Fast 8-bit mono at 8000 Hz. Music Unit 255
 selects ZZ9000AX 16-bit stereo at 32000 Hz. These preferences do not establish
