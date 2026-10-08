@@ -1,0 +1,66 @@
+; $Date: 2020-09-05 12:00:00 $ $Revision: 47.1 $
+; User-startup for hard drive systems
+;
+;+-------------------------------------------------------------------+
+;| This is the User-startup script. Here you can write down the      |
+;| names of the programs you wish to have automatically run every    |
+;| time your machine boots.                                          |
+;|                                                                   |
+;| Lines starting with the ";" symbol are ignored and used as        |
+;| comments.                                                         | 
+;+-------------------------------------------------------------------+
+;
+;BEGIN Picasso96
+Assign Picasso96: "SYS:Picasso96"
+;END Picasso96
+;BEGIN FastIEEE
+;System:C/FastIEEE
+;END FastIEEE
+;BEGIN Roadshow
+If EXISTS S:Network-Startup
+  Execute S:Network-Startup
+EndIf
+;END Roadshow
+;BEGIN AmiSSL
+Assign AmiSSL: "SYS:AmiSSL"
+If Exists AmiSSL:Libs
+  Assign LIBS: AmiSSL:Libs ADD
+EndIf
+Path AmiSSL: ADD
+;END AmiSSL
+;BEGIN MUI
+if exists "System:MUI"
+   assign MUI: "System:MUI"
+   if exists MUI:Libs
+      assign add LIBS: MUI:Libs
+   endif
+   if exists MUI:Locale
+      assign add LOCALE: MUI:Locale
+   endif
+   version >nil: exec.library 39
+   if not warn
+      if exists MUI:Docs
+         if exists HELP:dummy ; do not remove
+         endif                ; this entry!
+         assign add HELP: MUI:Docs
+      endif
+   endif
+endif
+;END MUI
+;BEGIN Optional 
+Run <>NIL: SYS:C/TitleShadow
+Run <>NIL: SYS:C/MagicMenu
+Run <>NIL: SYS:C/StikyRMB
+;END
+
+;BEGIN Poseidon
+IF EXISTS ENVARC:PsdStackloader
+  ENVARC:PsdStackloader
+ENDIF
+;END Poseidon
+
+;BEGIN AmigaBridge AutoStart
+IF EXISTS S:Start-Amiga-Bridge-Auto
+  Execute S:Start-Amiga-Bridge-Auto
+ENDIF
+;END AmigaBridge AutoStart

@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/SkiltonUSA/Sixies_Development",
+  "branch": "SkiltonUSA/amiga-development-environment",
+  "base_commit": "824f13a7db0eb98b82b8ef4e1a891db9386227d2",
+  "includes_uncommitted_debugger_work": true,
+  "date": "2026-10-08"
+}

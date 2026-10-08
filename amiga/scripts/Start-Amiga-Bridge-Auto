@@ -1,0 +1,5 @@
+; Start one background watcher; repeat calls are harmless.
+IF EXISTS "C:bridge-netwatch"
+  Stack 32768
+  Run >NIL: <NIL: "C:bridge-netwatch" WATCH
+ENDIF

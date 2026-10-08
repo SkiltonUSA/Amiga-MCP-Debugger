@@ -1,0 +1,36 @@
+{
+  "application": "ZZBenchGUI v1.3",
+  "source_revision": "8bb998e4f9cac88d519ccdf3559c8a404fb6381d",
+  "binary_sha256": "ab3b63db6963c352c4429d6e6848bdd2e5453c685e2eff205c99172632ceeb30",
+  "installed_path": "SD032G:Drivers/XACP/ZZBench/ZZBenchGUI_v1.3",
+  "integer_MIPS": {
+    "68060": 53.36,
+    "ARM_Core1": 1061.77,
+    "reported_ratio": 19.89
+  },
+  "floating_point_MWIPS": {
+    "68060": 42.77,
+    "ARM_Core1": 917.31,
+    "reported_ratio": 21.44
+  },
+  "xacp_latency_us": {
+    "raw": 3,
+    "verified": 3,
+    "guarded": 9
+  },
+  "xacp_dispatch": "OK (status=3, error=0): expected reserved-opcode response",
+  "bandwidth_MB_s": {
+    "chip_read": 4.4,
+    "chip_write": 5.7,
+    "fast_read": 34.3,
+    "fast_write": 33.6,
+    "zorro_read": 6.7,
+    "zorro_write": 7.0
+  },
+  "limitation": "ARM DDR read/write/copy all displayed 0.0 MB/s; cause unknown, this subtest is not validated",
+  "screenshots": [
+    "zzbench-results.png",
+    "zzbench-results-lower.png"
+  ],
+  "validation": "ARM Core1 CPU execution and XACP command dispatch confirmed; source-level debugging not tested"
+}

@@ -1,0 +1,105 @@
+@@SYS:Libs/68060.library
+68060.library 47.2 (07/06/2022)
+(c) 1999-2022 The MMU.lib development group, THOR
+@@SYS:Libs/disassembler.library
+disassembler.library 40.9 (01/24/2021)
+(c) 1999-2018 The MMU.lib development group, THOR
+@@SYS:Libs/memory.library
+memory.library 40.1 (01/29/2002)
+© THOR
+@@SYS:Libs/mmu.library
+mmu.library 47.10 (08/26/2025)
+(c) 1999-2025 The MMU.lib development group, THOR
+@@SYS:Libs/Picasso96API.library
+Picasso96API.library 2.455 (07/29/2023)
+©2023 iComp
+@@SYS:Libs/bsdsocket.library
+bsdsocket.library 4.364 (09/01/2023)
+Roadshow 1.15 68020+ version
+@@SYS:Libs/usergroup.library
+usergroup.library 4.31 (08/13/2023)
+@@SYS:Libs/camd.library
+camd.library 37.14 (04/01/1993)
+@@SYS:Libs/icon.library
+icon.library 51.4.600
+(TC020)
+@@SYS:Libs/mpega.library
+mpega.library 2.4 (09/13/1999)
+[68040/60+FPU] MPEG Audio decoding library (C)1997-1999 Stephane TAVENARD
+@@SYS:Libs/ttf.library
+ttf.library 0.8.5.060 (07/05/2002)
+@@SYS:Libs/reqtools.library
+reqtools.library 38.1210 (01/30/1994)
+@@SYS:Libs/codesets.library
+codesets.library 6.22 (02/26/2024)
+Copyright (C) 2005-2021 codesets.library Open Source Team [OS3/m68k]
+@@SYS:Libs/screennotify.library
+screennotify.library 1.0 (03/26/1995)
+@@SYS:Libs/wizard.library
+wizard.library 42.100 (04/20/2000)
+(20-Apr-00)
+@@SYS:Libs/ab3zlib.library
+ab3zlib.library 1.0
+(03/30/2016)
+@@SYS:Libs/poseidon.library
+poseidon 4.5 (10/14/2014)
+© 2002-2014 by Chris Hodges
+@@SYS:Libs/workbench.library
+workbench.library 47.33 (03/31/2021)
+@@SYS:Libs/icon.library.old47
+icon.library 47.4 (07/16/2020)
+@@SYS:Libs/bullet.library
+bullet.library 46.4 (11/12/2019)
+@@SYS:Libs/commodities.library
+commodities.library 45.2 (09/20/2018)
+@@SYS:Libs/diskfont.library
+diskfont.library 47.1 (06/29/2020)
+@@SYS:Libs/iffparse.library
+iffparse.library 45.3 (09/18/2018)
+@@SYS:Libs/locale.library
+locale.library 47.26 (04/11/2021)
+@@SYS:Libs/mathieeedoubbas.library
+mathieeedoubbas.library 47.2 (04/27/2020)
+@@SYS:Libs/mathieeedoubtrans.library
+mathieeedoubtrans.library 47.2 (08/24/2020)
+@@SYS:Libs/mathieeesingtrans.library
+mathieeesingtrans.library 45.11 (05/06/2018)
+@@SYS:Libs/mathtrans.library
+mathtrans.library 47.1 (02/13/2020)
+@@SYS:Libs/rexxsupport.library
+rexxsupport.library 34.1 (12/26/2019)
+@@SYS:Libs/rexxsyslib.library
+rexxsyslib.library 47.2 (08/19/2019)
+@@SYS:Libs/amigaguide.library
+amigaguide.library 45.5 (01/31/2021)
+@@SYS:Libs/datatypes.library
+datatypes.library 47.3 (03/26/2021)
+@@SYS:Libs/version.library
+version.library 47.2 (04/10/2021)
+@@SYS:Libs/asl.library
+asl 47.9 (03/31/2021)
+@@SYS:Libs/old-intuition.library
+intuition.library 40.87 (09/09/2018)
+@@SYS:Libs/boards.library
+boards.library 3.55  (01/24/2021)
+(24-Jan-2021) maintained by Marcus Gerards (marcus.gerards@gmail.com)
+@@SYS:Libs/realtime.library
+realtime.library 40.3 (08/24/2020)
+@@SYS:Libs/lowlevel.library
+lowlevel.library 47.1 (07/28/2019)
+@@SYS:Libs/nonvolatile.library
+nonvolatile.library 40.36 (09/14/1993)
+@@SYS:Libs/680x0.library
+680x0.library 46.1 (07/04/2016)
+(c) 1999-2016 The MMU.lib development group, THOR
+@@SYS:Libs/68020.library
+68020.library 46.4 (07/23/2017)
+(c) 1999-2016 The MMU.lib development group, THOR
+@@SYS:Tools/HDToolBox
+hdtoolbox 47.10 (11/04/2020)
+@@SYS:Tools/Calculator
+calculator 47.3 (02/20/2020)
+@@SYS:Tools/CMD
+CMD 45.8 (08/22/2019)
+@@SYS:Tools/GraphicDump
+graphicdump 45.1 (02/10/2018)

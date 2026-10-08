@@ -1,0 +1,5 @@
+Local                          Remote                            Rcv.len    Snd.len Status                        
+10.0.0.40:2345                 10.0.0.21:63432                         0          0 Established
+0.0.0.0:2345                   -                                       0          0 Listening for connection
+
+No UDP sockets are currently in use.

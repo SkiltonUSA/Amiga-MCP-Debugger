@@ -1,0 +1,30 @@
+{
+  "amiga_ping": {
+    "error": false,
+    "text": "Amiga alive - clients: 0, chip: 2010088 bytes, fast: 330018624 bytes"
+  },
+  "amiga_capabilities": {
+    "error": false,
+    "text": "Version: AmigaBridge v1.20\nProtocol Level: 1\nMax Line: 8192\nCommands (105): PING, INSPECT, GETVAR, SETVAR, EXEC, LISTCLIENTS, LISTTASKS, LISTLIBS, LISTDEVICES, LISTDEVS, LISTVOLUMES, LISTDIR, READFILE, WRITEFILE, FILEINFO, DELETE, DELETEFILE, MAKEDIR, LAUNCH, DOSCOMMAND, RUN, BREAK, LISTHOOKS, CALLHOOK, LISTMEMREGS, READMEMREG, CLIENTINFO, STOP, SCRIPT, WRITEMEM, SCREENSHOT, PALETTE, SETPALETTE, COPPERLIST, SPRITES, LISTRESOURCES, GETPERF, LASTCRASH, CRASHINIT, CRASHREMOVE, CRASHTEST, MEMMAP, STACKINFO, CHIPREGS, READREGS, SEARCH, LIBINFO, DEVINFO, LIBFUNCS, SNOOPSTART, SNOOPSTOP, SNOOPSTATUS, AUDIOCHANNELS, AUDIOSAMPLE, LISTSCREENS, LISTWINDOWS, LISTWINDOWS2, LISTGADGETS, WINACTIVATE, WINTOFRONT, WINTOBACK, WINZIP, WINMOVE, WINSIZE, SCRTOFRONT, SCRTOBACK, INPUTKEY, INPUTMOVE, INPUTCLICK, LISTFONTS, FONTINFO, CHIPLOGSTART, CHIPLOGSTOP, CHIPLOGSNAPSHOT, POOLSTART, POOLSTOP, POOLS, CLIPGET, CLIPSET, AREXXPORTS, AREXXSEND, SHUTDOWN, CAPABILITIES, PROCLIST, PROCSTAT, SIGNAL, TAIL, STOPTAIL, CHECKSUM, ASSIGNS, ASSIGN, PROTECT, RENAME, SETCOMMENT, COPY, APPEND, VERSION, GETENV, SETENV, SETDATE, VOLUMES, PORTS, SYSINFO, UPTIME, REBOOT"
+  },
+  "amiga_sysinfo": {
+    "error": false,
+    "text": "System Information:\n  Exec:     v47.13\n  CPU:      68060\n  Video:    PAL (50Hz)\n  Chip RAM: 2,010,088 / 2,093,056 bytes free\n  Fast RAM: 330,018,624 / 385,875,968 bytes free\n  Total:    332,028,712 / 387,969,024 bytes free"
+  },
+  "amiga_arexx_ports": {
+    "error": false,
+    "text": "Public message ports (15):\n\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  AssignWedge.port\n  NewMeter\n  QDock\n  ROADIE\n  TCP/IP Control\n  IBROWSE\n  ConClip.rendezvous\n  deficons"
+  },
+  "amiga_list_dir": {
+    "error": false,
+    "text": "Directory: RAM: (9 entries)\n  FILE sixies_probe                      32932  \n  FILE probe.rexx                          118  \n  FILE amiga-bridge                     150204  \n  FILE RNOXfer_68k.info                    628  \n  DIR  RNOXfer_68k                           -  \n  DIR  Disk.info                             -  \n  DIR  Clipboards                            -  \n  DIR  T                                     -  \n  DIR  ENV                                   -  "
+  },
+  "amiga_write_file": {
+    "error": false,
+    "text": "Write command sent: RAM:sixies-arexx-check.rexx at offset 0, 118 bytes"
+  },
+  "amiga_arexx_send": {
+    "error": false,
+    "text": "[OK] SIXIES_AREXX_OK"
+  }
+}

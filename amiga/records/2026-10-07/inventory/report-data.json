@@ -1,0 +1,5438 @@
+{
+  "generated_utc": "2026-10-07T20:47:14+00:00",
+  "target": "10.0.0.40",
+  "amiga_clock": "Thursday 09-Oct-25 16:20:43",
+  "hardware": [
+    [
+      "Motherboard",
+      "Amiga A4000TX",
+      "Owner identification; AGA and memory/expansion configuration corroborate it",
+      "PCB revision, assembly date and serial not remotely established"
+    ],
+    [
+      "Accelerator",
+      "Terrible Fire TF4060",
+      "Owner identification; 68060, ehide driver and AutoConfig serial 4060 corroborate",
+      "Board revision, FPGA/CPLD firmware and actual CPU MHz unknown"
+    ],
+    [
+      "Main CPU",
+      "Motorola-compatible 68060, revision 5",
+      "Live CPU and ShowConfig",
+      "Full/LC/EC package marking and mask/date codes require physical inspection"
+    ],
+    [
+      "FPU and MMU",
+      "68060 MMU; FPU capability reported",
+      "Live CPU/Exec capability flags",
+      "OS labels FPU “68882”; this is not evidence of a separate active 68882 chip"
+    ],
+    [
+      "CPU caches",
+      "Instruction cache/burst; data cache/copyback; superscalar, store buffer, branch cache enabled",
+      "Live CPU command",
+      "No clock-changing or cache-changing command run"
+    ],
+    [
+      "AGA Alice",
+      "AGA PAL Alice R2, ID $0023",
+      "Live ShowConfig",
+      "Physical package/date code unknown"
+    ],
+    [
+      "AGA Lisa",
+      "AGA Lisa, ID $00F8",
+      "Live ShowConfig",
+      "No physical package/date-code inspection"
+    ],
+    [
+      "Paula audio/I/O",
+      "Paula audio driver active; native audio.device loaded",
+      "Live OS/driver evidence",
+      "Exact Paula revision/package not read electronically"
+    ],
+    [
+      "CIA A / CIA B",
+      "ciaa.resource and ciab.resource registered",
+      "Live Exec resources",
+      "Resource names confirm OS interfaces; no individual chip date/revision read"
+    ],
+    [
+      "Other motherboard logic",
+      "Buster / Ramsey / Gary and supporting clock, RTC and glue logic",
+      "Expected A4000-class architecture, not individually inventoried",
+      "Exact silicon, revisions, programmable-logic versions and clock oscillator markings unknown"
+    ],
+    [
+      "ZZ9000",
+      "MNT ZZ9000 in Zorro III mode",
+      "Live AutoConfig IDs 28014/4 and 28014/5",
+      "Physical PCB revision and serial unavailable"
+    ],
+    [
+      "ZZ9000 processor/FPGA",
+      "Xilinx Zynq XC7Z020: dual ARM Cortex-A9, nominal 666 MHz; FPGA fabric",
+      "Manufacturer specification; prior ARM Core1 execution verified",
+      "Core count, silicon stepping and physical markings not freshly probed"
+    ],
+    [
+      "ZZ9000 DDR3",
+      "1 GB onboard DDR3 per manufacturer; 256 MiB exposed as Amiga Fast RAM",
+      "Specification plus live RAM AutoConfig",
+      "The remaining DDR is not automatically additional AmigaOS RAM"
+    ],
+    [
+      "Ethernet",
+      "Individual Computers X-Surf 100, ShowConfig identifies Rev 3 ZII/ZIII",
+      "Live AutoConfig and active network driver",
+      "Current device reports 100,000,000 bit/s; PHY/controller chip markings unverified"
+    ],
+    [
+      "IDE controller",
+      "Individual Computers Buddha IDE; buddha.device and 2nd.buddha.device 52.110",
+      "Live AutoConfig, drivers and mounted drives",
+      "Board flash build date and exact PCB revision not obtained"
+    ],
+    [
+      "USB controller",
+      "Freeway Triton Lite (owner model), Zorro III EHCI/PIO driver active",
+      "Live driver/tasks; supplied-driver AutoConfig matching",
+      "Underlying EHCI silicon and FPGA revision not identified"
+    ],
+    [
+      "USB root hub descriptor",
+      "Philips ISP1520, VID 0471, PID 3526; 3 ports",
+      "Live Poseidon descriptors and startup log",
+      "Root-hub identity may be supplied by the driver; not proof of the host-controller chip marking"
+    ],
+    [
+      "Native floppy",
+      "DF0: trackdisk.device unit 0, no disk",
+      "Live mounted device and Info",
+      "Manufacturer/model and DD/HD mechanism not identified"
+    ],
+    [
+      "External MIDI",
+      "Roland MT-32 intended via native serial MIDI adapter",
+      "Owner information; CAMD configuration previously verified",
+      "MT-32 disconnected; no end-to-end physical test"
+    ],
+    [
+      "ZZ9000AX audio add-on",
+      "Driver and audio modes installed; Music Unit preference selects it",
+      "Live files and saved preferences",
+      "Physical daughterboard presence and playback remain unconfirmed"
+    ]
+  ],
+  "memory": [
+    [
+      "Accelerator-range Fast RAM",
+      "$08000000–$17FFFFFF",
+      "256 MiB",
+      40,
+      "$0505",
+      "TF4060 attribution consistent with owner hardware and address map"
+    ],
+    [
+      "Motherboard-range Fast RAM",
+      "$01000000–$07FFFFFF",
+      "112 MiB",
+      30,
+      "$0505",
+      "Motherboard attribution inferred from A4000 address range"
+    ],
+    [
+      "ZZ9000 Fast RAM",
+      "$50000000–$5FFFFFFF",
+      "256 MiB",
+      20,
+      "$0405",
+      "Directly matched to AutoConfig 28014/5"
+    ],
+    [
+      "Chip RAM",
+      "$00001000–$001FFFFF",
+      "2 MiB physical; 2,093,056 bytes reported",
+      -10,
+      "$0703",
+      "First 4 KiB excluded from OS-reported total"
+    ]
+  ],
+  "boards": [
+    [
+      "Probable TF4060 / IDE function; model supplied by owner; serial field 4060 supports attribution",
+      "5080 / 148",
+      "$13D8 / $94",
+      "$00E90000",
+      65536,
+      "c1",
+      "02",
+      "4060"
+    ],
+    [
+      "MNT ZZ9000 graphics / registers",
+      "28014 / 4",
+      "$6D6E / $04",
+      "$40000000",
+      134217728,
+      "9b",
+      "02",
+      "0"
+    ],
+    [
+      "MNT ZZ9000 Fast RAM",
+      "28014 / 5",
+      "$6D6E / $05",
+      "$50000000",
+      268435456,
+      "a4",
+      "0a",
+      "0"
+    ],
+    [
+      "Individual Computers Buddha IDE",
+      "4626 / 0",
+      "$1212 / $00",
+      "$00EA0000",
+      65536,
+      "d1",
+      "02",
+      "6"
+    ],
+    [
+      "Freeway Triton Zorro III USB (ID pair matched in supplied driver)",
+      "5191 / 30",
+      "$1447 / $1E",
+      "$60000000",
+      16777216,
+      "80",
+      "02",
+      "20230604"
+    ],
+    [
+      "Individual Computers X-Surf 100",
+      "4626 / 100",
+      "$1212 / $64",
+      "$64000000",
+      65536,
+      "82",
+      "02",
+      "12"
+    ]
+  ],
+  "physical_drives": [
+    [
+      "buddha.device / 0",
+      "SDCFXS-064G (INQUIRY fields “SDCFXS-0” + “64G”)",
+      "HDX1",
+      "125,059,072 × 512",
+      "64,030,244,864 bytes / 59.6328 GiB",
+      "System: and HDD50Gig:",
+      "CompactFlash; model matches SanDisk Extreme family"
+    ],
+    [
+      "2nd.buddha.device / 0",
+      "FC-1307 / SD to CF Adapter",
+      "“Rev ” (literal truncated field)",
+      "61,022,208 × 512",
+      "31,243,370,496 bytes / 29.0977 GiB",
+      "SD032G:",
+      "SD card behind adapter; underlying SD maker/model/serial not exposed"
+    ]
+  ],
+  "volumes": [
+    [
+      "System:",
+      "BDH0:",
+      "buddha.device / 0",
+      "PFS3 / $50465303",
+      "19.2",
+      3930841,
+      31353,
+      3899488,
+      "validated; 0 errors"
+    ],
+    [
+      "HDD50Gig:",
+      "BDH1:",
+      "buddha.device / 0",
+      "PFS3 / $50465303",
+      "19.2",
+      54676162,
+      10071862,
+      44604300,
+      "validated; 0 errors"
+    ],
+    [
+      "SD032G:",
+      "SDH0:",
+      "2nd.buddha.device / 0",
+      "International FFS / DOS\\3 / $444F5303",
+      "47.4",
+      30509566,
+      2098258,
+      28411308,
+      "validated; 0 errors"
+    ]
+  ],
+  "loaded_entries": [
+    [
+      "LIB",
+      "rexxsyslib.library",
+      "47.2",
+      "10",
+      "0x08777ef4",
+      "516",
+      "256",
+      "0x04",
+      "rexxsyslib 47.2 (19.8.2019)"
+    ],
+    [
+      "LIB",
+      "hid.class",
+      "4.4",
+      "1",
+      "0x088a7898",
+      "80",
+      "3934",
+      "0x04",
+      "hid 4.4 (13.2.10) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "utility.library",
+      "47.3",
+      "107",
+      "0x08000428",
+      "456",
+      "48",
+      "0x04",
+      "utility 47.3 (3.2.2020)"
+    ],
+    [
+      "LIB",
+      "graphics.library",
+      "47.10",
+      "1",
+      "0x0800f940",
+      "1080",
+      "552",
+      "0x04",
+      "graphics 47.10 (31.10.2021)"
+    ],
+    [
+      "LIB",
+      "layers.library",
+      "46.2",
+      "1",
+      "0x08014314",
+      "252",
+      "56",
+      "0x04",
+      "layers 46.2 (18.12.2019)"
+    ],
+    [
+      "LIB",
+      "keymap.library",
+      "47.1",
+      "1",
+      "0x08014828",
+      "48",
+      "158",
+      "0x04",
+      "keymap 47.1 (28.7.2019)"
+    ],
+    [
+      "LIB",
+      "intuition.library",
+      "47.53",
+      "1",
+      "0x080161dc",
+      "1212",
+      "3804",
+      "0x04",
+      "intuition 47.53 (27.11.2024)"
+    ],
+    [
+      "LIB",
+      "dos.library",
+      "47.30",
+      "78",
+      "0x080470d8",
+      "1160",
+      "996",
+      "0x04",
+      ""
+    ],
+    [
+      "LIB",
+      "mmu.library",
+      "47.10",
+      "1",
+      "0x08141ae8",
+      "464",
+      "732",
+      "0x04",
+      "mmu.library 47.10 (26.8.2025) (c) 1999-2025 The MMU.lib development group, THOR"
+    ],
+    [
+      "LIB",
+      "68060.library",
+      "47.2",
+      "1",
+      "0x08047aa0",
+      "224",
+      "194",
+      "0x04",
+      "68060.library 47.2 (6.7.2022) (c) 1999-2022 The MMU.lib development group, THOR"
+    ],
+    [
+      "LIB",
+      "680x0.library",
+      "46.1",
+      "1",
+      "0x08047890",
+      "48",
+      "64",
+      "0x04",
+      "680x0.library 46.1 (04.07.2016) (c) 1999-2016 The MMU.lib development group, THOR"
+    ],
+    [
+      "LIB",
+      "version.library",
+      "47.2",
+      "0",
+      "0x080e2c40",
+      "24",
+      "42",
+      "0x04",
+      "version 47.2 (10.4.2021)"
+    ],
+    [
+      "LIB",
+      "icon.library",
+      "51.4",
+      "15",
+      "0x087710d4",
+      "204",
+      "11024",
+      "0x04",
+      "icon.library 51.4.600 (TC020)"
+    ],
+    [
+      "LIB",
+      "diskfont.library",
+      "47.1",
+      "0",
+      "0x081255e0",
+      "128",
+      "1468",
+      "0x04",
+      "diskfont 47.1 (29.6.2020)"
+    ],
+    [
+      "LIB",
+      "locale.library",
+      "47.26",
+      "0",
+      "0x08123f08",
+      "216",
+      "1316",
+      "0x04",
+      "locale 47.26 (11.4.2021)"
+    ],
+    [
+      "LIB",
+      "iffparse.library",
+      "45.3",
+      "12",
+      "0x08123b10",
+      "272",
+      "52",
+      "0x04",
+      "iffparse 45.3 (18.9.2018)"
+    ],
+    [
+      "LIB",
+      "gadtools.library",
+      "47.17",
+      "18",
+      "0x08361f50",
+      "176",
+      "104",
+      "0x04",
+      "gadtools 47.17 (16.7.2021)"
+    ],
+    [
+      "LIB",
+      "ZZ9000.card",
+      "1.0",
+      "1",
+      "0x08143fd4",
+      "36",
+      "34",
+      "0x04",
+      "$VER ZZ9000.card+blitter 1.13 (04.10.2022)"
+    ],
+    [
+      "LIB",
+      "workbench.library",
+      "47.33",
+      "13",
+      "0x087e8b7c",
+      "140",
+      "6120",
+      "0x04",
+      "workbench.library 47.33 (31.3.2021)"
+    ],
+    [
+      "LIB",
+      "mathieeedoubbas.library",
+      "47.2",
+      "7",
+      "0x08120200",
+      "96",
+      "60",
+      "0x04",
+      ""
+    ],
+    [
+      "LIB",
+      "asl.library",
+      "47.9",
+      "4",
+      "0x0877be0c",
+      "84",
+      "244",
+      "0x04",
+      "asl 47.9 (31.3.2021)"
+    ],
+    [
+      "LIB",
+      "commodities.library",
+      "45.2",
+      "0",
+      "0x087ee41c",
+      "236",
+      "412",
+      "0x04",
+      "commodities 45.2 (20.9.2018)"
+    ],
+    [
+      "LIB",
+      "usergroup.library",
+      "4.31",
+      "1",
+      "0x08867dcc",
+      "260",
+      "34",
+      "0x04",
+      "usergroup.library 4.31 (13.8.2023)"
+    ],
+    [
+      "LIB",
+      "datatypes.library",
+      "47.3",
+      "0",
+      "0x08874258",
+      "320",
+      "576",
+      "0x04",
+      "datatypes.library 47.3 (26.3.2021)"
+    ],
+    [
+      "LIB",
+      "poseidon.library",
+      "4.5",
+      "2",
+      "0x0889f440",
+      "608",
+      "720",
+      "0x04",
+      "poseidon 4.5 (14.10.14) © 2002-2014 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "asixeth.class",
+      "4.5",
+      "1",
+      "0x0889ee30",
+      "80",
+      "600",
+      "0x04",
+      "asixeth 4.5 (12.03.13) © 2007-2013 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "LIB",
+      "camdusbmidi.class",
+      "4.5",
+      "1",
+      "0x088a8c6c",
+      "116",
+      "1588",
+      "0x04",
+      "camdusbmidi 4.5 (14.10.14) © 2006-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "cdcacm.class",
+      "4.5",
+      "1",
+      "0x087ef568",
+      "80",
+      "66",
+      "0x04",
+      "cdcacm 4.5 (3.9.10) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "dm9601eth.class",
+      "4.5",
+      "1",
+      "0x0889ea08",
+      "80",
+      "590",
+      "0x04",
+      "dm9601eth 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "LIB",
+      "egalaxtouch.class",
+      "4.5",
+      "1",
+      "0x0889f760",
+      "80",
+      "408",
+      "0x04",
+      "egalaxtouch 4.5 (14.10.14) © 2004-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "hub.class",
+      "4.5",
+      "1",
+      "0x08867ed8",
+      "80",
+      "108",
+      "0x04",
+      "hub 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "massstorage.class",
+      "4.5",
+      "1",
+      "0x0891a078",
+      "80",
+      "1864",
+      "0x04",
+      "massstorage 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "moschipeth.class",
+      "4.5",
+      "1",
+      "0x088a9650",
+      "80",
+      "588",
+      "0x04",
+      "moschipeth 4.5 (14.10.14) © 2009-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "LIB",
+      "pegasus.class",
+      "4.5",
+      "1",
+      "0x088d2420",
+      "80",
+      "594",
+      "0x04",
+      "pegasus 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "LIB",
+      "printer.class",
+      "4.5",
+      "1",
+      "0x0889f0d8",
+      "80",
+      "136",
+      "0x04",
+      "printer 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "rtl8150eth.class",
+      "4.5",
+      "1",
+      "0x088d26c8",
+      "80",
+      "592",
+      "0x04",
+      "rtl8150eth 4.5 (14.10.14) © 2009-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "LIB",
+      "serialcp210x.class",
+      "4.5",
+      "1",
+      "0x088a9b68",
+      "80",
+      "66",
+      "0x04",
+      "serialcp210x 4.5 (6.11.12) © 2007-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "serialpl2303.class",
+      "4.5",
+      "1",
+      "0x088d29c0",
+      "80",
+      "66",
+      "0x04",
+      "serialpl2303 4.5 (6.11.12) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "usbaudio.audio",
+      "4.5",
+      "1",
+      "0x0892c8f4",
+      "116",
+      "52",
+      "0x04",
+      "usbaudio 4.5 (14.10.14) © 2008-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "usbaudio.class",
+      "4.5",
+      "1",
+      "0x0892c808",
+      "80",
+      "120",
+      "0x04",
+      "usbaudio 4.5 (14.10.14) © 2008-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "usbvideo.vhi",
+      "1.5",
+      "1",
+      "0x0892ca10",
+      "32",
+      "52",
+      "0x04",
+      "usbvideo 4.5 (23.7.11) © 2009-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "usbvideo.class",
+      "4.5",
+      "1",
+      "0x0892c978",
+      "80",
+      "120",
+      "0x04",
+      "usbvideo 4.5 (23.7.11) © 2009-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "adaptecxchg.class",
+      "4.5",
+      "1",
+      "0x0892ca98",
+      "80",
+      "48",
+      "0x04",
+      "adaptecxchg 4.5 (5.7.13) © 2013 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "bootkeyboard.class",
+      "4.5",
+      "1",
+      "0x089326c0",
+      "80",
+      "150",
+      "0x04",
+      "bootkeyboard 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "bootmouse.class",
+      "4.5",
+      "1",
+      "0x08932838",
+      "80",
+      "248",
+      "0x04",
+      "bootmouse 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "dfu.class",
+      "4.5",
+      "1",
+      "0x0893b098",
+      "80",
+      "48",
+      "0x04",
+      "dfu 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "ethwrap.class",
+      "4.5",
+      "1",
+      "0x0893b1e8",
+      "80",
+      "578",
+      "0x04",
+      "ethwrap 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "LIB",
+      "ptp.class",
+      "4.5",
+      "1",
+      "0x08949558",
+      "80",
+      "2232",
+      "0x04",
+      "ptp 4.5 (14.10.14) © 2008-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "simplemidi.class",
+      "4.5",
+      "1",
+      "0x0893f460",
+      "80",
+      "126",
+      "0x04",
+      "simplemidi 4.5 (14.10.14) © 2005-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "rawwrap.class",
+      "4.5",
+      "1",
+      "0x0893f5e0",
+      "80",
+      "380",
+      "0x04",
+      "rawwrap 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "LIB",
+      "picture.datatype",
+      "47.5",
+      "2",
+      "0x08f451e4",
+      "36",
+      "388",
+      "0x04",
+      "picture.datatype 47.5 (22.5.2020)"
+    ],
+    [
+      "LIB",
+      "png.datatype",
+      "47.3",
+      "1",
+      "0x08f44c80",
+      "32",
+      "72",
+      "0x04",
+      "png.datatype 47.3 (7.5.2020)"
+    ],
+    [
+      "LIB",
+      "screennotify.library",
+      "1.0",
+      "4",
+      "0x08f5e0c4",
+      "60",
+      "410",
+      "0x04",
+      "$VER: screennotify.library 1.0 (26.3.95)"
+    ],
+    [
+      "LIB",
+      "muimaster.library",
+      "19.35",
+      "1",
+      "0x08f4575c",
+      "308",
+      "84",
+      "0x04",
+      "$VER: muimaster.library 19.35 (12.02.97) ©1992-1997 Stefan Stuntz"
+    ],
+    [
+      "LIB",
+      "muigfx.library",
+      "19.9",
+      "1",
+      "0x08f430f4",
+      "228",
+      "84",
+      "0x04",
+      "$VER: muigfx.library 19.9 (12.02.97) ©1992-1997 Stefan Stuntz"
+    ],
+    [
+      "LIB",
+      "muilowlevel.library",
+      "19.9",
+      "4",
+      "0x08f45058",
+      "200",
+      "84",
+      "0x04",
+      "$VER: muilowlevel.library 19.9 (12.02.97) ©1992-1997 Stefan Stuntz"
+    ],
+    [
+      "LIB",
+      "muirexx.library",
+      "19.9",
+      "1",
+      "0x08f4fc90",
+      "80",
+      "84",
+      "0x04",
+      "$VER: muirexx.library 19.9 (12.02.97) ©1992-1997 Stefan Stuntz"
+    ],
+    [
+      "LIB",
+      "bullet.library",
+      "46.4",
+      "0",
+      "0x08f4ff1c",
+      "60",
+      "100",
+      "0x04",
+      "bullet 46.4 (12.11.2019)"
+    ],
+    [
+      "LIB",
+      "mathffp.library",
+      "46.1",
+      "3",
+      "0x08f54690",
+      "96",
+      "38",
+      "0x04",
+      "mathffp 46.1 (4.8.2019)"
+    ],
+    [
+      "LIB",
+      "mathtrans.library",
+      "47.1",
+      "1",
+      "0x08f547c8",
+      "128",
+      "34",
+      "0x04",
+      "mathtrans 47.1 (13.2.2020)"
+    ],
+    [
+      "LIB",
+      "ilbm.datatype",
+      "47.4",
+      "1",
+      "0x08f56738",
+      "32",
+      "122",
+      "0x04",
+      "ilbm.datatype 47.4 (3.3.2021)"
+    ],
+    [
+      "LIB",
+      "mathieeedoubtrans.library",
+      "47.2",
+      "3",
+      "0x08f68818",
+      "128",
+      "64",
+      "0x04",
+      ""
+    ],
+    [
+      "LIB",
+      "wizard.library",
+      "42.100",
+      "1",
+      "0x08f5fd90",
+      "264",
+      "34",
+      "0x04",
+      "$VER: wizard.library 42.100 (20-Apr-00)"
+    ],
+    [
+      "LIB",
+      "ab3zlib.library",
+      "1.0",
+      "1",
+      "0x08f695e0",
+      "264",
+      "38",
+      "0x04",
+      "ab3zlib.library 1.0 (03/30/2016)"
+    ],
+    [
+      "LIB",
+      "mathieeesingbas.library",
+      "47.1",
+      "2",
+      "0x08f69668",
+      "96",
+      "56",
+      "0x04",
+      ""
+    ],
+    [
+      "LIB",
+      "bsdsocket.library",
+      "4.364",
+      "2",
+      "0x087fa82c",
+      "860",
+      "486",
+      "0x04",
+      "bsdsocket.library 4.364 (1.9.2023) Roadshow 1.15 68020+ version"
+    ],
+    [
+      "LIB",
+      "camd.library",
+      "37.14",
+      "0",
+      "0x0908b2f4",
+      "228",
+      "220",
+      "0x04",
+      "camd 37.14 (1.4.93)"
+    ],
+    [
+      "LIB",
+      "paula.audio",
+      "4.23",
+      "1",
+      "0x090303dc",
+      "116",
+      "78",
+      "0x04",
+      "paula.audio 4.23 (06.12.98)"
+    ],
+    [
+      "LIB",
+      "boards.library",
+      "3.55",
+      "0",
+      "0x093e90ac",
+      "60",
+      "34",
+      "0x04",
+      "$VER: boards.library 3.55  (24-Jan-2021) maintained by Marcus Gerards (marcus.gerards@gmail.com)"
+    ],
+    [
+      "LIB",
+      "expansion.library",
+      "47.4",
+      "13",
+      "0x000016cc",
+      "164",
+      "390",
+      "0x04",
+      "expansion 47.4 (1.1.2025)"
+    ],
+    [
+      "LIB",
+      "cybergraphics.library",
+      "42.7",
+      "7",
+      "0x087d0bd8",
+      "240",
+      "8360",
+      "0x04",
+      "cybergraphics.library 42.7 (8.3.02) emulation of original © by phase5 digital products"
+    ],
+    [
+      "LIB",
+      "cgxvideo.library",
+      "42.1",
+      "0",
+      "0x08361d60",
+      "72",
+      "118",
+      "0x04",
+      "cgxvideo.library 42.1 (10.2.00) emulation of original © by phase5 digital products"
+    ],
+    [
+      "LIB",
+      "vilintuisup.library",
+      "2.9",
+      "0",
+      "0x08361e5c",
+      "132",
+      "68",
+      "0x04",
+      "vilintuisup.library"
+    ],
+    [
+      "LIB",
+      "emulation.library",
+      "41.525",
+      "1",
+      "0x081359cc",
+      "332",
+      "68",
+      "0x04",
+      "emulation.library 41.525 (29.7.2023)"
+    ],
+    [
+      "LIB",
+      "Picasso96API.library",
+      "2.455",
+      "1",
+      "0x08f43244",
+      "252",
+      "68",
+      "0x04",
+      "Picasso96API.library 2.455 (29.7.2023)"
+    ],
+    [
+      "LIB",
+      "rtg.library",
+      "43.538",
+      "1",
+      "0x08770adc",
+      "444",
+      "1040",
+      "0x04",
+      "rtg.library 43.538 (29.7.2023)"
+    ],
+    [
+      "LIB",
+      "exec.library",
+      "47.13",
+      "5",
+      "0x080008bc",
+      "906",
+      "632",
+      "0x04",
+      "exec 47.13 (1.1.2025)"
+    ],
+    [
+      "DEV",
+      "gameport.device",
+      "47.1",
+      "1",
+      "0x08014374",
+      "36",
+      "338",
+      "0x04",
+      "gameport 47.1 (4.8.2019)"
+    ],
+    [
+      "DEV",
+      "timer.device",
+      "46.1",
+      "38",
+      "0x0801450c",
+      "68",
+      "380",
+      "0x04",
+      "timer 46.1 (4.8.2019)"
+    ],
+    [
+      "DEV",
+      "keyboard.device",
+      "47.1",
+      "4",
+      "0x080146ac",
+      "36",
+      "326",
+      "0x04",
+      "keyboard 47.1 (28.7.2019)"
+    ],
+    [
+      "DEV",
+      "input.device",
+      "47.1",
+      "9",
+      "0x080148f4",
+      "44",
+      "4825",
+      "0x04",
+      "input 47.1 (21.7.2019)"
+    ],
+    [
+      "DEV",
+      "ramdrive.device",
+      "46.2",
+      "1",
+      "0x08015c00",
+      "48",
+      "96",
+      "0x04",
+      "ramdrive 46.2 (26.12.2019)"
+    ],
+    [
+      "DEV",
+      "trackdisk.device",
+      "47.14",
+      "1",
+      "0x08015c84",
+      "36",
+      "154",
+      "0x04",
+      ""
+    ],
+    [
+      "DEV",
+      "ehide.device",
+      "1.2",
+      "0",
+      "0x0802a9f4",
+      "36",
+      "68",
+      "0x04",
+      "ehide 1.2 (21.4.2024) TF IDE Driver (4ef446b) © 2024 Erik Hemming"
+    ],
+    [
+      "DEV",
+      "zzsd.device",
+      "43.20",
+      "0",
+      "0x0802eb64",
+      "36",
+      "144",
+      "0x04",
+      "zzsd.device 43.20 (12 Apr 2026)"
+    ],
+    [
+      "DEV",
+      "2nd.buddha.device",
+      "52.110",
+      "1",
+      "0x0803284c",
+      "36",
+      "108",
+      "0x04",
+      "Buddha_IDE"
+    ],
+    [
+      "DEV",
+      "buddha.device",
+      "52.110",
+      "2",
+      "0x08034dcc",
+      "36",
+      "108",
+      "0x04",
+      "Buddha_IDE"
+    ],
+    [
+      "DEV",
+      "console.device",
+      "46.1",
+      "4",
+      "0x087ed088",
+      "72",
+      "4774",
+      "0x04",
+      "console 46.1 (4.8.2019)"
+    ],
+    [
+      "DEV",
+      "x-surf-100.device",
+      "1.16",
+      "1",
+      "0x0886f14c",
+      "36",
+      "443",
+      "0x04",
+      "$VER: x-surf-100.device 1.16 (3.9.2018) Copyright © 1999-2000 H. Prüssing, 2007-2018 iComp GmbH"
+    ],
+    [
+      "DEV",
+      "usbasixeth.device",
+      "4.5",
+      "1",
+      "0x087eebb4",
+      "36",
+      "52",
+      "0x04",
+      "asixeth 4.5 (12.03.13) © 2007-2013 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "DEV",
+      "usbmodem.device",
+      "4.5",
+      "1",
+      "0x08778a2c",
+      "36",
+      "52",
+      "0x04",
+      "cdcacm 4.5 (3.9.10) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "DEV",
+      "dm9601eth.device",
+      "4.5",
+      "1",
+      "0x087eeb24",
+      "36",
+      "52",
+      "0x04",
+      "dm9601eth 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "DEV",
+      "usbscsi.device",
+      "4.5",
+      "1",
+      "0x08812cfc",
+      "36",
+      "52",
+      "0x04",
+      "massstorage 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "DEV",
+      "usbmoschipeth.device",
+      "4.5",
+      "1",
+      "0x08812d54",
+      "36",
+      "52",
+      "0x04",
+      "moschipeth 4.5 (14.10.14) © 2009-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "DEV",
+      "usbpegasus.device",
+      "4.5",
+      "1",
+      "0x0889ec7c",
+      "36",
+      "52",
+      "0x04",
+      "pegasus 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "DEV",
+      "usbparallel.device",
+      "4.5",
+      "1",
+      "0x0889ed5c",
+      "36",
+      "52",
+      "0x04",
+      "printer 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "DEV",
+      "rtl8150eth.device",
+      "4.5",
+      "1",
+      "0x0889f184",
+      "36",
+      "52",
+      "0x04",
+      "rtl8150eth 4.5 (14.10.14) © 2009-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "DEV",
+      "serialcp210x.device",
+      "4.5",
+      "1",
+      "0x088d293c",
+      "36",
+      "52",
+      "0x04",
+      "serialcp210x 4.5 (6.11.12) © 2007-2010 by Chris Hodges"
+    ],
+    [
+      "DEV",
+      "serialpl2303.device",
+      "4.5",
+      "1",
+      "0x089228a4",
+      "36",
+      "52",
+      "0x04",
+      "serialpl2303 4.5 (6.11.12) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "DEV",
+      "usbethwrap.device",
+      "4.5",
+      "1",
+      "0x0892cb84",
+      "36",
+      "52",
+      "0x04",
+      "ethwrap 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges"
+    ],
+    [
+      "DEV",
+      "usbraw.device",
+      "4.5",
+      "1",
+      "0x08932a3c",
+      "36",
+      "52",
+      "0x04",
+      "rawwrap 4.5 (14.10.14) © 2002-2010 by Chris Hodges"
+    ],
+    [
+      "DEV",
+      "freewaytritonz3usb.device",
+      "1.1",
+      "1",
+      "0x0894b744",
+      "36",
+      "188",
+      "0x04",
+      "freewaytritonusb 1.01 (2022.05.16) ©2022 by Chris Hodges, adapted by Matthias Hampel"
+    ],
+    [
+      "DEV",
+      "clipboard.device",
+      "45.4",
+      "1",
+      "0x0913ef84",
+      "36",
+      "628",
+      "0x04",
+      "clipboard 45.4 (17.9.2019)"
+    ],
+    [
+      "DEV",
+      "ahi.device",
+      "4.180",
+      "1",
+      "0x0907cce4",
+      "164",
+      "166",
+      "0x04",
+      "ahi.device 4.180 (31.10.97)"
+    ],
+    [
+      "DEV",
+      "audio.device",
+      "47.1",
+      "1",
+      "0x09392e5c",
+      "36",
+      "654",
+      "0x04",
+      "audio 47.1 (4.8.2019)"
+    ]
+  ],
+  "installed_versions": [
+    [
+      "SYS:Prefs/IControl",
+      "icontrol 47.22 (03/24/2021)",
+      "20492",
+      "13-Apr-21",
+      "02:43:18",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Input",
+      "input 47.8 (03/24/2021)",
+      "13744",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Locale",
+      "locale 47.11 (03/24/2021)",
+      "23172",
+      "13-Apr-21",
+      "02:43:19",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/Overscan",
+      "overscan 47.12 (03/24/2021)",
+      "19876",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Palette",
+      "palette 47.21 (03/24/2021)",
+      "28740",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Pointer",
+      "pointer 47.26 (03/24/2021)",
+      "25104",
+      "13-Apr-21",
+      "02:43:19",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/P96Prefs",
+      "p96prefs 47.9 (05/17/2023)",
+      "70856",
+      "29-Jul-23",
+      "14:26:22",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/AHI",
+      "AHI preferences 4.5 (01/05/1998)",
+      "33100",
+      "29-Jan-98",
+      "14:32:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/FullPalette",
+      "FullPalette 40.22 (05/09/1999) | by Massimo Tantignone",
+      "22636",
+      "11-May-99",
+      "12:03:22",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/FPPrefs",
+      "FPPrefs 40.22 (05/09/1999) | by Massimo Tantignone",
+      "6128",
+      "11-May-99",
+      "09:41:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/TitleShadowPrefs",
+      "TitleShadowPrefs 1.0 ©2001 Peter Gordon (09/24/2001)",
+      "34720",
+      "17-Oct-01",
+      "21:31:16",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/GUI",
+      "GUI 41.29 (10/20/2001) | [060 version] by Massimo Tantignone",
+      "119580",
+      "17-Oct-03",
+      "07:43:35",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/MagicMenuPrefs",
+      "MagicMenuPrefs 2.35 (03/19/2002)",
+      "55532",
+      "20-Mar-02",
+      "23:22:02",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/ToolsPrefs",
+      "ToolsPrefs 38.566 (01/30/1994)",
+      "22036",
+      "30-Jan-94",
+      "15:50:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/Trident",
+      "Trident 4.5 (10/14/2014) | © 2002-2014 by Chris Hodges",
+      "94464",
+      "15-Oct-80",
+      "22:40:54",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/MidiPorts",
+      "MIDI Port Prefs 1.0 (07/28/1992)",
+      "15808",
+      "Today",
+      "16:06:31",
+      "----rwed"
+    ],
+    [
+      "SYS:Prefs/Printer",
+      "printer 47.12 (03/24/2021)",
+      "15224",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/PrinterGfx",
+      "printergfx 47.8 (03/24/2021)",
+      "14504",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/PrinterPS",
+      "printerps 47.10 (03/24/2021)",
+      "21660",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/ReAction",
+      "reaction 47.16 (03/24/2021)",
+      "18500",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/ScreenMode",
+      "screenmode 47.11 (03/24/2021)",
+      "24132",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Serial",
+      "serial 47.7 (03/24/2021)",
+      "11492",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Sound",
+      "sound 47.9 (03/24/2021)",
+      "13144",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Time",
+      "time 47.7 (03/24/2021)",
+      "13164",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Asl",
+      "asl 47.6 (03/24/2021)",
+      "12312",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Workbench",
+      "workbench 47.32 (03/24/2021)",
+      "20716",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/WBPattern",
+      "wbpattern 47.17 (04/04/2021)",
+      "21568",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/Font",
+      "font 47.11 (03/24/2021)",
+      "12384",
+      "13-Apr-21",
+      "02:43:18",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Prefs/DefaultIcons",
+      "defaulticons 47.20 (03/24/2021)",
+      "26620",
+      "13-Apr-21",
+      "02:43:18",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Classes/arexx.class",
+      "arexx.class 47.1 (09/07/2019)",
+      "4376",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/requester.class",
+      "requester.class 47.8 (04/22/2020)",
+      "29860",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/window.class",
+      "window.class 47.20 (12/03/2020)",
+      "26704",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/ahi.device",
+      "ahi.device 4.180 (10/31/1997) | ©1994-1997 Martin Blom. 68060 version.",
+      "44856",
+      "04-Nov-97",
+      "22:58:06",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/clipboard.device",
+      "clipboard.device 45.4 (09/17/2019)",
+      "5252",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/mfm.device",
+      "mfm.device 45.4 (07/14/2018)",
+      "6856",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/parallel.device",
+      "parallel.device 45.2 (07/08/2018)",
+      "3760",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/printer.device",
+      "printer.device 47.3 (05/23/2020)",
+      "28532",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/postscript_init.ps",
+      "postscript_init.ps 39.1 (12/31/1992)",
+      "7064",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/serial.device",
+      "serial.device 45.2 (09/12/2018)",
+      "5412",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/system-configuration",
+      "Could not find version information for 'SYS:Devs/system-configuration'",
+      "232",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/trackfile.device",
+      "trackfile.device 2.46 (10/19/2020)",
+      "15420",
+      "13-Apr-21",
+      "02:43:09",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/zzusb.device",
+      "zzusb.device 43.20 | (1 Aug 2021)",
+      "4388",
+      "04-Sep-25",
+      "15:04:25",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Picasso96Settings",
+      "Picasso96Settings V1.1 (21.07.97) ©1996-1997 T.Abt A.Kneer",
+      "2640",
+      "24-Mar-80",
+      "20:26:14",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/68030.library",
+      "68030.library 46.6 (02/18/2021) | (c) 1999-2016 The MMU.lib development group, THOR",
+      "2532",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/68040.library",
+      "68040.library 46.3 (04/30/2017) | (c) 1999-2016 The MMU.lib development group, THOR",
+      "43924",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/68060.library",
+      "68060.library 47.2 (07/06/2022) | (c) 1999-2022 The MMU.lib development group, THOR",
+      "65476",
+      "17-Aug-22",
+      "19:01:26",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/disassembler.library",
+      "disassembler.library 40.9 (01/24/2021) | (c) 1999-2018 The MMU.lib development group, THOR",
+      "17384",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/memory.library",
+      "memory.library 40.1 (01/29/2002) | © THOR",
+      "31144",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/mmu.library",
+      "mmu.library 47.10 (08/26/2025) | (c) 1999-2025 The MMU.lib development group, THOR",
+      "49520",
+      "09-Sep-25",
+      "18:26:32",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/Picasso96API.library",
+      "Picasso96API.library 2.455 (07/29/2023) | ©2023 iComp",
+      "24800",
+      "29-Jul-23",
+      "14:02:20",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/bsdsocket.library",
+      "bsdsocket.library 4.364 (09/01/2023) | Roadshow 1.15 68020+ version",
+      "273668",
+      "11-Sep-23",
+      "18:01:30",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/usergroup.library",
+      "usergroup.library 4.31 (08/13/2023)",
+      "10348",
+      "11-Sep-23",
+      "18:01:30",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/camd.library",
+      "camd.library 37.14 (04/01/1993)",
+      "16744",
+      "01-Jul-97",
+      "23:56:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/icon.library",
+      "icon.library 51.4.600 | (TC020)",
+      "39096",
+      "31-Aug-25",
+      "16:30:00",
+      "--p-rw-d"
+    ],
+    [
+      "SYS:Libs/mpega.library",
+      "mpega.library 2.4 (09/13/1999) | [68040/60+FPU] MPEG Audio decoding library (C)1997-1999 Stephane TAVENARD",
+      "57960",
+      "22-Jan-25",
+      "12:54:50",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/ttf.library",
+      "ttf.library 0.8.5.060 (07/05/2002)",
+      "55408",
+      "04-Jul-02",
+      "18:49:44",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/reqtools.library",
+      "reqtools.library 38.1210 (01/30/1994)",
+      "41728",
+      "30-Jan-94",
+      "17:41:02",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/codesets.library",
+      "codesets.library 6.22 (02/26/2024) | Copyright (C) 2005-2021 codesets.library Open Source Team [OS3/m68k]",
+      "102320",
+      "26-Feb-24",
+      "07:57:12",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/screennotify.library",
+      "screennotify.library 1.0 (03/26/1995)",
+      "2608",
+      "26-Mar-95",
+      "12:06:00",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/wizard.library",
+      "wizard.library 42.100 (04/20/2000) | (20-Apr-00)",
+      "224240",
+      "30-Oct-03",
+      "05:31:26",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/ab3zlib.library",
+      "ab3zlib.library 1.0 | (03/30/2016)",
+      "108716",
+      "30-Oct-03",
+      "05:31:26",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/poseidon.library",
+      "poseidon 4.5 (10/14/2014) | © 2002-2014 by Chris Hodges",
+      "114508",
+      "15-Oct-80",
+      "22:36:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/workbench.library",
+      "workbench.library 47.33 (03/31/2021)",
+      "185296",
+      "13-Apr-21",
+      "02:42:21",
+      "----r---"
+    ],
+    [
+      "SYS:Libs/icon.library.old47",
+      "icon.library 47.4 (07/16/2020)",
+      "35700",
+      "13-Apr-21",
+      "02:42:21",
+      "----r---"
+    ],
+    [
+      "SYS:Libs/bullet.library",
+      "bullet.library 46.4 (11/12/2019)",
+      "25968",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/commodities.library",
+      "commodities.library 45.2 (09/20/2018)",
+      "7836",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/diskfont.library",
+      "diskfont.library 47.1 (06/29/2020)",
+      "19948",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/iffparse.library",
+      "iffparse.library 45.3 (09/18/2018)",
+      "6108",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/locale.library",
+      "locale.library 47.26 (04/11/2021)",
+      "22212",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/mathieeedoubbas.library",
+      "mathieeedoubbas.library 47.2 (04/27/2020)",
+      "3900",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/mathieeedoubtrans.library",
+      "mathieeedoubtrans.library 47.2 (08/24/2020)",
+      "9284",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/mathieeesingtrans.library",
+      "mathieeesingtrans.library 45.11 (05/06/2018)",
+      "7044",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/mathtrans.library",
+      "mathtrans.library 47.1 (02/13/2020)",
+      "2920",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/rexxsupport.library",
+      "rexxsupport.library 34.1 (12/26/2019)",
+      "2584",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/rexxsyslib.library",
+      "rexxsyslib.library 47.2 (08/19/2019)",
+      "35620",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/amigaguide.library",
+      "amigaguide.library 45.5 (01/31/2021)",
+      "21828",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/datatypes.library",
+      "datatypes.library 47.3 (03/26/2021)",
+      "20008",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/version.library",
+      "version.library 47.2 (04/10/2021)",
+      "308",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/asl.library",
+      "asl 47.9 (03/31/2021)",
+      "58140",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/old-intuition.library",
+      "intuition.library 40.87 (09/09/2018)",
+      "114792",
+      "13-Apr-21",
+      "02:43:29",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/boards.library",
+      "boards.library 3.55  (01/24/2021) | (24-Jan-2021) maintained by Marcus Gerards (marcus.gerards@gmail.com)",
+      "28512",
+      "13-Apr-21",
+      "02:43:29",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/realtime.library",
+      "realtime.library 40.3 (08/24/2020)",
+      "3908",
+      "13-Apr-21",
+      "02:43:29",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/lowlevel.library",
+      "lowlevel.library 47.1 (07/28/2019)",
+      "6916",
+      "13-Apr-21",
+      "02:43:29",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/nonvolatile.library",
+      "nonvolatile.library 40.36 (09/14/1993)",
+      "3568",
+      "13-Apr-21",
+      "02:43:29",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/680x0.library",
+      "680x0.library 46.1 (07/04/2016) | (c) 1999-2016 The MMU.lib development group, THOR",
+      "864",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/68020.library",
+      "68020.library 46.4 (07/23/2017) | (c) 1999-2016 The MMU.lib development group, THOR",
+      "2424",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/HDToolBox",
+      "hdtoolbox 47.10 (11/04/2020)",
+      "86004",
+      "13-Apr-21",
+      "02:42:22",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Calculator",
+      "calculator 47.3 (02/20/2020)",
+      "10328",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/CMD",
+      "CMD 45.8 (08/22/2019)",
+      "3996",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/GraphicDump",
+      "graphicdump 45.1 (02/10/2018)",
+      "1324",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/IconEdit",
+      "iconedit 47.10 (01/05/2021)",
+      "43608",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/InitPrinter",
+      "initprinter 45.1 (02/10/2018)",
+      "276",
+      "13-Apr-21",
+      "02:43:18",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Tools/KeyShow",
+      "keyshow 45.2 (06/28/2019)",
+      "6628",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/PrepCard",
+      "prepcard 47.5 (05/24/2020)",
+      "18776",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/PrintFiles",
+      "PrintFiles 45.2 (07/31/2018)",
+      "992",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/ShowConfig",
+      "ShowConfig 47.17 (03/27/2021)",
+      "13400",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/TextEdit",
+      "TextEdit 47.44 (04/04/2021)",
+      "42528",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/HDInstTools",
+      "HDInstTools 6.9 (10/30/1999)",
+      "124000",
+      "30-Oct-99",
+      "18:22:44",
+      "----rwed"
+    ],
+    [
+      "SYS:System/Installer",
+      "Installer 47.19 (03/08/2021)",
+      "107440",
+      "13-Apr-21",
+      "02:42:22",
+      "----rwed"
+    ],
+    [
+      "SYS:System/CLI",
+      "cli 47.2 (12/28/2019)",
+      "1068",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:System/DiskCopy",
+      "diskcopy 47.2 (06/13/2019)",
+      "11268",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:System/FixFonts",
+      "fixfonts 47.1 (09/10/2019)",
+      "1136",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:System/Format",
+      "Format 47.11 (03/08/2021)",
+      "15888",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:System/Help",
+      "Help 47.7 (05/05/2020)",
+      "4202",
+      "13-Apr-21",
+      "02:43:13",
+      "-s--rw-d"
+    ],
+    [
+      "SYS:System/RexxMast",
+      "RexxMast 47.2 (08/05/2019)",
+      "2348",
+      "13-Apr-21",
+      "02:43:13",
+      "----rwed"
+    ],
+    [
+      "SYS:System/Find",
+      "Find 47.17 (02/27/2021)",
+      "10012",
+      "13-Apr-21",
+      "02:43:19",
+      "--p-rwed"
+    ],
+    [
+      "SYS:System/Intellifont",
+      "intellifont 47.11 (08/08/2020)",
+      "54116",
+      "13-Apr-21",
+      "02:43:19",
+      "----rwed"
+    ],
+    [
+      "SYS:System/NoFastMem",
+      "nofastmem 45.1 (04/20/2019)",
+      "480",
+      "13-Apr-21",
+      "02:43:19",
+      "----rwed"
+    ],
+    [
+      "SYS:System/Mounter",
+      "Mounter 47.11 (05/23/2020)",
+      "17456",
+      "13-Apr-21",
+      "02:43:19",
+      "----rwed"
+    ],
+    [
+      "SYS:C/PsdLoadModule",
+      "LoadModule 1.1 (08/21/1997)",
+      "7604",
+      "12-May-02",
+      "21:37:32",
+      "----rwed"
+    ],
+    [
+      "SYS:C/PsdRestart",
+      "psdrestart 1.2 (02/16/2003) | © 2002 by Chris Hodges",
+      "312",
+      "23-Mar-03",
+      "11:37:08",
+      "----rwed"
+    ],
+    [
+      "SYS:C/RocketTool",
+      "RocketTool 1.1 (01/28/2007) | by Chris Hodges <hodges@in.tum.de>",
+      "3832",
+      "25-Mar-07",
+      "16:43:56",
+      "----rwed"
+    ],
+    [
+      "SYS:C/SonixcamTool",
+      "SonixcamTool 1.3 (06/26/2008) | by Chris Hodges <chrisly@platon42.de>",
+      "19488",
+      "29-Jun-08",
+      "23:39:22",
+      "----rwed"
+    ],
+    [
+      "SYS:C/UPSTool",
+      "UPSTool 1.0 (03/20/2007) | by Chris Hodges <chrisly@platon42.de>",
+      "3688",
+      "12-Apr-08",
+      "13:02:36",
+      "----rwed"
+    ],
+    [
+      "SYS:C/bridge-netwatch",
+      "Could not find version information for 'SYS:C/bridge-netwatch'",
+      "61944",
+      "Today",
+      "16:01:18",
+      "----rwed"
+    ],
+    [
+      "SYS:C/DeleteNetRoute",
+      "DeleteNetRoute 4.8 (03/11/2009)",
+      "2076",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ConfigureNetInterface",
+      "ConfigureNetInterface 4.39 (06/10/2019)",
+      "13076",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/CheckRoadshowConfig",
+      "CheckRoadshowConfig 4.17 (10/08/2023)",
+      "29072",
+      "10-Oct-23",
+      "11:15:26",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/arp",
+      "arp 4.8 (05/10/2017)",
+      "17468",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/AddNetRoute",
+      "AddNetRoute 4.8 (03/11/2009)",
+      "3676",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/AddNetInterface",
+      "AddNetInterface 4.62 (08/27/2023)",
+      "19188",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/AddAudioModes",
+      "AddAudioModes 4.2 (03/11/1998)",
+      "3484",
+      "11-Mar-98",
+      "13:33:22",
+      "----rwed"
+    ],
+    [
+      "SYS:C/TitleShadow",
+      "TitleShadow 1.0 (09/24/2001)",
+      "1908",
+      "17-Oct-01",
+      "21:31:16",
+      "----rwed"
+    ],
+    [
+      "SYS:C/GetModeID",
+      "GetModeID 1.5 (10/15/1997)",
+      "1008",
+      "15-Oct-97",
+      "09:11:50",
+      "----rwed"
+    ],
+    [
+      "SYS:C/Kill",
+      "Kill 1.0 (07/09/1995)",
+      "752",
+      "09-Jul-95",
+      "20:05:02",
+      "----rwed"
+    ],
+    [
+      "SYS:C/DeleteLink",
+      "DeleteLink 39.2 (02/18/1998)",
+      "344",
+      "18-Feb-98",
+      "22:13:14",
+      "----rwed"
+    ],
+    [
+      "SYS:C/UnpackILBM",
+      "UnpackILBM 1.2 (08/23/1994)",
+      "4968",
+      "09-Jul-95",
+      "20:10:36",
+      "----rwed"
+    ],
+    [
+      "SYS:C/DIC",
+      "DIC 1.3 (11/22/2022)",
+      "4668",
+      "22-Nov-22",
+      "23:44:04",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Patcher",
+      "Patcher 1.06 (09/23/2004)",
+      "14060",
+      "24-Sep-04",
+      "00:15:44",
+      "----rwed"
+    ],
+    [
+      "SYS:C/RawDIC",
+      "RawDIC 6.1 [build 172] (04/16/2023)",
+      "21612",
+      "16-Apr-23",
+      "23:39:22",
+      "----rwed"
+    ],
+    [
+      "SYS:C/WHDLoad",
+      "WHDLoad 19.1 [build 6907] (12/02/2024)",
+      "156867",
+      "03-Dec-24",
+      "00:53:46",
+      "----rwed"
+    ],
+    [
+      "SYS:C/WHDLoadCD32",
+      "WHDLoadCD32 19.1 [build 6908] (12/02/2024)",
+      "44959",
+      "03-Dec-24",
+      "00:53:46",
+      "----rwed"
+    ],
+    [
+      "SYS:C/unpacker",
+      "Unpacker 1.0 (01/29/2001) | by Thilo Köhler",
+      "35116",
+      "29-Jan-01",
+      "02:20:08",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MagicMenu",
+      "MagicMenu 2.35 (03/20/2002) | 020+/ppc fatbinary",
+      "81936",
+      "20-Mar-02",
+      "12:58:10",
+      "----rwed"
+    ],
+    [
+      "SYS:C/StickyRMB",
+      "StickyRMB 1.7 (11/27/2023) | (c) Thomas Rapp <thomas-rapp@web.de>",
+      "5480",
+      "27-Nov-23",
+      "19:48:48",
+      "----rwed"
+    ],
+    [
+      "SYS:C/drivelight",
+      "DriveLight 2.60 (07/23/2023) | (c) Thomas Rapp <thomas-rapp@web.de>",
+      "12192",
+      "23-Jul-23",
+      "18:42:02",
+      "----rwed"
+    ],
+    [
+      "SYS:C/AddUSBClasses",
+      "AddUSBClasses 1.6 (08/29/2008) | by Chris Hodges <chrisly@platon42.de>",
+      "2596",
+      "08-Aug-09",
+      "02:07:36",
+      "----rwed"
+    ],
+    [
+      "SYS:C/AddUSBHardware",
+      "AddUSBHardware 1.6 (10/16/2005) | by Chris Hodges <chrisly@platon42.de>",
+      "2420",
+      "08-Aug-09",
+      "02:07:36",
+      "----rwed"
+    ],
+    [
+      "SYS:C/DRadioTool",
+      "DRadioTool 1.1 (05/20/2003) | (20-May-03) by Chris Hodges <hodges@in.tum.de>",
+      "3404",
+      "29-May-03",
+      "10:12:38",
+      "----rwed"
+    ],
+    [
+      "SYS:C/PencamTool",
+      "PencamTool 1.7 (06/26/2008) | by Chris Hodges <hodges@in.tum.de>",
+      "17836",
+      "29-Jun-08",
+      "23:39:22",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuMapRom",
+      "MuMapRom 46.6 (07/25/2016) | © THOR",
+      "9700",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/OmniScsiPatch",
+      "MuOmniScsiPatch 40.3 (03/13/2000) | © THOR",
+      "1136",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuProtectModules",
+      "MuProtectModules 45.5 (04/30/2017) | © THOR",
+      "3268",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuRedox",
+      "MuRedox 40.6 (01/25/2021) | © THOR",
+      "10408",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuScan",
+      "MuScan 46.1 (07/02/2016) | © THOR",
+      "2640",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuSetCacheMode",
+      "MuSetCacheMode 40.7 (11/28/1999) | © THOR",
+      "3804",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/lha.run",
+      "Could not find version information for 'SYS:C/lha.run'",
+      "173803",
+      "04-Sep-25",
+      "15:03:43",
+      "----rwed"
+    ],
+    [
+      "SYS:C/lha",
+      "LhA 2.15 68040+  Jan  3 2011",
+      "72608",
+      "03-Jan-11",
+      "16:16:00",
+      "----rwed"
+    ],
+    [
+      "SYS:C/FastIEEE",
+      "FastIEEE 40.2 (08/27/2001) | © THOR and G.Nikl",
+      "3840",
+      "31-Aug-01",
+      "23:10:18",
+      "----rwed"
+    ],
+    [
+      "SYS:C/wget",
+      "wget 1.13 (09/11/2023) | Based upon GNU wget 1.10.1",
+      "258212",
+      "11-Sep-23",
+      "17:56:38",
+      "----rwed"
+    ],
+    [
+      "SYS:C/traceroute",
+      "traceroute 4.10 (05/10/2017)",
+      "17892",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/tcpdump",
+      "tcpdump 1.11 (09/11/2023) | Based upon libpcap 0.8.1 and TCPdump 3.8.1 <www.tcpdump.org>",
+      "665996",
+      "11-Sep-23",
+      "17:56:10",
+      "----rwed"
+    ],
+    [
+      "SYS:C/ShowNetStatus",
+      "ShowNetStatus 4.28 (03/11/2009)",
+      "30504",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/SampleNetSpeed",
+      "SampleNetSpeed 4.5 (11/10/2016)",
+      "8456",
+      "11-Sep-23",
+      "18:01:28",
+      "----rwed"
+    ],
+    [
+      "SYS:C/rsh",
+      "rsh 4.10 (11/29/2019)",
+      "11520",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/RoadshowControl",
+      "RoadshowControl 4.12 (07/25/2023)",
+      "3180",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/RemoveNetInterface",
+      "RemoveNetInterface 4.3 (03/11/2009)",
+      "1280",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ping",
+      "ping 4.13 (05/03/2017)",
+      "20540",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Online",
+      "Online 4.1 (04/29/2017)",
+      "5064",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Offline",
+      "Offline 4.1 (04/29/2017)",
+      "5060",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/NetShutdown",
+      "NetShutdown 4.8 (07/20/2017)",
+      "2280",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/NetLogViewer",
+      "NetLogViewer 4.13 (08/30/2023)",
+      "21616",
+      "11-Sep-23",
+      "18:01:28",
+      "----rwed"
+    ],
+    [
+      "SYS:C/ManageNetInterfaces",
+      "ManageNetInterfaces 4.11 (09/14/2023)",
+      "13204",
+      "14-Sep-23",
+      "12:23:46",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ipnat",
+      "ipnat 4.5 (03/11/2009)",
+      "28860",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ipmon",
+      "ipmon 4.5 (03/11/2009)",
+      "26356",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ipfstat",
+      "ipfstat 4.5 (03/11/2009)",
+      "40088",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ipf",
+      "ipf 4.5 (03/11/2009)",
+      "36708",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/GetNetStatus",
+      "GetNetStatus 4.9 (03/11/2009)",
+      "4156",
+      "11-Sep-23",
+      "18:01:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ftp",
+      "ftp 1.13 (09/02/2023) | Based upon 4.4BSD-Lite2 ftp 8.6",
+      "123276",
+      "11-Sep-23",
+      "18:01:28",
+      "----rwed"
+    ],
+    [
+      "SYS:C/PowManTool",
+      "PowManTool 1.0 (01/03/2008) | by Chris Hodges <chrisly@platon42.de>",
+      "2936",
+      "12-Apr-08",
+      "13:02:36",
+      "----rwed"
+    ],
+    [
+      "SYS:C/PsdDevLister",
+      "PsdDevLister 4.0 (04/07/2008) | by Chris Hodges <chrisly@platon42.de>",
+      "6664",
+      "08-Aug-09",
+      "02:07:36",
+      "----rwed"
+    ],
+    [
+      "SYS:C/PsdErrorlog",
+      "errorlog 4.0 (01/11/2009) | by Chris Hodges <chrisly@platon42.de>",
+      "2172",
+      "08-Aug-09",
+      "02:07:36",
+      "----rwed"
+    ],
+    [
+      "SYS:C/RemRAD",
+      "remrad 47.1 (11/28/2019)",
+      "1180",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Rename",
+      "Rename 47.3 (01/30/2021)",
+      "1084",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/RequestChoice",
+      "requestchoice 45.3 (10/06/2018)",
+      "968",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/RequestFile",
+      "requestfile 45.3 (09/07/2018)",
+      "1748",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Search",
+      "search 47.1 (11/28/2019)",
+      "2656",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/SetClock",
+      "setclock 47.1 (11/28/2019)",
+      "540",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/SetDate",
+      "setdate 47.1 (09/19/2019)",
+      "780",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/SetFont",
+      "setfont 45.1 (04/20/2019)",
+      "996",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/SetKeyboard",
+      "setkeyboard 47.1 (11/28/2019)",
+      "1028",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/SetPatch",
+      "setpatch 47.4 (08/04/2020)",
+      "22640",
+      "13-Apr-21",
+      "02:43:13",
+      "----rwed"
+    ],
+    [
+      "SYS:C/Sort",
+      "sort 46.4 (04/22/2018)",
+      "3484",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Status",
+      "status 47.1 (11/28/2019)",
+      "832",
+      "13-Apr-21",
+      "02:43:14",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Type",
+      "type 47.3 (01/07/2021)",
+      "3308",
+      "13-Apr-21",
+      "02:43:14",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Version",
+      "version 47.3 (01/31/2021)",
+      "4376",
+      "13-Apr-21",
+      "02:43:14",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Wait",
+      "wait 47.1 (11/28/2019)",
+      "976",
+      "13-Apr-21",
+      "02:43:14",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Which",
+      "which 45.2 (12/30/2019)",
+      "928",
+      "13-Apr-21",
+      "02:43:14",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/DAControl",
+      "DAControl 2.34 (01/07/2021)",
+      "23872",
+      "13-Apr-21",
+      "02:43:09",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/DiskDoctor",
+      "DiskDoctor 2.184 (04/09/2021)",
+      "172280",
+      "13-Apr-21",
+      "02:43:09",
+      "----rwed"
+    ],
+    [
+      "SYS:C/Reboot",
+      "reboot 45.1 (11/25/2017)",
+      "296",
+      "13-Apr-21",
+      "02:43:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Edit",
+      "edit 47.1 (11/28/2019)",
+      "13240",
+      "13-Apr-21",
+      "02:43:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/LoadModule",
+      "LoadModule 45.16 (04/25/2020) | © THOR/EV",
+      "11816",
+      "13-Apr-21",
+      "02:43:28",
+      "----r-e-"
+    ],
+    [
+      "SYS:C/DefIcons",
+      "deficons 47.8 (07/16/2020)",
+      "9576",
+      "13-Apr-21",
+      "02:43:28",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/LoadMonDrvs",
+      "LoadMonDrvs 47.2 (02/07/2021)",
+      "2472",
+      "13-Apr-21",
+      "02:43:28",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MD5Sum",
+      "MD5Sum 47.8 (03/05/2021)",
+      "28644",
+      "13-Apr-21",
+      "02:43:28",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MountInfo",
+      "MountInfo 47.2 (08/02/2020)",
+      "8092",
+      "13-Apr-21",
+      "02:43:28",
+      "----rwed"
+    ],
+    [
+      "SYS:C/Group",
+      "group 47.1 (04/11/2020)",
+      "1912",
+      "13-Apr-21",
+      "02:43:28",
+      "----rwed"
+    ],
+    [
+      "SYS:C/Owner",
+      "owner 47.1 (04/11/2020)",
+      "1912",
+      "13-Apr-21",
+      "02:43:28",
+      "----rwed"
+    ],
+    [
+      "SYS:C/FPU",
+      "FPU 40.1 (08/28/1999) | © THOR",
+      "1060",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuFastChip",
+      "MuFastChip 40.3 (04/28/2001) | © THOR",
+      "2080",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuFastRom",
+      "MuFastRom 46.4 (10/23/2016) | © THOR",
+      "3860",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuFastZero",
+      "MuFastZero 40.21 (10/06/2018) | © THOR",
+      "7276",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/MuLockLib",
+      "MuLockLib 40.3 (08/07/1999) | © Gunther Nikl, THOR",
+      "744",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:C/AddBuffers",
+      "addbuffers 47.1 (11/28/2019)",
+      "452",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/AddDataTypes",
+      "adddatatypes 47.2 (02/20/2020)",
+      "4132",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Assign",
+      "Assign 47.5 (01/30/2021)",
+      "3392",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/AssignWedge",
+      "assignwedge 47.14 (03/11/2021)",
+      "2180",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Avail",
+      "avail 47.1 (07/28/2019)",
+      "708",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/BindDrivers",
+      "binddrivers 45.1 (04/12/2019)",
+      "1248",
+      "13-Apr-21",
+      "02:43:13",
+      "----rwed"
+    ],
+    [
+      "SYS:C/Break",
+      "break 47.1 (11/28/2019)",
+      "792",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ChangeTaskPri",
+      "changetaskpri 47.1 (11/28/2019)",
+      "792",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/ConClip",
+      "conclip 47.5 (12/14/2019)",
+      "3804",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Copy",
+      "Copy 47.7 (01/30/2021)",
+      "5812",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/CPU",
+      "cpu 47.1 (10/19/2020)",
+      "4780",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Date",
+      "date 47.2 (12/14/2019)",
+      "1048",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Delete",
+      "delete 47.2 (01/07/2020)",
+      "2120",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Dir",
+      "dir 47.2 (12/19/2019)",
+      "4156",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Ed",
+      "ed 47.2 (05/24/2020)",
+      "24396",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/DiskChange",
+      "diskchange 45.1 (04/13/2019)",
+      "296",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Eval",
+      "Eval 47.2 (01/30/2021)",
+      "2364",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Filenote",
+      "filenote 47.1 (11/28/2019)",
+      "860",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/IconX",
+      "iconx 45.1 (11/18/2017)",
+      "1340",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/WBLoad",
+      "wbload 47.1 (11/28/2019)",
+      "1772",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Info",
+      "Info 45.7 (05/27/2018)",
+      "2552",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Install",
+      "install 47.4 (07/19/2020)",
+      "2264",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/IPrefs",
+      "IPrefs 47.26 (10/30/2020)",
+      "23568",
+      "13-Apr-21",
+      "02:43:13",
+      "----rwed"
+    ],
+    [
+      "SYS:C/Join",
+      "join 47.2 (01/07/2021)",
+      "1228",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/List",
+      "list 47.19 (07/28/2020)",
+      "12268",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/LoadResource",
+      "loadresource 47.2 (05/24/2020)",
+      "4040",
+      "13-Apr-21",
+      "02:43:13",
+      "----rwed"
+    ],
+    [
+      "SYS:C/LoadWB",
+      "loadwb 47.1 (02/01/2020)",
+      "828",
+      "13-Apr-21",
+      "02:43:13",
+      "----rwed"
+    ],
+    [
+      "SYS:C/Lock",
+      "lock 47.1 (11/28/2019)",
+      "512",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/MakeDir",
+      "makedir 47.1 (11/28/2019)",
+      "704",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/MakeLink",
+      "makelink 47.1 (11/28/2019)",
+      "736",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Mount",
+      "mount 47.2 (05/24/2020)",
+      "7024",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Protect",
+      "protect 47.5 (04/11/2020)",
+      "2316",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:C/Relabel",
+      "relabel 47.2 (01/07/2020)",
+      "500",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Utilities/More",
+      "more 47.1 (05/24/2020)",
+      "10236",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Utilities/MultiView",
+      "MultiView 47.14 (01/18/2021)",
+      "32768",
+      "13-Apr-21",
+      "02:43:13",
+      "--p-rwed"
+    ],
+    [
+      "SYS:Utilities/Clock",
+      "clock 47.15 (12/02/2020)",
+      "14752",
+      "13-Apr-21",
+      "02:43:13",
+      "----rwed"
+    ],
+    [
+      "SYS:Utilities/Visage",
+      "Visage 39.22 (10/31/1998)",
+      "129840",
+      "17-Oct-03",
+      "07:41:52",
+      "----rwed"
+    ],
+    [
+      "SYS:L/Aux-Handler",
+      "aux-handler 47.2 (05/12/2019)",
+      "524",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/CrossDOSFileSystem",
+      "crossdos 45.39 (06/18/2020)",
+      "32368",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/CDFileSystem",
+      "CDFileSystem 47.26 (11/24/2020)",
+      "32844",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/Port-Handler",
+      "port-handler 45.4 (08/03/2017)",
+      "4072",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/Queue-Handler",
+      "queue-handler 45.2 (10/15/2017)",
+      "2416",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/FastFileSystem",
+      "fs 47.4 (06/16/2020)",
+      "30532",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/AHI-Handler",
+      "AHI-Handler 4.2 (04/09/1997)",
+      "5568",
+      "04-Nov-97",
+      "22:49:22",
+      "----rwed"
+    ],
+    [
+      "SYS:L/ToolsDaemon-Handler",
+      "ToolsDaemon-handler 37.275 (01/30/1994)",
+      "7748",
+      "30-Jan-94",
+      "15:51:38",
+      "----rwed"
+    ],
+    [
+      "SYS:L/fat95",
+      "fat95 file system 3.18 (03/01/2013) | © Torsten Jager",
+      "26868",
+      "01-Mar-80",
+      "04:19:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuForce",
+      "MuForce 47.1 (03/18/2023) | © THOR",
+      "16872",
+      "18-Mar-23",
+      "17:38:12",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuForce_Window",
+      "Could not find version information for 'SYS:MuTools/MuForce_Window'",
+      "empty",
+      "07-Oct-00",
+      "23:27:18",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuForce_Off",
+      "Could not find version information for 'SYS:MuTools/MuForce_Off'",
+      "empty",
+      "07-Oct-00",
+      "23:27:14",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuSetCacheMode",
+      "MuSetCacheMode 40.7 (11/28/1999) | © THOR",
+      "3804",
+      "03-Feb-01",
+      "18:37:44",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuLink",
+      "MuLink 40.1 (06/17/1999) | © THOR",
+      "7976",
+      "03-Feb-01",
+      "18:37:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuOVLYMGR",
+      "Could not find version information for 'SYS:MuTools/MuOVLYMGR'",
+      "2204",
+      "03-Feb-01",
+      "18:37:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuFastROM",
+      "MuFastRom 46.4 (10/23/2016) | © THOR",
+      "3860",
+      "23-Oct-16",
+      "19:18:44",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuFastZero",
+      "MuFastZero 47.1 (08/31/2025) | © THOR",
+      "8232",
+      "09-Sep-25",
+      "18:29:56",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuMove4K",
+      "MuMove4K 47.1 (03/28/2023) | © THOR",
+      "4088",
+      "28-Mar-23",
+      "17:58:48",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuScan",
+      "MuScan 46.2 (02/05/2023) | © THOR",
+      "2728",
+      "05-Feb-23",
+      "22:05:12",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuGuardianAngel",
+      "MuGuardianAngel 40.52 (03/18/2023) | © THOR",
+      "18012",
+      "18-Mar-23",
+      "17:38:28",
+      "----rwed"
+    ],
+    [
+      "SYS:MuTools/MuGuardianAngel_Off",
+      "Could not find version information for 'SYS:MuTools/MuGuardianAngel_Off'",
+      "empty",
+      "07-Oct-00",
+      "23:27:10",
+      "----rwed"
+    ],
+    [
+      "SYS:AmiSSL/Libs/amisslmaster.library",
+      "amisslmaster.library 5.23 (09/17/2025) | os3-68020 version",
+      "6216",
+      "17-Sep-25",
+      "09:56:32",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muiconfig.library",
+      "muiconfig.library 19.20 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "8272",
+      "12-Feb-97",
+      "19:31:36",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muigfx.library",
+      "muigfx.library 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "27908",
+      "12-Feb-97",
+      "19:31:32",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muihelp.library",
+      "muihelp.library 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "5224",
+      "12-Feb-97",
+      "19:31:32",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muilocale.library",
+      "muilocale.library 19.14 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "12588",
+      "12-Feb-97",
+      "19:31:34",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muilowlevel.library",
+      "muilowlevel.library 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "4172",
+      "12-Feb-97",
+      "19:31:34",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muimaster.library",
+      "muimaster.library 19.35 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "166412",
+      "12-Feb-97",
+      "19:31:32",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muipop.library",
+      "muipop.library 19.10 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "14284",
+      "12-Feb-97",
+      "19:31:34",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muipropg.class",
+      "muipropg.class 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "4572",
+      "12-Feb-97",
+      "19:31:36",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muirexx.library",
+      "muirexx.library 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "5224",
+      "12-Feb-97",
+      "19:31:34",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muiscreen.library",
+      "muiscreen.library 19.12 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "7028",
+      "12-Feb-97",
+      "19:31:32",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muispecial.library",
+      "muispecial.library 19.11 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "3056",
+      "12-Feb-97",
+      "19:31:34",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muiwinborder.class",
+      "muiwinborder.class 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "4428",
+      "12-Feb-97",
+      "19:31:36",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/muiwinscroller.class",
+      "muiwinscroller.class 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "2864",
+      "12-Feb-97",
+      "19:31:36",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/Gadgets/string.gadget",
+      "string.gadget 47.19 (02/15/2021)",
+      "21332",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/texteditor.gadget",
+      "texteditor.gadget 47.51 (04/09/2021)",
+      "53164",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/virtual.gadget",
+      "virtual.gadget 47.4 (06/18/2020)",
+      "12928",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/select.gadget",
+      "select.gadget 40.18 (01/07/2001)",
+      "26868",
+      "21-Jan-01",
+      "10:59:54",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/Gadgets/tapedeck.gadget",
+      "tapedeck.gadget 47.6 (10/31/2020)",
+      "4776",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/gradientslider.gadget",
+      "gradientslider.gadget 47.3 (06/09/2020)",
+      "9524",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/colorwheel.gadget",
+      "colorwheel.gadget 47.3 (10/03/2019)",
+      "13632",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/button.gadget",
+      "button.gadget 47.7 (03/01/2021)",
+      "11160",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/checkbox.gadget",
+      "checkbox.gadget 47.2 (09/02/2019)",
+      "7644",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/chooser.gadget",
+      "chooser.gadget 47.7 (06/09/2020)",
+      "16380",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/clicktab.gadget",
+      "clicktab.gadget 47.13 (04/06/2021)",
+      "18068",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/datebrowser.gadget",
+      "datebrowser.gadget 47.2 (09/02/2019)",
+      "8288",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/fuelgauge.gadget",
+      "fuelgauge.gadget 47.2 (03/31/2020)",
+      "6472",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/getcolor.gadget",
+      "getcolor.gadget 47.5 (06/16/2020)",
+      "18844",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/getfile.gadget",
+      "getfile.gadget 47.2 (10/01/2019)",
+      "7420",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/tabs.gadget",
+      "tabs.gadget 47.2 (09/01/2019)",
+      "5300",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/getfont.gadget",
+      "getfont.gadget 47.1 (09/01/2019)",
+      "5612",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/getscreenmode.gadget",
+      "getscreenmode.gadget 47.2 (09/02/2019)",
+      "5720",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/integer.gadget",
+      "integer.gadget 47.4 (04/11/2020)",
+      "10872",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/layout.gadget",
+      "layout.gadget 47.32 (02/28/2021)",
+      "33716",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/listbrowser.gadget",
+      "listbrowser.gadget 47.24 (04/02/2021)",
+      "46120",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/listview.gadget",
+      "listview.gadget 47.3 (12/29/2019)",
+      "8164",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/palette.gadget",
+      "palette.gadget 47.2 (09/02/2019)",
+      "8648",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/radiobutton.gadget",
+      "radiobutton.gadget 47.3 (07/27/2020)",
+      "7472",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/scroller.gadget",
+      "scroller.gadget 47.20 (03/04/2021)",
+      "14088",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/sketchboard.gadget",
+      "sketchboard.gadget 47.15 (03/11/2021)",
+      "16072",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/slider.gadget",
+      "slider.gadget 47.5 (04/02/2021)",
+      "16712",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/space.gadget",
+      "space.gadget 47.1 (09/01/2019)",
+      "3112",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Gadgets/speedbar.gadget",
+      "speedbar.gadget 47.8 (09/17/2020)",
+      "14592",
+      "13-Apr-21",
+      "02:43:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/picture.datatype",
+      "picture.datatype 47.5 (05/22/2020)",
+      "41480",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/ilbm.datatype",
+      "ilbm.datatype 47.4 (03/03/2021)",
+      "7460",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/text.datatype",
+      "text 47.13 (03/04/2021)",
+      "16240",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/amigaguide.datatype",
+      "amigaguide 47.25 (04/03/2021)",
+      "55352",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/ascii.datatype",
+      "ascii.datatype 47.1 (03/15/2021)",
+      "5468",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/png.datatype",
+      "png.datatype 47.3 (05/07/2020)",
+      "69552",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/acbm.datatype",
+      "acbm.datatype 47.1 (04/08/2020)",
+      "5688",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/aiff.datatype",
+      "aiff.datatype 47.2 (04/03/2021)",
+      "5016",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/gif.datatype",
+      "gif.datatype 47.2 (06/21/2020)",
+      "7236",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/sound.datatype",
+      "sound.datatype 47.6 (11/14/2020)",
+      "10064",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/8svx.datatype",
+      "8svx.datatype 47.1 (03/12/2021)",
+      "2656",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/wav.datatype",
+      "wav.datatype 47.2 (04/03/2021)",
+      "8992",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/anim.datatype",
+      "anim.datatype 47.2 (04/11/2020)",
+      "11160",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/animation.datatype",
+      "animation.datatype 47.11 (11/11/2020)",
+      "21604",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/cdxl.datatype",
+      "cdxl.datatype 47.6 (12/10/2020)",
+      "4804",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/bmp.datatype",
+      "bmp.datatype 47.3 (09/28/2019)",
+      "5852",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/jpeg.datatype",
+      "jpeg.datatype 47.6 (06/21/2020)",
+      "58176",
+      "13-Apr-21",
+      "02:43:28",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/DataTypes/icon.datatype",
+      "icon.datatype 47.3 (06/11/2020)",
+      "6488",
+      "13-Apr-21",
+      "02:43:28",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Images/drawlist.image",
+      "drawlist.image 47.4 (03/07/2020)",
+      "3540",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Images/glyph.image",
+      "glyph.image 47.9 (01/01/2021)",
+      "8500",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Images/label.image",
+      "label.image 47.5 (01/10/2021)",
+      "5236",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Images/led.image",
+      "led.image 47.2 (03/28/2020)",
+      "2788",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Images/penmap.image",
+      "penmap.image 47.4 (04/13/2020)",
+      "5736",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Images/bevel.image",
+      "bevel.image 47.13 (12/22/2020)",
+      "11556",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Images/bitmap.image",
+      "bitmap.image 47.2 (02/07/2021)",
+      "4788",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/Images/boingball.image",
+      "boingball.image 47.3 (01/29/2021)",
+      "5228",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Classes/USB/adaptecxchg.class",
+      "adaptecxchg 4.5 (07/05/2013) | © 2013 by Chris Hodges",
+      "9500",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/asixeth.class",
+      "asixeth 4.5 (03/12/2013) | © 2007-2013 by Harry Sintonen and Chris Hodges",
+      "19720",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/bootkeyboard.class",
+      "bootkeyboard 4.5 (10/14/2014) | © 2002-2010 by Chris Hodges",
+      "8804",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/bootmouse.class",
+      "bootmouse 4.5 (10/14/2014) | © 2002-2010 by Chris Hodges",
+      "7660",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/camdusbmidi.class",
+      "camdusbmidi 4.5 (10/14/2014) | © 2006-2010 by Chris Hodges",
+      "8180",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/cdcacm.class",
+      "cdcacm 4.5 (09/03/2010) | © 2002-2010 by Chris Hodges",
+      "7852",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/dfu.class",
+      "dfu 4.5 (10/14/2014) | © 2002-2010 by Chris Hodges",
+      "9332",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/dm9601eth.class",
+      "dm9601eth 4.5 (10/14/2014) | © 2006-2010 by Harry Sintonen and Chris Hodges",
+      "16216",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/egalaxtouch.class",
+      "egalaxtouch 4.5 (10/14/2014) | © 2004-2010 by Chris Hodges",
+      "11076",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/ethwrap.class",
+      "ethwrap 4.5 (10/14/2014) | © 2006-2010 by Harry Sintonen and Chris Hodges",
+      "13900",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/hid.class",
+      "hid 4.4 (02/13/2010) | © 2002-2010 by Chris Hodges",
+      "142052",
+      "Today",
+      "16:43:05",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/hub.class",
+      "hub 4.5 (10/14/2014) | © 2002-2010 by Chris Hodges",
+      "11172",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/massstorage.class",
+      "massstorage.class 4.5 (10/14/2014) | © 2002-2010 by Chris Hodges",
+      "65788",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/moschipeth.class",
+      "moschipeth 4.5 (10/14/2014) | © 2009-2010 by Harry Sintonen and Chris Hodges",
+      "16180",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/pegasus.class",
+      "pegasus 4.5 (10/14/2014) | © 2006-2010 by Harry Sintonen and Chris Hodges",
+      "17960",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/printer.class",
+      "printer 4.5 (10/14/2014) | © 2002-2010 by Chris Hodges",
+      "9572",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/ptp.class",
+      "ptp 4.5 (10/14/2014) | © 2008-2010 by Chris Hodges",
+      "26940",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/rawwrap.class",
+      "rawwrap 4.5 (10/14/2014) | © 2002-2010 by Chris Hodges",
+      "12644",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/rtl8150eth.class",
+      "rtl8150eth 4.5 (10/14/2014) | © 2009-2010 by Harry Sintonen and Chris Hodges",
+      "16852",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/serialcp210x.class",
+      "serialcp210x 4.5 (11/06/2012) | © 2007-2010 by Chris Hodges",
+      "6524",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/serialpl2303.class",
+      "serialpl2303 4.5 (11/06/2012) | © 2002-2010 by Chris Hodges",
+      "8008",
+      "14-Oct-80",
+      "18:49:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/simplemidi.class",
+      "simplemidi 4.5 (10/14/2014) | © 2005-2010 by Chris Hodges",
+      "6520",
+      "14-Oct-80",
+      "18:50:00",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/usbaudio.class",
+      "usbaudio 4.5 (10/14/2014) | © 2008-2010 by Chris Hodges",
+      "24688",
+      "14-Oct-80",
+      "18:50:00",
+      "----rwed"
+    ],
+    [
+      "SYS:Classes/USB/usbvideo.class",
+      "usbvideo 4.5 (07/23/2011) | © 2009-2010 by Chris Hodges",
+      "16672",
+      "14-Oct-80",
+      "18:50:00",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick40068.A4000.RTB",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick40068.A4000.RTB'",
+      "4976",
+      "20-Mar-18",
+      "21:26:40",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick40068.A4000.PAT",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick40068.A4000.PAT'",
+      "60",
+      "06-Aug-08",
+      "20:54:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick40068.A4000",
+      "fs 40.1 (02/15/1993)",
+      "524288",
+      "07-Sep-23",
+      "18:55:46",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick40068.A1200.RTB",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick40068.A1200.RTB'",
+      "5008",
+      "20-Mar-18",
+      "21:26:40",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick40068.A1200.PAT",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick40068.A1200.PAT'",
+      "44",
+      "06-Aug-08",
+      "20:54:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick40068.A1200",
+      "fs 40.1 (02/15/1993)",
+      "524288",
+      "07-Sep-23",
+      "18:55:46",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick40063.A600.RTB",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick40063.A600.RTB'",
+      "5000",
+      "20-Mar-18",
+      "21:26:40",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick40063.A600",
+      "fs 40.1 (02/15/1993)",
+      "524288",
+      "07-Sep-23",
+      "18:55:46",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick34005.A500.RTB",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick34005.A500.RTB'",
+      "4020",
+      "06-Aug-08",
+      "20:54:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick34005.A500.PAT",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick34005.A500.PAT'",
+      "52",
+      "06-Aug-08",
+      "20:54:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick34005.A500",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick34005.A500'",
+      "262144",
+      "07-Sep-23",
+      "18:55:46",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick33180.A500.RTB",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick33180.A500.RTB'",
+      "3882",
+      "20-Mar-18",
+      "21:26:40",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick33180.A500.PAT",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick33180.A500.PAT'",
+      "52",
+      "06-Aug-08",
+      "20:54:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick33180.A500",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick33180.A500'",
+      "262144",
+      "07-Sep-23",
+      "18:55:46",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick31034.A1000.RTB",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick31034.A1000.RTB'",
+      "3736",
+      "05-Jun-22",
+      "18:17:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Kickstarts/kick31034.A1000",
+      "Could not find version information for 'SYS:Devs/Kickstarts/kick31034.A1000'",
+      "262144",
+      "07-Sep-23",
+      "18:55:46",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Internet/users",
+      "users 1.2 (08/23/2023)",
+      "586",
+      "11-Sep-23",
+      "18:01:36",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/services",
+      "Could not find version information for 'SYS:Devs/Internet/services'",
+      "12813",
+      "11-Sep-23",
+      "18:01:36",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/servers",
+      "servers 1.3 (12/01/2019)",
+      "3576",
+      "11-Sep-23",
+      "18:01:36",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/rpc",
+      "rpc 1.1 (10/24/2010)",
+      "721",
+      "11-Sep-23",
+      "18:01:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/routes",
+      "routes 1.1 (10/24/2010)",
+      "632",
+      "11-Sep-23",
+      "18:01:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/protocols",
+      "Could not find version information for 'SYS:Devs/Internet/protocols'",
+      "3144",
+      "11-Sep-23",
+      "18:01:36",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/networks",
+      "networks 1.1 (10/24/2010)",
+      "296",
+      "11-Sep-23",
+      "18:01:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/name_resolution",
+      "name_resolution 1.2 (03/29/2020)",
+      "2321",
+      "11-Sep-23",
+      "18:01:36",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/hosts",
+      "hosts 1.1 (10/24/2010)",
+      "390",
+      "11-Sep-23",
+      "18:01:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Internet/groups",
+      "groups 1.1 (10/24/2010)",
+      "427",
+      "11-Sep-23",
+      "18:01:38",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Midi/mmp",
+      "MMP - TPP/QP driver for CAMD First beta release.",
+      "3924",
+      "08-Apr-00",
+      "21:39:54",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/USBHardware/freewaytritonz3usb.device",
+      "freewaytritonusb 1.01 (11/12/2021) | ©2022 by Chris Hodges, adapted by Matthias Hampel",
+      "20192",
+      "31-Oct-22",
+      "22:09:16",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Monitors/PAL",
+      "PAL 45.5 (03/26/2018)",
+      "2400",
+      "13-Apr-21",
+      "02:43:28",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Monitors/Native",
+      "Picasso96 43.25 (07/29/2023) | © 2023 iComp",
+      "1640",
+      "29-Jul-23",
+      "13:59:04",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Monitors/ZZ9000",
+      "Picasso96 43.25 (07/29/2023) | © 2023 iComp",
+      "1640",
+      "29-Jul-23",
+      "13:59:04",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/DataTypes/AmigaGuide",
+      "AMIGAGUIDE 40.1 (02/10/1993)",
+      "156",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/FTXT",
+      "FTXT 40.1 (02/10/1993)",
+      "138",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/ILBM",
+      "ILBM 40.1 (02/10/1993)",
+      "138",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/JPEG",
+      "JPEG 47.6 (06/21/2020)",
+      "532",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/PNG",
+      "PNG 47.3 (05/07/2020)",
+      "122",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/8SVX",
+      "8SVX 40.1 (02/10/1993)",
+      "138",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/WAVE",
+      "WAVE 47.1 (05/16/2020)",
+      "140",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/Icon",
+      "ICON 47.1 (05/29/2020)",
+      "166",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/ACBM",
+      "ACBM 47.1 (04/08/2020)",
+      "138",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/AIFF",
+      "AIFF 47.1 (04/15/2020)",
+      "136",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/BMP",
+      "BMP 40.1 (02/10/1993)",
+      "130",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/GIF",
+      "GIF 47.1 (04/15/2020)",
+      "124",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/ANIM",
+      "ANIM 40.1 (03/12/1993)",
+      "138",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DataTypes/CDXL",
+      "CDXL 40.1 (03/12/1993)",
+      "120",
+      "13-Apr-21",
+      "02:43:39",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/DOSDrivers/AUDIO",
+      "AUDIO 1.0 (01/29/1997)",
+      "160",
+      "27-Mar-97",
+      "12:08:50",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/Printers/Generic",
+      "Generic 45.3 (07/31/2018)",
+      "892",
+      "13-Apr-21",
+      "02:43:14",
+      "----rw-d"
+    ],
+    [
+      "SYS:Devs/Networks/x-surf-100.device",
+      "x-surf-100.device 1.16 (09/03/2018) | Copyright © 1999-2000 H. Prüssing, 2007-2018 iComp GmbH",
+      "17388",
+      "07-Jan-19",
+      "21:37:34",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/NetInterfaces/x-surf-100",
+      "ZZ9000Net 1.0 (07/30/2019)",
+      "2005",
+      "17-Oct-03",
+      "06:07:58",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/AHI/ZZ9000AX.audio",
+      "zz9000ax.audio 4.19 (01/03/2023)",
+      "3400",
+      "24-Mar-80",
+      "20:25:04",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/AHI/filesave.audio",
+      "filesave.audio 2.10 (10/25/1998)",
+      "11088",
+      "25-Oct-98",
+      "15:37:54",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/AHI/paula.audio",
+      "paula.audio 4.23 (12/06/1998)",
+      "12796",
+      "06-Dec-98",
+      "12:44:22",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/AudioModes/ZZ9000AX",
+      "Could not find version information for 'SYS:Devs/AudioModes/ZZ9000AX'",
+      "292",
+      "18-Oct-80",
+      "16:47:48",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/AudioModes/FILESAVE",
+      "Could not find version information for 'SYS:Devs/AudioModes/FILESAVE'",
+      "812",
+      "25-Oct-98",
+      "15:39:02",
+      "----rwed"
+    ],
+    [
+      "SYS:Devs/AudioModes/PAULA",
+      "Could not find version information for 'SYS:Devs/AudioModes/PAULA'",
+      "2136",
+      "06-Dec-98",
+      "12:44:36",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/Picasso96/rtg.library",
+      "rtg.library 43.538 (07/29/2023) | ©1991-99 A.Kneer T.Abt, ©2017-2023 icomp",
+      "228056",
+      "29-Jul-23",
+      "13:58:48",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/Picasso96/emulation.library",
+      "emulation.library 41.525 (07/29/2023) | ©2023 iComp",
+      "36812",
+      "29-Jul-23",
+      "14:06:22",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/Picasso96/NCR77C32BLT.chip",
+      "NCR77C32BLT.chip 43.17 (07/29/2023)",
+      "8120",
+      "29-Jul-23",
+      "14:08:42",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/Picasso96/Altais.card",
+      "Altais.card 43.17 (07/29/2023)",
+      "4660",
+      "29-Jul-23",
+      "14:06:24",
+      "----rw-d"
+    ],
+    [
+      "SYS:Libs/Picasso96/ZZ9000.card",
+      "ZZ9000.card 1.13 (10/04/2022)",
+      "11916",
+      "24-Mar-80",
+      "20:18:04",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/MHI/mhizz9000.library",
+      "mhizz9000.library 1.13 (01/03/2023)",
+      "5664",
+      "24-Mar-80",
+      "20:25:42",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/VHI/pencam.vhi",
+      "pencam 1.3 (11/17/2005) | © 2002 by Chris Hodges",
+      "4996",
+      "14-Oct-80",
+      "19:01:52",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/VHI/sonixcam.vhi",
+      "sonixcam 1.0 (01/03/2008) | © 2008 by Chris Hodges",
+      "4420",
+      "14-Oct-80",
+      "19:01:52",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/MMU/ACAInit",
+      "AcaInit 46.3 (02/09/2021) | © THOR",
+      "648",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/MMU/P5Init",
+      "P5Init 46.4 (02/26/2021) | © THOR",
+      "2120",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Libs/MMU/GVPInit",
+      "GVPInit 46.1 (02/26/2021) | © THOR",
+      "328",
+      "13-Apr-21",
+      "02:45:24",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Commodities/Blanker",
+      "blanker 47.6 (08/31/2020)",
+      "10388",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Commodities/CrossDOS",
+      "crossdos 47.6 (08/31/2020)",
+      "9904",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Commodities/Exchange",
+      "Exchange 47.7 (09/02/2020)",
+      "7800",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Commodities/FKey",
+      "fkey 47.7 (08/31/2020)",
+      "10924",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Commodities/NoCapsLock",
+      "nocapslock 47.4 (08/31/2020)",
+      "2436",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Commodities/NumericPad",
+      "numericpad 47.4 (08/31/2020)",
+      "2696",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Commodities/MouseBlanker",
+      "mouseblanker 47.4 (08/31/2020)",
+      "2592",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/Commodities/P96ScreenCx",
+      "P96ScreenCx 42.1 (07/29/2023)",
+      "4656",
+      "29-Jul-23",
+      "14:26:48",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/TextEditFileTypes/Default4Types",
+      "Could not find version information for 'SYS:Tools/TextEditFileTypes/Default4Types'",
+      "18128",
+      "13-Apr-21",
+      "02:43:18",
+      "----rwed"
+    ],
+    [
+      "SYS:Tools/TuneFinderMUI/TuneFinderMUI",
+      "TuneFinder MUI 0.7-beta (04/20/2025)",
+      "127408",
+      "20-Apr-25",
+      "21:17:14",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/Readme",
+      "Could not find version information for 'SYS:System/QDock/Readme'",
+      "861",
+      "30-Oct-03",
+      "05:31:26",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/FileSystem_Trans/DANSK.crossdos",
+      "Could not find version information for 'SYS:L/FileSystem_Trans/DANSK.crossdos'",
+      "512",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/FileSystem_Trans/INTL.crossdos",
+      "Could not find version information for 'SYS:L/FileSystem_Trans/INTL.crossdos'",
+      "512",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:L/FileSystem_Trans/MAC.crossdos",
+      "Could not find version information for 'SYS:L/FileSystem_Trans/MAC.crossdos'",
+      "512",
+      "13-Apr-21",
+      "02:43:19",
+      "----rw-d"
+    ],
+    [
+      "SYS:AmiSSL/Libs/AmiSSL/amissl_v353.library",
+      "amissl_v353.library 5.23 (09/17/2025) | os3-68060 version",
+      "3525784",
+      "17-Sep-25",
+      "09:56:32",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/NListview.mcc",
+      "NListview.mcc 19.102 (08/31/2021) | Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]",
+      "9268",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/NListviews.mcp",
+      "NListviews.mcp 19.98 (08/31/2021) | Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]",
+      "43900",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Numericbutton.mui",
+      "Numericbutton.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "4684",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Palette.mui",
+      "Palette.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "5676",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Penadjust.mui",
+      "Penadjust.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "5524",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Pendisplay.mui",
+      "Pendisplay.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "5460",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Popasl.mui",
+      "Popasl.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "6388",
+      "12-Feb-97",
+      "19:31:44",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Popframe.mui",
+      "Popframe.mui 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "2868",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Popimage.mui",
+      "Popimage.mui 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "2900",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Poppen.mui",
+      "Poppen.mui 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "2860",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Popscreen.mui",
+      "Popscreen.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "2748",
+      "12-Feb-97",
+      "19:31:44",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Scale.mui",
+      "Scale.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "5160",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Scrollgroup.mui",
+      "Scrollgroup.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "3976",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Settings.mui",
+      "Settings.mui 19.18 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "16432",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Settingsgroup.mui",
+      "Settingsgroup.mui 19.15 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "28316",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/StringHistory.mcc",
+      "StringHistory.mcc 11.4 (12/11/2006) | written by Thomas@Igracki.de",
+      "7880",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/TextHistory.mcc",
+      "TextHistory.mcc 11.8 (12/27/2006) | written by Thomas@Igracki.de",
+      "10016",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Virtgroup.mui",
+      "Virtgroup.mui 19.10 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "7864",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Volumelist.mui",
+      "Volumelist.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "6824",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Aboutmui.mui",
+      "Aboutmui.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "14212",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Boopsi.mui",
+      "Boopsi.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "3844",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Busy.mcc",
+      "Busy.mcc 16.36 (02/09/1997) | Copyright 1994-1997 kmel, Klaus Melchior",
+      "10028",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Busy.mcp",
+      "Busy.mcp 16.32 (02/09/1997) | Copyright 1995-1997 kmel, Klaus Melchior",
+      "10908",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Coloradjust.mui",
+      "Coloradjust.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "9456",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Colorfield.mui",
+      "Colorfield.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "3092",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Crawling.mcc",
+      "Crawling.mcc 16.8 (02/08/1997) | Copyright 1995-1997 kmel, Klaus Melchior",
+      "2060",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Dirlist.mui",
+      "Dirlist.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "11028",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Dtpic.mui",
+      "Dtpic.mui 19.13 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "2620",
+      "12-Feb-97",
+      "19:31:44",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Floattext.mui",
+      "Floattext.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "3672",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Frameadjust.mui",
+      "Frameadjust.mui 19.14 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "4128",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Framedisplay.mui",
+      "Framedisplay.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "2716",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Gauge.mui",
+      "Gauge.mui 19.9 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "5496",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Imageadjust.mui",
+      "Imageadjust.mui 19.14 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "10400",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Imagedisplay.mui",
+      "Imagedisplay.mui 19.8 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "3020",
+      "12-Feb-97",
+      "19:31:42",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Knob.mui",
+      "Knob.mui 19.10 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "5912",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Levelmeter.mui",
+      "Levelmeter.mui 19.10 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "8864",
+      "12-Feb-97",
+      "19:31:40",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Listtree.mcc",
+      "Listtree.mcc 17.36 (01/30/1997) | Copyright 1995-1997 kmel, Klaus Melchior",
+      "25016",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Listtree.mcp",
+      "Listtree.mcp 17.13 (01/30/1997) | Copyright 1995-1997 kmel, Klaus Melchior",
+      "9932",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/ListtreeName.mcc",
+      "ListtreeName.mcc 17.6 (01/30/1997) | Copyright 1995-1997 kmel, Klaus Melchior",
+      "3624",
+      "12-Feb-97",
+      "19:31:38",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/MagicWB.mcc",
+      "MagicWB.mcc 19.5 (02/12/1997) | ©1992-1997 Stefan Stuntz",
+      "13500",
+      "12-Feb-97",
+      "19:31:44",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/NBalance.mcc",
+      "NBalance.mcc 15.28 (08/31/2021) | Copyright (C) 2008-2021 NList Open Source Team [OS3/m68k]",
+      "7020",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/NBitmap.mcc",
+      "NBitmap.mcc 15.32 (08/31/2021) | Copyright (C) 2007-2021 NList Open Source Team [OS3/m68k]",
+      "15928",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Newstring.mcc",
+      "Newstring.mcc 16.18 (12/27/2005) | Copyright 1995-1996 Rüdiger Sopp fixes by MM",
+      "11936",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/Newstring.mcp",
+      "Newstring.mcp 16.10 (12/29/1996) | Copyright 1996 Rüdiger Sopp",
+      "20560",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/NFloattext.mcc",
+      "NFloattext.mcc 19.83 (08/31/2021) | Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]",
+      "4580",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/NList.mcc",
+      "NList.mcc 20.147 (08/31/2021) | Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]",
+      "170036",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/NListtree.mcc",
+      "NListtree.mcc 18.54 (08/31/2021) | Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]",
+      "83124",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:MUI/Libs/mui/NListtree.mcp",
+      "NListtree.mcp 18.42 (08/31/2021) | Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]",
+      "37160",
+      "01-Apr-23",
+      "18:40:58",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/QDock2022/startQD",
+      "startQD 1.0 Copyright 2022 Sami Vehmaa",
+      "101",
+      "30-Oct-03",
+      "05:31:26",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/QDock2022/PrefsTrans",
+      "QDock PrefsTrans 1.0 Copyright 2022 Sami Vehmaa",
+      "203",
+      "30-Oct-03",
+      "05:31:26",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/QDock2022/IconV",
+      "QDock IconV 1.3 Copyright 2022-2023 Sami Vehmaa",
+      "1318",
+      "30-Oct-03",
+      "05:31:26",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/QDock2022/IconL",
+      "QDock IconL 1.1 Copyright 2022-2023 Sami Vehmaa",
+      "943",
+      "30-Oct-03",
+      "05:31:26",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/QDock2022/IconH",
+      "QDock IconH 1.5 Copyright 2022-2023 Sami Vehmaa",
+      "2056",
+      "30-Oct-03",
+      "05:31:26",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/Libs/wizard.library",
+      "wizard.library 42.100 (04/20/2000) | (20-Apr-00)",
+      "224240",
+      "30-Oct-03",
+      "05:31:27",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/Libs/ab3zlib.library",
+      "ab3zlib.library 1.0 | (03/30/2016)",
+      "108716",
+      "30-Oct-03",
+      "05:31:27",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/QDock2022/settings/DropOnPrefs",
+      "Could not find version information for 'SYS:System/QDock/QDock2022/settings/DropOnPrefs'",
+      "47",
+      "30-Oct-03",
+      "05:31:26",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/QDock2022/CIU/Overlay",
+      "Could not find version information for 'SYS:System/QDock/QDock2022/CIU/Overlay'",
+      "73090",
+      "30-Oct-03",
+      "05:41:44",
+      "----rwed"
+    ],
+    [
+      "SYS:System/QDock/QDock2022/CIU/Backdrop",
+      "Could not find version information for 'SYS:System/QDock/QDock2022/CIU/Backdrop'",
+      "518",
+      "30-Oct-03",
+      "06:06:37",
+      "----rwed"
+    ]
+  ],
+  "system_files_count": 2763,
+  "sources": {
+    "zz": "https://mnt.computer/media/ZZ9000_info_md/2019-08-09-ZZ9000-resources.html",
+    "xacp": "https://github.com/Xanxi-Amiga/XACP-ZZ9000",
+    "cf": "https://www.sandisk.com/en-sg/products/memory-cards/cfast-cfexpress-compactflash/sandisk-extreme-compactflash?sku=SDCFXS-064G-X46",
+    "freeway": "https://www.amibay.com/threads/used-freeway-usb-cards-official-thread.2437709/",
+    "ahi": "https://github.com/aros-development-team/AROS/blob/master/workbench/devs/AHI/Include/C/devices/ahi.h",
+    "tf": "https://www.exxosforum.co.uk/forum/viewtopic.php?t=5188",
+    "bridge": "https://github.com/geekychris/amiga_mcp"
+  },
+  "audio_preferences": [
+    {
+      "unit": 255,
+      "channels": 0,
+      "mode": "0xCAFE0001",
+      "mode_name": "ZZ9000AX:16 bit Stereo",
+      "frequency_hz": 32000
+    },
+    {
+      "unit": 0,
+      "channels": 1,
+      "mode": "0x0002000C",
+      "mode_name": "Paula:Fast 8 bit mono",
+      "frequency_hz": 8000
+    },
+    {
+      "unit": 1,
+      "channels": 1,
+      "mode": "0x0002000C",
+      "mode_name": "Paula:Fast 8 bit mono",
+      "frequency_hz": 8000
+    },
+    {
+      "unit": 2,
+      "channels": 1,
+      "mode": "0x0002000C",
+      "mode_name": "Paula:Fast 8 bit mono",
+      "frequency_hz": 8000
+    },
+    {
+      "unit": 3,
+      "channels": 1,
+      "mode": "0x0002000C",
+      "mode_name": "Paula:Fast 8 bit mono",
+      "frequency_hz": 8000
+    }
+  ],
+  "persistent_amiga_changes": false,
+  "probe_staging": "RAM:"
+}

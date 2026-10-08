@@ -1,0 +1,96 @@
+@@SYS:C/SetKeyboard
+setkeyboard 47.1 (11/28/2019)
+@@SYS:C/SetPatch
+setpatch 47.4 (08/04/2020)
+@@SYS:C/Sort
+sort 46.4 (04/22/2018)
+@@SYS:C/Status
+status 47.1 (11/28/2019)
+@@SYS:C/Type
+type 47.3 (01/07/2021)
+@@SYS:C/Version
+version 47.3 (01/31/2021)
+@@SYS:C/Wait
+wait 47.1 (11/28/2019)
+@@SYS:C/Which
+which 45.2 (12/30/2019)
+@@SYS:C/DAControl
+DAControl 2.34 (01/07/2021)
+@@SYS:C/DiskDoctor
+DiskDoctor 2.184 (04/09/2021)
+@@SYS:C/Reboot
+reboot 45.1 (11/25/2017)
+@@SYS:C/Edit
+edit 47.1 (11/28/2019)
+@@SYS:C/LoadModule
+LoadModule 45.16 (04/25/2020)
+© THOR/EV
+@@SYS:C/DefIcons
+deficons 47.8 (07/16/2020)
+@@SYS:C/LoadMonDrvs
+LoadMonDrvs 47.2 (02/07/2021)
+@@SYS:C/MD5Sum
+MD5Sum 47.8 (03/05/2021)
+@@SYS:C/MountInfo
+MountInfo 47.2 (08/02/2020)
+@@SYS:C/Group
+group 47.1 (04/11/2020)
+@@SYS:C/Owner
+owner 47.1 (04/11/2020)
+@@SYS:C/FPU
+FPU 40.1 (08/28/1999)
+© THOR
+@@SYS:C/MuFastChip
+MuFastChip 40.3 (04/28/2001)
+© THOR
+@@SYS:C/MuFastRom
+MuFastRom 46.4 (10/23/2016)
+© THOR
+@@SYS:C/MuFastZero
+MuFastZero 40.21 (10/06/2018)
+© THOR
+@@SYS:C/MuLockLib
+MuLockLib 40.3 (08/07/1999)
+© Gunther Nikl, THOR
+@@SYS:C/AddBuffers
+addbuffers 47.1 (11/28/2019)
+@@SYS:C/AddDataTypes
+adddatatypes 47.2 (02/20/2020)
+@@SYS:C/Assign
+Assign 47.5 (01/30/2021)
+@@SYS:C/AssignWedge
+assignwedge 47.14 (03/11/2021)
+@@SYS:C/Avail
+avail 47.1 (07/28/2019)
+@@SYS:C/BindDrivers
+binddrivers 45.1 (04/12/2019)
+@@SYS:C/Break
+break 47.1 (11/28/2019)
+@@SYS:C/ChangeTaskPri
+changetaskpri 47.1 (11/28/2019)
+@@SYS:C/ConClip
+conclip 47.5 (12/14/2019)
+@@SYS:C/Copy
+Copy 47.7 (01/30/2021)
+@@SYS:C/CPU
+cpu 47.1 (10/19/2020)
+@@SYS:C/Date
+date 47.2 (12/14/2019)
+@@SYS:C/Delete
+delete 47.2 (01/07/2020)
+@@SYS:C/Dir
+dir 47.2 (12/19/2019)
+@@SYS:C/Ed
+ed 47.2 (05/24/2020)
+@@SYS:C/DiskChange
+diskchange 45.1 (04/13/2019)
+@@SYS:C/Eval
+Eval 47.2 (01/30/2021)
+@@SYS:C/Filenote
+filenote 47.1 (11/28/2019)
+@@SYS:C/IconX
+iconx 45.1 (11/18/2017)
+@@SYS:C/WBLoad
+wbload 47.1 (11/28/2019)
+@@SYS:C/Info
+Info 45.7 (05/27/2018)

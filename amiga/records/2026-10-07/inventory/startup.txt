@@ -1,0 +1,93 @@
+; $VER: Startup-Sequence_HardDrive 47.14 (7.3.2021)
+; Startup-Sequence for hard drive systems
+
+Version exec.library version 47 >NIL:
+If Warn
+  LoadModule L:System-Startup ROMUPDATE
+EndIf
+SetPatch >NIL:
+
+;------------------- CPU CheckInstall Section ------------------------
+
+FailAt 31
+CPU CHECKINSTALL
+
+SET temp1 $RC
+
+If VAL $temp1 EQ 30
+  ECHO ""
+  ASK "Press the RETURN key to resume booting into a restricted system."
+  Execute S:Startup-failsafe
+  QUIT
+EndIf
+
+If VAL $temp1 EQ 5
+  ECHO ""
+  ASK "Press the RETURN key to resume booting."
+EndIf
+
+UNSET temp1
+
+;---------------- End of CPU CheckInstall Section --------------------
+
+FailAt 10
+Version >NIL:
+
+Assign >nil: EXISTS DF0:
+If not warn
+  AddBuffers DF0: 15 >NIL:
+EndIf
+
+If EXISTS ENVARC:
+   MakeLink RAM:ENV to ENVARC: FORCE
+Else
+   MakeDir RAM:ENV
+Endif
+MakeDir RAM:T RAM:Clipboards
+
+Resident C:Assign PURE
+
+Assign ENV: RAM:ENV
+Assign T: RAM:T
+Assign CLIPS: RAM:Clipboards
+Assign REXX: S:
+
+FailAt 21
+Assign PRINTERS: DEVS:Printers
+Assign KEYMAPS: DEVS:Keymaps
+Assign LOCALE: SYS:Locale
+Assign LIBS: SYS:Classes ADD
+Assign HELP: LOCALE:Help DEFER
+
+BindDrivers
+Mount DEVS:DOSDrivers/~(#?.info)
+
+LoadMonDrvs >NIL:
+
+FailAt 10
+SetEnv Language "english"
+SetEnv Workbench $Workbench
+SetEnv Kickstart $Kickstart
+UnSet Workbench
+UnSet Kickstart
+
+AddDataTypes REFRESH QUIET
+Run > NIL: "HDD50Gig:VisualPrefs"
+IPrefs
+;System:FPPrefs
+ConClip
+
+If EXISTS SYS:System/RexxMast
+  SYS:System/RexxMast >NIL:
+EndIF
+
+Path C: SYS:Utilities SYS:Rexxc SYS:System S: SYS:Prefs SYS:Tools SYS:Tools/Commodities
+
+MakeLink RAM:Disk.info TO ENVARC:Sys/def_RAM.info SOFT
+
+IF EXISTS S:User-Startup
+  Execute S:User-Startup
+EndIF
+
+LoadWB
+EndCLI >NIL:

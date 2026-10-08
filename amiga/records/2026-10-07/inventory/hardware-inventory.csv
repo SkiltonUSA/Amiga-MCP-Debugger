@@ -1,0 +1,21 @@
+﻿Item,Description,Evidence,Unverified details
+Motherboard,Amiga A4000TX,Owner identification; AGA and memory/expansion configuration corroborate it,"PCB revision, assembly date and serial not remotely established"
+Accelerator,Terrible Fire TF4060,"Owner identification; 68060, ehide driver and AutoConfig serial 4060 corroborate","Board revision, FPGA/CPLD firmware and actual CPU MHz unknown"
+Main CPU,"Motorola-compatible 68060, revision 5",Live CPU and ShowConfig,Full/LC/EC package marking and mask/date codes require physical inspection
+FPU and MMU,68060 MMU; FPU capability reported,Live CPU/Exec capability flags,OS labels FPU “68882”; this is not evidence of a separate active 68882 chip
+CPU caches,"Instruction cache/burst; data cache/copyback; superscalar, store buffer, branch cache enabled",Live CPU command,No clock-changing or cache-changing command run
+AGA Alice,"AGA PAL Alice R2, ID $0023",Live ShowConfig,Physical package/date code unknown
+AGA Lisa,"AGA Lisa, ID $00F8",Live ShowConfig,No physical package/date-code inspection
+Paula audio/I/O,Paula audio driver active; native audio.device loaded,Live OS/driver evidence,Exact Paula revision/package not read electronically
+CIA A / CIA B,ciaa.resource and ciab.resource registered,Live Exec resources,Resource names confirm OS interfaces; no individual chip date/revision read
+Other motherboard logic,"Buster / Ramsey / Gary and supporting clock, RTC and glue logic","Expected A4000-class architecture, not individually inventoried","Exact silicon, revisions, programmable-logic versions and clock oscillator markings unknown"
+ZZ9000,MNT ZZ9000 in Zorro III mode,Live AutoConfig IDs 28014/4 and 28014/5,Physical PCB revision and serial unavailable
+ZZ9000 processor/FPGA,"Xilinx Zynq XC7Z020: dual ARM Cortex-A9, nominal 666 MHz; FPGA fabric",Manufacturer specification; prior ARM Core1 execution verified,"Core count, silicon stepping and physical markings not freshly probed"
+ZZ9000 DDR3,1 GB onboard DDR3 per manufacturer; 256 MiB exposed as Amiga Fast RAM,Specification plus live RAM AutoConfig,The remaining DDR is not automatically additional AmigaOS RAM
+Ethernet,"Individual Computers X-Surf 100, ShowConfig identifies Rev 3 ZII/ZIII",Live AutoConfig and active network driver,"Current device reports 100,000,000 bit/s; PHY/controller chip markings unverified"
+IDE controller,Individual Computers Buddha IDE; buddha.device and 2nd.buddha.device 52.110,"Live AutoConfig, drivers and mounted drives",Board flash build date and exact PCB revision not obtained
+USB controller,"Freeway Triton Lite (owner model), Zorro III EHCI/PIO driver active",Live driver/tasks; supplied-driver AutoConfig matching,Underlying EHCI silicon and FPGA revision not identified
+USB root hub descriptor,"Philips ISP1520, VID 0471, PID 3526; 3 ports",Live Poseidon descriptors and startup log,Root-hub identity may be supplied by the driver; not proof of the host-controller chip marking
+Native floppy,"DF0: trackdisk.device unit 0, no disk",Live mounted device and Info,Manufacturer/model and DD/HD mechanism not identified
+External MIDI,Roland MT-32 intended via native serial MIDI adapter,Owner information; CAMD configuration previously verified,MT-32 disconnected; no end-to-end physical test
+ZZ9000AX audio add-on,Driver and audio modes installed; Music Unit preference selects it,Live files and saved preferences,Physical daughterboard presence and playback remain unconfirmed

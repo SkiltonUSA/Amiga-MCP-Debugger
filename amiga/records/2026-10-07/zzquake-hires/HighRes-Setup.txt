@@ -1,0 +1,36 @@
+ZZQuake HighRes Pack 1.0 - A4000TX installation
+
+Installed into the existing HDD50Gig:Games/ZZQuake drawer.
+
+ZZQuake640  + zzq640.bin  : 640x480
+ZZQuake800  + zzq800.bin  : 800x600
+ZZQuake1024 + zzq1024.bin : 1024x768
+
+Double-click a launcher in Workbench. Start with ZZQuake640.
+The supplied icons retain their 32768-byte stacks and default options.
+
+Each launcher uses the existing id1/pak0.pak shareware data, configuration
+and save files. The original ZZQuake / zzquake.bin (320x240) is retained.
+
+Quit Doom, another ZZQuake instance, or any other ARM Core1 application
+before starting a high-resolution launcher.
+
+Shell example:
+  CD HDD50Gig:Games/ZZQuake
+  Stack 32768
+  ZZQuake640
+
+Firmware XX19c / XACP 1.7 was already installed and meets the XX19b-or-later
+requirement. No firmware, global driver or startup changes were needed.
+
+All original high-resolution documentation, licensing and the upstream
+SHA256 manifest are in HighResDocs. The manifest describes the upstream
+archive layout; executables and blobs were placed in the parent drawer.
+
+Music and mods retain their supplied disabled icon options. No commercial
+Quake assets or music were added.
+
+All installed pack files were checksum-verified. Runtime testing was not
+performed because ZZDoom was already running.
+
+Source: https://aminet.net/package/game/shoot/ZZQuakeHighRes

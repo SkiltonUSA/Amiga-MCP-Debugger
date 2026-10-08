@@ -1,0 +1,19 @@
+ZZBenchGUI v1.3 results - A4000TX / TF4060 / ZZ9000 XX19c
+
+Installed: SD032G:Drivers/XACP/ZZBench/ZZBenchGUI_v1.3
+Integer: 68060 53.36 MIPS; ARM Core1 1061.77 MIPS (19.89x).
+Floating point: 68060 42.77 MWIPS; ARM Core1 917.31 MWIPS (21.44x).
+XACP: dispatch OK. Raw 3 us; verified 3 us; guarded 9 us per call.
+Zorro III DDR read/write: 6.7 / 7.0 MB/s.
+
+ARM DDR read, write and copy each displayed 0.0 MB/s. This subtest is
+not validated and its cause remains unknown. CPU results confirm that
+the embedded ARM Core1 benchmark executed; they do not establish that
+all memory tests passed or that source-level debugging is available.
+
+Run again from Shell:
+Stack 65536
+SD032G:Drivers/XACP/ZZBench/ZZBenchGUI_v1.3
+
+Expect a temporary pause during CPU measurement. Close other ARM,
+audio, MIDI and MP3 applications before rerunning the benchmark.

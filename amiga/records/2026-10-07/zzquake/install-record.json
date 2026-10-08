@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-07T19:45:23.068430+00:00",
+  "target": "10.0.0.40",
+  "destination": "HDD50Gig:Games/ZZQuake",
+  "release": "https://github.com/Xanxi-Amiga/XACP-ZZ9000/releases/tag/ZZQuake-1.0",
+  "edition": "320x240 32-bit; Quake 1.06 shareware",
+  "shareware_source": "https://www.dosgamesarchive.com/file/quake/quake106",
+  "verification": {
+    "ZZQuake_crc32": "5C642275",
+    "zzquake.bin_crc32": "E9B6A845",
+    "id1/pak0.pak_md5": "5906e5998fc3d896ddaf5e6a62e03abb"
+  },
+  "runtime": "Launched. 320x240 Intuition screen and ZZQuake Audio task observed. Bridge screenshot black; waiting for monitor confirmation.",
+  "notes": [
+    "ZZBench closed gracefully before launch.",
+    "Large bridge checksum exceeded built-in timeout and temporarily disconnected; recovered, used native MD5Sum instead.",
+    "Temporary local HTTP transfer server stopped after transfers.",
+    "No system startup or display configuration changed."
+  ]
+}

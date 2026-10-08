@@ -1,0 +1,55 @@
+{
+  "model": "Amiga 4000TX",
+  "accelerator": "Terrible Fire TF4060",
+  "cpu": "68060",
+  "cpu_clock_mhz": null,
+  "chip_ram_mb": 2,
+  "fast_ram_mb": 624,
+  "memory_layout": [
+    {
+      "start": "0x08000000",
+      "end_inclusive": "0x17FFFFFF",
+      "size_mib": 256,
+      "attribution": "Accelerator range; TF4060 inferred from owner hardware"
+    },
+    {
+      "start": "0x01000000",
+      "end_inclusive": "0x07FFFFFF",
+      "size_mib": 112,
+      "attribution": "Motherboard range, inferred"
+    },
+    {
+      "start": "0x50000000",
+      "end_inclusive": "0x5FFFFFFF",
+      "size_mib": 256,
+      "attribution": "ZZ9000 AutoConfig RAM"
+    },
+    {
+      "start": "0x00001000",
+      "end_inclusive": "0x001FFFFF",
+      "physical_size_mib": 2,
+      "attribution": "Chip RAM; first 4 KiB excluded from OS reported total"
+    }
+  ],
+  "chipset": "AGA",
+  "os": "AmigaOS 3.2.3 Workbench",
+  "graphics": {
+    "card": "ZZ9000",
+    "coprocessor": "ARM Cortex-A9",
+    "coprocessor_clock_mhz": 666,
+    "firmware": "XX19c",
+    "protocol": "XACP 1.7",
+    "coprocessor_clock_source": "Nominal manufacturer specification, not measured",
+    "card_file_version": "1.13 (04.10.2022)",
+    "card_crc32": "816CA650"
+  },
+  "ethernet": "X-Surf 100",
+  "tcp_ip_stack": "Roadshow 1.15",
+  "storage_controller": "Buddha IDE controller",
+  "other_expansions": [
+    "Freeway Triton Lite"
+  ],
+  "inventory_source": "Owner model identification plus real hardware audit on 2026-10-07; see docs/amiga-session-memory.md and amiga/records/2026-10-07/inventory/",
+  "cpu_revision": 5,
+  "memory_units": "MiB (existing *_mb field names retained for launcher compatibility)"
+}

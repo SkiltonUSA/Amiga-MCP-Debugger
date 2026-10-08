@@ -1,0 +1,11 @@
+{
+  "poseidon_version": "4.5",
+  "controller": "freewaytritonz3usb.device 1.01",
+  "fat95": "3.18",
+  "hid_fix": "Individual Computers HIDclassV44 for OS3.2",
+  "usb_volume": "USB:",
+  "directory_entries": 26,
+  "boot_config_verified": true,
+  "reboot_tested": false,
+  "startup_backup": "S:User-Startup.before-Poseidon-20261007"
+}

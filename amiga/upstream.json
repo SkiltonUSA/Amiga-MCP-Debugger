@@ -1,0 +1,5 @@
+{
+  "repository": "https://github.com/geekychris/amiga_mcp.git",
+  "revision": "a346995a30948fff03faa3b3efbaf5a3bdb131dc",
+  "image": "docker.io/amigadev/crosstools@sha256:93ca1a47903b61873f6638881b44f9f2d6086a39f1b9b916a26faff3a8ea4d3d"
+}

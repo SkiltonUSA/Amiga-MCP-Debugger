@@ -1,0 +1,77 @@
+[
+  {
+    "path": "ZZQuakeHighRes/COPYING",
+    "bytes": 14882,
+    "sha256": "70402dc11b4b91b2e2b4821592ff9cb31ff2f4c6f3dedae15efde5395c7ee170"
+  },
+  {
+    "path": "ZZQuakeHighRes/id1/README.txt",
+    "bytes": 259,
+    "sha256": "ec9c5a6d7ea2185ed73c6c02f1bbfc8f211c0330396124b3944221a638086ecf"
+  },
+  {
+    "path": "ZZQuakeHighRes/KNOWN_ISSUES.txt",
+    "bytes": 801,
+    "sha256": "69eedb776cc41326b14319b5fdcc2332dd5a8ce60090e690284758301ed1a968"
+  },
+  {
+    "path": "ZZQuakeHighRes/README.txt",
+    "bytes": 3122,
+    "sha256": "02a2e63cd6c111a6393c06b9318214944a792bd16a9ae80c4d5787680124643d"
+  },
+  {
+    "path": "ZZQuakeHighRes/SHA256SUMS",
+    "bytes": 1103,
+    "sha256": "25c6ceb68bc14c81d19bb4752c89eaae58c80e4973c40e3a194bea1ae10f47c1"
+  },
+  {
+    "path": "ZZQuakeHighRes/SOURCE.txt",
+    "bytes": 451,
+    "sha256": "e49a2994fc04539db51abd8b3e27db08366dde311ef6ddb8e82619930b35b642"
+  },
+  {
+    "path": "ZZQuakeHighRes/zzq1024.bin",
+    "bytes": 395676,
+    "sha256": "f8a7c043cacc69cb23a2d6b241a37d90ebe3fe14b498e08ee8f201c0f9665114"
+  },
+  {
+    "path": "ZZQuakeHighRes/zzq640.bin",
+    "bytes": 395228,
+    "sha256": "68682c8d679e58eb115a73995e87d1cd049a679ba0fe4584ad662855d090e1e4"
+  },
+  {
+    "path": "ZZQuakeHighRes/zzq800.bin",
+    "bytes": 395564,
+    "sha256": "ee3296917c37fbb90ac1052ed5641f05c2bac8c2583e3565e9f6b4dfd1b02aac"
+  },
+  {
+    "path": "ZZQuakeHighRes/ZZQuake1024",
+    "bytes": 108000,
+    "sha256": "41082a3520fdd5cf39dc5a09d1ccff2ff94d6d8e11efcce690c7822c2f8fa6a3"
+  },
+  {
+    "path": "ZZQuakeHighRes/ZZQuake1024.info",
+    "bytes": 3867,
+    "sha256": "74f9e7be7445f0ed90eebf115a7da2d5bc0538f47f50d9918b111a60f4d8d227"
+  },
+  {
+    "path": "ZZQuakeHighRes/ZZQuake640",
+    "bytes": 99428,
+    "sha256": "53139ad2c83589e353afd61070c25f0bd712e3ea43fcb8ca7edf77cfe8a037c4"
+  },
+  {
+    "path": "ZZQuakeHighRes/ZZQuake640.info",
+    "bytes": 3867,
+    "sha256": "74f9e7be7445f0ed90eebf115a7da2d5bc0538f47f50d9918b111a60f4d8d227"
+  },
+  {
+    "path": "ZZQuakeHighRes/ZZQuake800",
+    "bytes": 107828,
+    "sha256": "130f86ea5b0ef4be7aa1092f376fd37748cdab0fbd19529cecc90659da7462b9"
+  },
+  {
+    "path": "ZZQuakeHighRes/ZZQuake800.info",
+    "bytes": 3867,
+    "sha256": "74f9e7be7445f0ed90eebf115a7da2d5bc0538f47f50d9918b111a60f4d8d227"
+  }
+]

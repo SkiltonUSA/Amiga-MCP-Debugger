@@ -1,0 +1,94 @@
+@@SYS:Devs/Kickstarts/kick40068.A1200
+fs 40.1 (02/15/1993)
+@@SYS:Devs/Kickstarts/kick40063.A600.RTB
+Could not find version information for 'SYS:Devs/Kickstarts/kick40063.A600.RTB'
+@@SYS:Devs/Kickstarts/kick40063.A600
+fs 40.1 (02/15/1993)
+@@SYS:Devs/Kickstarts/kick34005.A500.RTB
+Could not find version information for 'SYS:Devs/Kickstarts/kick34005.A500.RTB'
+@@SYS:Devs/Kickstarts/kick34005.A500.PAT
+Could not find version information for 'SYS:Devs/Kickstarts/kick34005.A500.PAT'
+@@SYS:Devs/Kickstarts/kick34005.A500
+Could not find version information for 'SYS:Devs/Kickstarts/kick34005.A500'
+@@SYS:Devs/Kickstarts/kick33180.A500.RTB
+Could not find version information for 'SYS:Devs/Kickstarts/kick33180.A500.RTB'
+@@SYS:Devs/Kickstarts/kick33180.A500.PAT
+Could not find version information for 'SYS:Devs/Kickstarts/kick33180.A500.PAT'
+@@SYS:Devs/Kickstarts/kick33180.A500
+Could not find version information for 'SYS:Devs/Kickstarts/kick33180.A500'
+@@SYS:Devs/Kickstarts/kick31034.A1000.RTB
+Could not find version information for 'SYS:Devs/Kickstarts/kick31034.A1000.RTB'
+@@SYS:Devs/Kickstarts/kick31034.A1000
+Could not find version information for 'SYS:Devs/Kickstarts/kick31034.A1000'
+@@SYS:Devs/Internet/users
+users 1.2 (08/23/2023)
+@@SYS:Devs/Internet/services
+Could not find version information for 'SYS:Devs/Internet/services'
+@@SYS:Devs/Internet/servers
+servers 1.3 (12/01/2019)
+@@SYS:Devs/Internet/rpc
+rpc 1.1 (10/24/2010)
+@@SYS:Devs/Internet/routes
+routes 1.1 (10/24/2010)
+@@SYS:Devs/Internet/protocols
+Could not find version information for 'SYS:Devs/Internet/protocols'
+@@SYS:Devs/Internet/networks
+networks 1.1 (10/24/2010)
+@@SYS:Devs/Internet/name_resolution
+name_resolution 1.2 (03/29/2020)
+@@SYS:Devs/Internet/hosts
+hosts 1.1 (10/24/2010)
+@@SYS:Devs/Internet/groups
+groups 1.1 (10/24/2010)
+@@SYS:Devs/Midi/mmp
+MMP - TPP/QP driver for CAMD First beta release.
+@@SYS:Devs/USBHardware/freewaytritonz3usb.device
+freewaytritonusb 1.01 (11/12/2021)
+©2022 by Chris Hodges, adapted by Matthias Hampel
+@@SYS:Devs/Monitors/PAL
+PAL 45.5 (03/26/2018)
+@@SYS:Devs/Monitors/Native
+Picasso96 43.25 (07/29/2023)
+© 2023 iComp
+@@SYS:Devs/Monitors/ZZ9000
+Picasso96 43.25 (07/29/2023)
+© 2023 iComp
+@@SYS:Devs/DataTypes/AmigaGuide
+AMIGAGUIDE 40.1 (02/10/1993)
+@@SYS:Devs/DataTypes/FTXT
+FTXT 40.1 (02/10/1993)
+@@SYS:Devs/DataTypes/ILBM
+ILBM 40.1 (02/10/1993)
+@@SYS:Devs/DataTypes/JPEG
+JPEG 47.6 (06/21/2020)
+@@SYS:Devs/DataTypes/PNG
+PNG 47.3 (05/07/2020)
+@@SYS:Devs/DataTypes/8SVX
+8SVX 40.1 (02/10/1993)
+@@SYS:Devs/DataTypes/WAVE
+WAVE 47.1 (05/16/2020)
+@@SYS:Devs/DataTypes/Icon
+ICON 47.1 (05/29/2020)
+@@SYS:Devs/DataTypes/ACBM
+ACBM 47.1 (04/08/2020)
+@@SYS:Devs/DataTypes/AIFF
+AIFF 47.1 (04/15/2020)
+@@SYS:Devs/DataTypes/BMP
+BMP 40.1 (02/10/1993)
+@@SYS:Devs/DataTypes/GIF
+GIF 47.1 (04/15/2020)
+@@SYS:Devs/DataTypes/ANIM
+ANIM 40.1 (03/12/1993)
+@@SYS:Devs/DataTypes/CDXL
+CDXL 40.1 (03/12/1993)
+@@SYS:Devs/DOSDrivers/AUDIO
+AUDIO 1.0 (01/29/1997)
+@@SYS:Devs/Printers/Generic
+Generic 45.3 (07/31/2018)
+@@SYS:Devs/Networks/x-surf-100.device
+x-surf-100.device 1.16 (09/03/2018)
+Copyright © 1999-2000 H. Prüssing, 2007-2018 iComp GmbH
+@@SYS:Devs/NetInterfaces/x-surf-100
+ZZ9000Net 1.0 (07/30/2019)
+@@SYS:Devs/AHI/ZZ9000AX.audio
+zz9000ax.audio 4.19 (01/03/2023)

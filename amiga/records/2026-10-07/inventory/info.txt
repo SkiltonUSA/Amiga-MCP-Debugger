@@ -1,0 +1,14 @@
+
+Mounted disks:
+Unit      Size       Used       Free Full Errs   Status   Name
+BDH0     3838M      62706    7798976   1%   0  Read/Write System
+BDH1       52G    5035931   22302150  18%   0  Read/Write HDD50Gig
+DF0       No disk present
+RAM       570M        221     583976   0%   0  Read/Write RAM Disk
+SDH0       29G    2098258   28411308   7%   0  Read/Write SD032G
+
+Volumes available:
+HDD50Gig [Mounted]
+RAM Disk [Mounted]
+SD032G [Mounted]
+System [Mounted]

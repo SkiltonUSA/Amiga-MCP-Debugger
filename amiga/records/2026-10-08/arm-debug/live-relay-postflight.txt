@@ -1,0 +1,13 @@
+amiga_list_clients Clients (0): none
+amiga_ping Amiga alive - clients: 0, chip: 2022928 bytes, fast: 618208056 bytes
+amiga_list_screens Screens (1):
+
+  Workbench Screen  1920x800  8bpp  LORES  @8989DA0
+amiga_dos_command Process  1: stk  4000, gv 150, pri   0 Loaded as command: TCP/IP Superserver
+Process  2: stk 16384, gv 150, pri   0 Loaded as command: Status
+Process  3: stk 32768, gv 150, pri   0 Loaded as command: SD032G:amiga-bridge/amiga-bridge
+Process  4: stk  4096, gv 150, pri   0 Loaded as command: SYS:C/TitleShadow
+Process  5: stk  4096, gv 150, pri   0 Loaded as command: MagicMenu
+Process  6: stk 32768, gv 150, pri  -5 Loaded as command: C:bridge-netwatch
+Process  7: stk  8000, gv 150, pri   1 Loaded as command: Workbench
+Process  8: stk  4000, gv 150, pri   2 Loaded as command: ToolsDaemon

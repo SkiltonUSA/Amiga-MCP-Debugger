@@ -1,0 +1,50 @@
+ZZDarkForcesNEXT 1.0 - A4000TX setup
+
+Original Dark Forces game data is installed from StarWarsDarkForces.iso.
+The game is ready for launch.
+
+Application drawer:
+  HDD50Gig:Games/ZZDarkForcesNEXT
+
+Original PC/DOS Dark Forces game data location:
+  HDD50Gig:Games/ZZDarkForcesNEXT/DATA
+
+Installed data includes DARK.GOB, SOUNDS.GOB, SPRITES.GOB, TEXTURES.GOB
+and the original LFD files. Keep the supplied weapons.json,
+projectiles.json, effects.json, pickups.json and TfeMessages.txt in DATA.
+
+Double-click ZZDarkForces to launch.
+
+The Workbench icon is configured with:
+  640x480
+  SC55
+  Stack: 65536 bytes
+
+SC55 uses the bundled SoundFonts/Roland SC-55.sf2 internally on the
+ZZ9000. It does not require a physical Roland module or send music
+through the serial MIDI port. TimGM6mb.sf2 is also installed as an
+alternative. No global AHI or CAMD setting was changed.
+
+Other available icon video options: 320x200, 320x240, 640x400, 800x600.
+Enable only one video option and one music option at a time.
+
+Firmware XX19c / XACP 1.7 was already installed and meets the requirement.
+No firmware update or reboot is needed for this installation.
+
+Quit any other ARM Core1 application (such as ZZDoom or ZZQuake) before
+starting this game. Initial loading takes a while: approximately 72 MB
+of game and SoundFont data is copied to ZZ9000 memory on each launch.
+Allow the blank loading screen to finish; the user confirmed 640x480 works.
+The 320x240 test showed a repeated, flashing bottom half.
+The original icon is backed up as ZZDarkForces.info.before-640x480.
+
+Savegames, pilot progress and options are stored in DATA.
+All engine files and 51 original game-data files were checksum-verified.
+The original LFD subdirectory was preserved. GOB entry ranges and LFD
+chunk boundaries were validated before transfer.
+
+Publisher documentation and SoundFont licenses are included in this drawer.
+Source: https://aminet.net/package/game/shoot/ZZDarkForcesNEXT
+
+Source ISO note: its final sectors are truncated in unrelated Full Throttle
+demo content. Every Dark Forces file was fully present and validated.

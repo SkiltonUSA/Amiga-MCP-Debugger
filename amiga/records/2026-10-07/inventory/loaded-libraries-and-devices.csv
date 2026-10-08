@@ -1,0 +1,106 @@
+﻿Kind,Name,Header version,Open count,Base address,Negative bytes,Positive bytes,Flags,Embedded ID string
+LIB,rexxsyslib.library,47.2,10,0x08777ef4,516,256,0x04,rexxsyslib 47.2 (19.8.2019)
+LIB,hid.class,4.4,1,0x088a7898,80,3934,0x04,hid 4.4 (13.2.10) © 2002-2010 by Chris Hodges
+LIB,utility.library,47.3,107,0x08000428,456,48,0x04,utility 47.3 (3.2.2020)
+LIB,graphics.library,47.10,1,0x0800f940,1080,552,0x04,graphics 47.10 (31.10.2021)
+LIB,layers.library,46.2,1,0x08014314,252,56,0x04,layers 46.2 (18.12.2019)
+LIB,keymap.library,47.1,1,0x08014828,48,158,0x04,keymap 47.1 (28.7.2019)
+LIB,intuition.library,47.53,1,0x080161dc,1212,3804,0x04,intuition 47.53 (27.11.2024)
+LIB,dos.library,47.30,78,0x080470d8,1160,996,0x04,
+LIB,mmu.library,47.10,1,0x08141ae8,464,732,0x04,"mmu.library 47.10 (26.8.2025) (c) 1999-2025 The MMU.lib development group, THOR"
+LIB,68060.library,47.2,1,0x08047aa0,224,194,0x04,"68060.library 47.2 (6.7.2022) (c) 1999-2022 The MMU.lib development group, THOR"
+LIB,680x0.library,46.1,1,0x08047890,48,64,0x04,"680x0.library 46.1 (04.07.2016) (c) 1999-2016 The MMU.lib development group, THOR"
+LIB,version.library,47.2,0,0x080e2c40,24,42,0x04,version 47.2 (10.4.2021)
+LIB,icon.library,51.4,15,0x087710d4,204,11024,0x04,icon.library 51.4.600 (TC020)
+LIB,diskfont.library,47.1,0,0x081255e0,128,1468,0x04,diskfont 47.1 (29.6.2020)
+LIB,locale.library,47.26,0,0x08123f08,216,1316,0x04,locale 47.26 (11.4.2021)
+LIB,iffparse.library,45.3,12,0x08123b10,272,52,0x04,iffparse 45.3 (18.9.2018)
+LIB,gadtools.library,47.17,18,0x08361f50,176,104,0x04,gadtools 47.17 (16.7.2021)
+LIB,ZZ9000.card,1.0,1,0x08143fd4,36,34,0x04,$VER ZZ9000.card+blitter 1.13 (04.10.2022)
+LIB,workbench.library,47.33,13,0x087e8b7c,140,6120,0x04,workbench.library 47.33 (31.3.2021)
+LIB,mathieeedoubbas.library,47.2,7,0x08120200,96,60,0x04,
+LIB,asl.library,47.9,4,0x0877be0c,84,244,0x04,asl 47.9 (31.3.2021)
+LIB,commodities.library,45.2,0,0x087ee41c,236,412,0x04,commodities 45.2 (20.9.2018)
+LIB,usergroup.library,4.31,1,0x08867dcc,260,34,0x04,usergroup.library 4.31 (13.8.2023)
+LIB,datatypes.library,47.3,0,0x08874258,320,576,0x04,datatypes.library 47.3 (26.3.2021)
+LIB,poseidon.library,4.5,2,0x0889f440,608,720,0x04,poseidon 4.5 (14.10.14) © 2002-2014 by Chris Hodges
+LIB,asixeth.class,4.5,1,0x0889ee30,80,600,0x04,asixeth 4.5 (12.03.13) © 2007-2013 by Harry Sintonen and Chris Hodges
+LIB,camdusbmidi.class,4.5,1,0x088a8c6c,116,1588,0x04,camdusbmidi 4.5 (14.10.14) © 2006-2010 by Chris Hodges
+LIB,cdcacm.class,4.5,1,0x087ef568,80,66,0x04,cdcacm 4.5 (3.9.10) © 2002-2010 by Chris Hodges
+LIB,dm9601eth.class,4.5,1,0x0889ea08,80,590,0x04,dm9601eth 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges
+LIB,egalaxtouch.class,4.5,1,0x0889f760,80,408,0x04,egalaxtouch 4.5 (14.10.14) © 2004-2010 by Chris Hodges
+LIB,hub.class,4.5,1,0x08867ed8,80,108,0x04,hub 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+LIB,massstorage.class,4.5,1,0x0891a078,80,1864,0x04,massstorage 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+LIB,moschipeth.class,4.5,1,0x088a9650,80,588,0x04,moschipeth 4.5 (14.10.14) © 2009-2010 by Harry Sintonen and Chris Hodges
+LIB,pegasus.class,4.5,1,0x088d2420,80,594,0x04,pegasus 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges
+LIB,printer.class,4.5,1,0x0889f0d8,80,136,0x04,printer 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+LIB,rtl8150eth.class,4.5,1,0x088d26c8,80,592,0x04,rtl8150eth 4.5 (14.10.14) © 2009-2010 by Harry Sintonen and Chris Hodges
+LIB,serialcp210x.class,4.5,1,0x088a9b68,80,66,0x04,serialcp210x 4.5 (6.11.12) © 2007-2010 by Chris Hodges
+LIB,serialpl2303.class,4.5,1,0x088d29c0,80,66,0x04,serialpl2303 4.5 (6.11.12) © 2002-2010 by Chris Hodges
+LIB,usbaudio.audio,4.5,1,0x0892c8f4,116,52,0x04,usbaudio 4.5 (14.10.14) © 2008-2010 by Chris Hodges
+LIB,usbaudio.class,4.5,1,0x0892c808,80,120,0x04,usbaudio 4.5 (14.10.14) © 2008-2010 by Chris Hodges
+LIB,usbvideo.vhi,1.5,1,0x0892ca10,32,52,0x04,usbvideo 4.5 (23.7.11) © 2009-2010 by Chris Hodges
+LIB,usbvideo.class,4.5,1,0x0892c978,80,120,0x04,usbvideo 4.5 (23.7.11) © 2009-2010 by Chris Hodges
+LIB,adaptecxchg.class,4.5,1,0x0892ca98,80,48,0x04,adaptecxchg 4.5 (5.7.13) © 2013 by Chris Hodges
+LIB,bootkeyboard.class,4.5,1,0x089326c0,80,150,0x04,bootkeyboard 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+LIB,bootmouse.class,4.5,1,0x08932838,80,248,0x04,bootmouse 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+LIB,dfu.class,4.5,1,0x0893b098,80,48,0x04,dfu 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+LIB,ethwrap.class,4.5,1,0x0893b1e8,80,578,0x04,ethwrap 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges
+LIB,ptp.class,4.5,1,0x08949558,80,2232,0x04,ptp 4.5 (14.10.14) © 2008-2010 by Chris Hodges
+LIB,simplemidi.class,4.5,1,0x0893f460,80,126,0x04,simplemidi 4.5 (14.10.14) © 2005-2010 by Chris Hodges
+LIB,rawwrap.class,4.5,1,0x0893f5e0,80,380,0x04,rawwrap 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+LIB,picture.datatype,47.5,2,0x08f451e4,36,388,0x04,picture.datatype 47.5 (22.5.2020)
+LIB,png.datatype,47.3,1,0x08f44c80,32,72,0x04,png.datatype 47.3 (7.5.2020)
+LIB,screennotify.library,1.0,4,0x08f5e0c4,60,410,0x04,$VER: screennotify.library 1.0 (26.3.95)
+LIB,muimaster.library,19.35,1,0x08f4575c,308,84,0x04,$VER: muimaster.library 19.35 (12.02.97) ©1992-1997 Stefan Stuntz
+LIB,muigfx.library,19.9,1,0x08f430f4,228,84,0x04,$VER: muigfx.library 19.9 (12.02.97) ©1992-1997 Stefan Stuntz
+LIB,muilowlevel.library,19.9,4,0x08f45058,200,84,0x04,$VER: muilowlevel.library 19.9 (12.02.97) ©1992-1997 Stefan Stuntz
+LIB,muirexx.library,19.9,1,0x08f4fc90,80,84,0x04,$VER: muirexx.library 19.9 (12.02.97) ©1992-1997 Stefan Stuntz
+LIB,bullet.library,46.4,0,0x08f4ff1c,60,100,0x04,bullet 46.4 (12.11.2019)
+LIB,mathffp.library,46.1,3,0x08f54690,96,38,0x04,mathffp 46.1 (4.8.2019)
+LIB,mathtrans.library,47.1,1,0x08f547c8,128,34,0x04,mathtrans 47.1 (13.2.2020)
+LIB,ilbm.datatype,47.4,1,0x08f56738,32,122,0x04,ilbm.datatype 47.4 (3.3.2021)
+LIB,mathieeedoubtrans.library,47.2,3,0x08f68818,128,64,0x04,
+LIB,wizard.library,42.100,1,0x08f5fd90,264,34,0x04,$VER: wizard.library 42.100 (20-Apr-00)
+LIB,ab3zlib.library,1.0,1,0x08f695e0,264,38,0x04,ab3zlib.library 1.0 (03/30/2016)
+LIB,mathieeesingbas.library,47.1,2,0x08f69668,96,56,0x04,
+LIB,bsdsocket.library,4.364,2,0x087fa82c,860,486,0x04,bsdsocket.library 4.364 (1.9.2023) Roadshow 1.15 68020+ version
+LIB,camd.library,37.14,0,0x0908b2f4,228,220,0x04,camd 37.14 (1.4.93)
+LIB,paula.audio,4.23,1,0x090303dc,116,78,0x04,paula.audio 4.23 (06.12.98)
+LIB,boards.library,3.55,0,0x093e90ac,60,34,0x04,$VER: boards.library 3.55  (24-Jan-2021) maintained by Marcus Gerards (marcus.gerards@gmail.com)
+LIB,expansion.library,47.4,13,0x000016cc,164,390,0x04,expansion 47.4 (1.1.2025)
+LIB,cybergraphics.library,42.7,7,0x087d0bd8,240,8360,0x04,cybergraphics.library 42.7 (8.3.02) emulation of original © by phase5 digital products
+LIB,cgxvideo.library,42.1,0,0x08361d60,72,118,0x04,cgxvideo.library 42.1 (10.2.00) emulation of original © by phase5 digital products
+LIB,vilintuisup.library,2.9,0,0x08361e5c,132,68,0x04,vilintuisup.library
+LIB,emulation.library,41.525,1,0x081359cc,332,68,0x04,emulation.library 41.525 (29.7.2023)
+LIB,Picasso96API.library,2.455,1,0x08f43244,252,68,0x04,Picasso96API.library 2.455 (29.7.2023)
+LIB,rtg.library,43.538,1,0x08770adc,444,1040,0x04,rtg.library 43.538 (29.7.2023)
+LIB,exec.library,47.13,5,0x080008bc,906,632,0x04,exec 47.13 (1.1.2025)
+DEV,gameport.device,47.1,1,0x08014374,36,338,0x04,gameport 47.1 (4.8.2019)
+DEV,timer.device,46.1,38,0x0801450c,68,380,0x04,timer 46.1 (4.8.2019)
+DEV,keyboard.device,47.1,4,0x080146ac,36,326,0x04,keyboard 47.1 (28.7.2019)
+DEV,input.device,47.1,9,0x080148f4,44,4825,0x04,input 47.1 (21.7.2019)
+DEV,ramdrive.device,46.2,1,0x08015c00,48,96,0x04,ramdrive 46.2 (26.12.2019)
+DEV,trackdisk.device,47.14,1,0x08015c84,36,154,0x04,
+DEV,ehide.device,1.2,0,0x0802a9f4,36,68,0x04,ehide 1.2 (21.4.2024) TF IDE Driver (4ef446b) © 2024 Erik Hemming
+DEV,zzsd.device,43.20,0,0x0802eb64,36,144,0x04,zzsd.device 43.20 (12 Apr 2026)
+DEV,2nd.buddha.device,52.110,1,0x0803284c,36,108,0x04,Buddha_IDE
+DEV,buddha.device,52.110,2,0x08034dcc,36,108,0x04,Buddha_IDE
+DEV,console.device,46.1,4,0x087ed088,72,4774,0x04,console 46.1 (4.8.2019)
+DEV,x-surf-100.device,1.16,1,0x0886f14c,36,443,0x04,"$VER: x-surf-100.device 1.16 (3.9.2018) Copyright © 1999-2000 H. Prüssing, 2007-2018 iComp GmbH"
+DEV,usbasixeth.device,4.5,1,0x087eebb4,36,52,0x04,asixeth 4.5 (12.03.13) © 2007-2013 by Harry Sintonen and Chris Hodges
+DEV,usbmodem.device,4.5,1,0x08778a2c,36,52,0x04,cdcacm 4.5 (3.9.10) © 2002-2010 by Chris Hodges
+DEV,dm9601eth.device,4.5,1,0x087eeb24,36,52,0x04,dm9601eth 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges
+DEV,usbscsi.device,4.5,1,0x08812cfc,36,52,0x04,massstorage 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+DEV,usbmoschipeth.device,4.5,1,0x08812d54,36,52,0x04,moschipeth 4.5 (14.10.14) © 2009-2010 by Harry Sintonen and Chris Hodges
+DEV,usbpegasus.device,4.5,1,0x0889ec7c,36,52,0x04,pegasus 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges
+DEV,usbparallel.device,4.5,1,0x0889ed5c,36,52,0x04,printer 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+DEV,rtl8150eth.device,4.5,1,0x0889f184,36,52,0x04,rtl8150eth 4.5 (14.10.14) © 2009-2010 by Harry Sintonen and Chris Hodges
+DEV,serialcp210x.device,4.5,1,0x088d293c,36,52,0x04,serialcp210x 4.5 (6.11.12) © 2007-2010 by Chris Hodges
+DEV,serialpl2303.device,4.5,1,0x089228a4,36,52,0x04,serialpl2303 4.5 (6.11.12) © 2002-2010 by Chris Hodges
+DEV,usbethwrap.device,4.5,1,0x0892cb84,36,52,0x04,ethwrap 4.5 (14.10.14) © 2006-2010 by Harry Sintonen and Chris Hodges
+DEV,usbraw.device,4.5,1,0x08932a3c,36,52,0x04,rawwrap 4.5 (14.10.14) © 2002-2010 by Chris Hodges
+DEV,freewaytritonz3usb.device,1.1,1,0x0894b744,36,188,0x04,"freewaytritonusb 1.01 (2022.05.16) ©2022 by Chris Hodges, adapted by Matthias Hampel"
+DEV,clipboard.device,45.4,1,0x0913ef84,36,628,0x04,clipboard 45.4 (17.9.2019)
+DEV,ahi.device,4.180,1,0x0907cce4,164,166,0x04,ahi.device 4.180 (31.10.97)
+DEV,audio.device,47.1,1,0x09392e5c,36,654,0x04,audio 47.1 (4.8.2019)

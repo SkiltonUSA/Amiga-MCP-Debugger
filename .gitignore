@@ -1,0 +1,7 @@
+build/
+.tools/
+__pycache__/
+*.pyc
+.DS_Store
+.context/
+.codex/config.toml

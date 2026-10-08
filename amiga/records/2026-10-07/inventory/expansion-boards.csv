@@ -1,0 +1,7 @@
+﻿Identification,Manufacturer/product decimal,Manufacturer/product hex,Address,ConfigDev bytes,ROM type hex,Flags hex,AutoConfig serial field
+Probable TF4060 / IDE function; model supplied by owner; serial field 4060 supports attribution,5080 / 148,$13D8 / $94,$00E90000,65536,c1,02,4060
+MNT ZZ9000 graphics / registers,28014 / 4,$6D6E / $04,$40000000,134217728,9b,02,0
+MNT ZZ9000 Fast RAM,28014 / 5,$6D6E / $05,$50000000,268435456,a4,0a,0
+Individual Computers Buddha IDE,4626 / 0,$1212 / $00,$00EA0000,65536,d1,02,6
+Freeway Triton Zorro III USB (ID pair matched in supplied driver),5191 / 30,$1447 / $1E,$60000000,16777216,80,02,20230604
+Individual Computers X-Surf 100,4626 / 100,$1212 / $64,$64000000,65536,82,02,12

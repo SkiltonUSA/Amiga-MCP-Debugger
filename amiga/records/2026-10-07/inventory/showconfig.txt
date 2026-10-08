@@ -1,0 +1,18 @@
+PROCESSOR:	CPU 68060/FPU 68882/MMU 68060
+CUSTOM CHIPS:	AGA PAL Alice R2 (ID=$0023), AGA Lisa (ID=$00F8)
+VERS:	Kickstart version 47.115, Exec version 47.13, Disk version 47.2
+RAM:	Node type $A, Attributes $505 (FAST), at $8000000-$17FFFFFF 256.0MB
+	Node type $A, Attributes $505 (FAST), at $1000000-$7FFFFFF 112.0MB
+	Node type $A, Attributes $405 (FAST), at $50000000-$5FFFFFFF 256.0MB
+	Node type $A, Attributes $703 (CHIP), at $1000-$1FFFFF ~2.0MB
+BOARDS:
+ Board (unidentified):   Prod=5080/148($13D8/$94) (@$E90000 64KB)
+ MNT Media and Technology ZZ9000 RTG Card (Zorro III):   Prod=28014/4($6D6E/$4)
+     (@$40000000, size 128MB, subsize same)
+ MNT Media and Technology ZZ9000 Memory expansion:   Prod=28014/5($6D6E/$5)
+     (@$50000000, size 256MB, subsize same memory)
+ Individual Computers Buddha IDE Controller:   Prod=4626/0($1212/$0) (@$EA0000 64KB)
+ Board (unidentified):   Prod=5191/30($1447/$1E)
+     (@$60000000, size 16MB, subsize same)
+ Individual Computers X-Surf 100 Rev.3 Z-II/Z-III Ethernet:   Prod=4626/100($1212/$64)
+     (@$64000000, size 64MB, subsize 64KB)

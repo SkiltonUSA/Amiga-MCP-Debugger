@@ -1,0 +1,108 @@
+@@SYS:C/drivelight
+DriveLight 2.60 (07/23/2023)
+(c) Thomas Rapp <thomas-rapp@web.de>
+@@SYS:C/AddUSBClasses
+AddUSBClasses 1.6 (08/29/2008)
+by Chris Hodges <chrisly@platon42.de>
+@@SYS:C/AddUSBHardware
+AddUSBHardware 1.6 (10/16/2005)
+by Chris Hodges <chrisly@platon42.de>
+@@SYS:C/DRadioTool
+DRadioTool 1.1 (05/20/2003)
+(20-May-03) by Chris Hodges <hodges@in.tum.de>
+@@SYS:C/PencamTool
+PencamTool 1.7 (06/26/2008)
+by Chris Hodges <hodges@in.tum.de>
+@@SYS:C/MuMapRom
+MuMapRom 46.6 (07/25/2016)
+© THOR
+@@SYS:C/OmniScsiPatch
+MuOmniScsiPatch 40.3 (03/13/2000)
+© THOR
+@@SYS:C/MuProtectModules
+MuProtectModules 45.5 (04/30/2017)
+© THOR
+@@SYS:C/MuRedox
+MuRedox 40.6 (01/25/2021)
+© THOR
+@@SYS:C/MuScan
+MuScan 46.1 (07/02/2016)
+© THOR
+@@SYS:C/MuSetCacheMode
+MuSetCacheMode 40.7 (11/28/1999)
+© THOR
+@@SYS:C/lha.run
+Could not find version information for 'SYS:C/lha.run'
+@@SYS:C/lha
+LhA 2.15 68040+  Jan  3 2011
+@@SYS:C/FastIEEE
+FastIEEE 40.2 (08/27/2001)
+© THOR and G.Nikl
+@@SYS:C/wget
+wget 1.13 (09/11/2023)
+Based upon GNU wget 1.10.1
+@@SYS:C/traceroute
+traceroute 4.10 (05/10/2017)
+@@SYS:C/tcpdump
+tcpdump 1.11 (09/11/2023)
+Based upon libpcap 0.8.1 and TCPdump 3.8.1 <www.tcpdump.org>
+@@SYS:C/ShowNetStatus
+ShowNetStatus 4.28 (03/11/2009)
+@@SYS:C/SampleNetSpeed
+SampleNetSpeed 4.5 (11/10/2016)
+@@SYS:C/rsh
+rsh 4.10 (11/29/2019)
+@@SYS:C/RoadshowControl
+RoadshowControl 4.12 (07/25/2023)
+@@SYS:C/RemoveNetInterface
+RemoveNetInterface 4.3 (03/11/2009)
+@@SYS:C/ping
+ping 4.13 (05/03/2017)
+@@SYS:C/Online
+Online 4.1 (04/29/2017)
+@@SYS:C/Offline
+Offline 4.1 (04/29/2017)
+@@SYS:C/NetShutdown
+NetShutdown 4.8 (07/20/2017)
+@@SYS:C/NetLogViewer
+NetLogViewer 4.13 (08/30/2023)
+@@SYS:C/ManageNetInterfaces
+ManageNetInterfaces 4.11 (09/14/2023)
+@@SYS:C/ipnat
+ipnat 4.5 (03/11/2009)
+@@SYS:C/ipmon
+ipmon 4.5 (03/11/2009)
+@@SYS:C/ipfstat
+ipfstat 4.5 (03/11/2009)
+@@SYS:C/ipf
+ipf 4.5 (03/11/2009)
+@@SYS:C/GetNetStatus
+GetNetStatus 4.9 (03/11/2009)
+@@SYS:C/ftp
+ftp 1.13 (09/02/2023)
+Based upon 4.4BSD-Lite2 ftp 8.6
+@@SYS:C/PowManTool
+PowManTool 1.0 (01/03/2008)
+by Chris Hodges <chrisly@platon42.de>
+@@SYS:C/PsdDevLister
+PsdDevLister 4.0 (04/07/2008)
+by Chris Hodges <chrisly@platon42.de>
+@@SYS:C/PsdErrorlog
+errorlog 4.0 (01/11/2009)
+by Chris Hodges <chrisly@platon42.de>
+@@SYS:C/RemRAD
+remrad 47.1 (11/28/2019)
+@@SYS:C/Rename
+Rename 47.3 (01/30/2021)
+@@SYS:C/RequestChoice
+requestchoice 45.3 (10/06/2018)
+@@SYS:C/RequestFile
+requestfile 45.3 (09/07/2018)
+@@SYS:C/Search
+search 47.1 (11/28/2019)
+@@SYS:C/SetClock
+setclock 47.1 (11/28/2019)
+@@SYS:C/SetDate
+setdate 47.1 (09/19/2019)
+@@SYS:C/SetFont
+setfont 45.1 (04/20/2019)

@@ -1,0 +1,1598 @@
+[
+  {
+    "path": "BOOTMKR.EXE",
+    "offset": 43008,
+    "bytes": 57843,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "CD.ID",
+    "offset": 102400,
+    "bytes": 35,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK",
+    "offset": 104448,
+    "bytes": 2048,
+    "directory": true,
+    "complete": true
+  },
+  {
+    "path": "DARK/DARK.EXE",
+    "offset": 483328,
+    "bytes": 1172219,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/DARK.GOB",
+    "offset": 1656832,
+    "bytes": 14244049,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/DOS4GW.EXE",
+    "offset": 15902720,
+    "bytes": 254196,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/IMUSE.EXE",
+    "offset": 16158720,
+    "bytes": 585827,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/IMUSE.INI",
+    "offset": 16746496,
+    "bytes": 538,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/JEDI.CFG",
+    "offset": 16748544,
+    "bytes": 258,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD",
+    "offset": 16750592,
+    "bytes": 2048,
+    "directory": true,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/1E.LFD",
+    "offset": 34455552,
+    "bytes": 386159,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/AGENTMNU.LFD",
+    "offset": 34842624,
+    "bytes": 51808,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/ARCEXT.LFD",
+    "offset": 34895872,
+    "bytes": 69403,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/ARCFLY.LFD",
+    "offset": 34965504,
+    "bytes": 449178,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/AWARD1.LFD",
+    "offset": 35416064,
+    "bytes": 1339773,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/AWARD2.LFD",
+    "offset": 36757504,
+    "bytes": 99827,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/AWARD3.LFD",
+    "offset": 36857856,
+    "bytes": 809308,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/AWARD4.LFD",
+    "offset": 37668864,
+    "bytes": 837011,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/BOBA.LFD",
+    "offset": 38506496,
+    "bytes": 591083,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/BRIEF1.LFD",
+    "offset": 39098368,
+    "bytes": 486992,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/BRIEF2.LFD",
+    "offset": 39585792,
+    "bytes": 378007,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/CARGO1.LFD",
+    "offset": 39964672,
+    "bytes": 742172,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/CARGO3.LFD",
+    "offset": 40708096,
+    "bytes": 1682384,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/DARKLOGO.LFD",
+    "offset": 42391552,
+    "bytes": 611741,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/DFBRIEF.LFD",
+    "offset": 43003904,
+    "bytes": 1073784,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/ENDFLY.LFD",
+    "offset": 44079104,
+    "bytes": 88001,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/EXECCOMP.LFD",
+    "offset": 44167168,
+    "bytes": 397323,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/EXECX.LFD",
+    "offset": 44566528,
+    "bytes": 1217657,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/EXITNEB.LFD",
+    "offset": 45785088,
+    "bytes": 452579,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/EXP1XX.LFD",
+    "offset": 46237696,
+    "bytes": 223728,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/EXP2X.LFD",
+    "offset": 46462976,
+    "bytes": 932081,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/EXP3XX.LFD",
+    "offset": 47396864,
+    "bytes": 428211,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/FTEXTCRA.LFD",
+    "offset": 47826944,
+    "bytes": 85891,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/FULLCRED.LFD",
+    "offset": 47912960,
+    "bytes": 611729,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/GROMAS1.LFD",
+    "offset": 48525312,
+    "bytes": 824906,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/GROMASX.LFD",
+    "offset": 49350656,
+    "bytes": 1495927,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/HOLOCU.LFD",
+    "offset": 50847744,
+    "bytes": 1292375,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/JABBA1.LFD",
+    "offset": 52142080,
+    "bytes": 1746245,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/JABBA2.LFD",
+    "offset": 53889024,
+    "bytes": 1071870,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/JABBA3.LFD",
+    "offset": 54962176,
+    "bytes": 1192747,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/JABESCP.LFD",
+    "offset": 56156160,
+    "bytes": 569161,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/JEDISFX.LFD",
+    "offset": 56725504,
+    "bytes": 7175669,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/KFLYBY.LFD",
+    "offset": 63901696,
+    "bytes": 87977,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/LOGO.LFD",
+    "offset": 63989760,
+    "bytes": 67779,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/MADINE1.LFD",
+    "offset": 64059392,
+    "bytes": 216483,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/MENU.LFD",
+    "offset": 64276480,
+    "bytes": 207749,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/NEB1.LFD",
+    "offset": 64485376,
+    "bytes": 1106290,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/PIT.LFD",
+    "offset": 65593344,
+    "bytes": 1244180,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/ROB1.LFD",
+    "offset": 66838528,
+    "bytes": 869213,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/ROBOTX.LFD",
+    "offset": 67708928,
+    "bytes": 1247007,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/STANDARD.LFD",
+    "offset": 68956160,
+    "bytes": 19191,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/SUCCES.LFD",
+    "offset": 68976640,
+    "bytes": 124435,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/SWLOGO.LFD",
+    "offset": 69101568,
+    "bytes": 431268,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LFD/TUBECOMP.LFD",
+    "offset": 69533696,
+    "bytes": 1410657,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/LOCAL.MSG",
+    "offset": 16752640,
+    "bytes": 2989,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/SOUNDS.GOB",
+    "offset": 16756736,
+    "bytes": 5950117,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/SPRITES.GOB",
+    "offset": 22708224,
+    "bytes": 2816419,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DARK/TEXTURES.GOB",
+    "offset": 25526272,
+    "bytes": 8929232,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "DOS4GW.EXE",
+    "offset": 106496,
+    "bytes": 254196,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "INSTALL.EXE",
+    "offset": 362496,
+    "bytes": 92475,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS",
+    "offset": 456704,
+    "bytes": 2048,
+    "directory": true,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/BOOTMKR.EXE",
+    "offset": 70944768,
+    "bytes": 47930,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DEMO.EXE",
+    "offset": 70993920,
+    "bytes": 76692,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DEMOS.TXT",
+    "offset": 71071744,
+    "bytes": 177,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO",
+    "offset": 71073792,
+    "bytes": 2048,
+    "directory": true,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/DARK.GOB",
+    "offset": 71333888,
+    "bytes": 360716,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/DARKPILO.CFG",
+    "offset": 71696384,
+    "bytes": 10425,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/DEFAULT.INI",
+    "offset": 71708672,
+    "bytes": 538,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/DF.EXE",
+    "offset": 71710720,
+    "bytes": 1156761,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/DFREADME.TXT",
+    "offset": 72867840,
+    "bytes": 16524,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/DOS4GW.EXE",
+    "offset": 72886272,
+    "bytes": 254196,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/IMUSE.EXE",
+    "offset": 73142272,
+    "bytes": 425380,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/IMUSE.INI",
+    "offset": 73568256,
+    "bytes": 538,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/JEDI.CFG",
+    "offset": 73570304,
+    "bytes": 238,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/KEYCONFI.EXE",
+    "offset": 73572352,
+    "bytes": 84112,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD",
+    "offset": 73658368,
+    "bytes": 2048,
+    "directory": true,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/1E.LFD",
+    "offset": 77465600,
+    "bytes": 396329,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/AGENTMNU.LFD",
+    "offset": 77862912,
+    "bytes": 66445,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/ARCEXT.LFD",
+    "offset": 77930496,
+    "bytes": 69325,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/BRIEF1.LFD",
+    "offset": 78000128,
+    "bytes": 486942,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/BRIEF2.LFD",
+    "offset": 78487552,
+    "bytes": 377867,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/DFBRIEF.LFD",
+    "offset": 78866432,
+    "bytes": 648053,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/EXECCOMP.LFD",
+    "offset": 79515648,
+    "bytes": 396959,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/EXECX.LFD",
+    "offset": 79912960,
+    "bytes": 1217645,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/EXITNEB.LFD",
+    "offset": 81131520,
+    "bytes": 452261,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/FTEXTCRA.LFD",
+    "offset": 81584128,
+    "bytes": 100584,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/GEARUP.LFD",
+    "offset": 81686528,
+    "bytes": 626773,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/HOLOCU.LFD",
+    "offset": 82315264,
+    "bytes": 1292351,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/JEDISFX.LFD",
+    "offset": 83609600,
+    "bytes": 6605441,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/KFLYBY.LFD",
+    "offset": 90216448,
+    "bytes": 87839,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/LOGO.LFD",
+    "offset": 90304512,
+    "bytes": 67755,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/MENU.LFD",
+    "offset": 90374144,
+    "bytes": 194670,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/NEB1.LFD",
+    "offset": 90570752,
+    "bytes": 1106210,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/PILOTMEN.LFD",
+    "offset": 91678720,
+    "bytes": 18943,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/STANDARD.LFD",
+    "offset": 91699200,
+    "bytes": 19191,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/SUCCES.LFD",
+    "offset": 91719680,
+    "bytes": 124315,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/SWLOGO.LFD",
+    "offset": 91844608,
+    "bytes": 431268,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/LFD/TUBECOMP.LFD",
+    "offset": 92276736,
+    "bytes": 1410511,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/SOUNDS.GOB",
+    "offset": 73660416,
+    "bytes": 1299033,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/SPRITES.GOB",
+    "offset": 74960896,
+    "bytes": 1039431,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DFDEMO/TEXTURES.GOB",
+    "offset": 76001280,
+    "bytes": 1463875,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/DOS4GW.EXE",
+    "offset": 71075840,
+    "bytes": 254196,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO",
+    "offset": 71331840,
+    "bytes": 2048,
+    "directory": true,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA",
+    "offset": 93687808,
+    "bytes": 2048,
+    "directory": true,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/BENBIKE.NUT",
+    "offset": 160962560,
+    "bytes": 160544,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/BENCRSHE.SAN",
+    "offset": 161124352,
+    "bytes": 432530,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/ENDCRSHR.SAN",
+    "offset": 161558528,
+    "bytes": 386766,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/FOO.BAT",
+    "offset": 161945600,
+    "bytes": 663,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/HARLREV.SAD",
+    "offset": 161947648,
+    "bytes": 10410,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/HARLREV.VOC",
+    "offset": 161959936,
+    "bytes": 10388,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/HARLREV.WAV",
+    "offset": 161972224,
+    "bytes": 10399,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/ICONS.NUT",
+    "offset": 161984512,
+    "bytes": 9410,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/ICONS2.NUT",
+    "offset": 161994752,
+    "bytes": 4496,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/LASER2.SAD",
+    "offset": 162000896,
+    "bytes": 11048,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/LIFTBORD.SAN",
+    "offset": 162013184,
+    "bytes": 162786,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/LIFTCHAY.SAN",
+    "offset": 162177024,
+    "bytes": 222506,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/LIFTGOG.SAN",
+    "offset": 162400256,
+    "bytes": 195038,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/LIFTMACE.SAN",
+    "offset": 162596864,
+    "bytes": 433898,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/LIFTSAW.SAN",
+    "offset": 163031040,
+    "bytes": 179366,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/MINEDRIV.SAN",
+    "offset": 163211264,
+    "bytes": 12740472,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/MINEEXIT.SAN",
+    "offset": 175951872,
+    "bytes": 218250,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/MINEFITE.SAN",
+    "offset": 176171008,
+    "bytes": 14163978,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/ROADRASH.NUT",
+    "offset": 190337024,
+    "bytes": 824,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/ROADRSH2.NUT",
+    "offset": 190339072,
+    "bytes": 824,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/SCUMMFNT.NUT",
+    "offset": 190341120,
+    "bytes": 20180,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/SMUSH.DEF",
+    "offset": 190361600,
+    "bytes": 278,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/SMUSHCUT.TXT",
+    "offset": 190363648,
+    "bytes": 384,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/TOMINE.SAN",
+    "offset": 190365696,
+    "bytes": 655320,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/TORANCH.SAN",
+    "offset": 191021056,
+    "bytes": 4308686,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DATA/TOVISTA.SAN",
+    "offset": 195330048,
+    "bytes": 4310962,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/DOS4GW.EXE",
+    "offset": 93689856,
+    "bytes": 254556,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/FT.000",
+    "offset": 93945856,
+    "bytes": 7885,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/FT.001",
+    "offset": 93954048,
+    "bytes": 50371781,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/FT.EXE",
+    "offset": 144326656,
+    "bytes": 376089,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/FTREADME.TXT",
+    "offset": 144703488,
+    "bytes": 10309,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/IMUSE.EXE",
+    "offset": 144715776,
+    "bytes": 425380,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/MONSTER.SOU",
+    "offset": 145141760,
+    "bytes": 15814987,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO",
+    "offset": 160958464,
+    "bytes": 4096,
+    "directory": true,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/AA.CFG",
+    "offset": 199641088,
+    "bytes": 264,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BARKDOG.ANM",
+    "offset": 199643136,
+    "bytes": 382768,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BARKDOG.FLC",
+    "offset": 200026112,
+    "bytes": 435142,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BARKDOG.NUT",
+    "offset": 200462336,
+    "bytes": 355286,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BARKDOG.SAN",
+    "offset": 200818688,
+    "bytes": 227510,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BED.FLC",
+    "offset": 201048064,
+    "bytes": 103186,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BED.NUT",
+    "offset": 201152512,
+    "bytes": 85822,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BIG-LIMO.NUT",
+    "offset": 201238528,
+    "bytes": 345420,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BIGFOOT.FLC",
+    "offset": 201584640,
+    "bytes": 132268,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BIGFOOT.NUT",
+    "offset": 201717760,
+    "bytes": 102096,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BIKESWAR.NUT",
+    "offset": 201820160,
+    "bytes": 2707494,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BLACKFRM.LBM",
+    "offset": 204529664,
+    "bytes": 2510,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BLACKFRM.NUT",
+    "offset": 204533760,
+    "bytes": 798,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BLINK.FLC",
+    "offset": 204535808,
+    "bytes": 52386,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BLINK.NUT",
+    "offset": 204589056,
+    "bytes": 36904,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BLINK2.FLC",
+    "offset": 204627968,
+    "bytes": 52720,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BLINK2.NUT",
+    "offset": 204681216,
+    "bytes": 38266,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BLINK3.FLC",
+    "offset": 204720128,
+    "bytes": 48674,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BLINK3.NUT",
+    "offset": 204769280,
+    "bytes": 41946,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BURSTDOG.ANM",
+    "offset": 204812288,
+    "bytes": 888209,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BURSTDOG.FLC",
+    "offset": 205701120,
+    "bytes": 942012,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BURSTDOG.NUT",
+    "offset": 206643200,
+    "bytes": 580526,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/BURSTDOG.SAN",
+    "offset": 207224832,
+    "bytes": 580526,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/CATCHUP.NUT",
+    "offset": 207806464,
+    "bytes": 4426602,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/CAVECHAS.SAN",
+    "offset": 212234240,
+    "bytes": 2469700,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/CAVECRSH.SAN",
+    "offset": 214704128,
+    "bytes": 1576602,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/CAVETUNL.SAN",
+    "offset": 216281088,
+    "bytes": 574730,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/CRASH.NUT",
+    "offset": 216856576,
+    "bytes": 98600,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/CRUSHDOG.ANM",
+    "offset": 216956928,
+    "bytes": 451051,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/CRUSHDOG.FLC",
+    "offset": 217409536,
+    "bytes": 509344,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/CVRAMP.SAN",
+    "offset": 217919488,
+    "bytes": 583454,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/DEMO-PTA.SAN",
+    "offset": 218503168,
+    "bytes": 12136642,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/DEMO-PTB.SAN",
+    "offset": 230641664,
+    "bytes": 5899348,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/DEMOGOGG.SAN",
+    "offset": 236541952,
+    "bytes": 572394,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/DODGE.FLC",
+    "offset": 237115392,
+    "bytes": 108204,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/DODGE.NUT",
+    "offset": 237223936,
+    "bytes": 80946,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/DP_PREFS",
+    "offset": 237305856,
+    "bytes": 324,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FACE-6.FLC",
+    "offset": 237307904,
+    "bytes": 665554,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FACE-6.NUT",
+    "offset": 237973504,
+    "bytes": 298490,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FANSTOP.NUT",
+    "offset": 238272512,
+    "bytes": 238448,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FINSUSHI.SAN",
+    "offset": 238512128,
+    "bytes": 3368626,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FIRE.NUT",
+    "offset": 241881088,
+    "bytes": 210464,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FISHCRSH.FLC",
+    "offset": 242092032,
+    "bytes": 207374,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FISHGOGG.FLC",
+    "offset": 242300928,
+    "bytes": 29046,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FISHGOGG.NUT",
+    "offset": 242331648,
+    "bytes": 58252,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FOCUS.FLC",
+    "offset": 242391040,
+    "bytes": 574170,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FOCUS.NUT",
+    "offset": 242966528,
+    "bytes": 293020,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FOO",
+    "offset": 243261440,
+    "bytes": 142,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FREAKFIR.NUT",
+    "offset": 243263488,
+    "bytes": 483572,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FREAKOUT.NUT",
+    "offset": 243748864,
+    "bytes": 91376,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FTDEMO.NUT",
+    "offset": 243841024,
+    "bytes": 3479486,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FUCUS-5.ANM",
+    "offset": 247320576,
+    "bytes": 377068,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FUCUS-5.FLC",
+    "offset": 247699456,
+    "bytes": 292222,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/FUCUS-5.NUT",
+    "offset": 247992320,
+    "bytes": 175436,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/GOGGLES.ANM",
+    "offset": 248168448,
+    "bytes": 16462,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/GOGGLES.FLC",
+    "offset": 248186880,
+    "bytes": 17692,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/GOGGLES.NUT",
+    "offset": 248205312,
+    "bytes": 12634,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/HI-SIGN.NUT",
+    "offset": 248219648,
+    "bytes": 34454,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/INTO-FAN.NUT",
+    "offset": 248254464,
+    "bytes": 109680,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/INTROLIP.SAN",
+    "offset": 248365056,
+    "bytes": 4101350,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/JUMPGORG.SAN",
+    "offset": 252467200,
+    "bytes": 4324612,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/KICK-IT.NUT",
+    "offset": 256792576,
+    "bytes": 359348,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/KICK-OFF.NUT",
+    "offset": 257153024,
+    "bytes": 95862,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/LIMOBY.SAN",
+    "offset": 257249280,
+    "bytes": 473986,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/LIMOPAN.NUT",
+    "offset": 257724416,
+    "bytes": 1032028,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/LIMOROAR.NUT",
+    "offset": 258756608,
+    "bytes": 443248,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/MO-TOAST.FLC",
+    "offset": 259201024,
+    "bytes": 8028,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/MO-TOAST.NUT",
+    "offset": 259209216,
+    "bytes": 9500,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/MOREACH.NUT",
+    "offset": 259219456,
+    "bytes": 297992,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/OM-SUSHI.SAN",
+    "offset": 259518464,
+    "bytes": 4765708,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/PEELOUT.NUT",
+    "offset": 264286208,
+    "bytes": 76522,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/REACHFAL.SAN",
+    "offset": 264364032,
+    "bytes": 929958,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/REV.NUT",
+    "offset": 265295872,
+    "bytes": 53042,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/RIDEAWAY.NUT",
+    "offset": 265349120,
+    "bytes": 67980,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/RIDEOUT.SAN",
+    "offset": 265418752,
+    "bytes": 2273010,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/RIDING.NUT",
+    "offset": 267692032,
+    "bytes": 2243250,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/RIPSHIFT.NUT",
+    "offset": 269936640,
+    "bytes": 270760,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/SQUINT.NUT",
+    "offset": 270209024,
+    "bytes": 29874,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/STRUGGLE.NUT",
+    "offset": 270239744,
+    "bytes": 108500,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/TAKEOFF.SAN",
+    "offset": 270348288,
+    "bytes": 1298506,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/TEST.SAN",
+    "offset": 271648768,
+    "bytes": 78342,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/TRUKDUST.NUT",
+    "offset": 271728640,
+    "bytes": 267614,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/VISION.NUT",
+    "offset": 271996928,
+    "bytes": 1368278,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/VISION.PRO",
+    "offset": 273367040,
+    "bytes": 1258,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/VISION.SAN",
+    "offset": 273369088,
+    "bytes": 1193632,
+    "directory": false,
+    "complete": false
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/WHAMMO.NUT",
+    "offset": 274563072,
+    "bytes": 115248,
+    "directory": false,
+    "complete": false
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/WORK.PRO",
+    "offset": 274679808,
+    "bytes": 2638,
+    "directory": false,
+    "complete": false
+  },
+  {
+    "path": "LECDEMOS/FTDEMO/VIDEO/WORK2.PRO",
+    "offset": 274683904,
+    "bytes": 3604,
+    "directory": false,
+    "complete": false
+  },
+  {
+    "path": "LECDEMOS.BAT",
+    "offset": 458752,
+    "bytes": 42,
+    "directory": false,
+    "complete": true
+  },
+  {
+    "path": "README.TXT",
+    "offset": 460800,
+    "bytes": 21371,
+    "directory": false,
+    "complete": true
+  }
+]

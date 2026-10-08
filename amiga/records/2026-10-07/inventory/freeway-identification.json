@@ -1,0 +1,10 @@
+{
+  "source": "User-supplied freewaytritonz3usb.device",
+  "sha256": "5e16168b4d15e32ce2b9309b54848cd54ffa0a5e9f98767ffa8a5937dfbfb281",
+  "bytes": 20192,
+  "instruction_file_offset": "0x0928",
+  "bytes_at_offset": "203c00001447721e4eaeffb8",
+  "decoded": "move.l #0x1447,d0; moveq #0x1e,d1; jsr -72(a6) [expansion.library FindConfigDev]",
+  "manufacturer_decimal": 5191,
+  "product_decimal": 30
+}

@@ -1,0 +1,35 @@
+{
+  "source": "https://aminet.net/package/game/misc/ScummVM_AGA_060",
+  "version": "2.5.1.40",
+  "archive_sha256": "f7b6c81fd8788b4c3ff2cb6b9ccd9f66924df1181deaa0eb6c55632fe99725d6",
+  "destination": "HDD50Gig:Games/ScummVM",
+  "midi": {
+    "hardware": "Roland MT-32 (not connected yet)",
+    "interface": "Amiga built-in serial MIDI adapter",
+    "cluster": "out.0",
+    "music_driver": "camd",
+    "native_mt32": true,
+    "mt32_device": "camd",
+    "CAMD": "37.14 (existing library retained)",
+    "preferences": "Internal serial enabled; unused MMP drivers remain ignored",
+    "physical_test": "Not performed: user clarified Roland is disconnected and asked to skip testing. Three test-note sequences had already been sent before clarification."
+  },
+  "verification": [
+    "lha extraction returned 0",
+    "ScummVM --version executes",
+    "CAMD listed by --list-audio-devices",
+    "CAMD RethinkCAMD returned 0",
+    "in.0 and out.0 enumerated; output receiver linked",
+    "preferences and INI read back byte-for-byte",
+    "ScummVM opened 320x200 AGA screen",
+    "LHA reports 447 files extracted, all files OK",
+    "ScummVM AHI Mixer and SDL Task 1 are running"
+  ],
+  "backups": [
+    "ENVARC:Sys/midi.prefs.before-scumm",
+    "RAM:midi.prefs.before-scumm",
+    "HDD50Gig:Games/ScummVM/scummvm.ini.original"
+  ],
+  "display_confirmation": "User confirmed ScummVM launcher is visible on the physical Amiga monitor.",
+  "cleanup": "Temporary Mac HTTP server stopped; transfer archive removed from Amiga, retained on Mac."
+}

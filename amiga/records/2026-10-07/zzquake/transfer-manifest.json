@@ -1,0 +1,32 @@
+{
+  "licinfo.txt": {
+    "size": 9311,
+    "sha256": "8d654834d085c088d603fb6879a874799e8b4cc6ae9317bbf826afd83bc72e31",
+    "crc32": "BF74A832"
+  },
+  "slicnse.txt": {
+    "size": 10036,
+    "sha256": "070cdf6a6410adef8fb5f83a4e5ccdb9e2301d2e48d460bb3a67a0f5ba9d70a8",
+    "crc32": "A6410DF7"
+  },
+  "ZZQuake-1.0.lha": {
+    "size": 287191,
+    "sha256": "e2e7d9d56bbd076410006443f109b216d3f2532da15e35946a87844bcb23c759",
+    "crc32": "646DB42D"
+  },
+  "readme.txt": {
+    "size": 19087,
+    "sha256": "9ade267c7e22a1c4c4aa8fa3dd58ad3354c173ae2cfc39344093cea534316d61",
+    "crc32": "7E2070A3"
+  },
+  "pak0.pak": {
+    "size": 18689235,
+    "sha256": "35a9c55e5e5a284a159ad2a62e0e8def23d829561fe2f54eb402dbc0a9a946af",
+    "crc32": "74E3B084"
+  },
+  "readv106.txt": {
+    "size": 8774,
+    "sha256": "0a496875fce806ebc175bc6bebedc9d739381dceacc5636cf83ef60cf056ab0d",
+    "crc32": "C8887047"
+  }
+}

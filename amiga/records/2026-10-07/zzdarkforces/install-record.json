@@ -1,0 +1,65 @@
+{
+  "application": "ZZDarkForcesNEXT",
+  "version": "1.0",
+  "installed_utc": "2026-10-07T21:34:31.046603+00:00",
+  "source": "https://aminet.net/package/game/shoot/ZZDarkForcesNEXT",
+  "archive_sha256": "727844ffa2cb63a0da5be22361af8642ebc79f3e0768364768d31fb13ef28479",
+  "publisher_archive_sha256_verified": true,
+  "destination": "HDD50Gig:Games/ZZDarkForcesNEXT",
+  "launch_executable": "ZZDarkForces",
+  "core1_engine": "zzdf.bin",
+  "game_data": "51 files, 68390561 bytes, extracted from user-provided StarWarsDarkForces.iso; all remote MD5 values verified",
+  "data_directory": "HDD50Gig:Games/ZZDarkForcesNEXT/DATA",
+  "workbench_icon": {
+    "retained_from_publisher": false,
+    "video": "640x480",
+    "music": "SC55 (internal SoundFont)",
+    "stack_bytes": 65536,
+    "external_camd": "disabled",
+    "backup": "ZZDarkForces.info.before-640x480"
+  },
+  "soundfonts": [
+    "Roland SC-55.sf2",
+    "TimGM6mb.sf2"
+  ],
+  "firmware": "Existing XX19c / XACP 1.7 meets XX19b-or-later requirement; unchanged",
+  "verification": [
+    "Publisher archive SHA256 matches Aminet download",
+    "LHA: 22 files extracted, all files OK",
+    "Native MD5Sum checks match all 22 installed files, including launch icons, engine and SoundFonts",
+    "All original GOB entry ranges and LFD chunks validated",
+    "All 51 original data files MD5-verified after copy to real Amiga",
+    "Original DATA/LFD layout preserved",
+    "51 installed data files verified before starting the game",
+    "Workbench icon saved and read back through icon.library: 640x480 enabled, 320x240 disabled; SC55 and 65536-byte stack preserved",
+    "Physical 640x480 display confirmed by user after loading delay",
+    "Debug log: SoundFont load OK, AHI underruns 0, Core1 exit marker seen; settings/pilot writeback 3/3"
+  ],
+  "runtime": "User confirmed 640x480 works after waiting for loading. 320x240 displayed repeated/flashing lower half. 640x480 diagnostic run passed preflight, started Core1, presented 312 acknowledged frames without PAN timeouts, and exited cooperatively. Saved 640x480 icon and relaunched 640x480 SC55.",
+  "notes_file": "A4000TX-Setup.txt",
+  "cleanup": "Temporary HTTP transfer server stopped",
+  "data_installed_utc": "2026-10-07T21:44:19.222226+00:00",
+  "game_data_source": {
+    "source": "<mac-downloads>/StarWarsDarkForces.iso",
+    "actual_bytes": 274380800,
+    "declared_volume_bytes": 274688000,
+    "sha256": "68a2a16d9cfd3ed54e2304162f07525b74a44012c1e3d340b0724606e3af9617",
+    "dark_files_extracted": 54,
+    "game_data_files_selected": 51,
+    "gob_validation": "All directory entries point within their GOB file",
+    "lfd_validation": "All chunks fit within their LFD file",
+    "truncated_files": [
+      "LECDEMOS/FTDEMO/VIDEO/VISION.SAN",
+      "LECDEMOS/FTDEMO/VIDEO/WHAMMO.NUT",
+      "LECDEMOS/FTDEMO/VIDEO/WORK.PRO",
+      "LECDEMOS/FTDEMO/VIDEO/WORK2.PRO"
+    ],
+    "assessment": "All Dark Forces directory files complete; truncation confined to unrelated Full Throttle demo files"
+  },
+  "runtime_validation_limits": [
+    "No gameplay/save/load test",
+    "Audio not confirmed by listener",
+    "Exact cause of 320x240 display duplication not established"
+  ],
+  "launch_command": "CD HDD50Gig:Games/ZZDarkForcesNEXT; Stack 65536; Run ZZDarkForces 640x480 SC55"
+}

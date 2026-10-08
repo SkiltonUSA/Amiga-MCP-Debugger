@@ -1,0 +1,18 @@
+; A4000TX / Roadshow: start the bridge on TCP port 2345.
+; Run after Roadshow is online, with no other amiga-bridge running.
+; Execute SD032G:amiga-bridge/Start-Amiga-Bridge
+; For ARexx, also start SYS:System/RexxMast if it is not running.
+
+IF NOT EXISTS "SD032G:amiga-bridge/amiga-bridge"
+  Echo "Cannot find SD032G:amiga-bridge/amiga-bridge"
+  Quit 20
+ENDIF
+
+IF NOT EXISTS "RAM:SixiesDev"
+  MakeDir "RAM:SixiesDev"
+ENDIF
+
+Protect "SD032G:amiga-bridge/amiga-bridge" +e
+Stack 32768
+Echo "Starting amiga-bridge on TCP port 2345."
+Run "SD032G:amiga-bridge/amiga-bridge" TCP 2345

@@ -1,0 +1,18 @@
+[
+  {
+    "tool": "amiga_ping",
+    "result": "Amiga alive - clients: 0, chip: 2021680 bytes, fast: 617570320 bytes"
+  },
+  {
+    "tool": "amiga_dos_command",
+    "result": "ZZ9000 board=0x40000000 firmware_register=0x0113"
+  },
+  {
+    "tool": "amiga_list_screens",
+    "result": "Screens (1):\n\n  Amiga Workbench Release 3.2 Kickstart 47  1920x800  8bpp  LORES  @889AAC0"
+  },
+  {
+    "tool": "amiga_list_volumes",
+    "result": "Volumes (4):\n  RAM Disk:            dos          validated       41KB /   605047KB (605006KB free)\n  HDD50Gig:            dos          validated  9976388KB / 54676162KB (44699774KB free)\n  SD032G:              dos          validated  2098127KB / 30509566KB (28411439KB free)\n  System:              dos          validated    31272KB /  3930841KB (3899569KB free)"
+  }
+]

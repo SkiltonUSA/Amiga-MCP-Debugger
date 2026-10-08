@@ -1,0 +1,22 @@
+Interface "x-surf-100"
+Device name                  = x-surf-100.device
+Device unit number           = 0
+Hardware address             = 28:CD:4C:FF:F2:B2
+Maximum transmission unit    = 1500 Bytes
+Transmission speed           = 100000000 Bits/Second
+Hardware type                = Ethernet
+Packets sent                 = 24649
+Packets received             = 50220
+Packets dropped              = 1 (in = 0, out = 2)
+Buffer overruns              = 886
+Unknown packets              = 2090
+Address                      = 10.0.0.40
+Network mask                 = 255.255.255.0
+Number of read I/O requests  = 36 (maximum of 15 used at a time, 36 are still pending)
+Number of write I/O requests = 32 (maximum of 32 used at a time, 0 are still pending)
+Number of bytes received     = 62,124,072
+Number of bytes sent         = 2,489,753
+Transfer statistics (in/out) = DMA:0/0 Byte:48104/24647 Word:-/0
+Address binding              = Dynamic
+Address lease expires        = 10/10/2033 3:47 PM
+Link status                  = Up

@@ -1,0 +1,15 @@
+Name                  MTU Type                 Address              Received     Sent  Dropped Overruns  Unknown Status
+x-surf-100           1500 Ethernet             10.0.0.40               48301    23493        1      886     1752 Up
+
+Address              Type      
+10.0.0.1             Dynamic
+10.0.0.1             Static
+
+The default domain name is not set.
+
+Destination      Gateway          Attributes
+(Default)        10.0.0.1         Up Gateway
+127.0.0.1        127.0.0.1        Up Host
+
+Local                          Remote                            Rcv.len    Snd.len Status                        
+10.0.0.40:2345                 10.0.0.21:63432                         0          0 Established

@@ -1,0 +1,252 @@
+[
+  {
+    "file": "LIBS:poseidon.library",
+    "crc32": "1b4c3576",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/adaptecxchg.class",
+    "crc32": "22228f10",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/asixeth.class",
+    "crc32": "2a24f293",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/bootkeyboard.class",
+    "crc32": "1efdff26",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/bootmouse.class",
+    "crc32": "baf3bd64",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/camdusbmidi.class",
+    "crc32": "72521a2d",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/cdcacm.class",
+    "crc32": "23b87791",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/dfu.class",
+    "crc32": "7cad52d0",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/dm9601eth.class",
+    "crc32": "d42ec532",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/egalaxtouch.class",
+    "crc32": "dc9b60a9",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/ethwrap.class",
+    "crc32": "b407c268",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/hid.class",
+    "crc32": "74c6a57f",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/hub.class",
+    "crc32": "33e40091",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/massstorage.class",
+    "crc32": "dfffd22e",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/moschipeth.class",
+    "crc32": "6b93d1f4",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/pegasus.class",
+    "crc32": "705b5978",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/printer.class",
+    "crc32": "90e2dc0d",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/ptp.class",
+    "crc32": "ff4d22af",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/rawwrap.class",
+    "crc32": "640006e5",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/rtl8150eth.class",
+    "crc32": "840c0469",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/serialcp210x.class",
+    "crc32": "4295027e",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/serialpl2303.class",
+    "crc32": "c6ef251e",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/simplemidi.class",
+    "crc32": "a6a9120c",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/usbaudio.class",
+    "crc32": "b1cb031d",
+    "verified": true
+  },
+  {
+    "file": "SYS:Classes/USB/usbvideo.class",
+    "crc32": "a21d8c90",
+    "verified": true
+  },
+  {
+    "file": "SYS:Prefs/Presets/Poseidon/Connect.iff",
+    "crc32": "9def452a",
+    "verified": true
+  },
+  {
+    "file": "SYS:Prefs/Presets/Poseidon/Disconnect.iff",
+    "crc32": "4f74a0bd",
+    "verified": true
+  },
+  {
+    "file": "SYS:Prefs/Trident",
+    "crc32": "3aaadb7f",
+    "verified": true
+  },
+  {
+    "file": "SYS:Prefs/Trident.info",
+    "crc32": "763421a9",
+    "verified": true
+  },
+  {
+    "file": "C:AddUSBClasses",
+    "crc32": "c51fad7f",
+    "verified": true
+  },
+  {
+    "file": "C:AddUSBHardware",
+    "crc32": "f056961e",
+    "verified": true
+  },
+  {
+    "file": "C:DRadioTool",
+    "crc32": "0913f69c",
+    "verified": true
+  },
+  {
+    "file": "C:PencamTool",
+    "crc32": "5855c017",
+    "verified": true
+  },
+  {
+    "file": "C:PowManTool",
+    "crc32": "f5ed2531",
+    "verified": true
+  },
+  {
+    "file": "C:PsdDevLister",
+    "crc32": "37d598d9",
+    "verified": true
+  },
+  {
+    "file": "C:PsdErrorlog",
+    "crc32": "2815809f",
+    "verified": true
+  },
+  {
+    "file": "C:PsdLoadModule",
+    "crc32": "740558b2",
+    "verified": true
+  },
+  {
+    "file": "C:PsdRestart",
+    "crc32": "5b72313e",
+    "verified": true
+  },
+  {
+    "file": "C:RocketTool",
+    "crc32": "f5ee0811",
+    "verified": true
+  },
+  {
+    "file": "C:SonixcamTool",
+    "crc32": "46e99437",
+    "verified": true
+  },
+  {
+    "file": "C:UPSTool",
+    "crc32": "1b824660",
+    "verified": true
+  },
+  {
+    "file": "SYS:Storage/DOSDrivers/UMSD",
+    "crc32": "8c91c53e",
+    "verified": true
+  },
+  {
+    "file": "SYS:Storage/DOSDrivers/UMSD.info",
+    "crc32": "4efc59af",
+    "verified": true
+  },
+  {
+    "file": "SYS:Storage/DOSDrivers/UPAR",
+    "crc32": "11b09254",
+    "verified": true
+  },
+  {
+    "file": "SYS:Storage/DOSDrivers/UPAR.info",
+    "crc32": "79c2fc8b",
+    "verified": true
+  },
+  {
+    "file": "LIBS:VHI/pencam.vhi",
+    "crc32": "5db5421b",
+    "verified": true
+  },
+  {
+    "file": "LIBS:VHI/sonixcam.vhi",
+    "crc32": "80a48ed4",
+    "verified": true
+  },
+  {
+    "file": "HELP:Poseidon.guide",
+    "crc32": "c5e813f4",
+    "verified": true
+  },
+  {
+    "file": "HELP:Poseidon.guide.info",
+    "crc32": "498f1d79",
+    "verified": true
+  },
+  {
+    "file": "DEVS:USBHardware/freewaytritonz3usb.device",
+    "crc32": "9b6a820f",
+    "verified": true
+  }
+]

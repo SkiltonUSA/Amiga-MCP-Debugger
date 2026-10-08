@@ -1,0 +1,5 @@
+﻿Region,Range inclusive,Capacity,Priority,Attributes,Attribution
+Accelerator-range Fast RAM,$08000000–$17FFFFFF,256 MiB,40,$0505,TF4060 attribution consistent with owner hardware and address map
+Motherboard-range Fast RAM,$01000000–$07FFFFFF,112 MiB,30,$0505,Motherboard attribution inferred from A4000 address range
+ZZ9000 Fast RAM,$50000000–$5FFFFFFF,256 MiB,20,$0405,Directly matched to AutoConfig 28014/5
+Chip RAM,$00001000–$001FFFFF,"2 MiB physical; 2,093,056 bytes reported",-10,$0703,First 4 KiB excluded from OS-reported total

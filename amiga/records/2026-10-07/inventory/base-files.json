@@ -1,0 +1,15 @@
+{
+  "showconfig": "RAM:a4-showconfig.txt",
+  "cpu": "RAM:a4-cpu.txt",
+  "avail": "RAM:a4-avail.txt",
+  "date": "RAM:a4-date.txt",
+  "version": "RAM:a4-version.txt",
+  "info": "RAM:a4-info.txt",
+  "mountinfo": "RAM:a4-mountinfo.txt",
+  "usb": "RAM:a4-usb.txt",
+  "usb-errors": "RAM:a4-usb-errors.txt",
+  "network": "RAM:a4-network.txt",
+  "zz-version": "RAM:a4-zz-version.txt",
+  "startup": "RAM:a4-startup.txt",
+  "user-startup": "RAM:a4-user-startup.txt"
+}

@@ -1,0 +1,27 @@
+{
+  "HELPME.TXT": {
+    "bytes": 4690,
+    "sha256": "b8ee1678923e1130700ec6a73cf50ed320091c9f79a933124e8c99e347aae5f5",
+    "md5": "994d3eedc33d492b5e49925baf6a6bc0"
+  },
+  "README.TXT": {
+    "bytes": 21631,
+    "sha256": "17878ebe5ca179de7ec2cc90bbabbc922ab69924118be168a25f8d317f65a2ff",
+    "md5": "3ff8dbf9a2d717162ae2fb585e5728dc"
+  },
+  "ORDER.FRM": {
+    "bytes": 4617,
+    "sha256": "a7fa68a0021b3d04abd781e74175511a1a96d923c544fce19805ea5a9696df86",
+    "md5": "d4202077b7ea9374698935c9b145f2d4"
+  },
+  "ZZDoom.lha": {
+    "bytes": 458303,
+    "sha256": "7d7ffd8cd6473b1f8df789825b8815bc12acc2fca8f4bfed71626d174ef77458",
+    "md5": "026d652955775a00b5f33515d57295ba"
+  },
+  "DOOM1.WAD": {
+    "bytes": 4196020,
+    "sha256": "1d7d43be501e67d927e415e0b8f3e29c3bf33075e859721816f652a526cac771",
+    "md5": "f0cefca49926d00903cf57551d901abe"
+  }
+}

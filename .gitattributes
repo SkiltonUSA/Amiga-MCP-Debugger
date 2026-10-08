@@ -1,0 +1,4 @@
+# Preserve exact bytes and command-output spacing in archived evidence.
+amiga/records/** -text -whitespace
+# Unified patches contain intentionally blank context lines with one space.
+amiga/patches/*.patch -whitespace

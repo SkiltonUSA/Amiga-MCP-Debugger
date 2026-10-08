@@ -1,0 +1,14 @@
+[
+  {
+    "tool": "amiga_push_file",
+    "result": "Transferred 60644 bytes in 9.7s (6234 B/s), 60 chunks, CRC32 verified"
+  },
+  {
+    "tool": "amiga_run_script",
+    "result": "[OK]\nFirmware register: 0x0113\nInitial XACP status: 0\nReserved opcode 0x0340 response: 3 (expected 3 = unsupported)\nReset-to-idle status: 0 (expected 0)\nPASS: XACP command handshake 0 -> 3 -> 0"
+  },
+  {
+    "tool": "amiga_ping",
+    "result": "Amiga alive - clients: 0, chip: 2021680 bytes, fast: 617570320 bytes"
+  }
+]

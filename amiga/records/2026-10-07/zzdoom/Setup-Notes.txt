@@ -1,0 +1,36 @@
+ZZDoom 1.1 - A4000TX setup
+Installed 7 October 2026 (Mac date).
+
+Location: HDD50Gig:Games/ZZDoom
+
+Double-click ZZDoom320 for 320x240, or ZZDoom640 for 640x480.
+Both icons use WAD=DOOM1.WAD and a 65536-byte stack.
+
+DOOM1.WAD is the original id Software Doom 1.9 shareware episode,
+obtained from the idgames mirror at ftp.fu-berlin.de.
+Original shareware instructions are in SharewareDocs.
+
+Music is disabled with the NOMUSIC tooltype because the Roland MT-32
+is not connected. AHI sound effects remain enabled. This does not
+change the global AHI or CAMD configuration.
+
+Shell launch:
+  CD HDD50Gig:Games/ZZDoom
+  Stack 65536
+  ZZDoom320 DOOM1.WAD -nomusic
+
+To enable external MIDI later, remove NOMUSIC from the icon and set
+CAMDPORT=out.0 for the configured native serial MIDI route. Doom's
+General MIDI music is not an MT-32-native score; instrument mapping
+may need attention. No MIDI notes or instrument tests were sent here.
+
+Quit using Doom's menu (Escape, Quit Game, confirm Y). Do not launch
+ZZQuake or another ARM Core1 application at the same time.
+
+Existing XX19c/XACP 1.7 firmware and matching ZZ9000.card retained.
+No firmware, global system driver, or startup-script change was needed.
+
+Sources:
+https://aminet.net/package/game/shoot/ZZDoom
+https://ftp.fu-berlin.de/pc/games/idgames/idstuff/doom/doom19s.zip
+https://github.com/Xanxi-Amiga/XACP-ZZ9000/releases/tag/XX19c

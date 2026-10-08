@@ -1,0 +1,19 @@
+{
+  "http_port": 55010,
+  "container_command": [
+    "podman",
+    "--connection",
+    "podman-machine-default-root"
+  ],
+  "profiles": {
+    "fsuae": {
+      "host": "127.0.0.1",
+      "port": 55013
+    },
+    "hardware": {
+      "host": "10.0.0.40",
+      "port": 2345,
+      "amiga_dest": "RAM:SixiesDev"
+    }
+  }
+}

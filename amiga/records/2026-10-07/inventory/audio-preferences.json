@@ -1,0 +1,37 @@
+[
+  {
+    "unit": 255,
+    "channels": 0,
+    "mode": "0xCAFE0001",
+    "mode_name": "ZZ9000AX:16 bit Stereo",
+    "frequency_hz": 32000
+  },
+  {
+    "unit": 0,
+    "channels": 1,
+    "mode": "0x0002000C",
+    "mode_name": "Paula:Fast 8 bit mono",
+    "frequency_hz": 8000
+  },
+  {
+    "unit": 1,
+    "channels": 1,
+    "mode": "0x0002000C",
+    "mode_name": "Paula:Fast 8 bit mono",
+    "frequency_hz": 8000
+  },
+  {
+    "unit": 2,
+    "channels": 1,
+    "mode": "0x0002000C",
+    "mode_name": "Paula:Fast 8 bit mono",
+    "frequency_hz": 8000
+  },
+  {
+    "unit": 3,
+    "channels": 1,
+    "mode": "0x0002000C",
+    "mode_name": "Paula:Fast 8 bit mono",
+    "frequency_hz": 8000
+  }
+]

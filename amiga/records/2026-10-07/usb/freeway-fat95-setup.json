@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "amiga_checksum",
+    "args": {
+      "path": "SD032G:fat95/l/fat95"
+    },
+    "result": "File: SD032G:fat95/l/fat95\nCRC32: 0CD1BD9C\nSize: 26868 bytes"
+  },
+  {
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "IF EXISTS L:fat95\nEcho FAT95_ALREADY_EXISTS\nQuit 20\nENDIF\nCopy SD032G:fat95/l/fat95 TO L:fat95 CLONE QUIET\nIF WARN\nQuit 20\nENDIF\nEcho FAT95_INSTALLED",
+      "timeout": 15
+    },
+    "result": "[OK]\nFAT95_INSTALLED"
+  },
+  {
+    "tool": "amiga_checksum",
+    "args": {
+      "path": "L:fat95"
+    },
+    "result": "File: L:fat95\nCRC32: 0CD1BD9C\nSize: 26868 bytes"
+  },
+  {
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "Stack 65536\nC:AddUSBHardware DEVS:USBHardware/freewaytritonz3usb.device 0 REMOVE\nIF WARN\nQuit 20\nENDIF\nENVARC:PsdStackloader\nEcho FREEWAY_SAVED_CONFIGURATION_LOADED",
+      "timeout": 15
+    },
+    "result": "[OK]\nRemoving hardware DEVS:USBHardware/freewaytritonz3usb.device, unit 0...\nFREEWAY_SAVED_CONFIGURATION_LOADED"
+  },
+  {
+    "tool": "amiga_list_volumes",
+    "args": {},
+    "result": "Volumes (5):\n  USB:                 dos          validated 23570064KB / 30717952KB (7147888KB free)\n  RAM Disk:            dos          validated     5244KB /   328333KB (323089KB free)\n  HDD50Gig:            dos          validated  9976400KB / 54676162KB (44699762KB free)\n  SD032G:              dos          validated  2093548KB / 30509566KB (28416018KB free)\n  System:              dos          validated    31272KB /  3930841KB (3899569KB free)"
+  },
+  {
+    "tool": "amiga_dos_command",
+    "args": {
+      "command": "C:PsdErrorLog NOFLUSH >RAM:freeway-usb-check.log",
+      "timeout": 10
+    },
+    "result": "[OK] (no output)"
+  },
+  {
+    "tool": "amiga_ping",
+    "args": {},
+    "result": "Amiga alive - clients: 1, chip: 1943400 bytes, fast: 329121480 bytes"
+  }
+]

@@ -1,0 +1,14 @@
+/* BDH1: (09-Oct-25 16:21:35) */
+Surfaces = 16
+SectorsPerBlock = 8
+SectorsPerTrack = 68
+LowCyl = 7743
+HighCyl = 114942
+Buffers = 150
+BufMemType = 1
+MaxTransfer = 16777215
+Mask = 0x7FFFFFFE
+DosType = 0x50465303
+Device = buddha.device
+StackSize = 1024
+GlobVec = -1

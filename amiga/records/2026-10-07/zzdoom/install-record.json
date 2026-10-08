@@ -1,0 +1,61 @@
+{
+  "application": "ZZDoom",
+  "version": "1.1",
+  "installed_utc": "2026-10-07T21:02:41.434594+00:00",
+  "source": "https://aminet.net/package/game/shoot/ZZDoom",
+  "archive_sha256": "7d7ffd8cd6473b1f8df789825b8815bc12acc2fca8f4bfed71626d174ef77458",
+  "destination": "HDD50Gig:Games/ZZDoom",
+  "executables": {
+    "ZZDoom320": {
+      "bytes": 420060,
+      "sha256": "bf2755345efd8c123e17e7c31b7e3f31fa6fe43433384d982be0dfa0a7e74fb8",
+      "crc32": "ABD4F510"
+    },
+    "ZZDoom640": {
+      "bytes": 420060,
+      "sha256": "d59ff9d93c966ed79ca69a90c76ccaf924ab8c1b4c367c5d95288eb3c329c383",
+      "crc32": "3EA11E62"
+    }
+  },
+  "shareware": {
+    "source": "https://ftp.fu-berlin.de/pc/games/idgames/idstuff/doom/doom19s.zip",
+    "version": "Doom 1.9 shareware",
+    "file": "DOOM1.WAD",
+    "bytes": 4196020,
+    "md5": "f0cefca49926d00903cf57551d901abe",
+    "remote_md5_verified": true
+  },
+  "workbench_icons": {
+    "stack_bytes": 65536,
+    "tooltypes": [
+      "WAD=DOOM1.WAD",
+      "NOMUSIC"
+    ],
+    "native_icon_api_readback_verified": true,
+    "drawer_icon_created": true
+  },
+  "firmware": {
+    "installed": "XX19c / XACP 1.7",
+    "changed": false,
+    "card_crc32": "816CA650",
+    "reference_card_match_verified": true
+  },
+  "verification": [
+    "LHA: 5 files extracted, all files OK",
+    "Both installed executable CRC32 values match downloaded archive",
+    "Remote DOOM1.WAD MD5 matches original Doom 1.9 shareware",
+    "Both icons read back WAD=DOOM1.WAD, NOMUSIC and 65536 stack",
+    "ZZDoom320 launched with -nomusic",
+    "320x240 display opened; live screenshot shows Doom title screen",
+    "Bridge remained responsive"
+  ],
+  "validation_limits": [
+    "640x480 variant installed but not launched",
+    "Audible sound effects not confirmed",
+    "Music deliberately disabled; no external MIDI test",
+    "No save/load or extended gameplay test"
+  ],
+  "runtime": "ZZDoom320 left running for user; existing ScummVM left open",
+  "cleanup": "Temporary Mac HTTP server stopped; temporary Amiga installer archive and icon helper removed",
+  "screenshot": "zzdoom-startup.png"
+}

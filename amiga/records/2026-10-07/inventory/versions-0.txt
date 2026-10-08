@@ -1,0 +1,98 @@
+@@SYS:Prefs/IControl
+icontrol 47.22 (03/24/2021)
+@@SYS:Prefs/Input
+input 47.8 (03/24/2021)
+@@SYS:Prefs/Locale
+locale 47.11 (03/24/2021)
+@@SYS:Prefs/Overscan
+overscan 47.12 (03/24/2021)
+@@SYS:Prefs/Palette
+palette 47.21 (03/24/2021)
+@@SYS:Prefs/Pointer
+pointer 47.26 (03/24/2021)
+@@SYS:Prefs/P96Prefs
+p96prefs 47.9 (05/17/2023)
+@@SYS:Prefs/AHI
+AHI preferences 4.5 (01/05/1998)
+@@SYS:Prefs/FullPalette
+FullPalette 40.22 (05/09/1999)
+by Massimo Tantignone
+@@SYS:Prefs/FPPrefs
+FPPrefs 40.22 (05/09/1999)
+by Massimo Tantignone
+@@SYS:Prefs/TitleShadowPrefs
+TitleShadowPrefs 1.0 ©2001 Peter Gordon (09/24/2001)
+@@SYS:Prefs/GUI
+GUI 41.29 (10/20/2001)
+[060 version] by Massimo Tantignone
+@@SYS:Prefs/MagicMenuPrefs
+MagicMenuPrefs 2.35 (03/19/2002)
+@@SYS:Prefs/ToolsPrefs
+ToolsPrefs 38.566 (01/30/1994)
+@@SYS:Prefs/Trident
+Trident 4.5 (10/14/2014)
+© 2002-2014 by Chris Hodges
+@@SYS:Prefs/MidiPorts
+MIDI Port Prefs 1.0 (07/28/1992)
+@@SYS:Prefs/Printer
+printer 47.12 (03/24/2021)
+@@SYS:Prefs/PrinterGfx
+printergfx 47.8 (03/24/2021)
+@@SYS:Prefs/PrinterPS
+printerps 47.10 (03/24/2021)
+@@SYS:Prefs/ReAction
+reaction 47.16 (03/24/2021)
+@@SYS:Prefs/ScreenMode
+screenmode 47.11 (03/24/2021)
+@@SYS:Prefs/Serial
+serial 47.7 (03/24/2021)
+@@SYS:Prefs/Sound
+sound 47.9 (03/24/2021)
+@@SYS:Prefs/Time
+time 47.7 (03/24/2021)
+@@SYS:Prefs/Asl
+asl 47.6 (03/24/2021)
+@@SYS:Prefs/Workbench
+workbench 47.32 (03/24/2021)
+@@SYS:Prefs/WBPattern
+wbpattern 47.17 (04/04/2021)
+@@SYS:Prefs/Font
+font 47.11 (03/24/2021)
+@@SYS:Prefs/DefaultIcons
+defaulticons 47.20 (03/24/2021)
+@@SYS:Classes/arexx.class
+arexx.class 47.1 (09/07/2019)
+@@SYS:Classes/requester.class
+requester.class 47.8 (04/22/2020)
+@@SYS:Classes/window.class
+window.class 47.20 (12/03/2020)
+@@SYS:Devs/ahi.device
+ahi.device 4.180 (10/31/1997)
+©1994-1997 Martin Blom. 68060 version.
+@@SYS:Devs/clipboard.device
+clipboard.device 45.4 (09/17/2019)
+@@SYS:Devs/mfm.device
+mfm.device 45.4 (07/14/2018)
+@@SYS:Devs/parallel.device
+parallel.device 45.2 (07/08/2018)
+@@SYS:Devs/printer.device
+printer.device 47.3 (05/23/2020)
+@@SYS:Devs/postscript_init.ps
+postscript_init.ps 39.1 (12/31/1992)
+@@SYS:Devs/serial.device
+serial.device 45.2 (09/12/2018)
+@@SYS:Devs/system-configuration
+Could not find version information for 'SYS:Devs/system-configuration'
+@@SYS:Devs/trackfile.device
+trackfile.device 2.46 (10/19/2020)
+@@SYS:Devs/zzusb.device
+zzusb.device 43.20
+(1 Aug 2021)
+@@SYS:Devs/Picasso96Settings
+Picasso96Settings V1.1 (21.07.97) ©1996-1997 T.Abt A.Kneer
+@@SYS:Libs/68030.library
+68030.library 46.6 (02/18/2021)
+(c) 1999-2016 The MMU.lib development group, THOR
+@@SYS:Libs/68040.library
+68040.library 46.3 (04/30/2017)
+(c) 1999-2016 The MMU.lib development group, THOR

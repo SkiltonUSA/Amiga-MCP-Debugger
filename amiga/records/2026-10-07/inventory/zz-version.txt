@@ -1,0 +1,1 @@
+ZZ9000 board=0x40000000 firmware_register=0x0113

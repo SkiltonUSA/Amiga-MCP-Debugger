@@ -1,0 +1,22 @@
+# Mac FS-UAE prototype. Setup generates .context/amiga/sixies.fs-uae and fills
+# in the workspace path and bridge port. Set the ROM and boot disk paths in
+# that local file; do not commit your OS media or machine-specific paths.
+[fs-uae]
+amiga_model = A4000/040
+cpu = 68060
+jit_compiler = 0
+chip_memory = 2048
+fast_memory = 0
+zorro_iii_memory = 262144
+# Prototype: 256 MiB Z3 Fast; hardware audit found 624 MiB across three banks.
+# Boot AmigaOS 3.2.3 with suitable 68060 support. This is not board emulation
+# of the TF4060, ZZ9000, X-Surf 100, Buddha, or Freeway Triton Lite.
+kickstart_file = /absolute/path/to/your/kickstart.rom
+hard_drive_0 = /absolute/path/to/your/installed-workbench.hdf
+hard_drive_2 = /absolute/path/to/workspace/.context/amiga/shared
+hard_drive_2_label = SixiesDev
+bsdsocket_library = 1
+
+# After boot: Stack 32768, then Run DH2:Dev/amiga-bridge TCP <fsuae-port>
+# Use profiles.fsuae.port from .context/amiga/settings.json.
+# This uses guest TCP sockets, not emulated serial-over-TCP.

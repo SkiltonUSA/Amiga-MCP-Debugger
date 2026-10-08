@@ -1,0 +1,17 @@
+a7190831656de57923fb526747dd844a  HDD50Gig:Games/ZZQuake/ZZQuake640
+700d3ed51ca6ce0c775adfce287f94b3  HDD50Gig:Games/ZZQuake/ZZQuake640.info
+5d0f7c422d0db562669eb3a4f1e8e223  HDD50Gig:Games/ZZQuake/zzq640.bin
+ad636c5d994f582c841a900ec4b2927a  HDD50Gig:Games/ZZQuake/ZZQuake800
+700d3ed51ca6ce0c775adfce287f94b3  HDD50Gig:Games/ZZQuake/ZZQuake800.info
+e77a6ced32f129009d9bfea4e9f493c8  HDD50Gig:Games/ZZQuake/zzq800.bin
+00b4b00e3f2989b766b124b36679cfe4  HDD50Gig:Games/ZZQuake/ZZQuake1024
+700d3ed51ca6ce0c775adfce287f94b3  HDD50Gig:Games/ZZQuake/ZZQuake1024.info
+43f0a0f017a9fc744de93ac64fc09df9  HDD50Gig:Games/ZZQuake/zzq1024.bin
+79c2cc4426b9e6f3b9098f02eb47aac1  HDD50Gig:Games/ZZQuake/HighResDocs/COPYING
+ad137911d4834055fdafcdcd4743cf48  HDD50Gig:Games/ZZQuake/HighResDocs/KNOWN_ISSUES.txt
+625c6549b14246e9cc31f5c06f1128c5  HDD50Gig:Games/ZZQuake/HighResDocs/README.txt
+cdd2ccd939d629613afd774a5f891533  HDD50Gig:Games/ZZQuake/HighResDocs/SOURCE.txt
+4e32175dfb581ff5c1c6929450954dd8  HDD50Gig:Games/ZZQuake/HighResDocs/SHA256SUMS
+60f15caed44a117808a6a511cbdd817d  HDD50Gig:Games/ZZQuake/HighResDocs/id1/README.txt
+4f2e4714659f18a36633c7933e2499e4  HDD50Gig:Games/ZZQuake/ZZQuake
+26519fdf7a3836ae68afd291b21825f6  HDD50Gig:Games/ZZQuake/zzquake.bin

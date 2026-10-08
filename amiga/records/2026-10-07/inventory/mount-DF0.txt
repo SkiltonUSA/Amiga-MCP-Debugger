@@ -1,0 +1,11 @@
+/* DF0: (09-Oct-25 16:22:21) */
+Surfaces = 2
+SectorsPerTrack = 11
+LowCyl = 0
+HighCyl = 79
+BufMemType = 1
+MaxTransfer = 2097152
+Mask = 0x7FFFFFFE
+BootPri = 5
+BootBlocks = 2
+Device = trackdisk.device

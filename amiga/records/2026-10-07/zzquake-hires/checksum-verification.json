@@ -1,0 +1,41 @@
+{
+  "expected": {
+    "ZZQuake640": "a7190831656de57923fb526747dd844a",
+    "ZZQuake640.info": "700d3ed51ca6ce0c775adfce287f94b3",
+    "zzq640.bin": "5d0f7c422d0db562669eb3a4f1e8e223",
+    "ZZQuake800": "ad636c5d994f582c841a900ec4b2927a",
+    "ZZQuake800.info": "700d3ed51ca6ce0c775adfce287f94b3",
+    "zzq800.bin": "e77a6ced32f129009d9bfea4e9f493c8",
+    "ZZQuake1024": "00b4b00e3f2989b766b124b36679cfe4",
+    "ZZQuake1024.info": "700d3ed51ca6ce0c775adfce287f94b3",
+    "zzq1024.bin": "43f0a0f017a9fc744de93ac64fc09df9",
+    "HighResDocs/COPYING": "79c2cc4426b9e6f3b9098f02eb47aac1",
+    "HighResDocs/KNOWN_ISSUES.txt": "ad137911d4834055fdafcdcd4743cf48",
+    "HighResDocs/README.txt": "625c6549b14246e9cc31f5c06f1128c5",
+    "HighResDocs/SOURCE.txt": "cdd2ccd939d629613afd774a5f891533",
+    "HighResDocs/SHA256SUMS": "4e32175dfb581ff5c1c6929450954dd8",
+    "HighResDocs/id1/README.txt": "60f15caed44a117808a6a511cbdd817d",
+    "ZZQuake": "4f2e4714659f18a36633c7933e2499e4",
+    "zzquake.bin": "26519fdf7a3836ae68afd291b21825f6"
+  },
+  "actual": {
+    "ZZQuake640": "a7190831656de57923fb526747dd844a",
+    "ZZQuake640.info": "700d3ed51ca6ce0c775adfce287f94b3",
+    "zzq640.bin": "5d0f7c422d0db562669eb3a4f1e8e223",
+    "ZZQuake800": "ad636c5d994f582c841a900ec4b2927a",
+    "ZZQuake800.info": "700d3ed51ca6ce0c775adfce287f94b3",
+    "zzq800.bin": "e77a6ced32f129009d9bfea4e9f493c8",
+    "ZZQuake1024": "00b4b00e3f2989b766b124b36679cfe4",
+    "ZZQuake1024.info": "700d3ed51ca6ce0c775adfce287f94b3",
+    "zzq1024.bin": "43f0a0f017a9fc744de93ac64fc09df9",
+    "HighResDocs/COPYING": "79c2cc4426b9e6f3b9098f02eb47aac1",
+    "HighResDocs/KNOWN_ISSUES.txt": "ad137911d4834055fdafcdcd4743cf48",
+    "HighResDocs/README.txt": "625c6549b14246e9cc31f5c06f1128c5",
+    "HighResDocs/SOURCE.txt": "cdd2ccd939d629613afd774a5f891533",
+    "HighResDocs/SHA256SUMS": "4e32175dfb581ff5c1c6929450954dd8",
+    "HighResDocs/id1/README.txt": "60f15caed44a117808a6a511cbdd817d",
+    "ZZQuake": "4f2e4714659f18a36633c7933e2499e4",
+    "zzquake.bin": "26519fdf7a3836ae68afd291b21825f6"
+  },
+  "result": "all match"
+}

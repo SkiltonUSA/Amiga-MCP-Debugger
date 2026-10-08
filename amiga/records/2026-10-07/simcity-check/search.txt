@@ -1,0 +1,6 @@
+HDD50Gig:Games/SimCityCDTV
+HDD50Gig:Games/SimCityCDTV.info
+HDD50Gig:Games/SimCityCDTV/SimCityCDTV.info
+HDD50Gig:Games/SimCityCDTV/SimCityCDTV.Slave
+HDD50Gig:Games/SimLifeAGA/data/saves/SimCityEntree
+HDD50Gig:Games/SimLifeAGA/data/saves/SimCityEntree Readme

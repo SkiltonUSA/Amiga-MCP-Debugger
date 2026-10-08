@@ -1,0 +1,96 @@
+@@SYS:MUI/Libs/muipropg.class
+muipropg.class 19.9 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/muirexx.library
+muirexx.library 19.9 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/muiscreen.library
+muiscreen.library 19.12 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/muispecial.library
+muispecial.library 19.11 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/muiwinborder.class
+muiwinborder.class 19.9 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/muiwinscroller.class
+muiwinscroller.class 19.9 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:Classes/Gadgets/string.gadget
+string.gadget 47.19 (02/15/2021)
+@@SYS:Classes/Gadgets/texteditor.gadget
+texteditor.gadget 47.51 (04/09/2021)
+@@SYS:Classes/Gadgets/virtual.gadget
+virtual.gadget 47.4 (06/18/2020)
+@@SYS:Classes/Gadgets/select.gadget
+select.gadget 40.18 (01/07/2001)
+@@SYS:Classes/Gadgets/tapedeck.gadget
+tapedeck.gadget 47.6 (10/31/2020)
+@@SYS:Classes/Gadgets/gradientslider.gadget
+gradientslider.gadget 47.3 (06/09/2020)
+@@SYS:Classes/Gadgets/colorwheel.gadget
+colorwheel.gadget 47.3 (10/03/2019)
+@@SYS:Classes/Gadgets/button.gadget
+button.gadget 47.7 (03/01/2021)
+@@SYS:Classes/Gadgets/checkbox.gadget
+checkbox.gadget 47.2 (09/02/2019)
+@@SYS:Classes/Gadgets/chooser.gadget
+chooser.gadget 47.7 (06/09/2020)
+@@SYS:Classes/Gadgets/clicktab.gadget
+clicktab.gadget 47.13 (04/06/2021)
+@@SYS:Classes/Gadgets/datebrowser.gadget
+datebrowser.gadget 47.2 (09/02/2019)
+@@SYS:Classes/Gadgets/fuelgauge.gadget
+fuelgauge.gadget 47.2 (03/31/2020)
+@@SYS:Classes/Gadgets/getcolor.gadget
+getcolor.gadget 47.5 (06/16/2020)
+@@SYS:Classes/Gadgets/getfile.gadget
+getfile.gadget 47.2 (10/01/2019)
+@@SYS:Classes/Gadgets/tabs.gadget
+tabs.gadget 47.2 (09/01/2019)
+@@SYS:Classes/Gadgets/getfont.gadget
+getfont.gadget 47.1 (09/01/2019)
+@@SYS:Classes/Gadgets/getscreenmode.gadget
+getscreenmode.gadget 47.2 (09/02/2019)
+@@SYS:Classes/Gadgets/integer.gadget
+integer.gadget 47.4 (04/11/2020)
+@@SYS:Classes/Gadgets/layout.gadget
+layout.gadget 47.32 (02/28/2021)
+@@SYS:Classes/Gadgets/listbrowser.gadget
+listbrowser.gadget 47.24 (04/02/2021)
+@@SYS:Classes/Gadgets/listview.gadget
+listview.gadget 47.3 (12/29/2019)
+@@SYS:Classes/Gadgets/palette.gadget
+palette.gadget 47.2 (09/02/2019)
+@@SYS:Classes/Gadgets/radiobutton.gadget
+radiobutton.gadget 47.3 (07/27/2020)
+@@SYS:Classes/Gadgets/scroller.gadget
+scroller.gadget 47.20 (03/04/2021)
+@@SYS:Classes/Gadgets/sketchboard.gadget
+sketchboard.gadget 47.15 (03/11/2021)
+@@SYS:Classes/Gadgets/slider.gadget
+slider.gadget 47.5 (04/02/2021)
+@@SYS:Classes/Gadgets/space.gadget
+space.gadget 47.1 (09/01/2019)
+@@SYS:Classes/Gadgets/speedbar.gadget
+speedbar.gadget 47.8 (09/17/2020)
+@@SYS:Classes/DataTypes/picture.datatype
+picture.datatype 47.5 (05/22/2020)
+@@SYS:Classes/DataTypes/ilbm.datatype
+ilbm.datatype 47.4 (03/03/2021)
+@@SYS:Classes/DataTypes/text.datatype
+text 47.13 (03/04/2021)
+@@SYS:Classes/DataTypes/amigaguide.datatype
+amigaguide 47.25 (04/03/2021)
+@@SYS:Classes/DataTypes/ascii.datatype
+ascii.datatype 47.1 (03/15/2021)
+@@SYS:Classes/DataTypes/png.datatype
+png.datatype 47.3 (05/07/2020)
+@@SYS:Classes/DataTypes/acbm.datatype
+acbm.datatype 47.1 (04/08/2020)
+@@SYS:Classes/DataTypes/aiff.datatype
+aiff.datatype 47.2 (04/03/2021)
+@@SYS:Classes/DataTypes/gif.datatype
+gif.datatype 47.2 (06/21/2020)
+@@SYS:Classes/DataTypes/sound.datatype
+sound.datatype 47.6 (11/14/2020)

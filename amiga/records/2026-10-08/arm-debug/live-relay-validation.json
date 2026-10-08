@@ -1,0 +1,296 @@
+{
+  "utc": "2026-10-08T10:39:53.954135+00:00",
+  "endpoint": "http://127.0.0.1:55010/mcp",
+  "execution": "physical_amiga_68k_probe",
+  "arm_execution_verified": false,
+  "calls": [
+    {
+      "tool": "amiga_arm_attach",
+      "args": {},
+      "seconds": 0.485,
+      "error": false,
+      "result": {
+        "session": 204699815,
+        "build_id": 1033421854,
+        "snapshot_sequence": 576,
+        "state": "running",
+        "reason": "initial",
+        "point": 1,
+        "checkpoint_hits": 285,
+        "command_ack": 0,
+        "command_result": 0,
+        "pause_pending": false,
+        "values": [
+          284,
+          1988
+        ],
+        "breakpoints": [],
+        "region_count": 1,
+        "log_count": 1,
+        "execution": "host_demo",
+        "debug_mode": "cooperative_checkpoints",
+        "instruction_stepping": false,
+        "fault": null
+      }
+    },
+    {
+      "tool": "amiga_arm_pause",
+      "args": {},
+      "seconds": 1.565,
+      "error": false,
+      "result": {
+        "session": 204699815,
+        "build_id": 1033421854,
+        "snapshot_sequence": 592,
+        "state": "paused",
+        "reason": "pause",
+        "point": 2,
+        "checkpoint_hits": 292,
+        "command_ack": 1,
+        "command_result": 0,
+        "pause_pending": false,
+        "values": [
+          291,
+          2037
+        ],
+        "breakpoints": [],
+        "region_count": 1,
+        "log_count": 1,
+        "execution": "host_demo",
+        "debug_mode": "cooperative_checkpoints",
+        "instruction_stepping": false,
+        "fault": null
+      }
+    },
+    {
+      "tool": "amiga_arm_status",
+      "args": {},
+      "seconds": 0.489,
+      "error": false,
+      "result": {
+        "session": 204699815,
+        "build_id": 1033421854,
+        "snapshot_sequence": 592,
+        "state": "paused",
+        "reason": "pause",
+        "point": 2,
+        "checkpoint_hits": 292,
+        "command_ack": 1,
+        "command_result": 0,
+        "pause_pending": false,
+        "values": [
+          291,
+          2037
+        ],
+        "breakpoints": [],
+        "region_count": 1,
+        "log_count": 1,
+        "execution": "host_demo",
+        "debug_mode": "cooperative_checkpoints",
+        "instruction_stepping": false,
+        "fault": null
+      }
+    },
+    {
+      "tool": "amiga_arm_read_memory",
+      "args": {
+        "region": 0,
+        "offset": 0,
+        "size": 64
+      },
+      "seconds": 1.082,
+      "error": false,
+      "result": {
+        "region": 0,
+        "offset": 0,
+        "size": 64,
+        "hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+        "byte_order": "raw application bytes; ARM scalar data is normally little-endian"
+      }
+    },
+    {
+      "tool": "amiga_arm_step_checkpoint",
+      "args": {},
+      "seconds": 1.077,
+      "error": false,
+      "result": {
+        "session": 204699815,
+        "build_id": 1033421854,
+        "snapshot_sequence": 598,
+        "state": "paused",
+        "reason": "checkpoint_step",
+        "point": 1,
+        "checkpoint_hits": 293,
+        "command_ack": 3,
+        "command_result": 0,
+        "pause_pending": false,
+        "values": [
+          292,
+          2044
+        ],
+        "breakpoints": [],
+        "region_count": 1,
+        "log_count": 1,
+        "execution": "host_demo",
+        "debug_mode": "cooperative_checkpoints",
+        "instruction_stepping": false,
+        "fault": null
+      }
+    },
+    {
+      "tool": "amiga_arm_breakpoint",
+      "args": {
+        "point": 2
+      },
+      "seconds": 1.076,
+      "error": false,
+      "result": {
+        "session": 204699815,
+        "build_id": 1033421854,
+        "snapshot_sequence": 600,
+        "state": "paused",
+        "reason": "checkpoint_step",
+        "point": 1,
+        "checkpoint_hits": 293,
+        "command_ack": 4,
+        "command_result": 0,
+        "pause_pending": false,
+        "values": [
+          292,
+          2044
+        ],
+        "breakpoints": [
+          2
+        ],
+        "region_count": 1,
+        "log_count": 1,
+        "execution": "host_demo",
+        "debug_mode": "cooperative_checkpoints",
+        "instruction_stepping": false,
+        "fault": null
+      }
+    },
+    {
+      "tool": "amiga_arm_continue",
+      "args": {},
+      "seconds": 1.066,
+      "error": false,
+      "result": {
+        "session": 204699815,
+        "build_id": 1033421854,
+        "snapshot_sequence": 602,
+        "state": "running",
+        "reason": "checkpoint_step",
+        "point": 1,
+        "checkpoint_hits": 293,
+        "command_ack": 5,
+        "command_result": 0,
+        "pause_pending": false,
+        "values": [
+          292,
+          2044
+        ],
+        "breakpoints": [
+          2
+        ],
+        "region_count": 1,
+        "log_count": 1,
+        "execution": "host_demo",
+        "debug_mode": "cooperative_checkpoints",
+        "instruction_stepping": false,
+        "fault": null
+      }
+    },
+    {
+      "tool": "amiga_arm_status",
+      "args": {},
+      "seconds": 0.489,
+      "error": false,
+      "result": {
+        "session": 204699815,
+        "build_id": 1033421854,
+        "snapshot_sequence": 604,
+        "state": "paused",
+        "reason": "breakpoint",
+        "point": 2,
+        "checkpoint_hits": 294,
+        "command_ack": 5,
+        "command_result": 0,
+        "pause_pending": false,
+        "values": [
+          293,
+          2051
+        ],
+        "breakpoints": [
+          2
+        ],
+        "region_count": 1,
+        "log_count": 1,
+        "execution": "host_demo",
+        "debug_mode": "cooperative_checkpoints",
+        "instruction_stepping": false,
+        "fault": null
+      }
+    },
+    {
+      "tool": "amiga_arm_logs",
+      "args": {},
+      "seconds": 1.57,
+      "error": false,
+      "result": {
+        "events": [
+          {
+            "sequence": 1,
+            "text": "Live AmigaOS relay probe: 68k execution, NOT ARM"
+          }
+        ],
+        "cursor": 1,
+        "lost": 0
+      }
+    },
+    {
+      "tool": "amiga_arm_breakpoint",
+      "args": {
+        "point": 0,
+        "enabled": false
+      },
+      "seconds": 1.098,
+      "error": false,
+      "result": {
+        "session": 204699815,
+        "build_id": 1033421854,
+        "snapshot_sequence": 606,
+        "state": "paused",
+        "reason": "breakpoint",
+        "point": 2,
+        "checkpoint_hits": 294,
+        "command_ack": 6,
+        "command_result": 0,
+        "pause_pending": false,
+        "values": [
+          293,
+          2051
+        ],
+        "breakpoints": [],
+        "region_count": 1,
+        "log_count": 1,
+        "execution": "host_demo",
+        "debug_mode": "cooperative_checkpoints",
+        "instruction_stepping": false,
+        "fault": null
+      }
+    },
+    {
+      "tool": "amiga_arm_detach",
+      "args": {},
+      "seconds": 1.557,
+      "error": false,
+      "result": {
+        "detached": true,
+        "state": "running",
+        "instruction_stepping": false
+      }
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,114 @@
+@@SYS:Classes/DataTypes/8svx.datatype
+8svx.datatype 47.1 (03/12/2021)
+@@SYS:Classes/DataTypes/wav.datatype
+wav.datatype 47.2 (04/03/2021)
+@@SYS:Classes/DataTypes/anim.datatype
+anim.datatype 47.2 (04/11/2020)
+@@SYS:Classes/DataTypes/animation.datatype
+animation.datatype 47.11 (11/11/2020)
+@@SYS:Classes/DataTypes/cdxl.datatype
+cdxl.datatype 47.6 (12/10/2020)
+@@SYS:Classes/DataTypes/bmp.datatype
+bmp.datatype 47.3 (09/28/2019)
+@@SYS:Classes/DataTypes/jpeg.datatype
+jpeg.datatype 47.6 (06/21/2020)
+@@SYS:Classes/DataTypes/icon.datatype
+icon.datatype 47.3 (06/11/2020)
+@@SYS:Classes/Images/drawlist.image
+drawlist.image 47.4 (03/07/2020)
+@@SYS:Classes/Images/glyph.image
+glyph.image 47.9 (01/01/2021)
+@@SYS:Classes/Images/label.image
+label.image 47.5 (01/10/2021)
+@@SYS:Classes/Images/led.image
+led.image 47.2 (03/28/2020)
+@@SYS:Classes/Images/penmap.image
+penmap.image 47.4 (04/13/2020)
+@@SYS:Classes/Images/bevel.image
+bevel.image 47.13 (12/22/2020)
+@@SYS:Classes/Images/bitmap.image
+bitmap.image 47.2 (02/07/2021)
+@@SYS:Classes/Images/boingball.image
+boingball.image 47.3 (01/29/2021)
+@@SYS:Classes/USB/adaptecxchg.class
+adaptecxchg 4.5 (07/05/2013)
+© 2013 by Chris Hodges
+@@SYS:Classes/USB/asixeth.class
+asixeth 4.5 (03/12/2013)
+© 2007-2013 by Harry Sintonen and Chris Hodges
+@@SYS:Classes/USB/bootkeyboard.class
+bootkeyboard 4.5 (10/14/2014)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/bootmouse.class
+bootmouse 4.5 (10/14/2014)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/camdusbmidi.class
+camdusbmidi 4.5 (10/14/2014)
+© 2006-2010 by Chris Hodges
+@@SYS:Classes/USB/cdcacm.class
+cdcacm 4.5 (09/03/2010)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/dfu.class
+dfu 4.5 (10/14/2014)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/dm9601eth.class
+dm9601eth 4.5 (10/14/2014)
+© 2006-2010 by Harry Sintonen and Chris Hodges
+@@SYS:Classes/USB/egalaxtouch.class
+egalaxtouch 4.5 (10/14/2014)
+© 2004-2010 by Chris Hodges
+@@SYS:Classes/USB/ethwrap.class
+ethwrap 4.5 (10/14/2014)
+© 2006-2010 by Harry Sintonen and Chris Hodges
+@@SYS:Classes/USB/hid.class
+hid 4.4 (02/13/2010)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/hub.class
+hub 4.5 (10/14/2014)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/massstorage.class
+massstorage.class 4.5 (10/14/2014)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/moschipeth.class
+moschipeth 4.5 (10/14/2014)
+© 2009-2010 by Harry Sintonen and Chris Hodges
+@@SYS:Classes/USB/pegasus.class
+pegasus 4.5 (10/14/2014)
+© 2006-2010 by Harry Sintonen and Chris Hodges
+@@SYS:Classes/USB/printer.class
+printer 4.5 (10/14/2014)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/ptp.class
+ptp 4.5 (10/14/2014)
+© 2008-2010 by Chris Hodges
+@@SYS:Classes/USB/rawwrap.class
+rawwrap 4.5 (10/14/2014)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/rtl8150eth.class
+rtl8150eth 4.5 (10/14/2014)
+© 2009-2010 by Harry Sintonen and Chris Hodges
+@@SYS:Classes/USB/serialcp210x.class
+serialcp210x 4.5 (11/06/2012)
+© 2007-2010 by Chris Hodges
+@@SYS:Classes/USB/serialpl2303.class
+serialpl2303 4.5 (11/06/2012)
+© 2002-2010 by Chris Hodges
+@@SYS:Classes/USB/simplemidi.class
+simplemidi 4.5 (10/14/2014)
+© 2005-2010 by Chris Hodges
+@@SYS:Classes/USB/usbaudio.class
+usbaudio 4.5 (10/14/2014)
+© 2008-2010 by Chris Hodges
+@@SYS:Classes/USB/usbvideo.class
+usbvideo 4.5 (07/23/2011)
+© 2009-2010 by Chris Hodges
+@@SYS:Devs/Kickstarts/kick40068.A4000.RTB
+Could not find version information for 'SYS:Devs/Kickstarts/kick40068.A4000.RTB'
+@@SYS:Devs/Kickstarts/kick40068.A4000.PAT
+Could not find version information for 'SYS:Devs/Kickstarts/kick40068.A4000.PAT'
+@@SYS:Devs/Kickstarts/kick40068.A4000
+fs 40.1 (02/15/1993)
+@@SYS:Devs/Kickstarts/kick40068.A1200.RTB
+Could not find version information for 'SYS:Devs/Kickstarts/kick40068.A1200.RTB'
+@@SYS:Devs/Kickstarts/kick40068.A1200.PAT
+Could not find version information for 'SYS:Devs/Kickstarts/kick40068.A1200.PAT'

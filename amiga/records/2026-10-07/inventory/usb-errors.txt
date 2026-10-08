@@ -1,0 +1,32 @@
+3:45 PM|  0-poseidon.library: Welcome to poseidon 4.5 (14.10.14) © 2002-2014 by Chris Hodges (20110408)!
+3:45 PM|  0-poseidon.library: Event broadcaster started.
+3:45 PM|  0-poseidon.library: Say hello to asixeth.class V4.5 (Ethernet SANA driver for ASIX chipsets via usbasixeth.device).
+3:45 PM|  0-poseidon.library: Whoah! camdusbmidi.class V4.5 surprised as USB MIDI CAMD Interface class.
+3:45 PM|  0-poseidon.library: The door bell rang for cdcacm.class V4.5 (USB modems and OBEX via usbmodem.device).
+3:45 PM|  0-poseidon.library: Welcome dm9601eth.class V4.5 (Ethernet SANA driver for Davicom chipsets via dm9601eth.device) to the party.
+3:45 PM|  0-poseidon.library: Don't laugh at egalaxtouch.class V4.5 for Support for eGalax Touchscreens.
+3:45 PM|  0-poseidon.library: Time has come for hid.class V4.4 (Generic support for human interface devices) to join the show.
+3:45 PM|  0-poseidon.library: Start blaming hub.class V4.5 for helping at Root/external hub base class.
+3:45 PM|  0-poseidon.library: Ain't massstorage.class V4.5 useful for Supports storage devices via usbscsi.device?
+3:45 PM|  0-poseidon.library: Say hello to moschipeth.class V4.5 (Ethernet SANA driver for MosChip MCS7830 chipset via usbmoschipeth.device).
+3:45 PM|  0-poseidon.library: Whoah! pegasus.class V4.5 surprised as Ethernet SANA driver for Pegasus chipsets via usbpegasus.device.
+3:45 PM|  0-poseidon.library: The door bell rang for printer.class V4.5 (Bidirectional printer driver via usbparallel.device).
+3:45 PM|  0-poseidon.library: Welcome rtl8150eth.class V4.5 (Ethernet SANA driver for RTL8150 chipsets via rtl8150eth.device) to the party.
+3:45 PM|  0-poseidon.library: Don't laugh at serialcp210x.class V4.5 for CP210x serial adapter via serialcp210x.device.
+3:45 PM|  0-poseidon.library: Time has come for serialpl2303.class V4.5 (PL2303 serial adapter via serialpl2303.device) to join the show.
+3:45 PM|  0-poseidon.library: Start blaming usbaudio.class V4.5 for helping at USB Audio Streaming Interface class.
+3:45 PM|  0-poseidon.library: Ain't usbvideo.class V4.5 useful for USB Video Streaming Interface class via usbvideo.vhi?
+3:45 PM|  0-poseidon.library: Say hello to adaptecxchg.class V4.5 (Adaptec USBXChange (SCSI) firmware loader).
+3:45 PM|  0-poseidon.library: Whoah! bootkeyboard.class V4.5 surprised as Support for keyboards in boot protocol mode.
+3:45 PM|  0-poseidon.library: The door bell rang for bootmouse.class V4.5 (Support for mice/tablets in boot protocol mode).
+3:45 PM|  0-poseidon.library: Welcome dfu.class V4.5 (Firmware Upgrading/Downloading) to the party.
+3:45 PM|  0-poseidon.library: Don't laugh at ethwrap.class V4.5 for Ethernet SANA wrapper for simple devices via usbethwrap.device.
+3:45 PM|  0-poseidon.library: Time has come for ptp.class V4.5 (Support for DigiCams and MTP via PictureTransferProtocol (PTP)) to join the show.
+3:45 PM|  0-poseidon.library: Start blaming simplemidi.class V4.5 for helping at Simple MIDI-IN Stream class mapping to keyboard.
+3:45 PM|  0-poseidon.library: Ain't rawwrap.class V4.5 useful for Simple USB bulk IO wrapper via usbraw.device?
+3:45 PM|  0-poseidon.library: Enabling QuickIO for FreewayTriton EHCI USB Host Controller.
+3:45 PM|  0-poseidon.library: New hardware DEVS:USBHardware/freewaytritonz3usb.device/0 added (FreewayTriton EHCI USB Host Controller).
+3:45 PM|  0-poseidon.library: Root hub has been enumerated.
+3:45 PM|  0-hub.class: Hub with 3 ports successfully configured.
+3:45 PM|  0-hub.class: I'm in love with hub 'ISP1520'.
+3:45 PM|  0-poseidon.library: PoPo kicks ass.

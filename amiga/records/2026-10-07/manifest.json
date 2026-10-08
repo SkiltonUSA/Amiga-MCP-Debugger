@@ -1,0 +1,841 @@
+{
+  "capture_date": "2026-10-07",
+  "kind": "Historical session evidence and configuration snapshots; not a disk backup",
+  "fresh_capture_attempt": "Amiga 10.0.0.40 unreachable during backup; using earlier verified Mac records",
+  "files": [
+    {
+      "file": "inventory/A4000TX-System-Report.html",
+      "source": ".context/amiga/system-report/A4000TX-System-Report.html",
+      "bytes": 155325,
+      "sha256": "04769b60c0427aef71cd785aae9586e88766be76a01c3ca98edad8dd5a5ff7af",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/A4000TX-System-Report.pdf",
+      "source": ".context/amiga/system-report/A4000TX-System-Report.pdf",
+      "bytes": 558533,
+      "sha256": "04c5559ce143e7a6aaf01395f8faa284a2313776987d29d7b9f11de7efad9850",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/audio-preferences.json",
+      "source": ".context/amiga/system-report/audio-preferences.json",
+      "bytes": 686,
+      "sha256": "b4ebc05430404b6e0c138a73c92c2962fa072779e24c0e9d5507e5eaf98d2d56",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/avail.txt",
+      "source": ".context/amiga/system-report/avail.txt",
+      "bytes": 184,
+      "sha256": "6fabc4cfc4c95a954a813575d93364fccdfad9e620f2a652c44a3c67ce0ba8b1",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/bridgeversion.txt",
+      "source": ".context/amiga/system-report/bridgeversion.txt",
+      "bytes": 74,
+      "sha256": "46aed9aa2f7c2fb29a925ecb9e3a8e9bcf023450da9261e497970a56ae62a60d",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/cpu.txt",
+      "source": ".context/amiga/system-report/cpu.txt",
+      "bytes": 153,
+      "sha256": "a0db5295bf58dda36a75a04a27da6dfc42e892c4cac867f68576f2948c7e6ee3",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/date.txt",
+      "source": ".context/amiga/system-report/date.txt",
+      "bytes": 28,
+      "sha256": "80e0cb4f318a0fce30fd97d53d3546ece6f7847f53be2136c715655d0a2c9476",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/expansion-boards.csv",
+      "source": ".context/amiga/system-report/expansion-boards.csv",
+      "bytes": 727,
+      "sha256": "cc9827733b814f8bb6b846a8baabc45e849d993697255e8f81674d92f395f838",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/filesystem-resources.csv",
+      "source": ".context/amiga/system-report/filesystem-resources.csv",
+      "bytes": 454,
+      "sha256": "9563a59dec468483cd10f85ff32acab7e7f5cef3fa17a17bff66485e3138a67d",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/filesystems.c",
+      "source": ".context/amiga/system-report/filesystems.c",
+      "bytes": 598,
+      "sha256": "f4adbc2d7bb1fb6e343b65a38500a3f0cd0388b4532166101d5eb60aafb771b2",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/filesystems.tsv",
+      "source": ".context/amiga/system-report/filesystems.tsv",
+      "bytes": 422,
+      "sha256": "2d234d8978e586fd223c4f160932dbfaf75e806fc077d0f1c50c7813e9bce5f0",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/freeway-identification.json",
+      "source": ".context/amiga/system-report/freeway-identification.json",
+      "bytes": 397,
+      "sha256": "582aa40f5518ffe0ab5061ba518028fe39fa502f74d0362047dfb7301bbffdb4",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/hardware-inventory.csv",
+      "source": ".context/amiga/system-report/hardware-inventory.csv",
+      "bytes": 3459,
+      "sha256": "3609c31ce47e011392ecbfceffd93f35c6eb917456df2309b1ea0f1fa2c6411e",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/info.txt",
+      "source": ".context/amiga/system-report/info.txt",
+      "bytes": 461,
+      "sha256": "f8e0df60709a95c1b90c0aaa03198e37dbcf2840b17392f56efa05160a79cb55",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/installed-component-versions.csv",
+      "source": ".context/amiga/system-report/installed-component-versions.csv",
+      "bytes": 50897,
+      "sha256": "8a68acd170585e950380cb60dedf1bb4977567868e825be91f7fe9d677ee1639",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/interface.txt",
+      "source": ".context/amiga/system-report/interface.txt",
+      "bytes": 1015,
+      "sha256": "9306c386b6885d4a89ee628a0f78a8e5fbe8a2b8bfdb173bf1f811a186fa213e",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/inventory.c",
+      "source": ".context/amiga/system-report/inventory.c",
+      "bytes": 7779,
+      "sha256": "7377bac569943ac0dcd750bf29158600ac2af91727845cf819bfa266a6dd48c1",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/lib-files.txt",
+      "source": ".context/amiga/system-report/lib-files.txt",
+      "bytes": 4120,
+      "sha256": "6eaf0c5ac722454536d0dc8e388334ffb86284ed4fa337312fe959c3e86d0c08",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/live-overview.json",
+      "source": ".context/amiga/system-report/live-overview.json",
+      "bytes": 10071,
+      "sha256": "7ace6da5aaf0dab31f1047803e379804361c1763fcb9edf9f224dd8118dd4542",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/loaded-libraries-and-devices.csv",
+      "source": ".context/amiga/system-report/loaded-libraries-and-devices.csv",
+      "bytes": 10181,
+      "sha256": "4acac76410a4c9d6cf39f568e2dca042f10e27f0e3dc671367482422eb933f4d",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/memory-map.csv",
+      "source": ".context/amiga/system-report/memory-map.csv",
+      "bytes": 550,
+      "sha256": "4526d1de1bd28f1e2d52283d96f8a503b2098f9254ac322e4be98a6120bc745c",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/mount-BDH0.txt",
+      "source": ".context/amiga/system-report/mount-BDH0.txt",
+      "bytes": 238,
+      "sha256": "b05cabfc06802945bc30c5681d57d6cca525a28e41f8ffc7e41357f3c09b45a4",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/mount-BDH1.txt",
+      "source": ".context/amiga/system-report/mount-BDH1.txt",
+      "bytes": 263,
+      "sha256": "32ddabd6aff529d78f27d303d1fbb41f30c996f785701fbf69429d631be19283",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/mount-DF0.txt",
+      "source": ".context/amiga/system-report/mount-DF0.txt",
+      "bytes": 198,
+      "sha256": "c14024dad1648b7ebf77b84698d42f49f6e65119d9edf5e985381d2b5d789c84",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/mount-SDH0.txt",
+      "source": ".context/amiga/system-report/mount-SDH0.txt",
+      "bytes": 247,
+      "sha256": "223f27fa0cabd020848f205f916107002282499f81d8bd7e124c6da59e533971",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/native.tsv",
+      "source": ".context/amiga/system-report/native.tsv",
+      "bytes": 11019,
+      "sha256": "c73b8e9cdbcffa28387b64e34184fc85d3e3c0331252a6f0f081d01176c3eea0",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/network.txt",
+      "source": ".context/amiga/system-report/network.txt",
+      "bytes": 708,
+      "sha256": "0dd93bd3801bc8cdf6f325a5402dea4a159938ba2be35c88e3dfcbd44c3c7bc4",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/prior-firmware-install.json",
+      "source": ".context/amiga/system-report/prior-firmware-install.json",
+      "bytes": 1145,
+      "sha256": "14db2261c3857156ab7e09da7690abae8eee5b1c0ebb996f3eee1bcfcc1c0c8a",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/prior-roadie-install.json",
+      "source": ".context/amiga/system-report/prior-roadie-install.json",
+      "bytes": 840,
+      "sha256": "f62acae05d6e4ab8350b90296aa1c8eb6e3cde72c0d6d222e20bbba7958dbf28",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/prior-scummvm-install.json",
+      "source": ".context/amiga/system-report/prior-scummvm-install.json",
+      "bytes": 1536,
+      "sha256": "d9e104af4249d10e1080ee9236fa7ab378888fd2260b4dfcc357bdc46a4ff916",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/prior-zzbench-results.json",
+      "source": ".context/amiga/system-report/prior-zzbench-results.json",
+      "bytes": 1095,
+      "sha256": "1059ca0c1026f07149f45df4df17b74c52fbae4496038dd77d7d94e9f86447ea",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/report-data.json",
+      "source": ".context/amiga/system-report/report-data.json",
+      "bytes": 111676,
+      "sha256": "2beb5e5cbb312008696538c6d0abf3381ff2774fd0487baaa1cf8840dbe748ee",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/roadieversion.txt",
+      "source": ".context/amiga/system-report/roadieversion.txt",
+      "bytes": 48,
+      "sha256": "6ac87a5470fc610cfeabe236494922b9a0b9ddcfc0e78d26d9130b6ef81d9c2d",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/showconfig.txt",
+      "source": ".context/amiga/system-report/showconfig.txt",
+      "bytes": 1080,
+      "sha256": "87cc15e9e17fd3a52548493b8dbf667c008ba466b6a83ca27830bf77fa705a5e",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/sockets.txt",
+      "source": ".context/amiga/system-report/sockets.txt",
+      "bytes": 358,
+      "sha256": "303ca2dfc5a5d731e8e7a2349608a0a7d02392401fd179a4719204a16fae2fa9",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/startup-check.txt",
+      "source": ".context/amiga/system-report/startup-check.txt",
+      "bytes": 37,
+      "sha256": "2f36f898383163ba23ef79de9b5759e0cdbcb4056f0d0aba0f6eff12741aae99",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/startup.txt",
+      "source": ".context/amiga/system-report/startup.txt",
+      "bytes": 1677,
+      "sha256": "2360b42af7949cad6f9aa03672c25a5dde2a8ae436e8930405e34112af744645",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/system-files.csv",
+      "source": ".context/amiga/system-report/system-files.csv",
+      "bytes": 188269,
+      "sha256": "cd62e7a274fd8e08a6c19e054ecb901a562130310a2402936a0eb959728a12cd",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/system-files.txt",
+      "source": ".context/amiga/system-report/system-files.txt",
+      "bytes": 196477,
+      "sha256": "632f681f1e18eb84faaab6d02d609af4cc2d6757d14d9ef981b817456b56b223",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/usb-errors.txt",
+      "source": ".context/amiga/system-report/usb-errors.txt",
+      "bytes": 3560,
+      "sha256": "741bb85d011b2d4bd82c97937ef0507971852a6ba5d3c96e08ba482f7b0740db",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/usb-root.txt",
+      "source": ".context/amiga/system-report/usb-root.txt",
+      "bytes": 1408,
+      "sha256": "2b6b0fe8a6ed74ec669064d6e5c46a63e9eb767c1f4726b8abe7bdf8e1274951",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/usb.txt",
+      "source": ".context/amiga/system-report/usb.txt",
+      "bytes": 135,
+      "sha256": "cb9c9e5bcffb9ed79a1751ac1b19c2c8d33aa8ec5076103af5d94381c856b0b6",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/user-startup.txt",
+      "source": ".context/amiga/system-report/user-startup.txt",
+      "bytes": 1757,
+      "sha256": "829919d781002cbf9b58be5f885650e4fdfb67a7a17afb951870d7096a373177",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/verification.json",
+      "source": ".context/amiga/system-report/verification.json",
+      "bytes": 309,
+      "sha256": "18e44a43bf0eef1b96e0a8be2460907b7f15ab94e3ea4bbb6ed27153fe9b86da",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/version.txt",
+      "source": ".context/amiga/system-report/version.txt",
+      "bytes": 46,
+      "sha256": "fc47f2e24803c8a9952835db596f77ec043f4982611cce97ac1c03a6818fabca",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-0.txt",
+      "source": ".context/amiga/system-report/versions-0.txt",
+      "bytes": 2689,
+      "sha256": "0a434bd14134423fc63bb16c53e782ce726b75cca2eb6d6961f70ec06e1e476c",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-1.txt",
+      "source": ".context/amiga/system-report/versions-1.txt",
+      "bytes": 3348,
+      "sha256": "80bca53805c1b1aaf0926a5e6bf8f5fb7b919aceb280d18c02f397d899235bd5",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-10.txt",
+      "source": ".context/amiga/system-report/versions-10.txt",
+      "bytes": 4336,
+      "sha256": "9f70850696eb7c334d3c96ea408e9ed126c424b7820e2d76d1071de2448c99a8",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-2.txt",
+      "source": ".context/amiga/system-report/versions-2.txt",
+      "bytes": 2441,
+      "sha256": "51411f81e71745808fbf4bc7b857f0ef72c1dd25453c426d01db5621dc4f1b7c",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-3.txt",
+      "source": ".context/amiga/system-report/versions-3.txt",
+      "bytes": 2595,
+      "sha256": "41e90c0dd0a72865289cf6be887e74c91ebf48b5baba804ccd3d738be971658a",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-4.txt",
+      "source": ".context/amiga/system-report/versions-4.txt",
+      "bytes": 1947,
+      "sha256": "8f54a342055c0b36331a19311ae35ec65e6702ee4059a92e7d687ffa2a420c76",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-5.txt",
+      "source": ".context/amiga/system-report/versions-5.txt",
+      "bytes": 2785,
+      "sha256": "6c56ebff3a50d21bec7047a62aad165e896a3e7958e517059c9b38eac185f348",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-6.txt",
+      "source": ".context/amiga/system-report/versions-6.txt",
+      "bytes": 3374,
+      "sha256": "f8e20f40c6fdc0516305a091844813921029dd0f6c9a62c63b01890547f60f5d",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-7.txt",
+      "source": ".context/amiga/system-report/versions-7.txt",
+      "bytes": 3850,
+      "sha256": "0140ddc07c3edb0bf09fc23501de21a1fcf1fae357edbf24890519accd0626c1",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-8.txt",
+      "source": ".context/amiga/system-report/versions-8.txt",
+      "bytes": 3244,
+      "sha256": "37865b697b19162e3e00e690793d9d31cdb9dc58b4331e57b9d2626500c7bc16",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/versions-9.txt",
+      "source": ".context/amiga/system-report/versions-9.txt",
+      "bytes": 3753,
+      "sha256": "3cd66182d1d844a20bc9ad95055d7b1aa06b1423c161085715d917f6801bdc57",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/volumes.csv",
+      "source": ".context/amiga/system-report/volumes.csv",
+      "bytes": 439,
+      "sha256": "ada7143de96ba3d4c7f64da3448427e8c68a6c711ca3891ecb1cfaf07c56ba46",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/wbstartup.txt",
+      "source": ".context/amiga/system-report/wbstartup.txt",
+      "bytes": 326,
+      "sha256": "b472abc2a7c1929a344ac0b781caf434ee5c1fea8ba2bebc9e81a57f7241b210",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/zz-version.txt",
+      "source": ".context/amiga/system-report/zz-version.txt",
+      "bytes": 49,
+      "sha256": "12566451bee7bbfdf948a086594b7e906a84b6d93c1114215a7025288e66848a",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/build_report.py",
+      "source": ".context/amiga/system-report/build_report.py",
+      "bytes": 41061,
+      "sha256": "12113d0fad6896f4c483ca965c539e76829a1d411d143a5287901a9bb2516f22",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/verify_report.py",
+      "source": ".context/amiga/system-report/verify_report.py",
+      "bytes": 2454,
+      "sha256": "26fb28352aae774797df2eca9c0cd336bcdcabd22e2a4220cb31d1dff7a85bba",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/fetch.py",
+      "source": ".context/amiga/system-report/fetch.py",
+      "bytes": 1000,
+      "sha256": "71714c015509e0f0f54a31c11614a768749d0754e122aea134ffef16f42e654a",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/base-files.json",
+      "source": ".context/amiga/system-report/base-files.json",
+      "bytes": 457,
+      "sha256": "f042dc01fbc1b09860dbfc0f66eac6b4ef27c7610cc1ac38f4bd14179aa96b5f",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "inventory/ahi.prefs",
+      "source": ".context/amiga/system-report/ahi.prefs",
+      "bytes": 248,
+      "sha256": "69ab321259e398b3dfc1e7646b27568f68a3670bd77b988dd9746ba636218e8b",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "firmware/install-manifest.json",
+      "source": ".context/amiga/firmware/install-manifest.json",
+      "bytes": 1145,
+      "sha256": "14db2261c3857156ab7e09da7690abae8eee5b1c0ebb996f3eee1bcfcc1c0c8a",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "firmware/INSTALL-XACP.txt",
+      "source": ".context/amiga/firmware/INSTALL-XACP.txt",
+      "bytes": 1864,
+      "sha256": "f2e38b3db99edf140d9bcb51bfc63deae0d4782311bbf646a9cbc9ab026ffc2f",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "firmware/postboot-checks.json",
+      "source": ".context/amiga/firmware/postboot-checks.json",
+      "bytes": 805,
+      "sha256": "49f2895fa6611b213f879c43ea7b65a048c7366eb4d8b7a40a35998999cb06d2",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "firmware/xacp-handshake.json",
+      "source": ".context/amiga/firmware/xacp-handshake.json",
+      "bytes": 504,
+      "sha256": "b37af89135019a30a0a0d247144c85c29b1439220964e824fe88a84e673f1baf",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "firmware/xacp-probe.c",
+      "source": ".context/amiga/firmware/xacp-probe.c",
+      "bytes": 1799,
+      "sha256": "665c88887565f5169758b99ddeb4266918949cc29a0d751b95daa88cfb8af9ea",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "firmware/zz-version.c",
+      "source": ".context/amiga/firmware/zz-version.c",
+      "bytes": 782,
+      "sha256": "f6b83e4ac51c150d9d645ecccf84bb738c9ea8804a447471c196a34d7c802c69",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "roadie/install-record.json",
+      "source": ".context/amiga/roadie/install-record.json",
+      "bytes": 840,
+      "sha256": "f62acae05d6e4ab8350b90296aa1c8eb6e3cde72c0d6d222e20bbba7958dbf28",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "roadie/User-Startup.before",
+      "source": ".context/amiga/roadie/User-Startup.before",
+      "bytes": 1622,
+      "sha256": "bede7d50b184331d2ad21938bc2cb3aef7899551eeaec04a5a26eef6e2f5e41b",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "roadie/User-Startup.after",
+      "source": ".context/amiga/roadie/User-Startup.after",
+      "bytes": 1757,
+      "sha256": "829919d781002cbf9b58be5f885650e4fdfb67a7a17afb951870d7096a373177",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "roadie/Network-Startup.before",
+      "source": ".context/amiga/roadie/Network-Startup.before",
+      "bytes": 138,
+      "sha256": "4037fd349114f56304846cf5bd1e0217ddb41836daf2d46cd833cb85f6ec1369",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "roadie/Start-Amiga-Bridge.before",
+      "source": ".context/amiga/roadie/Start-Amiga-Bridge.before",
+      "bytes": 577,
+      "sha256": "e3be1d84f0894d279b05c87850905a1330a6bd2c20a202cd9e518f7c6a0f68b4",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "scummvm/install-record.json",
+      "source": ".context/amiga/scummvm/install-record.json",
+      "bytes": 1536,
+      "sha256": "d9e104af4249d10e1080ee9236fa7ab378888fd2260b4dfcc357bdc46a4ff916",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "scummvm/MT32-Setup.txt",
+      "source": ".context/amiga/scummvm/MT32-Setup.txt",
+      "bytes": 822,
+      "sha256": "d9f5a31e8dfd53c3cd73735b328046f53354b1f8e6cb1a1f7b0978a0793c77a2",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "scummvm/camd-probe.c",
+      "source": ".context/amiga/scummvm/camd-probe.c",
+      "bytes": 1667,
+      "sha256": "5d8ae41997bc97884a6f011932c59f51300fb6202477502b123c1c824cca4184",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "scummvm/scummvm-mt32.ini",
+      "source": ".context/amiga/scummvm/scummvm-mt32.ini",
+      "bytes": 775,
+      "sha256": "235815b73e54d1321970983bbdca4f643d2052c7de6e14745ac4a9241d770825",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "scummvm/midi.prefs.before",
+      "source": ".context/amiga/scummvm/midi.prefs.before",
+      "bytes": 818,
+      "sha256": "044d27b884b223ce4918bb7d398b25bcca5013a1fbf2267fe1b3c1b820afbaea",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "scummvm/midi.prefs.saved",
+      "source": ".context/amiga/scummvm/midi.prefs.saved",
+      "bytes": 818,
+      "sha256": "044d27b884b223ce4918bb7d398b25bcca5013a1fbf2267fe1b3c1b820afbaea",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzbench/results.json",
+      "source": ".context/amiga/zzbench/results.json",
+      "bytes": 1095,
+      "sha256": "1059ca0c1026f07149f45df4df17b74c52fbae4496038dd77d7d94e9f86447ea",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzbench/RESULTS.txt",
+      "source": ".context/amiga/zzbench/RESULTS.txt",
+      "bytes": 842,
+      "sha256": "9a81ddfcbadd908105321d36f9b222bb747b327bc3c1e661ca8a45eb0c8daa9a",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzquake/install-record.json",
+      "source": ".context/amiga/zzquake/install-record.json",
+      "bytes": 945,
+      "sha256": "19d724ba4ae3cb45990c26fa803f8528a9a45a4a12f5c40405c8ddb3c4cdf447",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzquake/transfer-manifest.json",
+      "source": ".context/amiga/zzquake/transfer-manifest.json",
+      "bytes": 900,
+      "sha256": "6141decfda85ba45116991d67a16866a13319c477582a31fde2d9254b75d720c",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzquake/mcp-call.py",
+      "source": ".context/amiga/zzquake/mcp-call.py",
+      "bytes": 593,
+      "sha256": "dbc26570b678a49586f31e8b224224557ca4fd329c5b06361a4120838842bce1",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdoom/install-record.json",
+      "source": ".context/amiga/zzdoom/install-record.json",
+      "bytes": 2118,
+      "sha256": "b997b9cc94d7f33fcee8ab7bfe7f69ed55e379427dbd218c0577a587038d8e91",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdoom/Setup-Notes.txt",
+      "source": ".context/amiga/zzdoom/Setup-Notes.txt",
+      "bytes": 1384,
+      "sha256": "9b6796f96086ecfebe4a990421f2d7d335c95ca92c2140d8601961b6d8ecdcb1",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdoom/configure-icons.c",
+      "source": ".context/amiga/zzdoom/configure-icons.c",
+      "bytes": 1567,
+      "sha256": "1c959e100aa5ef31d274c1fd2d929326ac71a9159c406ba97bd34af831379c30",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdoom/transfer-manifest.json",
+      "source": ".context/amiga/zzdoom/transfer-manifest.json",
+      "bytes": 856,
+      "sha256": "286440b5274c1fef095847d05524833fae9aaf4f8223007a3ae8f307802dd656",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdoom/wad-md5.txt",
+      "source": ".context/amiga/zzdoom/wad-md5.txt",
+      "bytes": 66,
+      "sha256": "cb586b1a35df8dd437d9990539f326d8bcac01da4ba4b567dfb8dbf274127b25",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzquake-hires/install-record.json",
+      "source": ".context/amiga/zzquake-hires/install-record.json",
+      "bytes": 1378,
+      "sha256": "869d4d50021bed4554e4093bee34ba141ffb55dc0712166038b88760dcdc192c",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzquake-hires/HighRes-Setup.txt",
+      "source": ".context/amiga/zzquake-hires/HighRes-Setup.txt",
+      "bytes": 1346,
+      "sha256": "a38f61bfd4ba1061dc99db72f4505cdab223a1d794ce6953092e56774d40c66a",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzquake-hires/archive-manifest.json",
+      "source": ".context/amiga/zzquake-hires/archive-manifest.json",
+      "bytes": 2286,
+      "sha256": "4677033af331862ed68f9297053d71247339a84742c26dc37b3617617c67c01f",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzquake-hires/checksum-verification.json",
+      "source": ".context/amiga/zzquake-hires/checksum-verification.json",
+      "bytes": 2091,
+      "sha256": "6a33b754bea0bfb2eca145426b8456d13d8a2b6ba3a604b321312658c24c7fe7",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzquake-hires/installed-md5.txt",
+      "source": ".context/amiga/zzquake-hires/installed-md5.txt",
+      "bytes": 1251,
+      "sha256": "c0c0587dfed268dd27c2f4e1e89a8d57b850816a74e1fa18f2f4b6f2d92c9221",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/install-record.json",
+      "source": ".context/amiga/zzdarkforces/install-record.json",
+      "bytes": 3296,
+      "sha256": "79bab2838998a674c9b7ac946a8372a2a539cf8530877925e05e1a6216dd1b18",
+      "host_paths_normalized": true
+    },
+    {
+      "file": "zzdarkforces/A4000TX-Setup-with-data.txt",
+      "source": ".context/amiga/zzdarkforces/A4000TX-Setup-with-data.txt",
+      "bytes": 2092,
+      "sha256": "66d84bee906ce37b599ae0badd069e94f5db66636e398c05d59bef9156e3227b",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/archive-manifest.json",
+      "source": ".context/amiga/zzdarkforces/archive-manifest.json",
+      "bytes": 3504,
+      "sha256": "ebc98281ea298a4d56a30c16bb24fb533d34be47b92fb4b12419b8c07951b13c",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/checksum-verification.json",
+      "source": ".context/amiga/zzdarkforces/checksum-verification.json",
+      "bytes": 3488,
+      "sha256": "d9006352e33b4ee9e9b86aa0ecaac864305f2f4ef39cbbba91114eef15507706",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/data-transfer-progress.json",
+      "source": ".context/amiga/zzdarkforces/data-transfer-progress.json",
+      "bytes": 1169,
+      "sha256": "dde54c5f2563b2af680b88788be0e078a32a9b072b9aace9b733b4d9aa1d2fc2",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/iso-data-manifest.json",
+      "source": ".context/amiga/zzdarkforces/iso-data-manifest.json",
+      "bytes": 17738,
+      "sha256": "4f2757c78a794c21cbe9228911768934ef05ac8b9274fe0dfa253170aea8a203",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/iso-extents.json",
+      "source": ".context/amiga/zzdarkforces/iso-extents.json",
+      "bytes": 32338,
+      "sha256": "4353bfa3ab9f78e74429566bdee21bbae294f9b262c1b65c760feb35c2953155",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/iso-extraction-record.json",
+      "source": ".context/amiga/zzdarkforces/iso-extraction-record.json",
+      "bytes": 703,
+      "sha256": "06c8f13a45a59dcd0f7d04115ae07e442f7c54b8f96bba9d3f9db645b14f8c56",
+      "host_paths_normalized": true
+    },
+    {
+      "file": "zzdarkforces/release-SHA256SUMS.txt",
+      "source": ".context/amiga/zzdarkforces/release-SHA256SUMS.txt",
+      "bytes": 193,
+      "sha256": "4debcfba8e736d451951bf8777db3ed71fb4468e0ced44f7a56e8f17021336d1",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/set-video-mode.c",
+      "source": ".context/amiga/zzdarkforces/set-video-mode.c",
+      "bytes": 1472,
+      "sha256": "90c62af8a09a2bdfa96671850c3d775150864b0a006a3426ea8a57890b5fa4db",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "zzdarkforces/extract_iso_data.py",
+      "source": ".context/amiga/zzdarkforces/extract_iso_data.py",
+      "bytes": 1713,
+      "sha256": "e5fe2cacd1297d1b292a516f83ea6c104333d11ddc76ab4f005311e2fd1cd35f",
+      "host_paths_normalized": true,
+      "archive_adjustment": "ISO path supplied via argv instead of a hard-coded Mac Downloads path"
+    },
+    {
+      "file": "zzdarkforces/session-640x480.log",
+      "source": ".context/amiga/zzdarkforces/session-640x480.log",
+      "bytes": 22363,
+      "sha256": "492feb1ba95b0be8bca484efc56277a043ed9996111eab9ebe05a90b34d87ad8",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "simcity-check/search.txt",
+      "source": ".context/amiga/simcity-check/search.txt",
+      "bytes": 257,
+      "sha256": "03d1ed17ef451fed4c6158b214975d6cd5c2b5221ce70e22ab769a264a8cb860",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "bridge/hardware-check.json",
+      "source": ".context/amiga/hardware-check.json",
+      "bytes": 2707,
+      "sha256": "21986edc36e1a5f50aafae4fddfc7616cea99d46032fe5c363a4bb26f9ba7fe6",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "bridge/probe-run.json",
+      "source": ".context/amiga/probe-run.json",
+      "bytes": 1039,
+      "sha256": "33cca5a6aada190de49050ceb8144a17d5adafac264dd9149ea883cc9991914a",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "bridge/amifuse-review.json",
+      "source": ".context/amiga/amifuse-review.json",
+      "bytes": 790,
+      "sha256": "8ec156ba6d6f1311011f527bc1716fa7bba818b519a5b9d7b0dc3e58bf85005d",
+      "host_paths_normalized": true
+    },
+    {
+      "file": "usb/freeway-installed-checksums.json",
+      "source": ".context/amiga/freeway-installed-checksums.json",
+      "bytes": 4815,
+      "sha256": "18637bf10ebfe1c1e8e33f3ddfb1fe3174f5024cfa993708878083bc102f1a8d",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "usb/freeway-fat95-setup.json",
+      "source": ".context/amiga/freeway-fat95-setup.json",
+      "bytes": 1877,
+      "sha256": "41694d6108e3c26b06b8220f58e99045d24f8077070dee9bdd4e149a4ab62425",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "usb/freeway-boot-setup.json",
+      "source": ".context/amiga/freeway-boot-setup.json",
+      "bytes": 5307,
+      "sha256": "47e806110a7e451d5a2fab0dd9679b8db811cd2300a8cda35cc6e8a8beb73714",
+      "host_paths_normalized": true
+    },
+    {
+      "file": "usb/freeway-final-status.json",
+      "source": ".context/amiga/freeway-final-status.json",
+      "bytes": 331,
+      "sha256": "014278d8c5cac6dad1bc8dc0ed7359afc8af7e948f586da70335fcbf5376d3e9",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "usb/freeway-install-plan.json",
+      "source": ".context/amiga/freeway-install-plan.json",
+      "bytes": 9923,
+      "sha256": "d82cf0f678de05b2cc0d11f027f263c3b2ce41e63327a712e9dde4ca6857127d",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "host-settings.captured.json",
+      "source": ".context/amiga/settings.json",
+      "bytes": 320,
+      "sha256": "9565a061ba2e6ef0af51bd9ec54727c0a21d94f94fc015a187f8c5c8594af9a4",
+      "host_paths_normalized": false
+    },
+    {
+      "file": "usb/attachment-identities.json",
+      "source": ".context/amiga/backup/attachment-identities.json",
+      "bytes": 457,
+      "sha256": "c01742b2d3fc60432dd5ffca132f021e95db803c9d412cf28841af1f60c6fb5e",
+      "host_paths_normalized": false
+    }
+  ]
+}

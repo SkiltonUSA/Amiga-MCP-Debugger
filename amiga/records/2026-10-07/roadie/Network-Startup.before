@@ -1,0 +1,4 @@
+; $VER: Network-Startup 1.3 (22.11.2010)
+FailAt 30
+Run >NIL: NetLogViewer CX_POPUP=NO
+AddNetInterface DEVS:NetInterfaces/~(#?.info) QUIET

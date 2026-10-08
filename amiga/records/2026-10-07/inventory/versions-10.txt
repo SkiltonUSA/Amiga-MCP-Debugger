@@ -1,0 +1,124 @@
+@@SYS:MUI/Libs/mui/Settingsgroup.mui
+Settingsgroup.mui 19.15 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/StringHistory.mcc
+StringHistory.mcc 11.4 (12/11/2006)
+written by Thomas@Igracki.de
+@@SYS:MUI/Libs/mui/TextHistory.mcc
+TextHistory.mcc 11.8 (12/27/2006)
+written by Thomas@Igracki.de
+@@SYS:MUI/Libs/mui/Virtgroup.mui
+Virtgroup.mui 19.10 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Volumelist.mui
+Volumelist.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Aboutmui.mui
+Aboutmui.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Boopsi.mui
+Boopsi.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Busy.mcc
+Busy.mcc 16.36 (02/09/1997)
+Copyright 1994-1997 kmel, Klaus Melchior
+@@SYS:MUI/Libs/mui/Busy.mcp
+Busy.mcp 16.32 (02/09/1997)
+Copyright 1995-1997 kmel, Klaus Melchior
+@@SYS:MUI/Libs/mui/Coloradjust.mui
+Coloradjust.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Colorfield.mui
+Colorfield.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Crawling.mcc
+Crawling.mcc 16.8 (02/08/1997)
+Copyright 1995-1997 kmel, Klaus Melchior
+@@SYS:MUI/Libs/mui/Dirlist.mui
+Dirlist.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Dtpic.mui
+Dtpic.mui 19.13 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Floattext.mui
+Floattext.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Frameadjust.mui
+Frameadjust.mui 19.14 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Framedisplay.mui
+Framedisplay.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Gauge.mui
+Gauge.mui 19.9 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Imageadjust.mui
+Imageadjust.mui 19.14 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Imagedisplay.mui
+Imagedisplay.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Knob.mui
+Knob.mui 19.10 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Levelmeter.mui
+Levelmeter.mui 19.10 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Listtree.mcc
+Listtree.mcc 17.36 (01/30/1997)
+Copyright 1995-1997 kmel, Klaus Melchior
+@@SYS:MUI/Libs/mui/Listtree.mcp
+Listtree.mcp 17.13 (01/30/1997)
+Copyright 1995-1997 kmel, Klaus Melchior
+@@SYS:MUI/Libs/mui/ListtreeName.mcc
+ListtreeName.mcc 17.6 (01/30/1997)
+Copyright 1995-1997 kmel, Klaus Melchior
+@@SYS:MUI/Libs/mui/MagicWB.mcc
+MagicWB.mcc 19.5 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/NBalance.mcc
+NBalance.mcc 15.28 (08/31/2021)
+Copyright (C) 2008-2021 NList Open Source Team [OS3/m68k]
+@@SYS:MUI/Libs/mui/NBitmap.mcc
+NBitmap.mcc 15.32 (08/31/2021)
+Copyright (C) 2007-2021 NList Open Source Team [OS3/m68k]
+@@SYS:MUI/Libs/mui/Newstring.mcc
+Newstring.mcc 16.18 (12/27/2005)
+Copyright 1995-1996 Rüdiger Sopp fixes by MM
+@@SYS:MUI/Libs/mui/Newstring.mcp
+Newstring.mcp 16.10 (12/29/1996)
+Copyright 1996 Rüdiger Sopp
+@@SYS:MUI/Libs/mui/NFloattext.mcc
+NFloattext.mcc 19.83 (08/31/2021)
+Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]
+@@SYS:MUI/Libs/mui/NList.mcc
+NList.mcc 20.147 (08/31/2021)
+Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]
+@@SYS:MUI/Libs/mui/NListtree.mcc
+NListtree.mcc 18.54 (08/31/2021)
+Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]
+@@SYS:MUI/Libs/mui/NListtree.mcp
+NListtree.mcp 18.42 (08/31/2021)
+Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]
+@@SYS:System/QDock/QDock2022/startQD
+startQD 1.0 Copyright 2022 Sami Vehmaa
+@@SYS:System/QDock/QDock2022/PrefsTrans
+QDock PrefsTrans 1.0 Copyright 2022 Sami Vehmaa
+@@SYS:System/QDock/QDock2022/IconV
+QDock IconV 1.3 Copyright 2022-2023 Sami Vehmaa
+@@SYS:System/QDock/QDock2022/IconL
+QDock IconL 1.1 Copyright 2022-2023 Sami Vehmaa
+@@SYS:System/QDock/QDock2022/IconH
+QDock IconH 1.5 Copyright 2022-2023 Sami Vehmaa
+@@SYS:System/QDock/Libs/wizard.library
+wizard.library 42.100 (04/20/2000)
+(20-Apr-00)
+@@SYS:System/QDock/Libs/ab3zlib.library
+ab3zlib.library 1.0
+(03/30/2016)
+@@SYS:System/QDock/QDock2022/settings/DropOnPrefs
+Could not find version information for 'SYS:System/QDock/QDock2022/settings/DropOnPrefs'
+@@SYS:System/QDock/QDock2022/CIU/Overlay
+Could not find version information for 'SYS:System/QDock/QDock2022/CIU/Overlay'
+@@SYS:System/QDock/QDock2022/CIU/Backdrop
+Could not find version information for 'SYS:System/QDock/QDock2022/CIU/Backdrop'

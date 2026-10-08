@@ -1,0 +1,112 @@
+[
+  {
+    "path": "ZZDarkForcesNEXT.info",
+    "bytes": 1636,
+    "sha256": "2270911da3b3d442c91b1e211a8bc40364928ac35e67c99c306a7024e001744d"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/COPYING_GPL2.txt",
+    "bytes": 17984,
+    "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/COPYING_GPL3.txt",
+    "bytes": 35149,
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/DATA.info",
+    "bytes": 1636,
+    "sha256": "d2ecdd4230858de7dcc5ac759aaed27a84276ca7334b1102ed5ddf384af67f4a"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/DATA/effects.json",
+    "bytes": 6093,
+    "sha256": "73e9732a0d6cf28d2c968cb42699cda96425d7e414171d4400f62394ade58fb5"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/DATA/pickups.json",
+    "bytes": 13299,
+    "sha256": "60659b320a91c36fe3a33a7abc500c68052fdcf5538bee03990a00fe2215fb31"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/DATA/projectiles.json",
+    "bytes": 14458,
+    "sha256": "44be4346023a7067fa79e0af14ee2b51d0b6cab5da73193ef1f51d8db17b60a1"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/DATA/README.txt",
+    "bytes": 720,
+    "sha256": "2dceb3b92c636c01edd274e815f6e6213456e2fcc8345f80ba7c051cc70d281d"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/DATA/TfeMessages.txt",
+    "bytes": 762,
+    "sha256": "92ae1717fab80257513e4155fa866ed0af7f5499e08f3a9a6cefb9c55f5f4e7c"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/DATA/weapons.json",
+    "bytes": 16393,
+    "sha256": "8a54e89d88618b7cea99a01fe12b82683a58cafd7042278132281ff465837967"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/LICENSING.txt",
+    "bytes": 1560,
+    "sha256": "cb65891e6416be57f9dec8a3e71e6c5a78f855171e6ef65e1883cdbe525d1496"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/RELEASE_NOTES.txt",
+    "bytes": 1480,
+    "sha256": "f4d2d968ea65a2789e80f8f0781434ee31a7ff9e2c89d0f7c1e6257f31a544f6"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/SoundFonts.info",
+    "bytes": 1636,
+    "sha256": "bae3ef87c35bad19ef895a4a63c99319340b7361fbeb4abf7122dca4d032d548"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/SoundFonts/README.txt",
+    "bytes": 688,
+    "sha256": "aeed29c8e765934e3054b82a8390a228c9533d4e3bcdd534f7f0153ab1ecc27c"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/SoundFonts/Roland SC-55.sf2",
+    "bytes": 3283278,
+    "sha256": "fca3e514b635a21789d4224e84865d2954a2a914d46b64aa8219ddb565c44869"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/SoundFonts/TimGM6mb.sf2",
+    "bytes": 5962044,
+    "sha256": "515ebbfac8cba71b56b882679cc469c31d809f2df04be771d569367be0c2ac94"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/SOUNDFONT_LICENSES.txt",
+    "bytes": 1575,
+    "sha256": "cf7a50ce7be94790e43129e70e137e31f4a2cf44b3ac648fcc3b0211477ce562"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/SOURCE.txt",
+    "bytes": 1153,
+    "sha256": "672f48cd761dfe6dd48e71dde10b4162ff9843e3999f2f72284144edfdd5941e"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/ZZDarkForces",
+    "bytes": 94136,
+    "sha256": "a149227b272805861d40b70c54d2a1dddac5056468b419db86905269896b067f"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/ZZDarkForces.info",
+    "bytes": 3614,
+    "sha256": "b63f032be9dcca8b1c78c7f10be303f2ed81ad8441a6af513db92e53eaebe71a"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/ZZDarkForcesNEXT_v1.0.readme",
+    "bytes": 11118,
+    "sha256": "72f4d05e3a658a37cb14142cdaeb96e6cf4afadf2f6217dafda3f57d127cc8e6"
+  },
+  {
+    "path": "ZZDarkForcesNEXT/zzdf.bin",
+    "bytes": 1467096,
+    "sha256": "d513ac045bff02f15b42f7c70276267842eba6ae1f21a34895212a214eae72e0"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "application": "ZZQuake HighRes Pack",
+  "version": "1.0",
+  "installed_utc": "2026-10-07T21:08:01.890556+00:00",
+  "source": "https://aminet.net/package/game/shoot/ZZQuakeHighRes",
+  "archive_sha256": "4ab82366fc5f9a7c07f7f2d582d8df419a6c75def0df43a4590f91b63d2f60b5",
+  "destination": "HDD50Gig:Games/ZZQuake",
+  "builds": {
+    "ZZQuake640": "640x480 / zzq640.bin",
+    "ZZQuake800": "800x600 / zzq800.bin",
+    "ZZQuake1024": "1024x768 / zzq1024.bin"
+  },
+  "data": "Existing id1/pak0.pak (Quake 1.06 shareware) reused; existing config and saves retained",
+  "documentation": "HighResDocs (upstream documents); HighRes-Setup.txt (local instructions)",
+  "icons": "Original Workbench icons, stack 32768, music/mod options disabled by default",
+  "firmware": "Existing XX19c / XACP 1.7; requirement XX19b or later satisfied; no change",
+  "verification": [
+    "All published archive SHA256 entries matched",
+    "Amiga LHA extraction completed: all files OK",
+    "15 installed pack files verified by native MD5Sum against local extracted contents",
+    "Original ZZQuake and zzquake.bin checksums unchanged",
+    "Existing 18689235-byte shareware pak0.pak present"
+  ],
+  "runtime": "Not launched: ZZDoom is running and ARM Core1 can run only one application at a time",
+  "cleanup": "Temporary Mac HTTP server stopped; Amiga RAM staging directory and archive removed"
+}

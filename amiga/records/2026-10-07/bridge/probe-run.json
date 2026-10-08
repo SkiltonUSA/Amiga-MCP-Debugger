@@ -1,0 +1,54 @@
+[
+  {
+    "tool": "amiga_list_clients",
+    "arguments": {},
+    "error": false,
+    "text": "Clients (0): none"
+  },
+  {
+    "tool": "amiga_launch",
+    "arguments": {
+      "command": "RAM:sixies_probe"
+    },
+    "error": false,
+    "text": "[OK] Started (proc 1): RAM:sixies_probe"
+  },
+  {
+    "tool": "amiga_list_clients",
+    "arguments": {},
+    "error": false,
+    "text": "Clients (1): sixies_probe(1)"
+  },
+  {
+    "tool": "amiga_client_info",
+    "arguments": {
+      "client": "sixies_probe"
+    },
+    "error": false,
+    "text": "Client: sixies_probe (id=1, msgs=7)\n  Variables: ticks(i32), running(i32)"
+  },
+  {
+    "tool": "amiga_get_var",
+    "arguments": {
+      "name": "ticks"
+    },
+    "error": false,
+    "text": "ticks (i32) = 2"
+  },
+  {
+    "tool": "amiga_get_var",
+    "arguments": {
+      "name": "ticks"
+    },
+    "error": false,
+    "text": "ticks (i32) = 5"
+  },
+  {
+    "tool": "amiga_get_var",
+    "arguments": {
+      "name": "running"
+    },
+    "error": false,
+    "text": "running (i32) = 1"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "build_id": 2351456434,
+  "source_identity_sha256": "8c2860b22a071c3b1fd5ade12f6695b5368dcb2c78d8e1f0579960463347140d",
+  "relay_probe_build_id": 1033421854,
+  "relay_probe_execution": "68k_host_demo",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+  "arm_execution_verified": false,
+  "files": {
+    "arm_debug_core.o": "038fba9741a2412c5096f5ee09a022cbedba2bd7f3e01e3405ae0743ce730dc8",
+    "arm_worker.o": "d6e64bfce874a3a5cb690e8242fe95bc90fd534fe7fce5ddf152ed75f4e259ab",
+    "libarm_debug_relay.a": "d8bc11e5cf7d7c5d45a63f1554217c1937e8a24e5910599af9fc073ca7d5a93e",
+    "arm-worker-points.json": "ade5f74dd836cd42413a7eef910b4890e3a9185596bb2894012fdb7f07f6c6cd",
+    "amiga-relay-probe": "d28b338d8efad8053d3b4f47133ac907ca02d3965745aaac5f356f563482636f"
+  }
+}

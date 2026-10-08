@@ -1,0 +1,17 @@
+{
+  "source": "<mac-downloads>/StarWarsDarkForces.iso",
+  "actual_bytes": 274380800,
+  "declared_volume_bytes": 274688000,
+  "sha256": "68a2a16d9cfd3ed54e2304162f07525b74a44012c1e3d340b0724606e3af9617",
+  "dark_files_extracted": 54,
+  "game_data_files_selected": 51,
+  "gob_validation": "All directory entries point within their GOB file",
+  "lfd_validation": "All chunks fit within their LFD file",
+  "truncated_files": [
+    "LECDEMOS/FTDEMO/VIDEO/VISION.SAN",
+    "LECDEMOS/FTDEMO/VIDEO/WHAMMO.NUT",
+    "LECDEMOS/FTDEMO/VIDEO/WORK.PRO",
+    "LECDEMOS/FTDEMO/VIDEO/WORK2.PRO"
+  ],
+  "assessment": "All Dark Forces directory files complete; truncation confined to unrelated Full Throttle demo files"
+}

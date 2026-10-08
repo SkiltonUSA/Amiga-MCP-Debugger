@@ -1,0 +1,450 @@
+ZZDarkForces 1.6 R3.2 r37 (pacer + atomic race-free mouse)
+data: PROGDIR:Data
+music: SoundFonts in PROGDIR:Soundfonts: Roland SC-55.sf2 TimGM6mb.sf2
+music: PROGDIR:Soundfonts/Roland SC-55.sf2
+mode 640x480 : game 640x480, asking P96 for 640x480 (RClassic_Float)
+
+Previous ZZDarkForces session returned Core1 cleanly
+(STATUS=FF, EXIT mark seen). Relaunch ALLOWED by the test protocol.
+Previous RETURN_STATE = C0DE0030  EXIT mark written, MMU switch started
+ZZ9000 board at 40000000
+timer.device ECLOCK ok (709379 Hz)
+blob: 1467096 bytes  sum=DD482461
+
+PREFLIGHT (before ARM_RUN)
+  41 extra .LFD/.tfe file(s) found by scanning
+  SoundFont PROGDIR:Soundfonts/Roland SC-55.sf2 (3283278 bytes) staged as SOUNDFNT.SF2
+  DARK.GOB        14244049 bytes -> 30000000
+  SOUNDS.GOB       5950117 bytes -> 30D95900
+  SPRITES.GOB      2816419 bytes -> 313423C0
+  TEXTURES.GOB     8929232 bytes -> 315F1D80
+  weapons.json       16393 bytes -> 31E75D80
+  projectiles.json     14458 bytes -> 31E79DC0
+  effects.json        6093 bytes -> 31E7D640
+  pickups.json       13299 bytes -> 31E7EE40
+  AGENTMNU.LFD       51808 bytes -> 31E82240
+  DARKPILO.CFG       14943 bytes -> 31E8ECC0
+  TfeMessages.txt       762 bytes -> 31E92740
+  LOCAL.MSG           2989 bytes -> 31E92A40
+  DFBRIEF.LFD      1073784 bytes -> 31E93600
+  MENU.LFD          207749 bytes -> 31F99880
+  JEDISFX.LFD      7175669 bytes -> 31FCC440
+  KFLYBY.LFD         87977 bytes -> 326A4240
+  LOGO.LFD           67779 bytes -> 326B9A00
+  MADINE1.LFD       216483 bytes -> 326CA300
+  NEB1.LFD         1106290 bytes -> 326FF0C0
+  PIT.LFD          1244180 bytes -> 3280D240
+  ROB1.LFD          869213 bytes -> 3293CE80
+  ROBOTX.LFD       1247007 bytes -> 32A11200
+  STANDARD.LFD       19191 bytes -> 32B41940
+  SUCCES.LFD        124435 bytes -> 32B46440
+  SWLOGO.LFD        431268 bytes -> 32B64A80
+  TUBECOMP.LFD     1410657 bytes -> 32BCDF40
+  1E.LFD            386159 bytes -> 32D265C0
+  ARCEXT.LFD         69403 bytes -> 32D84A40
+  ARCFLY.LFD        449178 bytes -> 32D95980
+  AWARD1.LFD       1339773 bytes -> 32E03440
+  AWARD2.LFD         99827 bytes -> 32F4A5C0
+  AWARD3.LFD        809308 bytes -> 32F62BC0
+  AWARD4.LFD        837011 bytes -> 33028540
+  BOBA.LFD          591083 bytes -> 330F4B00
+  BRIEF1.LFD        486992 bytes -> 33185000
+  BRIEF2.LFD        378007 bytes -> 331FBE80
+  CARGO1.LFD        742172 bytes -> 33258340
+  CARGO3.LFD       1682384 bytes -> 3330D680
+  DARKLOGO.LFD      611741 bytes -> 334A8280
+  ENDFLY.LFD         88001 bytes -> 3353D840
+  EXECCOMP.LFD      397323 bytes -> 33553040
+  EXECX.LFD        1217657 bytes -> 335B4080
+  EXITNEB.LFD       452579 bytes -> 336DD500
+  EXP1XX.LFD        223728 bytes -> 3374BD00
+  EXP2X.LFD         932081 bytes -> 33782700
+  EXP3XX.LFD        428211 bytes -> 33866000
+  FTEXTCRA.LFD       85891 bytes -> 338CE8C0
+  FULLCRED.LFD      611729 bytes -> 338E3880
+  GROMAS1.LFD       824906 bytes -> 33978E40
+  GROMASX.LFD      1495927 bytes -> 33A424C0
+  HOLOCU.LFD       1292375 bytes -> 33BAF840
+  JABBA1.LFD       1746245 bytes -> 33CEB0C0
+  JABBA2.LFD       1071870 bytes -> 33E95640
+  JABBA3.LFD       1192747 bytes -> 33F9B140
+  JABESCP.LFD       569161 bytes -> 340BE480
+  SOUNDFNT.SF2     3283278 bytes -> 34149400
+PREFLIGHT PASS
+  required GOBs:      4/4
+  required 2026 data: 4/4 (weapons/projectiles/effects/pickups)
+  required UI:        1/1 (AGENTMNU.LFD)
+  assets:             56
+  asset bytes:        71738991
+  asset end:          3446AD4E
+  heap base (1 MiB):  34500000
+  heap available:     179 MiB (min 64)
+  manifest entries:   56 / 128 max
+
+Opening P96 640x480x32 for a 640x480 game (mode 640x480)
+OpenScreen A failed -> trying C
+screen opened: 640x480 depth 24 (branch C)
+  BitsPerPixel=32 BytesPerPixel=4 RGBFormat=9 BytesPerRow=2560
+  game 640x480 centred at +0,+0 in 640x480
+backbuffer: -> p96AllocBitMap (friend=screen)
+buffers: 2 (double buffering - serialised on the PAN ACK)
+buf[0] mem=0x40C84000 arm=0x00E74000 off=0x00C74000 bpr=2560
+buf[1] mem=0x40DB6E00 arm=0x00FA6E00 off=0x00DA6E00 bpr=2560
+RGBFormat = 9 (RGBFB_B8G8R8A8) : OK, all 2 buffers
+all 2 buffers cleared (letterbox bands stay black)
+MMU fb window (from initial SH_FB_ADDR 00E74000): 00E00000..015FFFFF
+  buf[0] 00E74000..00F9FFFF inside
+  buf[1] 00FA6E00..010D2DFF inside
+physical front synchronized to buf[1] (PAN off=00DA6E00)
+ARM first backbuffer = buf[0]
+blob copied, readback sum=DD482461
+MIDI device: PROGDIR:Soundfonts/Roland SC-55.sf2
+MIDI time model: 32 sequencer steps per pass, late steps kept (r21e2)
+video: SH_FB_ADDR=00E74000 pitch=2560 (640x480 at +0,+0 of 640x480)
+cooperative return armed (SH_ENABLE_RESTORE=1)
+
+ARM_RUN -> 04900000
+Core1 alive.
+preload service READY.
+
+Staging Dark Forces data from PROGDIR:Data (64 KiB chunks via 0x04500000)
+  staged DARK.GOB        14244049 bytes at 30000000 (218 chunks)
+  staged SOUNDS.GOB       5950117 bytes at 30D95900 (91 chunks)
+  staged SPRITES.GOB      2816419 bytes at 313423C0 (43 chunks)
+  staged TEXTURES.GOB     8929232 bytes at 315F1D80 (137 chunks)
+  staged weapons.json       16393 bytes at 31E75D80 (1 chunks)
+  staged projectiles.json     14458 bytes at 31E79DC0 (1 chunks)
+  staged effects.json        6093 bytes at 31E7D640 (1 chunks)
+  staged pickups.json       13299 bytes at 31E7EE40 (1 chunks)
+  staged AGENTMNU.LFD       51808 bytes at 31E82240 (1 chunks)
+  staged DARKPILO.CFG       14943 bytes at 31E8ECC0 (1 chunks)
+  staged TfeMessages.txt       762 bytes at 31E92740 (1 chunks)
+  staged LOCAL.MSG           2989 bytes at 31E92A40 (1 chunks)
+  staged DFBRIEF.LFD      1073784 bytes at 31E93600 (17 chunks)
+  staged MENU.LFD          207749 bytes at 31F99880 (4 chunks)
+  staged JEDISFX.LFD      7175669 bytes at 31FCC440 (110 chunks)
+  staged KFLYBY.LFD         87977 bytes at 326A4240 (2 chunks)
+  staged LOGO.LFD           67779 bytes at 326B9A00 (2 chunks)
+  staged MADINE1.LFD       216483 bytes at 326CA300 (4 chunks)
+  staged NEB1.LFD         1106290 bytes at 326FF0C0 (17 chunks)
+  staged PIT.LFD          1244180 bytes at 3280D240 (19 chunks)
+  staged ROB1.LFD          869213 bytes at 3293CE80 (14 chunks)
+  staged ROBOTX.LFD       1247007 bytes at 32A11200 (20 chunks)
+  staged STANDARD.LFD       19191 bytes at 32B41940 (1 chunks)
+  staged SUCCES.LFD        124435 bytes at 32B46440 (2 chunks)
+  staged SWLOGO.LFD        431268 bytes at 32B64A80 (7 chunks)
+  staged TUBECOMP.LFD     1410657 bytes at 32BCDF40 (22 chunks)
+  staged 1E.LFD            386159 bytes at 32D265C0 (6 chunks)
+  staged ARCEXT.LFD         69403 bytes at 32D84A40 (2 chunks)
+  staged ARCFLY.LFD        449178 bytes at 32D95980 (7 chunks)
+  staged AWARD1.LFD       1339773 bytes at 32E03440 (21 chunks)
+  staged AWARD2.LFD         99827 bytes at 32F4A5C0 (2 chunks)
+  staged AWARD3.LFD        809308 bytes at 32F62BC0 (13 chunks)
+  staged AWARD4.LFD        837011 bytes at 33028540 (13 chunks)
+  staged BOBA.LFD          591083 bytes at 330F4B00 (10 chunks)
+  staged BRIEF1.LFD        486992 bytes at 33185000 (8 chunks)
+  staged BRIEF2.LFD        378007 bytes at 331FBE80 (6 chunks)
+  staged CARGO1.LFD        742172 bytes at 33258340 (12 chunks)
+  staged CARGO3.LFD       1682384 bytes at 3330D680 (26 chunks)
+  staged DARKLOGO.LFD      611741 bytes at 334A8280 (10 chunks)
+  staged ENDFLY.LFD         88001 bytes at 3353D840 (2 chunks)
+  staged EXECCOMP.LFD      397323 bytes at 33553040 (7 chunks)
+  staged EXECX.LFD        1217657 bytes at 335B4080 (19 chunks)
+  staged EXITNEB.LFD       452579 bytes at 336DD500 (7 chunks)
+  staged EXP1XX.LFD        223728 bytes at 3374BD00 (4 chunks)
+  staged EXP2X.LFD         932081 bytes at 33782700 (15 chunks)
+  staged EXP3XX.LFD        428211 bytes at 33866000 (7 chunks)
+  staged FTEXTCRA.LFD       85891 bytes at 338CE8C0 (2 chunks)
+  staged FULLCRED.LFD      611729 bytes at 338E3880 (10 chunks)
+  staged GROMAS1.LFD       824906 bytes at 33978E40 (13 chunks)
+  staged GROMASX.LFD      1495927 bytes at 33A424C0 (23 chunks)
+  staged HOLOCU.LFD       1292375 bytes at 33BAF840 (20 chunks)
+  staged JABBA1.LFD       1746245 bytes at 33CEB0C0 (27 chunks)
+  staged JABBA2.LFD       1071870 bytes at 33E95640 (17 chunks)
+  staged JABBA3.LFD       1192747 bytes at 33F9B140 (19 chunks)
+  staged JABESCP.LFD       569161 bytes at 340BE480 (9 chunks)
+  staged SOUNDFNT.SF2     3283278 bytes at 34149400 (51 chunks)
+  56 files staged, 71738991 bytes
+  Core1 copied 1126 chunks / 71738991 bytes
+  manifest at 04500000, 56 entries
+START sent. No AmigaDOS from here on.
+
+  AHI: 11025 Hz stereo 16-bit, 256 frames per buffer (23 ms x2)
+loop: sleeping, pacer 8000 us (~125 wakeups/s)
+      mask: pacer + AHI + window + Ctrl-C
+
+controls: TFE defaults (arrows/WASD move, mouse fire, Space jump,
+          E use, Tab map). ESC, HELP or Ctrl-C = safe stop (launcher).
+mouse sensitivity = 40% - keypad - / + to retune while playing.
+
+    [ZZDF] mounted DARKLOGO.LFD addr=334A8280 size=611741
+    [ZZDF] mounted ENDFLY.LFD addr=3353D840 size=88001
+    [ZZDF] mounted EXECCOMP.LFD addr=33553040 size=397323
+    [ZZDF] mounted EXECX.LFD addr=335B4080 size=1217657
+    [ZZDF] mounted EXITNEB.LFD addr=336DD500 size=452579
+    [ZZDF] mounted EXP1XX.LFD addr=3374BD00 size=223728
+    [ZZDF] mounted EXP2X.LFD addr=33782700 size=932081
+    [ZZDF] mounted EXP3XX.LFD addr=33866000 size=428211
+    [ZZDF] mounted FTEXTCRA.LFD addr=338CE8C0 size=85891
+    [ZZDF] mounted FULLCRED.LFD addr=338E3880 size=611729
+    [ZZDF] mounted GROMAS1.LFD addr=33978E40 size=824906
+    [ZZDF] mounted GROMASX.LFD addr=33A424C0 size=1495927
+    [ZZDF] mounted HOLOCU.LFD addr=33BAF840 size=1292375
+    [ZZDF] mounted JABBA1.LFD addr=33CEB0C0 size=1746245
+    [ZZDF] mounted JABBA2.LFD addr=33E95640 size=1071870
+    [ZZDF] mounted JABBA3.LFD addr=33F9B140 size=1192747
+    [ZZDF] mounted JABESCP.LFD addr=340BE480 size=569161
+    [ZZDF] mounted SOUNDFNT.SF2 addr=34149400 size=3283278
+    [FS] DIR  C:/Program Files (x86)/Steam/steamapps/common/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  C:/Program Files/Steam/steamapps/common/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  C:/Program Files (x86)/GOG.com/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  C:/GOG Games/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  D:/Program Files (x86)/Steam/steamapps/common/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  D:/Program Files/Steam/steamapps/common/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  D:/Program Files (x86)/GOG.com/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  D:/GOG Games/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [ZZDF] heap after settings = 4206592 (break 34903000)
+    [ZZDF] game 640x480, RClassic_Float
+    [ZZDF] options: no ZZDFOPT.CFG, defaults in use
+    [ZZDF] PCM ring 64 KiB @ 11025 Hz stereo s16 BE
+    ARGO1.LFD addr=33258340 size=742172
+    [ZZDF] mounted CARGO3.LFD addr=3330D680 size=1682384
+    [ZZDF] mounted DARKLOGO.LFD addr=334A8280 size=611741
+    [ZZDF] mounted ENDFLY.LFD addr=3353D840 size=88001
+    [ZZDF] mounted EXECCOMP.LFD addr=33553040 size=397323
+    [ZZDF] mounted EXECX.LFD addr=335B4080 size=1217657
+    [ZZDF] mounted EXITNEB.LFD addr=336DD500 size=452579
+    [ZZDF] mounted EXP1XX.LFD addr=3374BD00 size=223728
+    [ZZDF] mounted EXP2X.LFD addr=33782700 size=932081
+    [ZZDF] mounted EXP3XX.LFD addr=33866000 size=428211
+    [ZZDF] mounted FTEXTCRA.LFD addr=338CE8C0 size=85891
+    [ZZDF] mounted FULLCRED.LFD addr=338E3880 size=611729
+    [ZZDF] mounted GROMAS1.LFD addr=33978E40 size=824906
+    [ZZDF] mounted GROMASX.LFD addr=33A424C0 size=1495927
+    [ZZDF] mounted HOLOCU.LFD addr=33BAF840 size=1292375
+    [ZZDF] mounted JABBA1.LFD addr=33CEB0C0 size=1746245
+    [ZZDF] mounted JABBA2.LFD addr=33E95640 size=1071870
+    [ZZDF] mounted JABBA3.LFD addr=33F9B140 size=1192747
+    [ZZDF] mounted JABESCP.LFD addr=340BE480 size=569161
+    [ZZDF] mounted SOUNDFNT.SF2 addr=34149400 size=3283278
+    [FS] DIR  C:/Program Files (x86)/Steam/steamapps/common/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  C:/Program Files/Steam/steamapps/common/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  C:/Program Files (x86)/GOG.com/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  C:/GOG Games/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  D:/Program Files (x86)/Steam/steamapps/common/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  D:/Program Files/Steam/steamapps/common/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  D:/Program Files (x86)/GOG.com/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  D:/GOG Games/outlaws/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [ZZDF] heap after settings = 4206592 (break 34903000)
+    [ZZDF] game 640x480, RClassic_Float
+    [ZZDF] options: no ZZDFOPT.CFG, defaults in use
+    [ZZDF] PCM ring 64 KiB @ 11025 Hz stereo s16 BE
+  DIAG E030  Dark Forces init
+    [ZZDF] heap after game_init = 27648000 (break 35F5E000)
+    [ZZDF] pause -> P (1 binding moved)
+    [ZZDF] DarkForces init
+    [FS] DIR  /Saves/Dark Forces/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [ZZDF] save system ready (Alt+F5 save, Alt+F9 load)
+    [FS] DIR  /Replays/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  /Replays/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  /LFD/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  /Mods/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  /Mods/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  /Mods/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [FS] DIR  /Mods/TFE/AdjustableHud/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [TFE] HUD: Cannot load font 'AmoNum2.fnt'
+    [TFE] HUD: Cannot load font 'SuperWp2.fnt'
+    [TFE] HUD: Cannot load font 'ArmNum2.fnt'
+    [TFE] HUD: Cannot load font 'HelNum2.fnt'
+    [TFE] HUD: Cannot load texture 'HudStatusLeftAddon.bm'
+    [TFE] HUD: Cannot load texture 'HudStatusRightAddon.bm'
+    [FS] DIR  /logics/ -> NOT SUPPORTED (flat MemFS, no subdirectories)
+    [ZZDF] level list loaded
+    [ZZDF] SECBASE requested
+  DIAG E050  SECBASE requested
+  DIAG EB00  steady game loop
+  AHI: playback started
+    [ZZDF] runGame returned, task system takes over
+    [ZZDF] heap after runGame = 58761216 (break 37D0A000)
+    [ZZDF] steady loop
+    [ZZDF] present engine 320x200 in 640x480: 2x, +0,+40 (bordered)
+    [ZZDF] frame 1 presented after 8 ms (agent menu)
+  DIAG EA00  first framebuffer presented
+
+  FIRST SECBASE FRAME DISPLAYED (seq 1, buf[0])
+
+    [ZZDF] logic=26182 render=37 present=19 fps | game=1224us conv=4459us gap=50792us flipwait=30181us drop=19
+    [ZZDF] logic=27863 render=11 present=11 fps | game=2526us conv=4460us gap=64353us flipwait=30181us drop=19
+    [ZZDF] logic=28097 render=10 present=10 fps | game=2545us conv=4459us gap=69976us flipwait=30181us drop=19
+    [ZZDF] logic=27845 render=11 present=11 fps | game=2554us conv=4460us gap=73503us flipwait=30181us drop=19
+    [ZZDF] logic=27899 render=11 present=11 fps | game=2542us conv=4460us gap=75737us flipwait=30181us drop=19
+    [ZZDF] logic=26976 render=25 present=15 fps | game=1538us conv=4458us gap=73206us flipwait=28057us drop=29
+    [ZZDF] logic=27244 render=23 present=14 fps | game=1550us conv=4458us gap=71988us flipwait=29251us drop=38
+    [ZZDF] logic=28110 render=10 present=10 fps | game=2541us conv=4715us gap=73399us flipwait=29251us drop=38
+    [ZZDF] logic=26334 render=38 present=18 fps | game=1267us conv=4459us gap=70606us flipwait=29907us drop=58
+    [ZZDF] logic=28099 render=11 present=11 fps | game=2481us conv=4865us gap=71922us flipwait=29907us drop=58
+    [ZZDF] logic=28352 render=10 present=10 fps | game=2482us conv=4461us gap=72939us flipwait=29907us drop=58
+    [ZZDF] logic=27712 render=14 present=11 fps | game=3408us conv=4463us gap=73895us flipwait=29907us drop=58
+    [ZZDF] logic=27960 render=11 present=11 fps | game=2345us conv=4461us gap=74714us flipwait=29907us drop=58
+    [ZZDF] logic=27969 render=12 present=10 fps | game=2792us conv=4457us gap=75374us flipwait=29907us drop=58
+    [ZZDF] logic=27874 render=11 present=11 fps | game=2166us conv=4867us gap=76012us flipwait=29907us drop=58
+    [ZZDF] logic=27925 render=11 present=11 fps | game=2164us conv=4458us gap=76574us flipwait=29907us drop=58
+    [ZZDF] logic=27519 render=13 present=10 fps | game=3447us conv=4456us gap=77036us flipwait=29907us drop=58
+    [ZZDF] logic=17154 render=111 present=23 fps | game=2889us conv=4460us gap=73814us flipwait=26122us drop=141
+    [ZZDF] logic=271 render=271 present=48 fps | game=2761us conv=4459us gap=64847us flipwait=22039us drop=364
+
+--- N2 STATS ---
+  loop mode         : SLEEPING (POLL=8000 us)
+  loop passes       : 3094  (162/s)
+  woken by pacer    : 2324  (122/s)
+  woken by AHI      : 834  (43/s)
+  woken by window   : 51  (2/s)
+  first frame shown : YES
+  PAN acknowledged  : 312 frames
+  PAN ACK timeouts  : 0
+  key events sent   : 16
+  mouse moves sent  : 38
+  ENGINE_FPS        = 271.70
+  PRESENT_FPS       = 48.94
+  GAME_US_AVG       = 2761 us
+  PRESENT_US_AVG    = 4616 us
+  PRESENT_DROPPED   = 465
+  PRESENT_COUNT     = 313
+  ENGINE_FRAMES     = 793
+  shown -> stop     : 19379 ms
+  stop reason       : Ctrl-C
+
+--- N2.5 PRESENTATION CHAIN (us) ---
+  target publish -> FRAME_READY : 48867  (max 114822)  [ARM render+convert]
+  FRAME_READY    -> PAN armed   : 439  (max 27385)
+  PAN armed      -> USER4 ACK   : 12543  (min 514, max 27855)
+  ACK -> backbuffer republished : 323  (max 11825)
+  launcher loop pass            : 6356  (max 51772)
+
+  ACK-to-ACK: min 9915 us, mean 62162 us
+  -> DISPLAYED THROUGHPUT = 16.08 fps (this is THE number)
+  -> min gap 9915 us suggests a 100.85 Hz refresh, but only if
+     some frame actually reaches every VBlank.
+  gap distribution in units of the min gap:
+    1x 44   2x 63   3x 15   4x 28   5x+ 161
+  VBLANK reg at last PAN: 0000
+
+  buffers: 2 (double, serialised)
+
+--- N2.5 ARM SIDE ---
+  LOGIC  (loopGame/s)  = 271.70  steps 487986
+  TASK   steps         = 487986
+  RENDER (frames/s)    = 271.70  frames 795
+  PRESENT(frames/s)    = 48.94  presents 313
+  8->32 conversion     = 4462 us (worst 4906)
+  game loop            = 2761 us (worst 15713)
+  ARM gap FRAME_READY  = 62180 us (worst 121378)
+  ARM blocked by flip  = 21462 us mean per present
+
+  --- AUDIO (N3a) ---
+  mix blocks produced = 839 (19 s of sound)
+  ARM mix cost        = 429 us per block (worst 933)
+  pumps already at target = 487150  (high is GOOD: the ARM
+                        was ahead of AHI, not chasing it)
+  iMuse 144 Hz ticks  = 2798
+  --- TIME MODEL (N16) ---
+  steps allowed per pass = 32  (late steps kept)
+  passes that hit it     = 0
+  sequencer steps thrown away = 0
+  --- SCHEDULING (r22) ---
+  ticks requested      = 2798  (executed + missed)
+  ticks executed       = 2798
+  missed deadlines     = 0  (worst 0 in one pass)
+  lateness  max / avg  = 14762 / 941 us
+  gap between ticks    = 2 .. 20824 us
+  passes with >1 callback = 25   (catch-up mode, expected)
+  gap histogram:
+       < 5 ms  185
+      5- 8 ms  2331
+      8-15 ms  276
+     15-30 ms  5
+       >30 ms  0
+  AHI buffers played  = 836
+  AHI underruns       = 0
+
+  --- MUSIC (r24, TFE SoundFont synth on Core1) ---
+  SoundFont           = PROGDIR:Soundfonts/Roland SC-55.sf2
+  load                = OK
+  voices now / peak   = 8 / 28
+  blocks with voices  = 706 of 839 mixed
+  Listen for held notes: this path has no ring, no camd,
+  no MIDI cable and no external synth.
+
+  --- MUSIC (N3b) --- no camd link, silent
+
+*** Ctrl-C ***
+Asking Core1 to park (CMD=1)...
+  saved settings_default.ini (2614 bytes)
+  saved tfe_input_remapping.bin (1284 bytes)
+  saved DARKPILO.CFG (14943 bytes)
+Core1 reported STOPPED (STATUS=FF): teardown running.
+    [WB] saved settings_default.ini
+    [WB] saved tfe_input_remapping.bin
+    [WB] saved DARKPILO.CFG
+    [ZZDF] writeback: 3 file(s) handed to the launcher
+    [ZZDF] game loop left, writeback done
+    [ZZDF] parked, waiting for the launcher (CMD=1)
+
+--- SAVED TO DISK (N12) ---
+  offered by Core1    = 3
+  written to DATA     = 3
+  Your progress is on disk and will be staged back on
+  the next launch.
+
+--- SAVE / LOAD (r21c) ---
+  last .tfe written   = 0 bytes
+  load requests done  = 0
+  No Alt+F9 was acted on this session. If you pressed
+  it: no quicksave existed yet, or canSave() was false
+  (you were not in a mission).
+
+--- FINAL STATE ---
+  MAGIC          = 5A5A4446
+  STATUS         = FF
+  DIAG           = EA00  first framebuffer presented
+  ERROR          = 00000000
+  FLOAT_DIAG     = 0F10A70C
+  RENDERERS_SEEN = 0
+  CPP_CTORS      = 59
+  MANIFEST_COUNT = 56
+  MOUNTED_COUNT  = 4 / 4 required GOBs
+  HEAP_USED      = 58761216 bytes
+  FS MemFS misses= 494   (normal: everything inside a GOB
+                         misses the flat MemFS first, then
+                         the archive layer finds it)
+  FS dirs REFUSED= 17   (subdirectory scans, flat MemFS)
+  PACER          = ON, mean wait 0 us per frame
+  FRAMES         = 801
+  FPS x100       = 27170
+
+--- FIRST FRAME EVIDENCE ---
+  FB_CRC32       = 00000000
+  PAL_CRC32      = 00000000
+  distinct bytes = 0  *** UNIFORM: nothing was drawn ***
+  samples        = 00000000 00000000 00000000 00000000
+
+Waiting for the EXIT mark (blob teardown, up to 5 s)...
+
+--- RETURN_TEST: FIRMWARE CONTEXT CAPTURED AT ENTRY ---
+  incoming SP    = 05FFFFCC   frame SP [0x00010000] = 05FFFFCC
+  incoming LR    = 001237B0   (return into core1_trampoline)
+  SCTLR          = 08C50878   CPSR  = 200101D3
+  TTBR0          = 0426804B   VBAR  = 00000000
+  FPEXC          = 40000000   CPACR = 00F00000
+  RETURN_STATE   = C0DE0030  EXIT mark written, MMU switch started
+  EXIT_MARK      = C0DEBAD1  SEEN
+
+--- SESSION ---
+EXIT MARK SEEN: Core1 executed its teardown up to the switch back
+to the firmware MMU. Whether core1_loop() really resumed can only
+be proven by the next Core1 application:
+  1. now, WITHOUT power cycle, run JuliaV2.
+     JuliaV2 works            -> RETURN ABI PASS
+  2. only then: quit JuliaV2, run ZZDarkForces again.
+     second session works     -> Core1 lifecycle VALIDATED
+If JuliaV2 does NOT work: power cycle, report this whole output.

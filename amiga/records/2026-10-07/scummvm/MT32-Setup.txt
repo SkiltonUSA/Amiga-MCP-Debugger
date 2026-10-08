@@ -1,0 +1,18 @@
+ScummVM 2.5.1.40 - A4000TX / 68060 / AGA
+
+Start by double-clicking the ScummVM icon in this drawer.
+The icon supplies the required 300000-byte stack.
+Use Add Game to select a directory containing supported game data.
+
+MIDI: CAMD, native Roland MT-32, out.0 through the Amiga serial MIDI adapter.
+Connect the adapter MIDI OUT to the Roland MT-32 MIDI IN.
+The MT-32 audio outputs must connect to your speakers/mixer.
+Physical MIDI/audio operation has not been tested; the Roland is disconnected.
+CAMD library and serial output linkage were verified on the Amiga.
+
+Preferences: SYS:Prefs/MidiPorts
+Previous MIDI prefs: ENVARC:Sys/midi.prefs.before-scumm
+Original ScummVM settings: scummvm.ini.original
+
+This AGA build is intended for the 68060. The current RTG package lists
+PiStorm 4 and a 32-bit Workbench as requirements.

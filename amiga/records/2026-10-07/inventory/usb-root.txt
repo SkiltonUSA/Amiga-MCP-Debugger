@@ -1,0 +1,40 @@
+  Poseidon DevID  : 'ISP1520-0471-3526-n/a-00'
+  Product Name    : 'ISP1520' (ID: 3526, Vers: 0000)
+  Manufacturer    : 'Philips Semiconductors' (Vendor: 0471 (Philips))
+  Serial Number   : 'n/a' (USBVers: 0200)
+  Device State    : highspeed connected hasaddress hasdevdesc configured 
+  Device Address  : 1 (Port 0 at Root)
+  Class/Sub/Proto : 9/0/1 (Hub (2.0 Single TT))
+  MaxPktSize EP 0 : 64 (Hub Think Time: 8 bit times)
+  Power Check     : Supply = 0mA, Drain = 0mA
+  Current Language: English (United States)
+  Supported Langs : English (United States)
+
+  This device is bound to hub.class, context 088D5FE4.
+
+  1 configuration(s):
+
+  · Config 1 (Configuration 1)
+    Attrs   : self-powered  remote-wakeup
+    MaxPower: 0 mA
+
+    1 interface(s) for this config:
+    · Interface 0 (Hub interface (0)) (ID: '00-00-09-00-00')
+      Alternate Setting: 0
+      Class/Sub/Proto  : 9/0/0 (Hub)
+
+      1 endpoint(s) for this interface:
+      · Endpoint 1 (interrupt <-[ IN)
+        MaxPktSize: 1
+        Interval  : 2048 µFrames
+
+      No alternate settings.
+
+  Standard Descriptors:
+    Desc. 01 (Device), 18 bytes
+    Desc. 02 (Configuration), 9 bytes (Config 1)
+    Desc. 04 (Interface), 9 bytes (Iface 0/0, Cfg 1)
+    Desc. 05 (Endpoint), 7 bytes (EP 1, IF 0/0, Cfg 1)
+
+  Google: http://www.google.com/search?q=usb+0x0471+0x3526
+---------------------------------------------------------------------------

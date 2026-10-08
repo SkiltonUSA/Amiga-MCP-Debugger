@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/Xanxi-Amiga/XACP-ZZ9000",
+  "firmware": "XX19c",
+  "protocol": "XACP v1.7",
+  "file": "BOOT_XX19c.bin",
+  "bytes": 4553536,
+  "sha256": "2b6a4224d4645694ef4d186baae14a86c100f4ce9e15033262a814cc239e7305",
+  "amiga_staging_path": "SD032G:Drivers/XACP/BOOT_XX19c.bin",
+  "card_destination": "BOOT.bin at root of ZZ9000 firmware microSD",
+  "status": "activated after user power cycle; XACP command handshake passed on real hardware",
+  "previous_runtime_firmware_register": "0x0208",
+  "update_return_code": 0,
+  "update_bytes": 4553536,
+  "update_destination": "ZZ9000 microSD 0:/BOOT.bin",
+  "update_log": "update.log",
+  "graphics_driver_backup": "SD032G:Drivers/XACP/ZZ9000.card.before-XACP",
+  "graphics_driver_backup_crc32": "816CA650",
+  "firmware_backup": "BOOT.bak is created by the running 2.8 firmware update mechanism; not independently read back",
+  "postboot_firmware_register": "0x0113",
+  "xacp_handshake": "idle 0 -> reserved opcode 0x0340 status 3 -> reset idle 0",
+  "postboot_workbench": "1920x800 8bpp",
+  "validation_limit": "No custom Core1 application or ARM source debugging tested"
+}

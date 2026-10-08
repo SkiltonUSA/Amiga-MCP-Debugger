@@ -1,0 +1,82 @@
+[
+  {
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "Stack 65536\nSYS:Prefs/Trident NOGUI SAVE\nIF WARN\nEcho FREEWAY_SAVE_FAILED\nQuit 20\nENDIF\nEcho FREEWAY_SAVE_OK",
+      "timeout": 20
+    },
+    "result": "[OK]\nFREEWAY_SAVE_OK"
+  },
+  {
+    "tool": "amiga_checksum",
+    "args": {
+      "path": "ENVARC:PsdStackloader"
+    },
+    "result": "File: ENVARC:PsdStackloader\nCRC32: E03C7B52\nSize: 1900 bytes"
+  },
+  {
+    "tool": "amiga_checksum",
+    "args": {
+      "path": "S:User-Startup"
+    },
+    "result": "File: S:User-Startup\nCRC32: EBF74EDA\nSize: 1529 bytes"
+  },
+  {
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "IF EXISTS S:User-Startup.before-Poseidon-20261007\nEcho BACKUP_ALREADY_EXISTS\nQuit 20\nENDIF\nCopy S:User-Startup TO S:User-Startup.before-Poseidon-20261007 CLONE QUIET\nIF WARN\nQuit 20\nENDIF\nEcho FREEWAY_BACKUP_OK",
+      "timeout": 15
+    },
+    "result": "[OK]\nFREEWAY_BACKUP_OK"
+  },
+  {
+    "tool": "amiga_checksum",
+    "args": {
+      "path": "S:User-Startup.before-Poseidon-20261007"
+    },
+    "result": "File: S:User-Startup.before-Poseidon-20261007\nCRC32: EBF74EDA\nSize: 1529 bytes"
+  },
+  {
+    "tool": "amiga_checksum",
+    "args": {
+      "path": "S:User-Startup"
+    },
+    "result": "File: S:User-Startup\nCRC32: EBF74EDA\nSize: 1529 bytes"
+  },
+  {
+    "tool": "amiga_protect",
+    "args": {
+      "path": "S:User-Startup"
+    },
+    "result": "File: S:User-Startup\nProtection: 00000002 (rwd)"
+  },
+  {
+    "tool": "amiga_push_file",
+    "args": {
+      "local_path": ".context/amiga/User-Startup.with-Poseidon",
+      "amiga_path": "S:User-Startup"
+    },
+    "result": "Transferred 1622 bytes in 0.1s (16982 B/s), 2 chunks, CRC32 verified"
+  },
+  {
+    "tool": "amiga_protect",
+    "args": {
+      "path": "S:User-Startup",
+      "bits": "00000002"
+    },
+    "result": "File: S:User-Startup\nProtection: 00000002 (rwd)"
+  },
+  {
+    "tool": "amiga_dos_command",
+    "args": {
+      "command": "C:PsdDevLister SHOWROOT",
+      "timeout": 15
+    },
+    "result": "  Poseidon DevID  : 'ISP1520-0471-3526-n/a-00'\n  Product Name    : 'ISP1520' (ID: 3526, Vers: 0000)\n  Manufacturer    : 'Philips Semiconductors' (Vendor: 0471 (Philips))\n  Serial Number   : 'n/a' (USBVers: 0200)\n  Device State    : highspeed connected hasaddress hasdevdesc configured \n  Device Address  : 1 (Port 0 at Root)\n  Class/Sub/Proto : 9/0/1 (Hub (2.0 Single TT))\n  MaxPktSize EP 0 : 64 (Hub Think Time: 8 bit times)\n  Power Check     : Supply = 500mA, Drain = 0mA\n  Current Language: English (United States)\n  Supported Langs : English (United States)\n\n  This device is bound to hub.class, context 09441FBC.\n\n  1 configuration(s):\n\n  \u00b7 Config 1 (Configuration 1)\n    Attrs   : self-powered  remote-wakeup\n    MaxPower: 0 mA\n\n    1 interface(s) for this config:\n    \u00b7 Interface 0 (Hub interface (0)) (ID: '00-00-09-00-00')\n      Alternate Setting: 0\n      Class/Sub/Proto  : 9/0/0 (Hub)\n\n      1 endpoint(s) for this interface:\n      \u00b7 Endpoint 1 (interrupt <-[ IN)\n        MaxPktSize: 1\n        Interval  : 2048 \u00b5Frames\n\n      No alternate settings.\n\n  Standard Descriptors:\n    Desc. 01 (Device), 18 bytes\n    Desc. 02 (Configuration), 9 bytes (Config 1)\n    Desc. 04 (Interface), 9 bytes (Iface 0/0, Cfg 1)\n    Desc. 05 (Endpoint), 7 bytes (EP 1, IF 0/0, Cfg 1)\n\n  Google: http://www.google.com/search?q=usb+0x0471+0x3526\n---------------------------------------------------------------------------\n  Poseidon DevID  : 'Disk 2.0-346D-5678-3182611286958044374-00'\n  Product Name    : 'Disk 2.0' (ID: 5678, Vers: 0200)\n  Manufacturer    : 'USB' (Vendor: 346D (unknown))\n  Serial Number   : '3182611286958044374' (USBVers: 0200)\n  Device State    : highspeed connected hasaddress hasdevdesc configured \n  Device Address  : 2 (Port 2 at ISP1520)\n  Class/Sub/Proto : 0/0/0 (<unknown>)\n  MaxPktSize EP 0 : 64\n  Power Check     : Supply = 500mA, Drain = 100mA\n  Current Language: English (United States)\n  Supported Langs : English (United States), Chinese (PRC)\n\n  1 configuration(s):\n\n  \u00b7 Config 1 (Configuration 1)\n    Attrs   : bus-powered  \n    MaxPower: 100 mA\n\n    1 interface(s) for this config:\n    \u00b7 Interface 0 (MassStorage interface (0)) (ID: '00-00-08-06-50')\n      Alternate Setting: 0\n      Class/Sub/Proto  : 8/6/80 (MassStorage (SCSI))\n\n      This interface is bound to massstorage.class, context 09070F24.\n\n      2 endpoint(s) for this interface:\n      \u00b7 Endpoint 1 (bulk OUT ]->)\n        MaxPktSize: 512\n        NAK-Rate  : 0 \u00b5Frames\n      \u00b7 Endpoint 2 (bulk <-[ IN)\n        MaxPktSize: 512\n        NAK-Rate  : 0 \u00b5Frames\n\n      No alternate settings.\n\n  Standard Descriptors:\n    Desc. 01 (Device), 18 bytes\n    Desc. 02 (Configuration), 9 bytes (Config 1)\n    Desc. 04 (Interface), 9 bytes (Iface 0/0, Cfg 1)\n    Desc. 05 (Endpoint), 7 bytes (EP 1, IF 0/0, Cfg 1)\n    Desc. 05 (Endpoint), 7 bytes (EP 2, IF 0/0, Cfg 1)\n\n  Google: http://www.google.com/search?q=usb+0x346D+0x5678\n---------------------------------------------------------------------------"
+  },
+  {
+    "tool": "amiga_ping",
+    "args": {},
+    "result": "Amiga alive - clients: 1, chip: 1976784 bytes, fast: 329989048 bytes"
+  }
+]

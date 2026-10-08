@@ -1,0 +1,302 @@
+[
+  {
+    "source": "Libs/poseidon.library",
+    "destination": "LIBS:poseidon.library",
+    "size": 114508,
+    "sha256": "7093204d0fc8035c5b8ce4cdf70a0e0e88f75cb8fcae8666930492976464cd7f"
+  },
+  {
+    "source": "Classes/USB/adaptecxchg.class",
+    "destination": "SYS:Classes/USB/adaptecxchg.class",
+    "size": 9500,
+    "sha256": "73a35641abd5365ee0d170b5b79139a2cbd68e1e5b10782db9e0415cdad97752"
+  },
+  {
+    "source": "Classes/USB/asixeth.class",
+    "destination": "SYS:Classes/USB/asixeth.class",
+    "size": 19720,
+    "sha256": "37a5234e1b0c80d2fff7fed847d95c88b26931e94e4c364c7da46582c93e6cc6"
+  },
+  {
+    "source": "Classes/USB/bootkeyboard.class",
+    "destination": "SYS:Classes/USB/bootkeyboard.class",
+    "size": 8804,
+    "sha256": "1eb911a34b3494b30a53a1ef1e8df9624a170d5e49dcce306f188eeca5082e22"
+  },
+  {
+    "source": "Classes/USB/bootmouse.class",
+    "destination": "SYS:Classes/USB/bootmouse.class",
+    "size": 7660,
+    "sha256": "fcb6ecce79e6d3b6763b62e7406eeb6df04328e017c228061be20be4d022973c"
+  },
+  {
+    "source": "Classes/USB/camdusbmidi.class",
+    "destination": "SYS:Classes/USB/camdusbmidi.class",
+    "size": 8180,
+    "sha256": "08787a94149807527d5ae496aa204f256de011acb1ddeb849cb50d46b44ddfe8"
+  },
+  {
+    "source": "Classes/USB/cdcacm.class",
+    "destination": "SYS:Classes/USB/cdcacm.class",
+    "size": 7852,
+    "sha256": "e0faec75aa3e0d7b175c38b0452e0b034501071478841a972b07557b39d5a2db"
+  },
+  {
+    "source": "Classes/USB/dfu.class",
+    "destination": "SYS:Classes/USB/dfu.class",
+    "size": 9332,
+    "sha256": "bb6da212463db1b17712d8d6427875e725d37fb0bd48e53ba4f676fbccf17a29"
+  },
+  {
+    "source": "Classes/USB/dm9601eth.class",
+    "destination": "SYS:Classes/USB/dm9601eth.class",
+    "size": 16216,
+    "sha256": "40f4b21decaa4eaa160e0c6ce5fe825d6e0437731635d8a8089dd97f4519fb35"
+  },
+  {
+    "source": "Classes/USB/egalaxtouch.class",
+    "destination": "SYS:Classes/USB/egalaxtouch.class",
+    "size": 11076,
+    "sha256": "8d80ec09af9c36b6d35d1c5a1c47d9214cace3d86fdd3134aec103a81e7b7393"
+  },
+  {
+    "source": "Classes/USB/ethwrap.class",
+    "destination": "SYS:Classes/USB/ethwrap.class",
+    "size": 13900,
+    "sha256": "f6cd5e48ff398dbb7f0bcfbf50892bd339d403e08dbdccf84ec575700ff0e656"
+  },
+  {
+    "source": "Classes/USB/hid.class",
+    "destination": "SYS:Classes/USB/hid.class",
+    "size": 137924,
+    "sha256": "19bbd661becad0f9a14acb6448a667e66a31fd5a7084d3a8d290e2fb5ac8b6b5"
+  },
+  {
+    "source": "Classes/USB/hub.class",
+    "destination": "SYS:Classes/USB/hub.class",
+    "size": 11172,
+    "sha256": "3af948d141b6827bf359ff44b36b0308b6984518ee4773de26c32e5cc0e12b67"
+  },
+  {
+    "source": "Classes/USB/massstorage.class",
+    "destination": "SYS:Classes/USB/massstorage.class",
+    "size": 65788,
+    "sha256": "0f6790754f9a9b69132877871d9b03f5e5270eeb51e345060591cb854eee0988"
+  },
+  {
+    "source": "Classes/USB/moschipeth.class",
+    "destination": "SYS:Classes/USB/moschipeth.class",
+    "size": 16180,
+    "sha256": "6a152d19a3a757155b8e18856ebb67f54591408c0326c28e63a3ed1dc493289f"
+  },
+  {
+    "source": "Classes/USB/pegasus.class",
+    "destination": "SYS:Classes/USB/pegasus.class",
+    "size": 17960,
+    "sha256": "bed3d387e497522bfc97c78528d9f183eab32cb67f8936e2d9e87121ca4c771c"
+  },
+  {
+    "source": "Classes/USB/printer.class",
+    "destination": "SYS:Classes/USB/printer.class",
+    "size": 9572,
+    "sha256": "96ed27f268cab06d6358bea522e1e7195bf46d24bc59772c52c0490d199fa3b0"
+  },
+  {
+    "source": "Classes/USB/ptp.class",
+    "destination": "SYS:Classes/USB/ptp.class",
+    "size": 26940,
+    "sha256": "c77c2e0374eb04a65e4bccb73a334643fb8460581b3985640ebc91b206b92337"
+  },
+  {
+    "source": "Classes/USB/rawwrap.class",
+    "destination": "SYS:Classes/USB/rawwrap.class",
+    "size": 12644,
+    "sha256": "95809f789e8c8f1e9c4958147653eed0fc0b1498a89262fda11f43f102922058"
+  },
+  {
+    "source": "Classes/USB/rtl8150eth.class",
+    "destination": "SYS:Classes/USB/rtl8150eth.class",
+    "size": 16852,
+    "sha256": "badfe476dff8761e010cacc5bec542b52ad6d9f736f032d888731a47fcd1325d"
+  },
+  {
+    "source": "Classes/USB/serialcp210x.class",
+    "destination": "SYS:Classes/USB/serialcp210x.class",
+    "size": 6524,
+    "sha256": "92b6a604bcbb6b44a499a8bf7276bcea3861b72c54477fa85af5d3c8961d6a79"
+  },
+  {
+    "source": "Classes/USB/serialpl2303.class",
+    "destination": "SYS:Classes/USB/serialpl2303.class",
+    "size": 8008,
+    "sha256": "11142bcfc9ee6d6f7a8c1cbdc38b1070e672995cba0f4d75efa59718db3d6092"
+  },
+  {
+    "source": "Classes/USB/simplemidi.class",
+    "destination": "SYS:Classes/USB/simplemidi.class",
+    "size": 6520,
+    "sha256": "3923c280ae7312810f8e8766216ab931904554b04387f85465728d1d92a0e6ef"
+  },
+  {
+    "source": "Classes/USB/usbaudio.class",
+    "destination": "SYS:Classes/USB/usbaudio.class",
+    "size": 24688,
+    "sha256": "13cbf532a7dd5873fa6dc726c665511c3bb55d68d9a2e79f7e3af9cd350b0f1c"
+  },
+  {
+    "source": "Classes/USB/usbvideo.class",
+    "destination": "SYS:Classes/USB/usbvideo.class",
+    "size": 16672,
+    "sha256": "024a591b971672b94f23aad069e47af0d74a2c70b22cb034b714501954a98839"
+  },
+  {
+    "source": "Prefs/Presets/Poseidon/Connect.iff",
+    "destination": "SYS:Prefs/Presets/Poseidon/Connect.iff",
+    "size": 65822,
+    "sha256": "321adc89f1488a44dfaff7f6481461e96eb28200d0e3ef2510f0dbd3138fce9f"
+  },
+  {
+    "source": "Prefs/Presets/Poseidon/Disconnect.iff",
+    "destination": "SYS:Prefs/Presets/Poseidon/Disconnect.iff",
+    "size": 75438,
+    "sha256": "b83d70c7956138a8889792569074947126defd39518123c3b1c97f6c97b8b3e9"
+  },
+  {
+    "source": "Prefs/Trident",
+    "destination": "SYS:Prefs/Trident",
+    "size": 94464,
+    "sha256": "13a6177427279df7da65f7ff99d969ba8188728fa5252ebbe569d867e80247a3"
+  },
+  {
+    "source": "Prefs/Trident.info",
+    "destination": "SYS:Prefs/Trident.info",
+    "size": 4574,
+    "sha256": "0f02fe94276660f85d2c88469d3ae5b4d8444720be7ccfa4310a7d8ce27aea38"
+  },
+  {
+    "source": "Tools/AddUSBClasses",
+    "destination": "C:AddUSBClasses",
+    "size": 2596,
+    "sha256": "8a5f5bd646984ad0bf3943b5e4e2797e971ea6cc9b853606c269ac8517814981"
+  },
+  {
+    "source": "Tools/AddUSBHardware",
+    "destination": "C:AddUSBHardware",
+    "size": 2420,
+    "sha256": "c9c0d69fe8c52b1fe0ebfd698accbc33ae9643d8f9d2c50443b995662f0998fb"
+  },
+  {
+    "source": "Tools/DRadioTool",
+    "destination": "C:DRadioTool",
+    "size": 3404,
+    "sha256": "9e5d3c7b1ab81caf9169a220dfc4dcbc90add4e14aeec32252724bf9d8343952"
+  },
+  {
+    "source": "Tools/PencamTool",
+    "destination": "C:PencamTool",
+    "size": 17836,
+    "sha256": "ce801e1a46b392b638b4b886072d0c0b3f616812ffcfb9ccb94c5d65e918dcf7"
+  },
+  {
+    "source": "Tools/PowManTool",
+    "destination": "C:PowManTool",
+    "size": 2936,
+    "sha256": "ad3ab1f1d138fe04cb99b2751f3ce48524b5df21fa0858f2a2922d3debe1c677"
+  },
+  {
+    "source": "Tools/PsdDevLister",
+    "destination": "C:PsdDevLister",
+    "size": 6664,
+    "sha256": "b04b2a0c8a478467c881c45e1d0606f4a77dd973b60239ee6f9061a0bdadf98b"
+  },
+  {
+    "source": "Tools/PsdErrorlog",
+    "destination": "C:PsdErrorlog",
+    "size": 2172,
+    "sha256": "5d7a7083082e1a8a6ade95b599c3d046edfe3d4bbccc7b1d860cbc1b7d1b26b5"
+  },
+  {
+    "source": "Tools/PsdLoadModule",
+    "destination": "C:PsdLoadModule",
+    "size": 7604,
+    "sha256": "945f22b13f321c89fd787ceebba914111c250c3105bf99b76a6909d24120e165"
+  },
+  {
+    "source": "Tools/PsdRestart",
+    "destination": "C:PsdRestart",
+    "size": 312,
+    "sha256": "9134bbaf94ab654f936c90ac8126eebf506efeee63c43ff0798f784407f3cb4a"
+  },
+  {
+    "source": "Tools/RocketTool",
+    "destination": "C:RocketTool",
+    "size": 3832,
+    "sha256": "c16e3837b30ceab46a29d13e342fe844310e33ffe8826c3bbc76b0d8ea17bc53"
+  },
+  {
+    "source": "Tools/SonixcamTool",
+    "destination": "C:SonixcamTool",
+    "size": 19488,
+    "sha256": "40828f68eeb17d7f581784761b4e170c90d2050b209acb43dd1099275dfeb1ee"
+  },
+  {
+    "source": "Tools/UPSTool",
+    "destination": "C:UPSTool",
+    "size": 3688,
+    "sha256": "52e0ec32a07b3636d1cca1ba4c31926f8725a4eaeb177a38c3dc1aff52f00ae7"
+  },
+  {
+    "source": "Storage/DOSDrivers/UMSD",
+    "destination": "SYS:Storage/DOSDrivers/UMSD",
+    "size": 683,
+    "sha256": "3767b926a168eea600fcbc5ba1dbdc0cb7f3ea0fb3d00744a215148b52a74bc1"
+  },
+  {
+    "source": "Storage/DOSDrivers/UMSD.info",
+    "destination": "SYS:Storage/DOSDrivers/UMSD.info",
+    "size": 2289,
+    "sha256": "07f8c5750feffad3197eae391f48d780181a91ca7c3bfca59c4db7928cb10965"
+  },
+  {
+    "source": "Storage/DOSDrivers/UPAR",
+    "destination": "SYS:Storage/DOSDrivers/UPAR",
+    "size": 191,
+    "sha256": "0eaa1685947e761f2de88396208f290d871aa994469a37c54bdea56d34f6e970"
+  },
+  {
+    "source": "Storage/DOSDrivers/UPAR.info",
+    "destination": "SYS:Storage/DOSDrivers/UPAR.info",
+    "size": 2278,
+    "sha256": "13c9e5a16d7802c757eaa31a3871640acd990ccaedc2e267816c6d5323a4a4b6"
+  },
+  {
+    "source": "Libs/VHI/pencam.vhi",
+    "destination": "LIBS:VHI/pencam.vhi",
+    "size": 4996,
+    "sha256": "b955bc850f6ab9b6b53911eabde684be7ee03521957e06753a1252ce4604622e"
+  },
+  {
+    "source": "Libs/VHI/sonixcam.vhi",
+    "destination": "LIBS:VHI/sonixcam.vhi",
+    "size": 4420,
+    "sha256": "af7a77770c9f1b2613ce3b8b3f40c55ff2a0f69b23502f1c1894265360dd6b41"
+  },
+  {
+    "source": "Docs/Poseidon_E.guide",
+    "destination": "HELP:Poseidon.guide",
+    "size": 160652,
+    "sha256": "7ee459e8379797eac851d7071a36ff8c3152ecfd28a08e1bf90bcbbd376013bc"
+  },
+  {
+    "source": "Docs/Poseidon_E.guide.info",
+    "destination": "HELP:Poseidon.guide.info",
+    "size": 346,
+    "sha256": "5bcf771f1615d94b45f66464d600f9255f1b472ffe349bfe352c02eb649a198b"
+  },
+  {
+    "source": "Devs/USBHardware/freewaytritonz3usb.device",
+    "destination": "DEVS:USBHardware/freewaytritonz3usb.device",
+    "size": 20192,
+    "sha256": "5e16168b4d15e32ce2b9309b54848cd54ffa0a5e9f98767ffa8a5937dfbfb281"
+  }
+]

@@ -1,0 +1,97 @@
+@@SYS:Tools/IconEdit
+iconedit 47.10 (01/05/2021)
+@@SYS:Tools/InitPrinter
+initprinter 45.1 (02/10/2018)
+@@SYS:Tools/KeyShow
+keyshow 45.2 (06/28/2019)
+@@SYS:Tools/PrepCard
+prepcard 47.5 (05/24/2020)
+@@SYS:Tools/PrintFiles
+PrintFiles 45.2 (07/31/2018)
+@@SYS:Tools/ShowConfig
+ShowConfig 47.17 (03/27/2021)
+@@SYS:Tools/TextEdit
+TextEdit 47.44 (04/04/2021)
+@@SYS:Tools/HDInstTools
+HDInstTools 6.9 (10/30/1999)
+@@SYS:System/Installer
+Installer 47.19 (03/08/2021)
+@@SYS:System/CLI
+cli 47.2 (12/28/2019)
+@@SYS:System/DiskCopy
+diskcopy 47.2 (06/13/2019)
+@@SYS:System/FixFonts
+fixfonts 47.1 (09/10/2019)
+@@SYS:System/Format
+Format 47.11 (03/08/2021)
+@@SYS:System/Help
+Help 47.7 (05/05/2020)
+@@SYS:System/RexxMast
+RexxMast 47.2 (08/05/2019)
+@@SYS:System/Find
+Find 47.17 (02/27/2021)
+@@SYS:System/Intellifont
+intellifont 47.11 (08/08/2020)
+@@SYS:System/NoFastMem
+nofastmem 45.1 (04/20/2019)
+@@SYS:System/Mounter
+Mounter 47.11 (05/23/2020)
+@@SYS:C/PsdLoadModule
+LoadModule 1.1 (08/21/1997)
+@@SYS:C/PsdRestart
+psdrestart 1.2 (02/16/2003)
+© 2002 by Chris Hodges
+@@SYS:C/RocketTool
+RocketTool 1.1 (01/28/2007)
+by Chris Hodges <hodges@in.tum.de>
+@@SYS:C/SonixcamTool
+SonixcamTool 1.3 (06/26/2008)
+by Chris Hodges <chrisly@platon42.de>
+@@SYS:C/UPSTool
+UPSTool 1.0 (03/20/2007)
+by Chris Hodges <chrisly@platon42.de>
+@@SYS:C/bridge-netwatch
+Could not find version information for 'SYS:C/bridge-netwatch'
+@@SYS:C/DeleteNetRoute
+DeleteNetRoute 4.8 (03/11/2009)
+@@SYS:C/ConfigureNetInterface
+ConfigureNetInterface 4.39 (06/10/2019)
+@@SYS:C/CheckRoadshowConfig
+CheckRoadshowConfig 4.17 (10/08/2023)
+@@SYS:C/arp
+arp 4.8 (05/10/2017)
+@@SYS:C/AddNetRoute
+AddNetRoute 4.8 (03/11/2009)
+@@SYS:C/AddNetInterface
+AddNetInterface 4.62 (08/27/2023)
+@@SYS:C/AddAudioModes
+AddAudioModes 4.2 (03/11/1998)
+@@SYS:C/TitleShadow
+TitleShadow 1.0 (09/24/2001)
+@@SYS:C/GetModeID
+GetModeID 1.5 (10/15/1997)
+@@SYS:C/Kill
+Kill 1.0 (07/09/1995)
+@@SYS:C/DeleteLink
+DeleteLink 39.2 (02/18/1998)
+@@SYS:C/UnpackILBM
+UnpackILBM 1.2 (08/23/1994)
+@@SYS:C/DIC
+DIC 1.3 (11/22/2022)
+@@SYS:C/Patcher
+Patcher 1.06 (09/23/2004)
+@@SYS:C/RawDIC
+RawDIC 6.1 [build 172] (04/16/2023)
+@@SYS:C/WHDLoad
+WHDLoad 19.1 [build 6907] (12/02/2024)
+@@SYS:C/WHDLoadCD32
+WHDLoadCD32 19.1 [build 6908] (12/02/2024)
+@@SYS:C/unpacker
+Unpacker 1.0 (01/29/2001)
+by Thilo Köhler
+@@SYS:C/MagicMenu
+MagicMenu 2.35 (03/20/2002)
+020+/ppc fatbinary
+@@SYS:C/StickyRMB
+StickyRMB 1.7 (11/27/2023)
+(c) Thomas Rapp <thomas-rapp@web.de>

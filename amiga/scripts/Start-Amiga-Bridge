@@ -1,0 +1,28 @@
+; A4000TX / Roadshow: start the bridge on TCP port 2345.
+; NetWatch checks the X-Surf IPv4 address and skips an existing bridge.
+; Execute SD032G:amiga-bridge/Start-Amiga-Bridge
+; For ARexx, also start SYS:System/RexxMast if it is not running.
+
+IF NOT EXISTS "SD032G:amiga-bridge/amiga-bridge"
+  Echo "Cannot find SD032G:amiga-bridge/amiga-bridge"
+  Quit 20
+ENDIF
+
+IF NOT EXISTS "C:bridge-netwatch"
+  Echo "Cannot find C:bridge-netwatch"
+  Quit 20
+ENDIF
+
+Stack 32768
+C:bridge-netwatch READY
+IF NOT WARN
+
+  IF NOT EXISTS "RAM:SixiesDev"
+    MakeDir "RAM:SixiesDev"
+  ENDIF
+
+  Protect "SD032G:amiga-bridge/amiga-bridge" +e
+  Stack 32768
+  Echo "Starting amiga-bridge on TCP port 2345."
+  Run >NIL: <NIL: "SD032G:amiga-bridge/amiga-bridge" TCP 2345
+ENDIF

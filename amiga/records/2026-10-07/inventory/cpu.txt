@@ -1,0 +1,2 @@
+System: 68060 68882 68060-MMU no FastROM (INST: Cache Burst) (DATA: Cache CopyBack)
+68060 : Rev5 Superscalar NoLoad/StoreBypass StoreBuffer BranchCache 

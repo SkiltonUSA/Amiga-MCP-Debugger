@@ -1,0 +1,41 @@
+XACP XX19c / protocol v1.7 - firmware activated; command handshake verified
+
+ZZFwUpdate completed successfully on 2026-10-07:
+4553536 bytes written to ZZ9000 microSD 0:/BOOT.bin; return code 0.
+Full log: SD032G:Drivers/XACP/update.log
+
+Source: SD032G:Drivers/XACP/BOOT_XX19c.bin
+SHA-256: 2b6a4224d4645694ef4d186baae14a86c100f4ce9e15033262a814cc239e7305
+The Mac-to-Amiga source transfer passed CRC32 verification.
+The microSD boot file was not independently read back.
+
+The previous running firmware register was 0x0208 (2.8).
+That firmware update mechanism saves the old BOOT.bin as BOOT.bak.
+This backup was not independently read back.
+
+Current graphics driver remains ZZ9000.card 1.13.
+Verified backup: SD032G:Drivers/XACP/ZZ9000.card.before-XACP
+CRC32 of both installed driver and backup: 816CA650.
+A second driver backup is saved in the Mac workspace.
+
+POST-BOOT VERIFIED on 2026-10-07 after user power cycle:
+Firmware register 0x0113 (1.19). XACP handshake passed: idle 0 ->
+reserved opcode 0x0340 returns expected status 3 -> reset to idle 0.
+Workbench 1920x800 8bpp and bridge connectivity confirmed.
+Custom Core1 application execution and ARM source debugging remain untested.
+
+Start amiga-bridge after future boots if needed:
+CD SD032G:amiga-bridge
+Start-Amiga-Bridge
+
+Repeat the hardware checks after future firmware changes.
+The zz-version command only reads the firmware register; 0x0113 is
+expected for XX19c (decimal 1.19), but this cannot distinguish XX19a/b/c.
+
+Recovery if required: power off, put the ZZ9000 microSD in the Mac,
+preserve the new BOOT.bin separately and copy BOOT.bak back as BOOT.bin.
+Return the microSD to the powered-off ZZ9000 and power on.
+
+Sources:
+https://github.com/Xanxi-Amiga/XACP-ZZ9000/blob/main/firmware/README.md
+https://github.com/BlitterStudio/zz9000-firmware/blob/v2.8.0/ZZ9000_proto.sdk/ZZ9000OS/src/fw_update.c

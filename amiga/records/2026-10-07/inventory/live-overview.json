@@ -1,0 +1,74 @@
+[
+  {
+    "tool": "amiga_ping",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.756071+00:00",
+    "text": "Amiga alive - clients: 0, chip: 1889728 bytes, fast: 596232368 bytes",
+    "error": false
+  },
+  {
+    "tool": "amiga_sysinfo",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.771232+00:00",
+    "text": "System Information:\n  Exec:     v47.13\n  CPU:      68060\n  Video:    PAL (50Hz)\n  Chip RAM: 1,889,728 / 2,093,056 bytes free\n  Fast RAM: 596,232,368 / 654,311,424 bytes free\n  Total:    598,122,096 / 656,404,480 bytes free",
+    "error": false
+  },
+  {
+    "tool": "amiga_uptime",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.780832+00:00",
+    "text": "Uptime: 0h 18m 33s (1113 seconds)",
+    "error": false
+  },
+  {
+    "tool": "amiga_list_libs",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.807774+00:00",
+    "text": "Libraries (76):\n  rexxsyslib.library             vv47.2.?\n  hid.class                      vv4.4.?\n  utility.library                vv47.3.?\n  graphics.library               vv47.10.?\n  layers.library                 vv46.2.?\n  keymap.library                 vv47.1.?\n  intuition.library              vv47.53.?\n  dos.library                    vv47.30.?\n  mmu.library                    vv47.10.?\n  68060.library                  vv47.2.?\n  680x0.library                  vv46.1.?\n  version.library                vv47.2.?\n  icon.library                   vv51.4.?\n  diskfont.library               vv47.1.?\n  locale.library                 vv47.26.?\n  iffparse.library               vv45.3.?\n  gadtools.library               vv47.17.?\n  ZZ9000.card                    vv1.0.?\n  workbench.library              vv47.33.?\n  mathieeedoubbas.library        vv47.2.?\n  asl.library                    vv47.9.?\n  commodities.library            vv45.2.?\n  usergroup.library              vv4.31.?\n  datatypes.library              vv47.3.?\n  poseidon.library               vv4.5.?\n  asixeth.class                  vv4.5.?\n  camdusbmidi.class              vv4.5.?\n  cdcacm.class                   vv4.5.?\n  dm9601eth.class                vv4.5.?\n  egalaxtouch.class              vv4.5.?\n  hub.class                      vv4.5.?\n  massstorage.class              vv4.5.?\n  moschipeth.class               vv4.5.?\n  pegasus.class                  vv4.5.?\n  printer.class                  vv4.5.?\n  rtl8150eth.class               vv4.5.?\n  serialcp210x.class             vv4.5.?\n  serialpl2303.class             vv4.5.?\n  usbaudio.audio                 vv4.5.?\n  usbaudio.class                 vv4.5.?\n  usbvideo.vhi                   vv1.5.?\n  usbvideo.class                 vv4.5.?\n  adaptecxchg.class              vv4.5.?\n  bootkeyboard.class             vv4.5.?\n  bootmouse.class                vv4.5.?\n  dfu.class                      vv4.5.?\n  ethwrap.class                  vv4.5.?\n  ptp.class                      vv4.5.?\n  simplemidi.class               vv4.5.?\n  rawwrap.class                  vv4.5.?\n  picture.datatype               vv47.5.?\n  png.datatype                   vv47.3.?\n  screennotify.library           vv1.0.?\n  muimaster.library              vv19.35.?\n  muigfx.library                 vv19.9.?\n  muilowlevel.library            vv19.9.?\n  muirexx.library                vv19.9.?\n  bullet.library                 vv46.4.?\n  mathffp.library                vv46.1.?\n  mathtrans.library              vv47.1.?\n  ilbm.datatype                  vv47.4.?\n  mathieeedoubtrans.library      vv47.2.?\n  wizard.library                 vv42.100.?\n  ab3zlib.library                vv1.0.?\n  mathieeesingbas.library        vv47.1.?\n  bsdsocket.library              vv4.364.?\n  camd.library                   vv37.14.?\n  paula.audio                    vv4.23.?\n  expansion.library              vv47.4.?\n  cybergraphics.library          vv42.7.?\n  cgxvideo.library               vv42.1.?\n  vilintuisup.library            vv2.9.?\n  emulation.library              vv41.525.?\n  Picasso96API.library           vv2.455.?\n  rtg.library                    vv43.538.?\n  exec.library                   vv47.13.?",
+    "error": false
+  },
+  {
+    "tool": "amiga_list_volumes",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.856495+00:00",
+    "text": "Volumes (4):\n  RAM Disk:            dos          validated      216KB /   584255KB (584039KB free)\n  HDD50Gig:            dos          validated 10071862KB / 54676162KB (44604300KB free)\n  SD032G:              dos          validated  2098258KB / 30509566KB (28411308KB free)\n  System:              dos          validated    31353KB /  3930841KB (3899488KB free)",
+    "error": false
+  },
+  {
+    "tool": "amiga_list_assigns",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.941159+00:00",
+    "text": "Assigns (19):\n  MUI: -> System/MUI [assign]\n  AmiSSL: -> System/AmiSSL [assign]\n  Picasso96: -> System/Picasso96 [assign]\n  HELP: -> System/Locale/Help [assign]\n  LOCALE: -> System/Locale [assign]\n  KEYMAPS: -> System/Devs/Keymaps [assign]\n  PRINTERS: -> System/Devs/Printers [assign]\n  REXX: -> System/S [assign]\n  CLIPS: -> RAM Disk/Clipboards [assign]\n  T: -> RAM Disk/T [assign]\n  ENV: -> RAM Disk/ENV [assign]\n  ENVARC: -> System/Prefs/Env-Archive [assign]\n  SYS: -> System/ [assign]\n  C: -> System/C [assign]\n  S: -> System/S [assign]\n  LIBS: -> System/Libs [assign]\n  DEVS: -> System/Devs [assign]\n  FONTS: -> System/Fonts [assign]\n  L: -> System/L [assign]",
+    "error": false
+  },
+  {
+    "tool": "amiga_list_ports",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.953649+00:00",
+    "text": "Public Message Ports (17):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  SIXIES.BRIDGE.NETWATCH\n  AMIGABRIDGE\n  ConClip.rendezvous\n  deficons",
+    "error": false
+  },
+  {
+    "tool": "amiga_list_tasks",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.973467+00:00",
+    "text": "Tasks (51):\n  Background CLI                 pri=  0 state=run        stack=?\n  ehide.device                   pri=  6 state=wait       stack=?\n  AUDIO                          pri=  5 state=wait       stack=?\n  Picasso96                      pri=  0 state=wait       stack=?\n  Background CLI                 pri=  0 state=wait       stack=?\n  datatypes.library              pri=  0 state=wait       stack=?\n  usbhw<DEVS:USBHardware/freewaytritonz3usb.device/0> pri= 21 state=wait       stack=?\n  FreewayTriton PIO Transfer     pri= 12 state=wait       stack=?\n  hub.class<088D5FE4>            pri=  5 state=wait       stack=?\n  Workbench Clipboard Server     pri=  0 state=wait       stack=?\n  << AssignWedge >>              pri=  0 state=wait       stack=?\n  CON                            pri=  5 state=wait       stack=?\n  RAWBInfo                       pri=  0 state=wait       stack=?\n  DefIcons                       pri=  0 state=wait       stack=?\n  AsyncWB                        pri=  0 state=wait       stack=?\n  RexxMaster                     pri=  4 state=wait       stack=?\n  muigfx.library                 pri=  0 state=wait       stack=?\n  ClickToFront                   pri= 21 state=wait       stack=?\n  TCP/IP Log                     pri=  0 state=wait       stack=?\n  CON                            pri=  5 state=wait       stack=?\n  Background CLI                 pri=  0 state=wait       stack=?\n  \u00ab ConClip \u00bb                    pri=  0 state=wait       stack=?\n  \u00ab IPrefs \u00bb                     pri=  0 state=wait       stack=?\n  Shell Process                  pri=  0 state=wait       stack=?\n  CON                            pri=  5 state=wait       stack=?\n  2nd.buddha.device              pri= 11 state=wait       stack=?\n  ToolsDaemon                    pri=  2 state=wait       stack=?\n  console.device                 pri=  5 state=wait       stack=?\n  TCP/IP Configuration           pri=  0 state=wait       stack=?\n  TCP/IP Superserver             pri=  0 state=wait       stack=?\n  ramlib                         pri=  0 state=wait       stack=?\n  DF0                            pri= 10 state=wait       stack=?\n  AmigaBridge NetWatch           pri= -5 state=wait       stack=?\n  trackdisk.device               pri=  5 state=wait       stack=?\n  PoPo                           pri=  0 state=wait       stack=?\n  Roadie                         pri= -5 state=wait       stack=?\n  Workbench                      pri=  1 state=wait       stack=?\n  NewMeter                       pri=  0 state=wait       stack=?\n  BDH1                           pri= 10 state=wait       stack=?\n  SDH0                           pri= 10 state=wait       stack=?\n  input.device                   pri= 20 state=wait       stack=?\n  AutoPoint                      pri= 19 state=wait       stack=?\n  ahi.device                     pri= 50 state=wait       stack=?\n  ScummVM AHI Mixer              pri=  1 state=wait       stack=?\n  buddha.device                  pri= 11 state=wait       stack=?\n  RAM                            pri= 10 state=wait       stack=?\n  BDH0                           pri= 10 state=wait       stack=?\n  QDock                          pri= -1 state=wait       stack=?\n  Poseidon Event Broadcast       pri=  0 state=wait       stack=?\n  Background CLI                 pri=  0 state=wait       stack=?\n  TCP/IP Control                 pri=  0 state=wait       stack=?",
+    "error": false
+  },
+  {
+    "tool": "amiga_list_screens",
+    "args": {},
+    "utc": "2026-10-07T20:26:53.992850+00:00",
+    "text": "Screens (2):\n\n  ScummVM 2.5.1 (Sep  4 2026 12 55 39)  320x200  8bpp  LORES  @9395FB0\n  Workbench Screen  1920x800  8bpp  LORES  @889ABC8",
+    "error": false
+  },
+  {
+    "tool": "amiga_list_screen_windows",
+    "args": {
+      "screen": ""
+    },
+    "utc": "2026-10-07T20:26:54.007558+00:00",
+    "text": "Windows on screen @9395FB0 (1):\n\n  ScummVM 2.5.1 (Sep  4 2026 12 55 39)  pos=(0,0)  size=320x200  @9143BFC",
+    "error": false
+  }
+]

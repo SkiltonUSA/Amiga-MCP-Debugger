@@ -1,0 +1,4 @@
+﻿Volume,DOS device,Driver / unit,Filesystem,Registered filesystem version,Usable KiB,Used KiB,Free KiB,State
+System:,BDH0:,buddha.device / 0,PFS3 / $50465303,19.2,3930841,31353,3899488,validated; 0 errors
+HDD50Gig:,BDH1:,buddha.device / 0,PFS3 / $50465303,19.2,54676162,10071862,44604300,validated; 0 errors
+SD032G:,SDH0:,2nd.buddha.device / 0,International FFS / DOS\3 / $444F5303,47.4,30509566,2098258,28411308,validated; 0 errors

@@ -1,0 +1,30 @@
+{
+  "helper_sha256": "eaf704e4d7204f76ef2faf2956895ac260e36fedfa4b4058b830db8dfcb1693e",
+  "helper_crc32": "4F51E3CA",
+  "interface": "x-surf-100",
+  "poll_seconds": 5,
+  "source": "amiga/tools/bridge-netwatch/main.c",
+  "installed": [
+    "C:bridge-netwatch",
+    "S:Start-Amiga-Bridge-Auto",
+    "S:Stop-Amiga-Bridge-Auto",
+    "SD032G:amiga-bridge/Start-Amiga-Bridge"
+  ],
+  "startup": "S:User-Startup",
+  "backups": [
+    "S:User-Startup.before-netwatch",
+    "SD032G:amiga-bridge/backup-netwatch/Start-Amiga-Bridge"
+  ],
+  "tests": [
+    "IPv4 readiness on hardware",
+    "missing interface not ready",
+    "existing bridge suppressed",
+    "duplicate watcher suppressed",
+    "stop and restart watcher",
+    "graceful bridge exit and automatic relaunch"
+  ],
+  "not_tested": [
+    "cold boot",
+    "Roadie offline-online cycle"
+  ]
+}

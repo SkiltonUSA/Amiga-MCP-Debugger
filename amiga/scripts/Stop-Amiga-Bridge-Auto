@@ -1,0 +1,4 @@
+; Stop automatic startup, leaving any running bridge available.
+IF EXISTS "C:bridge-netwatch"
+  C:bridge-netwatch STOP
+ENDIF

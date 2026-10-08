@@ -1,0 +1,112 @@
+@@SYS:Devs/AHI/filesave.audio
+filesave.audio 2.10 (10/25/1998)
+@@SYS:Devs/AHI/paula.audio
+paula.audio 4.23 (12/06/1998)
+@@SYS:Devs/AudioModes/ZZ9000AX
+Could not find version information for 'SYS:Devs/AudioModes/ZZ9000AX'
+@@SYS:Devs/AudioModes/FILESAVE
+Could not find version information for 'SYS:Devs/AudioModes/FILESAVE'
+@@SYS:Devs/AudioModes/PAULA
+Could not find version information for 'SYS:Devs/AudioModes/PAULA'
+@@SYS:Libs/Picasso96/rtg.library
+rtg.library 43.538 (07/29/2023)
+©1991-99 A.Kneer T.Abt, ©2017-2023 icomp
+@@SYS:Libs/Picasso96/emulation.library
+emulation.library 41.525 (07/29/2023)
+©2023 iComp
+@@SYS:Libs/Picasso96/NCR77C32BLT.chip
+NCR77C32BLT.chip 43.17 (07/29/2023)
+@@SYS:Libs/Picasso96/Altais.card
+Altais.card 43.17 (07/29/2023)
+@@SYS:Libs/Picasso96/ZZ9000.card
+ZZ9000.card 1.13 (10/04/2022)
+@@SYS:Libs/MHI/mhizz9000.library
+mhizz9000.library 1.13 (01/03/2023)
+@@SYS:Libs/VHI/pencam.vhi
+pencam 1.3 (11/17/2005)
+© 2002 by Chris Hodges
+@@SYS:Libs/VHI/sonixcam.vhi
+sonixcam 1.0 (01/03/2008)
+© 2008 by Chris Hodges
+@@SYS:Libs/MMU/ACAInit
+AcaInit 46.3 (02/09/2021)
+© THOR
+@@SYS:Libs/MMU/P5Init
+P5Init 46.4 (02/26/2021)
+© THOR
+@@SYS:Libs/MMU/GVPInit
+GVPInit 46.1 (02/26/2021)
+© THOR
+@@SYS:Tools/Commodities/Blanker
+blanker 47.6 (08/31/2020)
+@@SYS:Tools/Commodities/CrossDOS
+crossdos 47.6 (08/31/2020)
+@@SYS:Tools/Commodities/Exchange
+Exchange 47.7 (09/02/2020)
+@@SYS:Tools/Commodities/FKey
+fkey 47.7 (08/31/2020)
+@@SYS:Tools/Commodities/NoCapsLock
+nocapslock 47.4 (08/31/2020)
+@@SYS:Tools/Commodities/NumericPad
+numericpad 47.4 (08/31/2020)
+@@SYS:Tools/Commodities/MouseBlanker
+mouseblanker 47.4 (08/31/2020)
+@@SYS:Tools/Commodities/P96ScreenCx
+P96ScreenCx 42.1 (07/29/2023)
+@@SYS:Tools/TextEditFileTypes/Default4Types
+Could not find version information for 'SYS:Tools/TextEditFileTypes/Default4Types'
+@@SYS:Tools/TuneFinderMUI/TuneFinderMUI
+TuneFinder MUI 0.7-beta (04/20/2025)
+@@SYS:System/QDock/Readme
+Could not find version information for 'SYS:System/QDock/Readme'
+@@SYS:L/FileSystem_Trans/DANSK.crossdos
+Could not find version information for 'SYS:L/FileSystem_Trans/DANSK.crossdos'
+@@SYS:L/FileSystem_Trans/INTL.crossdos
+Could not find version information for 'SYS:L/FileSystem_Trans/INTL.crossdos'
+@@SYS:L/FileSystem_Trans/MAC.crossdos
+Could not find version information for 'SYS:L/FileSystem_Trans/MAC.crossdos'
+@@SYS:AmiSSL/Libs/AmiSSL/amissl_v353.library
+amissl_v353.library 5.23 (09/17/2025)
+os3-68060 version
+@@SYS:MUI/Libs/mui/NListview.mcc
+NListview.mcc 19.102 (08/31/2021)
+Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]
+@@SYS:MUI/Libs/mui/NListviews.mcp
+NListviews.mcp 19.98 (08/31/2021)
+Copyright (C) 2001-2021 NList Open Source Team [OS3/m68k]
+@@SYS:MUI/Libs/mui/Numericbutton.mui
+Numericbutton.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Palette.mui
+Palette.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Penadjust.mui
+Penadjust.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Pendisplay.mui
+Pendisplay.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Popasl.mui
+Popasl.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Popframe.mui
+Popframe.mui 19.9 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Popimage.mui
+Popimage.mui 19.9 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Poppen.mui
+Poppen.mui 19.9 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Popscreen.mui
+Popscreen.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Scale.mui
+Scale.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Scrollgroup.mui
+Scrollgroup.mui 19.8 (02/12/1997)
+©1992-1997 Stefan Stuntz
+@@SYS:MUI/Libs/mui/Settings.mui
+Settings.mui 19.18 (02/12/1997)
+©1992-1997 Stefan Stuntz
