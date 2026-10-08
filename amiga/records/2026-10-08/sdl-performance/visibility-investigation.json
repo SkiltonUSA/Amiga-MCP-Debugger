@@ -1,0 +1,48 @@
+{
+  "scope": "Rejected diagnostic build, TIM2 pixel-only integrity, five-check limit; not the accepted TIM3 build",
+  "build": {
+    "build_id": 3628364984,
+    "source_identity_sha256": "d84474b85b98c4c26c47ec88f96d2dbbfc1a74807c39de2aa33b2e77a64f0ac7",
+    "image_bytes": 5496,
+    "application": "SDLZZFractal",
+    "standalone_release": false,
+    "relocations": [
+      5288,
+      5292,
+      5296,
+      5300
+    ],
+    "entry": 0,
+    "arm_execution_verified": false,
+    "files": {
+      "zzarm.elf": "b517ecf74b1ce12f9e53a498f018f6f1575064ab16db3798b0043d6e13abbbc8",
+      "sdlzzfractal": "2f10ce8f0ad5436b5c0e6b150920a40928fc98b2a57c221cb69a280695074671",
+      "zz_payload.h": "3dc18725de9ed90a56c356f571c9733692652866addcf72d88b9fdb91b27945b",
+      "fractal-points.json": "d877bcf63a671e98285ae21c529fa0cccfd9f28c1baa846292d322178b967ec5"
+    },
+    "sdl": {
+      "repository": "https://github.com/SkiltonUSA/SDL2-AmigaOS3",
+      "tag": "v0.2.0",
+      "library_sha256": "bf90c1f12536df97bfc85e838cc2fa0047fc23f37d5128dbb89bb38dddec386e"
+    }
+  },
+  "sequence": 1495,
+  "generation": 11,
+  "tile": [
+    64,
+    224
+  ],
+  "arm_local_equals_wire": true,
+  "arm_wire_matches_independent_oracle": true,
+  "host_capture_matches_wire": false,
+  "host_expected_pixel_hash": "31685d6c",
+  "host_observed_pixel_hash": "deba7a4f",
+  "arm_wire_pixel_hash": "bffe14e2",
+  "conclusion": "Mixed old/new host view; precise hardware/cache source not isolated. Final TIM3 validates request, timing and pixels and rechecks within the job deadline.",
+  "files": {
+    "diagnostic-arm-region-0.bin": "5ac651b577655fa3a90f1ae0eac7c5fb21cd12b606d6dfa5bb133f4799cea82c",
+    "diagnostic-arm-region-1.bin": "e0bd3f67e39d7debbb17be224bcd6c88d36e7cc75b6a4e448a19618c9dbe4165",
+    "diagnostic-arm-region-2.bin": "fd748847cbc116345cf358d29a9c1fdfae6132684e3a302f36dfadc5f3c5b5bc",
+    "diagnostic-host-tile.bin": "722625ee3195eedda5ebb1188829b9f3eecdbeae433ca5a5fbf024c5ef7615ce"
+  }
+}

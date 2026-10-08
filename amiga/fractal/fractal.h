@@ -23,5 +23,8 @@ int ff_zoom(struct ff_view *,uint32_t,uint32_t);
 void ff_begin(struct ff_cursor *,const struct ff_view *,uint32_t,uint32_t);
 /* At most budget orbit steps/escape checks; returns 1 when tile complete. */
 int ff_step(struct ff_cursor *,uint16_t *,uint32_t budget);
+/* Also stops at the next row boundary so larger worker slices preserve every
+ * row checkpoint. Exact fixed points may finish a pixel early. */
+int ff_step_row(struct ff_cursor *,uint16_t *,uint32_t budget);
 uint32_t ff_hash(uint32_t,uint16_t);
 #endif

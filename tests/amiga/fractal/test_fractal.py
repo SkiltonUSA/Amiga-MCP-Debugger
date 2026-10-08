@@ -61,6 +61,7 @@ uint32_t ff_get(void *p,unsigned o){__sync_synchronize();return ad_get(p,o);}
         cls.lib=C.CDLL(str(lib))
         for name,args,result in [('ff_begin',[C.POINTER(Cursor),C.POINTER(View),C.c_uint32,C.c_uint32],None),
              ('ff_step',[C.POINTER(Cursor),C.POINTER(C.c_uint16),C.c_uint32],C.c_int),
+             ('ff_step_row',[C.POINTER(Cursor),C.POINTER(C.c_uint16),C.c_uint32],C.c_int),
              ('ff_valid',[C.POINTER(View),C.c_uint32,C.c_uint32],C.c_int),
              ('ff_zoom',[C.POINTER(View),C.c_uint32,C.c_uint32],C.c_int),
              ('ff_alloc',[],C.c_void_p),('ff_free',[C.c_void_p],None),
@@ -80,8 +81,29 @@ uint32_t ff_get(void *p,unsigned o){__sync_synchronize();return ad_get(p,o);}
         for v in views:
             tx,ty=rng.randrange(10)*32,rng.randrange(15)*16
             want=[reference(v,tx+x,ty+y) for y in range(16) for x in range(32)]
-            self.assertEqual(self.tile(v,tx,ty,64),want)
-            self.assertEqual(self.tile(v,tx,ty,8192),want)
+            for budget in (1,64,512,1024,8192):
+                self.assertEqual(self.tile(v,tx,ty,budget),want)
+    def test_row_slices_preserve_all_checkpoint_boundaries(self):
+        v=View(-12288,0,153,128);c=Cursor();out=(C.c_uint16*512)()
+        self.lib.ff_begin(C.byref(c),C.byref(v),128,112)
+        rows=[]
+        while c.pixel<512:
+            before=c.pixel;done=self.lib.ff_step_row(C.byref(c),out,1000000)
+            self.assertEqual(c.pixel,(before//32+1)*32)
+            self.assertEqual(done,int(c.pixel==512));rows.append(c.pixel//32)
+        self.assertEqual(rows,list(range(1,17)))
+        self.assertEqual(list(out),[reference(v,128+x,112+y) for y in range(16) for x in range(32)])
+    def test_exact_fixed_point_shortcut_preserves_limit_count(self):
+        # First pixel maps exactly to c=0. Its unchanged orbit proves it cannot
+        # escape; the optimization must report the requested count, not zero.
+        for limit in (1,32,128,256):
+            v=View(320,240,2,limit);c=Cursor();out=(C.c_uint16*512)()
+            self.lib.ff_begin(C.byref(c),C.byref(v),0,0)
+            self.lib.ff_step(C.byref(c),out,1)
+            self.assertEqual(c.iteration,limit);self.assertEqual(c.pixel,0)
+            self.lib.ff_step(C.byref(c),out,1)
+            self.assertEqual(out[0],reference(v,0,0));self.assertEqual(c.pixel,1)
+
     def test_zero_budget_and_finite_precision_zoom(self):
         v=View(-12288,0,153,128);c=Cursor();out=(C.c_uint16*512)()
         self.lib.ff_begin(C.byref(c),C.byref(v),0,0)

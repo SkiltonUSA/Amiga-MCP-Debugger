@@ -1,0 +1,13 @@
+{
+  "installed_path": "SD032G:Dev/SDLZZFractal-0.3/SDLZZFractal",
+  "executable_md5": "69257b060f68f6709eb8b7b0ba1470f7",
+  "workbench_launch": "WBLoad, native Start confirmation, completed default ARM image",
+  "observed_arm_wall_ms": 3819,
+  "observed_arm_compute_estimate_ms": 1471,
+  "observed_transfer_ms": 284,
+  "observed_draw_ms": 441,
+  "bridge_responsive": true,
+  "bridge_clients": 0,
+  "left_running": true,
+  "previous_0_2_preserved": true
+}

@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "source": "Native CLI execution of the fresh LHA-extracted standalone Hunk",
+  "version": "0.3",
+  "executable_bytes": 1156000,
+  "sha256": "533b2ee03a8fcc07933202766ca345b7438c9d8386521b784407a39d4b965b87",
+  "md5": "69257b060f68f6709eb8b7b0ba1470f7",
+  "arm_default_hashes": [
+    "fb32f6c6",
+    "fb32f6c6"
+  ],
+  "cpu_default_hashes": [
+    "fb32f6c6"
+  ],
+  "clean_ret1_exit": true,
+  "cancellation_and_discard_verified": true,
+  "build": {
+    "version": "0.3",
+    "application": "SDLZZFractal",
+    "standalone_release": true,
+    "build_id": 3697674877,
+    "source_identity_sha256": "dc660a7d59db6289345d64860822f11b5d6a917e7a31c62125d50e61b4800613",
+    "sdl": {
+      "repository": "https://github.com/SkiltonUSA/SDL2-AmigaOS3",
+      "tag": "v0.2.0",
+      "library_sha256": "bf90c1f12536df97bfc85e838cc2fa0047fc23f37d5128dbb89bb38dddec386e"
+    },
+    "compiler_image": "docker.io/amigadev/crosstools@sha256:93ca1a47903b61873f6638881b44f9f2d6086a39f1b9b916a26faff3a8ea4d3d",
+    "arm_flags": [
+      "--target=arm-none-eabi",
+      "-mcpu=cortex-a9",
+      "-marm",
+      "-mfloat-abi=soft",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-fPIC",
+      "-fvisibility=hidden",
+      "-fno-stack-protector",
+      "-O1",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DFF_TIMING"
+    ],
+    "arm_kernel_flags": [
+      "-O2"
+    ],
+    "arm_step_budget": 512,
+    "row_checkpoints": true,
+    "work_slice_us": 2000,
+    "yield_us": 1000,
+    "integrity": "TIM3 request and timing bound FNV-1a",
+    "arm_image_bytes": 5688,
+    "relocations": [
+      5480,
+      5484,
+      5488,
+      5492
+    ],
+    "hardware_execution_verified_by_build": false,
+    "files": {
+      "SDLZZFractal": "533b2ee03a8fcc07933202766ca345b7438c9d8386521b784407a39d4b965b87",
+      "zzarm.elf": "9fa68558657977f2bba2d9f896d6be7027b289867cc18501b8a96c503e2e185f",
+      "zz_payload.h": "524b524a7146ac9d88700b14ba7c5a200cd22833ba73bc577a6d90fc416f6aa4"
+    }
+  }
+}

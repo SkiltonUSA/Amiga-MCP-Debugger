@@ -38,10 +38,46 @@ int main(int argc,char **argv){
         assert(zc_submit(&c,&view,0,0,0)==-1);assert(wait_result(&c,&r)==ZC_DISCARDED);
         assert(!zc_submit(&c,&view,0,0,1));assert(wait_result(&c,&r)==ZC_CLOCK);assert(r.compute_ticks==0);
         ad_put(mem,ZZ_STOP,1);barrier(0);assert(!pthread_join(thread,0));
+    }else if(!strcmp(argv[1],"integrity")||!strcmp(argv[1],"corrupt")){
+        unsigned i;uint32_t hash;
+        assert(!zc_submit(&c,&view,0,0,0));
+        hash=ff_timing_hash(ff_result_seed(c.session,c.pending,c.generation,0,0),0,0,0);
+        for(i=0;i<FF_PIXELS;i++)hash=ff_hash(hash,7);
+        ad_put(mem,FF_RES+4,FF_DONE);ad_put(mem,FF_RES+8,c.generation);
+        ad_put(mem,FF_RES+40,0x54494d33u);ad_put(mem,FF_RES+44,hash);
+        ad_put(mem,FF_RES,c.pending);assert(zc_poll(&c,&r)==ZC_WAIT);
+        assert(c.pending&&c.checksum_retries==1&&!c.failed);
+        assert(zc_submit(&c,&view,0,0,0)==-1);
+        if(!strcmp(argv[1],"integrity")){
+            for(i=0;i<FF_PIXELS;i++){mem[FF_DATA+i*2]=0;mem[FF_DATA+i*2+1]=7;}
+            assert(zc_poll(&c,&r)==ZC_TILE);assert(!c.pending);
+            for(i=0;i<FF_PIXELS;i++)assert(r.pixels[i]==7);
+        }else{
+            for(i=0;i<3;i++)assert(zc_poll(&c,&r)==ZC_WAIT);
+            clock_offset=10000001;
+            assert(zc_poll(&c,&r)==ZC_ERROR);assert(c.failed&&c.pending);
+        }
+    }else if(!strcmp(argv[1],"stale_job")||!strcmp(argv[1],"stale_timing")){
+        unsigned i;uint32_t hash;
+        assert(!zc_submit(&c,&view,0,0,0));
+        for(i=0;i<FF_PIXELS;i++){mem[FF_DATA+i*2]=0;mem[FF_DATA+i*2+1]=7;}
+        hash=ff_timing_hash(ff_result_seed(c.session,c.pending,c.generation,0,0),0,0,0);
+        for(i=0;i<FF_PIXELS;i++)hash=ff_hash(hash,7);
+        ad_put(mem,FF_RES+4,FF_DONE);ad_put(mem,FF_RES+8,c.generation);
+        ad_put(mem,FF_RES+40,0x54494d33u);ad_put(mem,FF_RES+44,hash);
+        if(!strcmp(argv[1],"stale_job")){c.pending=++c.sequence;}
+        else ad_put(mem,FF_RES+20,123);
+        ad_put(mem,FF_RES,c.pending);
+        /* Identical pixels plus their old checksum cannot validate a new job,
+         * and stale timing cannot be accepted alongside fresh pixel data. */
+        assert(zc_poll(&c,&r)==ZC_WAIT);assert(c.pending&&!c.failed);
+        hash=ff_timing_hash(ff_result_seed(c.session,c.pending,c.generation,0,0),ad_get(mem,FF_RES+20),0,0);
+        for(i=0;i<FF_PIXELS;i++)hash=ff_hash(hash,7);
+        ad_put(mem,FF_RES+44,hash);assert(zc_poll(&c,&r)==ZC_TILE);
     }else if(!strcmp(argv[1],"malformed")){
         assert(!zc_submit(&c,&view,0,0,0));ad_put(mem,FF_RES,c.pending);
         ad_put(mem,FF_RES+4,FF_DONE);ad_put(mem,FF_RES+8,c.generation+1);
-        ad_put(mem,FF_RES+40,0x54494d31u);assert(zc_poll(&c,&r)==ZC_ERROR);assert(c.failed);
+        ad_put(mem,FF_RES+40,0x54494d33u);assert(zc_poll(&c,&r)==ZC_ERROR);assert(c.failed);
         assert(zc_submit(&c,&view,0,0,0)==-1);
     }else if(!strcmp(argv[1],"timeout")){
         assert(!zc_submit(&c,&view,0,0,0));clock_offset=10000001;
@@ -65,6 +101,11 @@ class ComputeTests(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):cls.tmp.cleanup()
     def test_worker_transfer_cancel_drain_and_clock(self):subprocess.run([self.exe,'worker'],check=True)
+    def test_visibility_recheck_keeps_request_owned(self):subprocess.run([self.exe,'integrity'],check=True)
+    def test_persistent_corruption_fails_closed(self):subprocess.run([self.exe,'corrupt'],check=True)
     def test_mismatched_generation_is_fatal(self):subprocess.run([self.exe,'malformed'],check=True)
     def test_timeout_preserves_owned_request_until_shutdown(self):subprocess.run([self.exe,'timeout'],check=True)
     def test_bounds_and_sequence_exhaustion(self):subprocess.run([self.exe,'bounds'],check=True)
+
+    def test_old_data_and_checksum_do_not_validate_new_request(self):subprocess.run([self.exe,'stale_job'],check=True)
+    def test_timing_metadata_is_covered_by_integrity(self):subprocess.run([self.exe,'stale_timing'],check=True)

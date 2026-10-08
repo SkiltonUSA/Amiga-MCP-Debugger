@@ -76,6 +76,7 @@ def main():
     identity=hashlib.sha256()
     for path in sources:identity.update(path.read_bytes())
     for tool in (cc,ld):identity.update(subprocess.check_output([tool,"--version"]))
+    identity.update(b"fractal-kernel-O2-row512-v1" if a.fractal else b"")
     identity.update(" ".join(flags[:flags.index("-I")]+(["-DFF_TIMING"] if a.sdl else [])).encode()) # Exclude workspace include paths.
     if a.release:identity.update(b"standalone-release-v1")
     if a.sdl:identity.update(b"sdl-fractal-timing-v1")
@@ -85,7 +86,8 @@ def main():
     arm_sources += [ROOT/"amiga/fractal/worker.c",ROOT/"amiga/fractal/fractal.c"] if a.fractal else [SDK/"zz9000/worker.c"]
     for source in arm_sources:
         obj=OUT/(source.stem+".o");objects.append(obj)
-        subprocess.run([cc,*flags,f"-DZZ_BUILD_ID=0x{build:08x}u","-c",source,"-o",obj],check=True)
+        kernel_flags=["-O2"] if source.name=="fractal.c" else []
+        subprocess.run([cc,*flags,*kernel_flags,f"-DZZ_BUILD_ID=0x{build:08x}u","-c",source,"-o",obj],check=True)
     elf=OUT/"zzarm.elf"
     subprocess.run([ld,"-shared","-Bsymbolic","--no-undefined","-T",SDK/"zz9000/payload.ld",
                     *objects,"-o",elf],check=True)
@@ -116,7 +118,7 @@ def main():
         ".tools/amiga-devbench/amiga-bridge/client/bridge_client.c"]
     sdl_record=None
     if a.sdl:
-        if not a.sdl_source:raise ValueError("--sdl-source must identify the SDL2 0.1.0 source checkout with built library")
+        if not a.sdl_source:raise ValueError("--sdl-source must identify the SDL2 0.2.0 source checkout with built library")
         sdl=a.sdl_source.resolve();sdl_rel=sdl.relative_to(ROOT)
         library=sdl/"libSDL2.a"
         digest=hashlib.sha256(library.read_bytes()).hexdigest()
@@ -126,7 +128,7 @@ def main():
         name="SDLZZFractal" if a.release else "sdlzzfractal"
         common=[*prefix,"m68k-amigaos-gcc","-std=c99","-noixemul","-m68030","-O2",
             "-Wall","-Wextra","-Werror","-D__AMIGAOS3__","-DZZ_FRACTAL",
-            '-DZZ_APP_NAME="SDLZZFractal"','-DZZ_APP_VERSION="0.2"','-DZZ_CLIENT_NAME="sdlfractal"',
+            '-DZZ_APP_NAME="SDLZZFractal"','-DZZ_APP_VERSION="0.3"','-DZZ_CLIENT_NAME="sdlfractal"',
             "-DZZ_MIN_STACK=65536","-Iamiga/arm_debug","-Iamiga/arm_debug/zz9000",
             "-Iamiga/fractal","-Iamiga/compute","-I"+str(sdl_rel/"include"),
             "-I"+str(out_rel),"-I.tools/amiga-devbench/amiga-bridge/include"]
@@ -148,7 +150,9 @@ def main():
             "application":"ZZFractal" if a.fractal else "zzarm-debug","standalone_release":a.release,
             "relocations":rel,"entry":entry,"arm_execution_verified":False,
             "files":{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in (elf,binary,OUT/"zz_payload.h")}}
-    if a.sdl:record.update(application="SDLZZFractal",sdl=sdl_record)
+    if a.sdl:record.update(application="SDLZZFractal",version="0.3",sdl=sdl_record,
+        optimization={"arm_worker":"-O1","arm_kernel":"-O2","arm_step_budget":512,
+            "row_checkpoints":True,"work_slice_us":2000,"yield_us":1000,"integrity":"TIM3 request and timing bound FNV-1a"})
     if a.fractal:
         names={1:"tile_dispatch",2:"row_complete",3:"tile_ready",4:"idle"}
         points=[]

@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <exec/types.h>
+#include <devices/timer.h>
 #include <workbench/workbench.h>
 #include <workbench/startup.h>
 #include <proto/exec.h>
@@ -32,10 +33,12 @@ static struct {
     SDL_Window *window,*cover;SDL_Surface *surface;
     struct Screen *test_screen;
     unsigned screen_depth;
-    struct MsgPort *port;struct AppIcon *icon;struct DiskObject *disk;
+    struct MsgPort *port,*yield_port;struct AppIcon *icon;struct DiskObject *disk;
+    struct timerequest *yield_io;int yield_open,paced;
     uint16_t *frame,tile[FF_PIXELS];Uint32 palette[257];
     uint32_t tx,ty,done,hash,start,elapsed,cpu_us,transfer_us,colour_us,draw_us,roundtrip_us;
     uint32_t rate,clock_control,status_time,calibration_span,calibration_uncertainty;
+    uint32_t sleep_us,loops,max_gap_us,last_loop,heartbeat_time,checksum_retries;
     uint64_t arm_ticks,clock_origin,clock_frequency;
     unsigned renders,cancels,discarded;
     int active,arm,cpu_busy,quit,error,connected,verifying;
@@ -44,6 +47,39 @@ static uint32_t now_us(void *u)
 {(void)u;return (uint32_t)((SDL_GetPerformanceCounter()-app.clock_origin)*1000000u/app.clock_frequency);}
 static uint32_t arm_us(void)
 {return app.rate?(uint32_t)(app.arm_ticks*1000000u/app.rate):0;}
+/* A private timer request: never reuse SDL's timer port or change TimerBase.
+ * DoIO completes each bounded relative wait before the request is reused/freed.
+ * Both modes have the same ready-work deadline and sleep duration. ARM polling
+ * stops at the first not-ready result, so the 68k does not spin while offloaded.
+ */
+#define UI_WORK_US 2000u
+#define UI_SLEEP_US 1000u
+#define CPU_STEP_BUDGET 1024u
+static void scheduler_open(void)
+{
+    app.yield_port=CreateMsgPort();
+    if(app.yield_port)app.yield_io=(struct timerequest *)CreateIORequest(app.yield_port,sizeof(*app.yield_io));
+    if(app.yield_io&&OpenDevice(TIMERNAME,UNIT_MICROHZ,(struct IORequest *)app.yield_io,0)==0)
+        app.yield_open=app.paced=1;
+    printf("SCHEDULER paced=%d work_us=%u sleep_us=%u cpu_steps=%u\n",
+        app.paced,UI_WORK_US,UI_SLEEP_US,CPU_STEP_BUDGET);fflush(stdout);
+}
+static void scheduler_close(void)
+{
+    if(app.yield_open)CloseDevice((struct IORequest *)app.yield_io);
+    if(app.yield_io)DeleteIORequest((struct IORequest *)app.yield_io);
+    if(app.yield_port)DeleteMsgPort(app.yield_port);
+}
+static void scheduler_wait(void)
+{
+    int active=app.active;uint32_t before=now_us(0);
+    if(active&&app.paced) {
+        app.yield_io->tr_node.io_Command=TR_ADDREQUEST;
+        app.yield_io->tr_time.tv_secs=0;app.yield_io->tr_time.tv_micro=UI_SLEEP_US;
+        if(DoIO((struct IORequest *)app.yield_io)!=0){app.error=1;app.quit=1;}
+    } else Delay(1);
+    if(active)app.sleep_us+=now_us(0)-before;
+}
 /* Original compact 5x7 glyphs. Rows are five-bit masks, left pixel at bit 4. */
 static const char glyph_chars[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:-./[]+% ";
 static const unsigned char glyphs[][7]={
@@ -131,7 +167,7 @@ static void status(int force)
 }
 static int open_window(void)
 {
-    app.window=SDL_CreateWindow("SDL ZZFractal 0.2",100,100,400,354,0);
+    app.window=SDL_CreateWindow("SDL ZZFractal 0.3",100,100,400,354,0);
     if(!app.window){printf("SDL window: %s\n",SDL_GetError());fflush(stdout);return 0;}
     app.surface=SDL_GetWindowSurface(app.window);
     if(!app.surface||app.surface->format->BytesPerPixel!=4){SDL_DestroyWindow(app.window);app.window=0;return 0;}
@@ -218,7 +254,8 @@ static void start(int arm)
     unsigned i;cancel();if(app.quit)return;
     app.arm=arm;app.done=app.hash=app.tx=app.ty=0;
     app.cpu_us=app.transfer_us=app.colour_us=app.draw_us=app.roundtrip_us=0;app.arm_ticks=0;
-    app.start=now_us(0);app.active=1;app.renders++;
+    app.start=now_us(0);app.last_loop=app.start;
+    app.sleep_us=app.loops=app.max_gap_us=app.checksum_retries=0;app.active=1;app.renders++;
     app.error=0;for(i=0;i<FF_WIDTH*FF_HEIGHT;i++)app.frame[i]=app.view.limit;
     if(app.window){palette();paint(0,0,FF_WIDTH,FF_HEIGHT);}
     status(1);
@@ -254,24 +291,38 @@ static void completed(const uint16_t *pixels)
             (long)app.view.cx,(long)app.view.cy,(long)app.view.step,(unsigned long)app.view.limit);fflush(stdout);status(1);
     }
 }
-static void progress(void)
+static int progress(void)
 {
-    int result=zc_poll(&app.compute,&app.result);
-    if(result==ZC_ERROR){app.error=1;app.quit=1;return;}
+    int result;if(app.error)return 0;
+    result=zc_poll(&app.compute,&app.result);
+    if(result==ZC_ERROR){
+        printf("COMPUTE_FAIL seq=%lu tx=%lu ty=%lu gen=%lu checks=%lu expected=%08lx observed=%08lx\n",
+            (unsigned long)app.compute.pending,(unsigned long)app.compute.tx,(unsigned long)app.compute.ty,
+            (unsigned long)app.compute.generation,(unsigned long)app.compute.checksum_retries,
+            (unsigned long)app.compute.expected_hash,(unsigned long)app.compute.observed_hash);fflush(stdout);
+#ifndef ZZ_RELEASE
+        {FILE *f=fopen("RAM:SixiesDev/integrity-tile.bin","wb");if(f){fwrite(app.result.pixels,2,FF_PIXELS,f);fclose(f);}}
+#endif
+        app.elapsed=now_us(0)-app.start;
+        app.error=app.quit=1;app.active=0;
+        return 0;
+    }
     if(result==ZC_DISCARDED)app.discarded++;
     if(result==ZC_TILE&&app.active&&app.arm) {
         if(app.result.control!=app.clock_control)app.rate=0;
         app.arm_ticks+=app.result.compute_ticks;app.transfer_us+=app.result.transfer_us;
-        app.roundtrip_us+=app.result.roundtrip_us;completed(app.result.pixels);
+        app.roundtrip_us+=app.result.roundtrip_us;app.checksum_retries+=app.compute.checksum_retries;completed(app.result.pixels);
     }
-    if(!app.active)return;
+    if(!app.active)return 0;
     if(app.arm) {
         if(!app.compute.pending&&zc_submit(&app.compute,&app.view,app.tx,app.ty,0)<0){app.error=1;app.quit=1;}
+        return result==ZC_TILE;
     } else {
         uint32_t before;int done;
         if(!app.cpu_busy){ff_begin(&app.cpu,&app.view,app.tx,app.ty);app.cpu_busy=1;}
-        before=now_us(0);done=ff_step(&app.cpu,app.tile,8192);app.cpu_us+=now_us(0)-before;
+        before=now_us(0);done=ff_step(&app.cpu,app.tile,app.paced?CPU_STEP_BUDGET:8192);app.cpu_us+=now_us(0)-before;
         if(done){app.cpu_busy=0;completed(app.tile);}
+        return 1;
     }
 }
 /* Diagnostic readback of our native layered window. The bridge's generic
@@ -282,7 +333,7 @@ static int check_pixels(char *out,int cap)
     unsigned char *rgb;unsigned tolerance=app.screen_depth==16?8:0;
     if(!app.window||!app.screen_depth||app.active||app.cover)return -1;
     screen=LockPubScreen("SDLZZFractal.Test");if(!screen)return -1;
-    for(w=screen->FirstWindow;w;w=w->NextWindow)if(w->Title&&!strcmp((char *)w->Title,"SDL ZZFractal 0.2"))break;
+    for(w=screen->FirstWindow;w;w=w->NextWindow)if(w->Title&&!strcmp((char *)w->Title,"SDL ZZFractal 0.3"))break;
     if(!w){UnlockPubScreen(NULL,screen);return -1;}
     rgb=calloc(FF_WIDTH*FF_HEIGHT,4);
     if(!rgb){UnlockPubScreen(NULL,screen);return -1;}
@@ -310,6 +361,13 @@ static int hook(const char *args,char *out,int cap)
     int x,y,ok=1;char extra;
     if(!strcmp(args,"automation on")){app.verifying=1;status(1);}
     else if(!strcmp(args,"automation off")){app.verifying=0;status(1);}
+    else if(!strcmp(args,"scheduling")) {
+        snprintf(out,cap,"ok=1 paced=%d work_us=%u wait_us=%u sleep_us=%lu loops=%lu max_gap_us=%lu checksum_retries=%lu",
+            app.paced,UI_WORK_US,UI_SLEEP_US,(unsigned long)app.sleep_us,(unsigned long)app.loops,
+            (unsigned long)app.max_gap_us,(unsigned long)app.checksum_retries);return 0;
+    }
+    else if(!strcmp(args,"schedule legacy")){if(app.active||app.compute.pending)ok=0;else app.paced=0;}
+    else if(!strcmp(args,"schedule paced")){if(app.active||app.compute.pending||!app.yield_open)ok=0;else app.paced=1;}
     else if(!strcmp(args,"pixels"))return check_pixels(out,cap);
     else if(!strcmp(args,"arm"))start(1);
     else if(!strcmp(args,"cpu"))start(0);
@@ -333,12 +391,16 @@ static int hook(const char *args,char *out,int cap)
         else if((f=fopen("RAM:SixiesDev/sdl-fractal-counts.bin","wb"))) {
             ok=fwrite(app.frame,2,FF_WIDTH*FF_HEIGHT,f)==FF_WIDTH*FF_HEIGHT;if(fclose(f))ok=0;
         } else ok=0;
+    } else if(!strcmp(args,"clock")) {
+        snprintf(out,cap,"ok=1 rate=%lu calibration_span_us=%lu uncertainty_us=%lu control=%08lx",
+            (unsigned long)app.rate,(unsigned long)app.calibration_span,
+            (unsigned long)app.calibration_uncertainty,(unsigned long)app.clock_control);return 0;
     } else if(!strcmp(args,"metrics")) {
-        snprintf(out,cap,"ok=1 mode=%s gen=%lu running=%d wall_us=%lu cpu_us=%lu arm_us_est=%lu transfer_us=%lu colour_us=%lu draw_us=%lu roundtrip_us=%lu rate=%lu calibration_span_us=%lu uncertainty_us=%lu control=%08lx",
+        snprintf(out,cap,"ok=1 mode=%s gen=%lu running=%d wall_us=%lu cpu_us=%lu arm_us_est=%lu transfer_us=%lu colour_us=%lu draw_us=%lu roundtrip_us=%lu rate=%lu control=%08lx paced=%d",
             app.arm?"ARM":"CPU",(unsigned long)app.compute.generation,app.active,
             (unsigned long)(app.active?now_us(0)-app.start:app.elapsed),(unsigned long)app.cpu_us,(unsigned long)arm_us(),(unsigned long)app.transfer_us,
             (unsigned long)app.colour_us,(unsigned long)app.draw_us,(unsigned long)app.roundtrip_us,(unsigned long)app.rate,
-            (unsigned long)app.calibration_span,(unsigned long)app.calibration_uncertainty,(unsigned long)app.clock_control);return 0;
+            (unsigned long)app.clock_control,app.paced);return 0;
     } else if(strcmp(args,"status"))ok=0;
     snprintf(out,cap,"ok=%d mode=%s running=%d gen=%lu tiles=%lu hash=%08lx ms=%lu pending=%lu renders=%u cancels=%u discarded=%u cx=%ld cy=%ld step=%ld limit=%lu hidden=%d depth=%u error=%d",
         ok,app.arm?"ARM":"CPU",app.active,(unsigned long)app.compute.generation,(unsigned long)app.done,(unsigned long)app.hash,
@@ -415,12 +477,13 @@ static void calibrate(void)
 }
 int ff_window(volatile uint8_t *mem,const struct ad_io *io,int connected)
 {
-    unsigned tick=0;int rc=20;
+    int rc=20;
     memset(&app,0,sizeof(app));app.connected=connected;app.arm=1;ff_default(&app.view);
     if(zc_init(&app.compute,mem,ZZ_BLOCK_SIZE,io,now_us,0)<0)return 20;
     if(SDL_Init(SDL_INIT_VIDEO)<0)goto done;
     app.clock_frequency=SDL_GetPerformanceFrequency();app.clock_origin=SDL_GetPerformanceCounter();
     if(!app.clock_frequency)goto done;
+    scheduler_open();
     app.frame=calloc(FF_WIDTH*FF_HEIGHT,sizeof(*app.frame));if(!app.frame)goto done;
     if(!open_window())goto done;
     IconBase=OpenLibrary("icon.library",44);WorkbenchBase=OpenLibrary("workbench.library",44);
@@ -429,12 +492,26 @@ int ff_window(volatile uint8_t *mem,const struct ad_io *io,int connected)
         if(!app.disk)app.disk=GetDefDiskObject(WBTOOL);
     }
     calibrate();if(app.compute.failed)goto done;
-    if(connected)ab_register_hook("sdlfractal","status metrics pixels arm cpu cancel reset zoom x y pan x y iterations n out screen 0/16/32 iconify restore cover uncover save quit",hook);
+    if(connected)ab_register_hook("sdlfractal","status metrics clock scheduling arm cpu cancel reset zoom x y pan x y iterations n out screen 0/16/32 iconify restore cover uncover save pixels quit",hook);
     start(1);
     while(!app.quit) {
+        uint32_t loop=now_us(0),before;
+        if(app.active) {
+            uint32_t gap=loop-app.last_loop;app.last_loop=loop;app.loops++;
+            if(gap>app.max_gap_us)app.max_gap_us=gap;
+        }
         if(SetSignal(0,SIGBREAKF_CTRL_C)&SIGBREAKF_CTRL_C)app.quit=1;
         events();if(connected)ab_poll();if(app.quit)break;
-        progress();status(0);if(connected&&tick++%100==0)ab_heartbeat();Delay(1);
+        before=now_us(0);
+        do {
+            int ready=progress();
+            if(!app.paced||!ready)break;
+        } while(app.active&&!app.quit&&now_us(0)-before<UI_WORK_US);
+        status(0);
+        if(connected&&now_us(0)-app.heartbeat_time>=2000000u) {
+            ab_heartbeat();app.heartbeat_time=now_us(0);
+        }
+        if(!app.quit)scheduler_wait();
     }
     cancel();rc=app.error?20:0;
     if(connected)ab_unregister_hook("sdlfractal");
@@ -446,6 +523,6 @@ done:
     SDL_SetHint("SDL_AMIGA_PUBLIC_SCREEN","");
     remove_icon();if(app.disk)FreeDiskObject(app.disk);if(app.port)DeleteMsgPort(app.port);
     if(WorkbenchBase)CloseLibrary(WorkbenchBase);if(IconBase)CloseLibrary(IconBase);
-    free(app.frame);SDL_Quit();
+    scheduler_close();free(app.frame);SDL_Quit();
     printf("SDL_UI exit=%d renders=%u cancels=%u discarded=%u\n",rc,app.renders,app.cancels,app.discarded);fflush(stdout);return rc;
 }

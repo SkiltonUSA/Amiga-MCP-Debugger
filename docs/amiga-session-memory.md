@@ -7,43 +7,64 @@ evidence; it is not a backup of the Amiga's disks or installed commercial games.
 
 ## Latest SDL application (2026-10-08)
 
-**SDL ZZFractal 0.2** is installed in `SD032G:Dev/SDLZZFractal-0.2/` with
-native tool/drawer icons, stack 131072, documentation and its embedded ARM
-payload. Executable MD5 `364ec823dea2615b6dc3fb5e91319177`.
+**SDL ZZFractal 0.3** is installed in `SD032G:Dev/SDLZZFractal-0.3/`, alongside
+0.2, with native icons and stack 131072. The 1,156,000-byte executable has
+MD5 `69257b060f68f6709eb8b7b0ba1470f7` and SHA-256
+`533b2ee03a8fcc07933202766ca345b7438c9d8386521b784407a39d4b965b87`.
+It is currently left running from Workbench at (680,300) with a complete default ARM image.
 It registers **no bridge client**: zero clients does not establish Core1 idle.
-Check for window `SDL ZZFractal 0.2`, the app task and the
-`Sixies.ARM.Debug.Owner` port. Quit with Q before starting another ARM app.
+Check window `SDL ZZFractal 0.3`, the app task and `Sixies.ARM.Debug.Owner`;
+quit with Q before another ARM app. Re-enumerate live state on the next task.
 
-The developer suite passed 14 complete oracle-frame comparisons, native
-16-/32-bit CGX readback, cancellation, hook-driven iconify/restore and RET1
-shutdown. Standalone Shell CPU/ARM hashes matched `fb32f6c6`; cancellation and
-Ctrl-C returned RET1 and released memory. Native Workbench launch, firmware
-requester, ARM render, verified window movement and Q quit also passed.
-The installed app was relaunched from Workbench and left open at (680,300),
-with its ARM image complete; bridge postflight was healthy. Re-enumerate actual
-state before the next hardware task.
-
-Default developer wall time: ARM 7.575 s, CPU 17.427 s. Compute slices were
-ARM 2.894 s estimate versus CPU 2.233 s. Unequal scheduling means this is not
-a raw processor speed ratio; MMU/caches remain off on Core1.
-
-Native double-click AppIcon restoration is still unverified. Injected icon
-mouse input stalled the bridge; it recovered without reboot. ARexx ICON OPEN
-returned OK without restoring. Developer-hook restoration passed. Avoid
-injecting Workbench icon mouse clicks; ask for a physical test when useful.
-The standalone app subsequently exited cleanly. Other moved windows were
-restored; the Roadshow details requester was already closed on recovery.
-No startup/preferences/firmware changes were made.
-
-Source and release: https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.2.0
-Framework source: `amiga/compute/`, `amiga/sdl_fractal/`; details in
-`docs/amiga-sdl-fractal.md`, records in `amiga/records/2026-10-08/sdl-fractal/`.
-The public SDK pins `libSDL2.a` SHA256
+The exact Q14 kernel keeps orbit state in locals and uses Clang -O2; the
+worker allows 512 steps but stops at each row checkpoint. Both UI modes use
+a 2 ms ready-work target and a private 1 ms timer yield, with one-tick idle
+and timer-open fallback. OS/SDL/bridge calls can exceed that work target.
+No firmware, OS, startup, driver or cache-policy changes were made. Core1
+MMU/caches remain off, and host CacheClearE still synchronizes shared ranges.
+The SDL2 static library is unchanged from SDK 0.2.0, SHA-256
 `bf90c1f12536df97bfc85e838cc2fa0047fc23f37d5128dbb89bb38dddec386e`.
-Use sequential hardware calls; the Workbench ARexx docs are linked in the
-application development document. Temporary extraction/logs are in RAM:.
+
+Default medians of three developer runs per mode, 0.2 -> 0.3:
+ARM render 7.609 -> 3.848 s; ARM compute estimate 2.899 -> 1.472 s;
+68060 render 17.292 -> 4.328 s; 68060 compute 2.235 -> 1.692 s.
+These are application measurements, not a general CPU/SDL speed ratio.
+The installed Workbench copy showed ARM 3.819 s, compute 1.471 s.
+
+Shorter waits initially exposed mixed old/new host tile reads. A complete
+ARM-side diagnostic capture matched the oracle while the host copy differed.
+Full-cache experiments did not eliminate the fault and were reverted. The
+precise hardware/cache source remains unisolated. The final TIM3 protocol
+validates session, sequence, generation, coordinates, timing and pixels as a
+unit, keeping the request owned during read-only rechecks up to the existing
+10 s deadline. Do not restore pixel-only checksums, accept unchecked data,
+resend work, globally operate PL310, or infer a fixed DDR reservation.
+
+Physical acceptance passed 14 full 76,800-count oracle comparisons and
+20 additional default ARM hashes; the latter recorded 188 rechecks across
+3,000 tiles. Native 16-/32-bit CGX sampling, cancellation while the ARM debugger
+was paused, six rapid cancel/zoom cycles, iconified rendering, hook restore,
+overlapping/moved windows and RET1 / exit 0 / allocation release passed.
+Standalone CLI ARM/CPU hashes, cancel/discard and Q exit passed. Native LHA
+integrity/fresh extraction passed and all 10 members match the ZIP. Installed
+Workbench launch and its Start requester passed; bridge postflight was healthy.
+
+Native AppIcon double-click restore remains unverified from 0.2. Injected
+Workbench icon mouse input stalled Intuition/bridge, recovering without a
+reboot; ARexx ICON OPEN did not restore it. Avoid synthetic Workbench icon
+clicks. Developer-hook restore is not proof of the physical gesture.
+
+Public source commit `e73eee2`; application-only prerelease:
+https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/fractal-v0.3.0
+The SDK remains at v0.2.0. Source: `amiga/compute/`, `amiga/sdl_fractal/`,
+`amiga/fractal/`; docs: `docs/amiga-sdl-fractal.md`; accepted evidence and the
+rejected visibility capture: `amiga/records/2026-10-08/sdl-performance/`.
+Use sequential hardware calls. Temporary extraction/scripts/logs remain in
+RAM:; Mac HTTP staging is stopped at the end of this task.
 
 ## Current working state
+
+Chronological background follows; the latest active application is recorded above.
 
 - Target: A4000TX, TF4060, 68060 revision 5, AGA, AmigaOS 3.2.3 as identified
   by the owner. CPU MHz and individual chip package/date codes are unverified.

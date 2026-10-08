@@ -56,6 +56,8 @@ void zz_worker(volatile uint8_t *base)
 #endif
        &io)||
        ad_add_region(&core,pixels,sizeof(pixels))!=0)return;
+    ad_add_region(&core,(const void *)(base+FF_DATA),FF_PIXELS*2);
+    ad_add_region(&core,(const void *)(base+FF_RES),64);
     ad_log(&core,"Mandelbrot Core1 Q14; cache-off; points 1 dispatch / 2 row / 3 result / 4 idle");
     ad_put(base,ZZ_DIAG,ZZ_READY);barrier(0);
     while(!ad_get(base,ZZ_STOP)) {
@@ -99,7 +101,8 @@ void zz_worker(volatile uint8_t *base)
 #ifdef FF_TIMING
             uint64_t before=timer_ticks();
 #endif
-            complete=ff_step(&cursor,pixels,64);
+            /* Bounded service/cancel latency, with no skipped row checkpoints. */
+            complete=ff_step_row(&cursor,pixels,512);
 #ifdef FF_TIMING
             busy_ticks+=timer_ticks()-before;
 #endif
@@ -120,13 +123,16 @@ void zz_worker(volatile uint8_t *base)
             ad_put(base,FF_RES+12,watch[1]);ad_put(base,FF_RES+16,watch[2]);
             #ifdef FF_TIMING
             {
-                uint64_t stamp=timer_ticks();
+                uint64_t stamp=timer_ticks();uint32_t control=timer_control();
+                uint32_t hash=ff_timing_hash(ff_result_seed(session,seq,gen,watch[1],watch[2]),busy_ticks,stamp,control);
+                if(result==FF_DONE)for(i=0;i<FF_PIXELS;i++)hash=ff_hash(hash,pixels[i]);
                 ad_put(base,FF_RES+20,(uint32_t)busy_ticks);
                 ad_put(base,FF_RES+24,(uint32_t)(busy_ticks>>32));
                 ad_put(base,FF_RES+28,(uint32_t)stamp);
                 ad_put(base,FF_RES+32,(uint32_t)(stamp>>32));
-                ad_put(base,FF_RES+36,timer_control());
-                ad_put(base,FF_RES+40,0x54494d31u); /* TIM1 */
+                ad_put(base,FF_RES+36,control);
+                ad_put(base,FF_RES+44,hash);
+                ad_put(base,FF_RES+40,0x54494d33u); /* TIM3: request-bound result integrity */
             }
 #endif
             barrier(0);ad_put(base,FF_RES,seq);barrier(0);stage=0;

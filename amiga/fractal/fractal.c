@@ -26,24 +26,53 @@ static void point(struct ff_cursor *c)
 }
 void ff_begin(struct ff_cursor *c,const struct ff_view *v,uint32_t tx,uint32_t ty)
 { c->view=*v;c->tx=tx;c->ty=ty;c->pixel=0;point(c); }
-int ff_step(struct ff_cursor *c,uint16_t *out,uint32_t budget)
+/* Keep the current orbit in locals across a bounded slice. Shared DDR is
+ * uncached on the ARM, so reloading cursor fields in the inner loop is costly.
+ * The cursor and output tile are disjoint caller-owned objects.
+ */
+static int advance(struct ff_cursor *c,uint16_t *out,uint32_t budget,uint32_t stop)
 {
-    while(budget-- && c->pixel<FF_PIXELS) {
+    uint32_t pixel=c->pixel,n=c->iteration;
+    int32_t x=c->x,y=c->y,cr=c->cr,ci=c->ci;
+    const uint32_t limit=c->view.limit;
+    while(budget-- && pixel<stop) {
         int32_t xx=0,yy=0;
-        int escaped=c->x>2*FF_ONE||c->x< -2*FF_ONE||c->y>2*FF_ONE||c->y< -2*FF_ONE;
+        int escaped=x>2*FF_ONE||x< -2*FF_ONE||y>2*FF_ONE||y< -2*FF_ONE;
         if(!escaped) {
-            xx=(c->x*c->x)/FF_ONE; yy=(c->y*c->y)/FF_ONE;
+            /* Escape bounds make these products nonnegative and <= 2^30.
+             * Unsigned shifts are exact Q14 division here; xy below remains
+             * signed division to preserve truncation toward zero. */
+            xx=(int32_t)((uint32_t)(x*x)>>14);
+            yy=(int32_t)((uint32_t)(y*y)>>14);
             escaped=xx+yy>4*FF_ONE;
         }
-        if(escaped||c->iteration>=c->view.limit) {
-            out[c->pixel++]=(uint16_t)c->iteration;
-            if(c->pixel<FF_PIXELS)point(c);
+        if(escaped||n>=limit) {
+            out[pixel++]=(uint16_t)n;
+            if(pixel<FF_PIXELS) {
+                cr=c->view.cx+((int32_t)(c->tx+pixel%FF_TW)-(int32_t)FF_WIDTH/2)*c->view.step;
+                ci=c->view.cy+((int32_t)(c->ty+pixel/FF_TW)-(int32_t)FF_HEIGHT/2)*c->view.step;
+                x=y=0;n=0;
+            }
         } else {
-            c->y=2*((c->x*c->y)/FF_ONE)+c->ci;
-            c->x=xx-yy+c->cr;c->iteration++;
+            int32_t nx=xx-yy+cr,ny=2*((x*y)/FF_ONE)+ci;
+            ++n;
+            /* Exact fixed-point recurrence: a repeated state can never escape.
+             * This is an integer equality proof, not an approximate interior
+             * test. It only shortcuts points that would return the limit. */
+            if(nx==x&&ny==y)n=limit;
+            x=nx;y=ny;
         }
     }
-    return c->pixel==FF_PIXELS;
+    c->pixel=pixel;c->iteration=n;c->x=x;c->y=y;c->cr=cr;c->ci=ci;
+    return pixel==FF_PIXELS;
+}
+int ff_step(struct ff_cursor *c,uint16_t *out,uint32_t budget)
+{return advance(c,out,budget,FF_PIXELS);}
+int ff_step_row(struct ff_cursor *c,uint16_t *out,uint32_t budget)
+{
+    uint32_t stop=(c->pixel/FF_TW+1)*FF_TW;
+    if(stop>FF_PIXELS)stop=FF_PIXELS;
+    return advance(c,out,budget,stop);
 }
 /* Endian-independent FNV-1a of big-endian 16-bit iteration counts. */
 uint32_t ff_hash(uint32_t h,uint16_t v)

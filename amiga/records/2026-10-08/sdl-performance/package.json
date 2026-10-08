@@ -1,0 +1,7 @@
+{
+  "bytes": 365075,
+  "sha256": "9a1160338bc4d1c8c03edb536c5be4a1a05ad04a8482bbf72bf1d67e5f8b4b63",
+  "all_10_members_match_zip": true,
+  "zip_sha256": "e1a0044965a348c76fc81ec0a4c38217b5de6ea8ea69c1ed5d9b53a2d8dfd0af",
+  "native_lha_test_and_fresh_extraction": "passed; 10 files; executable MD5 69257b060f68f6709eb8b7b0ba1470f7"
+}

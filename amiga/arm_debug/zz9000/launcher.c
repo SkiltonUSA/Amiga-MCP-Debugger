@@ -223,7 +223,7 @@ int main(int argc,char **argv)
         bound=1;
     }
 #endif
-    failure="Could not open the fractal window or allocate its graphics resources.";
+    failure="Fractal frontend or ARM transfer failed. See the CLI log for details.";
     rc=ff_window(mem,&io,connected);
 #else
     if(ab_init("zzarm-debug"))goto done;

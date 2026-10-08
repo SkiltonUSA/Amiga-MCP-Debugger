@@ -29,13 +29,13 @@ int zc_submit(struct zc_client *c,const struct ff_view *v,uint32_t tx,uint32_t t
     ad_put(c->mem,FF_REQ+28,tx);ad_put(c->mem,FF_REQ+32,ty);
     ad_put(c->mem,FF_REQ+36,clock_only?1:0);push(c,FF_REQ,64);
     c->pending=++c->sequence;c->pending_generation=c->generation;c->tx=tx;c->ty=ty;
-    c->kind=clock_only?1:0;c->started=begin;
+    c->kind=clock_only?1:0;c->started=begin;c->checksum_retries=0;
     ad_put(c->mem,FF_REQ,c->pending);push(c,FF_REQ,64);
     c->transfer_us=c->now_us(c->clock_user)-begin;return 0;
 }
 int zc_poll(struct zc_client *c,struct zc_result *r)
 {
-    uint32_t begin,code,gen;unsigned i;
+    uint32_t begin,code,gen,hash;unsigned i;
     if(!r||c->failed)return ZC_ERROR;
     if(!c->pending)return ZC_WAIT;
     begin=c->now_us(c->clock_user);pull(c,FF_RES,64);
@@ -46,19 +46,36 @@ int zc_poll(struct zc_client *c,struct zc_result *r)
     }
     code=ad_get(c->mem,FF_RES+4);gen=ad_get(c->mem,FF_RES+8);
     if(gen!=c->pending_generation||ad_get(c->mem,FF_RES+12)!=c->tx||
-       ad_get(c->mem,FF_RES+16)!=c->ty||ad_get(c->mem,FF_RES+40)!=0x54494d31u) {
+       ad_get(c->mem,FF_RES+16)!=c->ty||ad_get(c->mem,FF_RES+40)!=0x54494d33u) {
         c->failed=1;return ZC_ERROR;
     }
-    c->pending=0;
-    if(gen!=c->generation)return ZC_DISCARDED;
+    if(gen!=c->generation){c->pending=0;return ZC_DISCARDED;}
     if((!c->kind&&code!=FF_DONE)||(c->kind&&code!=4)){c->failed=1;return ZC_ERROR;}
     r->compute_ticks=((uint64_t)ad_get(c->mem,FF_RES+24)<<32)|ad_get(c->mem,FF_RES+20);
     r->stamp=((uint64_t)ad_get(c->mem,FF_RES+32)<<32)|ad_get(c->mem,FF_RES+28);
     r->control=ad_get(c->mem,FF_RES+36);
+    hash=ff_timing_hash(ff_result_seed(c->session,c->pending,c->pending_generation,c->tx,c->ty),
+        r->compute_ticks,r->stamp,r->control);
     if(!c->kind) {
         pull(c,FF_DATA,FF_PIXELS*2);
-        for(i=0;i<FF_PIXELS;i++)r->pixels[i]=((unsigned)c->mem[FF_DATA+i*2]<<8)|c->mem[FF_DATA+i*2+1];
+        for(i=0;i<FF_PIXELS;i++) {
+            r->pixels[i]=((unsigned)c->mem[FF_DATA+i*2]<<8)|c->mem[FF_DATA+i*2+1];
+            hash=ff_hash(hash,r->pixels[i]);
+        }
     }
+    /* Keep ownership until the published tile is visible and validated.
+     * A mismatch is never displayed or followed by another request. Recheck
+     * with the normal scheduler until the existing ten-second job deadline;
+     * neither resend work nor add a fixed visibility delay. Persistent damage
+     * fails closed and the launcher retains safe teardown. */
+    c->observed_hash=hash;c->expected_hash=ad_get(c->mem,FF_RES+44);
+    if(hash!=c->expected_hash) {
+        c->transfer_us+=c->now_us(c->clock_user)-begin;
+        ++c->checksum_retries;
+        if(begin-c->started>10000000u){c->failed=1;return ZC_ERROR;}
+        return ZC_WAIT;
+    }
+    c->pending=0;
     r->transfer_us=c->transfer_us+c->now_us(c->clock_user)-begin;
     r->roundtrip_us=c->now_us(c->clock_user)-c->started;
     return c->kind?ZC_CLOCK:ZC_TILE;

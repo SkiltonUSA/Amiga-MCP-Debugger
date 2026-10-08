@@ -1,0 +1,27 @@
+{
+  "url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/fractal-v0.3.0",
+  "tag": "fractal-v0.3.0",
+  "source_commit": "e73eee2",
+  "prerelease": true,
+  "all_asset_digests_verified": true,
+  "assets": [
+    {
+      "name": "SDLZZFractal-0.3-SHA256SUMS.txt",
+      "size": 186,
+      "digest": "sha256:326f0274e2fe68174f6addf24c58b0f8cad427f894bb1b6f51ce3e9d0ee527c4",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/fractal-v0.3.0/SDLZZFractal-0.3-SHA256SUMS.txt"
+    },
+    {
+      "name": "SDLZZFractal-0.3-XX19c.lha",
+      "size": 365075,
+      "digest": "sha256:9a1160338bc4d1c8c03edb536c5be4a1a05ad04a8482bbf72bf1d67e5f8b4b63",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/fractal-v0.3.0/SDLZZFractal-0.3-XX19c.lha"
+    },
+    {
+      "name": "SDLZZFractal-0.3-XX19c.zip",
+      "size": 342227,
+      "digest": "sha256:e1a0044965a348c76fc81ec0a4c38217b5de6ea8ea69c1ed5d9b53a2d8dfd0af",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/fractal-v0.3.0/SDLZZFractal-0.3-XX19c.zip"
+    }
+  ]
+}

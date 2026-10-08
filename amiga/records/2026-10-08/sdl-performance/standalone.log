@@ -1,0 +1,19 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=5992fdf8
+BOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+SCHEDULER paced=1 work_us=2000 sleep_us=1000 cpu_steps=1024
+TIMER ticks_per_second=333334529 span_us=1002334 uncertainty_us=495 control=00000001 read_only=1
+SDL_FRACTAL mode=ARM hash=fb32f6c6 elapsed_us=3755165 cpu_us=0 arm_us_est=1470674 transfer_us=269917 colour_us=38797 draw_us=460380 roundtrip_us=3492608 rate=333334529 cx=-12288 cy=0 step=153 limit=128
+SDL_INPUT button=1 x=12 y=45
+SDL_INPUT key=99
+SDL_FRACTAL mode=CPU hash=fb32f6c6 elapsed_us=4098792 cpu_us=1699103 arm_us_est=0 transfer_us=0 colour_us=38659 draw_us=476403 roundtrip_us=0 rate=333334529 cx=-12288 cy=0 step=153 limit=128
+SDL_INPUT key=97
+SDL_INPUT key=120
+SDL_INPUT key=97
+SDL_FRACTAL mode=ARM hash=fb32f6c6 elapsed_us=3869872 cpu_us=0 arm_us_est=1469198 transfer_us=274117 colour_us=39653 draw_us=476634 roundtrip_us=3596251 rate=333334529 cx=-12288 cy=0 step=153 limit=128
+SDL_INPUT key=113
+SDL_UI exit=0 renders=4 cancels=1 discarded=1
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+LAUNCHER exit=0; owned memory released

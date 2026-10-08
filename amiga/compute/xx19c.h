@@ -16,7 +16,8 @@ struct zc_client {
     uint32_t (*now_us)(void *);
     void *clock_user;
     uint32_t session, generation, sequence, pending, pending_generation;
-    uint32_t tx, ty, kind, started, transfer_us;
+    uint32_t tx, ty, kind, started, transfer_us, checksum_retries;
+    uint32_t expected_hash, observed_hash;
     int failed;
 };
 int zc_init(struct zc_client *,volatile uint8_t *,size_t,const struct ad_io *,uint32_t (*)(void *),void *);

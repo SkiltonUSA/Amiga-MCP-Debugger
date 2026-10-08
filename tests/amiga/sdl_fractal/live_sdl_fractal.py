@@ -72,12 +72,16 @@ async def main():
                 assert 0<int(metrics['arm_us_est'])<int(metrics['wall_us']),metrics
                 assert int(metrics['transfer_us'])>0 and int(metrics['colour_us'])>0,metrics
             else:assert 0<int(metrics['cpu_us'])<int(metrics['wall_us']),metrics
-            record['renders'].append({'label':label,'state':st,'metrics':metrics,'all_76800_pixels_match':True})
+            record['renders'].append({'label':label,'state':st,'metrics':metrics,'scheduling':await hook('scheduling'),'all_76800_pixels_match':True})
             print(label,st['ms']+' ms',st['hash'],metrics,flush=True)
             return st
         try:
             record['preflight']=await call('amiga_ping')
+            for _ in range(50):
+                if 'sdlfractal' in await call('amiga_list_clients'):break
+                await asyncio.sleep(.2)
             await hook('automation on')
+            record['clock']=await hook('clock')
             st=await verify('Workbench ARM default')
             metrics=await hook('metrics');await asyncio.sleep(.3);assert metrics==await hook('metrics'),'Completed metrics drift while idle'
             await hook('cpu');await verify('Workbench CPU default')
@@ -96,6 +100,18 @@ async def main():
                 record['screen_windows_'+str(depth)]=windows
                 shot=await call('amiga_screenshot');record['screenshot_'+str(depth)]=shot
             await hook('screen 0');await hook('reset');await hook('arm');await verify('Workbench restored ARM')
+            await call('amiga_arm_attach',client='sdlfractal',points_path=str(OUT.parent/'fractal-points.json'))
+            await call('amiga_arm_pause',client='sdlfractal')
+            await hook('arm');await asyncio.sleep(.1)
+            paused=await hook();assert int(paused['pending'])>0,paused
+            await hook('cancel')
+            for _ in range(60):
+                paused=await hook()
+                if paused['pending']=='0':break
+                await asyncio.sleep(.02)
+            assert paused['pending']=='0' and paused['running']=='0',paused
+            record['cancel_while_paused']=paused
+            await call('amiga_arm_detach',client='sdlfractal')
             for i in range(6):
                 await hook('arm');await asyncio.sleep(.03);await hook('zoom 160 120');await hook('cancel')
                 for _ in range(60):
@@ -105,23 +121,27 @@ async def main():
                 assert st['pending']=='0' and st['running']=='0',st
             await hook('reset');st=await verify('Final ARM default')
             await hook('iconify');assert (await hook())['hidden']=='1'
-            assert 'SDL ZZFractal 0.2' not in await call('amiga_list_screen_windows')
+            assert 'SDL ZZFractal 0.3' not in await call('amiga_list_screen_windows')
             await hook('restore');assert (await hook())['hash']==st['hash']
             await hook('cover');await hook('arm');await verify('Overlapped ARM render')
             record['covered_screenshot']=await call('amiga_screenshot')
             await hook('uncover')
             windows=await call('amiga_list_screen_windows')
-            address=re.search(r'SDL ZZFractal 0.2[^\n]*@([0-9A-Fa-f]+)',windows).group(1)
+            address=re.search(r'SDL ZZFractal 0.3[^\n]*@([0-9A-Fa-f]+)',windows).group(1)
             await call('amiga_window_move',window=address,x=680,y=300)
             for _ in range(20):
                 await asyncio.sleep(.1) # Intuition movement is asynchronous.
                 moved=await call('amiga_list_screen_windows')
-                if re.search(r'SDL ZZFractal 0.2\s+pos=\(680,300\)',moved):break
-            assert re.search(r'SDL ZZFractal 0.2\s+pos=\(680,300\)',moved),moved
+                if re.search(r'SDL ZZFractal 0.3\s+pos=\(680,300\)',moved):break
+            assert re.search(r'SDL ZZFractal 0.3\s+pos=\(680,300\)',moved),moved
             record['moved_window']=moved
-            record['final_screenshot']=await call('amiga_screenshot',window='SDL ZZFractal 0.2')
+            record['final_screenshot']=await call('amiga_screenshot',window='SDL ZZFractal 0.3')
             await hook('arm');await hook('iconify');await complete();await hook('restore')
             assert (await hook())['hash']=='fb32f6c6'
+            record['stress']=[]
+            for _ in range(20):
+                await hook('arm');st=await complete();assert st['hash']=='fb32f6c6',st
+                record['stress'].append(dict(state=st,scheduling=await hook('scheduling')))
             record['passed']=True
         finally:
             try:await hook('quit')
@@ -131,7 +151,7 @@ async def main():
                     await asyncio.sleep(.1)
                 await asyncio.sleep(.3)
                 try:
-                    data=await asyncio.to_thread(fetch,'RAM:SixiesDev/sdl-fractal.log');(OUT.parent/'acceptance.log').write_bytes(data)
+                    data=await asyncio.to_thread(fetch,'RAM:SixiesDev/sdl-performance.log');(OUT.parent/'acceptance.log').write_bytes(data)
                     record['clean_exit']='EXIT epilogue=52455431' in data.decode('latin1') and 'LAUNCHER exit=0; owned memory released' in data.decode('latin1')
                     assert record['clean_exit'],data.decode('latin1')
                 finally:
