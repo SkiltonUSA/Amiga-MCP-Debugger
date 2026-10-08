@@ -1,0 +1,31 @@
+{
+  "release_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.1.0",
+  "tag": "v0.1.0",
+  "target_commit": "7f9b775356429027d6cc9e28688eb0fac6fe30f2",
+  "is_prerelease": true,
+  "repository_private": true,
+  "assets": [
+    {
+      "name": "SDL2-AmigaOS3-0.1.0-sdk.tar.gz",
+      "size": 1193888,
+      "digest": "sha256:463b37e77c024aef77c13570fdc7a1d68f306d6eecf7e266e9707f0c07bca67f",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/v0.1.0/SDL2-AmigaOS3-0.1.0-sdk.tar.gz"
+    },
+    {
+      "name": "SDL2-AmigaOS3-0.1.0-sdk.zip",
+      "size": 1277676,
+      "digest": "sha256:b1f2a3476396191c9946db57ca6ec6cc60be68b6cf3865d2cf493d84c5e052a6",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/v0.1.0/SDL2-AmigaOS3-0.1.0-sdk.zip"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 191,
+      "digest": "sha256:96ab1372eda84532bbf8c9507f3c6b4b12166bf216165644fdca1bf997d3e2ed",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/v0.1.0/SHA256SUMS"
+    }
+  ],
+  "archive_member_checksums_verified": true,
+  "source_delta_matches_original_patch": true,
+  "hardware_probe_relinks_identical": true,
+  "amiga_configuration_changed": false
+}

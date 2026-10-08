@@ -12,6 +12,8 @@ The [SDL2 feasibility probe](docs/amiga-sdl2-probe.md) now displays ARM-generate
 fractal tiles through a patched SDL2 AmigaOS backend on the physical A4000TX.
 Windowed display, input, redraw timings and normal/early shutdown are verified;
 audio, fullscreen and OpenRCT2 execution remain untested.
+The library source, fix and [SDK preview release](https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.1.0)
+are maintained separately in [SDL2-AmigaOS3](https://github.com/SkiltonUSA/SDL2-AmigaOS3).
 
 ## Develop
 

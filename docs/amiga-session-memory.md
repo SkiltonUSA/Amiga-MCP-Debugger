@@ -75,6 +75,18 @@ evidence; it is not a backup of the Amiga's disks or installed commercial games.
   changes. The previously open standalone ZZFractal was closed for testing.
   Reproduction: `docs/amiga-sdl2-probe.md`; source: `amiga/sdl_probe/`;
   evidence: `amiga/records/2026-10-08/sdl-probe/`.
+- SDL2 now has a dedicated private source/SDK repository:
+  https://github.com/SkiltonUSA/SDL2-AmigaOS3 and preview release
+  https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.1.0.
+  It contains the pinned upstream library source, exact two-file patch,
+  build wrapper, SDK headers/static libraries, sample and validation evidence.
+  Clean SDK archive SHA-256 is
+  `eb805aac436378a29a20fb50270e7c21cb8dbe61fdf6f317ff62418ba16be000`.
+  Three duplicate C2P members from repeated earlier builds were removed;
+  all 149 rebuilt objects match and both relinked hardware probes are
+  byte-identical to the programs already tested on the A4000TX.
+  Uploaded ZIP/tar.gz/checksum assets were verified. This remains a 68k SDL
+  build with application-owned ARM work; no Amiga files or settings changed.
 - **ZZDarkForcesNEXT 1.0 works on the physical monitor at 640x480.** The user
   confirmed it after the loading delay. Its icon now enables `640x480` and
   `SC55`, stack 65536. `SC55` means the internal SoundFont synth.

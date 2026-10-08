@@ -121,3 +121,26 @@ The current result supports continuing with this pinned, patched SDL baseline.
 Retain bounded tile/rectangle transfers and measure a larger scene before
 making game-performance claims. This test makes no persistent AmigaOS setup
 changes; RAM-resident probes and logs disappear on reboot.
+
+## Dedicated SDL2 source and SDK release
+
+The patched library now lives in
+[SDL2-AmigaOS3](https://github.com/SkiltonUSA/SDL2-AmigaOS3), a separate private
+repository containing a pinned upstream library-source snapshot, the exact
+patch, attribution, build wrapper, documentation and acceptance evidence.
+[Preview v0.1.0](https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.1.0)
+provides ZIP/tar.gz SDKs with headers, `libSDL2.a`, `libSDL2_test.a`, a small
+example and checksums. Distribution version 0.1.0, SDL headers 2.33.0 and
+upstream port version 0.7.0 are separate version numbers.
+
+Clean packaging exposed three duplicate C2P assembly members left by repeated
+builds in the earlier archive. The new wrapper deletes old archives/objects
+before building. All 149 object files match the original build; both original
+hardware probes relinked against the clean SDK are byte-for-byte identical to
+the tested executables. The clean library hash is
+`eb805aac436378a29a20fb50270e7c21cb8dbe61fdf6f317ff62418ba16be000`.
+The separate small SDK example is compile/link checked only. Hardware
+acceptance remains bounded by the tests above. No Amiga deployment or system
+configuration change was needed to publish the SDK.
+
+Release verification: `amiga/records/2026-10-08/sdl-probe/sdk-release.json`.
