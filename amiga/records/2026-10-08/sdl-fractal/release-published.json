@@ -1,0 +1,39 @@
+{
+  "url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.2.0",
+  "target_commit": "3919ed5940702082ec401bba4bdd05b6873486d7",
+  "published": true,
+  "prerelease": true,
+  "assets": [
+    {
+      "name": "SDL2-AmigaOS3-0.2.0-sdk.tar.gz",
+      "size": 1272295,
+      "digest": "sha256:236f6e06a5fd23f6a529baf8d23f65e064195d064ac49b9e8f44fe95f177e309",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/v0.2.0/SDL2-AmigaOS3-0.2.0-sdk.tar.gz"
+    },
+    {
+      "name": "SDL2-AmigaOS3-0.2.0-sdk.zip",
+      "size": 1364021,
+      "digest": "sha256:6bf36e27c7460fc78778f04e20a4db2a65fa6d5cfe3b229afba5978061d3a561",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/v0.2.0/SDL2-AmigaOS3-0.2.0-sdk.zip"
+    },
+    {
+      "name": "SDLZZFractal-0.2-XX19c.lha",
+      "size": 363224,
+      "digest": "sha256:99c394d0db3e065ced5b4f6ab359b3fd2db8d412e6671af9efbab9845d31cf5c",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/v0.2.0/SDLZZFractal-0.2-XX19c.lha"
+    },
+    {
+      "name": "SDLZZFractal-0.2-XX19c.zip",
+      "size": 340572,
+      "digest": "sha256:010501e29dd0096d6b3b1ac5a0181cab9c5bedd08792ca31ff8a274eee43fa00",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/v0.2.0/SDLZZFractal-0.2-XX19c.zip"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 377,
+      "digest": "sha256:ed52d4f1dec11f93ddbfed7a2ab97b10867d866b052e966e0de1b44da708b3bb",
+      "browser_download_url": "https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/download/v0.2.0/SHA256SUMS"
+    }
+  ],
+  "tag_matches_source": true
+}
