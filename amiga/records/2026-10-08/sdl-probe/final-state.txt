@@ -1,0 +1,38 @@
+amiga_run_script [OK]
+OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=85a6af7d
+BOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+SDL_PROBE version=2.33.0 mode=ARM library_O0=1
+INIT driver=amigaos3
+SURFACE w=320 h=240 pitch=1280 format=SDL_PIXELFORMAT_ARGB8888
+ARM_FRAME tiles=150 hash=fb32f6c6 expected=fb32f6c6 elapsed_ms=7279
+PRESENT path=surface_full frames=30 elapsed_us=1531321 pixel_bytes_per_frame=307200
+PRESENT path=surface_rect frames=30 elapsed_us=20749 pixel_bytes_per_frame=2048
+READY: click and press a key; Q/Escape/close quits; auto-exit in 60 seconds
+INPUT click=1 x=100 y=120
+INPUT key=97
+INPUT key=113
+SDL_EXIT rc=0 keys=2 clicks=1 moves=1
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+LAUNCHER exit=0; owned memory released
+C:md5: Unknown command
+C:md5: Unknown command
+Process  1: Loaded as command: TCP/IP Superserver
+Process  2: Loaded as command: Status
+Process  3: Loaded as command: SD032G:amiga-bridge/amiga-bridge
+Process  4: Loaded as command: SYS:C/TitleShadow
+Process  5: Loaded as command: MagicMenu
+Process  6: Loaded as command: C:bridge-netwatch
+Process  7: Loaded as command: Workbench
+Process  8: Loaded as command: ToolsDaemon
+amiga_ping Amiga alive - clients: 0, chip: 2022928 bytes, fast: 614644176 bytes
+amiga_list_screen_windows Windows on screen @8989DA0 (6):
+
+  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @8865674
+  Roadshow Connection Details  pos=(0,0)  size=1126x116  @8803F0C
+  Network log output  pos=(0,63)  size=1920x200  @8866E64
+  Roadie 1.3.9  pos=(60,60)  size=230x250  @9050624
+  (untitled)  pos=(21,713)  size=600x63  @8F9B19C
+  (untitled)  pos=(0,11)  size=1920x789  @811B52C

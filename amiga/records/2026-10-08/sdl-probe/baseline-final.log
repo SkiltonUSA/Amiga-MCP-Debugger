@@ -1,0 +1,9 @@
+SDL_PROBE version=2.33.0 mode=68K library_O0=1
+INIT driver=amigaos3
+SURFACE w=320 h=240 pitch=1280 format=SDL_PIXELFORMAT_ARGB8888
+PRESENT path=surface_full frames=30 elapsed_us=1517496 pixel_bytes_per_frame=307200
+PRESENT path=surface_rect frames=30 elapsed_us=20754 pixel_bytes_per_frame=2048
+READY: click and press a key; Q/Escape/close quits; auto-exit in 60 seconds
+INPUT click=1 x=100 y=120
+INPUT key=97
+SDL_EXIT rc=0 keys=1 clicks=1 moves=2

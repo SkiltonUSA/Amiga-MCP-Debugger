@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-08",
+  "target": "A4000TX TF4060/68060 ZZ9000 XX19c/XACP1.7",
+  "sdl_revision": "1eefa8f35c5ad4b63fa835e251e801a9315dff5c",
+  "surface": "ARGB8888 320x240 pitch1280",
+  "display": "1920x800 8-bit Workbench",
+  "arm_frame_hash": "fb32f6c6",
+  "arm_elapsed_ms": 7279,
+  "benchmarks": {
+    "baseline": {
+      "surface_full": {
+        "frames": 30,
+        "elapsed_us": 1517496,
+        "mean_update_ms": 50.5832
+      },
+      "surface_rect": {
+        "frames": 30,
+        "elapsed_us": 20754,
+        "mean_update_ms": 0.6918
+      }
+    },
+    "arm": {
+      "surface_full": {
+        "frames": 30,
+        "elapsed_us": 1531321,
+        "mean_update_ms": 51.04403333333333
+      },
+      "surface_rect": {
+        "frames": 30,
+        "elapsed_us": 20749,
+        "mean_update_ms": 0.6916333333333333
+      }
+    }
+  },
+  "input_keyboard_mouse_verified": true,
+  "close_gadget_verified": true,
+  "early_escape_verified": true,
+  "automatic_exit_verified": true,
+  "arm_teardown_verified": true,
+  "native_transfer_md5_verified": true,
+  "tests_passed": 30,
+  "mcp_smoke_tools": 138,
+  "firmware_changed": false,
+  "persistent_amiga_setup_changed": false,
+  "all_probes_stopped": true,
+  "limits": [
+    "No OpenRCT2 execution",
+    "No audio or fullscreen test",
+    "No SDL texture-renderer benchmark",
+    "Timing includes input polling and RTG conversion; not game FPS",
+    "ARM MMU/caches unchanged and disabled"
+  ],
+  "screenshots": {
+    "baseline-final.png": "d53d5189924aa879f534d725a1fef72ddb9c21bb5b9f00d247b9cfd928c67d8e",
+    "arm-final.png": "4ac70a3d073c8427e1c5a1ea4e6c5265e7f8e1ce4e52a0e6918c5fd2c0ef47db"
+  }
+}

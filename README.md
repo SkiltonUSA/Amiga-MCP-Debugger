@@ -8,6 +8,11 @@ The [ARM acceleration roadmap](docs/amiga-arm-roadmap.md) starts with a Workbenc
 
 Standalone Workbench distribution: [ZZFractal 0.1 packaging and requirements](docs/amiga-fractal-demo.md#standalone-distribution-01). LHA/ZIP assets are backed up with the release; the standalone executable needs no bridge or Mac.
 
+The [SDL2 feasibility probe](docs/amiga-sdl2-probe.md) now displays ARM-generated
+fractal tiles through a patched SDL2 AmigaOS backend on the physical A4000TX.
+Windowed display, input, redraw timings and normal/early shutdown are verified;
+audio, fullscreen and OpenRCT2 execution remain untested.
+
 ## Develop
 
 Install `uv`, Clang, LLVM `ld.lld` and Docker or Podman, then:

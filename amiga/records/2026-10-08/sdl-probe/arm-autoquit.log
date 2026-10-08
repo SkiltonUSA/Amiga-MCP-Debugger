@@ -1,0 +1,15 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=85bb2f88
+BOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+SDL_PROBE version=2.33.0 mode=ARM library_O0=1
+INIT driver=amigaos3
+SURFACE w=320 h=240 pitch=1280 format=SDL_PIXELFORMAT_ARGB8888
+ARM_FRAME tiles=150 hash=fb32f6c6 expected=fb32f6c6 elapsed_ms=7273
+PRESENT path=surface_full frames=30 elapsed_us=1595726 pixel_bytes_per_frame=307200
+PRESENT path=surface_rect frames=30 elapsed_us=20977 pixel_bytes_per_frame=2048
+READY: click and press a key; Q/Escape/close quits; auto-exit in 60 seconds
+SDL_EXIT rc=0 keys=0 clicks=0 moves=0
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+LAUNCHER exit=0; owned memory released

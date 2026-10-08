@@ -1,0 +1,41 @@
+{
+  "sdl_repository": "https://github.com/bdgscotland/libSDL2-amigaos3.git",
+  "sdl_revision": "1eefa8f35c5ad4b63fa835e251e801a9315dff5c",
+  "sdl_flags": "-std=gnu99 -O0 -m68030 -noixemul -Wall -Wextra -Wno-unused-parameter -Wno-sign-compare -I./include -I./src -D__AMIGAOS3__",
+  "compiler_image": "docker.io/amigadev/crosstools@sha256:93ca1a47903b61873f6638881b44f9f2d6086a39f1b9b916a26faff3a8ea4d3d",
+  "patch_sha256": "2da264f70a3bdbf81b4df693d947f3de1de7e9405d9499a27e7dd9f1eb105c91",
+  "probe_source_sha256": "7fc9997f8ead461dd6cf3ce1c61c168fe71c4e34ce891f0ba3609d95237f6f4d",
+  "sdl_library_sha256": "59a641479effc2a67853b9c91a01dd015ef2e38b90b9d4cab3cc9b6e3ebe8e96",
+  "arm_payload_build": {
+    "build_id": 1501163860,
+    "source_identity_sha256": "5979f154e49b6ead44f9dfcb11113913835b0fd1820cc646d6b7b7b05ddebb94",
+    "image_bytes": 5024,
+    "application": "ZZFractal",
+    "standalone_release": true,
+    "relocations": [
+      4816,
+      4820,
+      4824,
+      4828
+    ],
+    "entry": 0,
+    "arm_execution_verified": false,
+    "files": {
+      "zzarm.elf": "af6bccfd508829c9ca0f52a873b8025faeccef313bf2e81cf07681025286cc8b",
+      "ZZFractal": "2e92fa026dc3e5e7886a5720915a70176f34b70b4c06de71f392705bac61db5b",
+      "zz_payload.h": "77c57d7c59b728dccd501c498450d0261305da4e65cb4573faa73bdc80363320",
+      "fractal-points.json": "cd49dd06ccd065c68616d98fd8d0bc46e06109f3b7855cbcbeaa367dcfa7e7f6"
+    }
+  },
+  "files": {
+    "sdl-probe": {
+      "bytes": 1170304,
+      "sha256": "1860e97f9cdf8d21f9e3432a4a11bbb4c881feff4ff654b00f4f05946fdd8639"
+    },
+    "sdl-arm-probe": {
+      "bytes": 1181848,
+      "sha256": "c37b489d830580fcc17b5521a824fd48cb0323328a1f5443fc4c93bdfe48ceda"
+    }
+  },
+  "hardware_execution_verified_by_build": false
+}

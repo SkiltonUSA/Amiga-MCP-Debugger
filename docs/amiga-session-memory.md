@@ -63,6 +63,18 @@ evidence; it is not a backup of the Amiga's disks or installed commercial games.
   https://github.com/SkiltonUSA/Amiga-MCP-Debugger (initial baseline `4224fd7`).
   It contains the Amiga tooling, debugger, session memory and records, without
   Sixies game source, firmware/ROM binaries or commercial game data.
+- SDL2 feasibility test (2026-10-08): bdgscotland SDL2 revision `1eefa8f`,
+  locally patched for clipped window drawing and correct CGX library opening,
+  passed 68k colour/input and physical ARM-generated Mandelbrot display tests.
+  ARM checksum `fb32f6c6`, about 7.3 s including tile exchange/drawing; full
+  320x240 surface redraws about 50-53 ms on the current 8-bit Workbench.
+  Small 32x16 updates about 0.7 ms. These are redraw timings, not game FPS.
+  Q, Escape during rendering, close gadget and timed exits were exercised.
+  ARM return and allocation release passed. No audio/fullscreen/OpenRCT2
+  execution was tested. Both probes/logs are in `RAM:` only; no OS setup
+  changes. The previously open standalone ZZFractal was closed for testing.
+  Reproduction: `docs/amiga-sdl2-probe.md`; source: `amiga/sdl_probe/`;
+  evidence: `amiga/records/2026-10-08/sdl-probe/`.
 - **ZZDarkForcesNEXT 1.0 works on the physical monitor at 640x480.** The user
   confirmed it after the loading delay. Its icon now enables `640x480` and
   `SC55`, stack 65536. `SC55` means the internal SoundFont synth.
