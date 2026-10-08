@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-08",
+  "standalone_setup": "passed using fresh tools checkout and venv",
+  "native_tests_passed": 22,
+  "mcp_tools_discovered": 138,
+  "launcher_rebuild": "byte-identical to hardware-tested launcher",
+  "launcher_sha256": "32eb6431f5c0fc88763ce90369916610d2fe15f2209104185471192d4899a796",
+  "arm_elf_debug_paths_differ": true
+}

@@ -1,0 +1,5 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=131072 nonce=06fe5362
+BOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+LAUNCHER exit=0; owned memory released

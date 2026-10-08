@@ -25,6 +25,22 @@ evidence; it is not a backup of the Amiga's disks or installed commercial games.
   only screen; no game was running. The new ARM-debugger **68k relay probe**
   passed all nine tools over Ethernet and was stopped cleanly. Its binary and
   log remain in `RAM:SixiesDev` until reboot. This was not ARM execution.
+- Later 2026-10-08: **physical ZZ9000 Core1 debugging passed** with the new
+  `zzarm-debug` launcher. All nine MCP tools worked on the ARM worker. It uses
+  a 128 KiB Exec allocation in ZZ9000 Fast RAM and verifies its ARM translation
+  with a short read-only mapping challenge. Observed mapping: Amiga
+  `0x50000040` -> ARM `0x101f0040`; never treat these as fixed reservations.
+  CP15 evidence: MIDR `413fc090`, MPIDR `80000001`, SCTLR `08c50878`.
+  ARM MMU and caches stay off; the 68k uses CacheClearE on shared ranges.
+  First run: 67 visibility echoes, RET1 epilogue, exit 0 and memory released.
+  Second run: all nine tools passed again, plus paused Ctrl-C shutdown,
+  218 echoes, RET1 and exit 0. Both instances are stopped; Workbench/bridge
+  are healthy. Temporary launcher/scripts/logs remain in `RAM:SixiesDev`.
+  Details and reproduction: `docs/amiga-arm-debugging.md`.
+- Dedicated private backup/development repo:
+  https://github.com/SkiltonUSA/Amiga-MCP-Debugger (initial baseline `4224fd7`).
+  It contains the Amiga tooling, debugger, session memory and records, without
+  Sixies game source, firmware/ROM binaries or commercial game data.
 - **ZZDarkForcesNEXT 1.0 works on the physical monitor at 640x480.** The user
   confirmed it after the loading delay. Its icon now enables `640x480` and
   `SC55`, stack 65536. `SC55` means the internal SoundFont synth.
@@ -129,7 +145,7 @@ icon.library; it is not an automatic startup utility.
 
 - A cooperative ARM debug framework now exists in `amiga/arm_debug/`, with
   nine MCP tools registered by the workspace launcher. Native C/MCP tests and
-  Cortex-A9/68k compilation passed; no physical ARM execution was tested.
+  Cortex-A9/68k compilation and physical Core1 acceptance passed.
   See `docs/amiga-arm-debugging.md`. It requires an instrumented application
   and a launcher-owned shared channel; it cannot attach to unmodified games
   or single-step ARM instructions. `make amiga-arm-demo` is a software demo
@@ -137,9 +153,10 @@ icon.library; it is not an automatic startup utility.
   passed live AmigaOS IPC/Ethernet acceptance (2026-10-08), including stable
   pause, exactly one checkpoint step, breakpoint hit, 64-byte memory read and
   clean detach/process exit. See `amiga/records/2026-10-08/arm-debug/`.
-  Standalone Core1 loader integration, shared-channel allocation, cache/memory
-  mapping and physical ARM acceptance remain pending. The published SDK has
-  no generic shared-channel allocator; do not infer free DDR from gaps.
+  The later standalone XX19c launcher passed physical ARM acceptance using
+  Exec-reserved ZZ9000 Fast RAM. The SDK still has no generic shared-channel
+  allocator; do not infer free DDR from gaps. Do not enable ARM caches/MMU
+  without implementing and validating a different coherency contract.
 
 - Real hardware Ethernet, DOS commands, ARexx `SIXIES_AREXX_OK`, probe client
   registration and changing `ticks` were verified. Simulator checks are
@@ -180,6 +197,7 @@ The Mac's `nuflix-converter-root` Podman connection worked during this backup;
 the captured local settings name `podman-machine-default-root`, which may need
 selecting/changing on the next machine. Do not change global Podman defaults.
 
-See [recovery instructions](amiga-backup-and-restore.md). The last backup
-attempt could not reach 10.0.0.40 (`Host is down`); it made no new hardware
-configuration changes and did not capture live game progress or a disk image.
+See [recovery instructions](amiga-backup-and-restore.md). The historical game
+backup attempt could not reach 10.0.0.40 (`Host is down`); later 2026-10-08
+debugger work reconnected and captured the live evidence above. Neither backup
+is an Amiga disk image or a capture of live game progress.

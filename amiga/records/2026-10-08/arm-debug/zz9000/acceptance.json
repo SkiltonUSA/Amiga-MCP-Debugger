@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-08",
+  "target": "A4000TX / ZZ9000 / XX19c / XACP 1.7",
+  "arm_execution_verified": true,
+  "debug_mode": "cooperative_checkpoints",
+  "instruction_stepping": false,
+  "arm_cache_mode": "MMU/I-cache/D-cache disabled, SCTLR mask 0x1005 checked at entry",
+  "host_cache_mode": "Exec CacheClearE(CACRF_ClearD) on shared ranges",
+  "allocation": "128 KiB reserved from ZZ9000 Fast RAM via Exec AllocAbs",
+  "observed_amiga_base": "0x50000040",
+  "observed_arm_base": "0x101f0040",
+  "midr": "0x413fc090",
+  "mpidr": "0x80000001",
+  "sctlr": "0x08c50878",
+  "mapping_challenge_words": 8,
+  "successful_echoes": [
+    67,
+    218
+  ],
+  "sessions_passed": 2,
+  "paused_shutdown_passed": true,
+  "teardown": "RET1 epilogue observed, synchronous firmware ARM_RUN(0), then FreeMem",
+  "postflight": "0 clients, bridge alive, Workbench only",
+  "firmware_flashed": false,
+  "persistent_amiga_changes": false,
+  "files": {
+    "build.json": "1606c128c8e718b94f41cc85dac4ca4aead6e002580e08b3dab5b1dd23e65cd1",
+    "build-run-1.json": "3f4d743216bf841ad18c6dea4eed5363b77a499a2865f0971fa1ed40e1483bd3",
+    "mapping-validation.txt": "f70badd1f39e28b75ca4126a0c8b59fa4e2cf0ee992f7d86387577ae4b9b4b95",
+    "live-arm-run-1.txt": "a25435481d1d87fe513fe49c55631d26206a3c9a1619fc8bb69237d3897aed87",
+    "live-arm-run-2.txt": "078969301e863762c143f88abcb4ace758cdd65f30b8e3e47a72235ca67dccc2",
+    "live-arm-validation-1.json": "8a20f188d2dd18d940bdc2e8867b72b8933814fb3a67515b71055e0a38cc620b",
+    "live-arm-validation-2.json": "a42b0065a172705b25abc087d6e06b69ce398e6e40bec8c4179c1b51ec8a0454",
+    "paused-shutdown-preflight.txt": "84ca35bb99f66a933befe371a654fe04bc467f7bf7367ec6ce5d71af6fea919a",
+    "paused-shutdown-postflight.txt": "3d42f6d6b56d99ef6e2748c43b31264cd2881b974bf210cf17a96fa49caae4fb",
+    "local-tests.log": "503d24f7e0024cea63161b8579a4a4ea037db58141a60ba37c4fcd2be76bf1d1",
+    "component-build.log": "ff0ee3cb7bce28ab5a2ac44b52e863a027731061c4e68f243c96baa198d8e35d"
+  }
+}

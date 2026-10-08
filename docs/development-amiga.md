@@ -180,7 +180,9 @@ validation on the target; tool discovery alone is not that validation.
 The workspace now includes an application-side cooperative ARM debug SDK and
 nine MCP tools. See [ARM debugging](amiga-arm-debugging.md) for building,
 software tests and integration requirements. Live AmigaOS/68k relay acceptance
-passed over Ethernet; physical ARM execution and cache visibility remain pending.
+passed over Ethernet. The XX19c standalone launcher also passed physical Core1
+debugging with Exec-owned shared memory, runtime-verified translation and an
+explicit cache-off ARM / CacheClearE 68k contract.
 It supports named checkpoints, inspected values/memory, logs and application-
 reported faults. It does not add instruction stepping or arbitrary-game
 attachment to the 68k debugger.

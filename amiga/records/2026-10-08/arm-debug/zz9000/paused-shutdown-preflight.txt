@@ -1,0 +1,59 @@
+amiga_arm_attach {
+  "session": 2626727762,
+  "build_id": 1381067280,
+  "snapshot_sequence": 90476,
+  "state": "running",
+  "reason": "breakpoint",
+  "point": 2,
+  "checkpoint_hits": 45228,
+  "command_ack": 7,
+  "command_result": 0,
+  "pause_pending": false,
+  "values": [
+    45227,
+    316589,
+    2147483649,
+    147130488
+  ],
+  "breakpoints": [],
+  "region_count": 1,
+  "log_count": 1,
+  "execution": "arm_instrumented",
+  "debug_mode": "cooperative_checkpoints",
+  "instruction_stepping": false,
+  "fault": null
+}
+amiga_arm_pause {
+  "session": 2626727762,
+  "build_id": 1381067280,
+  "snapshot_sequence": 91930,
+  "state": "paused",
+  "reason": "pause",
+  "point": 2,
+  "checkpoint_hits": 45954,
+  "command_ack": 8,
+  "command_result": 0,
+  "pause_pending": false,
+  "values": [
+    45953,
+    321671,
+    2147483649,
+    147130488
+  ],
+  "breakpoints": [],
+  "region_count": 1,
+  "log_count": 1,
+  "execution": "arm_instrumented",
+  "debug_mode": "cooperative_checkpoints",
+  "instruction_stepping": false,
+  "fault": null
+}
+amiga_dos_command Process  1: stk  4000, gv 150, pri   0 Loaded as command: TCP/IP Superserver
+Process  2: stk 16384, gv 150, pri   0 Loaded as command: Status
+Process  3: stk 32768, gv 150, pri   0 Loaded as command: SD032G:amiga-bridge/amiga-bridge
+Process  4: stk  4096, gv 150, pri   0 Loaded as command: SYS:C/TitleShadow
+Process  5: stk  4096, gv 150, pri   0 Loaded as command: MagicMenu
+Process  6: stk 32768, gv 150, pri  -5 Loaded as command: C:bridge-netwatch
+Process  7: stk  8000, gv 150, pri   1 Loaded as command: Workbench
+Process  8: stk  4000, gv 150, pri   2 Loaded as command: ToolsDaemon
+Process  9: stk 32768, gv 150, pri   0 Loaded as command: RAM:SixiesDev/zzarm-debug

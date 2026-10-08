@@ -1,9 +1,14 @@
 # Cooperative ARM debugging through MCP
 
-This first implementation debugs **applications we build with the SDK**. It
+This implementation debugs **applications we build with the SDK**. It
 adds nine tools to the workspace's Amiga DevBench MCP server and uses the
 existing bridge's `CALLHOOK` IPC. No replacement bridge daemon or firmware
 flash is required for this interface.
+
+The dedicated private development/backup repository is
+[Amiga-MCP-Debugger](https://github.com/SkiltonUSA/Amiga-MCP-Debugger).
+The XX19c launcher has now passed live debugging on the A4000TX's physical
+ZZ9000 Core1; the original native and 68k probes remain separate test fixtures.
 
 Pause takes effect at an instrumented checkpoint; step advances to the next
 checkpoint. It cannot halt arbitrary instructions, attach to unmodified
@@ -100,8 +105,9 @@ Outputs under `.context/amiga/arm-debug/`:
 - `amiga-relay-probe`: standalone **68k software probe** for live bridge IPC
   validation; it does not launch or access the ARM.
 
-The ARM objects are **integration components, not a standalone payload or
-loader**. Link them with the application's existing XACP entry point, MMU,
+These generic ARM objects are integration components. The separate, tested
+XX19c launcher below supplies a standalone payload and loader. For other
+applications, link the SDK with their existing XACP entry point, MMU,
 stack, runtime and cooperative firmware-return code. A matching checkpoint
 build ID prevents ordinary map mismatches; it is not authentication or binary
 attestation. Other applications supply their own build ID and checkpoint map.
@@ -142,6 +148,96 @@ attestation. Other applications supply their own build ID and checkpoint map.
    detach/resume and let it reach shutdown. `ad_bridge_unbind` alone does not
    resume ARM or restore firmware state.
 
+## Physical ZZ9000 launcher (XX19c)
+
+Build using Clang with ARM support, LLVM `ld.lld` (on Mac, `brew install lld`),
+and the pinned 68k compiler container:
+
+```sh
+python3 scripts/build_zz9000_debug.py \
+  --container-command '["podman","--connection","nuflix-converter-root"]'
+```
+
+`make amiga-zz9000-build` uses the workspace's configured container command.
+Outputs in `.context/amiga/arm-debug/zz9000/` include `zzarm-debug` (Amiga Hunk),
+`zzarm.elf` (ARM with symbols), an embedded-image header and hash/build record.
+The linker emits a relocatable image; the packer accepts only bounded local
+`R_ARM_RELATIVE` relocations. The 68k executable embeds this payload and a
+tiny mapping probe, so there is no separate runtime payload file to misplace.
+
+Only run this launcher on the verified **XX19c / XACP 1.7** setup, after
+checking no other Core1 application is active. Its named owner port prevents
+duplicate instances of this launcher, not unrelated games. The `0x0113`
+firmware register alone cannot distinguish all firmware variants.
+
+Transfer `zzarm-debug` to `RAM:SixiesDev/`, give it execute protection and run
+with stack 32768 and a fresh nonzero hexadecimal nonce (Mac:
+`python3 -c 'import secrets; print(secrets.token_hex(4))'`). `MAP` performs the
+short ARM mapping probe and exits. `RUN` also starts the debugger:
+
+```text
+Stack 32768
+RAM:SixiesDev/zzarm-debug <nonce> MAP >RAM:SixiesDev/zzarm-map.log
+RAM:SixiesDev/zzarm-debug <fresh-nonce> RUN >RAM:SixiesDev/zzarm-run.log
+```
+
+For asynchronous operation, put the Stack and RUN-command lines into an Amiga
+script, then `Run >NIL: Execute RAM:SixiesDev/start-zzarm`. This preserves the
+child's log redirection. The registered MCP client is **`zzarm-debug`**.
+Run the live acceptance test with the matching nonce:
+
+```sh
+.tools/amiga-venv/bin/python tests/amiga/arm_debug/live_relay.py \
+  --target zz9000 --session <nonce> \
+  --output .context/amiga/arm-debug/zz9000/live-arm-validation.json
+```
+
+Ctrl-C stops the launcher, including when ARM is paused. From the bridge,
+inspect `Status FULL` and send `Break <its-current-CLI> C`. The launcher also
+has a roughly five-minute polling limit; IPC can extend elapsed duration.
+
+### Memory ownership and cache contract
+
+- The launcher finds the ZZ9000 graphics and Fast RAM ConfigDev entries and
+  uses **Exec `AllocAbs` on a real free chunk**, under scheduler exclusion,
+  to reserve 128 KiB in the ZZ9000 Fast RAM bank. It never writes an unallocated
+  map gap. Code, control records, the debug channel and the ARM stack all live
+  inside that allocation until Core1 has been quiesced.
+- Legacy translation `ARM = Amiga address - graphics board base + 0x001f0000`
+  is only a **candidate** until independently tested. A short P96-allocated,
+  locked bitmap hosts a position-independent bootstrap. It reads eight
+  session-derived words from the candidate allocation and reports them to
+  the bitmap. A mismatch or unexpected CPU/cache state aborts the launch.
+  The bitmap is unlocked/freed before the debugger starts. Polling under the
+  lock is capped at 20 ticks; reset/flush overhead is additional.
+- Actual allocation in the initial runs was Amiga `0x50000040` -> ARM
+  `0x101f0040`. These are **observations, not reserved addresses**. The next
+  allocation may differ. This uses AmigaOS-owned memory with an explicit
+  reservation, not an ARM-private claim on live OS RAM.
+- Entry verifies SCTLR MMU/D-cache/I-cache bits are all clear (`mask 0x1005`)
+  before switching stacks. The worker also checks MPIDR identifies Core1.
+  **This version deliberately keeps ARM caches and MMU disabled.** ARM
+  callbacks use `DSB SY`; 68k callbacks use Exec `CacheClearE(..., CACRF_ClearD)`
+  around shared-memory reads/writes. Writer records have separate cache lines.
+  A continuously changing challenge/response also runs while checkpoint-paused.
+- The launcher does not alter SCTLR, translation tables or PL310/L2 settings.
+  The existing firmware's synchronous `ARM_RUN` operation performs its own
+  published cache maintenance/reset sequence. A preflight idle reset precedes
+  reuse of memory. No global cache-maintenance routine is called from Core1.
+- Shutdown asks ARM to exit through its normal C/assembly epilogue, restoring
+  the firmware stack and callee-saved registers. `RET1` records reaching the
+  final epilogue; it is not an observation from inside the firmware loop.
+  The host then synchronously resets Core1 to idle **before** freeing memory,
+  including error paths. This is a bounded prototype teardown, not proof that
+  a reset-free return works for arbitrary applications.
+
+The memory/cache facts were checked against the shipped XX19c `core2.c` and
+register handlers, the P96 API autodoc in the pinned cross-toolchain, and the
+[legacy RTL mapping shown in the upstream mapping change](https://github.com/BlitterStudio/zz9000-firmware/pull/42).
+The [P96 developer documentation](https://wiki.icomp.de/wiki/P96#Software_Developer_archive)
+explains why bitmap locks must stay short. Runtime challenge tests, not the
+legacy formula alone, establish the translation on this machine.
+
 `amiga/arm_debug/examples/arm_worker.c` demonstrates checkpoint placement and
 watched values without imposing a memory map or loader. Pass its generated
 manifest to `amiga_arm_attach` to show source locations. This maps explicit
@@ -181,11 +277,12 @@ recovery probe.
 
 ## Validation and next stage
 
-Local verification: 18 tests exercising the actual native C runtime and
+Local verification: 22 tests exercising the actual native C runtime and
 relay, including an MCP HTTP session, response correlation, pause/step,
 breakpoints, memory bounds, malformed packets, stale sessions/snapshots,
 pending-mailbox protection, timeout cancellation, log overwrites and faults.
-The normal MCP smoke test discovers all 138 tools. Cortex-A9 objects and the
+The four loader tests cover allocation bounds, zero-filled BSS and rejection
+of unsafe relocation types/targets. The MCP smoke test discovers all 138 tools. Cortex-A9 objects and the
 68k relay compile with warnings as errors.
 
 **Live AmigaOS relay acceptance passed on the A4000TX on 2026-10-08.**
@@ -223,14 +320,24 @@ checks its session and build identity before issuing commands and detaches
 afterward. Stop the process separately after inspecting `Status FULL`; do not
 reuse a previous CLI number.
 
-**Physical ARM acceptance remains pending:** integrate a standalone
-instrumented Core1 launcher, verify channel mapping/cache visibility and prove
-clean Core1 return/relaunch. Inspection of the public v1.6/v1.7 maps found
-named service/application regions and an ARM-only high arena, but no generic
-shared-channel allocator. A proven application-owned allocation or an upstream
-agreed memory-map extension is needed; an apparently unused fixed DDR address
-is not an allocation. No board registers, shared DDR or firmware were changed
-by the relay probe.
+**Physical ARM acceptance passed on 2026-10-08.** The standalone launcher
+verified CPU ID `0x413fc090`, MPIDR `0x80000001` and SCTLR `0x08c50878` from
+actual Core1 instructions. All nine MCP tools passed against the ARM worker:
+the first session paused at hit 11415, stepped to 11416 and stopped on its
+breakpoint at 11417. The registered 64-byte memory sample matched `00..3f`.
+The first completed run logged 67 successful cache-visibility echoes, `RET1`
+and launcher exit 0 with the allocation released. Raw evidence and build
+identities are in [the ZZ9000 records](../amiga/records/2026-10-08/arm-debug/zz9000/).
+A second launch passed the same nine tools, then was explicitly paused and
+stopped via Ctrl-C. It logged another 218 successful visibility echoes,
+`RET1`, exit 0 and released memory. Postflight found zero bridge clients,
+Workbench as the only screen and the bridge still responsive. This confirms
+relaunch and paused shutdown on the tested machine, with 285 echoes total.
+
+This verifies the uncached cooperative path on the tested XX19c machine.
+Cache-enabled MMU mappings, arbitrary application integration, exception
+vector capture, long-duration stress and instruction/source stepping remain
+separate work. No firmware was flashed or persistent Amiga startup changed.
 
 Full instruction/source debugging is a later stage: investigate Cortex-A9
 monitor/exception or external debug support, full register capture, ARM/Thumb

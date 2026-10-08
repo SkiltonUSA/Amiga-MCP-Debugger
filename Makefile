@@ -1,6 +1,5 @@
 .DEFAULT_GOAL := test-amiga-arm
-.PHONY: setup-amiga amiga-doctor amiga-build amiga-emulator amiga-sim amiga-fsuae amiga-hardware test-amiga amiga-arm-build amiga-arm-demo test-amiga-arm
-
+.PHONY: setup-amiga amiga-doctor amiga-build amiga-emulator amiga-sim amiga-fsuae amiga-hardware test-amiga amiga-arm-build amiga-zz9000-build amiga-arm-demo test-amiga-arm
 setup-amiga:
 	python3 scripts/amiga.py setup
 
@@ -21,6 +20,9 @@ test-amiga:
 
 amiga-arm-build:
 	python3 scripts/build_arm_debug.py
+
+amiga-zz9000-build:
+	python3 scripts/build_zz9000_debug.py $(ZZ9000_BUILD_ARGS)
 
 amiga-arm-demo:
 	.tools/amiga-venv/bin/python scripts/arm_debug_demo.py

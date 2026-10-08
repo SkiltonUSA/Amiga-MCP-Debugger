@@ -1,0 +1,34 @@
+.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/arm_debug -v
+test_mcp_http_controls_the_native_c_target (test_debugger.HttpTests.test_mcp_http_controls_the_native_c_target) ... /Users/dskilton/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/contextlib.py:105: DeprecationWarning: Use `streamable_http_client` instead.
+  self.gen = func(*args, **kwds)
+ok
+test_breakpoint_hits_and_eight_slot_limit (test_debugger.NativeTests.test_breakpoint_hits_and_eight_slot_limit) ... Executing <Task finished name='Task-77' coro=<NativeTests.asyncSetUp() done, defined at /Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/Amiga-MCP-Debugger/tests/amiga/arm_debug/test_debugger.py:29> result=None created at /Users/dskilton/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py:100> took 0.190 seconds
+ok
+test_checkpoint_manifest_build_match_and_source_location (test_debugger.NativeTests.test_checkpoint_manifest_build_match_and_source_location) ... ok
+test_client_name_validation (test_debugger.NativeTests.test_client_name_validation) ... ok
+test_command_core_rejects_foreign_session_even_without_relay (test_debugger.NativeTests.test_command_core_rejects_foreign_session_even_without_relay) ... ok
+test_fault_preserved_and_not_resumable (test_debugger.NativeTests.test_fault_preserved_and_not_resumable) ... ok
+test_finished_target_stays_finished (test_debugger.NativeTests.test_finished_target_stays_finished) ... ok
+test_log_wrap_and_cursor (test_debugger.NativeTests.test_log_wrap_and_cursor) ... ok
+test_malformed_snapshot_is_never_partially_used (test_debugger.NativeTests.test_malformed_snapshot_is_never_partially_used) ... ok
+test_memory_bounds_and_state (test_debugger.NativeTests.test_memory_bounds_and_state) ... ok
+test_native_relay_rejects_foreign_session_and_replayed_commands (test_debugger.NativeTests.test_native_relay_rejects_foreign_session_and_replayed_commands) ... ok
+test_native_relay_rejects_stale_snapshot_and_bad_ranges (test_debugger.NativeTests.test_native_relay_rejects_stale_snapshot_and_bad_ranges) ... ok
+test_pause_step_read_resume_detach (test_debugger.NativeTests.test_pause_step_read_resume_detach) ... ok
+test_pause_timeout_is_pending_and_can_be_cancelled (test_debugger.NativeTests.test_pause_timeout_is_pending_and_can_be_cancelled) ... ok
+test_pending_mailbox_cannot_be_overwritten (test_debugger.NativeTests.test_pending_mailbox_cannot_be_overwritten) ... ok
+test_protocol_corruption_and_torn_snapshot (test_debugger.NativeTests.test_protocol_corruption_and_torn_snapshot) ... ok
+test_session_restart_rejects_existing_attachment (test_debugger.NativeTests.test_session_restart_rejects_existing_attachment) ... ok
+test_callhook_response_correlation_and_errors (test_debugger.TransportTests.test_callhook_response_correlation_and_errors) ... ok
+test_rejects_non_arm_or_big_endian (test_payload.PayloadTests.test_rejects_non_arm_or_big_endian) ... ok
+test_rejects_out_of_allocation_image_or_relocation (test_payload.PayloadTests.test_rejects_out_of_allocation_image_or_relocation) ... ok
+test_rejects_symbol_lookup_and_instruction_relocations (test_payload.PayloadTests.test_rejects_symbol_lookup_and_instruction_relocations) ... ok
+test_relative_pointer_and_zero_initialized_bss (test_payload.PayloadTests.test_relative_pointer_and_zero_initialized_bss) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 2.528s
+
+OK
+.tools/amiga-venv/bin/python tests/amiga/smoke_mcp.py
+PASS: MCP initialize, 138 tools discovered, ping and task inspection
+ARexx/debug tool schemas present; execution requires a booted AmigaOS target.

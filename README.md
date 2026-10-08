@@ -2,17 +2,18 @@
 
 Dedicated development and backup repository for the AmigaOS/ZZ9000 cooperative debugger and its Mac MCP host. Extracted from the Sixies development workspace; contains no C64 game source, ROMs, commercial game data or firmware binaries.
 
-Nine MCP tools provide instrumented checkpoint debugging. Native C tests and live A4000TX **68060 relay** acceptance passed. Physical ZZ9000 ARM launcher/cache integration is in development; this is not an instruction-step debugger.
+Nine MCP tools provide instrumented checkpoint debugging. Native C tests, live A4000TX 68060 relay acceptance, and **physical ZZ9000 Core1 debugging** passed. Two ARM sessions exercised all nine tools, 285 shared-memory echoes, relaunch and shutdown while paused. This is cooperative checkpoint debugging; it does not single-step instructions.
 
 ## Develop
 
-Install `uv`, Clang and Docker or Podman, then:
+Install `uv`, Clang, LLVM `ld.lld` and Docker or Podman, then:
 
 ```sh
 make setup-amiga
 make test-amiga-arm
 make test-amiga
 make amiga-arm-build
+make amiga-zz9000-build
 make amiga-arm-demo
 ```
 
