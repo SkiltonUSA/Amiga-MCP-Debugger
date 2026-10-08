@@ -85,7 +85,7 @@ Forces installations later that day.
 
 | Component | Recorded state |
 | --- | --- |
-| KickSmash32 | Installed, owner-confirmed 2026-10-08; board revision, firmware, selected ROM bank and USB connection unverified |
+| KickSmash32 | Live detection 2026-10-08: firmware 1.8, built 2025-07-11 12:32:17; 32-bit mode, name `A4000-TX 2025`; active/power-on bank 3 (`47.115 3.2x`); board revision unverified |
 | AGA | PAL Alice R2, Lisa; exact physical chip markings unverified |
 | ZZ9000 | Zorro III, Zynq XC7Z020 dual Cortex-A9, nominal 666 MHz; 1 GB onboard DDR3 per specification |
 | ZZ9000 firmware | **XX19c / XACP 1.7**, activated after power cycle, handshake and subsequent ARM application execution verified |
@@ -106,8 +106,17 @@ https://github.com/cdhooper/kicksmash32. It replaces the Kickstart ROMs and
 supports in-system programming with `smash`, host programming over USB-C with
 `hostsmash` (including macOS), up to eight flash banks, and optional host file
 access through `smashfs`/`smashftp`. These are upstream capabilities, not verified
-services on this machine. No KickSmash firmware, ROM bank or utility setup has
-been inspected or changed in response to this hardware note.
+services on this machine. Subsequent live detection used the official release
+2.0 Amiga `smash` utility temporarily in `RAM:`, with only `identify` and
+`bank show` queries; the utility was then deleted. The board replied with
+firmware 1.8, USB VID:PID `1209:1610`, serial `6d8050PP3GY17C` and the identity
+shown above. This USB identity came from the board's Amiga-side response;
+no KickSmash USB device was visible on the Mac during the check.
+Bank labels: 0 `Switcher`, 1 `Diagrom V2a`, 2 `Logica`, 3 `47.115 3.2x`,
+4 `45.66 3.x`, 5 `40.70 A4000T`, 6/7 `-`. Long-reset sequence: banks 0 then 1.
+Bank labels were queried; ROM contents were not read or validated. No firmware,
+bank settings or startup files were changed. Evidence:
+`amiga/records/2026-10-08/kicksmash/detection.txt`.
 
 AHI saved units 0-3 select Paula Fast 8-bit mono at 8000 Hz. Music Unit 255
 selects ZZ9000AX 16-bit stereo at 32000 Hz. These preferences do not establish

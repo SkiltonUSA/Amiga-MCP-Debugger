@@ -1,0 +1,27 @@
+amiga_run_script [OK]
+ID
+  Kicksmash 1.8 built 2025-07-11 12:32:17
+  USB 12091610  Serial "6d8050PP3GY17C"  Name "A4000-TX 2025"
+  Mode: 32-bit
+  Uptime: 9960.264795 sec
+  NV Data: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+           00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Bank  Name            Merge LongReset  PowerOn  Current  NextReset
+0     Switcher              0
+1     Diagrom V2a           1
+2     Logica          
+3     47.115 3.2x                      *        *
+4     45.66 3.x       
+5     40.70 A4000T    
+6      -              
+7      -              
+RAM:ks-smash-probe  Deleted
+Process  1: Loaded as command: TCP/IP Superserver
+Process  2: Loaded as command: Status
+Process  3: Loaded as command: SD032G:amiga-bridge/amiga-bridge
+Process  4: Loaded as command: SYS:C/TitleShadow
+Process  5: Loaded as command: MagicMenu
+Process  6: Loaded as command: C:bridge-netwatch
+Process  7: Loaded as command: Workbench
+Process  8: Loaded as command: ToolsDaemon
+Process  9: Loaded as command: C:WBLoad

@@ -1,0 +1,8 @@
+Read-only detection on 2026-10-08 through the existing AmigaBridge.
+Official utility: https://github.com/cdhooper/kicksmash32/releases/tag/release_2.0
+Archive: kicksmash_2.0.zip; member: kicksmash_2.0/amiga/smash
+Utility bytes: 82704
+SHA256: b3f97eaaafae57e96ab6fdf6cf69def4d7baa443385a77da57ba488e35ee065f
+Executed temporarily as RAM:ks-smash-probe; deleted after identification.
+Commands: identify; bank show. No flash writes or bank changes.
+Mac USB enumeration showed no attached KickSmash device.
