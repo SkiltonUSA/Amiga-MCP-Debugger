@@ -100,7 +100,7 @@ reboot; ARexx ICON OPEN did not restore it. Avoid synthetic Workbench icon
 clicks. Developer-hook restore is not proof of the physical gesture.
 
 Public source commit `e73eee2`; application-only prerelease:
-https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/fractal-v0.3.0
+https://github.com/SkiltonUSA/SDL2-AmigaOS3/releases/tag/v0.3.0
 The SDK remains at v0.2.0. Source: `amiga/compute/`, `amiga/sdl_fractal/`,
 `amiga/fractal/`; docs: `docs/amiga-sdl-fractal.md`; accepted evidence and the
 rejected visibility capture: `amiga/records/2026-10-08/sdl-performance/`.
