@@ -202,3 +202,65 @@ ARM image and checkpoint map byte for byte; ELF debug source paths differ.
 [Hardware acceptance and raw calls](../amiga/records/2026-10-08/fractal/acceptance.json)
 include the build identity, timings, launch/cancel results and pre/postflight
 state. No firmware, OS startup or cache configuration was changed.
+
+## Standalone distribution 0.1
+
+A separate release build is packaged as `ZZFractal-0.1-XX19c.lha` and
+`ZZFractal-0.1-XX19c.zip`. It is a 26,112-byte Amiga Hunk executable with the
+ARM program embedded, plus classic Workbench tool/drawer icons, documentation,
+third-party runtime notices and file checksums. The tool icon sets a 65536-byte
+stack. Extract anywhere, open the drawer and double-click `ZZFractal`.
+Workbench startup displays the XX19c/XACP requirement and asks the user to
+close other ARM applications before choosing Start. The firmware register
+alone cannot reliably identify this variant.
+
+This build omits the bridge client and relay. It needs no Mac, MCP server,
+network, ARexx or separate ARM payload. It still needs the same ZZ9000/P96 and
+firmware configuration as the developer build. It is an experimental preview
+for the verified hardware configuration, not a claim of general Amiga support.
+The runtime rejects an inadequate Shell stack; Shell users should set
+`Stack 65536` before running it. Its `$VER:` string is `ZZFractal 0.1`.
+
+```sh
+python3 scripts/build_zz9000_debug.py --fractal --release \
+  --container-command '["podman","--connection","nuflix-converter-root"]'
+python3 scripts/package_fractal.py
+```
+
+`make amiga-fractal-release` uses the configured container and performs both
+steps. The packager validates the executable against its release build record,
+checks the icon type/stack, and includes only an explicit file list. The ZIP is
+deterministic and preserves executable permission. Outputs stay in
+`.context/amiga/fractal-release/dist/`. Archives are release assets rather than
+committed build products.
+
+Icon sources are `amiga/distribution/make-fractal-icons.c`; the generated
+classic `.info` files are checked in under `amiga/distribution/`. The helper
+uses its own mathematical two-bitplane artwork, not OS default color-icon
+artwork. Rebuild it with the pinned 68k compiler and run it on an AmigaOS 3.2
+packaging machine with the package drawer as its argument. It round-trips the
+icons through icon.library and reports their type, dimensions and stack.
+
+The LHA was created with native LhA 2.15, with the package root as current
+folder, then integrity-tested and extracted into a fresh RAM drawer:
+
+```text
+lha -r a RAM:ZZFractal-0.1-XX19c.lha ZZFractal ZZFractal.info SHA256SUMS.txt
+lha t RAM:ZZFractal-0.1-XX19c.lha
+lha x RAM:ZZFractal-0.1-XX19c.lha RAM:FractalFresh/
+```
+
+All eight extracted files matched the ZIP manifest. The extracted drawer was
+renamed to `PortableDemo`; native Workbench startup and rendering still worked,
+with zero bridge clients registered. Shell launch of the same binary produced
+the reference frame hash `fb32f6c6`, normal ARM epilogue and exit 0. The
+independent repository checkout reproduced the executable and ZIP byte for
+byte. Thirty native tests and the MCP smoke suite passed.
+
+[Distribution acceptance](../amiga/records/2026-10-08/fractal-release/acceptance.json)
+records archive checksums, raw launch evidence and the validation boundary.
+The standalone copy is installed at `SD032G:Dev/ZZFractal-0.1/ZZFractal`; its
+sibling `.info` and drawer icon enable normal Workbench launch. The earlier
+developer copy remains in `SD032G:Dev/ZZFractal/` for MCP debugging.
+**Zero bridge clients no longer implies that Core1 is idle:** check tasks,
+windows and the owner port, and close either edition before another ARM app.

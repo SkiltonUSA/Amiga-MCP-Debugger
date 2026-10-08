@@ -1,0 +1,8 @@
+amiga_screenshot Screenshot saved: /var/folders/fg/qnn7bqhd78vfz3cxbqjd5wxr0000gn/T/amiga_screenshot_anogkppu.ppm (408x339, RLE, 339 rows received)
+amiga_input_mouse_move Mouse moved -2500,-1200
+amiga_input_mouse_move Mouse moved 90,120
+amiga_input_click Button left down
+amiga_input_click Button left up
+amiga_input_key Key 10 down
+amiga_input_key Key 10 up
+amiga_list_clients Clients (0): none

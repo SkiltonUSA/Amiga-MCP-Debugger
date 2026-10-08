@@ -1,0 +1,21 @@
+{
+  "build_id": 1501163860,
+  "source_identity_sha256": "5979f154e49b6ead44f9dfcb11113913835b0fd1820cc646d6b7b7b05ddebb94",
+  "image_bytes": 5024,
+  "application": "ZZFractal",
+  "standalone_release": true,
+  "relocations": [
+    4816,
+    4820,
+    4824,
+    4828
+  ],
+  "entry": 0,
+  "arm_execution_verified": false,
+  "files": {
+    "zzarm.elf": "af6bccfd508829c9ca0f52a873b8025faeccef313bf2e81cf07681025286cc8b",
+    "ZZFractal": "2e92fa026dc3e5e7886a5720915a70176f34b70b4c06de71f392705bac61db5b",
+    "zz_payload.h": "77c57d7c59b728dccd501c498450d0261305da4e65cb4573faa73bdc80363320",
+    "fractal-points.json": "cd49dd06ccd065c68616d98fd8d0bc46e06109f3b7855cbcbeaa367dcfa7e7f6"
+  }
+}

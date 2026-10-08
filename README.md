@@ -6,6 +6,8 @@ Nine MCP tools provide instrumented checkpoint debugging. Native C tests, live A
 
 The [ARM acceleration roadmap](docs/amiga-arm-roadmap.md) starts with a Workbench fractal explorer, followed by runtime optimization, a reusable compute interface and image processing tools. The first [fractal demo](docs/amiga-fractal-demo.md) now renders on the physical A4000TX with matching 68060 and ARM results; later milestones remain planned.
 
+Standalone Workbench distribution: [ZZFractal 0.1 packaging and requirements](docs/amiga-fractal-demo.md#standalone-distribution-01). LHA/ZIP assets are backed up with the release; the standalone executable needs no bridge or Mac.
+
 ## Develop
 
 Install `uv`, Clang, LLVM `ld.lld` and Docker or Podman, then:

@@ -1,0 +1,19 @@
+{
+  "version": "0.1",
+  "firmware": "XX19c / XACP 1.7",
+  "build_id": 1501163860,
+  "executable_bytes": 26112,
+  "archive": "ZZFractal-0.1-XX19c.zip",
+  "archive_bytes": 33733,
+  "sha256": "6c7791059bdab144d9420b94400a2319f141eb8691b269ee0a7a7f42fad9b9d2",
+  "files": {
+    "SHA256SUMS.txt": "37f0d658aa1a74f372ddc697a86cfa552a162328291b9f2154a0fdf9ab6e1e64",
+    "ZZFractal.info": "8bdb32a7627cbeffd7c4c84bff095d099bc731c67e9a29e78a54995f4ac6a360",
+    "ZZFractal/COPYING.RUNTIME": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+    "ZZFractal/COPYING3": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "ZZFractal/ReadMe.txt": "7a08f6f3a6dcc2917a266143dbc145ddd27b4bebfd3372138c7da5326a16ae24",
+    "ZZFractal/ThirdParty.txt": "77f50575604372615d5c8a19389d079ec8dc1e66bd4744c773e1656a6fbebf77",
+    "ZZFractal/ZZFractal": "2e92fa026dc3e5e7886a5720915a70176f34b70b4c06de71f392705bac61db5b",
+    "ZZFractal/ZZFractal.info": "91619a0e7c85e74d4eabaff427e0d349880548024bda9b54acf51a8fa0a0d92c"
+  }
+}

@@ -36,3 +36,8 @@ amiga-fractal-build:
 
 test-amiga-fractal:
 	.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/fractal -v
+
+.PHONY: amiga-fractal-release
+amiga-fractal-release:
+	python3 scripts/build_zz9000_debug.py --fractal --release $(ZZ9000_BUILD_ARGS)
+	python3 scripts/package_fractal.py

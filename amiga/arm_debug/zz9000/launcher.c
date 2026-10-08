@@ -19,10 +19,18 @@
 #include <errno.h>
 #include "relay.h"
 #include "layout.h"
+#ifndef ZZ_RELEASE
 #include "bridge_client.h"
+#endif
 #include "zz_payload.h"
 #ifdef ZZ_FRACTAL
 int ff_window(volatile uint8_t *,const struct ad_io *,int);
+const char zz_version[]="\0$VER: ZZFractal 0.1 (08.10.2026)";
+#ifdef ZZ_RELEASE
+/* libnix's Workbench stdio target: no unwanted console window. CLI
+ * redirection continues to work through its normal Input/Output handles. */
+char *__stdiowin="NIL:";
+#endif
 #endif
 struct ExpansionBase *ExpansionBase;
 struct IntuitionBase *IntuitionBase;
@@ -116,9 +124,15 @@ int main(int argc,char **argv)
 #ifndef ZZ_FRACTAL
     ULONG tick,challenge=0;
 #endif
-    char *end;const char *mode="RUN";int rc=20,connected=0,bound=0,launched=0,stopping=0;
+    char *end;const char *mode="RUN";int rc=20,connected=0,launched=0,stopping=0;
+#ifndef ZZ_RELEASE
+    int bound=0;
+#endif
 #ifdef ZZ_FRACTAL
-    if(argc==1) {
+    const char *failure="Could not open the required system libraries.";
+#endif
+#ifdef ZZ_FRACTAL
+    if(argc<=1) {
         struct DateStamp stamp;
         DateStamp(&stamp);
         nonce=((ULONG)stamp.ds_Days*4320000u+(ULONG)stamp.ds_Minute*3000u+(ULONG)stamp.ds_Tick)^(ULONG)FindTask(NULL);
@@ -138,15 +152,33 @@ int main(int argc,char **argv)
     IntuitionBase=(struct IntuitionBase *)OpenLibrary("intuition.library",0);
     P96Base=OpenLibrary("Picasso96API.library",2);
     if(!ExpansionBase||!IntuitionBase||!P96Base)goto done;
+#ifdef ZZ_FRACTAL
+    failure="Start with the supplied icon, or set Shell Stack to 65536.";
+    if((ULONG)FindTask(NULL)->tc_SPUpper-(ULONG)FindTask(NULL)->tc_SPLower<32768)goto done;
+    failure="Requires a Zorro III ZZ9000 with its 256 MB Fast RAM enabled.";
+#endif
     gfx=FindConfigDev(NULL,0x6d6e,4);ram=FindConfigDev(NULL,0x6d6e,5);
     if(!gfx||!ram||ram->cd_BoardSize!=0x10000000)goto done;
     board=gfx->cd_BoardAddr;
     if(*(volatile UWORD *)(board+0xc0)!=0x0113)goto done;
+#ifdef ZZ_RELEASE
+    if(argc==0) {
+        struct EasyStruct request={sizeof(struct EasyStruct),0,(STRPTR)"ZZFractal 0.1",
+            (STRPTR)"Requires ZZ9000 XX19c / XACP 1.7 firmware.\nClose other ZZ9000 ARM applications before starting.",(STRPTR)"Start|Cancel"};
+        if(!EasyRequestArgs(NULL,&request,NULL,NULL)){rc=0;goto done;}
+    }
+#endif
+#ifdef ZZ_FRACTAL
+    failure="Another ZZFractal or ARM debugger instance is already running.";
+#endif
     owner=CreateMsgPort();if(!owner)goto done;
     owner->mp_Node.ln_Name="Sixies.ARM.Debug.Owner";
     Forbid();
     if(FindPort(owner->mp_Node.ln_Name)){Permit();DeleteMsgPort(owner);owner=0;goto done;}
     AddPort(owner);Permit();
+#ifdef ZZ_FRACTAL
+    failure="Not enough free ZZ9000 Fast RAM for the ARM worker.";
+#endif
     mem=reserve((ULONG)ram->cd_BoardAddr,(ULONG)ram->cd_BoardAddr+ram->cd_BoardSize);
     if(!mem)goto done;
     /* Legacy XX19c translation: RTL uses z3addr-z3_ram_low + ARM_MEMORY_START.
@@ -154,6 +186,9 @@ int main(int argc,char **argv)
     arm=(ULONG)mem-(ULONG)board+0x1f0000;
     if(arm<0x10000000 || arm+ZZ_BLOCK_SIZE>0x201f0000)goto done;
     printf("OWNED amiga=%08x arm_candidate=%08x size=%u nonce=%08x\n",(ULONG)mem,arm,(ULONG)ZZ_BLOCK_SIZE,nonce);
+#ifdef ZZ_FRACTAL
+    failure="The ZZ9000 memory mapping or ARM startup check failed.\nThis preview requires the tested XX19c / XACP 1.7 setup.";
+#endif
     if(!mapping_probe(mem,arm,nonce))goto done;
     if(!strcmp(mode,"MAP")){rc=0;goto done;}
     if(sizeof(zz_image)>ZZ_CONTROL)goto done;
@@ -175,11 +210,14 @@ int main(int argc,char **argv)
            ad_get(mem,ZZ_DIAG+4),ad_get(mem,ZZ_DIAG+8),ad_get(mem,ZZ_DIAG+12));fflush(stdout);
     if(ad_get(mem,ZZ_DIAG)!=ZZ_READY)goto done;
 #ifdef ZZ_FRACTAL
+#ifndef ZZ_RELEASE
     if(!ab_init("zzfractal")) {
         connected=1;
         if(ad_bridge_bind(mem+ZZ_PAGE,&io))goto done;
         bound=1;
     }
+#endif
+    failure="Could not open the fractal window or allocate its graphics resources.";
     rc=ff_window(mem,&io,connected);
 #else
     if(ab_init("zzarm-debug"))goto done;
@@ -204,8 +242,10 @@ int main(int argc,char **argv)
     rc=0;
 #endif
 done:
+#ifndef ZZ_RELEASE
     if(bound)ad_bridge_unbind();
     if(connected)ab_cleanup();
+#endif
     if(launched) {
         ad_put(mem,ZZ_STOP,1);sync_range(mem+ZZ_STOP,64,0);
         for(i=0;i<100;i++) {
@@ -221,6 +261,15 @@ done:
     }
     if(mem)FreeMem(mem,ZZ_BLOCK_SIZE);
     if(owner){RemPort(owner);DeleteMsgPort(owner);}
+#ifdef ZZ_FRACTAL
+    if(rc) {
+        printf("ZZFractal: %s\n",failure);
+        if(argc==0 && IntuitionBase) {
+            struct EasyStruct request={sizeof(struct EasyStruct),0,(STRPTR)"ZZFractal",(STRPTR)failure,(STRPTR)"OK"};
+            EasyRequestArgs(NULL,&request,NULL,NULL);
+        }
+    }
+#endif
     if(P96Base)CloseLibrary(P96Base);
     if(IntuitionBase)CloseLibrary((struct Library *)IntuitionBase);
     if(ExpansionBase)CloseLibrary((struct Library *)ExpansionBase);

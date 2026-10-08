@@ -1,0 +1,18 @@
+LhA Freeware Version 2.15 68040+ 
+Copyright (c) 1991-94 by Stefan Boberg.
+Copyright (c) 1998,1999 by Jim Cooper and David Tritscher.
+Copyright (c) 2004-2011 by Sven Ottemann.
+
+›0 pTesting integrity of archive 'RAM:ZZFractal-0.1-XX19c.lha':
+    Testing: (       0/     613)  SHA256SUMS.txt›K›14C     613›14C     613
+›27m    Testing: (       0/     544)  ZZFractal.info›K›14C     544›14C     544
+›27m    Testing: (       0/    3324)  ZZFractal/COPYING.RUNTIME›K›14C    3324›14C    3324
+›27m    Testing: (       0/   35147)  ZZFractal/COPYING3›K›14C   35147›14C   35147
+›27m    Testing: (       0/    3568)  ZZFractal/ReadMe.txt›K›14C    3568›14C    3568
+›27m    Testing: (       0/    1393)  ZZFractal/ThirdParty.txt›K›14C    1393›14C    1393
+›27m    Testing: (       0/   26112)  ZZFractal/ZZFractal›K›14C   26112›14C   26112
+›27m    Testing: (       0/     482)  ZZFractal/ZZFractal.info›K›14C     482›14C     482
+›27m8 files tested, all files OK.›K
+
+Operation successful.
+› p›27m

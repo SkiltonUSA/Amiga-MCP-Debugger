@@ -1,0 +1,9 @@
+amiga_list_screen_windows Windows on screen @8989DA0 (6):
+
+  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @8865674
+  Roadshow Connection Details  pos=(0,0)  size=1126x116  @8803F0C
+  Network log output  pos=(0,63)  size=1920x200  @8866E64
+  Roadie 1.3.9  pos=(60,60)  size=230x250  @9050624
+  (untitled)  pos=(21,713)  size=600x63  @8F9B19C
+  (untitled)  pos=(0,11)  size=1920x789  @811B52C
+amiga_run_script [OK] (no output)

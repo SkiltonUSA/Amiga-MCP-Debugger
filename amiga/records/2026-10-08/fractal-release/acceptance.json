@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-08",
+  "version": "0.1",
+  "build_id": 1501163860,
+  "standalone_release": true,
+  "executable_bytes": 26112,
+  "executable_sha256": "2e92fa026dc3e5e7886a5720915a70176f34b70b4c06de71f392705bac61db5b",
+  "workbench_startup_verified": true,
+  "shell_startup_verified": true,
+  "icon_stack_bytes": 65536,
+  "native_lha_integrity_passed": true,
+  "all_eight_extracted_files_match_zip_manifest": true,
+  "renamed_drawer_startup_verified": true,
+  "registered_bridge_clients_while_running": 0,
+  "default_frame_hash": "fb32f6c6",
+  "arm_execution_verified": true,
+  "normal_arm_return_and_idle_teardown_verified": true,
+  "independent_checkout_identical_executable_and_zip": true,
+  "tests_passed": 30,
+  "mcp_smoke_passed": true,
+  "archive_files": {
+    "ZZFractal-0.1-XX19c.lha": {
+      "bytes": 33817,
+      "sha256": "a8d59fcd7512a2f8875dbf2452fe45ab1f6150dd61dc7d44ce225129ef560c3c"
+    },
+    "ZZFractal-0.1-XX19c.zip": {
+      "bytes": 33733,
+      "sha256": "6c7791059bdab144d9420b94400a2319f141eb8691b269ee0a7a7f42fad9b9d2"
+    }
+  },
+  "installed_directory": "SD032G:Dev/ZZFractal-0.1",
+  "firmware_changed": false,
+  "startup_changed": false,
+  "limits": "Physical acceptance on the recorded A4000TX only; XX19c cannot be uniquely identified by the legacy firmware register, so Workbench prompts before launch."
+}

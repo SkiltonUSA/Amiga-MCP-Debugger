@@ -50,6 +50,15 @@ evidence; it is not a backup of the Amiga's disks or installed commercial games.
   The script chooses a session ID automatically and logs to
   `RAM:SixiesDev/fractal.log`. Source/build/tests: `docs/amiga-fractal-demo.md`;
   evidence: `amiga/records/2026-10-08/fractal/`.
+- Distribution preview 0.1 is installed separately at
+  `SD032G:Dev/ZZFractal-0.1/ZZFractal`, with Workbench tool/drawer icons.
+  Double-click and choose Start after checking the XX19c firmware requirement.
+  This 26,112-byte standalone build does **not** register with AmigaBridge;
+  zero clients does not establish Core1 idle. Check the `ZZFractal` task and
+  `ZZ9000 Fractal - Mandelbrot` window, then quit before launching another
+  ARM application. LHA/ZIP archives passed native extraction, renamed-drawer
+  Workbench launch and Shell rendering/clean exit. The old developer copy
+  remains available for MCP. Evidence: `amiga/records/2026-10-08/fractal-release/`.
 - Dedicated private backup/development repo:
   https://github.com/SkiltonUSA/Amiga-MCP-Debugger (initial baseline `4224fd7`).
   It contains the Amiga tooling, debugger, session memory and records, without

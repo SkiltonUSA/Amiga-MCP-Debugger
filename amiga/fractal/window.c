@@ -13,7 +13,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include "wire.h"
+#ifndef ZZ_RELEASE
 #include "bridge_client.h"
+#else
+#define ab_poll() ((void)0)
+#define ab_heartbeat() ((void)0)
+#define ab_register_hook(name,description,fn) ((void)(fn))
+#define ab_unregister_hook(name) ((void)0)
+#endif
 struct GfxBase *GfxBase;
 static struct {
     volatile uint8_t *mem;const struct ad_io *io;
