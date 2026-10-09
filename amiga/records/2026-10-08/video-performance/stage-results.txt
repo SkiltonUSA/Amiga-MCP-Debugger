@@ -1,0 +1,6 @@
+amiga_run_script [OK]
+a71254821acef5c846fb54c8fa434af8  RAM:ZZVideoPerf/video-baseline
+60387dafda10d1bf1cb1294143b42662  RAM:ZZVideoPerf/video-icache
+54bfb06d8ee4361b59b48ba55e862855  RAM:ZZVideoPerf/bframes.mpg
+1d4560fc60d7c9fcea6e3783412de2c8  RAM:ZZVideoPerf/small.mpg
+7b07dafaab772917442c1ac0da1b2d9d  RAM:ZZVideoPerf/ntsc.mpg

@@ -1,0 +1,19 @@
+{
+  "sources": {
+    "amiga/arm_debug/zz9000/entry.S": "5a39a7684338659b9f90c622c1394e79b9af92d1ec55947a49ef66ea83950c01",
+    "amiga/arm_debug/zz9000/layout.h": "ad287948f8fed9b54e3bf3ca177d1e2e5c2bb590d55ff209d99eb3ad767f3ff6",
+    "amiga/arm_debug/zz9000/launcher.c": "827320defbde393b331035f2f4748a44e84085f854b9c88f184d4b53c0aeed2f",
+    "amiga/video/decoder.c": "7b191c6a6a33cb5e2280a332bef7f9cba9812a9294d4cf969a9c686b12488baa",
+    "scripts/build_zzvideo.py": "b49af6bdba36324baf7ae0d8b9fc7a7b1924290bb40a6657be16b370de2d5fd9",
+    "tests/amiga/video/live_profile.py": "893f05d0c9e9ae9cb7c0facd01be0ba4ce7eb8954e3276dd7be7d76e3a13b7b9"
+  },
+  "clips": {
+    "ntsc.mpg": "d4bd751eefa000c7906a374bf0b9cb4df9dee7240b793f18953dd8e351fe0be2",
+    "small.mpg": "e4cbc638149bd050e44e6e96d38cd38b38f86e3190fa80f7a842e2006e42c4b5",
+    "bframes.mpg": "1a41e5704b22e2b36b21998b643e88503c56727af95f9494a0f3a1cebd9b7652"
+  },
+  "manual": {
+    "path": ".context/attachments/13ejmh/DDI0409I_cortex_a9_neon_mpe_r4p1_trm.pdf",
+    "sha256": "d376cf046e225a77741b94f552533dd2978032a200afa83ab266b03d1ab7b27a"
+  }
+}

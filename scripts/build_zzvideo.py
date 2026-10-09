@@ -9,9 +9,18 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'.context/amiga/video'
 DEFS=['-DZZ_VIDEO','-DZZ_BLOCK_SIZE=0x800000','-DZZ_CONTROL=0x10000']
 def main():
+    global OUT
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--container-command');p.add_argument('--sdl-source',type=Path,default=ROOT/'.context/SDL2-AmigaOS3')
-    p.add_argument('--developer',action='store_true');a=p.parse_args()
+    p.add_argument('--developer',action='store_true')
+    p.add_argument('--experimental-icache',action='store_true',help='Core1 instruction cache only; restores SCTLR on exit')
+    p.add_argument('--experimental-neon',action='store_true',help='Vectorise decoder only, with checked firmware SIMD context preservation')
+    p.add_argument('--decoder-opt',choices=['2','3'],default='2',help='Matched optimisation level for scalar/NEON decoder comparisons')
+    p.add_argument('--output',type=Path,help='Separate workspace output directory for experiments')
+    a=p.parse_args()
+    if a.output:OUT=a.output.resolve();OUT.relative_to(ROOT)
+    defs=DEFS+(['-DZZ_VIDEO_ICACHE'] if a.experimental_icache else [])
+    if a.experimental_neon:defs+=['-DZZ_VIDEO_NEON']
     prepare(OUT)
     cc=shutil.which('clang');ld=shutil.which('ld.lld') or '/opt/homebrew/opt/lld/bin/ld.lld'
     src=[ROOT/f for f in ['amiga/arm_debug/zz9000/entry.S','amiga/arm_debug/core.c','amiga/video/worker.c',
@@ -24,15 +33,19 @@ def main():
                  ROOT/"amiga/arm_debug/zz9000/launcher.c",ROOT/"amiga/arm_debug/zz9000/payload.ld",
                  ROOT/"scripts/video_vendor.py",Path(__file__),OUT/"pl_mpeg_port.h"]:
         identity.update(path.read_bytes())
+    identity.update(json.dumps(defs).encode())
+    identity.update(a.decoder_opt.encode())
     identity.update(subprocess.check_output([cc,'--version']));build=int.from_bytes(identity.digest()[:4],'big') or 1
     flags=['--target=arm-none-eabi','-mcpu=cortex-a9','-marm','-mfloat-abi=soft','-ffreestanding','-fno-builtin',
         '-fPIC','-fvisibility=hidden','-fno-stack-protector','-ffunction-sections','-fdata-sections','-O2','-g',
-        '-Wall','-Wextra',*DEFS,f'-DZZ_BUILD_ID=0x{build:08x}u',
+        '-Wall','-Wextra',*defs,f'-DZZ_BUILD_ID=0x{build:08x}u',
         '-Iamiga/video/freestanding','-Iamiga/video','-Iamiga/arm_debug','-Iamiga/arm_debug/zz9000','-I'+str(OUT)]
     objects=[]
     for s in src:
         obj=OUT/(s.stem+'.o');objects.append(obj)
-        subprocess.run([cc,*flags,'-c',str(s),'-o',str(obj)],cwd=ROOT,check=True)
+        extra=['-O'+a.decoder_opt] if s.name=='decoder.c' else []
+        if a.experimental_neon and s.name in ('decoder.c','entry.S'):extra+=['-mfloat-abi=softfp','-mfpu=neon']
+        subprocess.run([cc,*flags,*extra,'-c',str(s),'-o',str(obj)],cwd=ROOT,check=True)
     elf=OUT/'zzvideo.elf'
     subprocess.run([ld,'-shared','-Bsymbolic','--gc-sections','--no-undefined','--defsym=ZZ_IMAGE_LIMIT=0x10000',
         '-T','amiga/arm_debug/zz9000/payload.ld',*objects,'-o',elf],cwd=ROOT,check=True)
@@ -52,7 +65,7 @@ def main():
     prefix=[*command,'run','--rm','--platform','linux/amd64','-v',f'{ROOT}:/work','-w','/work',launcher.PIN['image']]
     out=OUT.relative_to(ROOT);sdl=sdl.relative_to(ROOT)
     common=[*prefix,'m68k-amigaos-gcc','-std=c99','-noixemul','-m68030','-O2','-Wall','-Wextra','-Werror',
-        '-D__AMIGAOS3__',*DEFS,'-DZZ_APP_NAME="ZZVideo"','-DZZ_APP_VERSION="0.1"','-DZZ_CLIENT_NAME="zzvideo"',
+        '-D__AMIGAOS3__',*defs,'-DZZ_APP_NAME="ZZVideo"','-DZZ_APP_VERSION="0.1"','-DZZ_CLIENT_NAME="zzvideo"',
         '-DZZ_MIN_STACK=131072','-Iamiga/video','-Iamiga/arm_debug','-Iamiga/arm_debug/zz9000','-I'+str(out),
         '-I'+str(sdl/'include'),'-I.tools/amiga-devbench/amiga-bridge/include']
     if not a.developer:common+=['-DZZ_RELEASE']
@@ -62,7 +75,9 @@ def main():
     subprocess.run([*common,'amiga/video/app.c','amiga/video/client.c','amiga/video/media.c',str(out/'launcher.o'),
         *bridge,str(sdl/'libSDL2.a'),'-lm','-lamiga','-s','-o',str(out/name)],check=True)
     record=dict(application='ZZVideo',version='0.1',build_id=build,source_sha256=identity.hexdigest(),image_bytes=len(image),
-        block_bytes=0x800000,relocations=len(rel),developer=a.developer,physical_execution_verified=False,sdl=pin,
+        block_bytes=0x800000,relocations=len(rel),developer=a.developer,experimental_icache=a.experimental_icache,
+        experimental_neon=a.experimental_neon,decoder_opt=a.decoder_opt,
+        protocol='ZVP2',physical_execution_verified=False,sdl=pin,
         files={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in (elf,OUT/name)})
     (OUT/(name+'-build.json')).write_text(json.dumps(record,indent=2)+'\n');print(json.dumps(record,indent=2))
 if __name__=='__main__':main()

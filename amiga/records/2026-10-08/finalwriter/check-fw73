@@ -1,0 +1,179 @@
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-Ackn.catalog" >RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-GCS.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-General.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter-GCS.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter-General.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter-GCS.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter-General.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-Ackn.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-GCS.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-General.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter-GCS.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter-General.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter-GCS.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter-General.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-Ackn.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-GCS.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-General.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-Ackn.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-GCS.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-General.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter.catalog" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/checkprinter.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/dictionary.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/floppy.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/ghostscript.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/monitor.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/printer.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/buttlace.b" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/buttnonlace.b" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/iconlace.b" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/iconnonlace.b" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/logo.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-default.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-default.png.license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-device.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-file.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-ftp.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/screen_resolution.gif" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWFiles/screen_resolution.png" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/hyph.pat" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/index.aff" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/index.dic" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/license" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FinalWriter" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/FinalWriter.info" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWOLFonts.info" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler/5" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler/9" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont/13" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont/8" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Fonts/fontcache" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/cachemap.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/downloader.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwInterface.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwarexx.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwc.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwfiltertype.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwfreetypefont3.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwhtml.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwmemory.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwnetprinter3.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwnetwork3.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwpdf.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwpenpal.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwprowrite.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwrtf.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwspell3.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwwordperfect.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/fwzune.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/swpost.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/swshell.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/ReleaseNotes" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/ReleaseNotes.info" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Requirements" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Requirements.info" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Tools/ippfind" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Tools/ippfind.LICENSE" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3.info" >>RAM:FW73-checksums.txt
+C:MD5Sum "HDD50Gig:APPS/FinalWriter7.3/Libs/popupmenu.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "LIBS:freetype2.library" >>RAM:FW73-checksums.txt
+C:MD5Sum "SYS:System/FTManager" >>RAM:FW73-checksums.txt
+C:MD5Sum "SYS:System/FTManager.info" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera-COPYRIGHT" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Mono Bold Italic.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Mono Bold Italic.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Mono Bold.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Mono Bold.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Mono Italic.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Mono Italic.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Mono.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Mono.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Sans Bold Italic.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Sans Bold Italic.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Sans Bold.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Sans Bold.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Sans Italic.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Sans Italic.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Sans.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Sans.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Serif Bold.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Serif Bold.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Serif.font" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:Vera Serif.otag" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraMono.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraMonoBold.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraMonoBoldItalic.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraMonoItalic.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraSans.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraSansBold.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraSansBoldItalic.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraSansItalic.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraSerif.ttf" >>RAM:FW73-checksums.txt
+C:MD5Sum "FONTS:truetype/VeraSerifBold.ttf" >>RAM:FW73-checksums.txt
+Echo FW73_CHECKSUM_COMPLETE

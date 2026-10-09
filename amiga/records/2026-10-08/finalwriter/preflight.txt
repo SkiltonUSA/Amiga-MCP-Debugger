@@ -1,0 +1,39 @@
+amiga_run_script [OK]
+Directory "HDD50Gig:APPS" on Friday 10-Oct-25
+DCTelnet                        Dir ----rwed 09-Jan-25 11:28:56
+iGame                           Dir ----rwed 10-Jan-25 20:24:47
+FinalWriter                     Dir ----rwed 30-Oct-03 05:48:01
+ScalaMM400                      Dir ----rwed 31-Aug-23 13:06:44
+MUI                             Dir ----rwed 17-Oct-03 06:50:23
+TurboText                       Dir ----rwed 06-Sep-25 15:14:00
+PPaint                          Dir ----rwed 06-Sep-25 15:14:00
+ToolsDaemon                     Dir ----rwed 26-Sep-25 02:24:34
+MoonBase                        Dir ----rwed 06-Sep-23 17:16:11
+MorphAGA                        Dir ----rwed 06-Sep-23 17:16:11
+AmiExpress                      Dir ----rwed 24-Apr-24 17:43:16
+FinalCopy                       Dir ----rwed 02-Sep-23 00:53:08
+Eagleplayer                     Dir ----rwed 23-Apr-24 14:20:46
+FinalData                       Dir ----rwed 31-Aug-23 13:31:27
+AmiGameBoy                      Dir ----rwed 12-Dec-24 17:56:34
+FileX                           Dir ----rwed 30-Aug-23 20:16:02
+16 directories - 16 blocks used
+object not found
+codesets.library 6.22
+object not found
+muimaster.library 19.35
+Directory "FONTS:" on Friday 10-Oct-25
+courier                         Dir ----rwed 16-Oct-03 03:10:14
+diamond                         Dir ----rwed 16-Oct-03 03:10:14
+emerald                         Dir ----rwed 16-Oct-03 03:10:15
+garnet                          Dir ----rwed 16-Oct-03 03:10:16
+helvetica                       Dir ----rwed 16-Oct-03 03:10:17
+opal                            Dir ----rwed 16-Oct-03 03:10:18
+ruby                            Dir ----rwed 16-Oct-03 03:10:19
+sapphire                        Dir ----rwed 16-Oct-03 03:10:19
+SevenAlone                      Dir ----rwed 16-Oct-03 03:10:19
+times                           Dir ----rwed 16-Oct-03 03:10:21
+topaz                           Dir ----rwed 16-Oct-03 03:10:21
+_bullet                         Dir ----rwed 16-Oct-03 03:10:38
+_bullet_outlines                Dir ----rwed 16-Oct-03 03:10:55
+13 directories - 13 blocks used
+System:C/lha

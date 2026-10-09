@@ -43,6 +43,28 @@ SDLZZFractal
 
 Press **A** for ARM rendering or **C** for 68060 rendering. Click to zoom, use arrows to pan, **R** to reset, **X/Escape** to cancel and **Q** to quit. F5/F6/F7 select Workbench or temporary 16-/32-bit screens while idle. See the [demo guide](docs/amiga-sdl-fractal.md) for all controls and requirements.
 
+## ZZ9000 temperature monitor
+
+[ZZTemperature 1.0](amiga/zztemperature/README.md) is a small native AmigaOS
+utility that adds **Tools → ZZ9000 Temperature…** to Workbench. Its window
+shows the live Zynq temperature and session minimum/maximum, updating every
+second. It runs independently of the Mac and MCP server.
+
+The [tested executable, Workbench icon and checksums](amiga/distribution/ZZTemperature-1.0/)
+are backed up here alongside the source. On the A4000TX it reported roughly
+53–54°C. Window updates, menu selection, close/reopen, single-instance handling
+and Workbench launch were verified; cold-boot startup remains untested.
+It uses MNT's existing read-only sensor register, with no XACP commands or
+firmware changes. See the [hardware acceptance record](amiga/records/2026-10-08/zztemperature/acceptance.txt).
+
+## Archived video experiments
+
+The [ARM execution measurements](docs/amiga-video-arm-execution.md) and
+[FFmpeg benchmark attempt](amiga/records/2026-10-08/ffmpeg-bench/experiment.json)
+are preserved for reference. The video project is **parked**: the experiments
+did not meet the 25 fps target, and the FFmpeg attempt produced no valid ARM
+decode timing. These records do not establish a working YouTube client.
+
 ## What the debugger adds
 
 Nine MCP tools connect to an instrumented ARM application through the existing bridge's `CALLHOOK` interface:

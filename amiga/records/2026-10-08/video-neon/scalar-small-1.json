@@ -1,0 +1,62 @@
+{
+  "run": "scalar-small-1",
+  "calls": [
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:ZZVideoNEON/run-scalar-small-1",
+        "timeout": 10
+      },
+      "text": "[OK] (no output)"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_ping",
+      "args": {},
+      "text": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 596330248 bytes"
+    }
+  ],
+  "passed": true,
+  "frames": 25,
+  "fps": 6.985191394244202,
+  "elapsed_ms": 3579,
+  "clock_hz": 333087880,
+  "retries": 1,
+  "per_frame_ms": {
+    "decode": 32.300777080210786,
+    "colour": 15.766822017060484,
+    "arm_hash": 9.036858140860604,
+    "copy": 29.6,
+    "host_hash": 23.04,
+    "draw": 23.32
+  },
+  "sctlr": {
+    "original": "0x8c50878",
+    "running": "0x8c51878",
+    "restored": "0x8c50878"
+  }
+}

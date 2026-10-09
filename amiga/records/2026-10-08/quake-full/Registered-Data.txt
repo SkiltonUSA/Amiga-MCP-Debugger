@@ -1,0 +1,27 @@
+ZZQuake registered game data - A4000TX
+Installed 8 October 2026 (Mac date).
+
+Directory: HDD50Gig:Games/ZZQuake/id1
+
+pak0.pak - existing Quake 1.06 data retained
+  18,689,235 bytes
+  MD5 5906e5998fc3d896ddaf5e6a62e03abb
+  Also matches the owner's Downloads/QUAKE/ID1/PAK0.PAK.
+
+pak1.pak - extracted from the owner's Quake (USA) CD image
+  34,257,856 bytes
+  MD5 d76b3e5678f0b64ac74ce5e340e6a685
+  Includes episodes 2-4, the ending, deathmatch maps and registration data.
+
+The CD's split QUAKE101 installer was unpacked on the Mac. Its older 1.01
+pak0.pak was inspected but not installed over the existing 1.06 file.
+PAK directory bounds and transferred file hashes were verified.
+
+Start ZZQuake, ZZQuake640, ZZQuake800 or ZZQuake1024 normally.
+All four use the same id1 directory and detect pak1.pak automatically.
+Existing executable files, icons, configuration and saves were retained.
+No new game launch was performed for this data update.
+
+Separate CD audio tracks were not converted or installed by this update.
+Music settings are unchanged. Quake II data is for a different game and
+was not copied into ZZQuake.

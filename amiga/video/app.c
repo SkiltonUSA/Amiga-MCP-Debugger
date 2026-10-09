@@ -25,7 +25,7 @@ static struct {
     struct MsgPort *timer_port;struct timerequest *timer;int timer_open;
     uint8_t *pixels;char path[1024],message[96];
     uint32_t command,width,height,rate_num,rate_den,frames,next_time,heartbeat,start,draw_ms,pace_remainder;
-    uint64_t ticks,clock_first;uint32_t clock_at,clock_hz;
+    uint64_t ticks,clock_first,decode_ticks,colour_ticks,hash_ticks;uint32_t clock_at,clock_hz;
     int quit,error,playing,loaded,eof,connected,verify,rewind,choose,stop;
 } app;
 static uint32_t now(void) {return SDL_GetTicks();}
@@ -171,6 +171,7 @@ static void result(void)
     }
     if(app.command==ZV_CLOCK)return;
     if(app.command==ZV_OPEN) {
+        app.decode_ticks=app.colour_ticks=app.hash_ticks=0;app.client.copy_ms=app.client.hash_ms=0;
         app.width=r->width;app.height=r->height;app.rate_num=r->rate_num;app.rate_den=r->rate_den;
         if(!app.width||!app.height||!app.rate_num||!app.rate_den){app.error=app.quit=1;return;}
         if(app.frame_surface){SDL_FreeSurface(app.frame_surface);app.frame_surface=0;}
@@ -179,12 +180,18 @@ static void result(void)
             (unsigned long)app.rate_num,(unsigned long)app.rate_den);
         status("ZZVideo: playing on ARM Core1");
     } else if(app.command==ZV_REWIND) {
+        app.decode_ticks=app.colour_ticks=app.hash_ticks=0;app.client.copy_ms=app.client.hash_ms=app.draw_ms=0;
         app.frames=0;app.pace_remainder=0;app.ticks=0;app.eof=0;app.playing=!app.stop;app.stop=0;app.next_time=app.start=now();
         status(app.playing?"ZZVideo: playing on ARM Core1":"ZZVideo: stopped - R to replay");
     } else if(r->code==ZV_FRAME) {
         app.frames=r->frame;app.ticks+=r->ticks;
+        app.decode_ticks+=r->decode_ticks;app.colour_ticks+=r->colour_ticks;app.hash_ticks+=r->hash_ticks;
         if(app.verify)printf("FRAME %lu hash=%08lx ticks=%lu:%08lx retries=%lu\n",(unsigned long)r->frame,
             (unsigned long)r->hash,(unsigned long)(r->ticks>>32),(unsigned long)r->ticks,(unsigned long)app.client.retries);
+        if(app.verify)printf("STAGES frame=%lu decode=%lu:%08lx colour=%lu:%08lx hash=%lu:%08lx\n",
+            (unsigned long)r->frame,(unsigned long)(r->decode_ticks>>32),(unsigned long)r->decode_ticks,
+            (unsigned long)(r->colour_ticks>>32),(unsigned long)r->colour_ticks,
+            (unsigned long)(r->hash_ticks>>32),(unsigned long)r->hash_ticks);
         if(!app.choose&&!app.stop&&!app.rewind)paint();
         /* Never skip decoded reference frames. If late, slow down gracefully. */
         app.pace_remainder+=1000u*app.rate_den;
@@ -195,6 +202,11 @@ static void result(void)
         printf("EOF frames=%lu elapsed_ms=%lu decode_ticks=%lu:%08lx draw_ms=%lu retries=%lu clock_hz=%lu\n",
             (unsigned long)app.frames,(unsigned long)(now()-app.start),(unsigned long)(app.ticks>>32),
             (unsigned long)app.ticks,(unsigned long)app.draw_ms,(unsigned long)app.client.retries,(unsigned long)app.clock_hz);
+        printf("PROFILE decode=%lu:%08lx colour=%lu:%08lx hash=%lu:%08lx copy_ms=%lu host_hash_ms=%lu\n",
+            (unsigned long)(app.decode_ticks>>32),(unsigned long)app.decode_ticks,
+            (unsigned long)(app.colour_ticks>>32),(unsigned long)app.colour_ticks,
+            (unsigned long)(app.hash_ticks>>32),(unsigned long)app.hash_ticks,
+            (unsigned long)app.client.copy_ms,(unsigned long)app.client.hash_ms);
         if(app.verify)app.quit=1;
     }
     fflush(stdout);
@@ -238,7 +250,7 @@ int zv_window(volatile uint8_t *mem,const struct ad_io *io,int connected)
                 else if(load()&&app.verify)app.error=app.quit=1;
             } else result();
         }
-        if(phase==1&&now()-app.clock_at>=200){phase=2;submit(ZV_CLOCK,0,0);}
+        if(phase==1&&now()-app.clock_at>=2000){phase=2;submit(ZV_CLOCK,0,0);}
         if(phase<3&&now()-phase_at>30000){app.error=app.quit=1;}
         if(phase==3&&!app.client.pending&&!app.quit) {
             if(app.choose) {app.choose=0;if(select_file()&&load()&&app.verify)app.error=app.quit=1;}

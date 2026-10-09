@@ -28,12 +28,18 @@ int zv_open(uint8_t *data,size_t n,void *heap,size_t heap_size,struct zv_info *i
     return 0;
 }
 int zv_next(uint8_t *argb)
+{return zv_next_timed(argb,0,0);}
+int zv_next_timed(uint8_t *argb,uint64_t (*clock)(void),struct zv_timing *timing)
 {
-    plm_frame_t *f;
+    plm_frame_t *f;uint64_t before=clock?clock():0,decoded;
+    if(timing){timing->decode=0;timing->colour=0;}
     if(!decoder||!argb)return -1;
     f=plm_video_decode(decoder);
+    decoded=clock?clock():0;
+    if(timing)timing->decode=decoded-before;
     if(!f)return plm_video_has_ended(decoder)?0:-1;
     plm_frame_to_argb(f,argb,(int)f->width*4);
+    if(timing&&clock)timing->colour=clock()-decoded;
     return 1;
 }
 void zv_rewind(void) {if(decoder)plm_video_rewind(decoder);}

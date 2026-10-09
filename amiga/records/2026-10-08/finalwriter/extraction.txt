@@ -1,0 +1,5 @@
+amiga_run_script [OK]
+64407e7256f36d89b92f37bae594d6f2  RAM:freetype2_lib.lha
+6282bcae7e181ad43d6308e52a882cc7  RAM:pmuser.lha
+61c72424cccfca4ef7368b5d84ed5a61  RAM:pmlib060.lha
+FW73_EXTRACT_COMPLETE

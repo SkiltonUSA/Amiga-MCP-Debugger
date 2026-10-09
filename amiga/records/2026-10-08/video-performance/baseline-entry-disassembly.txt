@@ -1,0 +1,34 @@
+
+       0:      	mrc	p15, #0x0, r1, c1, c0, #0x0
+       4:      	movw	r2, #0x1005
+       8:      	tst	r1, r2
+       c:      	bxne	lr
+      10:      	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+      14:      	mov	r4, sp
+      18:      	ldr	r5, [r0, #0x4]
+      1c:      	mrc	p15, #0x0, r6, c1, c0, #0x0
+      20:      	ldr	r2, [pc, #0x44]         @ 0x6c <_start+0x6c>
+      24:      	rev	r1, r6
+      28:      	str	r1, [r5, r2]
+      2c:      	ldr	r1, [pc, #0x3c]         @ 0x70 <_start+0x70>
+      30:      	add	sp, r5, r1
+      34:      	bic	sp, sp, #7
+      38:      	mov	r0, r5
+      3c:      	bl	0xa8c <zz_worker>       @ imm = #0xa48
+      40:      	mrc	p15, #0x0, r0, c1, c0, #0x0
+      44:      	rev	r0, r0
+      48:      	ldr	r1, [pc, #0x24]         @ 0x74 <_start+0x74>
+      4c:      	str	r0, [r5, r1]
+      50:      	mov	sp, r4
+      54:      	ldr	r1, [pc, #0x1c]         @ 0x78 <_start+0x78>
+      58:      	movw	r0, #0x4552
+      5c:      	movt	r0, #0x3154
+      60:      	str	r0, [r5, r1]
+      64:      	dsb	sy
+      68:      	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+      6c: 5c 00 01 00  	.word	0x0001005c
+      70: f0 ff 7f 00  	.word	0x007ffff0
+      74: 60 00 01 00  	.word	0x00010060
+      78: 58 00 01 00  	.word	0x00010058
+
+0000007c 

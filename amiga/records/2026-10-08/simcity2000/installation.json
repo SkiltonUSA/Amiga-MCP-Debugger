@@ -1,0 +1,21 @@
+{
+  "destination": "HDD50Gig:Games/SimCity2000",
+  "game_build": "0.031 English (Oct 27 1994)",
+  "installed_files_verified": 52,
+  "patch": "SC2000RTG 1.5",
+  "patch_url": "https://aminet.net/package/game/patch/SC2000RTG",
+  "patch_sha256": "82abeb3a0a35fd86ae9d438b684cc9e21b8f3db0c0ad3225577b7188cff6746f",
+  "patch_source": "https://codefloe.com/MastaTabs/sc2krtg",
+  "patch_source_commit": "64ac7b4ab121b8bfc9a6c7e4cfd0c3f1d47f44d5",
+  "original_md5": "534a6f9b1a093839a8e70c0746221716",
+  "patched_md5": "aa2f2c7024f591a71eb29d53061ee400",
+  "patched_bytes": 375160,
+  "patches_applied": 20,
+  "host_and_amiga_patch_outputs_match": true,
+  "backup": "HDD50Gig:Games/SimCity2000/Original-AGA",
+  "display": "ZZ9000 1024x768 8-bit",
+  "verified": "Maxis/title artwork and first-run owner-name form",
+  "city_rendering_verified": "User confirmed game working; no independent city-view screenshot captured",
+  "midi_patch_applied": false,
+  "user_confirmed_working": true
+}

@@ -1,0 +1,35 @@
+amiga_run_script [OK]
+c9385c79e772bd487f44e889441611dc  LIBS:popupmenu.library
+popupmenu.library-060 10.8.6
+freetype2.library 1.3
+Process  1: stk  4000, gv 150, pri   0 Loaded as command: TCP/IP Superserver
+Process  2: stk 16384, gv 150, pri   0 Loaded as command: Status
+Process  3: stk 32768, gv 150, pri   0 Loaded as command: SD032G:amiga-bridge/amiga-bridge
+Process  4: stk  4096, gv 150, pri   0 Loaded as command: SYS:C/TitleShadow
+Process  5: stk  4096, gv 150, pri   0 Loaded as command: MagicMenu
+Process  6: stk 32768, gv 150, pri  -5 Loaded as command: C:bridge-netwatch
+Process  7: stk  8000, gv 150, pri   1 Loaded as command: Workbench
+Process  8: stk  4000, gv 150, pri   2 Loaded as command: ToolsDaemon
+Process 10: stk 131072, gv 150, pri   0 Loaded as command: FinalWriter
+amiga_ping Amiga alive - clients: 0, chip: 1957120 bytes, fast: 590916744 bytes
+amiga_arexx_ports Public message ports (19):
+
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  Sticky RMB
+  FW.1
+  FINALW.1
+  ConClip.rendezvous
+  deficons

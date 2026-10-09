@@ -1,0 +1,2 @@
+amiga_run_script [OK]
+FW73_CHECKSUM_COMPLETE

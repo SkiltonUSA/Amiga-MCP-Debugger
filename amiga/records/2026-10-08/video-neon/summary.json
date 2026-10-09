@@ -1,0 +1,39 @@
+{
+  "scalar": {
+    "runs": [
+      "scalar-bframes-1",
+      "scalar-bframes-2",
+      "scalar-bframes-3"
+    ],
+    "median_fps": 2.125127507650459,
+    "median_ms": {
+      "decode": 78.25728292502323,
+      "colour": 59.334900815826295,
+      "arm_hash": 33.9569661210372,
+      "copy": 112.52,
+      "host_hash": 88.08,
+      "draw": 86.4
+    }
+  },
+  "neon": {
+    "runs": [
+      "neon-bframes-1",
+      "neon-bframes-2",
+      "neon-bframes-3"
+    ],
+    "median_fps": 2.194329851663302,
+    "median_ms": {
+      "decode": 62.22506361981252,
+      "colour": 59.12466534603267,
+      "arm_hash": 34.03074318042859,
+      "copy": 113.24,
+      "host_hash": 86.48,
+      "draw": 87.28
+    }
+  },
+  "decode_time_reduction_percent": 20.4865524408391,
+  "playback_fps_gain_percent": 3.2563854998683306,
+  "verified_frames": 225,
+  "integrity_rechecks": 6,
+  "shutdown_passed": true
+}

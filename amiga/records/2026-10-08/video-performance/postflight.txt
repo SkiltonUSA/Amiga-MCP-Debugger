@@ -1,0 +1,27 @@
+amiga_ping Amiga alive - clients: 0, chip: 2022928 bytes, fast: 599040768 bytes
+amiga_list_screen_windows Windows on screen @8989DA0 (5):
+
+  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(394,239)  size=420x117  @8865674
+  Network log output  pos=(0,333)  size=1920x200  @8866E64
+  Roadie 1.3.9  pos=(316,43)  size=230x250  @9050624
+  (untitled)  pos=(21,713)  size=600x63  @8F9B19C
+  (untitled)  pos=(0,11)  size=1920x789  @811B52C
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  Sticky RMB
+  ConClip.rendezvous
+  deficons

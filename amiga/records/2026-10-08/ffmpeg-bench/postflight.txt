@@ -1,0 +1,22 @@
+amiga_list_ports Public Message Ports (20):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  Sticky RMB
+  FW.1
+  FINALW.1
+  ConClip.rendezvous
+  deficons
+amiga_ping Amiga alive - clients: 0, chip: 1957120 bytes, fast: 590136408 bytes

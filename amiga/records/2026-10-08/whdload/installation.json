@@ -1,0 +1,14 @@
+{
+  "version": "20.0",
+  "build": 7051,
+  "previous_version": "19.1",
+  "previous_build": 6907,
+  "source": "user attachment WHDLoad_usr.lha",
+  "source_sha256": "093333953737528d79c1eda7d21a16a0aa298698722624e7cfb31f588a0a156d",
+  "latest_checked": "https://www.whdload.de/",
+  "verified_files": 558,
+  "backup": "SYS:Storage/WHDLoad-before-20.0-20261008",
+  "settings_preserved": true,
+  "gameplay_tested": false,
+  "incident": "Inspection command temporarily removed C: and S: assigns; restored to SYS:C and SYS:S, verified and dismissed C: volume requester. No startup edits. Pending old EyeOfTheBeholder2 WHDLoad launch cancelled via Escape to release executable."
+}

@@ -1,0 +1,2 @@
+amiga_run_script [OK]
+37c20a3d283e9d95452d0cb050cefe94  RAM:FinalWriter73.lha

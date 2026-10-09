@@ -1,0 +1,2 @@
+Built Cortex-A9 ELF objects + 68k relay library in <workspace>/.context/amiga/arm-debug
+Includes a 68k software relay probe, not a standalone ARM loader. No deployment or firmware flash.

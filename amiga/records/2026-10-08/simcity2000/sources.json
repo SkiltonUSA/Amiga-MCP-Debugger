@@ -1,0 +1,17 @@
+[
+  {
+    "disk": 1,
+    "name": "SimCity 2000 v1.1d r0.031 (1994-10-27)(Maxis)(AGA)(Disk 1 of 3)[h PSG][HD].adf",
+    "sha256": "c647975a0a7e23e56abf4ca419af41ba8abc7742ed9c8d3e06e120d0d244a7cb"
+  },
+  {
+    "disk": 2,
+    "name": "SimCity 2000 v1.1d r0.031 (1994-10-27)(Maxis)(AGA)(Disk 2 of 3).adf",
+    "sha256": "69157ce3afc37ed27cdc62f3c32f417a7bb9ac525834ac8ba79b12e46bb82da7"
+  },
+  {
+    "disk": 3,
+    "name": "SimCity 2000 v1.1d r0.031 (1994-10-27)(Maxis)(AGA)(Disk 3 of 3).adf",
+    "sha256": "480a2aa85e183a5f40a45fd86817f59d1e8f20a5cbdf8e5654b37b507e1ad3a3"
+  }
+]

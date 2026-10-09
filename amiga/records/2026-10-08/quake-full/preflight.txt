@@ -1,0 +1,30 @@
+amiga_ping Amiga alive - clients: 0, chip: 1957120 bytes, fast: 590899872 bytes
+amiga_run_script [OK]
+Directory "HDD50Gig:Games/ZZQuake" on Friday 10-Oct-25
+COPYING                       14882 ----rwed Future    21:17:58
+id1                             Dir ----rwed Yesterday 15:47:42
+README.txt                     6420 ----rwed Future    21:41:18
+SOURCE.txt                      947 ----rwed Future    21:16:26
+ZZQuake                      107980 ----rwed Future    20:59:42
+zzquake.bin                  395228 ----rwed Future    20:54:36
+ZZQuake.info                   3889 ----rw-d Future    20:39:38
+SharewareDocs                   Dir ----rwed Yesterday 16:11:30
+ZZQuake640                    99428 ----rwed Yesterday 17:00:09
+ZZQuake640.info                3867 ----rwed Yesterday 17:00:09
+zzq640.bin                   395228 ----rwed Yesterday 17:00:09
+ZZQuake800                   107828 ----rwed Yesterday 17:00:09
+ZZQuake800.info                3867 ----rwed Yesterday 17:00:09
+zzq800.bin                   395564 ----rwed Yesterday 17:00:10
+ZZQuake1024                  108000 ----rwed Yesterday 17:00:10
+ZZQuake1024.info               3867 ----rwed Yesterday 17:00:10
+zzq1024.bin                  395676 ----rwed Yesterday 17:00:10
+HighResDocs                     Dir ----rwed Yesterday 17:00:11
+HighRes-Setup.txt              1346 ----rwed Yesterday 17:01:05
+16 files - 1996K bytes - 3 directories - 4017 blocks used
+Directory "HDD50Gig:Games/ZZQuake/id1" on Friday 10-Oct-25
+README.txt                      332 ----rwed Future    21:21:02
+pak0.pak                   18689235 ----rw-d Yesterday 16:10:41
+config.cfg                     1744 ----rwed Yesterday 17:08:17
+autoexec.cfg                   1744 ----rwed Yesterday 15:47:42
+4 files - 17M bytes - 36516 blocks used
+5906e5998fc3d896ddaf5e6a62e03abb  HDD50Gig:Games/ZZQuake/id1/pak0.pak

@@ -1,0 +1,3 @@
+amiga_arm_status Error executing tool amiga_arm_status: ARM relay: Client not found
+amiga_arm_read_memory Error executing tool amiga_arm_read_memory: ARM relay: Client not found
+amiga_call_hook [ERR] Client not found

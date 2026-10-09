@@ -1,0 +1,11 @@
+{
+  "plm_video_process_macroblock": {
+    "vfp_neon_instructions": 92
+  },
+  "plm_video_idct": {
+    "vfp_neon_instructions": 168
+  },
+  "plm_frame_to_argb": {
+    "vfp_neon_instructions": 0
+  }
+}

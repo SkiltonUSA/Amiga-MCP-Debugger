@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-08",
+  "verified_frames": 225,
+  "runs": 9,
+  "target_fps": 25,
+  "target_met": false,
+  "medians_320x240": {
+    "baseline": {
+      "fps": 2.1123785382340516,
+      "per_frame_ms": {
+        "decode": 85.53211722800533,
+        "colour": 54.94044226852851,
+        "arm_hash": 33.95391307533435,
+        "copy": 112.92,
+        "host_hash": 87.2,
+        "draw": 86.08
+      }
+    },
+    "icache": {
+      "fps": 2.151648162492469,
+      "per_frame_ms": {
+        "decode": 78.1626917314597,
+        "colour": 53.91296973285498,
+        "arm_hash": 33.90040471771684,
+        "copy": 112.12,
+        "host_hash": 87.68,
+        "draw": 87.88
+      }
+    }
+  },
+  "notes": [
+    "Stage timings converted using a 2-second timer frequency estimate.",
+    "Medians of three 25-frame runs per mode, not a sustained 60-second playback test.",
+    "Instruction caching only: data cache and MMU stayed off.",
+    "Frame hashes compared against current native decoder references."
+  ],
+  "fps_improvement_percent": 1.8590240123934842,
+  "source_sha256": {
+    "amiga/arm_debug/zz9000/entry.S": "498160db79671b2fbc4a34ce4a3c6c57a31f1364057315a1f15e1443c2ae9682",
+    "amiga/arm_debug/zz9000/launcher.c": "ad2d43ee9e470361ea711a31e51c74e1278c2a7429cf65eab53cf7d2fcbf7729",
+    "amiga/video/worker.c": "75495bf276640fa5bbddc33c146d7d8005094897cca5b10461905557d888d7b3",
+    "amiga/video/decoder.c": "7b191c6a6a33cb5e2280a332bef7f9cba9812a9294d4cf969a9c686b12488baa",
+    "amiga/video/decoder.h": "cbf9ba8ea10de663fa1539fb6711d12d5b5cdfb50f6ad1b57e13a797a2bca4e7",
+    "amiga/video/wire.h": "255594f03932642eb254bf216b252a0309b305a9fc03cab177614a7bc3f89bf7",
+    "amiga/video/client.c": "39c08359ead46dcc1b748be49b50cb37a0ae52dd9d403e6ecbb2f1432cc4523f",
+    "amiga/video/client.h": "0b02321a364f1c7c9aad040a803a47ded5673d0321b72f50f01fa01a1747cbf9",
+    "amiga/video/app.c": "2d6a0f254aff5048335974a20688e959f8d7d409154bcde39bb4501b9e61869d",
+    "scripts/build_zzvideo.py": "f715b85bedf0d25d6b4d1ccda7982596edd8e72d330594f8b3ac53a19ade05a7"
+  },
+  "paused_quit_passed": true,
+  "original_executable_md5": "770252ca2ff01ff1489ee33825afee1d",
+  "apps_stopped": true,
+  "temporary_http_stopped": true,
+  "manual_pause_timeout": "Existing 30-second request deadline; exit 20 with cache restored and allocation released. Not counted as successful quit."
+}

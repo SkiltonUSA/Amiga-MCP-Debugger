@@ -1,0 +1,1 @@
+amiga_run_script [OK] (no output)

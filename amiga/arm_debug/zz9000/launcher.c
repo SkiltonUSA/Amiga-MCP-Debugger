@@ -280,6 +280,23 @@ done:
             Delay(1);
         }
         printf("EXIT epilogue=%08x cache_echoes=%u rounds=%u\n",ad_get(mem,ZZ_DIAG+24),echoes,ad_get(mem,ZZ_DIAG+20));
+#ifdef ZZ_VIDEO
+        printf("CACHE original=%08x running=%08x restored=%08x\n",ad_get(mem,ZZ_DIAG+28),
+            ad_get(mem,ZZ_DIAG+4),ad_get(mem,ZZ_DIAG+32));
+        if(ad_get(mem,ZZ_DIAG+28)!=ad_get(mem,ZZ_DIAG+32))rc=20;
+#endif
+#ifdef ZZ_VIDEO_NEON
+        {
+            ULONG equal=1;
+            sync_range(mem+ZZ_NEON_STATE,576,0);
+            for(i=0;i<256;i+=4)if(ad_get(mem,ZZ_NEON_STATE+i)!=ad_get(mem,ZZ_NEON_STATE+256+i))equal=0;
+            for(i=0;i<12;i+=4)if(ad_get(mem,ZZ_NEON_STATE+512+i)!=ad_get(mem,ZZ_NEON_STATE+536+i))equal=0;
+            printf("NEON cpacr=%08x fpexc=%08x fpscr=%08x mvfr0=%08x mvfr1=%08x witness=%u context_equal=%u\n",
+                ad_get(mem,ZZ_NEON_STATE+512),ad_get(mem,ZZ_NEON_STATE+516),ad_get(mem,ZZ_NEON_STATE+520),
+                ad_get(mem,ZZ_NEON_STATE+524),ad_get(mem,ZZ_NEON_STATE+528),ad_get(mem,ZZ_NEON_STATE+532),equal);
+            if(!equal||ad_get(mem,ZZ_NEON_STATE+532)!=42)rc=20;
+        }
+#endif
         /* Synchronous XX19c reset-to-idle makes releasing shared code safe,
          * including timeout/failure. Does not change Core0 or firmware image. */
         run_arm(0,0,0);

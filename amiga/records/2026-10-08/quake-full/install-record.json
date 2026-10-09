@@ -1,0 +1,18 @@
+{
+  "destination": "HDD50Gig:Games/ZZQuake/id1/pak1.pak",
+  "bytes": 34257856,
+  "md5": "d76b3e5678f0b64ac74ce5e340e6a685",
+  "transfer_verified": true,
+  "activation": "Native MD5 verified temporary incoming file, then renamed to pak1.pak; final directory listing confirmed size and filename",
+  "retained_pak0_md5": "5906e5998fc3d896ddaf5e6a62e03abb",
+  "launchers": [
+    "ZZQuake",
+    "ZZQuake640",
+    "ZZQuake800",
+    "ZZQuake1024"
+  ],
+  "icons_or_configs_changed": false,
+  "game_launch_tested": false,
+  "music_tracks_installed": false,
+  "temporary_http_server_stopped": true
+}

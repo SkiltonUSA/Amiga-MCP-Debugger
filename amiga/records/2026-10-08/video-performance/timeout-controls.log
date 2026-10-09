@@ -1,0 +1,30 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=8388608 nonce=86e9ef23
+BOOTSTRAP amiga=40c5bc80 arm=00e4bc80 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c51878 MIDR=413fc090 MPIDR=80000001
+CLOCK estimated_hz=332195742 interval_ms=2011
+INPUT path=RAM:ZZVideoPerf/bframes.mpg bytes=124928 hash=566757f4
+OPEN width=320 height=240 fps=25/1
+[CLIENT] process_daemon_msg type=24 data='arm_debug|S'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 0 60'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 60 60'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000001 c0 40'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|S'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 0 60'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 60 60'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000002 c0 40'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|W 86e9ef23 1 1 0 0 0'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|S'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 0 60'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 60 60'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000003 c0 40'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|S'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000004 0 60'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000004 60 60'
+[CLIENT] process_daemon_msg type=24 data='arm_debug|R 00000004 c0 40'
+VIDEO exit=20 frames=5
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c51878 restored=08c50878
+ZZVideo: Application frontend or ARM transfer failed. See the CLI log for details.
+LAUNCHER exit=20; owned memory released

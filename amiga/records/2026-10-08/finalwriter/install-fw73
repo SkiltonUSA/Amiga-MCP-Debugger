@@ -1,0 +1,124 @@
+FailAt 21
+IF EXISTS HDD50Gig:APPS/FinalWriter7.3
+Echo "Destination already exists; installation not started"
+ELSE
+MakeDir HDD50Gig:APPS/FinalWriter7.3
+Copy RAM:FW73Stage/FinalWriter TO HDD50Gig:APPS/FinalWriter7.3 ALL CLONE QUIET
+Copy RAM:FW73Stage/FinalWriter.info TO HDD50Gig:APPS/FinalWriter7.3.info CLONE QUIET
+Copy RAM:FW73Stage/popupmenu.library TO HDD50Gig:APPS/FinalWriter7.3/Libs/popupmenu.library CLONE QUIET
+MakeDir HDD50Gig:APPS/FinalWriter7.3/Dependencies
+Copy RAM:FW73Stage/afd-copyright TO HDD50Gig:APPS/FinalWriter7.3/Dependencies/afd-copyright QUIET
+Copy RAM:FW73Stage/pmlib060.readme TO HDD50Gig:APPS/FinalWriter7.3/Dependencies/pmlib060.readme QUIET
+Copy RAM:FW73Stage/PopupMenuUser/PopupMenu.guide TO HDD50Gig:APPS/FinalWriter7.3/Dependencies/PopupMenu.guide QUIET
+ENDIF
+IF NOT EXISTS FONTS:truetype
+MakeDir FONTS:truetype
+ENDIF
+IF NOT EXISTS "LIBS:freetype2.library"
+Copy "RAM:FW73Stage/freetype2/Libs/freetype2.library" TO "LIBS:freetype2.library" CLONE QUIET
+ENDIF
+IF NOT EXISTS "SYS:System/FTManager"
+Copy "RAM:FW73Stage/freetype2/System/FTManager" TO "SYS:System/FTManager" CLONE QUIET
+ENDIF
+IF NOT EXISTS "SYS:System/FTManager.info"
+Copy "RAM:FW73Stage/freetype2/System/FTManager.info" TO "SYS:System/FTManager.info" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera-COPYRIGHT"
+Copy "RAM:FW73Stage/freetype2/Fonts/COPYRIGHT" TO "FONTS:Vera-COPYRIGHT" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Mono Bold Italic.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Mono Bold Italic.font" TO "FONTS:Vera Mono Bold Italic.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Mono Bold Italic.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Mono Bold Italic.otag" TO "FONTS:Vera Mono Bold Italic.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Mono Bold.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Mono Bold.font" TO "FONTS:Vera Mono Bold.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Mono Bold.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Mono Bold.otag" TO "FONTS:Vera Mono Bold.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Mono Italic.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Mono Italic.font" TO "FONTS:Vera Mono Italic.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Mono Italic.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Mono Italic.otag" TO "FONTS:Vera Mono Italic.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Mono.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Mono.font" TO "FONTS:Vera Mono.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Mono.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Mono.otag" TO "FONTS:Vera Mono.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Sans Bold Italic.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Sans Bold Italic.font" TO "FONTS:Vera Sans Bold Italic.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Sans Bold Italic.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Sans Bold Italic.otag" TO "FONTS:Vera Sans Bold Italic.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Sans Bold.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Sans Bold.font" TO "FONTS:Vera Sans Bold.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Sans Bold.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Sans Bold.otag" TO "FONTS:Vera Sans Bold.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Sans Italic.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Sans Italic.font" TO "FONTS:Vera Sans Italic.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Sans Italic.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Sans Italic.otag" TO "FONTS:Vera Sans Italic.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Sans.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Sans.font" TO "FONTS:Vera Sans.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Sans.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Sans.otag" TO "FONTS:Vera Sans.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Serif Bold.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Serif Bold.font" TO "FONTS:Vera Serif Bold.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Serif Bold.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Serif Bold.otag" TO "FONTS:Vera Serif Bold.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Serif.font"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Serif.font" TO "FONTS:Vera Serif.font" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:Vera Serif.otag"
+Copy "RAM:FW73Stage/freetype2/Fonts/Vera Serif.otag" TO "FONTS:Vera Serif.otag" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraMono.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraMono.ttf" TO "FONTS:truetype/VeraMono.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraMonoBold.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraMonoBold.ttf" TO "FONTS:truetype/VeraMonoBold.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraMonoBoldItalic.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraMonoBoldItalic.ttf" TO "FONTS:truetype/VeraMonoBoldItalic.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraMonoItalic.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraMonoItalic.ttf" TO "FONTS:truetype/VeraMonoItalic.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraSans.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraSans.ttf" TO "FONTS:truetype/VeraSans.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraSansBold.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraSansBold.ttf" TO "FONTS:truetype/VeraSansBold.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraSansBoldItalic.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraSansBoldItalic.ttf" TO "FONTS:truetype/VeraSansBoldItalic.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraSansItalic.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraSansItalic.ttf" TO "FONTS:truetype/VeraSansItalic.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraSerif.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraSerif.ttf" TO "FONTS:truetype/VeraSerif.ttf" CLONE QUIET
+ENDIF
+IF NOT EXISTS "FONTS:truetype/VeraSerifBold.ttf"
+Copy "RAM:FW73Stage/freetype2/Fonts/truetype/VeraSerifBold.ttf" TO "FONTS:truetype/VeraSerifBold.ttf" CLONE QUIET
+ENDIF
+Protect HDD50Gig:APPS/FinalWriter7.3/FinalWriter +e
+Protect SYS:System/FTManager +e
+Version HDD50Gig:APPS/FinalWriter7.3/FinalWriter FILE
+Version LIBS:freetype2.library FILE
+Version HDD50Gig:APPS/FinalWriter7.3/Libs/popupmenu.library FILE
+Echo FW73_INSTALL_COMPLETE

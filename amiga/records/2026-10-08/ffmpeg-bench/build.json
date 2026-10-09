@@ -1,0 +1,15 @@
+{
+  "ffmpeg_version": "9.0.2",
+  "arm_image_bytes": 558217,
+  "relative_relocations": 3138,
+  "allocation_bytes": 16777216,
+  "control_offset": 1572864,
+  "hardware_verified": false,
+  "files": {
+    "ffmpeg.elf": "cafdcae390e5a6d8ffdc749c9ead771a42b404f2ee66e63d0861608acd045a34",
+    "ZZFFmpegBench": "fbf3f1fe7ac77a1bce83c5e1526fb33e369c1babb9f2649a824e1e15472c759f",
+    "bframes.m1v": "873360587f4e0622178b01f0823b8473085180a0d6ed2fe7bd9cacd7af79ab3e"
+  },
+  "hardware_attempted": true,
+  "status": "failed during avcodec_alloc_context3; no decoded frames or valid throughput"
+}

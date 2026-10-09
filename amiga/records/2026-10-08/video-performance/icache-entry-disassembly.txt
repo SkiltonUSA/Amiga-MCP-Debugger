@@ -1,0 +1,55 @@
+
+       0:      	mrc	p15, #0x0, r1, c1, c0, #0x0
+       4:      	movw	r2, #0x1005
+       8:      	tst	r1, r2
+       c:      	bxne	lr
+      10:      	mrc	p15, #0x0, r1, c0, c0, #0x5
+      14:      	and	r1, r1, #255
+      18:      	cmp	r1, #1
+      1c:      	bxne	lr
+      20:      	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+      24:      	mov	r4, sp
+      28:      	ldr	r5, [r0, #0x4]
+      2c:      	mrc	p15, #0x0, r6, c1, c0, #0x0
+      30:      	ldr	r2, [pc, #0x88]         @ 0xc0 <_start+0xc0>
+      34:      	rev	r1, r6
+      38:      	str	r1, [r5, r2]
+      3c:      	mov	r0, #0
+      40:      	dsb	sy
+      44:      	mcr	p15, #0x0, r0, c7, c5, #0x0
+      48:      	mcr	p15, #0x0, r0, c7, c5, #0x6
+      4c:      	dsb	sy
+      50:      	isb	sy
+      54:      	orr	r0, r6, #4096
+      58:      	mcr	p15, #0x0, r0, c1, c0, #0x0
+      5c:      	isb	sy
+      60:      	ldr	r1, [pc, #0x5c]         @ 0xc4 <_start+0xc4>
+      64:      	add	sp, r5, r1
+      68:      	bic	sp, sp, #7
+      6c:      	mov	r0, r5
+      70:      	bl	0xae0 <zz_worker>       @ imm = #0xa68
+      74:      	dsb	sy
+      78:      	mcr	p15, #0x0, r6, c1, c0, #0x0
+      7c:      	isb	sy
+      80:      	mov	r0, #0
+      84:      	mcr	p15, #0x0, r0, c7, c5, #0x0
+      88:      	mcr	p15, #0x0, r0, c7, c5, #0x6
+      8c:      	dsb	sy
+      90:      	isb	sy
+      94:      	mrc	p15, #0x0, r0, c1, c0, #0x0
+      98:      	rev	r0, r0
+      9c:      	ldr	r1, [pc, #0x24]         @ 0xc8 <_start+0xc8>
+      a0:      	str	r0, [r5, r1]
+      a4:      	mov	sp, r4
+      a8:      	ldr	r1, [pc, #0x1c]         @ 0xcc <_start+0xcc>
+      ac:      	movw	r0, #0x4552
+      b0:      	movt	r0, #0x3154
+      b4:      	str	r0, [r5, r1]
+      b8:      	dsb	sy
+      bc:      	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+      c0: 5c 00 01 00  	.word	0x0001005c
+      c4: f0 ff 7f 00  	.word	0x007ffff0
+      c8: 60 00 01 00  	.word	0x00010060
+      cc: 58 00 01 00  	.word	0x00010058
+
+000000d0 

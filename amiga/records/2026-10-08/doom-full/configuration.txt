@@ -1,0 +1,10 @@
+amiga_run_script [OK]
+HDD50Gig:Games/ZZDoom/ZZDoom320 stack=65536
+NOMUSIC
+WAD=DOOM.WAD
+HDD50Gig:Games/ZZDoom/ZZDoom640 stack=65536
+NOMUSIC
+WAD=DOOM.WAD
+673dd9584fb92a533a7c007a1b795649  HDD50Gig:Games/ZZDoom/Setup-Notes.txt
+f0cefca49926d00903cf57551d901abe  HDD50Gig:Games/ZZDoom/DOOM1.WAD
+amiga_ping Amiga alive - clients: 0, chip: 1957120 bytes, fast: 590899872 bytes

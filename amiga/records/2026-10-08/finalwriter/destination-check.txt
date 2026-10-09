@@ -1,0 +1,23 @@
+amiga_run_script [OK]
+LIST: Could not get information for "HDD50Gig:APPS/FinalWriter7.3".
+LIST: object not found
+Directory "FONTS:" on Friday 10-Oct-25
+CGTimes.font                      4 ----rw-d 13-Apr-21 02:43:23
+CGTimes.otag                    261 ----rw-d 13-Apr-21 02:43:23
+CGTriumvirate.font                4 ----rw-d 13-Apr-21 02:43:23
+CGTriumvirate.otag              205 ----rw-d 13-Apr-21 02:43:23
+courier.font                   1304 ----rw-d 13-Apr-21 02:43:23
+diamond.font                    524 ----rw-d 13-Apr-21 02:43:23
+emerald.font                    524 ----rw-d 13-Apr-21 02:43:23
+garnet.font                     524 ----rw-d 13-Apr-21 02:43:23
+helvetica.font                 1564 ----rw-d 13-Apr-21 02:43:23
+LetterGothic.font                 4 ----rw-d 13-Apr-21 02:43:23
+LetterGothic.otag               203 ----rw-d 13-Apr-21 02:43:23
+opal.font                       524 ----rw-d 13-Apr-21 02:43:23
+ruby.font                       784 ----rw-d 13-Apr-21 02:43:23
+sapphire.font                   524 ----rw-d 13-Apr-21 02:43:23
+SevenAlone.font                 264 ----rw-d 13-Apr-21 02:43:23
+times.font                     1304 ----rw-d 13-Apr-21 02:43:23
+topaz.font                      264 ----rw-d 13-Apr-21 02:43:23
+17 files - 8K bytes - 47 blocks used
+object not found

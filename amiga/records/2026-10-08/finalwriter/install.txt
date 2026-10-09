@@ -1,0 +1,5 @@
+amiga_run_script [OK]
+FinalWriter 7.3
+freetype2.library 1.3
+popupmenu.library-060 10.8.6
+FW73_INSTALL_COMPLETE

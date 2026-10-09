@@ -1,0 +1,3 @@
+amiga_run_script [OK]
+1cd63c5ddff1bf8ce844237f580e9cf3  HDD50Gig:Games/ZZDoom/DOOM.WAD
+b0255e613445f1f12437e944aeeb0e81  RAM:configure-full-doom

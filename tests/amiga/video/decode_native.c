@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "decoder.h"
+static uint64_t test_clock;
+static uint64_t tick(void){test_clock+=100;return test_clock;}
 #ifdef ORACLE
 #define PL_MPEG_IMPLEMENTATION
 #include "vendor/pl_mpeg.h"
@@ -37,6 +39,9 @@ int main(int argc,char **argv)
     /* Rewind must reproduce the same first frame without heap growth. */
     size_t used=zv_heap_used();zv_rewind();if(zv_next(pixels)!=1||zv_heap_used()!=used)return 3;
     fprintf(stderr,"rewind=%08x frames=%u\n",zv_hash(2166136261u,pixels,w*h*4),frame);
+    uint32_t first=zv_hash(2166136261u,pixels,w*h*4);struct zv_timing timing;
+    zv_rewind();if(zv_next_timed(pixels,tick,&timing)!=1||timing.decode!=100||timing.colour!=100||
+        zv_hash(2166136261u,pixels,w*h*4)!=first)return 4;
     free(heap);
 #endif
     if(raw)fclose(raw);

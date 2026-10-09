@@ -1,0 +1,10 @@
+amiga_run_script [OK]
+Directory "HDD50Gig:Games/ZZQuake/id1" on Friday 10-Oct-25
+README.txt                      332 ----rwed Future    21:21:02
+pak0.pak                   18689235 ----rw-d Yesterday 16:10:41
+config.cfg                     1744 ----rwed Yesterday 17:08:17
+autoexec.cfg                   1744 ----rwed Yesterday 15:47:42
+pak1.pak                   34257856 ----rw-d Today     01:38:54
+5 files - 50M bytes - 103427 blocks used
+40bf4f155624b32cb9bd86d852eab70b  HDD50Gig:Games/ZZQuake/Registered-Data.txt
+amiga_ping Amiga alive - clients: 0, chip: 1957120 bytes, fast: 590899872 bytes

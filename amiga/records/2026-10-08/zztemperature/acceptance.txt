@@ -1,0 +1,44 @@
+ZZTemperature 1.0 physical A4000TX acceptance, 2026-10-08
+
+Installed:
+SYS:WBStartup/ZZTemperature       15856 bytes
+  MD5 8a28c7fe5dda0764592ea0e92b74677b
+  SHA256 0b3c44fca6efe0133e854a96737b7926afbe4d14298235fb71adf432875c27fd
+SYS:WBStartup/ZZTemperature.info   1910 bytes
+  MD5 b1e8ee1aaae0647829895dd9db04275e
+
+Read-only probe examples:
+ZZ9000 Zynq: 53.3 C (raw=533, firmware=0x0113)
+ZZ9000 Zynq: 53.5 C (raw=535, firmware=0x0113)
+ZZ9000 Zynq: 53.1 C (raw=531, firmware=0x0113)
+
+Window visual acceptance: 360x171, correct temperature/min/max formatting,
+changing values and sample count. The initial development build's %d GUI
+formatting was wrong; it was corrected to %ld before the installed build.
+Screenshot: temperature.png (copied from the local capture for backup).
+
+Find Workbench menu: PASS (menu code=0xf8a3)
+Close monitor: PASS (menu code=0x0000)
+Window enumeration: no monitor after close; public port remains.
+Invoke Workbench menu: PASS (menu code=0xf8a3)
+Window enumeration: monitor reopened on Workbench.
+Menu selection used a synthetic IDCMP_MENUPICK through Workbench's own
+window port, with the code discovered from the real menu item label.
+
+STOP: menu NOT FOUND, public port absent, window closed.
+Installed application launched using C:WBLoad: menu PASS, no window initially.
+Installed menu INVOKE: window reopened.
+Two subsequent SHOW calls: exactly one ZZTemperature.1 public port and window.
+C:Version reports ZZTemperature 1.0.
+
+Build: m68k-amigaos-gcc -noixemul -m68020 -O2 -Wall -Wextra -Werror ... -lamiga
+Compiler: m68k-amigaos-gcc (AmigaDev) 6.5.0b 20260819091705
+Compile and link passed without warnings.
+No cold-boot test, no physical mouse menu-selection test, no thermal calibration.
+Only board register reads; no ARM/XACP work or hardware configuration changes.
+ToolsDaemon.menu, NewMeter, and startup-sequence were not edited.
+SimCity 2000 screen remained open; Workbench stayed behind its screen.
+
+Installed icon fetched: hash, DONOTWAIT and STARTPRI=-5 verified.
+Final probe: 53.8 C (raw=538). RAM:ZZTemperatureTest removed.
+Temporary Mac HTTP server stopped; build container stopped.

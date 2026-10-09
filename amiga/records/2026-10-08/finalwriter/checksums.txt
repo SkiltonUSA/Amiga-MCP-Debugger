@@ -1,0 +1,178 @@
+e2a90b5cff1c04e74e503a2653ba7bd2  HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-Ackn.catalog
+4b83fc858add004b721efcbfb0ef8982  HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-GCS.catalog
+7c8c055239d07ea5dfd0b86e12fc9284  HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-General.catalog
+bf8dbe151c762064ce0fa9b75fdff5e3  HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter.catalog
+0b05336af5fac94bad102917583c892a  HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter-GCS.catalog
+59ae4507c48231fe36871ae8194b5207  HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter-General.catalog
+60ad1d7d6affa1e34e955c85ea6ef945  HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter.catalog
+0b05336af5fac94bad102917583c892a  HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter-GCS.catalog
+59ae4507c48231fe36871ae8194b5207  HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter-General.catalog
+3af1d114123270ab41cd60dbc4fe1248  HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter.catalog
+6487903ee5c2ad5308abf94ceff26a7e  HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-Ackn.catalog
+4b83fc858add004b721efcbfb0ef8982  HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-GCS.catalog
+5691947392027f46071f8ea12abe4df7  HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-General.catalog
+306d84bdae693b5990bbce877228d0ed  HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter.catalog
+5fba94bbe2afa7f52ea412f1b58d74a3  HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter-GCS.catalog
+7482e55700c7eda66a9ed82c69afc8fc  HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter-General.catalog
+cf96a15207f313eb1e426b87721e893d  HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter.catalog
+5fba94bbe2afa7f52ea412f1b58d74a3  HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter-GCS.catalog
+7482e55700c7eda66a9ed82c69afc8fc  HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter-General.catalog
+f99acdaaa56c6c9be679191b9cf0eddb  HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter.catalog
+7dd8b31f6651c9476827ee451dbdcb40  HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-Ackn.catalog
+b0d065f724e1f7596ff561319fa41677  HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-GCS.catalog
+5e4304e5ba1c76cb60567424c7c7ea56  HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-General.catalog
+605c71089c43db4d5913311caf82c062  HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter.catalog
+b810a7f5b96c38edd1eb74cc1a480c0e  HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-Ackn.catalog
+b0d065f724e1f7596ff561319fa41677  HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-GCS.catalog
+5e4304e5ba1c76cb60567424c7c7ea56  HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-General.catalog
+ac6dd5a8a43bef11138305332ea2bcbd  HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter.catalog
+44243fa5e515c40cce729378dd7d87d4  HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/checkprinter.png
+b94f0da942a28b7554c644de702ae891  HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/dictionary.png
+91fa3cd003b43fc0647dda900fc58321  HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/floppy.png
+306351aca67c162040f544fd30206060  HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/ghostscript.png
+a3840df510f2e4f5ff477be5ef290902  HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/monitor.png
+31292d68b515c10442dc46676129c8b2  HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/printer.png
+2bfaa515f1d5577d59b26f5b6d358215  HDD50Gig:APPS/FinalWriter7.3/FWFiles/buttlace.b
+907cc359a1fb9b9c0576b93add0c9ba5  HDD50Gig:APPS/FinalWriter7.3/FWFiles/buttnonlace.b
+c8addd7939eb85dc22d80955b3e77d79  HDD50Gig:APPS/FinalWriter7.3/FWFiles/iconlace.b
+3d6969c7b436c752729a3e27c3a1fefc  HDD50Gig:APPS/FinalWriter7.3/FWFiles/iconnonlace.b
+8ea2fa6993655e62643c7886e591a63d  HDD50Gig:APPS/FinalWriter7.3/FWFiles/logo.png
+3979b15df1bd901ebf75590df050492c  HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-default.png
+7b613fe03d63db11ff64b678d2853108  HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-default.png.license
+8b3d11644b0fae79e50be7665f345505  HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-device.png
+d13f34c12be2bd031416f5896e18f831  HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-file.png
+3c879c4257acdb4d32e92025f04bbf4c  HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-ftp.png
+b2ffecbf8ab6e8c3d85a20639f93541a  HDD50Gig:APPS/FinalWriter7.3/FWFiles/screen_resolution.gif
+3328e039f0653ef2a86e83c74d96738f  HDD50Gig:APPS/FinalWriter7.3/FWFiles/screen_resolution.png
+0bfa09ceeb5834f7746bb810fb58263b  HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/hyph.pat
+bcbe8d7b2df6bc569d12a6566f72c437  HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/index.aff
+cd5a8770b174e3566f66d9df9caf3793  HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/index.dic
+da087cefab7bc3b7687203198a0042ec  HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/license
+dc3cf274c71bde31947c69991bf7838a  HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/hyph.pat
+862631984e0b60ceb183106e0cbeb361  HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/index.aff
+24f38d5ea81de0c5e12ee07baa2bd4c7  HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/index.dic
+6e887c523b93db7dac9d61324fdf1895  HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/license
+7aee2a9af23199a51b7cdd3f0787c07f  HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/hyph.pat
+da9e0f416e7eec6abe90ea1fd22ab133  HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/index.aff
+05b205bed825733683aa935d322b7d68  HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/index.dic
+945ccfc50236206e67c99f0f9c2c962f  HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/license
+4e33241fdc5dac3195939095acb0fc5a  HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/hyph.pat
+30b40b42ba11611f012e6fdcdb614129  HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/index.aff
+038f0fefeec1be0eb12f661888d7cd69  HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/index.dic
+90b757dd77b1ebbf473eef31037a59e8  HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/license
+1ea6e4ffbd3c9ade397d92c20d874de0  HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/hyph.pat
+aad35cbffa5e1412c09c33d92d7e3bff  HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/index.aff
+2c146b2bc850d6ff52448e8dd3f71919  HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/index.dic
+dd6d2bbd7b7f4519448f2b995fd99cd4  HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/license
+1e728cf9e55be22cf286a6922165ca62  HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/hyph.pat
+8fd501a45156ca0b0511959c6f6c525e  HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/index.aff
+58913053800419597839117a985874f6  HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/index.dic
+011cfe10c5b45588bde7632a8599fee5  HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/license
+967bd374b09644ae1346bc05a298367c  HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/hyph.pat
+abcdc0ce99c387610506f38e3585a56f  HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/index.aff
+ac93227635f20d53e9e8233d44102a62  HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/index.dic
+b41cabf4e6f2a7d951684246518bea4f  HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/license
+8b9beaa37dbb9256e7c2ae7877a88ae3  HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/hyph.pat
+759821984975ab398229282a85c94562  HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/index.aff
+be0845297188cd700a736af11d7357f8  HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/index.dic
+2346c7bffe6ab4d51730ab3116817c72  HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/license
+eef5bdc0bf2f9b5254ffa0b5fcc45123  HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/hyph.pat
+21b894547fd95046b6ade80391ba79eb  HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/index.aff
+6bc2644e930797f843ebe84da4044133  HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/index.dic
+e1f9036f8b1d1e4cdcd8f4b4cee606f8  HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/license
+eda55851a641db50fbe57a6abc576708  HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/hyph.pat
+e5531d70dba82e05252137f2fadd0908  HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/index.aff
+fddb8fff08a4c9f9ea531f1d4720252f  HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/index.dic
+31d06285633a89f4d0267895ef8b7107  HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/license
+0bf01998e058fe5f9781ccaf4778eb94  HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/hyph.pat
+b3ca710e588ff12571581cde71ac30b3  HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/index.aff
+0d01bc06cd2387bf27ce4d43ad5af33f  HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/index.dic
+f9181fe437dd701ce6ae690f6e09b119  HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/license
+60098fcdf34aa20832dd387698dfd6a5  HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/hyph.pat
+c2cb8929350998aedce9ca4308a7e249  HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/index.aff
+4c44216bc68e35959ce4bef1c319cbba  HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/index.dic
+9d372c99817cb42bdd1f6c0acb7f4d11  HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/license
+91079d102b2b36a23262429ab522f933  HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/hyph.pat
+3716b157dc6e637a5ad20818e85da1d5  HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/index.aff
+65e9b52cf0716b236fe61a1c493dc6ee  HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/index.dic
+1c18819fb15c8c82a412167fa18fbf31  HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/license
+c1824c8f39eae4c62a7459298d181e1a  HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/hyph.pat
+c272bf291ae74aa0ef84f0d844760865  HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/index.aff
+442dced9dc613dbe2ed573dc41afb729  HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/index.dic
+53d8ed71b4053ef0ccfcf6b3f89880a8  HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/license
+9dd026de798bffcb6de8df1f10e673e1  HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/hyph.pat
+f7887e3117f09f1fbc327631bdba8eab  HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/index.aff
+4cb9ab740b85dd90890828c16fc30d51  HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/index.dic
+fe5c586fe56d04fbdc44df187129ac29  HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/license
+83956b018cc9525f9c908a7d501431e9  HDD50Gig:APPS/FinalWriter7.3/FinalWriter
+5e9bc82ceb07c8dd9f00cdd17c7b34a7  HDD50Gig:APPS/FinalWriter7.3/FinalWriter.info
+83116e7fec7919221cf388a91b33b8f9  HDD50Gig:APPS/FinalWriter7.3/Fonts/SWOLFonts.info
+1023c98d987d98ae4a8573bb2bf07976  HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler/5
+42699cc07f944cc69e9aa5f0de6781a8  HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler/9
+74b3af1de59270faaaf443f377794e1c  HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler.font
+2412ae848123d82908184c7feb9dac10  HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont/13
+8323fd42fb694e417f973b9f54389e64  HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont/8
+89f7cd0fab01eb0bb1cfeafd37408168  HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont.font
+3080733cc5e6ecec291bcdc88acd49a9  HDD50Gig:APPS/FinalWriter7.3/Fonts/fontcache
+db1f4c1094f5e2119a7ae9cfca9122fc  HDD50Gig:APPS/FinalWriter7.3/Libs/cachemap.library
+086acd3b9538041e20dfcede66b1508c  HDD50Gig:APPS/FinalWriter7.3/Libs/downloader.library
+f94ee70ddea9aa302ff137dfdbc0ceb5  HDD50Gig:APPS/FinalWriter7.3/Libs/fwInterface.library
+621310b2bf5890ae5e9c5261afa5ab4f  HDD50Gig:APPS/FinalWriter7.3/Libs/fwarexx.library
+a92332fa72d0967feded82b2ad1bdf14  HDD50Gig:APPS/FinalWriter7.3/Libs/fwc.library
+c1963cc9c263e8fc9002cb694c7e6ca5  HDD50Gig:APPS/FinalWriter7.3/Libs/fwfiltertype.library
+8a98ac9372daef6925d8077cb75abda1  HDD50Gig:APPS/FinalWriter7.3/Libs/fwfreetypefont3.library
+3dc6ce66e19d1575bc68377ebb8bc9aa  HDD50Gig:APPS/FinalWriter7.3/Libs/fwhtml.library
+d47312f63214e799b1bb376bd7ed5cd4  HDD50Gig:APPS/FinalWriter7.3/Libs/fwmemory.library
+b0b6e60bfb8a33d59009089ce2e1f47a  HDD50Gig:APPS/FinalWriter7.3/Libs/fwnetprinter3.library
+603c033b36681cad75e8fb992fa68581  HDD50Gig:APPS/FinalWriter7.3/Libs/fwnetwork3.library
+8c4db4041fab94af733c5f2023d7458f  HDD50Gig:APPS/FinalWriter7.3/Libs/fwpdf.library
+6322fd2ceff7089f95a973afc9c2ea7c  HDD50Gig:APPS/FinalWriter7.3/Libs/fwpenpal.library
+400d771538124f6c8c8513d5e6da54f8  HDD50Gig:APPS/FinalWriter7.3/Libs/fwprowrite.library
+e8866c56570f2128f4f5569ccdf23215  HDD50Gig:APPS/FinalWriter7.3/Libs/fwrtf.library
+ee619abe8fc890dd22b5af3de5177c8a  HDD50Gig:APPS/FinalWriter7.3/Libs/fwspell3.library
+856c76f41ed3910acefab9a140ad6c4f  HDD50Gig:APPS/FinalWriter7.3/Libs/fwwordperfect.library
+a753a4cf1129429689c988debb0c00ec  HDD50Gig:APPS/FinalWriter7.3/Libs/fwzune.library
+21ce2696cbc7f68af49a114f80f7621c  HDD50Gig:APPS/FinalWriter7.3/Libs/swpost.library
+9cad6f9b47c18e7e214e7e8dbd3ccfd7  HDD50Gig:APPS/FinalWriter7.3/Libs/swshell.library
+62cd5f9938430d3038f6c7c4e8f64bdd  HDD50Gig:APPS/FinalWriter7.3/ReleaseNotes
+56667de8ee0ce3d3b941fe63ab296363  HDD50Gig:APPS/FinalWriter7.3/ReleaseNotes.info
+0fc34d1b4149e52f2354dee4b484b65b  HDD50Gig:APPS/FinalWriter7.3/Requirements
+f63e63a48c6bfe92e93093a21800be11  HDD50Gig:APPS/FinalWriter7.3/Requirements.info
+a77de2ec0f4d6f241dcdcb7da286b272  HDD50Gig:APPS/FinalWriter7.3/Tools/ippfind
+3d8d49005cdbaf850acfc2504a199616  HDD50Gig:APPS/FinalWriter7.3/Tools/ippfind.LICENSE
+0fc99983e7b8a34dd7518c126c802a62  HDD50Gig:APPS/FinalWriter7.3.info
+c9385c79e772bd487f44e889441611dc  HDD50Gig:APPS/FinalWriter7.3/Libs/popupmenu.library
+c9e9e7bd73cd34de5851c4dc70494fac  LIBS:freetype2.library
+1bf8d01a7906d9bf4b1e25f5e73ee372  SYS:System/FTManager
+bc7e0f9b237c5ae174a361b2242946ea  SYS:System/FTManager.info
+27d7484b1e18d0ee4ce538644a3f04be  FONTS:Vera-COPYRIGHT
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Mono Bold Italic.font
+11a62b221b403f24c94dc24e949ee1f8  FONTS:Vera Mono Bold Italic.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Mono Bold.font
+17fa58beb6d3bd6b79d3161a7864cd22  FONTS:Vera Mono Bold.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Mono Italic.font
+799f59a1019f7e173495942d111fe056  FONTS:Vera Mono Italic.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Mono.font
+1ac1308bcd9b90bef6aacbafba9da1c3  FONTS:Vera Mono.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Sans Bold Italic.font
+3b03dd0c8be31146df7917234e7f8756  FONTS:Vera Sans Bold Italic.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Sans Bold.font
+420130e19d2efa028aada220ef3c8bb7  FONTS:Vera Sans Bold.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Sans Italic.font
+ae65c6c738f3e6b8e1679c466048dfc2  FONTS:Vera Sans Italic.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Sans.font
+960a36dd9beb939a3c396dc97985b90d  FONTS:Vera Sans.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Serif Bold.font
+8125011d0c7d217ed6cc0ef60791e5f1  FONTS:Vera Serif Bold.otag
+636db8f7a7b1faf0ee77b4e06fde252e  FONTS:Vera Serif.font
+335364761edc99b7b75a486e6128e69b  FONTS:Vera Serif.otag
+37d8aff129ecd7d3fc495b7239f834db  FONTS:truetype/VeraMono.ttf
+a36bbba0b722b8b4e28d5724e0332855  FONTS:truetype/VeraMonoBold.ttf
+717a0ea36e59239242afaa78c770d52b  FONTS:truetype/VeraMonoBoldItalic.ttf
+24f79382039ee733cbe32fd61e327885  FONTS:truetype/VeraMonoItalic.ttf
+785d2fd45984c6548763ae6702d83e20  FONTS:truetype/VeraSans.ttf
+4ebf664c986099acf6d151c62bdb24eb  FONTS:truetype/VeraSansBold.ttf
+a99f3482bfc2d9c37b509e68d20d016a  FONTS:truetype/VeraSansBoldItalic.ttf
+06ee45608b225ef0f22e94995bc981b2  FONTS:truetype/VeraSansItalic.ttf
+2b03beca2e3fe5564fba8911a1a3ee60  FONTS:truetype/VeraSerif.ttf
+b8c3d4131b8517d00c8dcbea1efd5426  FONTS:truetype/VeraSerifBold.ttf

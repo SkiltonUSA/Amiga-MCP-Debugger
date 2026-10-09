@@ -1,0 +1,30 @@
+ZZDoom 1.1 - A4000TX setup
+Game data updated 8 October 2026 (Mac date).
+
+Location: HDD50Gig:Games/ZZDoom
+
+Double-click ZZDoom320 for 320x240, or ZZDoom640 for 640x480.
+Both icons now use WAD=DOOM.WAD. Existing stack and music options were retained.
+
+DOOM.WAD was copied from the owner's Mac Downloads/doom folder.
+It contains 27 maps across Doom episodes 1, 2 and 3.
+Size: 11,159,840 bytes
+MD5: 1cd63c5ddff1bf8ce844237f580e9cf3
+
+The original DOOM1.WAD shareware episode remains in this drawer.
+The previous icons and setup notes are in backup-before-full-doom/.
+
+Shell launch:
+  CD HDD50Gig:Games/ZZDoom
+  Stack 65536
+  ZZDoom320 DOOM.WAD -nomusic
+
+Music remains disabled with NOMUSIC; AHI sound effects remain enabled.
+External MIDI setup is unchanged. No MIDI test notes were sent.
+
+Quit using Doom's menu (Escape, Quit Game, confirm Y).
+Do not launch another ARM Core1 game/application at the same time.
+The new WAD was structurally checked and transfer-checksummed; no new
+in-game playback test was performed for this data update.
+
+Existing firmware, ZZ9000.card, executables and savegames were retained.

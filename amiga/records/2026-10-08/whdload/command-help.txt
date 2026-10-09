@@ -1,0 +1,83 @@
+Slave,NoReq/S,Data/K,SavePath/K,SaveDir/K,NoAutovec/S,Preload/S,PreloadSmart/S,PreloadSize/K/N,NoWriteInfo/S,NoFileCache/S,NoWriteCache/S,WriteCache/S,AddChipMem/K/N,AddExpMem/K/N,ExpChip/S,ExpLocal/S,Exp24Bit/S,NoCache/S,ChipNoCache/S,Cache/S,DCache/S,BranchCache/S,SuperScalar/S,StoreBuffer/S,NTSC/S,PAL/S,FileLog/S,LogBuffer/K/N,WriteDelay/K/N,NoResInt/S,NoVBRMove/S,CoreDump/S,QuitKey/K/N,DebugKey/K/N,FreezeKey/K/N,RestartKey/K/N,MMU/S,NoMMU/S,Snoop/S,SnoopOCS/S,SnoopECS/S,SnoopAGA/S,Chk/S,ChkAudPt/S,ChkBltWait/S,ChkBltSize/S,ChkBltHog/S,ChkColBst/S,ChkCopCon/S,ChkInts/S,ButtonWait/S,Config/K,ConfigDelay/K/N,Custom/K,Custom1/K/N,Custom2/K/N,Custom3/K/N,Custom4/K/N,Custom5/K/N,MemConfig/K/N,ExecuteArgs/K,ExecuteStartup/K,ExecutePostDisk/K,ExecutePreDisk/K,ExecuteCleanup/K,DblNTSC/S,DblPAL/S,D/S,NoFilter/S,SplashDelay/K/N,TimeOut/K/N,NoFlushMem/S,NoNetwork/S,Trace/S,TraceCon/S,FullChip/S: ›1m						          ____
+  Welcome to:					         /   /
+  WHDLoad 20.0.7051 (27.03.2026)		        / / /
+  ©1994-2026 Wepl				       / / /
+  for further infos check docs and		____  / / /
+  http://www.whdload.de/			\   \/ / /
+						 \ \ \/ /›0m
+›4mBasic Options:›0m›1m					  \_\_\/›0m
+
+ Data		directory/file from where to load all data
+ SavePath	base path/directory to where redirect save operations
+ SaveDir	sub directory in SaveDir for save operations
+ Preload	try to buffer much data files on startup
+ PreloadSmart	try to buffer remembered data files on startup
+ QuitKey	key to quit
+ Slave		slave program to execute
+
+›4mMisc Options:›0m
+
+ ButtonWait	wait in game for pressed button
+ Config		setup buttons in splash window
+ ConfigDelay	time to show the splash window with buttons (1/50 sec)
+ MemConfig	select alternate memory configuration
+ MMU		use MMU (68030)
+ NoAutoVec	ignore unwanted interrupts
+ NoFileCache	don't cache files
+ NoFilter	disable audio filter
+ NoFlushMem	don't flush memory on startup
+ NoReq		messages on command line instead of window
+ NoMMU		don't use MMU (68030+)
+ NoWriteCache	don't cache files on writing
+ NTSC		switch to NTSC display
+ PAL		switch to PAL display
+ PreloadSize	info for Preload progress bar
+ RestartKey	key to restart
+ SplashDelay	time to show the splash window (1/50 sec)
+ TimeOut	time to quit (1/50 sec)
+ WriteDelay	delay after writing data (1/50 sec)
+
+›4mPerformance Options:›0m
+
+ BranchCache	enables branch cache (68060)
+ Cache		enables instruction cache (68020+)
+ ChipNoCache	set chipmem non cacheable (BlizzardPPC)
+ DCache		enables instruction and data cache (68030+)
+ ExpChip	use chipmem for expmem
+ ExpLocal	use local mem for expmem
+ Exp24Bit	use 24bitdmamem for expmem
+ NoCache	disable all caches
+ StoreBuffer	enables store buffer (68060)
+ SuperScalar	enables super scalar dispatch (68060)
+
+›4mDebugging Options:›0m
+
+ Chk		shortcut for ChkBltSize, ChkBltWait, ChkColBst
+ ChkAudPt	check for valid pointers written to aud*pt
+ ChkBltHog	permit enable of blthog/bltpri in dmacon
+ ChkBltSize	check memory accessed by blitter
+ ChkBltWait	check for blitwaits
+ ChkColBst	permit disable of colbst in bplcon0
+ ChkCopCon	permit enable of copcon
+ ChkInts	check for insuffcient interrupt acknowledge
+ CoreDump	create always coredump on exit
+ D		enter freezer on startup
+ DebugKey	key to quit with coredump
+ FileLog	enable filelog feature
+ FreezeKey	key to enter freezer
+ FullChip	save/restore full chip memory
+ NoResInt	execute resload with interrupts disabled
+ NoVBRMove	leave VBR at 0 (68010+)
+ Snoop		fast cia/custom logger (68030/40/60)
+ SnoopAGA	exact cia/custom logger for AGA chipset (68030/40/60)
+ SnoopECS	exact cia/custom logger for ECS chipset (68030/40/60)
+ SnoopOCS	exact cia/custom logger for OCS chipset (68030/40/60)
+
+›4mSome rawkey codes:›0m
+
+ Esc       45   F1..F10  50..59
+ `..\  00..0d   Del          46   Help    5f   NumL..PrtSc  5a..5d
+ Tab       42   Q..]     10..1b   Return  44   7..9         3d..3f
+ Ctrl      63   A..'     20..2a                4..6         2d..2f
+ Shift     60   <../     30..3a                1..3         1d..1f
+

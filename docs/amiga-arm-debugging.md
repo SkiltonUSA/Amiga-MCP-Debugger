@@ -5,7 +5,7 @@ adds nine tools to the workspace's Amiga DevBench MCP server and uses the
 existing bridge's `CALLHOOK` IPC. No replacement bridge daemon or firmware
 flash is required for this interface.
 
-The dedicated private development/backup repository is
+The dedicated public development/backup repository is
 [Amiga-MCP-Debugger](https://github.com/SkiltonUSA/Amiga-MCP-Debugger).
 The XX19c launcher has now passed live debugging on the A4000TX's physical
 ZZ9000 Core1; the original native and 68k probes remain separate test fixtures.
@@ -335,6 +335,11 @@ Workbench as the only screen and the bridge still responsive. This confirms
 relaunch and paused shutdown on the tested machine, with 285 echoes total.
 
 This verifies the uncached cooperative path on the tested XX19c machine.
+An explicitly selected [video instruction-cache experiment](amiga-video-arm-execution.md)
+has subsequently passed frame verification and bounded paused shutdown on Core1.
+It restores the original SCTLR before RET1; data cache/MMU remain off and the
+default debugger/fractal/video launch mode remains uncached. This does not
+establish cacheable shared-data mappings or arbitrary application compatibility.
 Cache-enabled MMU mappings, arbitrary application integration, exception
 vector capture, long-duration stress and instruction/source stepping remain
 separate work. No firmware was flashed or persistent Amiga startup changed.

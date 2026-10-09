@@ -1,0 +1,22 @@
+{
+  "application": "ZZVideo",
+  "version": "0.1",
+  "build_id": 4135658221,
+  "source_sha256": "f68122ed7bebf01370dabbc3d3ca0b17c0e18ca90244a583bd32ccd17710e54c",
+  "image_bytes": 24756,
+  "block_bytes": 8388608,
+  "relocations": 10,
+  "developer": true,
+  "experimental_icache": false,
+  "protocol": "ZVP2",
+  "physical_execution_verified": false,
+  "sdl": {
+    "repository": "https://github.com/SkiltonUSA/SDL2-AmigaOS3",
+    "tag": "v0.2.0",
+    "library_sha256": "bf90c1f12536df97bfc85e838cc2fa0047fc23f37d5128dbb89bb38dddec386e"
+  },
+  "files": {
+    "zzvideo.elf": "704a47d76f3cfc0f5346ab6fec625d3117e25252bf44eb4ffe5454347599c67b",
+    "zzvideo-debug": "fd4f12f9b3691048a0a11bb831f97af2dfbb9c1ba21841c0f9f3161a3da71edc"
+  }
+}

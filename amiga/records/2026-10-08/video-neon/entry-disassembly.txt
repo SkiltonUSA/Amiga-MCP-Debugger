@@ -1,0 +1,113 @@
+
+.context/amiga/video-neon/neon/entry.o:	file format elf32-littlearm
+
+Disassembly of section .text.entry:
+
+00000000 <_start>:
+       0: ee111f10     	mrc	p15, #0x0, r1, c1, c0, #0x0
+       4: e3012005     	movw	r2, #0x1005
+       8: e1110002     	tst	r1, r2
+       c: 112fff1e     	bxne	lr
+      10: ee101fb0     	mrc	p15, #0x0, r1, c0, c0, #0x5
+      14: e20110ff     	and	r1, r1, #255
+      18: e3510001     	cmp	r1, #1
+      1c: 112fff1e     	bxne	lr
+      20: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+      24: e1a0400d     	mov	r4, sp
+      28: e5905004     	ldr	r5, [r0, #0x4]
+      2c: ee116f10     	mrc	p15, #0x0, r6, c1, c0, #0x0
+      30: e59f2164     	ldr	r2, [pc, #0x164]        @ 0x19c <_start+0x19c>
+      34: e6bf1f36     	rev	r1, r6
+      38: e7851002     	str	r1, [r5, r2]
+      3c: e3a00000     	mov	r0, #0
+      40: f57ff04f     	dsb	sy
+      44: ee070f15     	mcr	p15, #0x0, r0, c7, c5, #0x0
+      48: ee070fd5     	mcr	p15, #0x0, r0, c7, c5, #0x6
+      4c: f57ff04f     	dsb	sy
+      50: f57ff06f     	isb	sy
+      54: e3860a01     	orr	r0, r6, #4096
+      58: ee010f10     	mcr	p15, #0x0, r0, c1, c0, #0x0
+      5c: f57ff06f     	isb	sy
+      60: e59f1138     	ldr	r1, [pc, #0x138]        @ 0x1a0 <_start+0x1a0>
+      64: e085d001     	add	sp, r5, r1
+      68: e3cdd007     	bic	sp, sp, #7
+      6c: e3a0bb43     	mov	r11, #68608
+      70: e085b00b     	add	r11, r5, r11
+      74: ee119f50     	mrc	p15, #0x0, r9, c1, c0, #0x2
+      78: e6bf2f39     	rev	r2, r9
+      7c: e58b2200     	str	r2, [r11, #0x200]
+      80: e3190103     	tst	r9, #-1073741824
+      84: 1a000031     	bne	0x150 <_start+0x150>    @ imm = #0xc4
+      88: e209060f     	and	r0, r9, #15728640
+      8c: e350060f     	cmp	r0, #15728640
+      90: 1a00002e     	bne	0x150 <_start+0x150>    @ imm = #0xb8
+      94: f57ff06f     	isb	sy
+      98: eef88a10     	vmrs	r8, fpexc
+      9c: e6bf2f38     	rev	r2, r8
+      a0: e58b2204     	str	r2, [r11, #0x204]
+      a4: e3180101     	tst	r8, #1073741824
+      a8: 0a000028     	beq	0x150 <_start+0x150>    @ imm = #0xa0
+      ac: eef70a10     	vmrs	r0, mvfr0
+      b0: e6bf2f30     	rev	r2, r0
+      b4: e58b220c     	str	r2, [r11, #0x20c]
+      b8: e200000f     	and	r0, r0, #15
+      bc: e3500002     	cmp	r0, #2
+      c0: 1a000022     	bne	0x150 <_start+0x150>    @ imm = #0x88
+      c4: eef60a10     	vmrs	r0, mvfr1
+      c8: e6bf2f30     	rev	r2, r0
+      cc: e58b2210     	str	r2, [r11, #0x210]
+      d0: e7eb0450     	ubfx	r0, r0, #0x8, #0xc
+      d4: e3001111     	movw	r1, #0x111
+      d8: e1500001     	cmp	r0, r1
+      dc: 1a00001b     	bne	0x150 <_start+0x150>    @ imm = #0x6c
+      e0: eef17a10     	vmrs	r7, fpscr
+      e4: e6bf2f37     	rev	r2, r7
+      e8: e58b2208     	str	r2, [r11, #0x208]
+      ec: e1a0100b     	mov	r1, r11
+      f0: eca10b20     	vstmia	r1!, {d0, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15}
+      f4: ece10b20     	vstmia	r1!, {d16, d17, d18, d19, d20, d21, d22, d23, d24, d25, d26, d27, d28, d29, d30, d31}
+      f8: f2810055     	vmov.i32	q0, #0x15
+      fc: f2200840     	vadd.i32	q0, q0, q0
+     100: ee100a10     	vmov	r0, s0
+     104: e6bf2f30     	rev	r2, r0
+     108: e58b2214     	str	r2, [r11, #0x214]
+     10c: e1a00005     	mov	r0, r5
+     110: ebfffffe     	bl	0x110 <_start+0x110>    @ imm = #-0x8
+     114: e1a0100b     	mov	r1, r11
+     118: ecb10b20     	vldmia	r1!, {d0, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15}
+     11c: ecf10b20     	vldmia	r1!, {d16, d17, d18, d19, d20, d21, d22, d23, d24, d25, d26, d27, d28, d29, d30, d31}
+     120: eee17a10     	vmsr	fpscr, r7
+     124: eca10b20     	vstmia	r1!, {d0, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15}
+     128: ece10b20     	vstmia	r1!, {d16, d17, d18, d19, d20, d21, d22, d23, d24, d25, d26, d27, d28, d29, d30, d31}
+     12c: ee110f50     	mrc	p15, #0x0, r0, c1, c0, #0x2
+     130: e6bf2f30     	rev	r2, r0
+     134: e58b2218     	str	r2, [r11, #0x218]
+     138: eef80a10     	vmrs	r0, fpexc
+     13c: e6bf2f30     	rev	r2, r0
+     140: e58b221c     	str	r2, [r11, #0x21c]
+     144: eef10a10     	vmrs	r0, fpscr
+     148: e6bf2f30     	rev	r2, r0
+     14c: e58b2220     	str	r2, [r11, #0x220]
+     150: f57ff04f     	dsb	sy
+     154: ee016f10     	mcr	p15, #0x0, r6, c1, c0, #0x0
+     158: f57ff06f     	isb	sy
+     15c: e3a00000     	mov	r0, #0
+     160: ee070f15     	mcr	p15, #0x0, r0, c7, c5, #0x0
+     164: ee070fd5     	mcr	p15, #0x0, r0, c7, c5, #0x6
+     168: f57ff04f     	dsb	sy
+     16c: f57ff06f     	isb	sy
+     170: ee110f10     	mrc	p15, #0x0, r0, c1, c0, #0x0
+     174: e6bf0f30     	rev	r0, r0
+     178: e59f1024     	ldr	r1, [pc, #0x24]         @ 0x1a4 <_start+0x1a4>
+     17c: e7850001     	str	r0, [r5, r1]
+     180: e1a0d004     	mov	sp, r4
+     184: e59f101c     	ldr	r1, [pc, #0x1c]         @ 0x1a8 <_start+0x1a8>
+     188: e3040552     	movw	r0, #0x4552
+     18c: e3430154     	movt	r0, #0x3154
+     190: e7850001     	str	r0, [r5, r1]
+     194: f57ff04f     	dsb	sy
+     198: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+     19c: 5c 00 01 00  	.word	0x0001005c
+     1a0: f0 ff 7f 00  	.word	0x007ffff0
+     1a4: 60 00 01 00  	.word	0x00010060
+     1a8: 58 00 01 00  	.word	0x00010058

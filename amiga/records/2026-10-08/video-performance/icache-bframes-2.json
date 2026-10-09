@@ -1,0 +1,82 @@
+{
+  "run": "icache-bframes-2",
+  "calls": [
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_run_script",
+      "args": {
+        "script": "Run >NIL: Execute RAM:ZZVideoPerf/run-icache-bframes-2",
+        "timeout": 10
+      },
+      "text": "[OK] (no output)"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  Sixies.ARM.Debug.Owner\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_list_ports",
+      "args": {},
+      "text": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  Sticky RMB\n  ConClip.rendezvous\n  deficons"
+    },
+    {
+      "tool": "amiga_ping",
+      "args": {},
+      "text": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 599055648 bytes"
+    }
+  ],
+  "passed": true,
+  "frames": 25,
+  "fps": 2.151648162492469,
+  "elapsed_ms": 11619,
+  "clock_hz": 333061278,
+  "retries": 0,
+  "per_frame_ms": {
+    "decode": 78.1626917314597,
+    "colour": 53.91296973285498,
+    "arm_hash": 33.90040471771684,
+    "copy": 112.12,
+    "host_hash": 87.68,
+    "draw": 88.0
+  },
+  "sctlr": {
+    "original": "0x8c50878",
+    "running": "0x8c51878",
+    "restored": "0x8c50878"
+  }
+}

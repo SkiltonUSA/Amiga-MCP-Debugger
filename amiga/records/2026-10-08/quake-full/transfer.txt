@@ -1,0 +1,2 @@
+amiga_run_script [OK]
+d76b3e5678f0b64ac74ce5e340e6a685  HDD50Gig:Games/ZZQuake/id1/pak1.pak.incoming

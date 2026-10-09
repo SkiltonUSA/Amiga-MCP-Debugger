@@ -1,0 +1,7 @@
+SC2000RTG 1.5 -- RTG patch for SimCity 2000 AGA
+  Recognised build 0.031 en (Oct 27 1994): 374904 bytes, checksum 0x019FFAEE
+  20 patches applied, 375160 bytes written.
+
+Wrote "HDD50Gig:Games/SimCity2000/SimCity2000.RTG".
+Rename it over your original (keep a backup) and run it.
+Hold SHIFT while starting to choose a screenmode.

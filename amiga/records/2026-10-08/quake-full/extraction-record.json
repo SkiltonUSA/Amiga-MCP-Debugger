@@ -1,0 +1,99 @@
+{
+  "source": "/Users/dskilton/Downloads/Quake (USA)/Quake (USA) (Track 01).bin",
+  "source_bytes": 128339232,
+  "source_sha256": "a434bbcd5f9737cbe149d7737b7322fc56297988026123ef98a903276710d015",
+  "mode": "MODE1/2352",
+  "data_offset": 16,
+  "data_bytes_per_sector": 2048,
+  "iso_sha256": "45b71fafe6accc3ed3cecee041c255e8263d0c4bd687d2b4b4902a5a7a459869",
+  "installer": {
+    "edition": "Registered Version 1.01 (QUAKE101.DAT)",
+    "parts": [
+      "QUAKE101.1",
+      "QUAKE101.2"
+    ],
+    "combined_bytes": 24552041,
+    "combined_sha256": "0272b31772fe514e5aeb002ad62c48d72443ca64f76411ec6cc6b199769e79b5",
+    "lha_header_offset": 1945,
+    "lha_header_checksum_valid": true,
+    "extraction": "bsdtar, only ID1/PAK0.PAK and ID1/PAK1.PAK"
+  },
+  "extracted_paks": [
+    {
+      "file": "pak0.pak",
+      "bytes": 18276119,
+      "md5": "85fc9cee2035b66290da1e33be2ac86b",
+      "sha256": "eec9a020b6d8b6df73a5b911e19985f6e2539c1c6857b4a9f400553b9599677d",
+      "entries": 339,
+      "maps": [
+        "maps/b_bh10.bsp",
+        "maps/b_bh100.bsp",
+        "maps/b_bh25.bsp",
+        "maps/b_shell1.bsp",
+        "maps/b_shell0.bsp",
+        "maps/b_nail1.bsp",
+        "maps/b_nail0.bsp",
+        "maps/b_rock1.bsp",
+        "maps/b_rock0.bsp",
+        "maps/b_batt1.bsp",
+        "maps/b_batt0.bsp",
+        "maps/b_explob.bsp",
+        "maps/start.bsp",
+        "maps/e1m1.bsp",
+        "maps/e1m2.bsp",
+        "maps/e1m3.bsp",
+        "maps/e1m4.bsp",
+        "maps/e1m5.bsp",
+        "maps/e1m6.bsp",
+        "maps/e1m7.bsp",
+        "maps/e1m8.bsp"
+      ],
+      "registered_marker": false
+    },
+    {
+      "file": "pak1.pak",
+      "bytes": 34257856,
+      "md5": "d76b3e5678f0b64ac74ce5e340e6a685",
+      "sha256": "94e355836ec42bc464e4cbe794cfb7b5163c6efa1bcc575622bb36475bf1cf30",
+      "entries": 85,
+      "maps": [
+        "maps/b_exbox2.bsp",
+        "maps/e2m1.bsp",
+        "maps/e2m2.bsp",
+        "maps/e2m3.bsp",
+        "maps/e2m4.bsp",
+        "maps/e2m5.bsp",
+        "maps/e2m6.bsp",
+        "maps/e2m7.bsp",
+        "maps/e3m1.bsp",
+        "maps/e3m2.bsp",
+        "maps/e3m3.bsp",
+        "maps/e3m4.bsp",
+        "maps/e3m5.bsp",
+        "maps/e3m6.bsp",
+        "maps/e3m7.bsp",
+        "maps/e4m1.bsp",
+        "maps/e4m2.bsp",
+        "maps/e4m3.bsp",
+        "maps/e4m4.bsp",
+        "maps/e4m5.bsp",
+        "maps/e4m6.bsp",
+        "maps/e4m7.bsp",
+        "maps/e4m8.bsp",
+        "maps/end.bsp",
+        "maps/dm1.bsp",
+        "maps/dm2.bsp",
+        "maps/dm3.bsp",
+        "maps/dm4.bsp",
+        "maps/dm5.bsp",
+        "maps/dm6.bsp"
+      ],
+      "registered_marker": true
+    }
+  ],
+  "retained_pak0": {
+    "bytes": 18689235,
+    "md5": "5906e5998fc3d896ddaf5e6a62e03abb",
+    "reason": "Existing 1.06 data is newer than CD 1.01; matches user Downloads/QUAKE copy"
+  }
+}

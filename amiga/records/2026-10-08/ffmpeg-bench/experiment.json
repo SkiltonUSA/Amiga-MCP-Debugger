@@ -1,0 +1,25 @@
+{
+  "ffmpeg": {
+    "version": "9.0.2",
+    "url": "https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz",
+    "sha256": "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e"
+  },
+  "picolibc": "1.8.12 (selected libc objects rebuilt PIC/global errno)",
+  "gcc": "arm-none-eabi GCC 15:15.3.rel1-2",
+  "input": {
+    "bytes": 123211,
+    "sha256": "873360587f4e0622178b01f0823b8473085180a0d6ed2fe7bd9cacd7af79ab3e",
+    "frames": 25,
+    "width": 320,
+    "height": 240,
+    "frame_types": "I/P/B",
+    "format": "MPEG-1 elementary stream; sequence-end marker appended"
+  },
+  "limits": [
+    "decode only; no display, RGB conversion or audio",
+    "instruction cache on; data cache/MMU off",
+    "single Core1 worker",
+    "C autovectorisation disabled; runtime flags dispatch ARM/NEON kernels",
+    "FFmpeg libavcodec/libavutil only; not a general Amiga FFmpeg application"
+  ]
+}

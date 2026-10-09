@@ -1,0 +1,16 @@
+{
+  "source": "https://aminet.net/package/pix/nicon/tk_sc2k_icons",
+  "author": "Christian Rosentreter (tokai)",
+  "archive_sha256": "1748b2fa7e797a3ce37bbcabffca1b001d33e9c84545395548b7e2aa9085c5ae",
+  "icons_updated": 12,
+  "backup": "HDD50Gig:Games/SimCity2000/Icons-Before-NewIcons/",
+  "preserved_and_readback_verified": [
+    "default tool",
+    "stack size",
+    "icon type",
+    "position",
+    "tool window",
+    "non-image tooltypes including TYPE=CITY or TYPE=SCENARIO"
+  ],
+  "game_restarted": false
+}

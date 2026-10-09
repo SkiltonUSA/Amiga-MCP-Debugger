@@ -1,0 +1,20 @@
+{
+  "build_id": 2985380413,
+  "source_identity_sha256": "b1f14a3df740c44cd105aa26ded72e223e6a818a9b658e80b245c3b86803a02e",
+  "image_bytes": 3508,
+  "application": "zzarm-debug",
+  "standalone_release": false,
+  "relocations": [
+    3264,
+    3268,
+    3272,
+    3276
+  ],
+  "entry": 0,
+  "arm_execution_verified": false,
+  "files": {
+    "zzarm.elf": "41bf3901d178e91d9b603872c07c808ff0b436ec450631ed5afcdf09f5c6f239",
+    "zzarm-debug": "2f6cc779ad63709762045cbca01f9be51b512f1f353943ef804935b7f1561e06",
+    "zz_payload.h": "a9f481f81325bd460c3d8c2eb7061c54cd09e61250015a208fec536730bd895f"
+  }
+}

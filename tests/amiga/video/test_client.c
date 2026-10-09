@@ -14,6 +14,9 @@ static void result(uint8_t *m,struct zv_client *c,uint8_t *data,unsigned bytes)
     ad_put(m,ZV_RES+12,ZV_FRAME);ad_put(m,ZV_RES+16,1);ad_put(m,ZV_RES+20,2);ad_put(m,ZV_RES+24,2);
     ad_put(m,ZV_RES+28,25);ad_put(m,ZV_RES+32,1);ad_put(m,ZV_RES+36,bytes);
     ad_put(m,ZV_RES+52,zv_hash(seed,data,bytes));
+    memset(m+ZV_PROFILE,0,64);ad_put(m,ZV_PROFILE,c->pending);ad_put(m,ZV_PROFILE+4,c->session);
+    ad_put(m,ZV_PROFILE+8,100);ad_put(m,ZV_PROFILE+16,200);ad_put(m,ZV_PROFILE+24,300);
+    ad_put(m,ZV_RES+56,zv_hash(seed,m+ZV_PROFILE,64));
     ad_put(m,ZV_RES+60,zv_hash(seed,m+ZV_RES+4,56));
     for(i=0;i<bytes;i++)m[ZV_PIXELS+i]=data[i];
 }
@@ -28,7 +31,14 @@ int main(void)
     assert(zv_poll(&c,&r,pixels,16)==0&&c.pending&&c.retries==1);
     result(m,&c,data,16);m[ZV_RES+24]^=0x80; /* corrupt size must never reach a copy */
     assert(zv_poll(&c,&r,pixels,16)==0&&c.pending);
+    result(m,&c,data,16);m[ZV_PROFILE+8]^=1;
+    assert(zv_poll(&c,&r,pixels,16)==0&&c.pending); /* corrupted profile */
+    result(m,&c,data,16);ad_put(m,ZV_PROFILE,c.pending-1);
+    ad_put(m,ZV_RES+56,zv_hash(zv_seed(c.session,c.pending),m+ZV_PROFILE,64));
+    ad_put(m,ZV_RES+60,zv_hash(zv_seed(c.session,c.pending),m+ZV_RES+4,56));
+    assert(zv_poll(&c,&r,pixels,16)==0&&c.pending); /* internally hashed but stale profile */
     result(m,&c,data,16);assert(zv_poll(&c,&r,pixels,16)==1&&!c.pending&&!memcmp(pixels,data,16));
+    assert(r.decode_ticks==100&&r.colour_ticks==200&&r.hash_ticks==300);
     assert(!zv_submit(&c,ZV_NEXT,0,0));assert(zv_poll(&c,&r,pixels,16)==0); /* stale sequence */
     result(m,&c,data,16);ad_put(m,ZV_RES+8,c.session+1);
     assert(zv_poll(&c,&r,pixels,16)==0); /* stale session */

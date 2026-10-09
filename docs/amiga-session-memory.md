@@ -1,11 +1,235 @@
 # A4000TX session memory
 
-Updated 2026-10-08. Read this before further work on the real Amiga. This is
+Updated 2026-10-09. Read this before further work on the real Amiga. This is
 the durable handoff for the development setup and installations in this branch.
 The user requested this GitHub backup. It preserves source, configuration and
 evidence; it is not a backup of the Amiga's disks or installed commercial games.
 
+## GitHub backup (2026-10-09)
+
+Backed up current Amiga development work to the dedicated public repository
+`SkiltonUSA/Amiga-MCP-Debugger`, including ZZTemperature source, the exact
+installed executable/icon with SHA-256 checksums, screenshot, installation
+records, and this session memory. The distribution is under
+`amiga/distribution/ZZTemperature-1.0/`. Earlier unpushed ARM/video source,
+parked experiment records, and application installation metadata were also
+preserved. No commercial game files, installer archives, firmware or ROMs
+are included. This is a development backup, not an Amiga disk image.
+
+Backup verification passed 23 ARM tests, the MCP simulator smoke test,
+10 fractal tests, 8 SDL-fractal tests, and 6 video tests. ARM SDK/68k components
+and the default ZZ9000 launcher rebuilt in the dedicated repository. The
+system FFmpeg initially failed because Homebrew's x265 dylib was missing;
+video tests passed using the already-available standalone FFmpeg 7.1 binary.
+No hardware programs were launched or Amiga files changed during backup.
+Logs are in `amiga/records/2026-10-09/github-backup/`.
+
+## ZZ9000 temperature monitor (2026-10-08)
+
+Created and installed **ZZTemperature 1.0** at `SYS:WBStartup/ZZTemperature`
+with a tool icon (`DONOTWAIT`, `STARTPRI=-5`, 16 KiB stack). Workbench launch
+starts hidden and adds **Tools → ZZ9000 Temperature…** to the top menu bar.
+The window refreshes every second, showing Celsius and session min/max.
+Close/Escape hides; the menu reopens it; `R` resets statistics. Repeated
+launches reuse the existing `ZZTemperature.1` instance. Shell `ONCE` prints
+one reading, `SHOW` opens, `STOP` exits and removes its menu.
+
+This reads the **ZZ9000 Zynq** sensor, not the TF4060/68060 or motherboard.
+MNT's ZZTop source documents the 16-bit register at discovered board base
+`+0xe0`, in tenths Celsius (firmware 1.7+). Physical readings were around
+53–54 C. Raw firmware register returned `0x0113`; it does not independently
+establish the XX19c suffix. No XACP/Core1 commands or MMIO writes are used.
+NewMeter and ToolsDaemon configuration were left intact.
+
+Verified the installed binary hash, correct live GUI formatting/updates,
+menu registration and selection through a synthetic Workbench IDCMP event,
+close/reopen, single-instance handling, and clean STOP/menu removal.
+`C:WBLoad` verified the hidden Workbench startup path; **cold-boot automatic
+startup has not yet been tested**. The monitor is left running with its
+window open behind the still-running SimCity 2000 screen. No reboot was done.
+
+Source/build/instructions: `amiga/zztemperature/`; installation hashes and
+acceptance: `amiga/records/2026-10-08/zztemperature/`. Executable 15,856 bytes,
+MD5 `8a28c7fe5dda0764592ea0e92b74677b`. To uninstall, STOP and remove only its
+executable and `.info` from WBStartup; no startup-sequence edits were made.
+
+## SimCity 2000 installation and RTG patch (2026-10-08)
+
+Installed the user's three ADFs in `HDD50Gig:Games/SimCity2000/`, with a
+Workbench drawer icon, original game icon, sample cities and local fonts.
+The supplied installer joins sc1/sc2/sc3 and runs decrunchall; that same
+process was reproduced with validated inputs and temporary RAM extraction.
+All 52 copied game/font/icon files matched the decompressor output by MD5.
+No earlier SimCity2000 installation existed; SimCityCDTV was left untouched.
+
+At the user's request, applied Tobias "MastaTabs" Seiler's SC2000RTG 1.5 from
+https://aminet.net/package/game/patch/SC2000RTG . The patcher recognised the
+English 0.031 executable (27 Oct 1994), applied 20 patches and produced
+375,160 bytes. Native and independently host-built patcher output matched:
+MD5 `aa2f2c7024f591a71eb29d53061ee400`. This is now the main `SimCity2000`
+executable; its original MD5 was `534a6f9b1a093839a8e70c0746221716`.
+Original executable/icon/res1 are preserved under `Original-AGA/` inside the
+game drawer. `RTG-Patch/` contains the patcher and its documentation. No MIDI
+patch/player was installed. No firmware, OS libraries or startup scripts changed.
+
+Workbench launch while holding Shift opened the screen requester. Selected
+**ZZ9000 1024x768 8-bit**; Maxis/title artwork and the first-run owner-name
+form displayed correctly. The user subsequently confirmed the game is working.
+There is no independent city-view screenshot or save/load acceptance test.
+The game was left running while the icons were updated. The unpatched build exited silently before opening a screen;
+its precise cause was not established. The game stores display settings in
+`res1`; hold Shift during startup to choose another mode.
+
+Installation metadata and hashes, excluding commercial game data, are under
+`amiga/records/2026-10-08/simcity2000/`. Local screenshots and supplied-image
+extraction remain under `.context/amiga/simcity2000/`.
+The final checksum command completed after first-run setup progressed.
+Temporary installation and icon staging were removed; Mac HTTP staging and
+the helper build container were stopped. Do not dismiss the user's game
+without checking current state.
+
+Added Christian Rosentreter (tokai)'s NewIcons from
+https://aminet.net/package/pix/nicon/tk_sc2k_icons : drawer/application,
+five sample city and five scenario icons (12 total). The originals are in
+`HDD50Gig:Games/SimCity2000/Icons-Before-NewIcons/`. An icon.library helper
+copied artwork and read back each result, verifying default tool, stack size,
+icon type, position, tool window and non-image ToolTypes remained unchanged.
+In particular TYPE=CITY/TYPE=SCENARIO and SimCity2000 default tools were
+preserved. Source attribution is `NewIcons-Readme.txt` in the game drawer.
+The running game was not restarted for the icon change. Metadata, checksums
+and helper source (not third-party artwork) are in the same install records.
+
+## WHDLoad update (2026-10-08)
+
+Installed the user's WHDLoad 20.0 archive, matching the latest stable release
+listed on whdload.de at installation. `C:WHDLoad` is build 7051 and
+`C:WHDLoadCD32` build 7052 (27 March 2026), replacing 19.1 builds 6907/6908.
+All seven supplied C commands are installed, including WArc 1.0 and
+WHDLoad.VFS / ArchiveFS 1.4. Documentation is in `SYS:Locale/Help/WHDLoad`.
+The three existing `S:WHDLoad` preferences/startup/cleanup files exactly match
+the supplied defaults and were left unchanged. Keys, game files, save data,
+Kickstart images, network scripts and system startup files were not modified.
+
+Rollback: `SYS:Storage/WHDLoad-before-20.0-20261008/` contains the previous
+five commands, three settings files and documentation. The eight command/
+settings backup checksums match their originals. Native LhA tested/extracted
+all 562 archive members; 558 installed command/document/default files matched
+the attached archive by MD5. WHDLoad 20.0 command help executed successfully;
+no gameplay test or reboot was performed. Temporary RAM staging was removed
+and the Mac HTTP transfer server stopped; bridge postflight passed. Records:
+`amiga/records/2026-10-08/whdload/`.
+
+The old EyeOfTheBeholder2 WHDLoad launch was waiting at its splash/update
+requester and held the executable open; its pending launch was cancelled with
+Escape to complete replacement. Start it again to use 20.0. During inspection,
+an incorrect Assign command briefly removed C: and S:; both were restored to
+SYS:C and SYS:S and verified, and the resulting C: volume requester dismissed.
+No persistent assign/startup configuration was changed.
+
+## Final Writer installation (2026-10-08)
+
+Final Writer 7.3 from the user's `FinalWriter7.3-m68k-amigaos.lha` is installed
+at **`HDD50Gig:APPS/FinalWriter7.3/FinalWriter`**, with the supplied application
+and drawer icons. The old `HDD50Gig:APPS/FinalWriter` was preserved. The supplied
+icon specifies stack 131072; CLI startup with that stack was verified. The
+editor is left open on the existing 1920x800 Workbench with an empty Untitled
+document, Vera Sans selected, ARexx ports **FW.1** and **FINALW.1**. Do not close it in a later
+session without checking whether the user has entered unsaved work.
+
+Added previously absent `LIBS:freetype2.library` 1.3, Vera TrueType fonts and
+font descriptors under FONTS:, and `SYS:System/FTManager` with its icon, from
+Aminet's freetype2_lib package. Added `LIBS:popupmenu.library` 10.8.6 (68060)
+from pmlib060. An application-local popupmenu copy alone failed on this OS3
+build; adding the system copy resolved the startup error. A duplicate remains
+in the application's Libs drawer. Existing codesets.library 6.22 and
+muimaster.library 19.35 were retained. No startup script or firmware changes.
+
+The source archive checksum, native extraction integrity and 178 installed
+application/dependency files were verified; the additional system popupmenu
+copy was independently MD5-verified (179 files total). Editor startup was
+visually checked. Document saving, PDF export and printer output remain
+untested. GhostScript was not installed; its optional printing features need
+separate setup. The native PDF export does not require it per Requirements.
+Commercial application bytes are excluded from the repository. Installation
+metadata/checksums and logs: `amiga/records/2026-10-08/finalwriter/`.
+Temporary RAM archives/extraction were removed and the Mac HTTP server stopped.
+
 ## Latest video application (2026-10-08)
+
+**Parked at the user's request (2026-10-08).** This includes the YouTube/video
+project, FFmpeg runtime debugging and benchmarking, and further ZZ-MPEG/direct
+framebuffer experiments. Preserve the sources and evidence; do not resume
+this work unless the user asks. The last FFmpeg attempt produced no valid fps
+result. All test processes and the temporary Mac staging server are stopped.
+
+
+**Wider YouTube project remains parked.** The user subsequently explicitly
+requested a limited NEON decoder measurement; it is now complete. At 320x240,
+three matched runs per mode gave scalar/NEON decode **78.257/62.225 ms per
+frame** (20.49% less decode time), and verified playback **2.125/2.194 fps**
+(+3.26%). Both use -O3 for the decoder, instruction cache on, data cache/MMU
+off. NEON build also enables VFP via softfp; this does not isolate SIMD alone.
+All 225 frames matched, with six integrity rechecks and clean returns. Every
+NEON run verified CPACR/FPEXC/MVFR access, vector witness 42 and preservation
+of all D0-D31/FPSCR plus unchanged CPACR/FPEXC. Details and limits:
+[ARM investigation](amiga-video-arm-execution.md), evidence
+`amiga/records/2026-10-08/video-neon/`. FFmpeg has relevant 32-bit ARM NEON
+kernels. A subsequent minimal FFmpeg 9.0.2 port was built and attempted on
+Core1, but stalled inside `avcodec_alloc_context3` before decoding any frame.
+**There is no valid FFmpeg throughput result.** Both attempts exited 20 with
+no RET1/cache/SIMD restoration proof; the launcher's synchronous XX19c reset
+preceded memory release. Bridge and Final Writer remained responsive/present.
+The mapping test, Core1 identity, NEON witness and timer calibration did pass.
+Failed-run evidence and build metadata: `amiga/records/2026-10-08/ffmpeg-bench/`.
+Experimental sources: `amiga/ffmpeg_bench/`; temporary files remain in
+`RAM:ZZFFmpegBench`. No firmware/driver/startup/installed-app changes.
+XANI's ZZ-MPEG player was reviewed, not installed or run: PL_MPEG with direct
+ARM framebuffer writes, older XX16c baseline, fixed historical rings and no
+published source. Its documented 25 fps target is not a measured result here.
+The bounded cooperative pause/read/quit check also passed with context/cache
+restoration and RET1/exit 0. All test applications are stopped, no owner/client
+remains and the bridge is responsive. Staged files remain in RAM:ZZVideoNEON;
+the temporary Mac HTTP server is stopped. The installed ZZVideo 0.1 MD5 remains
+`770252ca2ff01ff1489ee33825afee1d`.
+The 25 fps gate still fails. These results do not establish the hardware's
+maximum or an unavoidable Zorro III limit. Cacheable private ARM data and
+direct card-local presentation remain untested.
+
+**Performance requirement:** the user rejected 2 fps and requires 25 fps.
+Treat sustained 25 fps at the initial 320x240 benchmark resolution as the gate
+before further YouTube feature work. ZZVideo 0.1 passes correctness checks but
+fails this performance gate. Existing logs show about 474 ms/frame overall,
+approximately 132–145 ms for ARM decode/colour and 88 ms for SDL blit/update;
+the target total budget is 40 ms. ARM times use an estimated timer frequency.
+See the video development document for the proposed acceptance run and limits
+of these measurements. No hardware or cache-policy changes were made during
+this assessment.
+
+Follow-up [ARM execution investigation](amiga-video-arm-execution.md): the
+instruction-cache-only experiment is now physically verified. Median 320x240
+playback across three runs per mode: **2.112 -> 2.152 fps (+1.86%)**. It does
+not meet 25 fps. Cached ARM decode/colour/hash: about 78/54/34 ms per frame;
+host copy/checks/display about 112/88/88 ms. All 225 frames in nine runs matched
+native references; two integrity rechecks occurred. Every benchmark restored
+SCTLR `08c50878` after running at `08c51878`, reported RET1/exit 0 and released
+its allocation. Data cache and MMU stayed off; Core0/PL310 policy unchanged.
+Temporary binaries/scripts/logs are in `RAM:ZZVideoPerf`; installed 0.1 remains
+unchanged. All experimental apps are stopped, and the bridge is responsive.
+
+A bounded automated pause/read/quit test passed with cache restoration and
+exit 0. An earlier manual pause hit the existing 30-second transfer timeout,
+exited 20 and still restored cache state/released memory. Long debugger pauses
+remain limited by that deadline. Evidence is retained, not counted as a pass.
+ZVP2 adds integrity-bound timing records; baseline and experiment must use
+their bundled matching host/worker. The default build remains cache-off.
+Six video tests, 23 ARM tests, 138-tool MCP smoke and ARM/68k component / loader
+builds passed. Evidence: `amiga/records/2026-10-08/video-performance/`.
+
+NEON auto-vectorises IDCT/motion compensation but not colour conversion;
+the later physical comparison is recorded at the top of this section. No
+private-data-cache variant has run. A minimal FFmpeg MPEG-1 decoder is a
+candidate comparison, alongside private ARM data and card-local presentation.
+Further YouTube feature work remains parked.
 
 ZZVideo 0.1 is installed in `SD032G:Dev/ZZVideo-0.1/` with a native Workbench
 icon (stack 131072), `demo.mpg` and readme/licenses. Executable: 1,168,048 bytes,
@@ -163,7 +387,7 @@ Chronological background follows; the latest active application is recorded abov
   ARM application. LHA/ZIP archives passed native extraction, renamed-drawer
   Workbench launch and Shell rendering/clean exit. The old developer copy
   remains available for MCP. Evidence: `amiga/records/2026-10-08/fractal-release/`.
-- Dedicated private backup/development repo:
+- Dedicated public backup/development repo (visibility verified 2026-10-08):
   https://github.com/SkiltonUSA/Amiga-MCP-Debugger (initial baseline `4224fd7`).
   It contains the Amiga tooling, debugger, session memory and records, without
   Sixies game source, firmware/ROM binaries or commercial game data.
@@ -285,14 +509,43 @@ do not treat it as an ordinary USB mass-storage drive.
 
 | Application | Location | Working configuration / limits |
 | --- | --- | --- |
+| Final Writer 7.3 | `HDD50Gig:APPS/FinalWriter7.3` | Editor startup verified on Workbench; stack 131072, Vera fonts, ARexx FW.1; printing untested |
 | ZZDarkForcesNEXT 1.0 | `HDD50Gig:Games/ZZDarkForcesNEXT` | 640x480, SC55, stack 65536; user confirmed display/game works |
-| ZZDoom 1.1 | `HDD50Gig:Games/ZZDoom` | Doom 1.9 shareware `DOOM1.WAD`, `NOMUSIC`, stack 65536; title screen captured |
-| ZZQuake 1.0 | `HDD50Gig:Games/ZZQuake` | Original 320x240 version and Quake shareware pak0; physical display confirmed later than its initial install record |
+| ZZDoom 1.1 | `HDD50Gig:Games/ZZDoom` | Full three-episode `DOOM.WAD` copied from owner’s Mac; both icons select it, `NOMUSIC`, stack 65536; shareware retained |
+| ZZQuake 1.0 | `HDD50Gig:Games/ZZQuake` | Original 320x240 version; registered data now installed (1.06 pak0 + CD pak1); earlier shareware display confirmed |
 | ZZQuake HighRes 1.0 | Same ZZQuake drawer | 640/800/1024 launchers and corresponding blobs installed and checksum-verified; not launch-tested |
 | ScummVM AGA 060 2.5.1.40 | `HDD50Gig:Games/ScummVM` | CAMD/native MT-32, serial `out.0`; launcher display confirmed, external MIDI untested |
 | ZZBenchGUI 1.3 | `SD032G:Drivers/XACP/ZZBench` | ARM Core1 execution verified; ARM DDR bandwidth subtest reported 0.0 MB/s and remains unresolved |
 
-The Games search found original SimCity CDTV, not SimCity 2000.
+ZZDoom data updated 2026-10-08 from the user's Mac `Downloads/doom/DOOM.WAD`:
+11,159,840 bytes, MD5 `1cd63c5ddff1bf8ce844237f580e9cf3`. IWAD directory
+bounds and all 27 maps across episodes 1–3 were checked locally; native Amiga
+MD5 matches. Both ZZDoom icons now select `WAD=DOOM.WAD`, retaining NOMUSIC,
+stack 65536 and other icon settings. Previous icons and Setup-Notes.txt are in
+`HDD50Gig:Games/ZZDoom/backup-before-full-doom/`. Original shareware DOOM1.WAD
+is unchanged (MD5 `f0cefca49926d00903cf57551d901abe`). No new game launch was
+performed; the earlier title-screen test was with shareware. Firmware, game
+executables, saves and Final Writer were untouched. Records contain hashes,
+configuration evidence and helper source, not commercial WAD bytes:
+`amiga/records/2026-10-08/doom-full/`. Temporary Mac transfer server stopped.
+
+ZZQuake registered data added 2026-10-08 from the user's `Downloads/Quake
+(USA)` CD image. MODE1/2352 data sectors were extracted, the split QUAKE101
+1.01 installer reassembled and its LHA payload unpacked. Both PAK directory
+bounds were checked. The older CD pak0 was not installed: the existing 1.06
+pak0 remains (18,689,235 bytes, MD5 `5906e5998fc3d896ddaf5e6a62e03abb`), matching
+the user's `Downloads/QUAKE/ID1/PAK0.PAK`. Added `id1/pak1.pak` (34,257,856
+bytes, MD5 `d76b3e5678f0b64ac74ce5e340e6a685`) with episodes 2–4, ending,
+deathmatch maps and registration data. Native MD5 matched before renaming the
+incoming file into place. All four installed ZZQuake launchers use this id1
+folder and automatically detect registered data. Icons, configuration, saves,
+engine and firmware were unchanged; no new game launch was performed. CD
+soundtrack tracks were not converted or installed, and Quake II files were
+not used. Details: `HDD50Gig:Games/ZZQuake/Registered-Data.txt`; metadata and
+verification only (no commercial game bytes):
+`amiga/records/2026-10-08/quake-full/`. Temporary Mac HTTP server stopped.
+
+The earlier Games search found only original SimCity CDTV; SimCity 2000 was subsequently installed as recorded above.
 
 Dark Forces data came from the user's `StarWarsDarkForces.iso` in Mac Downloads.
 All 54 DARK/ files were extracted and structurally checked; 51 game-data files
@@ -370,3 +623,16 @@ See [recovery instructions](amiga-backup-and-restore.md). The historical game
 backup attempt could not reach 10.0.0.40 (`Host is down`); later 2026-10-08
 debugger work reconnected and captured the live evidence above. Neither backup
 is an Amiga disk image or a capture of live game progress.
+
+## Debugger repository release update (2026-10-08)
+
+Amiga-MCP-Debugger is public. Commit `1a25d01` refreshes its main README
+with debugger scope, SDL2/ARM responsibilities and the verified 0.2-to-0.3
+performance table, removing unrelated project references. Release
+https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/tag/fractal-v0.3.0
+now includes the hardware-verified standalone SDLZZFractal executable,
+LHA/ZIP packages, instructions and checksums. All six GitHub asset digests
+were checked against local files. The executable matches the prior physical
+acceptance SHA-256 `533b2ee03a8fcc07933202766ca345b7438c9d8386521b784407a39d4b965b87`;
+this is a mirror of the existing 0.3 build, not a rebuild or a new hardware test.
+The release remains a prerelease. No Amiga files were changed.

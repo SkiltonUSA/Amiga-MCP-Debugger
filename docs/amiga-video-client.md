@@ -117,7 +117,11 @@ and the existing cooperative ARM debugger on client `zzvideo`; checkpoints are
 
 ## Next milestones
 
-1. Measure physical decoding, transfer and display; keep the first working player.
+1. Meet the user's **sustained 25 fps** requirement before further YouTube
+   feature work. Use 320x240 MPEG-1 as the initial benchmark resolution; the
+   current 2.1 fps player fails this gate. Keep 0.1 as a correctness reference.
+   Establish a safe faster ARM execution path and card-local presentation,
+   measuring each independently before integrating them.
 2. Disk ring buffering and longer clips, then direct MPEG HTTP input via Roadshow.
 3. Minimal video URL/search list, integrated with AmiTube's retrieval/conversion
    model where suitable. Disclose server dependence and server availability.
@@ -153,6 +157,47 @@ The immediate performance work is to separate frame transfer/integrity costs
 from colour conversion/display, then design and validate a faster ARM/cache or
 card-local presentation path. Do not remove integrity checks or enable caches
 based only on these timings. The current decoder remains intentionally bounded.
+
+The [ARM execution investigation](amiga-video-arm-execution.md) now includes
+physical profiling: instruction caching improved median 320x240 playback from
+2.112 to 2.152 fps (1.86%), with 225 reference-correct frames across nine runs.
+The 25 fps gate is still unmet. Private data caching, NEON execution and
+card-local presentation remain pending.
+
+### Required performance gate (2026-10-08)
+
+The user rejected 2 fps as useful playback and requires 25 fps. The initial
+320x240 target allows **40 ms per frame**, compared with about 474 ms now:
+roughly a 12x overall improvement is needed.
+
+Existing 25-frame logs give the following averages, including startup/EOF work
+in the whole-playback measurement:
+
+| 320x240 run | Whole playback, ms/frame | ARM decode + colour, estimated ms/frame | SDL blit + update, ms/frame |
+| --- | ---: | ---: | ---: |
+| Developer (`bframes-live.log`) | 472.20 | 144.61 | 87.52 |
+| Installed standalone (`release-live.log`) | 473.76 | 131.64 | 87.56 |
+
+The ARM timer frequency is estimated over a short host interval, so those
+converted times are approximate. ARM frame hashing is outside the decode
+timer. Unclassified time includes ARM hashing, shared-memory transfer, host
+hashing, scheduling, protocol and logging; it is not a measured bus-only cost.
+Both measured stages independently exceed 40 ms. Removing checks or changing
+SDL alone does not establish a route to 25 fps.
+
+The current ARGB frame is 307,200 bytes and travels from card memory into a
+68k buffer before display. At 25 fps that is 7.68 MB/s for one full-frame pass,
+or 15.36 MB/s for a card-to-host-to-card round trip, before other accesses.
+Investigate supported card-local framebuffer/overlay presentation and a
+validated ARM cache/coherency contract. Do not infer free DDR, toggle global
+cache state, or change firmware to obtain a speculative speedup.
+
+The proposed acceptance run is at least 60 seconds of continuous 320x240,
+25 fps video, without a Mac processing the video or concealed frame dropping,
+with correct output, responsive controls and clean Core1 shutdown. This is
+not yet achieved; longer input handling will be needed for that run. Existing
+XACP MPEG documentation targets 25 fps, but does not prove that rate on this
+XX19c configuration. Establish compatibility before using it as a comparison.
 
 ```sh
 python3 scripts/package_zzvideo.py --demo /path/to/generated/demo.mpg

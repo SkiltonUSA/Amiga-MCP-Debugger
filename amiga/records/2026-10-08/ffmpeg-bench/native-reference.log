@@ -1,0 +1,2 @@
+[mpeg1video @ 0xbd2c04000] Format yuv420p chosen by get_format().
+Native FFmpeg rc=0 frames=25

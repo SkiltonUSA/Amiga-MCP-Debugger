@@ -1,0 +1,64 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=8388608 nonce=86e81ff8
+BOOTSTRAP amiga=40c5bc80 arm=00e4bc80 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+CLOCK estimated_hz=334711924 interval_ms=2010
+INPUT path=RAM:ZZVideoPerf/bframes.mpg bytes=124928 hash=ba8c905a
+OPEN width=320 height=240 fps=25/1
+FRAME 1 hash=ff1bebd9 ticks=0:050e294b retries=0
+STAGES frame=1 decode=0:03f80174 colour=0:011619d6 hash=0:00ad4337
+FRAME 2 hash=1a5b7c00 ticks=0:02a70155 retries=0
+STAGES frame=2 decode=0:018f86ef colour=0:01176c82 hash=0:00ac96d6
+FRAME 3 hash=bb91d6fc ticks=0:02849e19 retries=0
+STAGES frame=3 decode=0:016ceaf4 colour=0:0117a597 hash=0:00abff89
+FRAME 4 hash=def6d8d6 ticks=0:02e26980 retries=0
+STAGES frame=4 decode=0:01cb61ec colour=0:0116fa25 hash=0:00ac8806
+FRAME 5 hash=a478c0ad ticks=0:02d3d7d1 retries=0
+STAGES frame=5 decode=0:01bd59ab colour=0:01167077 hash=0:00abfbc5
+FRAME 6 hash=e026bf5f ticks=0:02c8b5a4 retries=0
+STAGES frame=6 decode=0:01b2253f colour=0:011682db hash=0:00ac8b45
+FRAME 7 hash=0abc99cc ticks=0:02f60069 retries=0
+STAGES frame=7 decode=0:01df8f2b colour=0:01166124 hash=0:00abfe81
+FRAME 8 hash=67ab491c ticks=0:027ea7f7 retries=0
+STAGES frame=8 decode=0:01674daf colour=0:01174ca6 hash=0:00ad2c0c
+FRAME 9 hash=453cf64c ticks=0:0277dd18 retries=0
+STAGES frame=9 decode=0:015f3ad5 colour=0:01189488 hash=0:00abff7e
+FRAME 10 hash=a6d7b831 ticks=0:0365ee1a retries=0
+STAGES frame=10 decode=0:024f0170 colour=0:0116df63 hash=0:00acbc26
+FRAME 11 hash=bb158e49 ticks=0:02c9ebd2 retries=0
+STAGES frame=11 decode=0:01b1fc41 colour=0:0117e1d6 hash=0:00ac951b
+FRAME 12 hash=77bcd6c0 ticks=0:02c4c24a retries=0
+STAGES frame=12 decode=0:01addf07 colour=0:0116d5e8 hash=0:00ac0400
+FRAME 13 hash=18149129 ticks=0:02f8f980 retries=0
+STAGES frame=13 decode=0:01e0b5fb colour=0:0118314a hash=0:00ac0349
+FRAME 14 hash=8f6bdf63 ticks=0:029a2dba retries=0
+STAGES frame=14 decode=0:01838327 colour=0:01169d2a hash=0:00ad0298
+FRAME 15 hash=529a1629 ticks=0:0289ca33 retries=0
+STAGES frame=15 decode=0:017213ca colour=0:0117a8c7 hash=0:00ac72e1
+FRAME 16 hash=da50a3d9 ticks=0:02c99908 retries=0
+STAGES frame=16 decode=0:01b3265e colour=0:01166180 hash=0:00ac9940
+FRAME 17 hash=faf35abb ticks=0:02ad0feb retries=0
+STAGES frame=17 decode=0:019599ca colour=0:01176839 hash=0:00ac0813
+FRAME 18 hash=fdb783b1 ticks=0:02a2495a retries=0
+STAGES frame=18 decode=0:018b05cc colour=0:01173604 hash=0:00ac7a2a
+FRAME 19 hash=e6283d7d ticks=0:02edcd60 retries=0
+STAGES frame=19 decode=0:01d67cba colour=0:0117432c hash=0:00ac01bc
+FRAME 20 hash=24687800 ticks=0:0271da6d retries=0
+STAGES frame=20 decode=0:015b1b94 colour=0:0116b106 hash=0:00ac06f7
+FRAME 21 hash=1987bab0 ticks=0:027da168 retries=0
+STAGES frame=21 decode=0:0166dc1f colour=0:0116b7e0 hash=0:00ac11da
+FRAME 22 hash=fc6b52be ticks=0:0349507b retries=0
+STAGES frame=22 decode=0:0232599a colour=0:0116e8ec hash=0:00ad634d
+FRAME 23 hash=105f295c ticks=0:02ce56ee retries=0
+STAGES frame=23 decode=0:01b74208 colour=0:01170787 hash=0:00af39ec
+FRAME 24 hash=aa40a7b9 ticks=0:02d5889a retries=0
+STAGES frame=24 decode=0:01beedcd colour=0:01168d00 hash=0:00abfb72
+FRAME 25 hash=a80dbf74 ticks=0:011a5abd retries=0
+STAGES frame=25 decode=0:0000058d colour=0:011a480f hash=0:00ac02b0
+EOF frames=25 elapsed_ms=11835 decode_ticks=0:45b4990b draw_ms=2152 retries=0 clock_hz=334711924
+PROFILE decode=0:2a6f5edd colour=0:1b43db65 hash=0:10d8b219 copy_ms=2823 host_hash_ms=2180
+VIDEO exit=0 frames=25
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c50878 restored=08c50878
+LAUNCHER exit=0; owned memory released

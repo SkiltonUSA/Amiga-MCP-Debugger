@@ -1,0 +1,12 @@
+.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/video -v
+test_elementary_stream_and_rational (test_video.VideoTests.test_elementary_stream_and_rational) ... ok
+test_frames_match_unmodified_upstream (test_video.VideoTests.test_frames_match_unmodified_upstream) ... ok
+test_shared_result_ownership_and_integrity (test_video.VideoTests.test_shared_result_ownership_and_integrity) ... ok
+test_small_heap_fails_without_writes_outside (test_video.VideoTests.test_small_heap_fails_without_writes_outside) ... ok
+test_truncated_and_random_containers (test_video.VideoTests.test_truncated_and_random_containers) ... ok
+test_unsupported_and_bounds (test_video.VideoTests.test_unsupported_and_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.460s
+
+OK

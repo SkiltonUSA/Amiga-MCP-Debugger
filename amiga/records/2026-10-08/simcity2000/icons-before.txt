@@ -1,0 +1,22 @@
+ICON HDD50Gig:Games/SimCity2000 type=2 stack=8000 tool=(none)
+ICON HDD50Gig:Games/SimCity2000/Volcano City type=4 stack=4096 tool=SimCity2000
+  TYPE=CITY
+ICON HDD50Gig:Games/SimCity2000/Seven Spires type=4 stack=4096 tool=SimCity2000
+  TYPE=CITY
+ICON HDD50Gig:Games/SimCity2000/SimCity2000 type=3 stack=8192 tool=simcity2000
+ICON HDD50Gig:Games/SimCity2000/Oakland type=4 stack=4096 tool=SimCity2000
+  TYPE=SCENARIO
+ICON HDD50Gig:Games/SimCity2000/Maxis Land type=4 stack=4096 tool=SimCity2000
+  TYPE=CITY
+ICON HDD50Gig:Games/SimCity2000/Lakeland type=4 stack=4096 tool=SimCity2000
+  TYPE=CITY
+ICON HDD50Gig:Games/SimCity2000/Hollywood type=4 stack=4096 tool=SimCity2000
+  TYPE=SCENARIO
+ICON HDD50Gig:Games/SimCity2000/Happyland type=4 stack=4096 tool=SimCity2000
+  TYPE=CITY
+ICON HDD50Gig:Games/SimCity2000/Flint type=4 stack=4096 tool=SimCity2000
+  TYPE=SCENARIO
+ICON HDD50Gig:Games/SimCity2000/Dullsville type=4 stack=4096 tool=SimCity2000
+  TYPE=SCENARIO
+ICON HDD50Gig:Games/SimCity2000/Charleston type=4 stack=4096 tool=SimCity2000
+  TYPE=SCENARIO

@@ -12,6 +12,8 @@
 #define ZZ_STOP (ZZ_CONTROL + 128)
 #define ZZ_CHALLENGE (ZZ_CONTROL + 132)
 #define ZZ_PAGE (ZZ_CONTROL + 256)
+/* Video-only vector register snapshots + feature/control diagnostics. */
+#define ZZ_NEON_STATE (ZZ_CONTROL + 0xc00)
 #define ZZ_STACK_TOP (ZZ_BLOCK_SIZE - 16)
 #define ZZ_READY 0x41524d31
 #define ZZ_RETURNED 0x52455431

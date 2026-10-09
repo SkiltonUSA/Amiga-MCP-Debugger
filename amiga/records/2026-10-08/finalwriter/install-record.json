@@ -1,0 +1,49 @@
+{
+  "application": "FinalWriter",
+  "version": "7.3",
+  "destination": "HDD50Gig:APPS/FinalWriter7.3",
+  "previous_installation_preserved": "HDD50Gig:APPS/FinalWriter",
+  "archive": {
+    "name": "FinalWriter7.3-m68k-amigaos.lha",
+    "bytes": 13851180,
+    "sha256": "d4f215f85027d529b6b9bee34b6e5b595b44c5d98005f8e34795e9da28041f32"
+  },
+  "icon_stack": 131072,
+  "dependencies": [
+    {
+      "archive": "freetype2_lib.lha",
+      "source": "https://aminet.net/util/libs/freetype2_lib.lha",
+      "sha256": "66a4a52db336fb65b9f71048b72c4745ab78e34e4b051977b808c6f6f9455dc0"
+    },
+    {
+      "archive": "pmuser.lha",
+      "source": "https://aminet.net/util/libs/pmuser.lha",
+      "sha256": "9d0c73f927ee6d332b5e920d3603d2a6c8a0ae81ab9fbb252e3fc786f8ac6e6c"
+    },
+    {
+      "archive": "pmlib060.lha",
+      "source": "https://aminet.net/util/libs/pmlib060.lha",
+      "sha256": "3d365c0dcc222857d1761c2785f66b10224c87dbb21bf0b9b28d659fbf9eb9ec"
+    }
+  ],
+  "printing": "GhostScript not installed in this task; PDF export and printing not tested",
+  "verified_archive_files_and_initial_dependencies": 178,
+  "additional_verified_files": [
+    {
+      "path": "LIBS:popupmenu.library",
+      "md5": "c9385c79e772bd487f44e889441611dc"
+    }
+  ],
+  "launch_verified": true,
+  "launch_method": "CLI with stack 131072 (matches supplied Workbench icon)",
+  "screen": "Existing 1920x800 Workbench screen selected",
+  "state": "Left open with a blank Untitled document",
+  "startup_fix": "AmigaOS build needs popupmenu.library in LIBS:; app-local copy alone failed. Added previously absent system copy.",
+  "runtime_tests": "Editor visible with Vera Sans selected; document saving, PDF and printing not tested",
+  "ar_exx_ports": [
+    "FW.1",
+    "FINALW.1"
+  ],
+  "temporary_http_server_stopped": true,
+  "temporary_archive_and_extraction_cleanup": "Completed; startup/checksum logs and scripts may remain in RAM:"
+}

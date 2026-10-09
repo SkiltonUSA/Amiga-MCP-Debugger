@@ -1,0 +1,56 @@
+{
+  "source": "/Users/dskilton/Downloads/doom/DOOM.WAD",
+  "size": 11159840,
+  "md5": "1cd63c5ddff1bf8ce844237f580e9cf3",
+  "sha256": "ff2c301b8719465a6e386a512bfa319931b7f64ea517d337c5a47afe03951902",
+  "type": "IWAD",
+  "lumps": 2194,
+  "maps": [
+    "E1M1",
+    "E1M2",
+    "E1M3",
+    "E1M4",
+    "E1M5",
+    "E1M6",
+    "E1M7",
+    "E1M8",
+    "E1M9",
+    "E2M1",
+    "E2M2",
+    "E2M3",
+    "E2M4",
+    "E2M5",
+    "E2M6",
+    "E2M7",
+    "E2M8",
+    "E2M9",
+    "E3M1",
+    "E3M2",
+    "E3M3",
+    "E3M4",
+    "E3M5",
+    "E3M6",
+    "E3M7",
+    "E3M8",
+    "E3M9"
+  ],
+  "destination": "HDD50Gig:Games/ZZDoom/DOOM.WAD",
+  "transfer_verified": true,
+  "wad_directory_bounds_valid": true,
+  "icons": {
+    "ZZDoom320": {
+      "WAD": "DOOM.WAD",
+      "NOMUSIC": true,
+      "stack": 65536
+    },
+    "ZZDoom640": {
+      "WAD": "DOOM.WAD",
+      "NOMUSIC": true,
+      "stack": 65536
+    }
+  },
+  "backup": "HDD50Gig:Games/ZZDoom/backup-before-full-doom",
+  "shareware_preserved": true,
+  "shareware_md5": "f0cefca49926d00903cf57551d901abe",
+  "game_launch_tested": false
+}

@@ -21,7 +21,7 @@ int zv_submit(struct zv_client *c,uint32_t cmd,uint32_t size,uint32_t hash)
 }
 int zv_poll(struct zv_client *c,struct zv_result *r,uint8_t *pixels,size_t capacity)
 {
-    uint8_t header[64];uint32_t seed,hash;size_t i;
+    uint8_t header[64],profile[64];uint32_t seed,hash,before;size_t i;
     if(c->failed||!r)return -1;
     if(!c->pending)return 0;
     if(c->now()-c->started>30000u){c->failed=1;return -1;}
@@ -30,6 +30,13 @@ int zv_poll(struct zv_client *c,struct zv_result *r,uint8_t *pixels,size_t capac
     seed=zv_seed(c->session,c->pending);
     if(ad_get(header,0)!=c->pending||ad_get(header,4)!=ZV_MAGIC||ad_get(header,8)!=c->session||
        zv_hash(seed,header+4,56)!=ad_get(header,60)){c->retries++;return 0;}
+    pull(c,ZV_PROFILE,64);
+    for(i=0;i<64;i++)profile[i]=c->mem[ZV_PROFILE+i];
+    if(ad_get(profile,0)!=c->pending||ad_get(profile,4)!=c->session||
+       zv_hash(seed,profile,64)!=ad_get(header,56)){c->retries++;return 0;}
+    r->decode_ticks=((uint64_t)ad_get(profile,12)<<32)|ad_get(profile,8);
+    r->colour_ticks=((uint64_t)ad_get(profile,20)<<32)|ad_get(profile,16);
+    r->hash_ticks=((uint64_t)ad_get(profile,28)<<32)|ad_get(profile,24);
     r->code=ad_get(header,12);r->frame=ad_get(header,16);r->width=ad_get(header,20);r->height=ad_get(header,24);
     r->rate_num=ad_get(header,28);r->rate_den=ad_get(header,32);r->bytes=ad_get(header,36);
     r->ticks=((uint64_t)ad_get(header,44)<<32)|ad_get(header,40);r->error=(int32_t)ad_get(header,48);
@@ -38,10 +45,14 @@ int zv_poll(struct zv_client *c,struct zv_result *r,uint8_t *pixels,size_t capac
         r->bytes!=r->width*r->height*4))||(r->code!=ZV_FRAME&&r->bytes)) {c->failed=1;return -1;}
     hash=seed;
     if(r->bytes) {
+        before=c->now();
         pull(c,ZV_PIXELS,r->bytes);
         for(i=0;i<r->bytes;i++)pixels[i]=c->mem[ZV_PIXELS+i];
+        c->copy_ms+=c->now()-before;before=c->now();
         hash=zv_hash(seed,pixels,r->bytes);
+        c->hash_ms+=c->now()-before;
     }
     if(hash!=ad_get(header,52)){c->retries++;return 0;}
-    r->hash=zv_hash(2166136261u,pixels,r->bytes);c->pending=0;return 1;
+    before=c->now();r->hash=zv_hash(2166136261u,pixels,r->bytes);
+    c->hash_ms+=c->now()-before;c->pending=0;return 1;
 }

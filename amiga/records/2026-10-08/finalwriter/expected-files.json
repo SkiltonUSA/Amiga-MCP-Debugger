@@ -1,0 +1,1070 @@
+[
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-Ackn.catalog",
+    "bytes": 976,
+    "md5": "e2a90b5cff1c04e74e503a2653ba7bd2",
+    "sha256": "93e1a89aa2cb3a08f6617c1d9235adec025f6f1c63594df031466a09301b2b28"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-GCS.catalog",
+    "bytes": 132,
+    "md5": "4b83fc858add004b721efcbfb0ef8982",
+    "sha256": "4351f087d9d014de3d39e989bee87ecbddbd1142f01e93a02fad92e6741b45d8"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter-General.catalog",
+    "bytes": 672,
+    "md5": "7c8c055239d07ea5dfd0b86e12fc9284",
+    "sha256": "d1ad0fea4506e928eff6c8e021a2b01ece5b62a2a44e150342cab72d620eafef"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/deutsch/FinalWriter.catalog",
+    "bytes": 35664,
+    "md5": "bf8dbe151c762064ce0fa9b75fdff5e3",
+    "sha256": "0da9cc0ccd16cbc1f5705040774370c368382be9730a6b2890baff25fa8b45a8"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter-GCS.catalog",
+    "bytes": 134,
+    "md5": "0b05336af5fac94bad102917583c892a",
+    "sha256": "bdf45d9c7392a83c6c841dec4be653e9934ad1f2cb0565b46b02f59577acbf62"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter-General.catalog",
+    "bytes": 138,
+    "md5": "59ae4507c48231fe36871ae8194b5207",
+    "sha256": "c141bbc7bc1c37be54f5b3120f9c809edd0afc62d5e183e7af47a85282972647"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/francais/FinalWriter.catalog",
+    "bytes": 28470,
+    "md5": "60ad1d7d6affa1e34e955c85ea6ef945",
+    "sha256": "00c14a03f41ea678b6ef020760439c9be03b48d2d75a31e086cc42fac2f0e814"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter-GCS.catalog",
+    "bytes": 134,
+    "md5": "0b05336af5fac94bad102917583c892a",
+    "sha256": "bdf45d9c7392a83c6c841dec4be653e9934ad1f2cb0565b46b02f59577acbf62"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter-General.catalog",
+    "bytes": 138,
+    "md5": "59ae4507c48231fe36871ae8194b5207",
+    "sha256": "c141bbc7bc1c37be54f5b3120f9c809edd0afc62d5e183e7af47a85282972647"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/french/FinalWriter.catalog",
+    "bytes": 670,
+    "md5": "3af1d114123270ab41cd60dbc4fe1248",
+    "sha256": "079e93286ad1dee607624e4cfabca636f002d272c478a9d1dcaad6c3e03ffc28"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-Ackn.catalog",
+    "bytes": 620,
+    "md5": "6487903ee5c2ad5308abf94ceff26a7e",
+    "sha256": "4162360afe6f2c2b7044274922b03b8ed6d6a6cfa95974a53d6e9de962f01373"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-GCS.catalog",
+    "bytes": 132,
+    "md5": "4b83fc858add004b721efcbfb0ef8982",
+    "sha256": "4351f087d9d014de3d39e989bee87ecbddbd1142f01e93a02fad92e6741b45d8"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter-General.catalog",
+    "bytes": 136,
+    "md5": "5691947392027f46071f8ea12abe4df7",
+    "sha256": "cf9ff0f0a41bdf9f07982ded5e3535820b02c1ddc145dc7250e6ffa52977c3e2"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/german/FinalWriter.catalog",
+    "bytes": 15228,
+    "md5": "306d84bdae693b5990bbce877228d0ed",
+    "sha256": "9204c6648f4b3551792bb0fc9e6907652bb20df770865aaec334e7a9b5a98146"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter-GCS.catalog",
+    "bytes": 130,
+    "md5": "5fba94bbe2afa7f52ea412f1b58d74a3",
+    "sha256": "bf7c114bce7fa474ae0803472303403754a55c8284e0f97e6cd625bf0727e7c4"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter-General.catalog",
+    "bytes": 134,
+    "md5": "7482e55700c7eda66a9ed82c69afc8fc",
+    "sha256": "9a66c63ad39a8ffd66d6a9b1891a642e952e5333a5a581653ad9232ca0b276b1"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norsk/FinalWriter.catalog",
+    "bytes": 27778,
+    "md5": "cf96a15207f313eb1e426b87721e893d",
+    "sha256": "2923d569412349c6db2c09323d95688bf1c6dcf9bb9cbe86ca4085df4e5c5aec"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter-GCS.catalog",
+    "bytes": 130,
+    "md5": "5fba94bbe2afa7f52ea412f1b58d74a3",
+    "sha256": "bf7c114bce7fa474ae0803472303403754a55c8284e0f97e6cd625bf0727e7c4"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter-General.catalog",
+    "bytes": 134,
+    "md5": "7482e55700c7eda66a9ed82c69afc8fc",
+    "sha256": "9a66c63ad39a8ffd66d6a9b1891a642e952e5333a5a581653ad9232ca0b276b1"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/norwegian/FinalWriter.catalog",
+    "bytes": 726,
+    "md5": "f99acdaaa56c6c9be679191b9cf0eddb",
+    "sha256": "9b066e7b6667901ec33f2208e94dc87ca9bce0e1ad5c9570dc10e0c5f290bb0b"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-Ackn.catalog",
+    "bytes": 840,
+    "md5": "7dd8b31f6651c9476827ee451dbdcb40",
+    "sha256": "040785bcfa138a2d3e7347e774123c15b236c46a40d2e5ad7fa12154e682ece7"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-GCS.catalog",
+    "bytes": 132,
+    "md5": "b0d065f724e1f7596ff561319fa41677",
+    "sha256": "7c1adcdbaa66b0fc22a8d2dc61ff1e821b68f4a1153810b3f953d73bb316a6b7"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter-General.catalog",
+    "bytes": 136,
+    "md5": "5e4304e5ba1c76cb60567424c7c7ea56",
+    "sha256": "26d9c74ceab300a4e3014b178b89c595d7b7a531d2eaaf66ffffdf2d54fbeda2"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/svenska/FinalWriter.catalog",
+    "bytes": 25932,
+    "md5": "605c71089c43db4d5913311caf82c062",
+    "sha256": "c69f16820dc6bc803e318529d8e065fcc0aba0265f5f145d6edfeb67de63237c"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-Ackn.catalog",
+    "bytes": 584,
+    "md5": "b810a7f5b96c38edd1eb74cc1a480c0e",
+    "sha256": "09a1dca0865b5d9dc5956e1ebd02770662b0085cdef02a91ab9facb3d140cc80"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-GCS.catalog",
+    "bytes": 132,
+    "md5": "b0d065f724e1f7596ff561319fa41677",
+    "sha256": "7c1adcdbaa66b0fc22a8d2dc61ff1e821b68f4a1153810b3f953d73bb316a6b7"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter-General.catalog",
+    "bytes": 136,
+    "md5": "5e4304e5ba1c76cb60567424c7c7ea56",
+    "sha256": "26d9c74ceab300a4e3014b178b89c595d7b7a531d2eaaf66ffffdf2d54fbeda2"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Catalogs/swedish/FinalWriter.catalog",
+    "bytes": 880,
+    "md5": "ac6dd5a8a43bef11138305332ea2bcbd",
+    "sha256": "f31242203fd45eb64a931b1528d1220a5db20e0325904cc50b9fc0ab6197719a"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/checkprinter.png",
+    "bytes": 16305,
+    "md5": "44243fa5e515c40cce729378dd7d87d4",
+    "sha256": "8f63496c0421b7828e1da7f6346fc726fdd3f7ee09fafbe8b48f4514903ac691"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/dictionary.png",
+    "bytes": 6660,
+    "md5": "b94f0da942a28b7554c644de702ae891",
+    "sha256": "b6b85d79118e1914748b7fa2d47349e78843a044ed52eade6b6b6366172762f3"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/floppy.png",
+    "bytes": 4434,
+    "md5": "91fa3cd003b43fc0647dda900fc58321",
+    "sha256": "43c117855ecb86e7c0b8209edf2eff136b799664fb8c2c71cf73b5dffc615cd9"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/ghostscript.png",
+    "bytes": 20206,
+    "md5": "306351aca67c162040f544fd30206060",
+    "sha256": "cdd7eafb6701222879ded20662571aef1f151767c79383405cdd96526cdfbede"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/monitor.png",
+    "bytes": 5945,
+    "md5": "a3840df510f2e4f5ff477be5ef290902",
+    "sha256": "82ec36815b6f0fca0f0f92512f9cc283da6ead17343cce0375d5a9714751151d"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/64x64/printer.png",
+    "bytes": 6575,
+    "md5": "31292d68b515c10442dc46676129c8b2",
+    "sha256": "630b109766e22e775382c753a7a3f19bd1fc8ea46d227209cf8b5f87c86a2ef9"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/buttlace.b",
+    "bytes": 63404,
+    "md5": "2bfaa515f1d5577d59b26f5b6d358215",
+    "sha256": "7fa21cbb7eb7e4fd7dbb15fcff27460bf6e0b91358a31cfa59d28748b86b6fe0"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/buttnonlace.b",
+    "bytes": 38060,
+    "md5": "907cc359a1fb9b9c0576b93add0c9ba5",
+    "sha256": "e0ce2152f3727bf5fcd9d359cf66961376e9d9812d344ee85149d503b7dbdf21"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/iconlace.b",
+    "bytes": 1176,
+    "md5": "c8addd7939eb85dc22d80955b3e77d79",
+    "sha256": "ed33386c229f817e8d558308ad30c665dbf615694c5fe91bbb1aff874618fd0a"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/iconnonlace.b",
+    "bytes": 696,
+    "md5": "3d6969c7b436c752729a3e27c3a1fefc",
+    "sha256": "f8bdda1d059ed28a424654a143126e6a6b431ee2843c59d08da636a59999652e"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/logo.png",
+    "bytes": 134734,
+    "md5": "8ea2fa6993655e62643c7886e591a63d",
+    "sha256": "18fbba7c4b14f981836aae81dbb696b05899577411948c1d100c7df0f7eb6e3c"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-default.png",
+    "bytes": 11805,
+    "md5": "3979b15df1bd901ebf75590df050492c",
+    "sha256": "dfdba1373c3f204bd63545e04dde3ce344491aa5002ffe995578bfbcc7874026"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-default.png.license",
+    "bytes": 157,
+    "md5": "7b613fe03d63db11ff64b678d2853108",
+    "sha256": "e8d6a64dadae4446711a1a23fd9a313ba00a6fcb218cd48b974e709a4ee66552"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-device.png",
+    "bytes": 10235,
+    "md5": "8b3d11644b0fae79e50be7665f345505",
+    "sha256": "ac816390d4f587c76d6fbf9d77f084fb5de3e7af343d4207e887c28c79aa9291"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-file.png",
+    "bytes": 4104,
+    "md5": "d13f34c12be2bd031416f5896e18f831",
+    "sha256": "15753e9e1f95a45c6ab7e1c6eb53ca260d2681363c275adbb885fd43f8c607ec"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/printer-ftp.png",
+    "bytes": 4525,
+    "md5": "3c879c4257acdb4d32e92025f04bbf4c",
+    "sha256": "026d2cfc785ab4f41674f28e0ce8a69d7f1b1017b682020a038be87675b5a607"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/screen_resolution.gif",
+    "bytes": 2948,
+    "md5": "b2ffecbf8ab6e8c3d85a20639f93541a",
+    "sha256": "876897df24ec503414158968adee07cd9227a9b102c005521bd80ccbe7564f23"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWFiles/screen_resolution.png",
+    "bytes": 4895,
+    "md5": "3328e039f0653ef2a86e83c74d96738f",
+    "sha256": "33913ed7ad430d4e61ff71e43ec0cf14056019e26af1a6a7d55c5a4d6aae5aba"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/hyph.pat",
+    "bytes": 4667,
+    "md5": "0bfa09ceeb5834f7746bb810fb58263b",
+    "sha256": "016229bb918b874cfba09272b5e6dbbaf4ce76c417ec053b1f7e066fec042ec3"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/index.aff",
+    "bytes": 297054,
+    "md5": "bcbe8d7b2df6bc569d12a6566f72c437",
+    "sha256": "4cf0e2a6d5ae509b11fd25c5b89c9575395ee7c936f158097ca3f048288763fe"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/index.dic",
+    "bytes": 1770965,
+    "md5": "cd5a8770b174e3566f66d9df9caf3793",
+    "sha256": "f85cca58f280f3ae9b2dad23c38a6cae680422ea462217444e1613e64c84d193"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/ca/license",
+    "bytes": 201,
+    "md5": "da087cefab7bc3b7687203198a0042ec",
+    "sha256": "4a981b87d76db854c2123ee1f5b2c09e35614969fb8b7e33be7c48daf009a392"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/hyph.pat",
+    "bytes": 6112,
+    "md5": "dc3cf274c71bde31947c69991bf7838a",
+    "sha256": "4191f609a7924b493feed82e08e7ac38b42f9deda1bce9ba2057baf25fc815e6"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/index.aff",
+    "bytes": 81584,
+    "md5": "862631984e0b60ceb183106e0cbeb361",
+    "sha256": "cb5ef704de0ab8575c883c97981d5d242260c7ebe47b28c15c205443aca15976"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/index.dic",
+    "bytes": 3719300,
+    "md5": "24f38d5ea81de0c5e12ee07baa2bd4c7",
+    "sha256": "9a12345e1881c96f18cc460dbd062e47509571d5f2a2a9bf041da169856dc19e"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/da/license",
+    "bytes": 787,
+    "md5": "6e887c523b93db7dac9d61324fdf1895",
+    "sha256": "ef2785b76dbcb1d0b620435158624a9002b995ee4521cf5d41b055e29eb9d1af"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/hyph.pat",
+    "bytes": 268605,
+    "md5": "7aee2a9af23199a51b7cdd3f0787c07f",
+    "sha256": "784883b06ab41110ba6fd8992ba88c789ea1655c7f4623b6b9d68079c70e9829"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/index.aff",
+    "bytes": 18561,
+    "md5": "da9e0f416e7eec6abe90ea1fd22ab133",
+    "sha256": "b2d894eda577eb4945b74238caeceda7b38050aad479fc7c1dd21ec50a996cc4"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/index.dic",
+    "bytes": 1036153,
+    "md5": "05b205bed825733683aa935d322b7d68",
+    "sha256": "051c0a84479707106f00c9a02eb037d62177bc0c288522bb48a486d575dc0f21"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/de/license",
+    "bytes": 925,
+    "md5": "945ccfc50236206e67c99f0f9c2c962f",
+    "sha256": "9acce317b6197dd0f81577492570216d942d158191de59ec1b638ab13b2310cb"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/hyph.pat",
+    "bytes": 1446,
+    "md5": "4e33241fdc5dac3195939095acb0fc5a",
+    "sha256": "299d0935c0bef479effb3b005d2945a26d207df7eb6291a9d744c731be63c10c"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/index.aff",
+    "bytes": 20058,
+    "md5": "30b40b42ba11611f012e6fdcdb614129",
+    "sha256": "5d2e3580af6d3523ac4470335a4b05968e59dddc58e1a7f2b260c81342e80063"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/index.dic",
+    "bytes": 19421967,
+    "md5": "038f0fefeec1be0eb12f661888d7cd69",
+    "sha256": "f08daefb302600beb1b345e4fd77f4ecf6617aa080a72efe6ae7eec0ad5b2ac7"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/el/license",
+    "bytes": 2238,
+    "md5": "90b757dd77b1ebbf473eef31037a59e8",
+    "sha256": "53970cbce0276c3cc4ba4fff842789e95fb167458d257568faa0ff5f68ffe61a"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/hyph.pat",
+    "bytes": 54905,
+    "md5": "1ea6e4ffbd3c9ade397d92c20d874de0",
+    "sha256": "81ac832323d194170e34881dc33a82c95b3e08f46ab4844a9d7db1d7651fc2fd"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/index.aff",
+    "bytes": 3086,
+    "md5": "aad35cbffa5e1412c09c33d92d7e3bff",
+    "sha256": "8ae1f19d4840d957728ad90555d5a8dff6cc5c046279c95ff0c00fc0a0136c7b"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/index.dic",
+    "bytes": 550782,
+    "md5": "2c146b2bc850d6ff52448e8dd3f71919",
+    "sha256": "27e06871aa723e03f82a13fba31d3117048c81dfc41920c72e347c06208d6cde"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-gb/license",
+    "bytes": 15740,
+    "md5": "dd6d2bbd7b7f4519448f2b995fd99cd4",
+    "sha256": "a4095446bb976b3270cbab777f1711d6cb07759c6c61b96add8664165c0f9325"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/hyph.pat",
+    "bytes": 31756,
+    "md5": "1e728cf9e55be22cf286a6922165ca62",
+    "sha256": "59c28577ceef5a8b92ecf8fc447c091a46f2fe2ee79538283a7bf59f8560404a"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/index.aff",
+    "bytes": 11359,
+    "md5": "8fd501a45156ca0b0511959c6f6c525e",
+    "sha256": "4a995e13c8cafb4467ec2f584218d0b8b1451e11a091a90bebe646710c5bbb5b"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/index.dic",
+    "bytes": 696365,
+    "md5": "58913053800419597839117a985874f6",
+    "sha256": "0b3a7ae11b1d87f6b9705c47834adf49babb12a703e477aa7a38f40d2b36a37b"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/en-us/license",
+    "bytes": 2338,
+    "md5": "011cfe10c5b45588bde7632a8599fee5",
+    "sha256": "5fbc80b8518181aa554783be6e007957d1b0bdab855507967d9b5f6157d80dd7"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/hyph.pat",
+    "bytes": 38514,
+    "md5": "967bd374b09644ae1346bc05a298367c",
+    "sha256": "66bf60deb7913a336b103743662b02fe9e6c002be3178ecf0629924d73df1316"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/index.aff",
+    "bytes": 167321,
+    "md5": "abcdc0ce99c387610506f38e3585a56f",
+    "sha256": "80247b7454c5b61e94618ac16aff05de2671f448882d686b5b03519c9584b6ad"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/index.dic",
+    "bytes": 851763,
+    "md5": "ac93227635f20d53e9e8233d44102a62",
+    "sha256": "769ed92b6587ac3c2649235afd6d746b2b52b253a086b7a24e1e9e84f47d1056"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/es/license",
+    "bytes": 7354,
+    "md5": "b41cabf4e6f2a7d951684246518bea4f",
+    "sha256": "b2fb999aafab10fcd486ed87b37165d323a2782841611a361d596d040e5b0d8c"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/hyph.pat",
+    "bytes": 11374,
+    "md5": "8b9beaa37dbb9256e7c2ae7877a88ae3",
+    "sha256": "25a3d099f0674e361b11fa71955e9945d6d5dee3a72362b13d61a5c1376d6c6b"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/index.aff",
+    "bytes": 256515,
+    "md5": "759821984975ab398229282a85c94562",
+    "sha256": "dcaa78abb0d1b8393af8fad62e68e19e3740b872c796a4359d5243f167107d20"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/index.dic",
+    "bytes": 1107433,
+    "md5": "be0845297188cd700a736af11d7357f8",
+    "sha256": "a54e3855f34d967c54f62d567f229a448e37c39cf7b898b12ad897818c0703f2"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/fr/license",
+    "bytes": 3099,
+    "md5": "2346c7bffe6ab4d51730ab3116817c72",
+    "sha256": "4e5c0991ead7f84107e6b2ea8e7063a40dc58fb21561f86fbc7ab12c8371eed7"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/hyph.pat",
+    "bytes": 438659,
+    "md5": "eef5bdc0bf2f9b5254ffa0b5fcc45123",
+    "sha256": "d8a0f36594341b9ae87d961530d4b47a1c1931543da86f89559dba713d71ad87"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/index.aff",
+    "bytes": 807730,
+    "md5": "21b894547fd95046b6ade80391ba79eb",
+    "sha256": "625a5fb8bf77cf1a4d73288883b8abeff4753f736579a35ec285088fb9098d2c"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/index.dic",
+    "bytes": 3114250,
+    "md5": "6bc2644e930797f843ebe84da4044133",
+    "sha256": "b6bda85603bb293de53b6deed5043771b1a61958f76e09aa8058c26e563f63e1"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/hu/license",
+    "bytes": 6859,
+    "md5": "e1f9036f8b1d1e4cdcd8f4b4cee606f8",
+    "sha256": "4ec41032bbc61fe4554d4db7bd71c3edea449a85ff5bf14419b13867d8b46be9"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/hyph.pat",
+    "bytes": 1775,
+    "md5": "eda55851a641db50fbe57a6abc576708",
+    "sha256": "c1cd5536324c766e40a0420c72db0f0b386ee2c66f4665c8a5ca6a31d4c145be"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/index.aff",
+    "bytes": 68772,
+    "md5": "e5531d70dba82e05252137f2fadd0908",
+    "sha256": "6e1cb50e5f7cdefce15713c8c13fdd3193a96046531cc780dd46b3dcea7419ed"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/index.dic",
+    "bytes": 1295754,
+    "md5": "fddb8fff08a4c9f9ea531f1d4720252f",
+    "sha256": "b1348fbdb6f441ea9dd7e33b2cfcb96ead39ccd5e48bf894972774cd5aa86abb"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/it/license",
+    "bytes": 38596,
+    "md5": "31d06285633a89f4d0267895ef8b7107",
+    "sha256": "e48a7f7b3ec37ebb2c0d625528a7a677818de039bbae43e8f2c1dce6fd2a13e6"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/hyph.pat",
+    "bytes": 83048,
+    "md5": "0bf01998e058fe5f9781ccaf4778eb94",
+    "sha256": "2ab380006425c146f08926bc7d9e0904fc7fadcf7292e2b764fdad872635f339"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/index.aff",
+    "bytes": 33425,
+    "md5": "b3ca710e588ff12571581cde71ac30b3",
+    "sha256": "ec34bbbcaaa069e77b1cad82b7903b841e8a8cdcc6c4d8d43b3f5b006e004e04"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/index.dic",
+    "bytes": 2415778,
+    "md5": "0d01bc06cd2387bf27ce4d43ad5af33f",
+    "sha256": "2c2a0ff6461ab1bd9620b9422dc9368c15dc45d1a50973671b19516a1afcf5f8"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nl/license",
+    "bytes": 22980,
+    "md5": "f9181fe437dd701ce6ae690f6e09b119",
+    "sha256": "581ef4d74d60601d549a8a46d5816b0159f8b5f3149b9e9c59b41a2ea385e5d3"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/hyph.pat",
+    "bytes": 189115,
+    "md5": "60098fcdf34aa20832dd387698dfd6a5",
+    "sha256": "a2f421ff50095a4948e2771013497329af81cef68ad2416936c826a68eacb92d"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/index.aff",
+    "bytes": 13615,
+    "md5": "c2cb8929350998aedce9ca4308a7e249",
+    "sha256": "e50821655063f5680a3e4cf775b0a69c87de74bd6d2bbbb5da14ff8de4633beb"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/index.dic",
+    "bytes": 3338635,
+    "md5": "4c44216bc68e35959ce4bef1c319cbba",
+    "sha256": "eaf1dc7ee7c848358df9aa231640b054ca4e388f2a870185528e4b229626faa6"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/nn/license",
+    "bytes": 284,
+    "md5": "9d372c99817cb42bdd1f6c0acb7f4d11",
+    "sha256": "85fbc8cb7925ce44e34d5c6a96abf2a8a45c4a66ab542044a6c827a44af9c526"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/hyph.pat",
+    "bytes": 21035,
+    "md5": "91079d102b2b36a23262429ab522f933",
+    "sha256": "d6dfa5f6d9f2b2746cf8e77708642ebfeada8c737ebb96e692364bc13c84209f"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/index.aff",
+    "bytes": 280709,
+    "md5": "3716b157dc6e637a5ad20818e85da1d5",
+    "sha256": "5b50f8ed2bfef284872a1f7ce5c2bbf6c54120b93fcf1129bb2b709c90a8259b"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/index.dic",
+    "bytes": 5129472,
+    "md5": "65e9b52cf0716b236fe61a1c493dc6ee",
+    "sha256": "016048aef59c1747fd5fb543472f75f6c5abc889c1a633b6598e944189140c6b"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pl/license",
+    "bytes": 402,
+    "md5": "1c18819fb15c8c82a412167fa18fbf31",
+    "sha256": "5819f5b202dbdfa34b573a76c8336b949a0e1593844fd0de8cb6881706f5e09a"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/hyph.pat",
+    "bytes": 1941,
+    "md5": "c1824c8f39eae4c62a7459298d181e1a",
+    "sha256": "2dbc8bc206ec9a6e197787f868e777339857b0cd06a009a10908ce379f1915b2"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/index.aff",
+    "bytes": 95089,
+    "md5": "c272bf291ae74aa0ef84f0d844760865",
+    "sha256": "975a209fcc892cb382fa5f34a28c391a39668661ce373ae071287809c5fcae24"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/index.dic",
+    "bytes": 1474295,
+    "md5": "442dced9dc613dbe2ed573dc41afb729",
+    "sha256": "e43c67b439ede72ed5fe33acbd4413e0a1320af7a94728a331db84e27122228e"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/pt/license",
+    "bytes": 1148,
+    "md5": "53d8ed71b4053ef0ccfcf6b3f89880a8",
+    "sha256": "a5d807381c41a7186b235f17cdf472f53d83831cb05a2bae3c44581cc818570c"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/hyph.pat",
+    "bytes": 28561,
+    "md5": "9dd026de798bffcb6de8df1f10e673e1",
+    "sha256": "f881de23468d448591ca7f773e51bff87bad3ebcc058f1ef05c0b71f9e70f561"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/index.aff",
+    "bytes": 18175,
+    "md5": "f7887e3117f09f1fbc327631bdba8eab",
+    "sha256": "bb62e4b2fb551af15aa405b564c55a079d5f745af92542e0db40186333e1ac76"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/index.dic",
+    "bytes": 2152434,
+    "md5": "4cb9ab740b85dd90890828c16fc30d51",
+    "sha256": "b80a114a91d271db3e3e4a37470c8243e8a4a2285e9a19a02e8275f1de3bb4ea"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FWSpell/sv/license",
+    "bytes": 378,
+    "md5": "fe5c586fe56d04fbdc44df187129ac29",
+    "sha256": "3f8a16e108a7facac96076b64ebc590e92cadd18f46b5b900f737afd8792bba9"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FinalWriter",
+    "bytes": 1342732,
+    "md5": "83956b018cc9525f9c908a7d501431e9",
+    "sha256": "3dfc67b670e487434e8e0f76a2442bc329a76b4e46fb35e8551cd265783950ba"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/FinalWriter.info",
+    "bytes": 3072,
+    "md5": "5e9bc82ceb07c8dd9f00cdd17c7b34a7",
+    "sha256": "be0004754fda15f6b5548ddb9957c645fd03254c974ce630063985d9affeb5cc"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWOLFonts.info",
+    "bytes": 628,
+    "md5": "83116e7fec7919221cf388a91b33b8f9",
+    "sha256": "0258daae29131b0bb4ec01020119514fb0a77c013d296a8985b00cce5c68bd59"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler/5",
+    "bytes": 340,
+    "md5": "1023c98d987d98ae4a8573bb2bf07976",
+    "sha256": "4203034a9f6a76769b88f301d6ced39e005950be8714031da3ddedfa0a36bc90"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler/9",
+    "bytes": 372,
+    "md5": "42699cc07f944cc69e9aa5f0de6781a8",
+    "sha256": "2ed3778b87550ac47d0ed85e130bd07d8a291db617a595b90055f8fa62e9ab1d"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWRuler.font",
+    "bytes": 524,
+    "md5": "74b3af1de59270faaaf443f377794e1c",
+    "sha256": "8e906a0133069d86a96739b6579f864f2e6bece7fa4b3a08550738e67d16a03e"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont/13",
+    "bytes": 3780,
+    "md5": "2412ae848123d82908184c7feb9dac10",
+    "sha256": "c70683d2809d255b99ae5e5dafee8aeddc9cc0b0922496fcc4961d213d348eb5"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont/8",
+    "bytes": 3188,
+    "md5": "8323fd42fb694e417f973b9f54389e64",
+    "sha256": "7a5169419370799acd3d366f27146121a797ea987c5e1e691d459432619d4dac"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Fonts/SWScrFont.font",
+    "bytes": 524,
+    "md5": "89f7cd0fab01eb0bb1cfeafd37408168",
+    "sha256": "9becb3de2d14e4935e58625343ad2d6c7e53bcc5b24f461fc7069d3ba29416ff"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Fonts/fontcache",
+    "bytes": 145,
+    "md5": "3080733cc5e6ecec291bcdc88acd49a9",
+    "sha256": "39abc3def22258b0126fa6e536dcdc61af587b6825aec433902c912de63fea72"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/cachemap.library",
+    "bytes": 9656,
+    "md5": "db1f4c1094f5e2119a7ae9cfca9122fc",
+    "sha256": "21e1c80f37e55d76182f97e39bdbe860b0a0ea9db2451136a722b76b64224b3a"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/downloader.library",
+    "bytes": 17908,
+    "md5": "086acd3b9538041e20dfcede66b1508c",
+    "sha256": "ebe09c4cad88c034e2d86461cabc863c848cfe5fc1221cb59bd0c278ec34b246"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwInterface.library",
+    "bytes": 34768,
+    "md5": "f94ee70ddea9aa302ff137dfdbc0ceb5",
+    "sha256": "e3b28662e52b4cb88da2ed72322527941b3779667ba2c2e75cb45cfc6818daa3"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwarexx.library",
+    "bytes": 73964,
+    "md5": "621310b2bf5890ae5e9c5261afa5ab4f",
+    "sha256": "41e6b0c465fc2b819695ede4c9a4da10687cc08e0d2b927b5b1ad24d59a16978"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwc.library",
+    "bytes": 3540,
+    "md5": "a92332fa72d0967feded82b2ad1bdf14",
+    "sha256": "0554cd3b62cf8bd88d43a56d19772b12add1e0ed3f2023d57868b018acd3b9e3"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwfiltertype.library",
+    "bytes": 4176,
+    "md5": "c1963cc9c263e8fc9002cb694c7e6ca5",
+    "sha256": "8c33a65340ecbaab522ce4852460d918ba5ed570c08b89dd407c35162aac0b6c"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwfreetypefont3.library",
+    "bytes": 485920,
+    "md5": "8a98ac9372daef6925d8077cb75abda1",
+    "sha256": "ebbf9f7200891aa019c215eea65083fa3047e15978091b1eb82a42be19f89eb9"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwhtml.library",
+    "bytes": 22864,
+    "md5": "3dc6ce66e19d1575bc68377ebb8bc9aa",
+    "sha256": "9f322b7b5f70602bcc55b123c927c4ab0584b5bce6179de74fb0652a187a27c8"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwmemory.library",
+    "bytes": 5448,
+    "md5": "d47312f63214e799b1bb376bd7ed5cd4",
+    "sha256": "c04e49f1f9d1331855f7a73cd24343dfe69635c5a22847037cf467e50ca7c47e"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwnetprinter3.library",
+    "bytes": 216844,
+    "md5": "b0b6e60bfb8a33d59009089ce2e1f47a",
+    "sha256": "a2e5fe19ac10474d0565f4bdaeaeaf51cedbfb1f1123d08e53f5ffcd66b1076e"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwnetwork3.library",
+    "bytes": 20616,
+    "md5": "603c033b36681cad75e8fb992fa68581",
+    "sha256": "db02943073e6b2232266b61dd74591aac6f9f7d8975997792d5f3b7b5f167891"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwpdf.library",
+    "bytes": 810044,
+    "md5": "8c4db4041fab94af733c5f2023d7458f",
+    "sha256": "80abae8ddab7cbabf804143aa591f0ed249fe5b45a99dbc6a96bfb80ebbf0c87"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwpenpal.library",
+    "bytes": 10840,
+    "md5": "6322fd2ceff7089f95a973afc9c2ea7c",
+    "sha256": "157d7cbc5cf74fb9bda2c3f149b3044d98896da395518b9f2efa6d3d145c5f26"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwprowrite.library",
+    "bytes": 11900,
+    "md5": "400d771538124f6c8c8513d5e6da54f8",
+    "sha256": "eae5e3120d45853233640ac8431375a60922f4365c573617cee4ac67dd1ff6cd"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwrtf.library",
+    "bytes": 68932,
+    "md5": "e8866c56570f2128f4f5569ccdf23215",
+    "sha256": "cbe7ba02a11d3a665ed1890f33d10d42f29d80e989d4ad096b811a9bf33e4116"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwspell3.library",
+    "bytes": 136920,
+    "md5": "ee619abe8fc890dd22b5af3de5177c8a",
+    "sha256": "a562b143d0589d77b17bacded0330da2419db9db3d2482bf91feceacea4294db"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwwordperfect.library",
+    "bytes": 10172,
+    "md5": "856c76f41ed3910acefab9a140ad6c4f",
+    "sha256": "6d3a8fe31952dafcd55d04c344a6c8077a77ec18d8751c47f7be3f1ec8ab30fb"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/fwzune.library",
+    "bytes": 10968,
+    "md5": "a753a4cf1129429689c988debb0c00ec",
+    "sha256": "4a18becc71763e3cf31fb43d1d072361ceb9306c5c9a45e17b04e38bd4a927df"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/swpost.library",
+    "bytes": 153364,
+    "md5": "21ce2696cbc7f68af49a114f80f7621c",
+    "sha256": "bd68168a7439b3cffb791c51d7aa859f9c8537395b245bdfe6c488ae007f6eec"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/swshell.library",
+    "bytes": 138840,
+    "md5": "9cad6f9b47c18e7e214e7e8dbd3ccfd7",
+    "sha256": "5037e21e826938a05415168491e2608f0a442a88b4f2ae46ab1cf5b38e50119d"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/ReleaseNotes",
+    "bytes": 2608,
+    "md5": "62cd5f9938430d3038f6c7c4e8f64bdd",
+    "sha256": "623f0113f1beb2b2e0037319fdb275dec09229e793cc64ba7b20e27728c3fd6b"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/ReleaseNotes.info",
+    "bytes": 2694,
+    "md5": "56667de8ee0ce3d3b941fe63ab296363",
+    "sha256": "767d08636460606bface6c274b677fbebf5a69e1f072794db4528f9fd83b283a"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Requirements",
+    "bytes": 3360,
+    "md5": "0fc34d1b4149e52f2354dee4b484b65b",
+    "sha256": "e468a2b6ae6daf404196f01477b38cf5d19d8b60bb5f84a2934b31114689082c"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Requirements.info",
+    "bytes": 2724,
+    "md5": "f63e63a48c6bfe92e93093a21800be11",
+    "sha256": "a54130d47a1aa7e1e496bc5696e6c50a9992acafe464ee89a80bdf5d64654c37"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Tools/ippfind",
+    "bytes": 36956,
+    "md5": "a77de2ec0f4d6f241dcdcb7da286b272",
+    "sha256": "5fb366b54d73a83214d5e7a956bc1cc3496c9c7e479f23d5dc1d5eee325897b2"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Tools/ippfind.LICENSE",
+    "bytes": 11497,
+    "md5": "3d8d49005cdbaf850acfc2504a199616",
+    "sha256": "c00bd8510ce553353ddfde0f4d97d0150c4003dbcead6a44e4d42721e56202b2"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3.info",
+    "bytes": 628,
+    "md5": "0fc99983e7b8a34dd7518c126c802a62",
+    "sha256": "79636d7ba7fe27cc142bd97c3dd89ed552cdd40ee4937d262d2bfa620902191e"
+  },
+  {
+    "path": "HDD50Gig:APPS/FinalWriter7.3/Libs/popupmenu.library",
+    "bytes": 48736,
+    "md5": "c9385c79e772bd487f44e889441611dc",
+    "sha256": "362fe73bb7734bf2e45bae9baf0bad810d5ca85108bc0d4874caf0d2b8aae48a"
+  },
+  {
+    "path": "LIBS:freetype2.library",
+    "bytes": 246592,
+    "md5": "c9e9e7bd73cd34de5851c4dc70494fac",
+    "sha256": "50b3865b66f77eb7b95c9a4590f1cda46e12d4761d108e9f94610432b498f70f"
+  },
+  {
+    "path": "SYS:System/FTManager",
+    "bytes": 31344,
+    "md5": "1bf8d01a7906d9bf4b1e25f5e73ee372",
+    "sha256": "c54ce55e028b66b51cbfdb1dcad8919358e8978e0bf6328e08bfb6dfa2fb817b"
+  },
+  {
+    "path": "SYS:System/FTManager.info",
+    "bytes": 831,
+    "md5": "bc7e0f9b237c5ae174a361b2242946ea",
+    "sha256": "3cca562adf1ad526ced874004a1f156790d936fd5aec15a9e4fd8bff0ff74aca"
+  },
+  {
+    "path": "FONTS:Vera-COPYRIGHT",
+    "bytes": 5954,
+    "md5": "27d7484b1e18d0ee4ce538644a3f04be",
+    "sha256": "3361d054759a2fc686a2c058be82deaf9c2e6fe549be9004d7935a6c1736315d"
+  },
+  {
+    "path": "FONTS:Vera Mono Bold Italic.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Mono Bold Italic.otag",
+    "bytes": 1256,
+    "md5": "11a62b221b403f24c94dc24e949ee1f8",
+    "sha256": "a79331236e0fa5c39196f0d59dd927dc9b5bff398ae4dc280f6df36cddcee3cb"
+  },
+  {
+    "path": "FONTS:Vera Mono Bold.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Mono Bold.otag",
+    "bytes": 1250,
+    "md5": "17fa58beb6d3bd6b79d3161a7864cd22",
+    "sha256": "7dab2bdd4f420dafc3490099b00ac56bf9e300112bf3bdb32c4f7064b6b77c56"
+  },
+  {
+    "path": "FONTS:Vera Mono Italic.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Mono Italic.otag",
+    "bytes": 1252,
+    "md5": "799f59a1019f7e173495942d111fe056",
+    "sha256": "6e3d4201da90b381bd358d123d8063e820ebc09b003d5a22a71702ae7d9a6328"
+  },
+  {
+    "path": "FONTS:Vera Mono.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Mono.otag",
+    "bytes": 1246,
+    "md5": "1ac1308bcd9b90bef6aacbafba9da1c3",
+    "sha256": "c00f469a0cfc2c96151c20f5ece4441e3db3305b95d03c6419f084a8aa25485d"
+  },
+  {
+    "path": "FONTS:Vera Sans Bold Italic.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Sans Bold Italic.otag",
+    "bytes": 1252,
+    "md5": "3b03dd0c8be31146df7917234e7f8756",
+    "sha256": "34a5435e4c46d043ce1f5bdf7b8fb12de6352ffc3a8d3ab42cc8a2457c8fd201"
+  },
+  {
+    "path": "FONTS:Vera Sans Bold.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Sans Bold.otag",
+    "bytes": 1246,
+    "md5": "420130e19d2efa028aada220ef3c8bb7",
+    "sha256": "9e63e4c908bacf4d07059b7a2fc38309da03f08f8ba6f6b6a3924e0cd3a977bf"
+  },
+  {
+    "path": "FONTS:Vera Sans Italic.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Sans Italic.otag",
+    "bytes": 1248,
+    "md5": "ae65c6c738f3e6b8e1679c466048dfc2",
+    "sha256": "642e7e4ae8e4af0c565448bfb7e1cd14ef1cc1ca176a3aa585dbf6bb9821b9c5"
+  },
+  {
+    "path": "FONTS:Vera Sans.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Sans.otag",
+    "bytes": 1242,
+    "md5": "960a36dd9beb939a3c396dc97985b90d",
+    "sha256": "759671d2d37993abc734d757eeffdd344bef5bf9a5076d328889b1099f2390f3"
+  },
+  {
+    "path": "FONTS:Vera Serif Bold.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Serif Bold.otag",
+    "bytes": 1248,
+    "md5": "8125011d0c7d217ed6cc0ef60791e5f1",
+    "sha256": "e1652b0e6175fb1c89ee7949388dd7b52a9813de278662eb3e58502993411617"
+  },
+  {
+    "path": "FONTS:Vera Serif.font",
+    "bytes": 4,
+    "md5": "636db8f7a7b1faf0ee77b4e06fde252e",
+    "sha256": "33bff6d991280a714a7e5470a1e3c6d58aa5c0d8049824d61ae8ab8a7cec290a"
+  },
+  {
+    "path": "FONTS:Vera Serif.otag",
+    "bytes": 1244,
+    "md5": "335364761edc99b7b75a486e6128e69b",
+    "sha256": "7b4a1d6f882517284d645712188c14be94d0281e9d795ccd3f245c8fff631c27"
+  },
+  {
+    "path": "FONTS:truetype/VeraMono.ttf",
+    "bytes": 49224,
+    "md5": "37d8aff129ecd7d3fc495b7239f834db",
+    "sha256": "da4281dc7db17a3dfce64a62ced92875c5895340055ec8ba24a3914eb97b349d"
+  },
+  {
+    "path": "FONTS:truetype/VeraMonoBold.ttf",
+    "bytes": 49052,
+    "md5": "a36bbba0b722b8b4e28d5724e0332855",
+    "sha256": "cfd27092561b2386c631f403b289abfb4b98d25cbf5ddf818bc45161579f45b3"
+  },
+  {
+    "path": "FONTS:truetype/VeraMonoBoldItalic.ttf",
+    "bytes": 55032,
+    "md5": "717a0ea36e59239242afaa78c770d52b",
+    "sha256": "61c343315bd5ba7c30ec9d8404bec7fb5e21a8b4013417244292af1053e99010"
+  },
+  {
+    "path": "FONTS:truetype/VeraMonoItalic.ttf",
+    "bytes": 54508,
+    "md5": "24f79382039ee733cbe32fd61e327885",
+    "sha256": "2f72352768b3d1e795882b57c81faee64edb1eb65e33f6aa57257a7278c452c3"
+  },
+  {
+    "path": "FONTS:truetype/VeraSans.ttf",
+    "bytes": 65932,
+    "md5": "785d2fd45984c6548763ae6702d83e20",
+    "sha256": "c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d"
+  },
+  {
+    "path": "FONTS:truetype/VeraSansBold.ttf",
+    "bytes": 58716,
+    "md5": "4ebf664c986099acf6d151c62bdb24eb",
+    "sha256": "cc037385e4d55bfde89b13e03091ee93bf40c0c52ddd391ff031ab276f13b8e9"
+  },
+  {
+    "path": "FONTS:truetype/VeraSansBoldItalic.ttf",
+    "bytes": 63208,
+    "md5": "a99f3482bfc2d9c37b509e68d20d016a",
+    "sha256": "fca0d4eeac1ced7e75e1b2274c869a351d2d83b5ed1f61d249e7bcc477c33ebe"
+  },
+  {
+    "path": "FONTS:truetype/VeraSansItalic.ttf",
+    "bytes": 63684,
+    "md5": "06ee45608b225ef0f22e94995bc981b2",
+    "sha256": "2adc684d518f45232c4ad1f56522f5a82a6904c31940373e1b7030beee20fb3a"
+  },
+  {
+    "path": "FONTS:truetype/VeraSerif.ttf",
+    "bytes": 60280,
+    "md5": "2b03beca2e3fe5564fba8911a1a3ee60",
+    "sha256": "6afd927937d84fc00831441cbe0165b2d926b5bb9c18ac9018e5df6e4b0c006a"
+  },
+  {
+    "path": "FONTS:truetype/VeraSerifBold.ttf",
+    "bytes": 58736,
+    "md5": "b8c3d4131b8517d00c8dcbea1efd5426",
+    "sha256": "e7fa4998a08a6f709ea4818b651e828839f1cb15f0f1c5172e2b1c862aa59b37"
+  }
+]
