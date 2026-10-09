@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "timed_copies": 240,
+  "full_frame_checks": 8,
+  "pixel_mismatches": 0,
+  "pixel_bytes": 4,
+  "display": "640x480 P96 screen; 320x240 rectangle and 640x480 full frame",
+  "arm_timer_hz_estimate": 339064983,
+  "groups": [
+    {
+      "path": "ARM-direct",
+      "width": 320,
+      "height": 240,
+      "bytes_per_frame": 307200,
+      "samples": 60,
+      "arm_copy_median_ms": 13.723,
+      "host_wait_or_copy_median_ms": 33.685,
+      "payload_MB_per_second": 22.38577570502077,
+      "copy_only_equivalent_fps": 72.87036362311449,
+      "batch_medians_us": [
+        {
+          "arm_us": 13719.5,
+          "wall_us": 33715.0
+        },
+        {
+          "arm_us": 13723.5,
+          "wall_us": 33711.5
+        },
+        {
+          "arm_us": 13725.5,
+          "wall_us": 33668.0
+        }
+      ]
+    },
+    {
+      "path": "ARM-direct",
+      "width": 640,
+      "height": 480,
+      "bytes_per_frame": 1228800,
+      "samples": 60,
+      "arm_copy_median_ms": 59.3155,
+      "host_wait_or_copy_median_ms": 67.379,
+      "payload_MB_per_second": 20.716338899613085,
+      "copy_only_equivalent_fps": 16.858999755544502,
+      "batch_medians_us": [
+        {
+          "arm_us": 59318.5,
+          "wall_us": 67335.5
+        },
+        {
+          "arm_us": 59319.5,
+          "wall_us": 67412.0
+        },
+        {
+          "arm_us": 59310.0,
+          "wall_us": 67367.0
+        }
+      ]
+    },
+    {
+      "path": "68k-Z3",
+      "width": 320,
+      "height": 240,
+      "bytes_per_frame": 307200,
+      "samples": 60,
+      "arm_copy_median_ms": 0.0,
+      "host_wait_or_copy_median_ms": 47.5265,
+      "payload_MB_per_second": 6.463762322072949,
+      "copy_only_equivalent_fps": 21.04089297549788,
+      "batch_medians_us": [
+        {
+          "arm_us": 0.0,
+          "wall_us": 47535.5
+        },
+        {
+          "arm_us": 0.0,
+          "wall_us": 47492.0
+        },
+        {
+          "arm_us": 0.0,
+          "wall_us": 47546.5
+        }
+      ]
+    },
+    {
+      "path": "68k-Z3",
+      "width": 640,
+      "height": 480,
+      "bytes_per_frame": 1228800,
+      "samples": 60,
+      "arm_copy_median_ms": 0.0,
+      "host_wait_or_copy_median_ms": 190.933,
+      "payload_MB_per_second": 6.435765425568131,
+      "copy_only_equivalent_fps": 5.237439311171982,
+      "batch_medians_us": [
+        {
+          "arm_us": 0.0,
+          "wall_us": 191078.5
+        },
+        {
+          "arm_us": 0.0,
+          "wall_us": 190820.0
+        },
+        {
+          "arm_us": 0.0,
+          "wall_us": 190907.5
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No video decoding, colour conversion, audio or SDL.",
+    "ARM MMU, instruction cache and data cache remain off.",
+    "ARM time uses a two-second global-timer frequency estimate.",
+    "No vsync, page flipping or tear-free presentation test.",
+    "Host wait timing includes 20 ms polling but excludes bitmap locking, mapping sentinels, logging and deliberate inter-frame yielding.",
+    "Verification reads pixels across Zorro outside timed sections.",
+    "Payload throughput is not a measurement of peak Zorro or DDR bandwidth."
+  ]
+}

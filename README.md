@@ -22,14 +22,14 @@ See XANI's [XACP 1.7 developer notes](https://github.com/Xanxi-Amiga/XACP-ZZ9000
 
 ## Download the executable demo
 
-**[SDL ZZFractal 0.3.0 — release and downloads](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/tag/fractal-v0.3.0)**
+**[SDL ZZFractal 0.4.0 Direct — release and downloads](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/tag/fractal-v0.4.0)**
 
-- **[Amiga LHA package](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/download/fractal-v0.3.0/SDLZZFractal-0.3-XX19c.lha)** — recommended; includes the executable, Workbench icons, instructions, licences and build records.
-- **[ZIP package](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/download/fractal-v0.3.0/SDLZZFractal-0.3-XX19c.zip)** — the same distribution in ZIP format.
-- **[Standalone Amiga executable](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/download/fractal-v0.3.0/SDLZZFractal)** — the native 68k Hunk executable, with its ARM worker and SDL2 linked in.
-- **[SHA-256 checksums](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/download/fractal-v0.3.0/SHA256SUMS.txt)**.
+- **[Amiga LHA package](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/download/fractal-v0.4.0/SDLZZFractal-0.4-XX19c.lha)** — recommended; includes the executable, Workbench icons, instructions, licences and build records.
+- **[ZIP package](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/download/fractal-v0.4.0/SDLZZFractal-0.4-XX19c.zip)** — the same distribution in ZIP format.
+- **[Standalone Amiga executable](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/download/fractal-v0.4.0/SDLZZFractal)** — the native 68k Hunk executable, with its ARM worker and SDL2 linked in.
+- **[SHA-256 checksums](https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/download/fractal-v0.4.0/SHA256SUMS.txt)**.
 
-Extract the package and double-click `SDLZZFractal`. It needs **no Mac, MCP server, network connection or separate ARM payload**. This is an application preview, version 0.3.0; it uses SDL2 SDK 0.2.0. The standalone release omits the debugger connection; build the developer variant below to use MCP debugging.
+Extract the package and double-click `SDLZZFractal`. Direct mode opens its own temporary 640×480 screen with **32-bit BGRA storage**; the image remains 320×240. It needs **no Mac, MCP server, network connection or separate ARM payload**. This is an application preview, version 0.4.0; it uses SDL2 SDK 0.2.0. The standalone release omits the debugger connection; build the developer variant below to use MCP debugging.
 
 Tested on **A4000TX / TF4060 (68060), AmigaOS 3.2.3, ZZ9000 with XX19c / XACP 1.7, ZZ9000 Fast RAM enabled, Picasso96 and compatible cybergraphics.library**. The application requires cybergraphics.library V40+; the tested version is 42.7. Close other ZZ9000 Core1 applications before launching, including when selecting CPU mode. The release does not install or change firmware, drivers or startup files.
 
@@ -94,7 +94,33 @@ The [SDL2 AmigaOS3 SDK](https://github.com/SkiltonUSA/SDL2-AmigaOS3) contains ou
 - Clipped window drawing that respects movement, overlapping windows and partial update rectangles.
 - Named public-screen selection, used by the demo for Workbench and temporary true-colour screens.
 
-The application sends bounded Mandelbrot jobs to the Cortex-A9. The 68k receives validated results, maps them to colours and uses SDL2 to display them. The standalone demo embeds both processor programs; the developer build also exposes MCP hooks and checkpoints.
+In **0.4 direct mode**, the Cortex-A9 computes and colours the whole frame in owned ZZ9000 RAM. It then copies the finished image locally into a P96-owned bitmap. The 68k requests an on-card window blit and updates the statistics after presentation. **The image array is not read back to the 68060 during normal direct rendering.** SDL2 still handles the window, input and UI. Workbench/16-bit modes preserve the older per-tile readback path; CPU mode remains a reference implementation.
+
+The standalone demo embeds both processor programs; the developer build also exposes MCP hooks and checkpoints. P96/Layers manages clipping and obscured-window refresh. Commands and UI still use Zorro III; this is not a zero-bus-traffic or tear-free page-flip claim.
+
+## New findings: direct display in 0.4
+
+**The ZZ9000 can keep the computed image on the card through presentation.** The new demo completes a frame before displaying it and updating its statistics, while retaining the previous image during rendering.
+
+Five-run medians on the physical A4000TX, the same **320×240** default view with 128 iterations, and the same temporary **640×480 / 32-bit** RTG screen:
+
+| Rendering path | Complete frame |
+| --- | ---: |
+| 0.3 ARM: tile readback, 68k colour conversion and SDL drawing | 3.738 s |
+| **0.4 ARM: complete frame and colours on the ZZ9000** | **1.808 s** |
+| 0.3 68060 reference on the same screen | 4.318 s |
+
+**2.07× faster than the old ARM path; 51.6% less elapsed time.** The final local image copy takes **13.524 ms**. The fractal kernel, SDL2 SDK 0.2.0, firmware and ARM cache/MMU policy are unchanged. These gains come from removing per-tile host round trips, host colour conversion and image readback from the direct path.
+
+A separate [framebuffer bandwidth test](amiga/framebuffer_bench/README.md) measured ARM-local 320×240 copies at **22.39 MB/s**, versus **6.46 MB/s** for 68060 copies across Zorro III. This establishes the display path, not video decoding performance; the video project remains parked.
+
+The launcher reserves **1 MiB of owned ZZ9000 Fast RAM**, verifies address mapping at runtime and holds the P96 bitmap lock only for the short completed-frame copy. The whole frame has a bounded two-minute deadline. Cancellation and quit while paused still work, and Core1 is stopped before any display/shared allocation is released. No fixed DDR allocation or firmware modification is introduced.
+
+Validation covered all **76,800 iteration counts and true-colour display pixels**, independent reference comparisons, zoom/pan/256 iterations, a **10.122-second** deeper render, CPU and fallback display modes, iconified rendering/restore, overlap, window movement, pause/cancel and clean shutdown. The installed standalone separately passed ARM/CPU rendering, A/C/Q input and clean Core1 return. **45 native tests** and the MCP smoke suite passed; native and hardware evidence are recorded separately.
+
+[Architecture and timing details](docs/amiga-sdl-fractal.md#04-direct-completed-frame-presentation-2026-10-09) · [Raw results and checksums](amiga/records/2026-10-09/sdl-direct)
+
+![SDL ZZFractal 0.4 Direct on the A4000TX](amiga/records/2026-10-09/sdl-direct/standalone.png)
 
 ## Measured improvements: demo 0.2 to 0.3
 
@@ -132,7 +158,7 @@ Setup pins upstream Amiga DevBench and applies the included socket compatibility
 For the SDL fractal developer build, build the pinned SDK in the [SDL2 repository](https://github.com/SkiltonUSA/SDL2-AmigaOS3), then supply its local checkout:
 
 ```sh
-make amiga-sdl-fractal-build SDL2_SOURCE=/path/to/SDL2-AmigaOS3
+make amiga-sdl-fractal-direct-build SDL2_SOURCE=/path/to/SDL2-AmigaOS3
 make test-amiga-sdl-fractal
 make test-amiga-fractal
 ```

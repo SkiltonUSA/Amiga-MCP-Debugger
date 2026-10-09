@@ -1,0 +1,17 @@
+test_bounds_and_sequence_exhaustion (test_compute.ComputeTests.test_bounds_and_sequence_exhaustion) ... ok
+test_mismatched_generation_is_fatal (test_compute.ComputeTests.test_mismatched_generation_is_fatal) ... ok
+test_old_data_and_checksum_do_not_validate_new_request (test_compute.ComputeTests.test_old_data_and_checksum_do_not_validate_new_request) ... ok
+test_persistent_corruption_fails_closed (test_compute.ComputeTests.test_persistent_corruption_fails_closed) ... ok
+test_timeout_preserves_owned_request_until_shutdown (test_compute.ComputeTests.test_timeout_preserves_owned_request_until_shutdown) ... ok
+test_timing_metadata_is_covered_by_integrity (test_compute.ComputeTests.test_timing_metadata_is_covered_by_integrity) ... ok
+test_visibility_recheck_keeps_request_owned (test_compute.ComputeTests.test_visibility_recheck_keeps_request_owned) ... ok
+test_worker_transfer_cancel_drain_and_clock (test_compute.ComputeTests.test_worker_transfer_cancel_drain_and_clock) ... ok
+test_direct_metadata_integrity (test_direct.DirectTests.test_direct_metadata_integrity) ... ok
+test_full_frame_cancel_while_paused_and_restart (test_direct.DirectTests.test_full_frame_cancel_while_paused_and_restart) ... ok
+test_full_frame_counts_colours_hash_and_legacy_commands (test_direct.DirectTests.test_full_frame_counts_colours_hash_and_legacy_commands) ... ok
+test_full_frame_deadline_keeps_long_render_owned (test_direct.DirectTests.test_full_frame_deadline_keeps_long_render_owned) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.041s
+
+OK

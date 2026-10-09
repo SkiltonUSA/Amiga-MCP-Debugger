@@ -1,0 +1,37 @@
+{
+  "build_id": 771083308,
+  "source_identity_sha256": "2df5cc2ca8abcb029cf56bd674efcd0a962de144c893024ffb88d3ccbe25b647",
+  "image_bytes": 6924,
+  "application": "SDLZZFractal",
+  "standalone_release": false,
+  "relocations": [
+    6680,
+    6684,
+    6688,
+    6692
+  ],
+  "entry": 0,
+  "arm_execution_verified": false,
+  "files": {
+    "zzarm.elf": "3eb0543537842e452a2078673f972b52ce2c300b244f0a79815473657260fa10",
+    "sdlzzfractal": "d94a993b6d079018c52a5473be9b60a8814cba7911db029aa4169c379e113568",
+    "zz_payload.h": "b112c7d06ab283d93847db7afe2d9d67d026fa20df85e6dc6e93106fb1ce8bfa",
+    "fractal-points.json": "6a2dec10d59d4acb0c5b5fda37bcaa05159786c7c18fb19538e858efde073dfb"
+  },
+  "version": "0.4",
+  "direct_frame": true,
+  "sdl": {
+    "repository": "https://github.com/SkiltonUSA/SDL2-AmigaOS3",
+    "tag": "v0.2.0",
+    "library_sha256": "bf90c1f12536df97bfc85e838cc2fa0047fc23f37d5128dbb89bb38dddec386e"
+  },
+  "optimization": {
+    "arm_worker": "-O1",
+    "arm_kernel": "-O2",
+    "arm_step_budget": 512,
+    "row_checkpoints": true,
+    "work_slice_us": 2000,
+    "yield_us": 1000,
+    "integrity": "TIM3 request and timing bound FNV-1a"
+  }
+}

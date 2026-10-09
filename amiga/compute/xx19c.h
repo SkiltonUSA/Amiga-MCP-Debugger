@@ -4,11 +4,12 @@
 /* Cooperative, one-job transport over the launcher's OWNED memory.
  * No allocation, hardware registers, SDL, or OS calls. Caller owns lifetime.
  * The first typed workload is a Mandelbrot tile; this is not arbitrary RPC. */
-enum zc_status { ZC_ERROR=-1, ZC_WAIT=0, ZC_TILE=1, ZC_DISCARDED=2, ZC_CLOCK=3 };
+enum zc_status { ZC_ERROR=-1, ZC_WAIT=0, ZC_TILE=1, ZC_DISCARDED=2, ZC_CLOCK=3, ZC_FRAME=4, ZC_PRESENT=5 };
 struct zc_result {
     uint16_t pixels[FF_PIXELS];
     uint64_t compute_ticks, stamp;
     uint32_t control, roundtrip_us, transfer_us;
+    uint32_t frame_hash, colour_ticks, copy_ticks;
 };
 struct zc_client {
     volatile uint8_t *mem;

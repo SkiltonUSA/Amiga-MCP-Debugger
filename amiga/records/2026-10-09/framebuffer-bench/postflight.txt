@@ -1,0 +1,9 @@
+2026-10-09 physical postflight
+Only Workbench Screen remained (1920x800, 8bpp).
+No benchmark CLI remained in Status FULL.
+Sixies.ARM.Debug.Owner port was absent; AMIGABRIDGE remained present.
+ZZTemperature ONCE returned 58.3 C.
+RAM:ZZFrameBench was deleted and confirmed absent.
+Temporary Mac HTTP server on 55937 stopped; helper build container stopped.
+Bounds test passed under AddressSanitizer/UndefinedBehaviorSanitizer.
+No persistent Amiga files changed. No reboot or firmware change.

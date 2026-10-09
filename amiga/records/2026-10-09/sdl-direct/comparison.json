@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-09",
+  "width": 320,
+  "height": 240,
+  "iterations": 128,
+  "storage_bits": 32,
+  "old_version": "0.3",
+  "new_version": "0.4",
+  "median_runs": 5,
+  "old_arm_wall_us": 3737539,
+  "direct_arm_wall_us": 1807719,
+  "speedup": 2.0675442366872283,
+  "reduction_percent": 51.63344114937664,
+  "copy_us": 13524,
+  "kernel_changed": false,
+  "SDL_library_changed": false,
+  "firmware_changed": false,
+  "cache_policy_changed": false,
+  "standalone_sha256": "78bd40cfa8ee93cb1c28c8726b17f67dbc31baafa240cebf9773012e367abb8a"
+}

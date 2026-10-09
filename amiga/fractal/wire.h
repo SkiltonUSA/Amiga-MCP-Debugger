@@ -15,6 +15,27 @@
 #define FF_DONE 1u
 #define FF_CANCELLED 2u
 #define FF_INVALID 3u
+#ifdef FF_DIRECT
+/* Full-frame storage INSIDE the enlarged Exec-owned allocation. */
+#define FF_FRAME_COUNTS 0x20000u
+#define FF_FRAME_RGB 0x50000u
+#define FF_FRAME_DONE 5u
+#define FF_PRESENT_DONE 6u
+#if FF_FRAME_COUNTS + FF_WIDTH*FF_HEIGHT*2 > FF_FRAME_RGB || FF_FRAME_RGB + FF_WIDTH*FF_HEIGHT*4 > ZZ_STACK_TOP - 16384
+#error Direct frame overlaps private allocation regions
+#endif
+static inline uint32_t ff_rgb(uint16_t count,uint32_t limit)
+{
+    uint32_t c=count>=limit?0:1+(count*3)%31;
+    return c?((c*7)<<16)|((c*3)<<8)|(255-c*7):0;
+}
+static inline uint32_t ff_direct_hash(uint32_t h,uint32_t frame,uint32_t colour,uint32_t copy)
+{
+    h=ff_hash(ff_hash(h,(uint16_t)(frame>>16)),(uint16_t)frame);
+    h=ff_hash(ff_hash(h,(uint16_t)(colour>>16)),(uint16_t)colour);
+    return ff_hash(ff_hash(h,(uint16_t)(copy>>16)),(uint16_t)copy);
+}
+#endif
 /* Bind integrity to the request as well as pixels; stale data and its old
  * checksum must never validate as a new tile. Each word is hashed big-endian. */
 static inline uint32_t ff_result_seed(uint32_t session,uint32_t seq,uint32_t gen,uint32_t tx,uint32_t ty)

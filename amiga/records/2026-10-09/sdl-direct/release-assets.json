@@ -1,0 +1,26 @@
+{
+  "SDLZZFractal": {
+    "sha256": "78bd40cfa8ee93cb1c28c8726b17f67dbc31baafa240cebf9773012e367abb8a",
+    "bytes": 1160520
+  },
+  "ReadMe.txt": {
+    "sha256": "f6876d7d3b0e6416bed486184e4430875f5761bfc57cc46f189e670077505ead",
+    "bytes": 3001
+  },
+  "build-info.json": {
+    "sha256": "1dfc86620e95f8f2ec6f5b49924bd66ecae2e31fcfec5df1e0866e12ff9c4b4d",
+    "bytes": 1168
+  },
+  "SDLZZFractal-0.4-XX19c.zip": {
+    "sha256": "defe6f394d1584be00bee0667ae1ce427a0930301a3ba4ebd5edc951234a5e96",
+    "bytes": 344374
+  },
+  "SDLZZFractal-0.4-XX19c.lha": {
+    "sha256": "927217868917ae429cce1907bf04362d82b2276db32f8672ad3f1d5cfac5a035",
+    "bytes": 366733
+  },
+  "SHA256SUMS.txt": {
+    "sha256": "883adcb6bee34d841eb6de6770fe937d76723fb162092448ec1d4158e413200d",
+    "bytes": 424
+  }
+}

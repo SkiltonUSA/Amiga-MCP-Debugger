@@ -5,6 +5,85 @@ the durable handoff for the development setup and installations in this branch.
 The user requested this GitHub backup. It preserves source, configuration and
 evidence; it is not a backup of the Amiga's disks or installed commercial games.
 
+## SDL ZZFractal 0.4 Direct (2026-10-09)
+
+Installed `SD032G:Dev/SDLZZFractal-0.4/SDLZZFractal` with Workbench tool/drawer
+icons, 131072-byte icon stack, instructions, build identity and notices.
+Version 0.3 is preserved. The new standalone executable SHA-256 is
+`78bd40cfa8ee93cb1c28c8726b17f67dbc31baafa240cebf9773012e367abb8a`,
+MD5 `f76b69c6a9406840b73c2f80ce327486`; all nine installed file MD5s matched.
+
+The app starts on its own temporary 640x480 BGRA/32-bit RTG screen. Core1
+computes/colours a complete 320x240 frame in a 1 MiB owned ZZ9000 RAM block,
+then locally copies it to a briefly locked P96 bitmap. A P96/Layers blit
+presents it; only afterward does the 68k update statistics. Normal direct
+rendering does not read the image array back over Zorro III. F5/16-bit modes
+retain the older tiled SDL path. SDL2 SDK 0.2.0, Q14 kernel, firmware and
+cache/MMU policy are unchanged. See `docs/amiga-sdl-fractal.md` for ownership,
+nonce verification, teardown, timings and display limitations.
+
+Five-run medians on the same 32-bit screen: old 0.3 ARM 3.738 s, direct ARM
+1.808 s (2.07x, 51.6% reduction), old CPU 4.318 s. Local image copy: 13.524 ms.
+Whole-frame counts and true-colour display pixels matched the reference.
+Zoom/pan/256 iterations, a 10.122 s deeper render, fallback screens, iconified
+render/restore, overlap/uncover, window move, cancellation and quit while
+paused passed. The direct frame deadline is 120 seconds; legacy tiles keep
+ten seconds. Twelve native transport/frame tests, 23 ARM tests, ten fractal
+tests, MCP smoke and all affected build variants passed.
+
+The exact installed standalone passed CLI startup, ARM and CPU hashes,
+keyboard A/C/Q, RET1 and exit 0. It was then restarted and **left open for the
+user**, holding Core1 and the owner port. Press Q/close it before launching
+another ARM application. Its current log is `RAM:SDLZZFractal04.log`.
+Workbench startup via the icon was not separately repeated for 0.4.
+Temporary test binaries in `RAM:ZZFractalDirect` were removed. Records and
+standalone screenshot: `amiga/records/2026-10-09/sdl-direct/`. GitHub source and release:
+https://github.com/SkiltonUSA/Amiga-MCP-Debugger/releases/tag/fractal-v0.4.0
+The release preserves the exact installed executable. The transfer server was
+stopped; LHA integrity and fresh extraction passed on the Amiga, with all
+ten members matching the ZIP/distribution contents.
+
+## Direct framebuffer bandwidth test (2026-10-09)
+
+At the user's request, built and physically ran `ZZFrameBench`, comparing
+ARM-local copies into an active P96 framebuffer with 68060 copies across
+Zorro III. This was display-only testing; the decoder/video project remains
+parked. Preflight found only Workbench, no debugger clients, no Core1 app.
+
+Temporary 640x480, 32-bit P96 screen; tests copied 320x240 rectangles and
+640x480 full frames. Median of 60 timed copies per path/size:
+
+| Size | ARM-local copy | ARM payload | 68060 → ZZ9000 | Zorro payload |
+| --- | ---: | ---: | ---: | ---: |
+| 320x240 | 13.723 ms | 22.39 MB/s | 47.527 ms | 6.46 MB/s |
+| 640x480 | 59.316 ms | 20.72 MB/s | 190.933 ms | 6.44 MB/s |
+
+All 240 timed copies passed; eight full-frame readback checks had zero pixel
+mismatches. Each ARM copy checked nonce sentinels before writing to the
+currently locked P96 buffer. ARM MMU/I-cache/D-cache stayed off. ARM timer
+rate was estimated over two seconds. Host ARM submission/wait medians were
+33.685 and 67.379 ms, including coarse 20 ms polling but excluding locking,
+sentinel setup, logging and deliberate inter-frame yielding. **No decoded,
+sustained or tear-free frame-rate claim follows from these timings.**
+
+The 320x240 copy stage fits the 40 ms budget for 25 fps; the measured 640x480
+copy does not. This validates the direct framebuffer path and removes any
+claim that a full frame must make a round trip through Amiga RAM. It does
+not establish peak card bandwidth or fix the measured decoder bottleneck.
+
+First development run rejected an incompletely published command and exited
+cleanly. Fixed host payload-before-sequence publication; second run completed
+with ARM epilogue `RET1`, synchronous idle reset, launcher exit 0, owner port
+removed and Workbench restored. Temporary RAM files and Mac HTTP server were
+removed after capture. No persistent Amiga installation or firmware change.
+
+Sources/instructions: `amiga/framebuffer_bench/`; build/analysis scripts:
+`scripts/build_framebuffer_bench.py`, `scripts/analyze_framebuffer_bench.py`.
+Records: `amiga/records/2026-10-09/framebuffer-bench/`. The shared launcher
+has a benchmark-only cleanup hook after Core1 reset so timeout/error paths
+cannot unlock/free a buffer still in use. All ARM/MCP regression checks,
+component/default-launcher builds and native bounds/sanitizer checks passed.
+
 ## GitHub backup (2026-10-09)
 
 Backed up current Amiga development work to the dedicated public repository

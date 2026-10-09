@@ -32,6 +32,9 @@ void zz_worker(volatile uint8_t *base)
 {
     uint32_t sctlr,mpidr,midr,session,seq=0,gen=0,stage=0,watch[6],row=0,result=0,i,idle_ack=0;
     uint16_t pixels[FF_PIXELS];
+#ifdef FF_DIRECT
+    uint32_t kind=0,frame_gen=0,frame_hash=0,colour_ticks=0,copy_ticks=0;
+#endif
 #ifdef FF_TIMING
     uint64_t busy_ticks=0;
 #endif
@@ -73,6 +76,10 @@ void zz_worker(volatile uint8_t *base)
 #ifdef FF_TIMING
                 busy_ticks=0;
 #endif
+#ifdef FF_DIRECT
+                kind=ad_get(base,FF_REQ+36);copy_ticks=0;
+                if(kind==2){frame_gen=0;frame_hash=0;colour_ticks=0;}
+#endif
                 view.cx=(int32_t)ad_get(base,FF_REQ+12);view.cy=(int32_t)ad_get(base,FF_REQ+16);
                 view.step=(int32_t)ad_get(base,FF_REQ+20);view.limit=ad_get(base,FF_REQ+24);
                 watch[0]=gen;watch[1]=ad_get(base,FF_REQ+28);watch[2]=ad_get(base,FF_REQ+32);
@@ -82,7 +89,14 @@ void zz_worker(volatile uint8_t *base)
                 else if(ad_get(base,FF_CANCEL)!=gen) {result=FF_CANCELLED;stage=5;}
                 #ifdef FF_TIMING
                 else if(ad_get(base,FF_REQ+36)==1) {result=4;stage=5;}
+#ifdef FF_DIRECT
+                else if(kind==3) {
+                    if(frame_gen==gen)stage=6;else {result=FF_INVALID;stage=5;}
+                }
+                else if(kind>3 || (kind==2&&(watch[1]||watch[2]))) {result=FF_INVALID;stage=5;}
+#else
                 else if(ad_get(base,FF_REQ+36)!=0) {result=FF_INVALID;stage=5;}
+#endif
 #endif
                 else {ff_begin(&cursor,&view,watch[1],watch[2]);row=0;stage=1;}
             } else {
@@ -114,17 +128,87 @@ void zz_worker(volatile uint8_t *base)
         if(stage==3 && core.state==AD_RUNNING) {
             watch[4]=cursor.pixel;ad_enter(&core,3,watch,6);stage=4;
         }
-        if(stage==4 && core.state==AD_RUNNING) {result=FF_DONE;stage=5;}
+        if(stage==4 && core.state==AD_RUNNING) {
+#ifdef FF_DIRECT
+            if(kind==2) {
+                uint64_t before=timer_ticks();
+                uint32_t *rgb=(uint32_t *)(base+FF_FRAME_RGB);
+                for(i=0;i<FF_PIXELS;i++) {
+                    uint32_t at=(watch[2]+i/FF_TW)*FF_WIDTH+watch[1]+i%FF_TW;
+                    base[FF_FRAME_COUNTS+at*2]=(uint8_t)(pixels[i]>>8);
+                    base[FF_FRAME_COUNTS+at*2+1]=(uint8_t)pixels[i];
+                    /* Native little-endian stores give P96 BGRA byte order. */
+                    rgb[at]=ff_rgb(pixels[i],view.limit);
+                }
+                colour_ticks+=(uint32_t)(timer_ticks()-before);
+                watch[1]+=FF_TW;
+                if(watch[1]==FF_WIDTH){watch[1]=0;watch[2]+=FF_TH;}
+                if(watch[2]<FF_HEIGHT) {
+                    ff_begin(&cursor,&view,watch[1],watch[2]);row=0;stage=1;
+                } else {
+                    before=timer_ticks();frame_hash=2166136261u;
+                    for(i=0;i<FF_WIDTH*FF_HEIGHT;i++)frame_hash=ff_hash(frame_hash,
+                        ((uint16_t)base[FF_FRAME_COUNTS+i*2]<<8)|base[FF_FRAME_COUNTS+i*2+1]);
+                    colour_ticks+=(uint32_t)(timer_ticks()-before);
+                    frame_gen=gen;result=FF_FRAME_DONE;stage=5;
+                }
+            } else
+#endif
+            {result=FF_DONE;stage=5;}
+        }
+#ifdef FF_DIRECT
+        if(stage==6 && core.state==AD_RUNNING) {
+            uint32_t addr=ad_get(base,FF_REQ+40),pitch=ad_get(base,FF_REQ+44),nonce=ad_get(base,FF_REQ+48);
+            result=FF_INVALID;
+#ifndef FF_HOST_TEST
+            if(!(addr&3u)&&!(pitch&3u)&&pitch>=FF_WIDTH*4&&pitch<=8192&&
+               addr>=0x200000u&&addr<=0x41f0000u-FF_HEIGHT*pitch&&
+               ad_get((volatile uint8_t *)addr,0)==nonce&&
+               ad_get((volatile uint8_t *)addr,(FF_HEIGHT-1)*pitch+(FF_WIDTH-1)*4)==(nonce^0x31415926u)) {
+                uint32_t y,x;const uint32_t *src=(const uint32_t *)(base+FF_FRAME_RGB);
+                uint64_t before=timer_ticks();result=FF_PRESENT_DONE;
+                for(y=0;y<FF_HEIGHT;y++) {
+                    volatile uint32_t *dst=(volatile uint32_t *)(addr+y*pitch);
+                    if(ad_get(base,ZZ_STOP)||ad_get(base,FF_CANCEL)!=gen){result=FF_CANCELLED;break;}
+                    for(x=0;x<FF_WIDTH;x+=8) {
+                        dst[x]=src[x];dst[x+1]=src[x+1];dst[x+2]=src[x+2];dst[x+3]=src[x+3];
+                        dst[x+4]=src[x+4];dst[x+5]=src[x+5];dst[x+6]=src[x+6];dst[x+7]=src[x+7];
+                    }
+                    src+=FF_WIDTH;
+                }
+                barrier(0);copy_ticks=(uint32_t)(timer_ticks()-before);
+            }
+#else
+            (void)addr;(void)pitch;(void)nonce;
+#endif
+            stage=5;
+        }
+#endif
         if(stage==5) {
             if(result==FF_DONE)for(i=0;i<FF_PIXELS;i++) {
                 base[FF_DATA+i*2]=(uint8_t)(pixels[i]>>8);base[FF_DATA+i*2+1]=(uint8_t)pixels[i];
             }
             ad_put(base,FF_RES+4,result);ad_put(base,FF_RES+8,gen);
-            ad_put(base,FF_RES+12,watch[1]);ad_put(base,FF_RES+16,watch[2]);
+            ad_put(base,FF_RES+12,
+#ifdef FF_DIRECT
+                kind>=2?0:
+#endif
+                watch[1]);
+            ad_put(base,FF_RES+16,
+#ifdef FF_DIRECT
+                kind>=2?0:
+#endif
+                watch[2]);
             #ifdef FF_TIMING
             {
                 uint64_t stamp=timer_ticks();uint32_t control=timer_control();
-                uint32_t hash=ff_timing_hash(ff_result_seed(session,seq,gen,watch[1],watch[2]),busy_ticks,stamp,control);
+                uint32_t hash=ff_timing_hash(ff_result_seed(session,seq,gen,ad_get(base,FF_RES+12),ad_get(base,FF_RES+16)),busy_ticks,stamp,control);
+#ifdef FF_DIRECT
+                if(kind>=2) {
+                    hash=ff_direct_hash(hash,frame_hash,colour_ticks,copy_ticks);
+                    ad_put(base,FF_RES+48,frame_hash);ad_put(base,FF_RES+52,colour_ticks);ad_put(base,FF_RES+56,copy_ticks);
+                }
+#endif
                 if(result==FF_DONE)for(i=0;i<FF_PIXELS;i++)hash=ff_hash(hash,pixels[i]);
                 ad_put(base,FF_RES+20,(uint32_t)busy_ticks);
                 ad_put(base,FF_RES+24,(uint32_t)(busy_ticks>>32));

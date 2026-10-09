@@ -198,6 +198,12 @@ has a roughly five-minute polling limit; IPC can extend elapsed duration.
 
 ### Memory ownership and cache contract
 
+The display-only [framebuffer benchmark](../amiga/framebuffer_bench/README.md)
+reuses this launcher with a 4 MiB private allocation and P96-owned display
+storage. Its optional cleanup callback runs after synchronous Core1 reset;
+it keeps a framebuffer locked on error until ARM access has been stopped.
+The default debugger and fractal allocation/lifecycle remain unchanged.
+
 - The launcher finds the ZZ9000 graphics and Fast RAM ConfigDev entries and
   uses **Exec `AllocAbs` on a real free chunk**, under scheduler exclusion,
   to reserve 128 KiB in the ZZ9000 Fast RAM bank. It never writes an unallocated

@@ -1,9 +1,15 @@
-# SDL ZZFractal 0.3
+# SDL ZZFractal 0.4 Direct
 
 An interactive SDL2 frontend to the existing owned-memory XX19c Mandelbrot
-worker. The 68k runs SDL and AmigaOS; the ZZ9000 Core1 computes bounded tiles.
+worker. The 68k runs SDL and AmigaOS. In the 0.4 direct variant, ZZ9000 Core1
+computes and colours a complete frame on the card before presentation.
+The original per-tile readback path remains available for CPU/legacy screens.
 A developer build exposes the existing cooperative debugger and an application
 hook. The standalone release embeds the worker and needs no Mac or bridge.
+
+See [0.4 architecture and measurements](#04-direct-completed-frame-presentation-2026-10-09)
+for the new default 32-bit screen and on-card buffer path. Earlier release
+measurements below are retained as historical comparisons.
 
 ## Controls and screens
 
@@ -270,3 +276,89 @@ Workbench startup and its Start confirmation were exercised on the installed
 copy. SDK 0.2.0 remains the dependency; this is an application-only release.
 
 ![Installed SDL ZZFractal 0.3](../amiga/records/2026-10-08/sdl-performance/standalone-workbench.png)
+
+## 0.4 direct completed-frame presentation (2026-10-09)
+
+Build this application variant with `make amiga-sdl-fractal-direct-build` or
+`make amiga-sdl-fractal-direct-release`, supplying `SDL2_SOURCE` and the usual
+`ZZ9000_BUILD_ARGS`. The existing build targets keep the 0.3 tiled frontend.
+The direct variant opens its own temporary 640x480 RTG screen with BGRA
+32-bit storage. F5 selects Workbench, F6 the old 16-bit presentation path,
+and F7 returns to direct mode. CPU rendering remains the tiled reference.
+
+The path is now:
+
+1. The 68k submits one full-frame request containing the view and generation.
+2. Core1 computes all tiles, retaining the same Q14 kernel and cooperative row
+   checkpoints. Counts, BGRA colours and the complete-frame checksum are
+   generated in a **1 MiB Exec-owned ZZ9000 Fast RAM allocation**.
+3. Only the small response and counters return to the 68k. It briefly locks a
+   P96-owned 320x240 on-card bitmap and supplies its runtime address/pitch.
+4. Core1 verifies two fresh nonce words at the mapped bitmap boundaries and
+   copies the completed colour image locally. The 68k releases the lock,
+   requests a same-format `BltBitMapRastPort`, and waits for the blit to finish.
+5. The statistics text updates after the completed frame is presented.
+
+No iteration-count or colour-image array is read back by the 68k during normal
+32-bit ARM rendering. The `save` and `pixels` developer hooks explicitly read
+back data for validation; measurements are captured before these checks.
+The previous completed frame stays visible while a new one is computed.
+SDL still owns input, the window and UI; its SDK 0.2.0 library is unchanged.
+This does not introduce a generic SDL ARM backend or change the fractal math.
+
+The long calculation never holds a P96 bitmap lock. The short local-copy
+transaction has a 400 ms host timeout; on failure its allocation and lock
+remain alive until the launcher synchronously resets Core1. Frontend cleanup
+runs only after that reset. The shared frame fits below the reserved stack;
+no DDR address is treated as a free global allocation. Existing XX19c mapping
+bootstrap, single-Core1 ownership, cache-off/MMU-off execution, cancellation
+while paused and cooperative return remain mandatory.
+
+A full-frame request has a 120-second bound because it represents 150 legacy
+tiles; old tile requests retain their ten-second limit. Cancellation and
+AmigaOS event processing remain live during computation. The display copy is
+not a new debugger checkpoint or an instruction-stepping facility.
+
+P96/Layers owns clipping and saved obscured-window areas. Commands, UI and OS
+refresh activity still use Zorro III. This is completed-frame presentation,
+not a claim of tear-free vsync, page flipping, zero bus traffic, or any new
+firmware/3D-engine feature. No firmware or SDL library was replaced.
+
+### Measured on the A4000TX
+
+Same 320x240 default Q14 view, 128 iterations, 640x480 RTG screen with 32-bit
+storage, five complete renders per result; independently run developer builds.
+
+| Path | Median complete frame |
+| --- | ---: |
+| 0.3 ARM, tile readback and SDL drawing | 3.738 s |
+| 0.4 ARM, complete on-card frame | 1.808 s |
+| 0.3 68060, tiled reference on the same screen | 4.318 s |
+
+The direct ARM path is **2.07x as fast / 51.6% less wall time** than 0.3 on the
+same screen. Its ARM compute estimate is 1.617 s; colour plus whole-frame hash
+is 74.1 ms, and the local copy is 13.524 ms. Counters overlap wall time. These
+are application-pipeline gains, not an SDL library or new kernel optimization.
+The older Workbench ARM path was also rerun: 3.849 s median.
+
+Physical acceptance verified complete 76,800-count arrays against an independent
+Python Q14 oracle for default, zoom, pan, 256 iterations, a deeper 256-iteration
+view, CPU and legacy screen paths. True-colour displayed-image checks covered
+all 76,800 pixels, with zero mismatches (16-bit mode allows quantization).
+The deeper direct view took 10.122 s and passed, exercising the extended frame
+timeout. Five timed default repeats preceded validation readback. Idle counters
+remained stable; iconified rendering/restore, overlap/uncover, movement,
+cancel while paused, rapid cancel/restart and quit while paused passed.
+Core1 returned RET1, the launcher exited 0 and Workbench was restored.
+
+Twelve native transport/frame tests passed with address/undefined-behavior
+sanitizers, alongside 23 ARM SDK tests, ten fractal tests and the MCP smoke
+suite. ARM/68k components, the default launcher, native fractal, legacy SDL,
+direct developer and standalone variants built successfully. Native results
+are separate from the physical acceptance above.
+
+The standalone executable and 131072-byte-stack icon are installed separately
+at `SD032G:Dev/SDLZZFractal-0.4/SDLZZFractal`; 0.3 is preserved. Build identity,
+checksums, notices and instructions are in `amiga/distribution/SDLZZFractal-0.4/`.
+Evidence: `amiga/records/2026-10-09/sdl-direct/`. The executable, LHA/ZIP
+packages and checksums accompany release `fractal-v0.4.0`.

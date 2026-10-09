@@ -51,17 +51,20 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--fractal",action="store_true",help="Build the Workbench Mandelbrot application")
     p.add_argument("--sdl",action="store_true",help="Build the interactive SDL2 frontend and timed worker (implies --fractal)")
+    p.add_argument("--direct",action="store_true",help="ARM complete-frame colour and on-card display (implies --sdl)")
     p.add_argument("--sdl-source",type=Path,help="Pinned SDL2-AmigaOS3 SDK source checkout")
     p.add_argument("--release",action="store_true",help="Standalone distribution build (requires --fractal)")
     p.add_argument("--container-command",help="JSON container argv; defaults to workspace settings")
     p.add_argument("--clang",default="clang")
     p.add_argument("--ld",default=shutil.which("ld.lld") or "/opt/homebrew/opt/lld/bin/ld.lld")
     a=p.parse_args()
+    if a.direct:a.sdl=True
     if a.sdl:a.fractal=True
     if a.release and not a.fractal:p.error("--release requires --fractal")
     if a.fractal:OUT=ROOT/".context/amiga/fractal"
     if a.release:OUT=ROOT/".context/amiga/fractal-release"
     if a.sdl:OUT=ROOT/(".context/amiga/sdl-fractal-release" if a.release else ".context/amiga/sdl-fractal")
+    if a.direct:OUT=ROOT/(".context/amiga/sdl-fractal-direct-release" if a.release else ".context/amiga/sdl-fractal-direct")
     OUT.mkdir(parents=True,exist_ok=True)
     cc=shutil.which(a.clang);ld=shutil.which(a.ld)
     if not cc or not ld:raise SystemExit("Clang ARM target and LLVM ld.lld required")
@@ -70,6 +73,7 @@ def main():
            "-Wall","-Wextra","-Werror","-I",str(SDK),"-I",str(SDK/"zz9000"),
            "-I",str(ROOT/"amiga/fractal")]
     if a.sdl:flags += ["-DFF_TIMING"]
+    if a.direct:flags += ["-DFF_DIRECT","-DZZ_BLOCK_SIZE=0x100000"]
     sources=[SDK/"core.c",SDK/"protocol.h",*sorted((SDK/"zz9000").glob("*"))]
     if a.fractal:sources+=sorted((ROOT/"amiga/fractal").glob("*"))
     if a.sdl:sources += [*sorted((ROOT/"amiga/sdl_fractal").glob("*.c")),*sorted((ROOT/"amiga/compute").glob("*.[ch]"))]
@@ -78,6 +82,7 @@ def main():
     for tool in (cc,ld):identity.update(subprocess.check_output([tool,"--version"]))
     identity.update(b"fractal-kernel-O2-row512-v1" if a.fractal else b"")
     identity.update(" ".join(flags[:flags.index("-I")]+(["-DFF_TIMING"] if a.sdl else [])).encode()) # Exclude workspace include paths.
+    if a.direct:identity.update(b"direct-frame-v1-block1MiB")
     if a.release:identity.update(b"standalone-release-v1")
     if a.sdl:identity.update(b"sdl-fractal-timing-v1")
     build=int.from_bytes(identity.digest()[:4],"big") or 1
@@ -128,10 +133,11 @@ def main():
         name="SDLZZFractal" if a.release else "sdlzzfractal"
         common=[*prefix,"m68k-amigaos-gcc","-std=c99","-noixemul","-m68030","-O2",
             "-Wall","-Wextra","-Werror","-D__AMIGAOS3__","-DZZ_FRACTAL",
-            '-DZZ_APP_NAME="SDLZZFractal"','-DZZ_APP_VERSION="0.3"','-DZZ_CLIENT_NAME="sdlfractal"',
+            '-DZZ_APP_NAME="SDLZZFractal"',f'-DZZ_APP_VERSION="{"0.4" if a.direct else "0.3"}"','-DZZ_CLIENT_NAME="sdlfractal"',
             "-DZZ_MIN_STACK=65536","-Iamiga/arm_debug","-Iamiga/arm_debug/zz9000",
             "-Iamiga/fractal","-Iamiga/compute","-I"+str(sdl_rel/"include"),
             "-I"+str(out_rel),"-I.tools/amiga-devbench/amiga-bridge/include"]
+        if a.direct:common += ["-DFF_DIRECT","-DFF_TIMING","-DZZ_BLOCK_SIZE=0x100000"]
         if a.release:common += ["-DZZ_RELEASE"]
         subprocess.run([*common,"-DIntuitionBase=ZZIntuitionBase","-c",
             "amiga/arm_debug/zz9000/launcher.c","-o",str(out_rel/"launcher.o")],check=True)
@@ -150,7 +156,7 @@ def main():
             "application":"ZZFractal" if a.fractal else "zzarm-debug","standalone_release":a.release,
             "relocations":rel,"entry":entry,"arm_execution_verified":False,
             "files":{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in (elf,binary,OUT/"zz_payload.h")}}
-    if a.sdl:record.update(application="SDLZZFractal",version="0.3",sdl=sdl_record,
+    if a.sdl:record.update(application="SDLZZFractal",version="0.4" if a.direct else "0.3",direct_frame=a.direct,sdl=sdl_record,
         optimization={"arm_worker":"-O1","arm_kernel":"-O2","arm_step_budget":512,
             "row_checkpoints":True,"work_slice_us":2000,"yield_us":1000,"integrity":"TIM3 request and timing bound FNV-1a"})
     if a.fractal:

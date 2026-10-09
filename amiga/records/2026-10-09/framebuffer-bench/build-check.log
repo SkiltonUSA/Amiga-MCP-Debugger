@@ -1,0 +1,14 @@
+{
+  "cache_policy": "ARM MMU/I-cache/D-cache off",
+  "sources": {
+    "amiga/framebuffer_bench/worker.c": "28c2ac3268e55e04eb2a12f32ecb2aab9929b66b7b875dee17557297b131e48a",
+    "amiga/framebuffer_bench/host.c": "02aa59a2fe2b6c5a0652df5587f44533b53e33083d998dffb48c293910cc7a8d",
+    "amiga/framebuffer_bench/wire.h": "73d13c0bca09426bd0205899cb19e25983ec3b232062becac7259d0e70fd3471",
+    "amiga/arm_debug/zz9000/launcher.c": "2d1b37de8e03411413f304dbebf9bebfbb97982c7742145b38d49f7be26250f4",
+    "amiga/arm_debug/zz9000/entry.S": "5a39a7684338659b9f90c622c1394e79b9af92d1ec55947a49ef66ea83950c01",
+    "scripts/build_framebuffer_bench.py": "6672b86af149274c643e1c7f2060ed8cc311309ca1b71af64d5d0e3e80ef4506"
+  },
+  "executable_sha256": "0641b76cc22e110fbb5e26009da995ff3af18d89049532628e171ae75427bb0f",
+  "executable_md5": "eb5e75422c9d4fea29a59ab33c92c761"
+}
+

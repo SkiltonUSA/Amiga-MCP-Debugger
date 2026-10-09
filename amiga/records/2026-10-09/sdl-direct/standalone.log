@@ -1,0 +1,18 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=1048576 nonce=85afae87
+BOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+SCHEDULER paced=1 work_us=2000 sleep_us=1000 cpu_steps=1024
+SCREEN request_storage=32 mode=50041303 mode_depth=32 width=640 height=480
+SCREEN bitmap_depth=32 bytes_per_pixel=4 format=12
+TIMER ticks_per_second=333338530 span_us=1017661 uncertainty_us=504 control=00000001 read_only=1
+DIRECT_FRAME hash=fb32f6c6 wall_us=1822883 arm_us=1616614 colour_us=73975 copy_us=13523 blit_us=1606 draw_us=53096
+SDL_INPUT key=99
+SDL_FRACTAL mode=CPU hash=fb32f6c6 elapsed_us=4056148 cpu_us=1715119 arm_us_est=0 transfer_us=0 colour_us=40150 draw_us=473481 roundtrip_us=0 rate=333338530 cx=-12288 cy=0 step=153 limit=128
+SDL_INPUT key=97
+DIRECT_FRAME hash=fb32f6c6 wall_us=1818394 arm_us=1616631 colour_us=73987 copy_us=13522 blit_us=2744 draw_us=47119
+SDL_INPUT key=113
+SDL_UI exit=0 renders=3 cancels=0 discarded=0
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+LAUNCHER exit=0; owned memory released

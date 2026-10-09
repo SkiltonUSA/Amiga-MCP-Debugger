@@ -23,8 +23,14 @@
 #include "bridge_client.h"
 #endif
 #include "zz_payload.h"
-#if defined(ZZ_FRACTAL) || defined(ZZ_VIDEO)
+#if defined(ZZ_FRACTAL) || defined(ZZ_VIDEO) || defined(ZZ_FB_BENCH)
 #define ZZ_APPLICATION
+#endif
+#ifdef ZZ_FB_BENCH
+void fb_cleanup(void); /* Runs only AFTER synchronous Core1 reset. */
+#endif
+#ifdef FF_DIRECT
+void ff_cleanup(void); /* Frontend/P96 resources outlive any ARM access. */
 #endif
 #ifdef ZZ_VIDEO
 int zv_arguments(int,char **);
@@ -219,7 +225,7 @@ int main(int argc,char **argv)
     if(!strcmp(mode,"MAP")){rc=0;goto done;}
     if(sizeof(zz_image)>ZZ_CONTROL)goto done;
     memset(mem,0,ZZ_BLOCK_SIZE);memcpy(mem,zz_image,sizeof(zz_image));
-    for(i=0;i<sizeof(zz_relocations)/sizeof(zz_relocations[0]);i++) {
+    for(i=0;i!=sizeof(zz_relocations)/sizeof(zz_relocations[0]);i++) {
         ULONG off=zz_relocations[i];
         if(off+4>sizeof(zz_image))goto done;
         leput(mem+off,leget(mem+off)+arm);
@@ -302,6 +308,12 @@ done:
         run_arm(0,0,0);
         if(!stopping)rc=20;
     }
+#ifdef ZZ_FB_BENCH
+    fb_cleanup();
+#endif
+#ifdef FF_DIRECT
+    ff_cleanup();
+#endif
     if(mem)FreeMem(mem,ZZ_BLOCK_SIZE);
     if(owner){RemPort(owner);DeleteMsgPort(owner);}
 #ifdef ZZ_APPLICATION

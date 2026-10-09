@@ -56,3 +56,10 @@ amiga-video-build:
 
 test-amiga-video:
 	.tools/amiga-venv/bin/python -m unittest discover -s tests/amiga/video -v
+
+.PHONY: amiga-sdl-fractal-direct-build amiga-sdl-fractal-direct-release
+amiga-sdl-fractal-direct-build:
+	python3 scripts/build_zz9000_debug.py --direct --sdl-source "$(SDL2_SOURCE)" $(ZZ9000_BUILD_ARGS)
+
+amiga-sdl-fractal-direct-release:
+	python3 scripts/build_zz9000_debug.py --direct --release --sdl-source "$(SDL2_SOURCE)" $(ZZ9000_BUILD_ARGS)

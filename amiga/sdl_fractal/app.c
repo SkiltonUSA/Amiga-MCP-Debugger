@@ -14,6 +14,14 @@
 #include <proto/cybergraphics.h>
 #include <cybergraphx/cybergraphics.h>
 #include <proto/wb.h>
+#ifdef FF_DIRECT
+#include <proto/Picasso96.h>
+#include <proto/expansion.h>
+#include <libraries/configvars.h>
+#define FF_WINDOW_TITLE "SDL ZZFractal 0.4 Direct"
+#else
+#define FF_WINDOW_TITLE "SDL ZZFractal 0.3"
+#endif
 #include "SDL.h"
 #include "xx19c.h"
 #ifndef ZZ_RELEASE
@@ -41,12 +49,98 @@ static struct {
     uint32_t sleep_us,loops,max_gap_us,last_loop,heartbeat_time,checksum_retries;
     uint64_t arm_ticks,clock_origin,clock_frequency;
     unsigned renders,cancels,discarded;
-    int active,arm,cpu_busy,quit,error,connected,verifying;
+    int active,arm,cpu_busy,quit,error,connected,verifying,initialized;
+#ifdef FF_DIRECT
+    struct BitMap *direct_bitmap;LONG direct_lock;
+    int direct,direct_started,direct_ready,direct_locked,counts_valid;
+    uint32_t direct_copy_us,direct_blit_us;
+#endif
 } app;
 static uint32_t now_us(void *u)
 {(void)u;return (uint32_t)((SDL_GetPerformanceCounter()-app.clock_origin)*1000000u/app.clock_frequency);}
 static uint32_t arm_us(void)
 {return app.rate?(uint32_t)(app.arm_ticks*1000000u/app.rate):0;}
+#ifdef FF_DIRECT
+static struct Window *native_window(void)
+{
+    struct Window *w;ULONG lock;
+    if(!app.window||!app.test_screen)return NULL;
+    lock=LockIBase(0);
+    for(w=app.test_screen->FirstWindow;w;w=w->NextWindow)
+        if(w->Title&&!strcmp((char *)w->Title,FF_WINDOW_TITLE))break;
+    UnlockIBase(lock);return w;
+}
+/* Called only after a completed request, or after the launcher resets Core1. */
+static void direct_free(void)
+{
+    if(app.direct_locked){p96UnlockBitMap(app.direct_bitmap,app.direct_lock);app.direct_locked=0;}
+    if(app.direct_bitmap){p96FreeBitMap(app.direct_bitmap);app.direct_bitmap=0;}
+    app.direct_ready=0;
+}
+static int direct_open(void)
+{
+    if(app.direct_bitmap)return 1;
+    if(!app.test_screen||app.screen_depth!=32||
+       p96GetBitMapAttr(app.test_screen->RastPort.BitMap,P96BMA_RGBFORMAT)!=RGBFB_B8G8R8A8)return 0;
+    app.direct_bitmap=p96AllocBitMap(FF_WIDTH,FF_HEIGHT,32,BMF_DISPLAYABLE,
+        app.test_screen->RastPort.BitMap,RGBFB_B8G8R8A8);
+    return app.direct_bitmap!=0;
+}
+static void direct_blit(void)
+{
+    struct Window *w=native_window();uint32_t before=now_us(0);
+    if(!w||!app.direct_ready)return;
+    /* Same-format on-card source. P96/Layers owns clipping and obscured areas. */
+    BltBitMapRastPort(app.direct_bitmap,0,0,w->RPort,40,44,FF_WIDTH,FF_HEIGHT,0xc0);
+    WaitBlit();
+    if(app.active)app.direct_blit_us+=now_us(0)-before;
+}
+static int direct_upload(void)
+{
+    struct ConfigDev *card;struct RenderInfo ri;struct zc_result result;
+    volatile uint8_t *mem=app.compute.mem;const struct ad_io *io=app.compute.io;
+    uint32_t addr,span,nonce,before=now_us(0);int code;
+    if(!direct_open())return 0;
+    card=FindConfigDev(NULL,0x6d6e,4);if(!card)return 0;
+    memset(&ri,0,sizeof(ri));
+    app.direct_lock=p96LockBitMap(app.direct_bitmap,(UBYTE *)&ri,sizeof(ri));app.direct_locked=1;
+    span=(FF_HEIGHT-1)*ri.BytesPerRow+FF_WIDTH*4;
+    if(!ri.Memory||ri.BytesPerRow<(LONG)(FF_WIDTH*4)||ri.BytesPerRow>8192||!p96GetBitMapAttr(app.direct_bitmap,P96BMA_ISONBOARD)||
+       (ULONG)ri.Memory<(ULONG)card->cd_BoardAddr+0x10000u||
+       (ULONG)ri.Memory>(ULONG)card->cd_BoardAddr+0x4000000u-span)return 0;
+    addr=(ULONG)ri.Memory-(ULONG)card->cd_BoardAddr+0x1f0000u;
+    nonce=app.compute.session^app.compute.sequence^0xdecaf123u;
+    ad_put(ri.Memory,0,nonce);ad_put(ri.Memory,span-4,nonce^0x31415926u);
+    io->push(ri.Memory,4,io->user);io->push((uint8_t *)ri.Memory+span-4,4,io->user);
+    ad_put(mem,FF_REQ+40,addr);ad_put(mem,FF_REQ+44,ri.BytesPerRow);ad_put(mem,FF_REQ+48,nonce);
+    if(zc_submit(&app.compute,&app.view,0,0,3)<0)return 0;
+    do {
+        code=zc_poll(&app.compute,&result);
+        if(code==ZC_ERROR||now_us(0)-before>400000u)return 0;
+        if(code==ZC_WAIT)Delay(1);
+    } while(code==ZC_WAIT);
+    if(code!=ZC_PRESENT||result.frame_hash!=app.hash)return 0;
+    p96UnlockBitMap(app.direct_bitmap,app.direct_lock);app.direct_locked=0;app.direct_ready=1;
+    app.direct_copy_us=app.rate?(uint32_t)((uint64_t)result.copy_ticks*1000000u/app.rate):0;
+    app.transfer_us+=result.transfer_us;app.draw_us+=now_us(0)-before;
+    before=now_us(0);direct_blit();app.draw_us+=now_us(0)-before;
+    return 1;
+}
+/* Explicit diagnostics only: never pull a completed image for presentation. */
+static int direct_counts(void)
+{
+    unsigned i;uint32_t hash=2166136261u;
+    if(!app.direct||app.counts_valid)return 1;
+    if(app.active||app.done!=FF_TILES||app.compute.pending)return 0;
+    app.compute.io->pull(app.compute.mem+FF_FRAME_COUNTS,FF_WIDTH*FF_HEIGHT*2,app.compute.io->user);
+    for(i=0;i<FF_WIDTH*FF_HEIGHT;i++) {
+        app.frame[i]=((unsigned)app.compute.mem[FF_FRAME_COUNTS+i*2]<<8)|app.compute.mem[FF_FRAME_COUNTS+i*2+1];
+        hash=ff_hash(hash,app.frame[i]);
+    }
+    if(hash!=app.hash)return 0;
+    app.counts_valid=1;return 1;
+}
+#endif
 /* A private timer request: never reuse SDL's timer port or change TimerBase.
  * DoIO completes each bounded relative wait before the request is reused/freed.
  * Both modes have the same ready-work deadline and sleep duration. ARM polling
@@ -128,6 +222,9 @@ static void palette(void)
 }
 static void paint(unsigned tx,unsigned ty,unsigned w,unsigned h)
 {
+#ifdef FF_DIRECT
+    if(app.direct){direct_blit();return;}
+#endif
     unsigned x,y;uint32_t before;SDL_Rect r={(int)tx+40,(int)ty+44,(int)w,(int)h};
     if(!app.window)return;
     before=now_us(0);
@@ -154,6 +251,9 @@ static void status(int force)
 {
     char s[90];SDL_Rect r={0,292,400,62};uint32_t now=now_us(0);
     if(!app.window||(!force&&(!app.active||now-app.status_time<200000u)))return;
+#ifdef FF_DIRECT
+    if(app.direct&&app.active&&!force)return;
+#endif
     app.status_time=now;SDL_FillRect(app.surface,&r,SDL_MapRGB(app.surface->format,28,38,60));
     snprintf(s,sizeof(s),"%s %3lu%% %lu MS ITER %lu STEP %ld %s",app.arm?"ARM":"CPU",
         (unsigned long)(app.done*100/FF_TILES),(unsigned long)((app.active?now-app.start:app.elapsed)/1000),
@@ -167,7 +267,7 @@ static void status(int force)
 }
 static int open_window(void)
 {
-    app.window=SDL_CreateWindow("SDL ZZFractal 0.3",100,100,400,354,0);
+    app.window=SDL_CreateWindow(FF_WINDOW_TITLE,100,100,400,354,0);
     if(!app.window){printf("SDL window: %s\n",SDL_GetError());fflush(stdout);return 0;}
     app.surface=SDL_GetWindowSurface(app.window);
     if(!app.surface||app.surface->format->BytesPerPixel!=4){SDL_DestroyWindow(app.window);app.window=0;return 0;}
@@ -202,6 +302,9 @@ static int set_screen(unsigned depth)
     ULONG mode,actual_depth,mode_w,mode_h,error=0;
     if(app.active||app.compute.pending||app.icon)return 0;
     if(depth!=0&&depth!=16&&depth!=32)return 0;
+#ifdef FF_DIRECT
+    direct_free();app.direct=0;
+#endif
     if(app.cover){SDL_DestroyWindow(app.cover);app.cover=0;}
     if(app.window){SDL_DestroyWindow(app.window);app.window=0;app.surface=0;}
     SDL_SetHint("SDL_AMIGA_PUBLIC_SCREEN","");
@@ -257,6 +360,11 @@ static void start(int arm)
     app.start=now_us(0);app.last_loop=app.start;
     app.sleep_us=app.loops=app.max_gap_us=app.checksum_retries=0;app.active=1;app.renders++;
     app.error=0;for(i=0;i<FF_WIDTH*FF_HEIGHT;i++)app.frame[i]=app.view.limit;
+#ifdef FF_DIRECT
+    app.direct=arm&&app.screen_depth==32;
+    app.direct_started=app.counts_valid=0;app.direct_copy_us=app.direct_blit_us=0;
+    if(app.direct&&!direct_open()){app.error=app.quit=1;return;}
+#endif
     if(app.window){palette();paint(0,0,FF_WIDTH,FF_HEIGHT);}
     status(1);
 }
@@ -308,6 +416,19 @@ static int progress(void)
         return 0;
     }
     if(result==ZC_DISCARDED)app.discarded++;
+#ifdef FF_DIRECT
+    if(result==ZC_FRAME&&app.active&&app.direct) {
+        app.arm_ticks=app.result.compute_ticks;app.hash=app.result.frame_hash;
+        app.transfer_us+=app.result.transfer_us;app.roundtrip_us+=app.result.roundtrip_us;
+        app.colour_us=app.rate?(uint32_t)((uint64_t)app.result.colour_ticks*1000000u/app.rate):0;
+        if(!direct_upload()){app.error=app.quit=1;return 0;}
+        app.done=FF_TILES;app.elapsed=now_us(0)-app.start;app.active=0;
+        printf("DIRECT_FRAME hash=%08lx wall_us=%lu arm_us=%lu colour_us=%lu copy_us=%lu blit_us=%lu draw_us=%lu\n",
+            (unsigned long)app.hash,(unsigned long)app.elapsed,(unsigned long)arm_us(),
+            (unsigned long)app.colour_us,(unsigned long)app.direct_copy_us,
+            (unsigned long)app.direct_blit_us,(unsigned long)app.draw_us);fflush(stdout);status(1);return 0;
+    }
+#endif
     if(result==ZC_TILE&&app.active&&app.arm) {
         if(app.result.control!=app.clock_control)app.rate=0;
         app.arm_ticks+=app.result.compute_ticks;app.transfer_us+=app.result.transfer_us;
@@ -315,6 +436,15 @@ static int progress(void)
     }
     if(!app.active)return 0;
     if(app.arm) {
+#ifdef FF_DIRECT
+        if(app.direct) {
+            if(!app.compute.pending&&!app.direct_started) {
+                if(zc_submit(&app.compute,&app.view,0,0,2)<0){app.error=app.quit=1;}
+                else app.direct_started=1;
+            }
+            return 0;
+        }
+#endif
         if(!app.compute.pending&&zc_submit(&app.compute,&app.view,app.tx,app.ty,0)<0){app.error=1;app.quit=1;}
         return result==ZC_TILE;
     } else {
@@ -332,15 +462,18 @@ static int check_pixels(char *out,int cap)
     struct Screen *screen;struct Window *w;unsigned x,y,samples=0,mismatches=0,max_delta=0;
     unsigned char *rgb;unsigned tolerance=app.screen_depth==16?8:0;
     if(!app.window||!app.screen_depth||app.active||app.cover)return -1;
+#ifdef FF_DIRECT
+    if(!direct_counts())return -1;
+#endif
     screen=LockPubScreen("SDLZZFractal.Test");if(!screen)return -1;
-    for(w=screen->FirstWindow;w;w=w->NextWindow)if(w->Title&&!strcmp((char *)w->Title,"SDL ZZFractal 0.3"))break;
+    for(w=screen->FirstWindow;w;w=w->NextWindow)if(w->Title&&!strcmp((char *)w->Title,FF_WINDOW_TITLE))break;
     if(!w){UnlockPubScreen(NULL,screen);return -1;}
     rgb=calloc(FF_WIDTH*FF_HEIGHT,4);
     if(!rgb){UnlockPubScreen(NULL,screen);return -1;}
     if(ReadPixelArray(rgb,0,0,FF_WIDTH*4,w->RPort,40,44,FF_WIDTH,FF_HEIGHT,RECTFMT_ARGB)!=FF_WIDTH*FF_HEIGHT) {
         free(rgb);UnlockPubScreen(NULL,screen);snprintf(out,cap,"ok=0 error=readback_failed");return -1;
     }
-    for(y=3;y<FF_HEIGHT;y+=13)for(x=3;x<FF_WIDTH;x+=13) {
+    for(y=0;y<FF_HEIGHT;y++)for(x=0;x<FF_WIDTH;x++) {
         Uint8 r,g,b;unsigned c,want[3],bad=0;
         SDL_GetRGB(app.palette[app.frame[y*FF_WIDTH+x]],app.surface->format,&r,&g,&b);
         want[0]=r;want[1]=g;want[2]=b;
@@ -359,6 +492,13 @@ static int check_pixels(char *out,int cap)
 static int hook(const char *args,char *out,int cap)
 {
     int x,y,ok=1;char extra;
+    #ifdef FF_DIRECT
+    if(!strcmp(args,"direct")) {
+        snprintf(out,cap,"ok=1 enabled=%d ready=%d copy_us=%lu blit_us=%lu counts_readback=%d",
+            app.direct,app.direct_ready,(unsigned long)app.direct_copy_us,
+            (unsigned long)app.direct_blit_us,app.counts_valid);return 0;
+    }
+#endif
     if(!strcmp(args,"automation on")){app.verifying=1;status(1);}
     else if(!strcmp(args,"automation off")){app.verifying=0;status(1);}
     else if(!strcmp(args,"scheduling")) {
@@ -388,6 +528,9 @@ static int hook(const char *args,char *out,int cap)
     else if(sscanf(args,"iterations %d %c",&x,&extra)==1)ok=view_change("iterations",x,0);
     else if(!strcmp(args,"save")) {
         FILE *f;if(app.active||app.done!=FF_TILES)ok=0;
+#ifdef FF_DIRECT
+        else if(!direct_counts())ok=0;
+#endif
         else if((f=fopen("RAM:SixiesDev/sdl-fractal-counts.bin","wb"))) {
             ok=fwrite(app.frame,2,FF_WIDTH*FF_HEIGHT,f)==FF_WIDTH*FF_HEIGHT;if(fclose(f))ok=0;
         } else ok=0;
@@ -475,17 +618,38 @@ static void calibrate(void)
     printf("TIMER ticks_per_second=%lu span_us=%lu uncertainty_us=%lu control=%08lx read_only=1\n",
         (unsigned long)app.rate,(unsigned long)app.calibration_span,(unsigned long)app.calibration_uncertainty,(unsigned long)control);fflush(stdout);
 }
+void ff_cleanup(void)
+{
+    if(!app.initialized)return;
+    app.initialized=0;
+#ifdef FF_DIRECT
+    direct_free();
+#endif
+    if(app.cover)SDL_DestroyWindow(app.cover);
+    if(app.window)SDL_DestroyWindow(app.window);
+    if(app.test_screen){CloseScreen(app.test_screen);app.test_screen=0;}
+    SDL_SetHint("SDL_AMIGA_PUBLIC_SCREEN","");
+    remove_icon();if(app.disk)FreeDiskObject(app.disk);if(app.port)DeleteMsgPort(app.port);
+    if(WorkbenchBase)CloseLibrary(WorkbenchBase);if(IconBase)CloseLibrary(IconBase);
+    scheduler_close();free(app.frame);SDL_Quit();
+}
 int ff_window(volatile uint8_t *mem,const struct ad_io *io,int connected)
 {
     int rc=20;
     memset(&app,0,sizeof(app));app.connected=connected;app.arm=1;ff_default(&app.view);
     if(zc_init(&app.compute,mem,ZZ_BLOCK_SIZE,io,now_us,0)<0)return 20;
     if(SDL_Init(SDL_INIT_VIDEO)<0)goto done;
+    app.initialized=1;
     app.clock_frequency=SDL_GetPerformanceFrequency();app.clock_origin=SDL_GetPerformanceCounter();
     if(!app.clock_frequency)goto done;
     scheduler_open();
     app.frame=calloc(FF_WIDTH*FF_HEIGHT,sizeof(*app.frame));if(!app.frame)goto done;
+#ifdef FF_DIRECT
+    /* Keep the previous Workbench configuration intact. */
+    if(!set_screen(32))goto done;
+#else
     if(!open_window())goto done;
+#endif
     IconBase=OpenLibrary("icon.library",44);WorkbenchBase=OpenLibrary("workbench.library",44);
     if(IconBase&&WorkbenchBase) {
         app.port=CreateMsgPort();app.disk=GetDiskObject("PROGDIR:SDLZZFractal");
@@ -517,12 +681,8 @@ int ff_window(volatile uint8_t *mem,const struct ad_io *io,int connected)
     if(connected)ab_unregister_hook("sdlfractal");
 done:
     if(rc)printf("SDL frontend error: %s\n",SDL_GetError());
-    if(app.cover)SDL_DestroyWindow(app.cover);
-    if(app.window)SDL_DestroyWindow(app.window);
-    if(app.test_screen){CloseScreen(app.test_screen);app.test_screen=0;}
-    SDL_SetHint("SDL_AMIGA_PUBLIC_SCREEN","");
-    remove_icon();if(app.disk)FreeDiskObject(app.disk);if(app.port)DeleteMsgPort(app.port);
-    if(WorkbenchBase)CloseLibrary(WorkbenchBase);if(IconBase)CloseLibrary(IconBase);
-    scheduler_close();free(app.frame);SDL_Quit();
+#ifndef FF_DIRECT
+    ff_cleanup();
+#endif
     printf("SDL_UI exit=%d renders=%u cancels=%u discarded=%u\n",rc,app.renders,app.cancels,app.discarded);fflush(stdout);return rc;
 }
