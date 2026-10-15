@@ -107,7 +107,7 @@ tests and ARM/68k/default-launcher builds passed after adding the cleanup
 hook. Native bounds tests use AddressSanitizer and UndefinedBehaviorSanitizer.
 
 The interface follows the existing launcher mapping contract and the P96
-SDK's bitmap lock/unlock requirements. XANI's
+SDK's bitmap lock/unlock requirements. Xanai's
 [ZZQuake framebuffer implementation](https://github.com/Xanxi-Amiga/XACP-ZZ9000/blob/main/applications/games/ZZQuake/source/arm/zz9000/zzquake_platform.c)
 and [ZZ-MPEG documentation](https://github.com/Xanxi-Amiga/XACP-ZZ9000/tree/main/applications/mpegplayer#playback-modes)
 provide the reference for the direct-display approach. This experiment does

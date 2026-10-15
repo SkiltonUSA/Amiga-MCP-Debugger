@@ -342,7 +342,7 @@ throughput as playback throughput. Cacheable private data and presentation
 remain independent work.
 
 
-## XANI ZZ-MPEG review (2026-10-08)
+## Xanai ZZ-MPEG review (2026-10-08)
 
 The current [mpegplayer documentation](https://github.com/Xanxi-Amiga/XACP-ZZ9000/tree/main/applications/mpegplayer)
 describes ZZ-MPEG 1.0 Advanced Beta: PL_MPEG video decoding on Core1,
