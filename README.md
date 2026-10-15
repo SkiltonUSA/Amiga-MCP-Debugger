@@ -6,7 +6,7 @@ The Mac runs the MCP server. The existing **AmigaBridge** runs on the 68060 and 
 
 ## XACP firmware and the debugging protocol
 
-**The physical ARM debugger depends on the tested XX19c / XACP 1.7 firmware setup.** We acknowledge **Xanai's [XACP-ZZ9000 project](https://github.com/Xanxi-Amiga/XACP-ZZ9000)** and its firmware, application examples and developer documentation as the foundation for this integration.
+**The physical ARM debugger depends on the tested XX19c / XACP 1.7 firmware setup.** We acknowledge **Xanxi's [XACP-ZZ9000 project](https://github.com/Xanxi-Amiga/XACP-ZZ9000)** and its firmware, application examples and developer documentation as the foundation for this integration.
 
 The debugger uses the firmware's existing ARM launch/reset interface to start and stop its Core1 worker. Debugging commands then travel through our own shared-memory protocol inside the instrumented application:
 
@@ -18,7 +18,7 @@ The debugger uses the firmware's existing ARM launch/reset interface to start an
 
 We have not added debugging commands to XACP or modified its firmware. The debugger builds on the existing ARM execution facilities; its checkpoint protocol is our application-level extension, not an XACP debugging standard. Ordinary MCP operations—files, Shell commands, system inspection and ARexx—use AmigaBridge and do **not** require XACP or a ZZ9000.
 
-See Xanai's [XACP 1.7 developer notes](https://github.com/Xanxi-Amiga/XACP-ZZ9000/blob/main/docs/XACP_V1_7_DEVELOPER_NOTES.md) and our [launcher and memory contract](docs/amiga-arm-debugging.md#memory-ownership-and-cache-contract) for the integration details.
+See Xanxi's [XACP 1.7 developer notes](https://github.com/Xanxi-Amiga/XACP-ZZ9000/blob/main/docs/XACP_V1_7_DEVELOPER_NOTES.md) and our [launcher and memory contract](docs/amiga-arm-debugging.md#memory-ownership-and-cache-contract) for the integration details.
 
 ## Download the executable demo
 
@@ -169,6 +169,6 @@ See [Amiga development setup](docs/development-amiga.md), [hardware session memo
 
 The original MCP server and AmigaBridge come from **[geekychris/amiga_mcp](https://github.com/geekychris/amiga_mcp)**. This repository adds the Mac workspace integration, bridge startup helpers, cooperative ARM debugger, ZZ9000 launcher, compute interface and demonstration applications. SDL2 is based on **[bdgscotland/libSDL2-amigaos3](https://github.com/bdgscotland/libSDL2-amigaos3)**, with our fixes maintained separately.
 
-**[Xanai / Xanxi-Amiga's XACP-ZZ9000](https://github.com/Xanxi-Amiga/XACP-ZZ9000)** provides the XACP firmware environment and reference material used by the tested ARM integration. Credit for XACP remains with its authors; our MCP debugger and shared-memory protocols are separate additions.
+**[Xanxi / Xanxi-Amiga's XACP-ZZ9000](https://github.com/Xanxi-Amiga/XACP-ZZ9000)** provides the XACP firmware environment and reference material used by the tested ARM integration. Credit for XACP remains with its authors; our MCP debugger and shared-memory protocols are separate additions.
 
 Vendor components retain their own licences and notices. Release packages include their applicable licence files. No blanket licence is asserted over third-party records or components; firmware and ROM binaries are not distributed here.

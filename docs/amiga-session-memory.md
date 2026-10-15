@@ -262,7 +262,7 @@ The mapping test, Core1 identity, NEON witness and timer calibration did pass.
 Failed-run evidence and build metadata: `amiga/records/2026-10-08/ffmpeg-bench/`.
 Experimental sources: `amiga/ffmpeg_bench/`; temporary files remain in
 `RAM:ZZFFmpegBench`. No firmware/driver/startup/installed-app changes.
-Xanai's ZZ-MPEG player was reviewed, not installed or run: PL_MPEG with direct
+Xanxi's ZZ-MPEG player was reviewed, not installed or run: PL_MPEG with direct
 ARM framebuffer writes, older XX16c baseline, fixed historical rings and no
 published source. Its documented 25 fps target is not a measured result here.
 The bounded cooperative pause/read/quit check also passed with context/cache
