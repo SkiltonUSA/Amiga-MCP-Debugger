@@ -110,7 +110,7 @@ remain pending.
    suitably aligned pages for decoder state, reference frames and stack, with
    explicit uncached shared control/output mappings. Define inner and outer
    attributes and handoff maintenance. Current AllocAbs ownership is only
-   64-byte aligned; do not map neighbouring owners' bytes as private cacheable
+   64-byte aligned; do not map neighbouring allocations' bytes as private cacheable
    pages. No guessed DDR allocation or global PL310 operation.
 4. **Test specialised integer/NEON kernels.** Establish live feature access,
    memory alignment/type suitability and firmware register preservation.
@@ -299,7 +299,7 @@ false until supported by the separate acceptance records.
 A separate bounded cooperative pause, stable checkpoint, 64-byte memory read
 and quit-while-paused check passed, including SIMD context and SCTLR restoration,
 RET1, exit 0 and allocation release. Postflight found no video window, bridge
-client or owner port. The installed ZZVideo 0.1 executable's MD5 is unchanged;
+client or coordination port. The installed ZZVideo 0.1 executable's MD5 is unchanged;
 all experimental files remain temporary in RAM:ZZVideoNEON. The Mac staging
 server is stopped.
 

@@ -19,7 +19,7 @@ REQUIREMENTS
   free memory for a contiguous, aligned 128 KB reservation.
 - XX19c / XACP 1.7 firmware. Other firmware is NOT established compatible.
   The legacy firmware register cannot identify XX19c by itself; the
-  Workbench requester asks the owner to confirm this configuration.
+  Workbench requester asks the user to confirm this configuration.
 - AmigaOS 3.x and Picasso96API.library v2 or later. Tested on AmigaOS 3.2.3
   with an 8-bit RTG Workbench; broader hardware/OS compatibility is untested.
 - A public Workbench screen large enough for the 408 x 339 window.

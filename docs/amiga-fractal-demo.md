@@ -24,7 +24,7 @@ Workbench palette through allocated shared pens; palette appearance can vary
 with the screen's available colors. No new screen mode is selected.
 
 Only one Core1 application can run at a time. Close this demo before launching
-ZZQuake, ZZDoom, ZZDarkForces or another ARM application. The shared owner port
+ZZQuake, ZZDoom, ZZDarkForces or another ARM application. The shared coordination port
 prevents duplicate launches of our debugger/demo, but unrelated games do not
 observe it. Even CPU comparison mode keeps this application's ARM worker alive.
 
@@ -263,4 +263,4 @@ The standalone copy is installed at `SD032G:Dev/ZZFractal-0.1/ZZFractal`; its
 sibling `.info` and drawer icon enable normal Workbench launch. The earlier
 developer copy remains in `SD032G:Dev/ZZFractal/` for MCP debugging.
 **Zero bridge clients no longer implies that Core1 is idle:** check tasks,
-windows and the owner port, and close either edition before another ARM app.
+windows and the coordination port, and close either edition before another ARM app.

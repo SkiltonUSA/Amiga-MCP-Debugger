@@ -166,7 +166,7 @@ The linker emits a relocatable image; the packer accepts only bounded local
 tiny mapping probe, so there is no separate runtime payload file to misplace.
 
 Only run this launcher on the verified **XX19c / XACP 1.7** setup, after
-checking no other Core1 application is active. Its named owner port prevents
+checking no other Core1 application is active. Its named coordination port prevents
 duplicate instances of this launcher, not unrelated games. The `0x0113`
 firmware register alone cannot distinguish all firmware variants.
 

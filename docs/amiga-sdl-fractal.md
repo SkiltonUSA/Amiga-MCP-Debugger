@@ -194,7 +194,7 @@ RET1, exited 0 and released its allocation.
 The app is installed at `SD032G:Dev/SDLZZFractal-0.2/SDLZZFractal` with native
 Workbench icons and a 131072-byte stack. Workbench launch through WBLoad,
 the firmware-confirmation requester, default ARM rendering, an independently
-verified move to (680,300), and Q quit passed. The owner port disappeared
+verified move to (680,300), and Q quit passed. The coordination port disappeared
 and the bridge remained responsive after quit. No OS/firmware/preferences
 or startup files changed. Close other Core1 apps before launching it.
 

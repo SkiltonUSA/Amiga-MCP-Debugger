@@ -33,7 +33,7 @@ One command is in flight. Shared request/result headers and frame bytes carry
 session/sequence-bound integrity checks. The host rereads a mismatched result,
 without displaying it or recycling its buffer, up to a 30-second deadline.
 The launcher signals shutdown, checks RET1, synchronously returns Core1 to idle,
-then frees the allocation. The shared owner port excludes our other applications;
+then frees the allocation. The shared coordination port excludes our other applications;
 foreign XACP games still need closing explicitly before launch.
 
 ## Building and testing

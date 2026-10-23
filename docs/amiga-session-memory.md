@@ -33,7 +33,7 @@ tests, MCP smoke and all affected build variants passed.
 
 The exact installed standalone passed CLI startup, ARM and CPU hashes,
 keyboard A/C/Q, RET1 and exit 0. It was then restarted and **left open for the
-user**, holding Core1 and the owner port. Press Q/close it before launching
+user**, holding Core1 and the coordination port. Press Q/close it before launching
 another ARM application. Its current log is `RAM:SDLZZFractal04.log`.
 Workbench startup via the icon was not separately repeated for 0.4.
 Temporary test binaries in `RAM:ZZFractalDirect` were removed. Records and
@@ -73,7 +73,7 @@ not establish peak card bandwidth or fix the measured decoder bottleneck.
 
 First development run rejected an incompletely published command and exited
 cleanly. Fixed host payload-before-sequence publication; second run completed
-with ARM epilogue `RET1`, synchronous idle reset, launcher exit 0, owner port
+with ARM epilogue `RET1`, synchronous idle reset, launcher exit 0, coordination port
 removed and Workbench restored. Temporary RAM files and Mac HTTP server were
 removed after capture. No persistent Amiga installation or firmware change.
 
@@ -152,7 +152,7 @@ game drawer. `RTG-Patch/` contains the patcher and its documentation. No MIDI
 patch/player was installed. No firmware, OS libraries or startup scripts changed.
 
 Workbench launch while holding Shift opened the screen requester. Selected
-**ZZ9000 1024x768 8-bit**; Maxis/title artwork and the first-run owner-name
+**ZZ9000 1024x768 8-bit**; Maxis/title artwork and the first-run user-name
 form displayed correctly. The user subsequently confirmed the game is working.
 There is no independent city-view screenshot or save/load acceptance test.
 The game was left running while the icons were updated. The unpatched build exited silently before opening a screen;
@@ -266,7 +266,7 @@ Xanxi's ZZ-MPEG player was reviewed, not installed or run: PL_MPEG with direct
 ARM framebuffer writes, older XX16c baseline, fixed historical rings and no
 published source. Its documented 25 fps target is not a measured result here.
 The bounded cooperative pause/read/quit check also passed with context/cache
-restoration and RET1/exit 0. All test applications are stopped, no owner/client
+restoration and RET1/exit 0. All test applications are stopped, no coordination port/client
 remains and the bridge is responsive. Staged files remain in RAM:ZZVideoNEON;
 the temporary Mac HTTP server is stopped. The installed ZZVideo 0.1 MD5 remains
 `770252ca2ff01ff1489ee33825afee1d`.
@@ -315,7 +315,7 @@ icon (stack 131072), `demo.mpg` and readme/licenses. Executable: 1,168,048 bytes
 MD5 `770252ca2ff01ff1489ee33825afee1d`, SHA-256
 `b9736ffee80a4b47a1b7322314093e6fe61b6c302fab8dad3abe5bb59d0542b3`.
 **All video test applications and the previously open fractal have been closed.**
-Re-enumerate windows/owner port before another Core1 launch.
+Re-enumerate windows/coordination port before another Core1 launch.
 
 This is the user's standalone-first decoding milestone for a minimal YouTube
 client: ARM Core1 MPEG-1 video decoding and colour conversion, 68k SDL2 UI.
@@ -344,7 +344,7 @@ native-fractal builds passed. Decoder source and port changes are in
 [video development](amiga-video-client.md). Evidence:
 `amiga/records/2026-10-08/video/`. The unchanged SDL2 SDK 0.2.0 is statically linked.
 
-Bridge postflight was healthy with no video/fractal window, client or owner
+Bridge postflight was healthy with no video/fractal window, client or coordination
 port. The temporary Mac HTTP staging server on 55932 is stopped. RAM:ZZVideo
 contains the temporary test inputs/scripts/logs and can be discarded after review.
 
@@ -415,9 +415,9 @@ RAM:; Mac HTTP staging is stopped at the end of this task.
 Chronological background follows; the latest active application is recorded above.
 
 - Target: A4000TX, TF4060, 68060 revision 5, AGA, AmigaOS 3.2.3 as identified
-  by the owner. CPU MHz and individual chip package/date codes are unverified.
+  by the user. CPU MHz and individual chip package/date codes are unverified.
 - Hardware audit found **2 MiB Chip and 624 MiB Fast RAM**, replacing the
-  initial owner estimate of 284 MB Fast. Banks: 256 MiB at `$08000000`,
+  initial user estimate of 284 MB Fast. Banks: 256 MiB at `$08000000`,
   112 MiB at `$01000000`, 256 MiB ZZ9000 RAM at `$50000000`.
 - Ethernet: X-Surf 100, Roadshow 1.15 / bsdsocket.library 4.364,
   `x-surf-100` interface, last known Amiga address **10.0.0.40**.
@@ -531,7 +531,7 @@ Forces installations later that day.
 | AHI | ahi.device 4.180 (68060), paula.audio 4.23; ZZ9000AX driver installed |
 | MIDI | CAMD 37.14, internal serial enabled, `out.0`; intended Roland MT-32 disconnected |
 
-KickSmash32 was reported by the owner after the 2026-10-07 inventory; the
+KickSmash32 was reported by the user after the 2026-10-07 inventory; the
 historical HTML/PDF audit does not include that confirmation. Upstream reference:
 https://github.com/cdhooper/kicksmash32. It replaces the Kickstart ROMs and
 supports in-system programming with `smash`, host programming over USB-C with
@@ -590,7 +590,7 @@ do not treat it as an ordinary USB mass-storage drive.
 | --- | --- | --- |
 | Final Writer 7.3 | `HDD50Gig:APPS/FinalWriter7.3` | Editor startup verified on Workbench; stack 131072, Vera fonts, ARexx FW.1; printing untested |
 | ZZDarkForcesNEXT 1.0 | `HDD50Gig:Games/ZZDarkForcesNEXT` | 640x480, SC55, stack 65536; user confirmed display/game works |
-| ZZDoom 1.1 | `HDD50Gig:Games/ZZDoom` | Full three-episode `DOOM.WAD` copied from owner’s Mac; both icons select it, `NOMUSIC`, stack 65536; shareware retained |
+| ZZDoom 1.1 | `HDD50Gig:Games/ZZDoom` | Full three-episode `DOOM.WAD` copied from user’s Mac; both icons select it, `NOMUSIC`, stack 65536; shareware retained |
 | ZZQuake 1.0 | `HDD50Gig:Games/ZZQuake` | Original 320x240 version; registered data now installed (1.06 pak0 + CD pak1); earlier shareware display confirmed |
 | ZZQuake HighRes 1.0 | Same ZZQuake drawer | 640/800/1024 launchers and corresponding blobs installed and checksum-verified; not launch-tested |
 | ScummVM AGA 060 2.5.1.40 | `HDD50Gig:Games/ScummVM` | CAMD/native MT-32, serial `out.0`; launcher display confirmed, external MIDI untested |

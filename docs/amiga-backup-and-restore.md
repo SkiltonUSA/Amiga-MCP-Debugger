@@ -67,7 +67,7 @@ The Dark Forces icon can be configured in Workbench Information: enable only
 `640x480` and `SC55`, with stack 65536. Keep the original-icon backup in the
 application drawer. A blank loading screen lasts while roughly 72 MB is
 staged into ARM memory. All original Dark Forces game data must be supplied
-again from the owner's media if recovering a lost disk.
+again from the user's media if recovering a lost disk.
 
 ## Deliberate exclusions and remaining backup gap
 
